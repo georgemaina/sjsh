@@ -1,0 +1,67 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": false,
+        "designer|userAlias": "opinvoicesstore",
+        "designer|userClassName": "OpInvoicesStore",
+        "groupField": "Group",
+        "model": "OutpatientInvoices",
+        "pageSize": 200,
+        "storeId": "OpInvoicesStore"
+    },
+    "configAlternates": {
+        "autoLoad": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "groupField": "datafield",
+        "model": "model",
+        "pageSize": "number",
+        "storeId": "string"
+    },
+    "name": "XrayRevenueStore1",
+    "designerId": "dd9f68da-09c5-4650-9fea-1eacb033d86f",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "simpleGroupMode": true,
+                "url": "data/getReportsData.php?task=getOPInvoices"
+            },
+            "configAlternates": {
+                "simpleGroupMode": "boolean",
+                "url": "string"
+            },
+            "name": "MyAjaxProxy",
+            "designerId": "ceffc22f-137c-4b5a-b272-76a651fc9ebd",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "invoices"
+                    },
+                    "configAlternates": {
+                        "root": "string",
+                        "rootProperty": "string"
+                    },
+                    "name": "MyJsonReader",
+                    "designerId": "5bda1a1a-ecfe-4478-8949-66fde812e7ac"
+                }
+            ]
+        }
+    ]
+}

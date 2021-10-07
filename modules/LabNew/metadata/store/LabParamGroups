@@ -1,0 +1,54 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "designer|userAlias": "labparamsgroups",
+        "designer|userClassName": "LabParamGroups",
+        "model": "ParameterGroup",
+        "storeId": "LabParamGroups"
+    },
+    "configAlternates": {
+        "autoLoad": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string"
+    },
+    "name": "MyJsonStore",
+    "designerId": "92f52aa6-4319-4fec-ad97-01eab8861ae6",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "../../data/getDataFunctions.php?task=getLabParamGroups"
+            },
+            "configAlternates": {
+                "url": "string"
+            },
+            "name": "MyAjaxProxy7",
+            "designerId": "88f41fb1-281e-49a2-b52d-4a0c483a5c54",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyJsonReader7",
+                    "designerId": "06767a2b-3deb-421c-a1d1-5b7cf06d0826"
+                }
+            ]
+        }
+    ]
+}

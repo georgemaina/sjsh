@@ -1,0 +1,288 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "bodyCls": [
+            "x-portal-body"
+        ],
+        "cls": [
+            "x-portal"
+        ],
+        "designer|userAlias": "portalpanel",
+        "designer|userClassName": "PortalPanel",
+        "height": null,
+        "layout": "column",
+        "manageHeight": false,
+        "scrollable": true,
+        "title": null,
+        "width": null
+    },
+    "configAlternates": {
+        "autoScroll": "boolean",
+        "bodyCls": "typedarray",
+        "cls": "string",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "layout": "string",
+        "manageHeight": "boolean",
+        "title": "string",
+        "width": "auto",
+        "scrollable": "boolean"
+    },
+    "designerId": "ad317224-0098-4201-bb56-938cce221502",
+    "viewControllerInstanceId": "d640eebe-2952-441e-b711-1225a69473b5",
+    "viewModelInstanceId": "31be8754-e45b-462a-92d6-b0d33be6c9fd",
+    "cn": [
+        {
+            "type": "customevent",
+            "reference": {
+                "name": "customEvents",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "validatedrop",
+                "params": [
+                    "e"
+                ]
+            },
+            "configAlternates": {
+                "name": "string",
+                "params": "typedarray"
+            },
+            "name": "CustomEvent",
+            "designerId": "c3a736d2-6c83-4017-9b7b-ca84d47a9ae4"
+        },
+        {
+            "type": "customevent",
+            "reference": {
+                "name": "customEvents",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "beforedragover",
+                "params": [
+                    "e"
+                ]
+            },
+            "configAlternates": {
+                "name": "string",
+                "params": "typedarray"
+            },
+            "name": "CustomEvent1",
+            "designerId": "ed94a6ba-40ac-4475-8781-c3e8c07eefe9"
+        },
+        {
+            "type": "customevent",
+            "reference": {
+                "name": "customEvents",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "dragover",
+                "params": [
+                    "e"
+                ]
+            },
+            "configAlternates": {
+                "name": "string",
+                "params": "typedarray"
+            },
+            "name": "CustomEvent2",
+            "designerId": "4d00ccab-5bd5-4bfc-8afb-9e8fea8439a8"
+        },
+        {
+            "type": "customevent",
+            "reference": {
+                "name": "customEvents",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "beforedrop",
+                "params": [
+                    "e"
+                ]
+            },
+            "configAlternates": {
+                "name": "string",
+                "params": "typedarray"
+            },
+            "name": "CustomEvent3",
+            "designerId": "ccf03c6d-a12e-4bdb-8eb5-236f5f5b2ef7"
+        },
+        {
+            "type": "customevent",
+            "reference": {
+                "name": "customEvents",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "drop",
+                "params": [
+                    "e"
+                ]
+            },
+            "configAlternates": {
+                "name": "string",
+                "params": "typedarray"
+            },
+            "name": "CustomEvent4",
+            "designerId": "ac08443e-e909-4f7e-b249-3c65fd255efc"
+        },
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "x-portal-column"
+                ],
+                "designer|displayName": "Column 1",
+                "layout": "anchor",
+                "layout|columnWidth": 0.33333
+            },
+            "configAlternates": {
+                "cls": "string",
+                "designer|displayName": "string",
+                "layout": "string",
+                "layout|columnWidth": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyContainer",
+            "designerId": "cdaed083-f599-4b58-889a-09a41d22a808",
+            "cn": [
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
+                    "name": "opdvisits",
+                    "designerId": "c465cdb6-2ee1-4f03-a458-762f51acb84b",
+                    "masterInstanceId": "9ba5520b-c1d0-4763-8ebf-0b5d4320ee3f"
+                }
+            ]
+        },
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "x-portal-column"
+                ],
+                "designer|displayName": "Column 2",
+                "layout": "anchor",
+                "layout|columnWidth": 0.33333
+            },
+            "configAlternates": {
+                "cls": "string",
+                "designer|displayName": "string",
+                "layout": "string",
+                "layout|columnWidth": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyContainer1",
+            "designerId": "072cbc92-192d-4f9c-9c26-c7e025a37519"
+        },
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "x-portal-column"
+                ],
+                "designer|displayName": "Column 3",
+                "layout": "anchor",
+                "layout|columnWidth": 0.33333
+            },
+            "configAlternates": {
+                "cls": "string",
+                "designer|displayName": "string",
+                "layout": "string",
+                "layout|columnWidth": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyContainer2",
+            "designerId": "0524023a-7b76-4246-b46b-eeb16da65941",
+            "cn": [
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 520,
+                        "isPortlet": null,
+                        "width": null
+                    },
+                    "configAlternates": {
+                        "isPortlet": "boolean",
+                        "height": "auto",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
+                    "name": "announcements",
+                    "designerId": "4821205c-1704-458c-8a64-adc5e93da5bb",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "isPortlet",
+                            "type": "string"
+                        }
+                    ],
+                    "masterInstanceId": "32adb029-aa05-4350-9034-004eafdaf48a"
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onPanelAfterRender",
+                "implHandler": [
+                    "this.dd = Ext.create('CarePortal.view.PortalDropZone', this, this.dropConfig);"
+                ],
+                "name": "afterrender",
+                "scope": "me"
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
+            },
+            "name": "onPanelAfterRender",
+            "designerId": "40cfc8ce-f17a-4ef6-8f40-9787ebb6ebdd"
+        }
+    ]
+}

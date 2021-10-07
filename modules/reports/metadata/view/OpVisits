@@ -1,0 +1,388 @@
+{
+    "type": "Ext.grid.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "closable": true,
+        "columnLines": true,
+        "designer|userAlias": "opvisits",
+        "designer|userClassName": "OpVisits",
+        "height": 615,
+        "store": "OpVisitsStore",
+        "title": "Monthly Workload",
+        "width": null
+    },
+    "configAlternates": {
+        "closable": "boolean",
+        "columnLines": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "store": "store",
+        "title": "string",
+        "width": "auto",
+        "scrollable": "boolean"
+    },
+    "name": "MyGridPanel",
+    "designerId": "b29ac0d2-b5e1-4349-90df-be0bd5d738df",
+    "viewControllerInstanceId": "04a234c5-54e4-4e60-80de-d76f06783694",
+    "viewModelInstanceId": "e36b14f3-5c14-42e3-9582-9a97f85f7abf",
+    "cn": [
+        {
+            "type": "Ext.view.Table",
+            "reference": {
+                "name": "viewConfig",
+                "type": "object"
+            },
+            "codeClass": null,
+            "configAlternates": {
+                "scrollable": "boolean"
+            },
+            "name": "MyGridView2",
+            "designerId": "6301d96e-b71f-428f-b6a2-678c927db0ba"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "parent",
+                "groupable": true,
+                "hidden": true,
+                "summaryType": "count",
+                "text": "Parent"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "groupable": "boolean",
+                "hidden": "boolean",
+                "summaryType": "string",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn35",
+            "designerId": "91d2e602-bc3b-4b11-ad17-f2a22b7ad460"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "opCode",
+                "text": "Op Code"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn36",
+            "designerId": "bfb9165e-af22-448c-8ddc-a364f9339918"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "Description",
+                "tdCls": "opdesc",
+                "text": "Description",
+                "width": 270
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "tdCls": "string",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn37",
+            "designerId": "c9bdcd07-0eed-4f99-a95f-c5f7d5cbe906",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|params": [
+                            "val",
+                            "params",
+                            "data"
+                        ],
+                        "fn": "summaryRenderer",
+                        "implHandler": [
+                            "return ((val === 0 || val > 1) ? '(' + val + ' Results)' : '(1 Results)');"
+                        ]
+                    },
+                    "configAlternates": {
+                        "designer|params": "typedarray",
+                        "fn": "string",
+                        "implHandler": "code"
+                    },
+                    "name": "summaryRenderer",
+                    "designerId": "121cc78e-0e6c-4123-bf83-e85171bc5845"
+                }
+            ]
+        },
+        {
+            "type": "Ext.grid.column.Number",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "New",
+                "format": "0",
+                "summaryType": "sum",
+                "text": "New"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "format": "string",
+                "summaryType": "string",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyNumberColumn1",
+            "designerId": "8451b412-d3f5-43d7-aeaf-925f5183bd82"
+        },
+        {
+            "type": "Ext.grid.column.Number",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "Ret",
+                "format": "0",
+                "summaryType": "sum",
+                "text": "Return"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "format": "string",
+                "summaryType": "string",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyNumberColumn2",
+            "designerId": "c9091c19-1e02-4a2a-bbd1-5c8c6c8b96b6"
+        },
+        {
+            "type": "Ext.grid.column.Number",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "Total",
+                "format": "0",
+                "summaryType": "sum",
+                "text": "Total"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "format": "string",
+                "summaryType": "string",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyNumberColumn3",
+            "designerId": "b6cb3dfa-3a6b-451b-b777-a54eae8452a6"
+        },
+        {
+            "type": "Ext.grid.feature.GroupingSummary",
+            "reference": {
+                "name": "features",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "showGroupsText": "Return reults"
+            },
+            "configAlternates": {
+                "showGroupsText": "string"
+            },
+            "name": "MyGroupingSummaryFeature",
+            "designerId": "75c1f1e3-079c-4097-9ee0-8e090d30cf8c",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "groupHeaderTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "groupHeaderTpl",
+                        "implHandler": [
+                            "{columnName}: {name}"
+                        ]
+                    },
+                    "configAlternates": {
+                        "designer|displayName": "string",
+                        "implHandler": "code"
+                    },
+                    "name": "groupHeaderTpl",
+                    "designerId": "be358f18-7bf4-4717-a5c4-dbb93bc0dbce"
+                }
+            ]
+        },
+        {
+            "type": "Ext.toolbar.Toolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dock": "top"
+            },
+            "configAlternates": {
+                "dock": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyToolbar2",
+            "designerId": "892fe875-51d6-44aa-87a3-f1769b0d4b74",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Date",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Start Date",
+                        "format": "Y-m-d",
+                        "itemId": "startDate",
+                        "labelWidth": 80,
+                        "layout|flex": null
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "itemId": "string",
+                        "labelWidth": "number",
+                        "layout|flex": "number",
+                        "scrollable": "boolean",
+                        "format": "string"
+                    },
+                    "name": "MyDateField5",
+                    "designerId": "9f7f8b0e-6c51-4ab4-96e9-21db516c331f"
+                },
+                {
+                    "type": "Ext.form.field.Date",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "End Date",
+                        "format": "Y-m-d",
+                        "itemId": "endDate",
+                        "labelWidth": 80,
+                        "layout|flex": null
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "itemId": "string",
+                        "labelWidth": "number",
+                        "layout|flex": "number",
+                        "scrollable": "boolean",
+                        "format": "string"
+                    },
+                    "name": "MyDateField4",
+                    "designerId": "dc80ca41-c889-4adb-85d8-b95f8da47e16"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "cmdPreviewVisits",
+                        "layout|flex": null,
+                        "text": "<b>Preview</b>",
+                        "width": 110
+                    },
+                    "configAlternates": {
+                        "itemId": "string",
+                        "layout|flex": "number",
+                        "text": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyButton4",
+                    "designerId": "9ad18da7-6ecb-4836-b83f-12c820c7d7d2"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "cmdExportVisits",
+                        "layout|flex": null,
+                        "text": "<b>Export</b>",
+                        "width": 110
+                    },
+                    "configAlternates": {
+                        "itemId": "string",
+                        "layout|flex": "number",
+                        "text": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyButton6",
+                    "designerId": "9c947630-9ef3-46c7-a7f8-b29b980352ff"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "cmdPrintVisits",
+                        "layout|flex": null,
+                        "text": "<b>Print</b>",
+                        "width": 100
+                    },
+                    "configAlternates": {
+                        "itemId": "string",
+                        "layout|flex": "number",
+                        "text": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyButton5",
+                    "designerId": "c0649529-551b-4b5b-84c8-0ab7e2cea00a"
+                }
+            ]
+        }
+    ]
+}

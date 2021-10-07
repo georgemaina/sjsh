@@ -1,0 +1,69 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": false,
+        "clearOnPageLoad": false,
+        "designer|userAlias": "dentalclinicstore",
+        "designer|userClassName": "DentalClinicStore",
+        "groupField": "Group",
+        "model": "DentalClinic",
+        "pageSize": 200,
+        "storeId": "DentalClinicStore"
+    },
+    "configAlternates": {
+        "autoLoad": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "groupField": "datafield",
+        "model": "model",
+        "pageSize": "number",
+        "storeId": "string",
+        "clearOnPageLoad": "boolean"
+    },
+    "name": "ClinicsStore1",
+    "designerId": "71297003-1a5e-4f10-9167-5d3406fd5642",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "simpleGroupMode": true,
+                "url": "data/getReportsData.php?task=getDentalServices"
+            },
+            "configAlternates": {
+                "simpleGroupMode": "boolean",
+                "url": "string"
+            },
+            "name": "MyAjaxProxy",
+            "designerId": "5e2f810f-0363-4100-8563-4f0f93a41345",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "dentalservices"
+                    },
+                    "configAlternates": {
+                        "root": "string",
+                        "rootProperty": "string"
+                    },
+                    "name": "MyJsonReader",
+                    "designerId": "4b4effc6-9415-4131-8204-8a29bfd2449b"
+                }
+            ]
+        }
+    ]
+}

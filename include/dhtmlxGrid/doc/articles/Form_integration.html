@@ -1,0 +1,122 @@
+<html>
+
+<head>
+
+
+<link rel="STYLESHEET" type="text/css" href="../common/styles.css">
+</head>
+<body>
+	<table border="0" cellpadding="0" cellspacing="0" class="sample_header" zid="71">
+		<tbody zid="3">
+			<tr valign="center" zid="4">
+				<td align="center" width="10" zid="5">&nbsp;</td>
+				<td align="left" zid="6">
+					<p zid="224">
+						<a href="http://www.dhtmlx.com/" zid="7">DHTMLX</a> Documentation
+					</p>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<!--- CONTENT. Starts --->
+	<H1 id=yzq20>Form integration</H1>
+<BR id=dqlh1>
+dhtmlxGrid can integrate with a surrounding FORM - which means grid data will be sent as a part of form submitting (this functionality can be used to save changes in the grid, if you do not want to use dataprocessor library).<BR id=dqlh2>
+<BR id=dqlh3>
+To enable form integration you need:<BR id=dqlh4>
+<UL id=dqlh5>
+<LI id=dqlh6>Include ext/dhtmlxgrid_form.js <BR id=dqlh7>
+<LI id=dqlh8>Place grid's container inside the FORM tag.<BR id=dqlh9>
+</LI>
+</UL>
+That is all, no additional steps are to be taken.<BR id=lf500>
+<BR id=lf501>
+<H3 id=ve2h0>Submit modes</H3>
+The Grid can work in the following modes:<BR id=bx5v2>
+<UL id=bx5v3>
+<LI id=bx5v4>Submit only the changed rows (the default mode);
+<LI id=bx5v4>Submit all rows;
+<LI id=bx5v4>Submit ID's of the selected rows;
+<LI id=bx5v4>Submit values of the selected rows.<BR id=mbtb0>
+</LI>
+</UL>
+<BR id=ve2h2>
+<SPAN id=zj1j0><B id=mmce0>"Submit only the changed rows"</B></SPAN> is the default mode. In this mode the grid will include only the data of the changed rows in the process of form submitting. <BR id=kl930>
+<BR id=xj:r0>
+For each changed row a virtual input field will be added:<BR id=xj:r1>
+&nbsp;&nbsp;&nbsp; The name of the field is <B id=xj:r2>[GRIDID]_[ROWID]_[CELLINDEX]</B><BR id=mcuf0>
+&nbsp;&nbsp;&nbsp; where 
+<UL id=xj:r4>
+<UL id=xj:r5>
+<LI id=xj:r6>GRIDID - id of the container used for the grid; </LI>
+</UL>
+<UL id=xj:r7>
+<LI id=xj:r8>ROWID - id of the row in which a value was changed;</LI>
+</UL>
+<UL id=xj:r9>
+<LI id=xj:r10>CELLINDEX - the index of a cell inside the row.</LI>
+</UL>
+</UL>
+<BR id=xj:r11>
+&nbsp;&nbsp;&nbsp; The value of the filed is equal to the cell value.<BR id=dylw0>
+<BR id=dylw1>
+&nbsp;&nbsp;&nbsp; For example, if we have a grid similar to the following one:<BR id=dylw2>
+<BLOCKQUOTE id=j2qr0>&nbsp;&nbsp;&nbsp; var grid = new dhtmlXGridObject("gridbox")<BR id=j2qr1>
+&nbsp;&nbsp;&nbsp; ...<BR id=j2qr2>
+&nbsp;&nbsp;&nbsp; grid.addRow("r1",["first","second","third"])<BR id=j2qr3>
+</BLOCKQUOTE>
+&nbsp;&nbsp;&nbsp; And later change the "second" to the "new second" and submit a form, it will have a <BR id=j2qr4>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; gridbox_r1_1="new second"<BR id=j2qr5>
+&nbsp;&nbsp;&nbsp; <BR id=k9s30>
+If any row was added to the grid, all values of this new row will be marked as changed. Additional to it the <BR id=k4130>
+<SPAN id=k4131><B id=wzlp0>&nbsp;&nbsp;&nbsp;&nbsp;[GRIDID]_ROWS_ADDED<BR id=k4132>
+</B></SPAN>virtual input will be added. It will contain the list of IDs of the added rows (so on the server side it will be possible to separate added and updated rows).<BR id=jv_:0>
+<BR id=nupa1>
+If any row was deleted, the <BR id=j2qr6>
+<SPAN id=k4131><B id=wzlp1>&nbsp;&nbsp;&nbsp; [GRIDID]_ROWS_DELETED<BR id=nupa2>
+</B></SPAN>virtual input will be added. The same as for the added rows, it will contain the list of IDs of the deleted rows. <BR id=jv_:2>
+<BR id=pi410>
+Sending the information about added|deleted rows is enabled by default, but can be disabled in the following way: <BR id=jv_:1>
+<BLOCKQUOTE id=ka750>&nbsp;&nbsp;&nbsp; grid.submitAddedRows(false);<BR id=vzhy0>
+</BLOCKQUOTE>
+<BR id=nupa3>
+<BR id=h1cz2>
+<SPAN id=h1cz3><B id=wzlp2>"Submit all rows" mode<BR id=mqfi0>
+<BR id=h1cz4>
+</B></SPAN>It is a mode that is not going to be used quite often, in my opinion. It can be enabled by:<BR id=qjue0>
+<BLOCKQUOTE id=kazf0>&nbsp;&nbsp;&nbsp;&nbsp;grid.submitOnlyChanged(false);<BR id=qjue1>
+</BLOCKQUOTE>
+In this mode a virtual input field for each cell will be created in the grid . <BR id=qjue2>
+<BR id=qjue3>
+<SPAN id=qjue4><B id=wzlp3>"Submit IDs of the selected rows" mode<BR id=ng.r0>
+<BR id=ng.r1>
+</B></SPAN><SPAN id=qjue4>In this mode the grid will create a single virtual field:</SPAN><SPAN id=qjue4><BR id=ng.r2>
+</SPAN><SPAN id=k4131><B id=wzlp4>&nbsp;&nbsp;&nbsp; [GRIDID]_SELECTED<BR id=ng.r3>
+</B></SPAN><SPAN id=k4131>This field will contain a list of row IDs which are selected (in the single select mode - it will be a single ID).<BR id=ng.r4>
+The mode can be enabled by: </SPAN><SPAN id=k4131><BR id=h1cz5>
+</SPAN>
+<BLOCKQUOTE id=uupt0>&nbsp;&nbsp;&nbsp; grid.submitOnlySelected(true)<BR id=m_if0>
+&nbsp;&nbsp;&nbsp; grid.submitOnlyRowID(true);<BR id=mbtb1>
+</BLOCKQUOTE>
+<BR id=mbtb2>
+<SPAN id=qjue4><B id=wzlp5>"Submit values from the selected rows" mode</B></SPAN><BR id=m_if1>
+<SPAN id=s:gv0><BR id=s:gv2>
+</SPAN>Works nearly the same as the default mode. This mode will send updated values from the selected rows only:<BR id=s:gv3>
+<BLOCKQUOTE id=pt130>&nbsp;&nbsp;&nbsp; grid.submitOnlySelected(true);<BR id=s:gv4>
+&nbsp;&nbsp;&nbsp; grid.submitOnlyRowID(false);<BR id=mqfi1>
+</BLOCKQUOTE>
+<BR id=mqfi2>
+<H3 id=mqfi3>Some additional details</H3>
+<BR id=mqfi4>
+a) As the names of fields contain gridId you can include multiple grids inside one and the same form tag.<BR id=ve2h3>
+<BR id=ve2h4>
+b) Pay your attention to the fact that only the rows edited by a user will be marked as changed. If you change some value by API calls, such row will not be included in the process of form submitting.<BR id=xj:r13>
+You can mark any row in the grid as updated in the following way:<BR id=xj:r14>
+<BLOCKQUOTE id=axva0>&nbsp;&nbsp;&nbsp; grid.cells(i,j).cell.wasChanged=true;&nbsp;&nbsp;&nbsp; <BR id=pt131>
+</BLOCKQUOTE>
+
+
+	<!--- CONTENT. Ends --->
+	<div class="copyright" zid="223">&copy; DHTMLX, 2008</div>
+</body>
+</html>

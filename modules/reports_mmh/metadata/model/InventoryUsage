@@ -1,0 +1,100 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "inventoryusage",
+        "designer|userClassName": "InventoryUsage"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "name": "MyModel1",
+    "designerId": "f32d7a8e-e736-4b1c-aa95-b4448974924d",
+    "cn": [
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Month"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField136",
+            "designerId": "5da9ad7b-577c-439d-9679-639ffb9543e7"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "OpeningStock"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField137",
+            "designerId": "80816ed6-003b-4d20-b41f-259c4b69b422"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Received"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField138",
+            "designerId": "cca11889-033c-4d38-a802-5190a576bfa1"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ClosingStock"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField139",
+            "designerId": "884e8704-a737-467d-897d-3e11b52d39c1"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Usage"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField140",
+            "designerId": "3247c5a5-3578-455a-a1d2-697d927ae66a"
+        }
+    ]
+}

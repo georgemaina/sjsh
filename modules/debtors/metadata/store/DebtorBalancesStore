@@ -1,0 +1,58 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "debtorbalancesstore",
+        "designer|userClassName": "DebtorBalancesStore",
+        "model": "DebtorBalances",
+        "storeId": "DebtorBalancesStore"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string"
+    },
+    "designerId": "3324da0c-cea5-4bff-b6a2-96279765b82b",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "./data/getDataFunctions.php?task=getDebtorBalances"
+            },
+            "configAlternates": {
+                "url": "string"
+            },
+            "name": "MyAjaxProxy6",
+            "designerId": "c2a57ae8-8138-4d2b-811d-f5e15d148c0e",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "debtorbalances"
+                    },
+                    "configAlternates": {
+                        "root": "string",
+                        "rootProperty": "string"
+                    },
+                    "name": "MyJsonReader6",
+                    "designerId": "43028bc3-b1a4-4a48-8b58-5acb9004ae9d"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,52 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "transtype",
+        "designer|userClassName": "TransTypes"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "name": "MyModel1",
+    "designerId": "170492b7-6136-49b9-aafa-fc4768a5ea01",
+    "cn": [
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "typeID"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField161",
+            "designerId": "d047d6ea-049c-4709-91b2-16ad368889b5"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "typeName"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField166",
+            "designerId": "769af727-10d6-4b5f-aca2-3bd1fba0ecaa"
+        }
+    ]
+}

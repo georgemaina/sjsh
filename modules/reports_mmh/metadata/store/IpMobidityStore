@@ -1,0 +1,63 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": false,
+        "designer|userAlias": "ipmobiditystore",
+        "designer|userClassName": "IpMobidityStore",
+        "groupField": "parent",
+        "model": "IpMobidityModel",
+        "storeId": "IpMobidityStore"
+    },
+    "configAlternates": {
+        "autoLoad": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "groupField": "datafield",
+        "model": "model",
+        "storeId": "string"
+    },
+    "name": "OpVisitsStore1",
+    "designerId": "62669e6a-5f49-408b-924a-f45249944988",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "data/getReportsData.php?task=ipmorbidity"
+            },
+            "configAlternates": {
+                "url": "string"
+            },
+            "name": "MyAjaxProxy",
+            "designerId": "fb381680-50a1-4486-bd67-9c59dfea113e",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "ipmorbidity"
+                    },
+                    "configAlternates": {
+                        "root": "string",
+                        "rootProperty": "string"
+                    },
+                    "name": "MyJsonReader",
+                    "designerId": "e2628095-ba34-4fcb-9ba2-5f89560e8961"
+                }
+            ]
+        }
+    ]
+}

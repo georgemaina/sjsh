@@ -1,0 +1,117 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "patientdetails",
+        "designer|userClassName": "PatientDetails"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "designerId": "523faf7b-70a5-4f52-8c9c-4c6cc796060e",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "pid"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField173",
+            "designerId": "1ac6291d-157c-47db-a7c0-69373fc36830"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "selian_pid"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField174",
+            "designerId": "96e2f251-dacb-4de6-a409-fc1e8bc62ea1"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "pnames"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField175",
+            "designerId": "8a81d6ec-dbe6-4200-9d02-44da560dfff0"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "date_birth"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField176",
+            "designerId": "c0f2e41a-4f7a-4151-963b-5061b2c8c402"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "sex"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField177",
+            "designerId": "52015943-b919-493f-8d3d-8444e6e077b1"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "mapping": "encounter_nr",
+                "name": "encounter_nr"
+            },
+            "configAlternates": {
+                "mapping": "auto",
+                "name": "string"
+            },
+            "name": "MyField178",
+            "designerId": "8f4e28a0-4456-4d97-8a57-4796ff116626"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "controllers": [
+            "Main"
+        ],
+        "models": [
+            "Anesthesia_Fluids",
+            "Anesthesia_Monitors",
+            "Anesthesia_Vitals"
+        ],
+        "name": "Procedures",
+        "stores": [
+            "AnesthesiaVitals"
+        ],
+        "views": [
+            "MyForm3",
+            "MyForm4",
+            "MyForm5",
+            "MyForm6",
+            "MyForm7"
+        ]
+    },
+    "configAlternates": {
+        "controllers": "typedarray",
+        "models": "typedarray",
+        "name": "string",
+        "stores": "typedarray",
+        "views": "typedarray"
+    },
+    "name": "Application",
+    "designerId": "application"
+}

@@ -1,0 +1,84 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "users",
+        "designer|userClassName": "Users"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "name": "StoreUsers1",
+    "designerId": "04f6b825-ea81-440f-a325-a022f08479a3",
+    "cn": [
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Name"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField48",
+            "designerId": "2a9953a6-1187-46fc-b504-9378ac9ec989"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "LoginID"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField46",
+            "designerId": "c4375209-fea9-4af8-9f93-069ef2feda8b"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "IssueDrugs"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField52",
+            "designerId": "80fbde9f-977d-4661-82a4-0009f2755bc4"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ServiceDrugs"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField53",
+            "designerId": "29a68253-9e14-4623-9a05-f54fd286e585"
+        }
+    ]
+}

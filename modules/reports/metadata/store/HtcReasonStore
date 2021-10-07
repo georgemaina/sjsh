@@ -1,0 +1,67 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "designer|userAlias": "htcreasonstore",
+        "designer|userClassName": "HtcReasonStore",
+        "groupField": "Group",
+        "model": "HTCReason",
+        "pageSize": 200,
+        "storeId": "HtcReasonStore"
+    },
+    "configAlternates": {
+        "autoLoad": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "groupField": "datafield",
+        "model": "model",
+        "pageSize": "number",
+        "storeId": "string"
+    },
+    "name": "XrayRevenueStore2",
+    "designerId": "b421e3e4-76ac-46d3-adef-eee4f829b1ce",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "simpleGroupMode": true,
+                "url": "data/getReportsData.php?task=getHtcReasons"
+            },
+            "configAlternates": {
+                "simpleGroupMode": "boolean",
+                "url": "string"
+            },
+            "name": "MyAjaxProxy",
+            "designerId": "5542101f-f6bf-4678-8e1f-bb6f6c21c4e2",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "htcreason"
+                    },
+                    "configAlternates": {
+                        "root": "string",
+                        "rootProperty": "string"
+                    },
+                    "name": "MyJsonReader",
+                    "designerId": "4dcc2d81-6629-4bcb-afe6-c6818c6c1b65"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,3382 @@
+
+
+====================================
+Log started, 07/04/2010 09:04:12
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid LIMIT 0,100
+
+Done in 0.015914916992188ms
+
+
+
+====================================
+Log started, 07/04/2010 09:04:40
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid LIMIT 0,100
+
+Done in 0.01690411567688ms
+
+
+
+====================================
+Log started, 07/04/2010 09:04:45
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+rules => 
+	0 => 
+		0 => name_first
+		1 => george
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid WHERE name_first LIKE '%george%'
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid WHERE name_first LIKE '%george%' LIMIT 0,100
+
+Done in 0.03337287902832ms
+
+
+
+====================================
+Log started, 07/04/2010 09:04:26
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid LIMIT 0,100
+
+Done in 0.034381151199341ms
+
+
+
+====================================
+Log started, 07/04/2010 09:04:27
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid LIMIT 0,100
+
+Done in 0.01648998260498ms
+
+
+
+====================================
+Log started, 07/04/2010 09:04:30
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+rules => 
+	0 => 
+		0 => name_first
+		1 => lea
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid WHERE name_first LIKE '%lea%'
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid WHERE name_first LIKE '%lea%' LIMIT 0,100
+
+Done in 0.057574033737183ms
+
+
+
+====================================
+Log started, 07/04/2010 09:04:43
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid LIMIT 0,100
+
+Done in 0.017487049102783ms
+
+
+
+====================================
+Log started, 07/04/2010 09:04:45
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+rules => 
+	0 => 
+		0 => name_first
+		1 => lea
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid WHERE name_first LIKE '%lea%'
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid WHERE name_first LIKE '%lea%' LIMIT 0,100
+
+Done in 0.032538890838623ms
+
+
+
+====================================
+Log started, 07/04/2010 10:04:04
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid LIMIT 0,100
+
+Done in 0.019845008850098ms
+
+
+
+====================================
+Log started, 07/04/2010 10:04:07
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+rules => 
+	0 => 
+		0 => name_first
+		1 => lea
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid WHERE name_first LIKE '%lea%'
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid WHERE name_first LIKE '%lea%' LIMIT 0,100
+
+Done in 0.033179998397827ms
+
+
+
+====================================
+Log started, 07/04/2010 04:04:18
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid LIMIT 0,100
+
+Done in 0.20656895637512ms
+
+
+
+====================================
+Log started, 07/04/2010 04:04:24
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+rules => 
+	0 => 
+		0 => name_first
+		1 => l
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid WHERE name_first LIKE '%l%'
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid WHERE name_first LIKE '%l%' LIMIT 0,100
+
+Done in 0.059530973434448ms
+
+
+
+====================================
+Log started, 07/04/2010 04:04:24
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+rules => 
+	0 => 
+		0 => name_first
+		1 => lea
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid WHERE name_first LIKE '%lea%'
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid WHERE name_first LIKE '%lea%' LIMIT 0,100
+
+Done in 0.038497924804688ms
+
+
+
+====================================
+Log started, 07/04/2010 04:04:25
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+rules => 
+	0 => 
+		0 => name_first
+		1 => le
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid WHERE name_first LIKE '%le%'
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid WHERE name_first LIKE '%le%' LIMIT 0,100
+
+Done in 0.037789106369019ms
+
+
+
+====================================
+Log started, 07/04/2010 04:04:18
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid LIMIT 0,100
+
+Done in 0.018610000610352ms
+
+
+
+====================================
+Log started, 07/04/2010 04:04:21
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+rules => 
+	0 => 
+		0 => name_first
+		1 => lea
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid WHERE name_first LIKE '%lea%'
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid WHERE name_first LIKE '%lea%' LIMIT 0,100
+
+Done in 0.062774896621704ms
+
+
+
+====================================
+Log started, 07/04/2010 04:04:58
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid LIMIT 0,100
+
+Done in 0.018330097198486ms
+
+
+
+====================================
+Log started, 07/04/2010 04:04:01
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+rules => 
+	0 => 
+		0 => name_first
+		1 => lea
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid WHERE name_first LIKE '%lea%'
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid WHERE name_first LIKE '%lea%' LIMIT 0,100
+
+Done in 0.07915997505188ms
+
+
+
+====================================
+Log started, 07/04/2010 04:04:37
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid LIMIT 0,100
+
+Done in 0.018010854721069ms
+
+
+
+====================================
+Log started, 07/04/2010 04:04:39
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+rules => 
+	0 => 
+		0 => name_first
+		1 => lea
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid WHERE name_first LIKE '%lea%'
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid WHERE name_first LIKE '%lea%' LIMIT 0,100
+
+Done in 0.033568859100342ms
+
+
+
+====================================
+Log started, 07/04/2010 05:04:12
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid LIMIT 0,100
+
+Done in 0.020244121551514ms
+
+
+
+====================================
+Log started, 07/04/2010 05:04:16
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+rules => 
+	0 => 
+		0 => name_first
+		1 => lea
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid WHERE name_first LIKE '%lea%'
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid WHERE name_first LIKE '%lea%' LIMIT 0,100
+
+Done in 0.032954931259155ms
+
+
+
+====================================
+Log started, 07/04/2010 10:04:38
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid LIMIT 0,100
+
+Done in 0.018887042999268ms
+
+
+
+====================================
+Log started, 07/04/2010 10:04:06
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+count => 11
+from => 100
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid LIMIT 100,11
+
+Done in 0.01010799407959ms
+
+
+
+====================================
+Log started, 07/04/2010 10:04:13
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+count => 12
+from => 116
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid LIMIT 116,12
+
+Done in 0.015472888946533ms
+
+
+
+====================================
+Log started, 07/04/2010 10:04:13
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+count => 9
+from => 128
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid LIMIT 128,9
+
+Done in 0.010483980178833ms
+
+
+
+====================================
+Log started, 07/04/2010 10:04:31
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+count => 12
+from => 142
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid LIMIT 142,12
+
+Done in 0.010842084884644ms
+
+
+
+====================================
+Log started, 07/04/2010 10:04:48
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+count => 12
+from => 168
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid LIMIT 168,12
+
+Done in 0.010851860046387ms
+
+
+
+====================================
+Log started, 07/04/2010 10:04:49
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+count => 12
+from => 188
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid LIMIT 188,12
+
+Done in 0.011544942855835ms
+
+
+
+====================================
+Log started, 07/04/2010 10:04:50
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+count => 12
+from => 208
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid LIMIT 208,12
+
+Done in 0.011231184005737ms
+
+
+
+====================================
+Log started, 07/04/2010 10:04:56
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+count => 12
+from => 228
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid LIMIT 228,12
+
+Done in 0.011569976806641ms
+
+
+
+====================================
+Log started, 07/04/2010 10:04:00
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+count => 12
+from => 245
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid LIMIT 245,12
+
+Done in 0.011631965637207ms
+
+
+
+====================================
+Log started, 07/04/2010 10:04:02
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+count => 12
+from => 265
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid LIMIT 265,12
+
+Done in 0.011579036712646ms
+
+
+
+====================================
+Log started, 07/04/2010 10:04:03
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+count => 12
+from => 287
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid LIMIT 287,12
+
+Done in 0.018006801605225ms
+
+
+
+====================================
+Log started, 07/04/2010 10:04:03
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+count => 12
+from => 307
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid LIMIT 307,12
+
+Done in 0.012263059616089ms
+
+
+
+====================================
+Log started, 07/04/2010 10:04:06
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+count => 9
+from => 319
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid LIMIT 319,9
+
+Done in 0.013085842132568ms
+
+
+
+====================================
+Log started, 07/04/2010 10:04:06
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+count => 3
+from => 328
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid LIMIT 328,3
+
+Done in 0.012386083602905ms
+
+
+
+====================================
+Log started, 07/04/2010 10:04:06
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+count => 11
+from => 328
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid LIMIT 328,11
+
+Done in 0.012506008148193ms
+
+
+
+====================================
+Log started, 07/04/2010 10:04:07
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+count => 12
+from => 350
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid LIMIT 350,12
+
+Done in 0.013009071350098ms
+
+
+
+====================================
+Log started, 07/04/2010 11:04:59
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid LIMIT 0,100
+
+Done in 0.017561912536621ms
+
+
+
+====================================
+Log started, 07/04/2010 11:04:02
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+rules => 
+	0 => 
+		0 => name_first
+		1 => lea
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid WHERE name_first LIKE '%lea%'
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid WHERE name_first LIKE '%lea%' LIMIT 0,100
+
+Done in 0.063802003860474ms
+
+
+
+====================================
+Log started, 07/04/2010 11:04:28
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid LIMIT 0,100
+
+Done in 0.018831014633179ms
+
+
+
+====================================
+Log started, 07/04/2010 11:04:31
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+rules => 
+	0 => 
+		0 => name_first
+		1 => lea
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid WHERE name_first LIKE '%lea%'
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid WHERE name_first LIKE '%lea%' LIMIT 0,100
+
+Done in 0.03498101234436ms
+
+
+
+====================================
+Log started, 08/04/2010 02:04:22
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid LIMIT 0,100
+
+Done in 0.018062829971313ms
+
+
+
+====================================
+Log started, 08/04/2010 02:04:25
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+rules => 
+	0 => 
+		0 => name_first
+		1 => lea
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid WHERE name_first LIKE '%lea%'
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid WHERE name_first LIKE '%lea%' LIMIT 0,100
+
+Done in 0.033560037612915ms
+
+
+
+====================================
+Log started, 21/04/2010 02:04:14
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid LIMIT 0,100
+
+Done in 0.207007884979ms
+
+
+
+====================================
+Log started, 21/04/2010 02:04:16
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+rules => 
+	0 => 
+		0 => name_first
+		1 => caro
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid WHERE name_first LIKE '%caro%'
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid WHERE name_first LIKE '%caro%' LIMIT 0,100
+
+Done in 0.0422132015228ms
+
+
+
+====================================
+Log started, 21/04/2010 02:04:25
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+rules => 
+	0 => 
+		0 => name_first
+		1 => george
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid WHERE name_first LIKE '%george%'
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid WHERE name_first LIKE '%george%' LIMIT 0,100
+
+Done in 0.0424520969391ms
+
+
+
+====================================
+Log started, 21/04/2010 02:04:44
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid LIMIT 0,100
+
+Done in 0.0133900642395ms
+
+
+
+====================================
+Log started, 21/04/2010 02:04:09
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid LIMIT 0,100
+
+Done in 0.0147740840912ms
+
+
+
+====================================
+Log started, 21/04/2010 02:04:12
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+rules => 
+	0 => 
+		0 => name_first
+		1 => lea
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid WHERE name_first LIKE '%lea%'
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid WHERE name_first LIKE '%lea%' LIMIT 0,100
+
+Done in 0.0910110473633ms
+
+
+
+====================================
+Log started, 21/04/2010 02:04:56
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid LIMIT 0,100
+
+Done in 0.0184099674225ms
+
+
+
+====================================
+Log started, 21/04/2010 02:04:59
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+rules => 
+	0 => 
+		0 => name_first
+		1 => caro
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid WHERE name_first LIKE '%caro%'
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid WHERE name_first LIKE '%caro%' LIMIT 0,100
+
+Done in 0.0426380634308ms
+
+
+
+====================================
+Log started, 21/04/2010 02:04:55
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid LIMIT 0,100
+
+Done in 0.0151770114899ms
+
+
+
+====================================
+Log started, 21/04/2010 02:04:57
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+rules => 
+	0 => 
+		0 => name_first
+		1 => car
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid WHERE name_first LIKE '%car%'
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid WHERE name_first LIKE '%car%' LIMIT 0,100
+
+Done in 0.0429010391235ms
+
+
+
+====================================
+Log started, 21/04/2010 05:04:04
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid LIMIT 0,100
+
+Done in 0.0309569835663ms
+
+
+
+====================================
+Log started, 21/04/2010 05:04:07
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+rules => 
+	0 => 
+		0 => name_first
+		1 => terry
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid WHERE name_first LIKE '%terry%'
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid WHERE name_first LIKE '%terry%' LIMIT 0,100
+
+Done in 0.039882183075ms
+
+
+
+====================================
+Log started, 21/04/2010 05:04:25
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid LIMIT 0,100
+
+Done in 0.014750957489ms
+
+
+
+====================================
+Log started, 21/04/2010 05:04:28
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+rules => 
+	0 => 
+		0 => name_first
+		1 => terry
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid WHERE name_first LIKE '%terry%'
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid WHERE name_first LIKE '%terry%' LIMIT 0,100
+
+Done in 0.0106110572815ms
+
+
+
+====================================
+Log started, 08/11/2010 07:11:54
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid LIMIT 0,100
+
+Done in 0.025251865387ms
+
+
+
+====================================
+Log started, 08/11/2010 07:11:56
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+rules => 
+	0 => 
+		0 => name_first
+		1 => SE
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid WHERE name_first LIKE '%SE%'
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid WHERE name_first LIKE '%SE%' LIMIT 0,100
+
+Done in 0.0228672027588ms
+
+
+
+====================================
+Log started, 08/11/2010 07:11:57
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+rules => 
+	0 => 
+		0 => name_first
+		1 => SEBA
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid WHERE name_first LIKE '%SEBA%'
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid WHERE name_first LIKE '%SEBA%' LIMIT 0,100
+
+Done in 0.0183210372925ms
+
+
+
+====================================
+Log started, 08/11/2010 07:11:09
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid LIMIT 0,100
+
+Done in 0.0278570652008ms
+
+
+
+====================================
+Log started, 08/11/2010 07:11:14
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+rules => 
+	0 => 
+		0 => name_first
+		1 => jon
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid WHERE name_first LIKE '%jon%'
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid WHERE name_first LIKE '%jon%' LIMIT 0,100
+
+Done in 0.0155820846558ms
+
+
+
+====================================
+Log started, 08/11/2010 07:11:16
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+rules => 
+	0 => 
+		0 => name_first
+		1 => john
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid WHERE name_first LIKE '%john%'
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid WHERE name_first LIKE '%john%' LIMIT 0,100
+
+Done in 0.0182719230652ms
+
+
+
+====================================
+Log started, 18/04/2011 09:04:05
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid LIMIT 0,100
+
+Done in 0.10665416717529ms
+
+
+
+====================================
+Log started, 18/04/2011 09:04:04
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid LIMIT 0,100
+
+Done in 0.029308080673218ms
+
+
+
+====================================
+Log started, 19/04/2011 09:04:58
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid LIMIT 0,100
+
+Done in 0.077191829681396ms
+
+
+
+====================================
+Log started, 19/04/2011 09:04:01
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+rules => 
+	0 => 
+		0 => name_first
+		1 => georg
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid WHERE name_first LIKE '%georg%'
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid WHERE name_first LIKE '%georg%' LIMIT 0,100
+
+Done in 0.01774001121521ms
+
+
+
+====================================
+Log started, 30/09/2011 04:09:10
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid LIMIT 0,100
+
+Done in 0.3596339225769ms
+
+
+
+====================================
+Log started, 30/09/2011 04:09:13
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+count => 7
+from => 5054
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid LIMIT 5054,7
+
+Done in 8.926570892334ms
+
+
+
+====================================
+Log started, 30/09/2011 04:09:22
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+count => 12
+from => 4332
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid LIMIT 4332,12
+
+Done in 0.10702109336853ms
+
+
+
+====================================
+Log started, 30/09/2011 04:09:22
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+count => 12
+from => 300
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid LIMIT 300,12
+
+Done in 0.0096940994262695ms
+
+
+
+====================================
+Log started, 30/09/2011 04:09:22
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+count => 12
+from => 294
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid LIMIT 294,12
+
+Done in 0.063668966293335ms
+
+
+
+====================================
+Log started, 17/10/2011 06:10:20
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid LIMIT 0,100
+
+Done in 0.6396279335022ms
+
+
+
+====================================
+Log started, 21/11/2011 11:11:51
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid LIMIT 0,100
+
+Done in 0.33296489715576ms
+
+
+
+====================================
+Log started, 19/02/2012 02:02:25
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid LIMIT 0,100
+
+Done in 1.0307290554047ms
+
+
+
+====================================
+Log started, 19/02/2012 02:02:30
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+count => 12
+from => 21875
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid LIMIT 21875,12
+
+Done in 34.317544937134ms
+
+
+
+====================================
+Log started, 02/04/2012 09:37:54
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid LIMIT 0,100
+
+Done in 0.12211203575134ms
+
+
+
+====================================
+Log started, 02/04/2012 09:37:54
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid LIMIT 0,100
+
+Done in 0.10606217384338ms
+
+
+
+====================================
+Log started, 03/04/2012 12:36:51
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => pid
+	1 => pid
+table => 
+	0 =>  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+	1 => pid
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care2x.care_person a
+INNER JOIN care2x.care_encounter b ON a.pid=b.pid LIMIT 0,100
+
+Done in 0.65741682052612ms
+
+
+
+====================================
+Log started, 22/01/2015 01:01:18
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => a.pid
+	1 => pid
+table => 
+	0 =>  care_person a
+INNER JOIN care_encounter b ON a.pid=b.pid
+	1 => pid
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_person a
+INNER JOIN care_encounter b ON a.pid=b.pid
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care_person a
+INNER JOIN care_encounter b ON a.pid=b.pid LIMIT 0,100
+
+Done in 0.32117509841919ms
+
+
+
+====================================
+Log started, 22/01/2015 01:01:18
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => a.pid
+	1 => pid
+table => 
+	0 =>  care_person a
+INNER JOIN care_encounter b ON a.pid=b.pid
+	1 => pid
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_person a
+INNER JOIN care_encounter b ON a.pid=b.pid
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care_person a
+INNER JOIN care_encounter b ON a.pid=b.pid LIMIT 0,100
+
+Done in 0.11725187301636ms
+

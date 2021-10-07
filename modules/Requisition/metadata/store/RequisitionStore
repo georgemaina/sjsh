@@ -1,0 +1,64 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "autoSync": true,
+        "designer|userAlias": "requisitionstore",
+        "designer|userClassName": "RequisitionStore",
+        "model": "RequisitionModel",
+        "pageSize": 200,
+        "storeId": "RequisitionStore"
+    },
+    "configAlternates": {
+        "autoLoad": "boolean",
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string",
+        "autoSync": "boolean",
+        "pageSize": "number",
+        "designer|userAlias": "string"
+    },
+    "name": "OrdersTemplateStore1",
+    "designerId": "33f61bb6-b96f-417f-9f4a-7e84ae56f0ed",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "data/getDataFunctions.php?task=getRequisition"
+            },
+            "configAlternates": {
+                "url": "string"
+            },
+            "name": "MyAjaxProxy",
+            "designerId": "d31075ed-9318-46f6-945f-c0b6f0a22936",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "itemslist"
+                    },
+                    "configAlternates": {
+                        "rootProperty": "string"
+                    },
+                    "name": "MyJsonReader1",
+                    "designerId": "a9d10487-a361-4c6c-9976-9a77b846a8e6"
+                }
+            ]
+        }
+    ]
+}

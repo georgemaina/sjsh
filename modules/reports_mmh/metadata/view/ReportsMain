@@ -1,0 +1,988 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userAlias": "reportsmain",
+        "designer|userClassName": "ReportsMain",
+        "layout": "border"
+    },
+    "configAlternates": {
+        "designer|initialView": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "layout": "string",
+        "scrollable": "boolean"
+    },
+    "name": "MyViewport1",
+    "designerId": "9aa74b93-b546-4d22-85f4-5de57d4090fa",
+    "viewControllerInstanceId": "4ec1716a-0fea-4e98-b4ed-155f1c104561",
+    "viewModelInstanceId": "09bebddd-7d77-4c9a-95cd-9d1eed6b6748",
+    "cn": [
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "border": null,
+                "designer|displayName": "Details",
+                "frame": true,
+                "layout|region": "center",
+                "padding": null,
+                "scrollable": true
+            },
+            "configAlternates": {
+                "autoScroll": "boolean",
+                "border": "auto",
+                "designer|displayName": "string",
+                "frame": "boolean",
+                "layout|region": "string",
+                "padding": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyContainer",
+            "designerId": "e38ce5f1-47fa-44cf-8451-2cd838d90b29"
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "animCollapse": true,
+                "collapseDirection": "left",
+                "collapsible": true,
+                "container|animate": true,
+                "designer|displayName": "Menus",
+                "frame": true,
+                "layout": "accordion",
+                "layout|collapseMode": "header",
+                "layout|region": "west",
+                "title": "Reports Menus",
+                "titleCollapse": true,
+                "width": 272
+            },
+            "configAlternates": {
+                "animCollapse": "boolean",
+                "collapsible": "boolean",
+                "container|animate": "boolean",
+                "designer|displayName": "string",
+                "frame": "boolean",
+                "layout": "string",
+                "layout|collapseMode": "string",
+                "layout|region": "string",
+                "title": "string",
+                "titleCollapse": "boolean",
+                "width": "auto",
+                "scrollable": "boolean",
+                "collapseDirection": "string"
+            },
+            "name": "MyPanel4",
+            "designerId": "90dbb636-4c2f-4011-a045-2ab16d089c7d",
+            "cn": [
+                {
+                    "type": "Ext.menu.Menu",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "OutpatientReports",
+                        "floating": false,
+                        "title": "Outpatient Reports",
+                        "width": 120
+                    },
+                    "configAlternates": {
+                        "designer|displayName": "string",
+                        "floating": "boolean",
+                        "title": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyMenu",
+                    "designerId": "82c13bbf-922c-46c1-972c-90da36ff0a17",
+                    "cn": [
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "focusable": true,
+                                "itemId": "mnuOPMobidity",
+                                "text": "Daily OP Mobidity Report"
+                            },
+                            "configAlternates": {
+                                "itemId": "string",
+                                "text": "string",
+                                "scrollable": "boolean",
+                                "focusable": "boolean"
+                            },
+                            "name": "MyMenuItem",
+                            "designerId": "4062e91f-ca23-4c88-94b9-57b8887a358b"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "focusable": true,
+                                "itemId": "mnuOpVisits",
+                                "text": "Outpatient Reports"
+                            },
+                            "configAlternates": {
+                                "itemId": "string",
+                                "text": "string",
+                                "scrollable": "boolean",
+                                "focusable": "boolean"
+                            },
+                            "name": "MyMenuItem1",
+                            "designerId": "3ca6efe3-42fa-418f-95f3-f6f64e7e4281"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "focusable": true,
+                                "itemId": "mnuDiagnosisReports",
+                                "text": "Diagnosis Reports"
+                            },
+                            "configAlternates": {
+                                "itemId": "string",
+                                "text": "string",
+                                "scrollable": "boolean",
+                                "focusable": "boolean"
+                            },
+                            "name": "MyMenuItem2",
+                            "designerId": "8679d3bd-4abd-482f-8e5c-1bec467af127"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "focusable": true,
+                                "itemId": "mnuTopDiseases",
+                                "text": "Top Diseases"
+                            },
+                            "configAlternates": {
+                                "itemId": "string",
+                                "text": "string",
+                                "scrollable": "boolean",
+                                "focusable": "boolean"
+                            },
+                            "name": "MyMenuItem12",
+                            "designerId": "4ef569ce-6c04-436c-b1a1-dcc54378a630"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "focusable": true,
+                                "itemId": "mnuDentalClinic",
+                                "text": "Dental Clinic"
+                            },
+                            "configAlternates": {
+                                "itemId": "string",
+                                "text": "string",
+                                "scrollable": "boolean",
+                                "focusable": "boolean"
+                            },
+                            "name": "MyMenuItem13",
+                            "designerId": "9f926f1d-708c-4318-b7ba-6c627aefcfae"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "focusable": true,
+                                "itemId": "mnuClinics",
+                                "text": "Clinic Reports"
+                            },
+                            "configAlternates": {
+                                "itemId": "string",
+                                "text": "string",
+                                "scrollable": "boolean",
+                                "focusable": "boolean"
+                            },
+                            "name": "MyMenuItem27",
+                            "designerId": "bf432879-36fb-4cdf-a6fb-3c6319245443"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "focusable": true,
+                                "itemId": "mnuHtc",
+                                "text": "HTC Reports"
+                            },
+                            "configAlternates": {
+                                "itemId": "string",
+                                "text": "string",
+                                "scrollable": "boolean",
+                                "focusable": "boolean"
+                            },
+                            "name": "MyMenuItem30",
+                            "designerId": "10059009-f479-465c-9d0d-3c695798cde5"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "focusable": true,
+                                "itemId": "mnuWorkload",
+                                "text": "Doctors Workload"
+                            },
+                            "configAlternates": {
+                                "itemId": "string",
+                                "text": "string",
+                                "scrollable": "boolean",
+                                "focusable": "boolean"
+                            },
+                            "name": "MyMenuItem31",
+                            "designerId": "e611806b-36b1-4fb5-8371-5f4beb5d9563"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "focusable": true,
+                                "itemId": "mnuWorkload1",
+                                "text": "Cledit Slips"
+                            },
+                            "configAlternates": {
+                                "itemId": "string",
+                                "text": "string",
+                                "scrollable": "boolean",
+                                "focusable": "boolean"
+                            },
+                            "name": "MyMenuItem32",
+                            "designerId": "fc98f593-d854-4aab-8ab3-b643df3f8d37"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "focusable": true,
+                                "itemId": "mnuOpInvoices",
+                                "text": "Outpatient Invoices"
+                            },
+                            "configAlternates": {
+                                "itemId": "string",
+                                "text": "string",
+                                "scrollable": "boolean",
+                                "focusable": "boolean"
+                            },
+                            "name": "MyMenuItem33",
+                            "designerId": "0283a9c0-06e0-4ca9-830b-4ff870f8c7f7"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "focusable": true,
+                                "itemId": "mnuTreatmentReport",
+                                "text": "HTN Treatment Register"
+                            },
+                            "configAlternates": {
+                                "itemId": "string",
+                                "text": "string",
+                                "scrollable": "boolean",
+                                "focusable": "boolean"
+                            },
+                            "name": "MyMenuItem37",
+                            "designerId": "0be5d5e7-c273-461d-b5cb-d99089c1624a"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.menu.Menu",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "floating": false,
+                        "itemId": null,
+                        "title": "Inpatient Reports",
+                        "width": 120
+                    },
+                    "configAlternates": {
+                        "floating": "boolean",
+                        "itemId": "string",
+                        "title": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyMenu1",
+                    "designerId": "420865d8-68df-49e6-b8e6-4d87223febbe",
+                    "cn": [
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "focusable": true,
+                                "itemId": "mnuIpMobidity",
+                                "text": "IP Mobidity Report"
+                            },
+                            "configAlternates": {
+                                "itemId": "string",
+                                "text": "string",
+                                "scrollable": "boolean",
+                                "focusable": "boolean"
+                            },
+                            "name": "MyMenuItem16",
+                            "designerId": "2f89d866-e911-4589-b580-9ccc470a3ec2"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "focusable": true,
+                                "itemId": "InpatientServices",
+                                "text": "Inpatient Services"
+                            },
+                            "configAlternates": {
+                                "itemId": "string",
+                                "text": "string",
+                                "scrollable": "boolean",
+                                "focusable": "boolean"
+                            },
+                            "name": "MyMenuItem3",
+                            "designerId": "e6b6fa74-0608-4301-a758-932a2b9f8b83"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "focusable": true,
+                                "itemId": "mnuOccupancyReport",
+                                "text": "Occupacy Report"
+                            },
+                            "configAlternates": {
+                                "itemId": "string",
+                                "text": "string",
+                                "scrollable": "boolean",
+                                "focusable": "boolean"
+                            },
+                            "name": "MyMenuItem4",
+                            "designerId": "3550174a-93de-48f6-b93b-2bcebf2e4470"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "focusable": true,
+                                "itemId": "mnuAdmissions",
+                                "text": "Admissions"
+                            },
+                            "configAlternates": {
+                                "itemId": "string",
+                                "text": "string",
+                                "scrollable": "boolean",
+                                "focusable": "boolean"
+                            },
+                            "name": "MyMenuItem5",
+                            "designerId": "d100f17d-3129-48dc-8b6c-0f9df6f4c7b0"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "focusable": true,
+                                "itemId": "mnuDischarges",
+                                "text": "Discharges"
+                            },
+                            "configAlternates": {
+                                "itemId": "string",
+                                "text": "string",
+                                "scrollable": "boolean",
+                                "focusable": "boolean"
+                            },
+                            "name": "MyMenuItem14",
+                            "designerId": "c6a43dc5-d839-4049-aad3-272a1c95dc7e"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "focusable": true,
+                                "itemId": "Operations",
+                                "text": "Operations"
+                            },
+                            "configAlternates": {
+                                "itemId": "string",
+                                "text": "string",
+                                "scrollable": "boolean",
+                                "focusable": "boolean"
+                            },
+                            "name": "MyMenuItem15",
+                            "designerId": "db1c7d19-947d-47a4-8640-d1e48a5d7120"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "focusable": true,
+                                "itemId": "NhifCredits",
+                                "text": "NHIF Credits"
+                            },
+                            "configAlternates": {
+                                "itemId": "string",
+                                "text": "string",
+                                "scrollable": "boolean",
+                                "focusable": "boolean"
+                            },
+                            "name": "MyMenuItem17",
+                            "designerId": "a14cfef2-af62-4cf9-9487-ae409a980ba4"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "focusable": true,
+                                "itemId": "mnuFinalised",
+                                "text": "Finalised Invoices"
+                            },
+                            "configAlternates": {
+                                "itemId": "string",
+                                "text": "string",
+                                "scrollable": "boolean",
+                                "focusable": "boolean"
+                            },
+                            "name": "MyMenuItem28",
+                            "designerId": "562e09f8-b935-4627-9cc6-88e7719549be"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.menu.Menu",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "floating": false,
+                        "itemId": "PharmCategoryRev",
+                        "title": "Pharmacy/Lab/Xray Reports",
+                        "width": 120
+                    },
+                    "configAlternates": {
+                        "floating": "boolean",
+                        "itemId": "string",
+                        "title": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyMenu2",
+                    "designerId": "d8873d32-b34b-42fa-a1db-104d9278c077",
+                    "cn": [
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "focusable": true,
+                                "itemId": "mnuPharmacyRevenue",
+                                "text": "Pharmacy Revenue by Item"
+                            },
+                            "configAlternates": {
+                                "itemId": "string",
+                                "text": "string",
+                                "scrollable": "boolean",
+                                "focusable": "boolean"
+                            },
+                            "name": "MyMenuItem6",
+                            "designerId": "ff2d4c4d-0e25-4f99-8d98-3e4ada71e0d6"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "focusable": true,
+                                "itemId": "mnuPharmRevenueCategory",
+                                "text": "Pharmacy Revenue by Category"
+                            },
+                            "configAlternates": {
+                                "itemId": "string",
+                                "text": "string",
+                                "scrollable": "boolean",
+                                "focusable": "boolean"
+                            },
+                            "name": "MyMenuItem7",
+                            "designerId": "aad011c4-a82f-42a2-bad4-0fec600ba7ea"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "focusable": true,
+                                "itemId": "mnuPatientDrugStatement",
+                                "text": "Patient Drug Statement"
+                            },
+                            "configAlternates": {
+                                "itemId": "string",
+                                "text": "string",
+                                "scrollable": "boolean",
+                                "focusable": "boolean"
+                            },
+                            "name": "MyMenuItem8",
+                            "designerId": "24eec824-8829-4a7e-849a-21482368d622"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "focusable": true,
+                                "itemId": "mnuSingleDrugStatement",
+                                "text": "Single Drug Statement"
+                            },
+                            "configAlternates": {
+                                "itemId": "string",
+                                "text": "string",
+                                "scrollable": "boolean",
+                                "focusable": "boolean"
+                            },
+                            "name": "MyMenuItem26",
+                            "designerId": "172b69ff-50da-40a5-b75a-bfb1782291ee"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "focusable": true,
+                                "itemId": "mnuStocksMovement",
+                                "text": "Stocks Movement"
+                            },
+                            "configAlternates": {
+                                "itemId": "string",
+                                "text": "string",
+                                "scrollable": "boolean",
+                                "focusable": "boolean"
+                            },
+                            "name": "MyMenuItem29",
+                            "designerId": "beb51a8f-7c3b-4d82-a770-cbceb3da36d0"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "mnuStockLevels",
+                                "text": "Stock Levels"
+                            },
+                            "configAlternates": {
+                                "itemId": "string",
+                                "text": "string"
+                            },
+                            "name": "MyMenuItem36",
+                            "designerId": "6c012904-ca83-4b18-a034-a73b7718aa34"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "focusable": true,
+                                "itemId": "mnuInventoryUsage",
+                                "text": "Monthly Inventory Usage Per Item"
+                            },
+                            "configAlternates": {
+                                "itemId": "string",
+                                "text": "string",
+                                "scrollable": "boolean",
+                                "focusable": "boolean"
+                            },
+                            "name": "MyMenuItem34",
+                            "designerId": "9e2c72ad-298a-43df-97ef-a5d7e1fa82b5"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "focusable": true,
+                                "itemId": "mnuInventoryUsage1",
+                                "text": "Detailed Inventory Usage per Period"
+                            },
+                            "configAlternates": {
+                                "itemId": "string",
+                                "text": "string",
+                                "scrollable": "boolean",
+                                "focusable": "boolean"
+                            },
+                            "name": "MyMenuItem35",
+                            "designerId": "eb324f0a-320d-4526-ba1c-33635d0d6128"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "focusable": true,
+                                "itemId": "mnuLabSummaries",
+                                "text": "Laboratory Summaries"
+                            },
+                            "configAlternates": {
+                                "itemId": "string",
+                                "text": "string",
+                                "scrollable": "boolean",
+                                "focusable": "boolean"
+                            },
+                            "name": "MyMenuItem18",
+                            "designerId": "d0c50b2f-56ac-4756-8915-51a68abf8b71"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "focusable": true,
+                                "itemId": "mnuLabActivities",
+                                "text": "Laboratory Activities"
+                            },
+                            "configAlternates": {
+                                "itemId": "string",
+                                "text": "string",
+                                "scrollable": "boolean",
+                                "focusable": "boolean"
+                            },
+                            "name": "MyMenuItem19",
+                            "designerId": "1a997bdb-3575-4be0-88eb-0237d91685e1"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "focusable": true,
+                                "itemId": "mnuLabRevenue",
+                                "text": "Laboratory Revenue by Test"
+                            },
+                            "configAlternates": {
+                                "itemId": "string",
+                                "text": "string",
+                                "scrollable": "boolean",
+                                "focusable": "boolean"
+                            },
+                            "name": "MyMenuItem25",
+                            "designerId": "497c8591-0797-4721-a6a6-7584b5a2ab3a"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "focusable": true,
+                                "itemId": "PatientLabStatement",
+                                "text": "Patient Lab Tests"
+                            },
+                            "configAlternates": {
+                                "itemId": "string",
+                                "text": "string",
+                                "scrollable": "boolean",
+                                "focusable": "boolean"
+                            },
+                            "name": "MyMenuItem20",
+                            "designerId": "722e4bda-8cbe-4a21-8c49-79066993c777"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "focusable": true,
+                                "itemId": "mnuLabresultsummaries",
+                                "text": "Laboratory Results Summaries"
+                            },
+                            "configAlternates": {
+                                "itemId": "string",
+                                "text": "string",
+                                "scrollable": "boolean",
+                                "focusable": "boolean"
+                            },
+                            "name": "MyMenuItem21",
+                            "designerId": "344a6867-d9e5-49af-a1b0-98e7594b4590"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "focusable": true,
+                                "itemId": "mnuXrayActivities",
+                                "text": "Xray Daily Activity"
+                            },
+                            "configAlternates": {
+                                "itemId": "string",
+                                "text": "string",
+                                "scrollable": "boolean",
+                                "focusable": "boolean"
+                            },
+                            "name": "MyMenuItem22",
+                            "designerId": "536f70fc-9901-49ba-92d4-16aae6f5ab92"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "focusable": true,
+                                "itemId": "mnuXrayRevenue",
+                                "text": "Xray Revenue"
+                            },
+                            "configAlternates": {
+                                "itemId": "string",
+                                "text": "string",
+                                "scrollable": "boolean",
+                                "focusable": "boolean"
+                            },
+                            "name": "MyMenuItem23",
+                            "designerId": "14bcf5d7-bdd1-4507-8f9f-15f0f1b34bd3"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "focusable": true,
+                                "itemId": "PatientXrayTests",
+                                "text": "Patient Xray Tests"
+                            },
+                            "configAlternates": {
+                                "itemId": "string",
+                                "text": "string",
+                                "scrollable": "boolean",
+                                "focusable": "boolean"
+                            },
+                            "name": "MyMenuItem24",
+                            "designerId": "7ffc5fba-a913-4a03-a5f8-80fb7fddd3d6"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.menu.Menu",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "floating": false,
+                        "title": "Revenue Reports",
+                        "width": 120
+                    },
+                    "configAlternates": {
+                        "floating": "boolean",
+                        "title": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyMenu3",
+                    "designerId": "6d924e78-9a71-4cb2-8f99-01478652e4e0",
+                    "cn": [
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "focusable": true,
+                                "itemId": "mnuOpRevenue",
+                                "text": "Outpatient Revenue Breakdown"
+                            },
+                            "configAlternates": {
+                                "itemId": "string",
+                                "text": "string",
+                                "scrollable": "boolean",
+                                "focusable": "boolean"
+                            },
+                            "name": "MyMenuItem9",
+                            "designerId": "d42a92d6-d7dc-485b-8f6e-7c6d35f62c24"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "focusable": true,
+                                "itemId": "mnuIPRevenue",
+                                "text": "Inpatient Revenue Breakdown"
+                            },
+                            "configAlternates": {
+                                "itemId": "string",
+                                "text": "string",
+                                "scrollable": "boolean",
+                                "focusable": "boolean"
+                            },
+                            "name": "MyMenuItem10",
+                            "designerId": "649c1532-0c39-4310-9d72-079e94d54e51"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "focusable": true,
+                                "itemId": "mnuWPRevenue",
+                                "text": "Ward Procedures Revenue"
+                            },
+                            "configAlternates": {
+                                "itemId": "string",
+                                "text": "string",
+                                "scrollable": "boolean",
+                                "focusable": "boolean"
+                            },
+                            "name": "MyMenuItem11",
+                            "designerId": "ceffe3cd-a63c-4302-adc4-8c80489d2d20"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

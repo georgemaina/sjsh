@@ -1,0 +1,56 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "waitingliststore",
+        "designer|userClassName": "WaitingListStore",
+        "model": "WaitingList"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model"
+    },
+    "name": "MyJsonStore",
+    "designerId": "bcebc572-ef20-4c06-8301-55e42d37dc09",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "../data/getPatientFunctions.php?caller=getWaitingList"
+            },
+            "configAlternates": {
+                "url": "string"
+            },
+            "name": "MyAjaxProxy11",
+            "designerId": "7433dbf8-e999-41d9-9fbb-ce0663efed11",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "patients"
+                    },
+                    "configAlternates": {
+                        "rootProperty": "string"
+                    },
+                    "name": "MyJsonReader10",
+                    "designerId": "83bbb2e1-e431-4a04-bc35-9eebf939aadb"
+                }
+            ]
+        }
+    ]
+}

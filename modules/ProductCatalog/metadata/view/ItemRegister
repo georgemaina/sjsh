@@ -1,0 +1,912 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "bodyPadding": 10,
+        "designer|snapToGrid": 5,
+        "designer|userAlias": "itemregister",
+        "designer|userClassName": "ItemRegister",
+        "height": 530,
+        "layout": "absolute",
+        "title": null,
+        "url": "data/getDataFunctions.php?task=InsertItem",
+        "width": 826
+    },
+    "configAlternates": {
+        "bodyPadding": "auto",
+        "designer|snapToGrid": "number",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "layout": "string",
+        "title": "string",
+        "url": "string",
+        "width": "auto"
+    },
+    "name": "MyForm",
+    "designerId": "58404c6e-06d6-4aa3-a6b1-e1aba4a9b662",
+    "viewControllerInstanceId": "b7564acb-4cdb-45d8-8516-cfa52928f7b7",
+    "viewModelInstanceId": "34d47e01-ffd3-42dc-82a1-65011d2f170a",
+    "cn": [
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "cmdSave",
+                "layout|x": 195,
+                "layout|y": 495,
+                "text": "Save",
+                "width": 95
+            },
+            "configAlternates": {
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "text": "string",
+                "width": "auto"
+            },
+            "name": "MyButton",
+            "designerId": "1ea1d4d2-fe3c-4f73-8383-d855762cfa3f"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "cmdClose",
+                "layout|x": 570,
+                "layout|y": 495,
+                "text": "Cancel",
+                "width": 95
+            },
+            "configAlternates": {
+                "layout|x": "number",
+                "layout|y": "number",
+                "text": "string",
+                "width": "auto",
+                "itemId": "string"
+            },
+            "name": "MyButton1",
+            "designerId": "7cb623bb-eafc-4be2-a6e2-3e069d259416"
+        },
+        {
+            "type": "Ext.tab.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "activeTab": 0,
+                "designer|uiInterfaceName": "default-framed",
+                "frame": true,
+                "height": 485,
+                "layout|x": 5,
+                "layout|y": 5,
+                "width": 815
+            },
+            "configAlternates": {
+                "activeTab": "auto",
+                "designer|uiInterfaceName": "string",
+                "frame": "boolean",
+                "height": "auto",
+                "layout|x": "number",
+                "layout|y": "number",
+                "width": "auto"
+            },
+            "name": "MyTabPanel",
+            "designerId": "dba4fbe3-5032-4f37-88a9-7064c654f2eb",
+            "cn": [
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|snapToGrid": 5,
+                        "height": 427,
+                        "layout": "absolute",
+                        "title": "Item Details",
+                        "width": 811
+                    },
+                    "configAlternates": {
+                        "designer|snapToGrid": "number",
+                        "height": "auto",
+                        "layout": "string",
+                        "title": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyPanel7",
+                    "designerId": "1d2b7274-5cc1-42e9-94b9-467c062b16fe",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "TabConfig3",
+                            "designerId": "2d29d52d-924b-4ea7-807a-1b9740016c66"
+                        },
+                        {
+                            "type": "Ext.form.FieldSet",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "height": 345,
+                                "layout|x": 0,
+                                "layout|y": 5,
+                                "title": null,
+                                "width": 450
+                            },
+                            "configAlternates": {
+                                "height": "auto",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "title": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyFieldSet",
+                            "designerId": "aaa2ae49-4464-4fae-ad41-03b98d68f213",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "allowBlank": false,
+                                        "fieldLabel": "PartCode",
+                                        "height": 10,
+                                        "labelWidth": 110,
+                                        "name": "PartCode"
+                                    },
+                                    "configAlternates": {
+                                        "fieldLabel": "string",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "height": "auto",
+                                        "labelWidth": "number",
+                                        "name": "string",
+                                        "allowBlank": "boolean"
+                                    },
+                                    "name": "MyTextField1",
+                                    "designerId": "ae5dcf62-aa21-4b0e-b514-7b5c437d7276"
+                                },
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "allowBlank": false,
+                                        "fieldLabel": "Item Description",
+                                        "labelWidth": 110,
+                                        "name": "Item_Description",
+                                        "width": 418
+                                    },
+                                    "configAlternates": {
+                                        "fieldLabel": "string",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "labelWidth": "number",
+                                        "name": "string",
+                                        "width": "auto",
+                                        "allowBlank": "boolean"
+                                    },
+                                    "name": "MyTextField2",
+                                    "designerId": "8c94f187-7e62-4af9-aa69-dbfe7118697e"
+                                },
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "allowBlank": false,
+                                        "fieldLabel": "Long Description",
+                                        "labelWidth": 110,
+                                        "name": "Item_Full_Description",
+                                        "width": 417
+                                    },
+                                    "configAlternates": {
+                                        "fieldLabel": "string",
+                                        "labelWidth": "number",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "name": "string",
+                                        "width": "auto",
+                                        "allowBlank": "boolean"
+                                    },
+                                    "name": "MyTextField3",
+                                    "designerId": "f6341e4a-9654-41a8-92e4-a1809dfb6c77"
+                                },
+                                {
+                                    "type": "Ext.form.field.ComboBox",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "allowBlank": false,
+                                        "displayField": "Name",
+                                        "fieldLabel": "Unit of Measure",
+                                        "labelWidth": 110,
+                                        "minChars": 2,
+                                        "name": "Unit_Measure",
+                                        "queryMode": "local",
+                                        "store": "UnitsMeasureStore",
+                                        "typeAhead": true,
+                                        "valueField": "Name"
+                                    },
+                                    "configAlternates": {
+                                        "fieldLabel": "string",
+                                        "labelWidth": "number",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "name": "string",
+                                        "displayField": "datafield",
+                                        "minChars": "number",
+                                        "queryMode": "string",
+                                        "store": "store",
+                                        "typeAhead": "boolean",
+                                        "valueField": "datafield",
+                                        "allowBlank": "boolean"
+                                    },
+                                    "name": "MyComboBox12",
+                                    "designerId": "2363f35f-ae9b-4450-9862-e520ce7d4879"
+                                },
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "allowBlank": false,
+                                        "fieldLabel": "Purchasing Units",
+                                        "labelWidth": 110,
+                                        "name": "Purchasing_Unit"
+                                    },
+                                    "configAlternates": {
+                                        "fieldLabel": "string",
+                                        "labelWidth": "number",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "name": "string",
+                                        "allowBlank": "boolean"
+                                    },
+                                    "name": "MyTextField5",
+                                    "designerId": "956e6e4b-751f-4346-8d41-ca4004cc92c7"
+                                },
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "allowBlank": false,
+                                        "fieldLabel": "Units Quantity",
+                                        "labelWidth": 110,
+                                        "name": "Unit_Qty"
+                                    },
+                                    "configAlternates": {
+                                        "fieldLabel": "string",
+                                        "labelWidth": "number",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "name": "string",
+                                        "allowBlank": "boolean"
+                                    },
+                                    "name": "MyTextField6",
+                                    "designerId": "f0727a34-9c05-4583-bcf5-bba2064d5df0"
+                                },
+                                {
+                                    "type": "Ext.form.field.ComboBox",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "allowBlank": false,
+                                        "displayField": "CatName",
+                                        "fieldLabel": "Category",
+                                        "labelWidth": 110,
+                                        "minChars": 2,
+                                        "name": "Purchasing_Class",
+                                        "queryMode": "local",
+                                        "store": "CategoryStore",
+                                        "typeAhead": true,
+                                        "valueField": "CatName",
+                                        "width": 416
+                                    },
+                                    "configAlternates": {
+                                        "fieldLabel": "string",
+                                        "labelWidth": "number",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "name": "string",
+                                        "displayField": "datafield",
+                                        "minChars": "number",
+                                        "queryMode": "string",
+                                        "store": "store",
+                                        "typeAhead": "boolean",
+                                        "valueField": "datafield",
+                                        "width": "auto",
+                                        "allowBlank": "boolean"
+                                    },
+                                    "name": "MyComboBox",
+                                    "designerId": "c25c6c81-6dae-4f97-93f7-fb01c00b922b"
+                                },
+                                {
+                                    "type": "Ext.form.field.ComboBox",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "allowBlank": false,
+                                        "displayField": "ItemCat",
+                                        "fieldLabel": "Sub Category",
+                                        "labelWidth": 110,
+                                        "minChars": 2,
+                                        "name": "Category",
+                                        "queryMode": "local",
+                                        "store": "SubCategoryStore",
+                                        "typeAhead": true,
+                                        "valueField": "CatID",
+                                        "width": 417
+                                    },
+                                    "configAlternates": {
+                                        "fieldLabel": "string",
+                                        "labelWidth": "number",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "name": "string",
+                                        "displayField": "datafield",
+                                        "minChars": "number",
+                                        "queryMode": "string",
+                                        "store": "store",
+                                        "typeAhead": "boolean",
+                                        "valueField": "datafield",
+                                        "width": "auto",
+                                        "allowBlank": "boolean"
+                                    },
+                                    "name": "MyComboBox1",
+                                    "designerId": "92dd9272-9925-424f-8191-43f9753e396a"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.FieldSet",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "height": 360,
+                                "layout|x": 460,
+                                "layout|y": 5,
+                                "title": null,
+                                "width": 355
+                            },
+                            "configAlternates": {
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "title": "string",
+                                "height": "auto",
+                                "width": "auto"
+                            },
+                            "name": "MyFieldSet1",
+                            "designerId": "452d74fc-6738-4319-92a9-a4176d8aa264",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "allowBlank": false,
+                                        "fieldLabel": "Selling Price",
+                                        "layout|anchor": "100%",
+                                        "name": "Unit_Price"
+                                    },
+                                    "configAlternates": {
+                                        "fieldLabel": "string",
+                                        "layout|anchor": "string",
+                                        "name": "string",
+                                        "allowBlank": "boolean"
+                                    },
+                                    "name": "MyTextField11",
+                                    "designerId": "7b9eafc5-21c8-432b-bda1-a9ea1946013d"
+                                },
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fieldLabel": "Reorder Level",
+                                        "layout|anchor": "100%",
+                                        "name": "ReorderLevel"
+                                    },
+                                    "configAlternates": {
+                                        "fieldLabel": "string",
+                                        "layout|anchor": "string",
+                                        "name": "string"
+                                    },
+                                    "name": "MyTextField17",
+                                    "designerId": "c3912be7-202e-408d-9897-d6e337e167cc"
+                                },
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fieldLabel": "Minimum Order",
+                                        "layout|anchor": "100%",
+                                        "name": "Minimum"
+                                    },
+                                    "configAlternates": {
+                                        "fieldLabel": "string",
+                                        "layout|anchor": "string",
+                                        "name": "string"
+                                    },
+                                    "name": "MyTextField16",
+                                    "designerId": "c682fdca-30d1-4648-990e-fa463c07c721"
+                                },
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fieldLabel": "Maximum Order",
+                                        "layout|anchor": "100%",
+                                        "name": "Maximum"
+                                    },
+                                    "configAlternates": {
+                                        "fieldLabel": "string",
+                                        "layout|anchor": "string",
+                                        "name": "string"
+                                    },
+                                    "name": "MyTextField14",
+                                    "designerId": "3bcaecc9-c5c2-4999-842f-4692e9809bcd"
+                                },
+                                {
+                                    "type": "Ext.form.field.ComboBox",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fieldLabel": "Prescription Level",
+                                        "layout|anchor": "100%",
+                                        "minChars": 2,
+                                        "name": "PresLevel",
+                                        "queryMode": "local",
+                                        "store": [
+                                            "['Level1','Level2','Level3']"
+                                        ],
+                                        "typeAhead": true
+                                    },
+                                    "configAlternates": {
+                                        "fieldLabel": "string",
+                                        "layout|anchor": "string",
+                                        "store": "array",
+                                        "minChars": "number",
+                                        "name": "string",
+                                        "queryMode": "string",
+                                        "typeAhead": "boolean"
+                                    },
+                                    "name": "MyComboBox5",
+                                    "designerId": "0869efa6-d224-41f3-a77b-b01dcc97711b"
+                                },
+                                {
+                                    "type": "Ext.form.field.ComboBox",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "allowBlank": false,
+                                        "fieldLabel": "Prescription NHIF",
+                                        "layout|anchor": "100%",
+                                        "minChars": 2,
+                                        "name": "PresNHIF",
+                                        "queryMode": "local",
+                                        "store": [
+                                            "['Yes','No']"
+                                        ],
+                                        "typeAhead": true,
+                                        "value": null
+                                    },
+                                    "configAlternates": {
+                                        "fieldLabel": "string",
+                                        "layout|anchor": "string",
+                                        "store": "array",
+                                        "minChars": "number",
+                                        "name": "string",
+                                        "queryMode": "string",
+                                        "typeAhead": "boolean",
+                                        "value": "object",
+                                        "allowBlank": "boolean"
+                                    },
+                                    "name": "MyComboBox4",
+                                    "designerId": "8d6f503f-65b0-43a7-801d-05c6494ccaa8"
+                                },
+                                {
+                                    "type": "Ext.form.field.ComboBox",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "allowBlank": false,
+                                        "displayField": "Description",
+                                        "fieldLabel": "Item Status",
+                                        "layout|anchor": "100%",
+                                        "minChars": 2,
+                                        "name": "Item_Status",
+                                        "queryMode": "local",
+                                        "store": "ItemStatusStore",
+                                        "typeAhead": true,
+                                        "valueField": "ID"
+                                    },
+                                    "configAlternates": {
+                                        "fieldLabel": "string",
+                                        "layout|anchor": "string",
+                                        "displayField": "datafield",
+                                        "minChars": "number",
+                                        "name": "string",
+                                        "queryMode": "string",
+                                        "store": "store",
+                                        "typeAhead": "boolean",
+                                        "valueField": "datafield",
+                                        "allowBlank": "boolean"
+                                    },
+                                    "name": "MyComboBox3",
+                                    "designerId": "dc8d129a-d313-4db8-a6d6-42bc05b4c532"
+                                },
+                                {
+                                    "type": "Ext.form.field.Checkbox",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": null,
+                                        "checked": true,
+                                        "fieldLabel": "Is Stock Item",
+                                        "formBind": false,
+                                        "inputValue": "Yes",
+                                        "itemId": "stockItem",
+                                        "layout|anchor": "100%",
+                                        "name": "stockItem",
+                                        "uncheckedValue": "No"
+                                    },
+                                    "configAlternates": {
+                                        "boxLabel": "string",
+                                        "fieldLabel": "string",
+                                        "layout|anchor": "string",
+                                        "name": "string",
+                                        "checked": "boolean",
+                                        "formBind": "boolean",
+                                        "inputValue": "string",
+                                        "itemId": "string",
+                                        "uncheckedValue": "string"
+                                    },
+                                    "name": "MyCheckbox3",
+                                    "designerId": "f00e816d-f275-4314-9891-c3c27e381c06"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.field.TextArea",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "More Info",
+                                "height": 60,
+                                "layout|x": 25,
+                                "layout|y": 350,
+                                "name": "MoreInfo",
+                                "width": 780
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "height": "auto",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "name": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyTextArea",
+                            "designerId": "22e02d01-c73e-4bb8-b04d-ade2c27ae609"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "bodyPadding": "10 1 1 20",
+                        "height": 341,
+                        "title": "Accounting Details"
+                    },
+                    "configAlternates": {
+                        "bodyPadding": "auto",
+                        "height": "auto",
+                        "title": "string"
+                    },
+                    "name": "MyPanel8",
+                    "designerId": "e7efd272-cb83-43f2-8f72-bc97e2f7dcc8",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "TabConfig4",
+                            "designerId": "bafe762e-7edb-4ad7-9c3c-cf6b94972976"
+                        },
+                        {
+                            "type": "Ext.form.field.ComboBox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "displayField": "AccountName",
+                                "fieldLabel": "Sales GL Account",
+                                "labelWidth": 110,
+                                "minChars": 2,
+                                "name": "Gl_Sales_Acct",
+                                "queryMode": "local",
+                                "store": "GlAccountsStore",
+                                "typeAhead": true,
+                                "valueField": "AccountCode"
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "displayField": "datafield",
+                                "labelWidth": "number",
+                                "minChars": "number",
+                                "name": "string",
+                                "queryMode": "string",
+                                "store": "store",
+                                "typeAhead": "boolean",
+                                "valueField": "datafield"
+                            },
+                            "name": "MyComboBox7",
+                            "designerId": "d41feaf4-e489-404b-8dae-785455b91b74"
+                        },
+                        {
+                            "type": "Ext.form.field.ComboBox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "displayField": "AccountName",
+                                "fieldLabel": "Cost of Sales GL",
+                                "labelWidth": 110,
+                                "minChars": 2,
+                                "name": "Gl_CostOfSales_Acct",
+                                "queryMode": "local",
+                                "store": "GlAccountsStore",
+                                "typeAhead": true,
+                                "valueField": "AccountCode"
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "displayField": "datafield",
+                                "labelWidth": "number",
+                                "minChars": "number",
+                                "name": "string",
+                                "queryMode": "string",
+                                "store": "store",
+                                "typeAhead": "boolean",
+                                "valueField": "datafield"
+                            },
+                            "name": "MyComboBox8",
+                            "designerId": "71ff2516-2bde-4ebf-9cb4-bb0b4cdc655b"
+                        },
+                        {
+                            "type": "Ext.form.field.ComboBox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "displayField": "AccountName",
+                                "fieldLabel": "Inventory GL",
+                                "labelWidth": 110,
+                                "minChars": 2,
+                                "name": "Gl_Inventory_Acct",
+                                "queryMode": "local",
+                                "store": "GlAccountsStore",
+                                "typeAhead": true,
+                                "valueField": "AccountCode"
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "displayField": "datafield",
+                                "labelWidth": "number",
+                                "minChars": "number",
+                                "name": "string",
+                                "queryMode": "string",
+                                "store": "store",
+                                "typeAhead": "boolean",
+                                "valueField": "datafield"
+                            },
+                            "name": "MyComboBox9",
+                            "designerId": "8d17aca6-63cf-4f46-858c-3e4ef13d7f3d"
+                        },
+                        {
+                            "type": "Ext.form.field.ComboBox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "displayField": "Description",
+                                "fieldLabel": "Sales Area",
+                                "labelWidth": 110,
+                                "minChars": 2,
+                                "name": "SalesAreas",
+                                "store": "LocationsStore",
+                                "typeAhead": true,
+                                "valueField": "ID"
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "displayField": "datafield",
+                                "labelWidth": "number",
+                                "minChars": "number",
+                                "name": "string",
+                                "store": "store",
+                                "typeAhead": "boolean",
+                                "valueField": "datafield"
+                            },
+                            "name": "MyComboBox11",
+                            "designerId": "f7dc0483-7573-4302-935d-db86faf639b5"
+                        },
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": null,
+                                "hidden": true,
+                                "itemId": "formStatus",
+                                "labelWidth": 110,
+                                "name": "formStatus"
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "itemId": "string",
+                                "labelWidth": "number",
+                                "name": "string",
+                                "hidden": "boolean"
+                            },
+                            "name": "MyTextField",
+                            "designerId": "809fc53d-39b4-48d0-adbe-e131398e6b5f"
+                        },
+                        {
+                            "type": "Ext.form.field.Checkbox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": null,
+                                "fieldLabel": "Charge Item During Admission",
+                                "inputValue": "Yes",
+                                "labelWidth": 200,
+                                "name": "ChargeInAdmission",
+                                "uncheckedValue": "No"
+                            },
+                            "configAlternates": {
+                                "boxLabel": "string",
+                                "fieldLabel": "string",
+                                "inputValue": "string",
+                                "labelWidth": "number",
+                                "name": "string",
+                                "uncheckedValue": "string"
+                            },
+                            "name": "MyCheckbox4",
+                            "designerId": "8483b38c-b0a9-4429-bf4a-4d10147c1ab7"
+                        },
+                        {
+                            "type": "Ext.form.field.Checkbox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": null,
+                                "fieldLabel": "Show as Consultation Admission Data",
+                                "inputValue": "Yes",
+                                "labelWidth": 200,
+                                "name": "isConsultation",
+                                "uncheckedValue": "No"
+                            },
+                            "configAlternates": {
+                                "boxLabel": "string",
+                                "fieldLabel": "string",
+                                "inputValue": "string",
+                                "labelWidth": "number",
+                                "name": "string",
+                                "uncheckedValue": "string"
+                            },
+                            "name": "MyCheckbox7",
+                            "designerId": "f046ea70-c240-4a52-8794-33383416b6a4"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

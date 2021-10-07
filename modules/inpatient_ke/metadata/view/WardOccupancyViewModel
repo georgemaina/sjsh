@@ -1,0 +1,120 @@
+{
+    "type": "Ext.app.ViewModel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "wardoccupancy",
+        "designer|userClassName": "WardOccupancyViewModel"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "designerId": "805a55c6-b0b6-474a-84a7-c3c134e4413d",
+    "cn": [
+        {
+            "type": "jsonstore",
+            "reference": {
+                "name": "stores",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "autoLoad": true,
+                "model": "Wards",
+                "name": "wardsListStore"
+            },
+            "configAlternates": {
+                "autoLoad": "boolean",
+                "model": "model",
+                "name": "string"
+            },
+            "name": "MyJsonStore",
+            "designerId": "16494563-bf07-4a40-b885-b56b4054a298",
+            "cn": [
+                {
+                    "type": "Ext.data.proxy.Ajax",
+                    "reference": {
+                        "name": "proxy",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "url": "../../data/getDataFunctions.php?task=getWardInfo"
+                    },
+                    "configAlternates": {
+                        "url": "string"
+                    },
+                    "name": "MyAjaxProxy1",
+                    "designerId": "c38eff2c-9642-4346-9623-719d0f44fdf9",
+                    "cn": [
+                        {
+                            "type": "Ext.data.reader.Json",
+                            "reference": {
+                                "name": "reader",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "rootProperty": "wards"
+                            },
+                            "configAlternates": {
+                                "rootProperty": "string"
+                            },
+                            "name": "MyJsonReader1",
+                            "designerId": "07f083c8-b6b6-4654-92e7-93ba5b975d56"
+                        }
+                    ]
+                },
+                {
+                    "type": "viewcontrollereventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onWardsListLoad",
+                        "implHandler": [
+                            "//Ext.Msg.alert('Test','Test');",
+                            "var me = this,",
+                            "    references = me.getReferences(),",
+                            "    view = me.getView(),",
+                            "    items = [],",
+                            "    columns = [ view.nameColumn ];",
+                            "",
+                            "",
+                            "   // iterate each record in the store",
+                            "store.each(function (metaRecord) {",
+                            "    items.push(Ext.apply({",
+                            "        text  : metaRecord.data.Name,",
+                            "        value : metaRecord.data.Nr,",
+                            "        listeners : {",
+                            "            click : me.onWardsItemClick,",
+                            "            scope : me",
+                            "        }",
+                            "    }));",
+                            "",
+                            "});",
+                            " references.wardsButton.menu.add(items);",
+                            ""
+                        ],
+                        "name": "load",
+                        "scope": "me"
+                    },
+                    "configAlternates": {
+                        "fn": "string",
+                        "implHandler": "code",
+                        "name": "string",
+                        "scope": "string"
+                    },
+                    "name": "onWardsListLoad",
+                    "designerId": "9c7d3eeb-9a98-4efa-ba5c-57289bc435ac"
+                }
+            ]
+        }
+    ]
+}

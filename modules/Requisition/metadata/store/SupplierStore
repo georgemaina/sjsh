@@ -1,0 +1,64 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "autoSync": true,
+        "designer|userAlias": "supplierstore",
+        "designer|userClassName": "SupplierStore",
+        "model": "Suppliers",
+        "pageSize": 200,
+        "storeId": "SupplierStore"
+    },
+    "configAlternates": {
+        "autoLoad": "boolean",
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string",
+        "autoSync": "boolean",
+        "pageSize": "number",
+        "designer|userAlias": "string"
+    },
+    "name": "RequisitionStore4",
+    "designerId": "8a3c1827-2cb2-46d1-93a3-da8d4fdbd776",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "data/getDataFunctions.php?task=getSuppliers"
+            },
+            "configAlternates": {
+                "url": "string"
+            },
+            "name": "MyAjaxProxy",
+            "designerId": "6aae17c6-f610-422c-b278-1e1a22de377c",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "suppliers"
+                    },
+                    "configAlternates": {
+                        "rootProperty": "string"
+                    },
+                    "name": "MyJsonReader1",
+                    "designerId": "f50a6a8b-a66f-4d26-b178-3c0ebc59ee51"
+                }
+            ]
+        }
+    ]
+}

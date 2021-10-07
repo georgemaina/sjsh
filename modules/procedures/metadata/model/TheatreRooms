@@ -1,0 +1,55 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "theatrerooms",
+        "designer|userClassName": "TheatreRooms"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "designerId": "4bb98211-c4ce-4f50-b141-e27a95111bb3",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "mapping": "room_no",
+                "name": "room_no"
+            },
+            "configAlternates": {
+                "mapping": "auto",
+                "name": "string"
+            },
+            "name": "MyField38",
+            "designerId": "e2bf7b37-a9a4-4288-a97b-4bc28d193e9b"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "mapping": "room_name",
+                "name": "room_name"
+            },
+            "configAlternates": {
+                "mapping": "auto",
+                "name": "string"
+            },
+            "name": "MyField39",
+            "designerId": "299f79f4-c27d-4bcd-86e4-8a63478c0a3d"
+        }
+    ]
+}

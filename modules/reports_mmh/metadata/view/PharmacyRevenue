@@ -1,0 +1,434 @@
+{
+    "type": "Ext.grid.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "closable": true,
+        "collapsible": true,
+        "columnLines": true,
+        "designer|userAlias": "pharmacyrevenue",
+        "designer|userClassName": "PharmacyRevenue",
+        "height": 600,
+        "itemId": "revenueByItem",
+        "store": "PharmacyRevenueStore",
+        "title": "Pharmacy Revenue By Item",
+        "width": null
+    },
+    "configAlternates": {
+        "closable": "boolean",
+        "collapsible": "boolean",
+        "columnLines": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "itemId": "string",
+        "store": "store",
+        "title": "string",
+        "width": "auto",
+        "scrollable": "boolean"
+    },
+    "name": "MyGridPanel",
+    "designerId": "db60f875-6ef3-45eb-90f4-fbf5c4179687",
+    "viewControllerInstanceId": "1747b428-efbf-4f86-a4ce-c077b0f0900d",
+    "viewModelInstanceId": "2aed191e-56ec-4c0a-b110-5919577f2b31",
+    "cn": [
+        {
+            "type": "Ext.view.Table",
+            "reference": {
+                "name": "viewConfig",
+                "type": "object"
+            },
+            "codeClass": null,
+            "configAlternates": {
+                "scrollable": "boolean"
+            },
+            "name": "MyGridView6",
+            "designerId": "8b498b5a-d797-4fd2-87c5-d95aa80f8f0c"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "ItemNo",
+                "text": "Item No"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn73",
+            "designerId": "6aa264dc-4caa-4927-9df9-4d73d0f83673"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "Description",
+                "text": "Description",
+                "width": 311
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn92",
+            "designerId": "5b572285-151f-4927-9260-3818bf88e183"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "Category",
+                "text": "Category",
+                "width": 155
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn94",
+            "designerId": "284d9505-7490-4a41-87d8-6813bccd4e73"
+        },
+        {
+            "type": "Ext.grid.column.Number",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "align": "right",
+                "dataIndex": "UnitPrice",
+                "text": "Unit Price"
+            },
+            "configAlternates": {
+                "align": "string",
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyNumberColumn",
+            "designerId": "d4fb2ad3-d857-4aea-a66a-db43ec0f3849"
+        },
+        {
+            "type": "Ext.grid.column.Number",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "align": "right",
+                "dataIndex": "Quantities",
+                "format": "000",
+                "text": "Quantities"
+            },
+            "configAlternates": {
+                "align": "string",
+                "dataIndex": "datafield",
+                "format": "string",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyNumberColumn4",
+            "designerId": "90c913e9-227f-4975-a35f-4f5764312b2c"
+        },
+        {
+            "type": "Ext.grid.column.Number",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "align": "right",
+                "dataIndex": "TotalAmount",
+                "text": "Total Amount",
+                "width": 125
+            },
+            "configAlternates": {
+                "align": "string",
+                "dataIndex": "datafield",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyNumberColumn5",
+            "designerId": "7dc11508-1f60-4bb4-af8c-26f083986ebe"
+        },
+        {
+            "type": "Ext.toolbar.Paging",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "displayInfo": true,
+                "dock": "bottom",
+                "store": "PharmacyRevenueStore",
+                "width": 360
+            },
+            "configAlternates": {
+                "displayInfo": "boolean",
+                "dock": "string",
+                "store": "store",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyPagingToolbar4",
+            "designerId": "e20f8cfc-941d-49b2-ab41-d016337b7657"
+        },
+        {
+            "type": "Ext.toolbar.Toolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dock": "top"
+            },
+            "configAlternates": {
+                "dock": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyToolbar6",
+            "designerId": "49b6a794-a8ca-469c-8b8c-5a44231d529b",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Date",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Start Date",
+                        "format": "d-m-Y",
+                        "itemId": "StartDate",
+                        "labelWidth": 70,
+                        "layout|flex": null,
+                        "width": 232
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "format": "string",
+                        "itemId": "string",
+                        "labelWidth": "number",
+                        "layout|flex": "number",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyDateField15",
+                    "designerId": "9986e052-dc29-4124-825b-0775c5159d2b"
+                },
+                {
+                    "type": "Ext.form.field.Date",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "End Date",
+                        "format": "d-m-Y",
+                        "itemId": "EndDate",
+                        "labelWidth": 60,
+                        "layout|flex": null,
+                        "width": 232
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "format": "string",
+                        "itemId": "string",
+                        "labelWidth": "number",
+                        "layout|flex": "number",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyDateField16",
+                    "designerId": "63949b84-f057-41df-b091-68727580e123"
+                },
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "emptyText": "Select Revenue Type",
+                        "itemId": "EndDate1",
+                        "labelWidth": 60,
+                        "layout|flex": null,
+                        "store": [
+                            "['Cash', 'Insurance', 'Inpatient']"
+                        ],
+                        "width": 232
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "format": "string",
+                        "itemId": "string",
+                        "labelWidth": "number",
+                        "layout|flex": "number",
+                        "width": "auto",
+                        "scrollable": "boolean",
+                        "emptyText": "string",
+                        "store": "array"
+                    },
+                    "name": "MyComboBox1",
+                    "designerId": "aad78f59-f79d-4399-af27-d7dcf46fc5e4"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "cmdPreviewPharmacyrevenue",
+                        "layout|flex": null,
+                        "text": "<b>Preview</b>",
+                        "width": 102
+                    },
+                    "configAlternates": {
+                        "itemId": "string",
+                        "layout|flex": "number",
+                        "text": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyButton19",
+                    "designerId": "281fb833-220c-475c-8a75-c729fb4d142c"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "cmdPrintPharmacyrevenue",
+                        "layout|flex": null,
+                        "text": "<b>Print</b>",
+                        "width": 117
+                    },
+                    "configAlternates": {
+                        "itemId": "string",
+                        "layout|flex": "number",
+                        "text": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyButton20",
+                    "designerId": "d44ad66b-743a-4609-8dc8-d0f92e7838cf"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "cmdExportPharmacyrevenue",
+                        "layout|flex": null,
+                        "text": "<b>Export to Excel</b>",
+                        "width": 117
+                    },
+                    "configAlternates": {
+                        "itemId": "string",
+                        "layout|flex": "number",
+                        "text": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyButton21",
+                    "designerId": "55bf9634-3f89-48d7-a9c5-3fba5d42562f"
+                }
+            ]
+        },
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|snapToGrid": 5,
+                "dock": "bottom",
+                "height": 35,
+                "layout": "absolute",
+                "width": 100
+            },
+            "configAlternates": {
+                "designer|snapToGrid": "number",
+                "dock": "string",
+                "height": "auto",
+                "layout": "string",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyContainer1",
+            "designerId": "a7f5e43b-4b75-4112-845c-c7a1cf29a5e7",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Total Value",
+                        "fieldStyle": "font-size: small;font-weight: bold;color: blue;",
+                        "itemId": "totals",
+                        "labelStyle": "font-size: small;font-weight: bold;color: green;",
+                        "layout|x": 700,
+                        "layout|y": 0,
+                        "value": "",
+                        "width": 210
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "fieldStyle": "string",
+                        "itemId": "string",
+                        "labelStyle": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "value": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyDisplayField",
+                    "designerId": "4717e172-c971-4038-9e40-861c6cc3d282"
+                }
+            ]
+        }
+    ]
+}

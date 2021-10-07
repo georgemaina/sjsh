@@ -1,0 +1,146 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|align": "stretch",
+        "designer|userAlias": "dontorsnotesentry",
+        "designer|userClassName": "DontorsNotesEntry",
+        "height": 487,
+        "layout": "vbox",
+        "title": "Doctors Notes",
+        "width": 685
+    },
+    "configAlternates": {
+        "container|align": "string",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "layout": "string",
+        "title": "string",
+        "width": "auto"
+    },
+    "name": "MyPanel1",
+    "designerId": "9309ef3a-10a7-4fc9-9fe3-5e5dc0124754",
+    "viewControllerInstanceId": "679fb0fb-ea95-4647-8455-53000bed2e91",
+    "viewModelInstanceId": "6180a538-0f73-45ae-a5b2-562b5b526369",
+    "cn": [
+        {
+            "type": "Ext.form.field.ComboBox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Chief Complaints",
+                "labelAlign": "top",
+                "width": 510
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "labelAlign": "string",
+                "width": "auto"
+            },
+            "name": "MyComboBox1",
+            "designerId": "04a37b9f-c086-4712-8095-52d83f09085d"
+        },
+        {
+            "type": "Ext.form.field.TextArea",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Comments",
+                "height": 112,
+                "labelAlign": "top",
+                "width": 505
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "height": "auto",
+                "labelAlign": "string",
+                "width": "auto"
+            },
+            "name": "MyTextArea1",
+            "designerId": "44092857-3ed1-4272-a4cf-54fafd0c4d7e"
+        },
+        {
+            "type": "Ext.form.FieldContainer",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|snapToGrid": 5,
+                "height": 220,
+                "layout": "absolute",
+                "layout|flex": 1,
+                "width": 597
+            },
+            "configAlternates": {
+                "designer|snapToGrid": "number",
+                "height": "auto",
+                "layout": "string",
+                "layout|flex": "number",
+                "width": "auto"
+            },
+            "name": "MyFieldContainer1",
+            "designerId": "dc7aa8ed-bdd7-4115-8458-7a3541d62f6a",
+            "cn": [
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 35,
+                        "layout|x": 450,
+                        "layout|y": 5,
+                        "text": "Save",
+                        "width": 125
+                    },
+                    "configAlternates": {
+                        "height": "auto",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "text": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyButton9",
+                    "designerId": "950ccd39-c0b0-4187-9fed-d9573d51e23b"
+                },
+                {
+                    "type": "Ext.container.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 190,
+                        "layout|x": -8,
+                        "layout|y": 45,
+                        "scrollable": "vertical"
+                    },
+                    "configAlternates": {
+                        "height": "auto",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "scrollable": "auto"
+                    },
+                    "name": "MyContainer14",
+                    "designerId": "5b54759e-6a5c-4601-a5a4-386a66594a83"
+                }
+            ]
+        }
+    ]
+}

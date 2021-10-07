@@ -1,0 +1,54 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "designer|userAlias": "diseasecodestore",
+        "designer|userClassName": "DiseaseCodeStore",
+        "model": "DiagnosisCodes",
+        "storeId": "DiseaseCodeStore"
+    },
+    "configAlternates": {
+        "autoLoad": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string"
+    },
+    "name": "MyJsonStore1",
+    "designerId": "1d992d1e-ff37-4645-a03b-36a0b8de0b9a",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "../data/getDataFunctions.php?task=getIcd10Code"
+            },
+            "configAlternates": {
+                "url": "string"
+            },
+            "name": "MyAjaxProxy11",
+            "designerId": "e427a5fc-2ad9-47f6-a14b-ce52c515e098",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyJsonReader10",
+                    "designerId": "9f9b479b-3b53-42ac-ae77-abca35974f68"
+                }
+            ]
+        }
+    ]
+}

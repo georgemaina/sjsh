@@ -1,0 +1,195 @@
+{
+    "name": "slips.xds",
+    "settings": {
+        "urlPrefix": "http://localhost/",
+        "directAPI": "",
+        "spacesToIndent": 4,
+        "codeGenFormat": "Class",
+        "exportPath": ".",
+        "extPath": "http://extjs.cachefly.net/ext-3.3.1/",
+        "lineEnding": "CRLF",
+        "instantiateStore": true,
+        "exportXDSFiles": true,
+        "genTimestamps": true,
+        "appName": "MyApp"
+    },
+    "xdsVersion": "1.2.2",
+    "components": [
+        {
+            "id": "ExtBox1-ext-gen1562",
+            "type": "panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 441,
+                "width": 716,
+                "title": "My Panel",
+                "designer|userClassName": "MyPanel"
+            },
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen1753",
+                    "type": "grid",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 396,
+                        "width": 1116,
+                        "title": "My Grid",
+                        "store": "MyJsonStore",
+                        "designer|userClassName": "MyGrid"
+                    },
+                    "cn": [
+                        {
+                            "id": "ExtBox1-ext-gen1760",
+                            "type": "gridcolumn",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "pid",
+                                "editable": false,
+                                "header": "PID",
+                                "sortable": true,
+                                "width": 100,
+                                "designer|userClassName": "MyColumn"
+                            }
+                        },
+                        {
+                            "id": "ExtBox1-ext-gen1772",
+                            "type": "gridcolumn",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "align": "right",
+                                "dataIndex": "slipNo",
+                                "editable": false,
+                                "groupable": false,
+                                "header": "slipNo",
+                                "sortable": true,
+                                "width": 100,
+                                "designer|userClassName": "MyNumberColumn"
+                            }
+                        },
+                        {
+                            "id": "ExtBox1-ext-gen1785",
+                            "type": "datecolumn",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "slipDate",
+                                "header": "slipDate",
+                                "sortable": true,
+                                "width": 100,
+                                "format": "Y/m/d",
+                                "designer|userClassName": "MyDateColumn"
+                            }
+                        },
+                        {
+                            "id": "ExtBox1-ext-gen1797",
+                            "type": "gridcolumn",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "names",
+                                "header": "Names",
+                                "sortable": true,
+                                "width": 100,
+                                "designer|userClassName": "MyBooleanColumn"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "stores": [
+        {
+            "id": "ExtBox1-ext-gen4354",
+            "type": "jsonstore",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "storeId": "MyJsonStore",
+                "url": "kikuyu/modules/ambulatory2/getSlips.php",
+                "root": "slips",
+                "designer|userClassName": "MyJsonStore"
+            },
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen4444",
+                    "type": "datafield",
+                    "reference": {
+                        "name": "fields",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "name": "pid",
+                        "designer|userClassName": "MyField"
+                    }
+                },
+                {
+                    "id": "ExtBox1-ext-gen4556",
+                    "type": "datafield",
+                    "reference": {
+                        "name": "fields",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "name": "slipNo",
+                        "designer|userClassName": "MyField1"
+                    }
+                },
+                {
+                    "id": "ExtBox1-ext-gen4565",
+                    "type": "datafield",
+                    "reference": {
+                        "name": "fields",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "name": "slipDate",
+                        "designer|userClassName": "MyField2"
+                    }
+                },
+                {
+                    "id": "ExtBox1-ext-gen4574",
+                    "type": "datafield",
+                    "reference": {
+                        "name": "fields",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "name": "Names",
+                        "designer|userClassName": "MyField3"
+                    }
+                }
+            ]
+        }
+    ],
+    "framework": "ext33"
+}

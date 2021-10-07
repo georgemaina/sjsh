@@ -1,0 +1,446 @@
+{
+    "type": "Ext.form.FieldSet",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|snapToGrid": 5,
+        "designer|userAlias": "dosage",
+        "designer|userClassName": "Dosage",
+        "frame": true,
+        "height": 110,
+        "layout": "absolute",
+        "padding": 0,
+        "width": 789
+    },
+    "configAlternates": {
+        "designer|snapToGrid": "number",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "frame": "boolean",
+        "height": "auto",
+        "layout": "string",
+        "width": "auto",
+        "padding": "auto"
+    },
+    "name": "Dosage1",
+    "designerId": "82fa370f-2cc3-4108-891f-90f8c32265bb",
+    "viewControllerInstanceId": "1f2030b7-a90e-4f80-a5ae-62fdde2e8eb0",
+    "viewModelInstanceId": "b420ca9d-fb3e-49e5-88a1-4202f932d42e",
+    "cn": [
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "PartCode",
+                "fieldStyle": "color:maroon; font-weight:bold;font-size:12px;",
+                "itemId": "partCode",
+                "labelStyle": "color:maroon; font-weight:bold;font-size:12px;",
+                "labelWidth": 60,
+                "layout|x": 10,
+                "layout|y": 0,
+                "margin": 0,
+                "name": "partCode",
+                "padding": 0,
+                "readOnly": true,
+                "width": 125
+            },
+            "configAlternates": {
+                "layout|x": "number",
+                "layout|y": "number",
+                "value": "string",
+                "width": "auto",
+                "fieldStyle": "string",
+                "itemId": "string",
+                "labelStyle": "string",
+                "margin": "auto",
+                "padding": "auto",
+                "fieldLabel": "string",
+                "labelWidth": "number",
+                "name": "string",
+                "readOnly": "boolean"
+            },
+            "name": "MyTextField11",
+            "designerId": "051769fc-435b-4f6c-b525-fecb4910dd42"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldStyle": "color:maroon; font-weight:bold;font-size:12px;",
+                "itemId": "description",
+                "labelStyle": "",
+                "layout|x": 140,
+                "layout|y": 0,
+                "margin": 0,
+                "name": "description",
+                "padding": 0,
+                "value": [
+                    "Description"
+                ],
+                "width": 450
+            },
+            "configAlternates": {
+                "layout|x": "number",
+                "layout|y": "number",
+                "value": "string",
+                "width": "auto",
+                "fieldStyle": "string",
+                "itemId": "string",
+                "labelStyle": "string",
+                "margin": "auto",
+                "padding": "auto",
+                "name": "string"
+            },
+            "name": "MyTextField12",
+            "designerId": "a1e52bb5-3783-4154-833d-97c8ea08765e"
+        },
+        {
+            "type": "Ext.form.field.Display",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Qty in Store:",
+                "fieldStyle": "color:red; font-weight:bold;font-size:14px;",
+                "itemId": "qty",
+                "labelStyle": "color:#3d74b3; font-weight:bold;font-size:14px;",
+                "labelWidth": 90,
+                "layout|x": 600,
+                "layout|y": -7,
+                "value": "Quantity",
+                "width": 305
+            },
+            "configAlternates": {
+                "layout|x": "number",
+                "layout|y": "number",
+                "value": "string",
+                "width": "auto",
+                "fieldStyle": "string",
+                "itemId": "string",
+                "fieldLabel": "string",
+                "labelStyle": "string",
+                "labelWidth": "number"
+            },
+            "name": "MyDisplayField5",
+            "designerId": "39d96b73-015e-4a4f-a464-a285cb1fc001"
+        },
+        {
+            "type": "Ext.form.field.Display",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Total Cost",
+                "fieldStyle": "color:red; font-weight:bold;font-size:14px;",
+                "itemId": "totalCost",
+                "labelStyle": "color:#3d74b3; font-weight:bold;font-size:14px;",
+                "labelWidth": 80,
+                "layout|x": 610,
+                "layout|y": 40,
+                "value": "Total Cost:",
+                "width": 305
+            },
+            "configAlternates": {
+                "layout|x": "number",
+                "layout|y": "number",
+                "value": "string",
+                "width": "auto",
+                "fieldStyle": "string",
+                "itemId": "string",
+                "fieldLabel": "string",
+                "labelStyle": "string",
+                "labelWidth": "number"
+            },
+            "name": "MyDisplayField6",
+            "designerId": "d4e328b2-edca-4d9b-bc4d-24aaf98e4e30"
+        },
+        {
+            "type": "Ext.form.field.Display",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Item Cost",
+                "fieldStyle": "color:red; font-weight:bold;font-size:14px;",
+                "itemId": "unitCost",
+                "labelStyle": "color:#3d74b3; font-weight:bold;font-size:14px;",
+                "labelWidth": 78,
+                "layout|x": 615,
+                "layout|y": 15,
+                "value": "Item Cost:",
+                "width": 305
+            },
+            "configAlternates": {
+                "layout|x": "number",
+                "layout|y": "number",
+                "value": "string",
+                "width": "auto",
+                "fieldStyle": "string",
+                "itemId": "string",
+                "fieldLabel": "string",
+                "labelStyle": "string",
+                "labelWidth": "number"
+            },
+            "name": "MyDisplayField8",
+            "designerId": "1c97345f-0e2a-4bd9-9041-4ae58b7486da"
+        },
+        {
+            "type": "Ext.form.field.Number",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowBlank": false,
+                "fieldLabel": "Dose",
+                "fieldStyle": "color:#3d74b3; font-weight:bold;font-size:12px;",
+                "itemId": "dose",
+                "labelAlign": "right",
+                "labelStyle": "color:green; font-weight:bold;font-size:12px;",
+                "labelWidth": 50,
+                "layout|x": 20,
+                "layout|y": 40,
+                "value": [
+                    "1"
+                ],
+                "width": 120
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "labelWidth": "number",
+                "layout|x": "number",
+                "layout|y": "number",
+                "width": "auto",
+                "itemId": "string",
+                "labelAlign": "string",
+                "labelStyle": "string",
+                "allowBlank": "boolean",
+                "fieldStyle": "string",
+                "value": "object"
+            },
+            "name": "MyNumberField1",
+            "designerId": "91e47c03-d992-4d47-83b7-5a6f897e3b64"
+        },
+        {
+            "type": "Ext.form.field.Number",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowBlank": false,
+                "fieldLabel": "Times Per Day",
+                "fieldStyle": "color:#3d74b3; font-weight:bold;font-size:12px;",
+                "itemId": "timesperday",
+                "labelStyle": "color:green; font-weight:bold;font-size:12px;",
+                "labelWidth": 90,
+                "layout|x": 145,
+                "layout|y": 40,
+                "maxLength": 6,
+                "maxValue": 6,
+                "minLength": 1,
+                "minValue": 1,
+                "width": 160
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "labelWidth": "number",
+                "layout|x": "number",
+                "layout|y": "number",
+                "width": "auto",
+                "itemId": "string",
+                "labelStyle": "string",
+                "allowBlank": "boolean",
+                "fieldStyle": "string",
+                "maxLength": "number",
+                "maxValue": "number",
+                "minLength": "number",
+                "minValue": "number"
+            },
+            "name": "MyNumberField2",
+            "designerId": "55c530ed-66ed-45cb-b10e-2ee4879ffa8c"
+        },
+        {
+            "type": "Ext.form.field.Number",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowBlank": false,
+                "fieldLabel": "Days",
+                "fieldStyle": "color:#3d74b3; font-weight:bold;font-size:12px;",
+                "itemId": "days",
+                "labelStyle": "color:green; font-weight:bold;font-size:12px;",
+                "labelWidth": 50,
+                "layout|x": 310,
+                "layout|y": 40,
+                "maxLength": 60,
+                "maxValue": 60,
+                "minLength": 1,
+                "minValue": 1,
+                "width": 130
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "labelWidth": "number",
+                "layout|x": "number",
+                "layout|y": "number",
+                "width": "auto",
+                "itemId": "string",
+                "labelStyle": "string",
+                "allowBlank": "boolean",
+                "fieldStyle": "string",
+                "maxLength": "number",
+                "maxValue": "number",
+                "minLength": "number",
+                "minValue": "number"
+            },
+            "name": "MyNumberField3",
+            "designerId": "bfc24a9b-bd7c-4866-adce-74c3e7044401"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowBlank": false,
+                "fieldLabel": "Total Dose",
+                "fieldStyle": "color:#3d74b3; font-weight:bold;font-size:12px;",
+                "itemId": "total",
+                "labelStyle": "color:green; font-weight:bold;font-size:12px;",
+                "labelWidth": 70,
+                "layout|x": 450,
+                "layout|y": 40,
+                "readOnly": true,
+                "width": 140
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "labelWidth": "number",
+                "layout|x": "number",
+                "layout|y": "number",
+                "width": "auto",
+                "itemId": "string",
+                "labelStyle": "string",
+                "allowBlank": "boolean",
+                "fieldStyle": "string",
+                "readOnly": "boolean"
+            },
+            "name": "MyTextField9",
+            "designerId": "85879b57-276b-4ff3-8dee-8ab3cc501e75"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowBlank": false,
+                "fieldStyle": "color:#3d74b3; font-weight:bold;font-size:12px;",
+                "itemId": "itemNumber",
+                "labelStyle": "color:green; font-weight:bold;font-size:12px;",
+                "labelWidth": 70,
+                "layout|x": 600,
+                "layout|y": 75,
+                "name": "arr_item_number",
+                "readOnly": true,
+                "width": 55
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "labelWidth": "number",
+                "layout|x": "number",
+                "layout|y": "number",
+                "width": "auto",
+                "itemId": "string",
+                "labelStyle": "string",
+                "allowBlank": "boolean",
+                "fieldStyle": "string",
+                "readOnly": "boolean",
+                "name": "string"
+            },
+            "name": "MyTextField7",
+            "designerId": "aafaab63-da1f-4c22-aedc-d38fb5dc1ee6"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Comment",
+                "itemId": "comment",
+                "labelAlign": "right",
+                "labelStyle": "color:blue; font-weight:bold;font-size:12px;",
+                "layout|x": -31,
+                "layout|y": 75,
+                "width": 620
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "itemId": "string",
+                "labelAlign": "string",
+                "labelStyle": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "width": "auto"
+            },
+            "name": "MyTextField4",
+            "designerId": "4dcc05da-eaae-46b0-9da3-67f90199be22"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "iconCls": "x-fa fa-trash",
+                "itemId": "cmdRemoveDose",
+                "layout|x": 675,
+                "layout|y": 75,
+                "text": "Remove",
+                "width": 95
+            },
+            "configAlternates": {
+                "iconCls": "string",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "text": "string",
+                "width": "auto"
+            },
+            "name": "MyButton8",
+            "designerId": "ea1f35e0-deb6-4f20-8a68-1664a1c5105c"
+        }
+    ]
+}

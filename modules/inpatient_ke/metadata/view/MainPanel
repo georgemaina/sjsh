@@ -1,0 +1,523 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userAlias": "mainpanel",
+        "designer|userClassName": "MainPanel",
+        "layout": "border"
+    },
+    "configAlternates": {
+        "designer|initialView": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "layout": "string"
+    },
+    "designerId": "5f8063d5-2edd-431e-8a6f-2ae34457308f",
+    "viewControllerInstanceId": "f7d2f9cc-9593-4b89-b4a9-1ddcea99c5ae",
+    "viewModelInstanceId": "53be91ab-9de1-4ea8-a21d-ded748aa92d6",
+    "cn": [
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "flex": 2,
+                "layout": "fit",
+                "layout|region": "center"
+            },
+            "configAlternates": {
+                "flex": "number",
+                "layout|region": "string",
+                "layout": "string"
+            },
+            "name": "MyContainer2",
+            "designerId": "b745d36f-134d-4666-9e16-6a738dc27c5b",
+            "cn": [
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|uiInterfaceName": "default",
+                        "title": "Inpatients Dashboard"
+                    },
+                    "configAlternates": {
+                        "title": "string",
+                        "designer|uiInterfaceName": "string"
+                    },
+                    "name": "MyPanel2",
+                    "designerId": "39347a7a-d87a-47f9-a2bb-761c6080c851"
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "Menus",
+                "header": [
+                    "{",
+                    "    layout : {",
+                    "        align : 'stretchmax'",
+                    "    },",
+                    "    iconCls : 'x-fa fa-home',",
+                    "    style: 'background:#1b5f87',",
+                    "    title : {",
+                    "        text      : 'Inpatients',",
+                    "        textAlign : 'center',",
+                    "        flex      : 0,",
+                    "        minWidth  : 160",
+                    "    }",
+                    "}"
+                ],
+                "layout": "accordion",
+                "layout|flex": 0,
+                "layout|region": "west",
+                "width": 263
+            },
+            "configAlternates": {
+                "layout|region": "string",
+                "width": "auto",
+                "icon": "string",
+                "iconCls": "string",
+                "title": "string",
+                "header": "object",
+                "designer|displayName": "string",
+                "layout": "string",
+                "layout|flex": "number"
+            },
+            "name": "MyPanel1",
+            "designerId": "5df8707f-8a31-40cd-b5a2-fafe61363799",
+            "cn": [
+                {
+                    "type": "Ext.menu.Menu",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "bodyStyle": "background:#5fa2dd; color:#ffff;!important;",
+                        "designer|displayName": "Activities",
+                        "designer|uiInterfaceName": "default-menubar",
+                        "floating": false,
+                        "header": [
+                            "{style:'background:#1b5f87;color:white;font-weight:bold;'}"
+                        ],
+                        "title": "Inpatient Activities",
+                        "ui": "default-menubar"
+                    },
+                    "configAlternates": {
+                        "floating": "boolean",
+                        "title": "string",
+                        "header": "object",
+                        "bodyStyle": "string",
+                        "designer|displayName": "string",
+                        "designer|uiInterfaceName": "string",
+                        "ui": "string"
+                    },
+                    "name": "MyMenu1",
+                    "designerId": "bff38fdc-a7fe-4375-92d5-acc57644fbe0",
+                    "cn": [
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "DashBoard",
+                                "text": "Dashboard"
+                            },
+                            "configAlternates": {
+                                "text": "string",
+                                "itemId": "string",
+                                "style": "object"
+                            },
+                            "name": "MyMenuItem",
+                            "designerId": "fa35b1e7-3e41-4af0-bc86-f5a104b7b585"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "WardOccupancy",
+                                "text": "Ward Occupancy"
+                            },
+                            "configAlternates": {
+                                "text": "string",
+                                "itemId": "string"
+                            },
+                            "name": "MyMenuItem1",
+                            "designerId": "4261b68e-1140-4cba-b67e-f717ecbede7e"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "Bills",
+                                "text": "Bills Management"
+                            },
+                            "configAlternates": {
+                                "text": "string",
+                                "itemId": "string"
+                            },
+                            "name": "MyMenuItem2",
+                            "designerId": "4a313c48-539f-4c20-b156-15ee2defccf8"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "Debit",
+                                "text": "Debit Patient"
+                            },
+                            "configAlternates": {
+                                "text": "string",
+                                "itemId": "string"
+                            },
+                            "name": "MyMenuItem3",
+                            "designerId": "7923be7b-7dd7-4a10-a085-71168de2f7c6"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "Credit",
+                                "text": "Cedit Patient"
+                            },
+                            "configAlternates": {
+                                "text": "string",
+                                "itemId": "string"
+                            },
+                            "name": "MyMenuItem4",
+                            "designerId": "7171ae66-0ed3-4cb9-89aa-da922f0140d1"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "NhifCredit",
+                                "text": "NHIF Credit"
+                            },
+                            "configAlternates": {
+                                "text": "string",
+                                "itemId": "string"
+                            },
+                            "name": "MyMenuItem5",
+                            "designerId": "8f924607-0cf7-44f4-b5d9-3705ddc12fff"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "InsuranceCredit",
+                                "text": "Insurance Credit"
+                            },
+                            "configAlternates": {
+                                "text": "string",
+                                "itemId": "string"
+                            },
+                            "name": "MyMenuItem6",
+                            "designerId": "888b04cc-b4f6-4b01-a552-987e7c63c076"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "FinaliseInvoice",
+                                "text": "Finalize Invoice"
+                            },
+                            "configAlternates": {
+                                "text": "string",
+                                "itemId": "string"
+                            },
+                            "name": "MyMenuItem7",
+                            "designerId": "cb02e312-8337-4f03-8008-4af4a0c48dee"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.menu.Menu",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "bodyStyle": "background:#5fa2dd;;color:white;",
+                        "designer|displayName": "Reports",
+                        "floating": false,
+                        "header": [
+                            "{style:'background:#1b5f87;color:white;font-weight:bold;'}"
+                        ],
+                        "title": "Inpatient Reports"
+                    },
+                    "configAlternates": {
+                        "floating": "boolean",
+                        "title": "string",
+                        "bodyStyle": "string",
+                        "designer|displayName": "string",
+                        "header": "object"
+                    },
+                    "name": "MyMenu2",
+                    "designerId": "7e4c6d88-9869-4d0c-87da-448d053305d2",
+                    "cn": [
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "InvoicePanel",
+                                "text": "View Invoices"
+                            },
+                            "configAlternates": {
+                                "text": "string",
+                                "itemId": "string"
+                            },
+                            "name": "MyMenuItem",
+                            "designerId": "1caade32-58ab-4db6-a322-d9f3444ae73f"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "InvoicesList",
+                                "text": "Pending Invoices"
+                            },
+                            "configAlternates": {
+                                "text": "string",
+                                "itemId": "string"
+                            },
+                            "name": "MyMenuItem1",
+                            "designerId": "1f47b9f1-0faa-463a-8fa4-ef00f7db187d"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "NhifCredits",
+                                "text": "NHIF Credits"
+                            },
+                            "configAlternates": {
+                                "text": "string",
+                                "itemId": "string"
+                            },
+                            "name": "MyMenuItem2",
+                            "designerId": "46a99911-8b01-4673-80c3-1e6be40b0fe7"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "OccupancyList",
+                                "text": "Bed Occupancy"
+                            },
+                            "configAlternates": {
+                                "text": "string",
+                                "itemId": "string"
+                            },
+                            "name": "MyMenuItem3",
+                            "designerId": "f58c319c-a2c7-44b0-a5f0-87db9d5757a0"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "AdmDis",
+                                "text": "Admissions & Discharges"
+                            },
+                            "configAlternates": {
+                                "text": "string",
+                                "itemId": "string"
+                            },
+                            "name": "MyMenuItem6",
+                            "designerId": "8bf03995-ecff-4813-a0c4-baf151eed617"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.menu.Menu",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "bodyStyle": "background:#5fa2dd;;color:white;",
+                        "designer|displayName": "Settings",
+                        "floating": false,
+                        "header": [
+                            "{style:'background:#1b5f87;color:white;font-weight:bold;'}"
+                        ],
+                        "title": "Settings"
+                    },
+                    "configAlternates": {
+                        "floating": "boolean",
+                        "title": "string",
+                        "bodyStyle": "string",
+                        "designer|displayName": "string",
+                        "header": "object"
+                    },
+                    "name": "MyMenu3",
+                    "designerId": "ebcea9b5-1299-480c-a990-e771218e3fcc",
+                    "cn": [
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "InvoicePanel",
+                                "text": "Wards Management"
+                            },
+                            "configAlternates": {
+                                "text": "string",
+                                "itemId": "string"
+                            },
+                            "name": "MyMenuItem",
+                            "designerId": "d8aac078-9111-4a2f-b007-8d700f7eba0d"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "InvoicesList",
+                                "text": "Pending Invoices"
+                            },
+                            "configAlternates": {
+                                "text": "string",
+                                "itemId": "string"
+                            },
+                            "name": "MyMenuItem1",
+                            "designerId": "35cd7808-253b-4d0e-8637-737c87db5318"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "NhifCredits",
+                                "text": "NHIF Credits"
+                            },
+                            "configAlternates": {
+                                "text": "string",
+                                "itemId": "string"
+                            },
+                            "name": "MyMenuItem2",
+                            "designerId": "c4c64ba1-a8a3-4391-b17d-0703d90e3fd6"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "OccupancyList",
+                                "text": "Bed Occupancy"
+                            },
+                            "configAlternates": {
+                                "text": "string",
+                                "itemId": "string"
+                            },
+                            "name": "MyMenuItem3",
+                            "designerId": "e2f28c0f-bb37-4cee-b186-12376f3c000f"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "AdmDis",
+                                "text": "Admissions & Discharges"
+                            },
+                            "configAlternates": {
+                                "text": "string",
+                                "itemId": "string"
+                            },
+                            "name": "MyMenuItem6",
+                            "designerId": "bd0a708f-fbec-4f8b-8f25-a60ab870e9ee"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,59 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "designer|userAlias": "diagnosisstore",
+        "designer|userClassName": "DiagnosisStore",
+        "model": "DiagnosisCodes",
+        "storeId": "DiagnosisStore"
+    },
+    "configAlternates": {
+        "autoLoad": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string"
+    },
+    "designerId": "14a3bbe7-b364-4d58-b1b7-3bca1fc1f3da",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "../data/getDataFunctions.php?task=getDiagnosisList"
+            },
+            "configAlternates": {
+                "url": "string"
+            },
+            "name": "MyAjaxProxy7",
+            "designerId": "a2260f8f-2341-40c6-a502-ff8a82268011",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "diagnosisList"
+                    },
+                    "configAlternates": {
+                        "root": "string"
+                    },
+                    "name": "MyJsonReader7",
+                    "designerId": "932996b9-3785-4aa3-9c92-56605ed33c41"
+                }
+            ]
+        }
+    ]
+}

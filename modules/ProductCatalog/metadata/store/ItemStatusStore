@@ -1,0 +1,62 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "designer|userAlias": "itemstatusstore",
+        "designer|userClassName": "ItemStatusStore",
+        "model": "ItemStatus",
+        "storeId": "ItemStatusStore"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string",
+        "autoLoad": "boolean"
+    },
+    "name": "UnitsMeasureStore1",
+    "designerId": "de3ec927-a2bd-45be-96cd-ec094bdeee48",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "idParam": "ID",
+                "url": "data/getDataFunctions.php?task=getItemStatus"
+            },
+            "configAlternates": {
+                "url": "string",
+                "idParam": "string"
+            },
+            "name": "MyAjaxProxy",
+            "designerId": "289b23b7-e262-4e74-916e-92505e6ca659",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "itemStatus"
+                    },
+                    "configAlternates": {
+                        "rootProperty": "string"
+                    },
+                    "name": "MyJsonReader",
+                    "designerId": "a19de7c0-3334-4552-8f6e-5f691d3c4779"
+                }
+            ]
+        }
+    ]
+}

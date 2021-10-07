@@ -1,0 +1,309 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "bodyPadding": 10,
+        "designer|snapToGrid": 5,
+        "designer|userAlias": "reprintreceipt",
+        "designer|userClassName": "ReprintReceipt",
+        "height": 245,
+        "layout": "absolute",
+        "width": 465
+    },
+    "configAlternates": {
+        "bodyPadding": "auto",
+        "designer|snapToGrid": "number",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "layout": "string",
+        "title": "string",
+        "width": "auto"
+    },
+    "name": "MyForm",
+    "designerId": "cca7731a-9c46-41b5-bcfe-2d7511ac8be7",
+    "viewControllerInstanceId": "235bd10e-55ca-4ae2-a147-dbe7774c6b20",
+    "viewModelInstanceId": "c09c6d2b-b443-40bd-8120-46c72419c94f",
+    "cn": [
+        {
+            "type": "Ext.form.field.Radio",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "boxLabel": "Cash Sale",
+                "designer|displayName": "cashsale",
+                "fieldLabel": null,
+                "itemId": "cashsale",
+                "layout|x": 95,
+                "layout|y": 0,
+                "name": "CashSale"
+            },
+            "configAlternates": {
+                "boxLabel": "string",
+                "designer|displayName": "string",
+                "fieldLabel": "string",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "name": "string"
+            },
+            "name": "MyRadio",
+            "designerId": "01bafa1a-57a9-4b3a-9d9a-376a5b64b79d"
+        },
+        {
+            "type": "Ext.form.field.Radio",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "boxLabel": "Receipt",
+                "designer|displayName": "receipt",
+                "fieldLabel": null,
+                "itemId": "receipt",
+                "layout|x": 95,
+                "layout|y": 30,
+                "name": "Receipt"
+            },
+            "configAlternates": {
+                "boxLabel": "string",
+                "fieldLabel": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "designer|displayName": "string",
+                "itemId": "string",
+                "name": "string"
+            },
+            "name": "MyRadio1",
+            "designerId": "02f06a8f-23ce-4911-8161-d6cb7e83515f"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "receiptnumber",
+                "fieldLabel": "Receipt No:",
+                "itemId": "receiptnumber",
+                "layout|x": 10,
+                "layout|y": 60,
+                "name": "ReceiptNumber"
+            },
+            "configAlternates": {
+                "designer|displayName": "string",
+                "fieldLabel": "string",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "name": "string"
+            },
+            "name": "MyTextField31",
+            "designerId": "7a581470-ad0f-4993-9917-5f2c73ec14ea"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "patient",
+                "fieldLabel": "Patient",
+                "itemId": "patient",
+                "layout|x": 10,
+                "layout|y": 165,
+                "name": "Patient"
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "designer|displayName": "string",
+                "itemId": "string",
+                "name": "string"
+            },
+            "name": "MyTextField32",
+            "designerId": "04c3c8b9-dd90-49d5-b639-6b20c2dad29c"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": null,
+                "layout|x": 290,
+                "layout|y": 165
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "layout|x": "number",
+                "layout|y": "number"
+            },
+            "name": "MyTextField35",
+            "designerId": "298c13b4-47ca-4e7a-ac57-46de07e3e5e9"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "shiftnumber",
+                "fieldLabel": "Shift No",
+                "itemId": "shiftnumber",
+                "layout|x": 10,
+                "layout|y": 130,
+                "name": "ShiftNumber"
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "designer|displayName": "string",
+                "itemId": "string",
+                "name": "string"
+            },
+            "name": "MyTextField33",
+            "designerId": "94c42dfc-be0f-4da2-a6a0-23e12afaf8c8"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "cashpoint",
+                "fieldLabel": "Cash Point",
+                "itemId": "cashpoint",
+                "layout|x": 10,
+                "layout|y": 95,
+                "name": "CashPoint"
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "designer|displayName": "string",
+                "itemId": "string",
+                "name": "string"
+            },
+            "name": "MyTextField34",
+            "designerId": "1645782e-8adb-4ce5-ab2b-ccadbb4b629c"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "reprint",
+                "itemId": "reprint",
+                "layout|x": 115,
+                "layout|y": 200,
+                "text": "Reprint"
+            },
+            "configAlternates": {
+                "designer|displayName": "string",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "text": "string"
+            },
+            "name": "MyButton3",
+            "designerId": "f976eb4a-599c-49ca-bf70-e07a79b44ed3"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "cancel",
+                "itemId": "cancel",
+                "layout|x": 185,
+                "layout|y": 200,
+                "text": "Cancel"
+            },
+            "configAlternates": {
+                "designer|displayName": "string",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "text": "string"
+            },
+            "name": "MyButton4",
+            "designerId": "e44889bc-ffa0-4415-b4b2-50314332c361"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "findreceipts",
+                "itemId": "findreceipts",
+                "layout|x": 250,
+                "layout|y": 200,
+                "text": "Find Receipts"
+            },
+            "configAlternates": {
+                "designer|displayName": "string",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "text": "string"
+            },
+            "name": "MyButton5",
+            "designerId": "438a8950-dc18-4cba-9941-334eccd21c5d"
+        },
+        {
+            "type": "Ext.form.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "receipttype",
+                "itemId": "receipttype",
+                "layout|x": 10,
+                "layout|y": 5,
+                "text": "Receipt type"
+            },
+            "configAlternates": {
+                "layout|x": "number",
+                "layout|y": "number",
+                "text": "string",
+                "designer|displayName": "string",
+                "itemId": "string"
+            },
+            "name": "MyLabel4",
+            "designerId": "be781946-5564-4244-8407-a6d24ae16be3"
+        }
+    ]
+}

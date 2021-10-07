@@ -1,0 +1,923 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Main",
+        "models": [
+            "PatientsModel",
+            "Encounters",
+            "PrescriptionsModel",
+            "TreatmentRegister"
+        ],
+        "stores": [
+            "PatientsListStore",
+            "EncountersStore",
+            "PrescriptionsStore",
+            "TreatmentRegisterStore"
+        ],
+        "views": [
+            "PatientsList",
+            "HhaMain",
+            "InitialEncounter",
+            "SharedPanel",
+            "ContinuationCare",
+            "TreatmentRegister",
+            "SyncData"
+        ]
+    },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "models": "typedarray",
+        "stores": "typedarray",
+        "views": "typedarray"
+    },
+    "name": "MyController",
+    "designerId": "5ab74987-a99e-49c9-a687-2bc70fc802d4",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "application"
+                ],
+                "fn": "init",
+                "implHandler": [
+                    "this.control({",
+                    "    '#mnuInitialEncounter':{",
+                    "        click:this.openInitialEncounter",
+                    "    },",
+                    "    '#mnuContinuationCare':{",
+                    "        click:this.openContinuationCare",
+                    "    },",
+                    "    '#cmdInitialEncounter': {",
+                    "        click: this.saveInitialEncounter",
+                    "    },",
+                    "    '#cmdContiniousCare': {",
+                    "        click: this.saveContiniousCare",
+                    "    },",
+                    "    '#mnuPatientsList':{",
+                    "        click: this.openPatientsList",
+                    "    },",
+                    "    '#encountersGrid':{",
+                    "        itemclick:this.loadEncounterDetails",
+                    "    },",
+                    "    '#BPFirstReading1':{",
+                    "        change:this.setVitalsID",
+                    "    },",
+                    "    '#BPFirstReading2':{",
+                    "        change:this.setVitalsID",
+                    "    },",
+                    "    '#DrugAllergies':{",
+                    "        change:this.setQuestionID",
+                    "    },",
+                    "    '#Observations':{",
+                    "        change:this.setQuestionID",
+                    "    },",
+                    "    '#BPInitial1':{",
+                    "        change:this.setInitialVitalsID",
+                    "    },",
+                    "    '#Smoking':{",
+                    "        change:this.setInitialQuestions",
+                    "    },",
+                    "    '#mnuTreatmentRegister':{",
+                    "        click:this.openTreatmentRegister",
+                    "    },",
+                    "    '#txtHeight':{",
+                    "        change:this.calculateBMI",
+                    "    },",
+                    "    '#txtWeight':{",
+                    "        change:this.calculateBMI",
+                    "    },",
+                    "    '#AddPrescription':{",
+                    "        click:this.AddPrescription",
+                    "    },",
+                    "    '#cmdSearch':{",
+                    "        click:this.searchEncounter",
+                    "    },",
+                    "    '#txtSearch':{",
+                    "        change:this.searchEncounter",
+                    "    },",
+                    "    '#cmdExport':{",
+                    "        click:this.exportRegister",
+                    "    },",
+                    "    '#cmdSearchRegister':{",
+                    "        click:this.searchRegister",
+                    "    },",
+                    "    '#mnuSyncdata':{",
+                    "        click:this.openSyncWindow",
+                    "    },",
+                    "    '#cmdPreviewJson':{",
+                    "        click:this.previewJson",
+                    "    },",
+                    "    '#cmdSendJson':{",
+                    "        click:this.sendJson",
+                    "    }",
+                    "});"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "init",
+            "designerId": "dfe9cd36-1bb1-429a-978a-4b58f659f559"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "viewport",
+                "selector": "hhamain",
+                "xtype": "hhamain"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "viewport",
+            "designerId": "d0695554-ff3c-4b94-8f27-bee1911bce46"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "patientslist",
+                "selector": "patientslist",
+                "xtype": "patientslist"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "patientslist",
+            "designerId": "fa0ff64f-4ae7-417f-8a35-c49e70dcf426"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "item"
+                ],
+                "fn": "openPatientsList",
+                "implHandler": [
+                    "treatRegister = Ext.create('hha.view.PatientsList', {});",
+                    "center_container = this.getViewport().down('container[region=center]');",
+                    "center_container.removeAll();",
+                    "",
+                    "center_container.add(treatRegister);"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "openPatientsList",
+            "designerId": "f9930a93-3750-4f89-8442-7242f76d7635"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "initialencounter",
+                "selector": "initialencounter",
+                "xtype": "initialencounter"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "initialencounter",
+            "designerId": "a6240bfd-2f52-4e3d-8ffe-653bf56a07ef"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "continuationcare",
+                "selector": "continuationcare",
+                "xtype": "continuationcare"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "continuationcare",
+            "designerId": "edbaa267-029a-44b5-83e0-afa3c0f89cbd"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "item"
+                ],
+                "fn": "openInitialEncounter",
+                "implHandler": [
+                    "initialEncounter = Ext.create('hha.view.InitialEncounter', {});",
+                    "center_container = this.getViewport().down('container[region=center]');",
+                    "center_container.removeAll();",
+                    "",
+                    "center_container.add(initialEncounter);",
+                    "",
+                    "this.getViewport().down('#FormID').setValue('Initial');",
+                    "",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "openInitialEncounter",
+            "designerId": "c8c03091-edef-49c2-8d8d-fd5bfbe41cdd"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "item"
+                ],
+                "fn": "openContinuationCare",
+                "implHandler": [
+                    "continCare = Ext.create('hha.view.ContinuationCare', {});",
+                    "center_container = this.getViewport().down('container[region=center]');",
+                    "center_container.removeAll();",
+                    "",
+                    "center_container.add(continCare);",
+                    "",
+                    "this.getViewport().down('#FormID').setValue('Continue');"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "openContinuationCare",
+            "designerId": "1a5684eb-a4af-4a7b-abc3-d6770a413b8c"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "gridpanel",
+                    "record",
+                    "item",
+                    "index",
+                    "e",
+                    "eOpts"
+                ],
+                "fn": "loadEncounterDetails",
+                "implHandler": [
+                    "formID=this.getViewport().down('#FormID').getValue();",
+                    "if(formID==='Initial'){",
+                    "    var initialForm=this.getInitialencounter().loadRecord(record);",
+                    "}else if(formID==='Continue'){",
+                    "    var initialForm=this.getContinuationcare().loadRecord(record);",
+                    "}",
+                    "",
+                    "var prescStore=Ext.data.StoreManager.lookup('PrescriptionsStore');",
+                    "prescStore.load({",
+                    "    params:{",
+                    "        EncounterNo:record.get('EncounterNo')",
+                    "    }",
+                    "",
+                    "});",
+                    "",
+                    "",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "loadEncounterDetails",
+            "designerId": "efdce1c5-3bff-4da8-9ad0-c0e840167d6a"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "saveInitialEncounter",
+                "implHandler": [
+                    "var form = button.up('panel').getForm(); // get the basic form",
+                    "if (form.isValid()) { // make sure the form contains valid data before submitting",
+                    "    form.submit({",
+                    "        success: function(form, action) {",
+                    "            Ext.Msg.alert('Success', 'Saved new Encounter successfully.');",
+                    "",
+                    "",
+                    "",
+                    "        },",
+                    "        failure: function(form, action) {",
+                    "            var jsonResp = Ext.decode(action.response.responseText);",
+                    "",
+                    "            Ext.Msg.alert('Failed', 'Could not save initial Encounter.  Error='+jsonResp.error);",
+                    "        }",
+                    "    });",
+                    "} else { // display error alert if the data is invalid",
+                    "    Ext.Msg.alert('Invalid Data', 'Please correct form errors.');",
+                    "}"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "saveInitialEncounter",
+            "designerId": "d78f36bd-716b-4b75-9e9a-1fe42beced1e"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "saveContiniousCare",
+                "implHandler": [
+                    "var form = button.up('panel').getForm(); // get the basic form",
+                    "if (form.isValid()) { // make sure the form contains valid data before submitting",
+                    "    form.submit({",
+                    "        success: function(form, action) {",
+                    "            Ext.Msg.alert('Success', 'Saved new Encounter successfully.');",
+                    "",
+                    "        },",
+                    "        failure: function(form, action) {",
+                    "            var jsonResp = Ext.decode(action.response.responseText);",
+                    "",
+                    "            Ext.Msg.alert('Failed', 'Could not save Encounter. \\n Error='+jsonResp.error);",
+                    "        }",
+                    "    });",
+                    "} else { // display error alert if the data is invalid",
+                    "    Ext.Msg.alert('Invalid Data', 'Please correct form errors.');",
+                    "}"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "saveContiniousCare",
+            "designerId": "bafbbe6e-5168-4610-b160-0c8eb763edfc"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "setVitalsID",
+                "implHandler": [
+                    "formID=this.getViewport().down('#FormID').getValue();",
+                    "if(formID==='Initial'){",
+                    "    this.getInitialencounter().down('#Vitals').setValue('1');",
+                    "}else if(formID==='Continue'){",
+                    "    this.getContinuationcare().down('#Vitals').setValue('3');",
+                    "}",
+                    "",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "setVitalsID",
+            "designerId": "7e369d89-5e00-46dc-b1a9-a17ef13b58bc"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "field",
+                    "newValue",
+                    "oldValue",
+                    "eOpts"
+                ],
+                "fn": "setQuestionID",
+                "implHandler": [
+                    "this.getContinuationcare().down('#Questions').setValue('4');"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "setQuestionID",
+            "designerId": "1b4e11be-62c7-4d83-ae61-25f7d9b0c539"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "setInitialVitalsID",
+                "implHandler": [
+                    "this.getInitialencounter().down('#Vitals').setValue('1');"
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "setInitialVitalsID",
+            "designerId": "bc0520e6-c009-4362-b98b-25acd884f133"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "setInitialQuestions",
+                "implHandler": [
+                    " this.getInitialencounter().down('#Questions').setValue('2');"
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "setInitialQuestions",
+            "designerId": "20ad0547-69c6-494a-8c46-6ad6cdac5676"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "treatmentregister",
+                "selector": "treatmentregister",
+                "xtype": "treatmentregister"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "treatmentregister",
+            "designerId": "b3b0031d-fb9e-4d54-95c9-14006778043a"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "item"
+                ],
+                "fn": "openTreatmentRegister",
+                "implHandler": [
+                    "treatmentregister = Ext.create('hha.view.TreatmentRegister', {});",
+                    "center_container = this.getViewport().down('container[region=center]');",
+                    "center_container.removeAll();",
+                    "",
+                    "center_container.add(treatmentregister);",
+                    "",
+                    "//this.getViewport().down('#FormID').setValue('Initial');",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "openTreatmentRegister",
+            "designerId": "be4092eb-8412-49e8-92e4-71b4eacd66c9"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "calculateBMI",
+                "implHandler": [
+                    "formID=this.getViewport().down('#FormID').getValue();",
+                    "if(formID==='Initial'){",
+                    "    var height=this.getInitialencounter().down('#txtHeight').getValue()/100;",
+                    "    var weight=this.getInitialencounter().down('#txtWeight').getValue();",
+                    "",
+                    "    var bmi=weight/(height*height);",
+                    "",
+                    "    this.getInitialencounter().down('#txtBMI').setValue(Ext.util.Format.round(bmi,2));",
+                    "}else if(formID==='Continue'){",
+                    "    var height=this.getContinuationcare().down('#txtHeight').getValue()/100;",
+                    "    var weight=this.getContinuationcare().down('#txtWeight').getValue();",
+                    "",
+                    "    var bmi=weight/(height*height);",
+                    "",
+                    "    this.getContinuationcare().down('#txtBMI').setValue(Ext.util.Format.round(bmi,2));",
+                    "}",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "calculateBMI",
+            "designerId": "6f67787e-9a49-4b16-825a-16941f082a73"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "AddPrescription",
+                "implHandler": [
+                    "var pid=this.getInitialencounter().down('#PID').getValue();",
+                    "var encounterNo=this.getInitialencounter().down('#EncounterNo').getValue();",
+                    "var drugcode=this.getInitialencounter().down('#DrugCode').getValue();",
+                    "var description=this.getInitialencounter().down('#DrugName').getValue();",
+                    "var presStat=this.getInitialencounter().down('#PrescriptionStatus').getValue();",
+                    "var strength=this.getInitialencounter().down('#Strength').getValue();",
+                    "var frequency=this.getInitialencounter().down('#Frequency').getValue();",
+                    "",
+                    "Ext.Ajax.request({",
+                    "        url: 'data/getDatafunctions.php?task=addPrescription',",
+                    "        params: {",
+                    "            PID:pid,",
+                    "            EncNo:encounterNo,",
+                    "            DrugCode:drugcode,",
+                    "            Desription:description,",
+                    "            PrescriptionStatus:presStat,",
+                    "            Strength:strength,",
+                    "            Frequency:frequency",
+                    "        },",
+                    "        waitMsg: 'Creating Prescription ...',",
+                    "        success: function(response){",
+                    "            var text = response.responseText;",
+                    "            Ext.Msg.alert('Prescription','Prescription Successfully Added');",
+                    "            var prescStore=Ext.data.StoreManager.lookup('PrescriptionsStore');",
+                    "            prescStore.load({});",
+                    "",
+                    "        },",
+                    "        failure:function(response){",
+                    "//             var resp = JSON.parseJSON(response);",
+                    "            Ext.Msg.alert('Error','There was a problem Adding Prescription, Contact System Administrator');",
+                    "        }",
+                    "    });",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "AddPrescription",
+            "designerId": "a5630462-168d-4549-b15a-c6e84e67f205"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "searchEncounter",
+                "implHandler": [
+                    "var searchParam=this.getViewport().down('#txtSearch').getValue();",
+                    "",
+                    "//Ext.Msg.alert('Test',searchParam);",
+                    "",
+                    "var encStore=Ext.data.StoreManager.lookup('EncountersStore');",
+                    "encStore.load({",
+                    "    params:{",
+                    "        searchParam:searchParam",
+                    "    }",
+                    "    ",
+                    "});"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "searchEncounter",
+            "designerId": "56246ba6-fd3f-4018-a55a-255881c4e780"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "exportRegister",
+                "implHandler": [
+                    "var strDate1=Ext.Date.format(new Date(this.getTreatmentregister().down('#StartDate').getValue()), 'Y-m-d');",
+                    "var strDate2=Ext.Date.format(new Date(this.getTreatmentregister().down('#EndDate').getValue()), 'Y-m-d');",
+                    "",
+                    "window.open('data/exportRegister2.php?strDate1='+strDate1+'&strDate2='+strDate2+'&single=false',\"Reports\",",
+                    "            \"menubar=yes,toolbar=yes,width=500,height=550,location=yes,resizable=no,scrollbars=yes,status=yes\");"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "exportRegister",
+            "designerId": "d8f70c1e-10d0-4e07-bac7-de986b0f5451"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "searchRegister",
+                "implHandler": [
+                    "var strDate1=Ext.Date.format(new Date(this.getTreatmentregister().down('#StartDate').getValue()), 'Y-m-d');",
+                    "var strDate2=Ext.Date.format(new Date(this.getTreatmentregister().down('#EndDate').getValue()), 'Y-m-d');",
+                    "",
+                    "var treatmentStore=Ext.data.StoreManager.lookup('TreatmentRegisterStore');",
+                    "treatmentStore.load({",
+                    "    params:{",
+                    "        StartDate:strDate1,",
+                    "        EndDate:strDate2",
+                    "    }",
+                    "});"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "searchRegister",
+            "designerId": "baea31e4-8a3f-4366-94ee-a6ec9405e7fe"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "syncdata",
+                "selector": "syncdata",
+                "xtype": "syncdata"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "syncdata",
+            "designerId": "5bd696d3-e413-4085-8f36-4a587bc3f531"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "item"
+                ],
+                "fn": "openSyncWindow",
+                "implHandler": [
+                    "syncData = Ext.create('hha.view.SyncData', {});",
+                    "var syncWin=Ext.create('Ext.window.Window', {",
+                    "    title: 'Data Syncronisation Window',",
+                    "    resizable:true,",
+                    "    animCollapse: true,",
+                    "    collapsible: true,",
+                    "    tools: [",
+                    "    {",
+                    "        xtype: 'tool',",
+                    "        type: 'minimize'",
+                    "    },",
+                    "    {",
+                    "        xtype: 'tool',",
+                    "        type: 'maximize'",
+                    "    }",
+                    "    ]",
+                    "});",
+                    "",
+                    "syncWin.add(syncData);",
+                    "syncWin.show();"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "openSyncWindow",
+            "designerId": "d6d57c04-85ef-4d96-8cd7-7a7e70921b05"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "previewJson",
+                "implHandler": [
+                    "var strDate1=Ext.Date.format(new Date(this.getSyncdata().down('#StartDate').getValue()), 'Y-m-d');",
+                    "var strDate2=Ext.Date.format(new Date(this.getSyncdata().down('#EndDate').getValue()), 'Y-m-d');",
+                    "",
+                    "var text='';",
+                    "",
+                    "Ext.Ajax.request({",
+                    "",
+                    "    url: 'data/getDatafunctions.php?task=getDataToSync',",
+                    "    params: {",
+                    "        StartDate:strDate1,",
+                    "        EndDate:strDate2",
+                    "    },",
+                    "    waitMsg: 'Deleting User ...',",
+                    "    success: function(response){",
+                    "        text = response.responseText;",
+                    "       // Ext.Msg.alert('Error',text);",
+                    "        //this.getSyncdata().down('#JsonData').setValue(text);",
+                    "        button.up('form').getForm().findField('JsonData').setValue(text);",
+                    "",
+                    "    },",
+                    "    failure:function(response){",
+                    "        var resp = JSON.parseJSON(response);",
+                    "        Ext.Msg.alert('Error','There was a problem deleting the User, Contact System Administrator');",
+                    "    }",
+                    "});",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "previewJson",
+            "designerId": "ee6269cc-e17d-475e-ac83-b2ff6d242077"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "sendJson",
+                "implHandler": [
+                    "var strDate1=Ext.Date.format(new Date(this.getSyncdata().down('#StartDate').getValue()), 'Y-m-d');",
+                    "var strDate2=Ext.Date.format(new Date(this.getSyncdata().down('#EndDate').getValue()), 'Y-m-d');",
+                    "",
+                    "var jsonData=this.getSyncdata().down('#JsonData').getValue();",
+                    "",
+                    "Ext.Ajax.request({",
+                    "",
+                    "    url: 'data/getDatafunctions.php?task=syncData',",
+                    "    params: {",
+                    "        jsonData:jsonData",
+                    "    },",
+                    "    waitMsg: 'Deleting User ...',",
+                    "    success: function(response){",
+                    "        text = response.responseText;",
+                    "        Ext.Msg.alert('Error',text);",
+                    "        //         //this.getSyncdata().down('#JsonData').setValue(text);",
+                    "        //         button.up('form').getForm().findField('JsonData').setValue(text);",
+                    "",
+                    "    },",
+                    "    failure:function(response){",
+                    "        var resp = response.responseText;",
+                    "        Ext.Msg.alert('Problem Sending Data','Error:'+resp);",
+                    "    }",
+                    "});",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "sendJson",
+            "designerId": "755a57dd-dc5f-41f0-87b8-249ad3c49132"
+        }
+    ]
+}

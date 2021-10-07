@@ -1,0 +1,183 @@
+<html>
+
+<head>
+
+
+<link rel="STYLESHEET" type="text/css" href="../common/styles.css">
+</head>
+<body>
+	<table border="0" cellpadding="0" cellspacing="0" class="sample_header" zid="71">
+		<tbody zid="3">
+			<tr valign="center" zid="4">
+				<td align="center" width="10" zid="5">&nbsp;</td>
+				<td align="left" zid="6">
+					<p zid="224">
+						<a href="http://www.dhtmlx.com/" zid="7">DHTMLX</a> Documentation
+					</p>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<!--- CONTENT. Starts --->
+<h2>
+  Iterating through grid
+</h2>
+The base element of grid is a row, so one of most common tasks&nbsp;-&nbsp;iteration&nbsp;through&nbsp;grid&nbsp;setting|getting&nbsp;row&nbsp;specific&nbsp;data.<br id="rgiy">
+<div>
+  There are two ways to iterate rows in the grid:<br id="gxmj">
+  
+<ul id="if4_">
+    
+<li id="dugb">
+      Classic iterator;
+    </li>
+    
+<li id="dugb">
+      Built-in iterator.<br id="q_q8">
+    </li>
+  </ul>
+  
+<h3 id="ck44">
+    Classic iterator<br id="sf:h">
+  </h3>
+  
+<blockquote id="hn1c">
+    for (var i=0; i&lt;grid.getRowsCount(); i++){<br id="y4-4">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// here i - <b id="daok">index</b> of row in grid<br id="odp-">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;do_something_with_row(<b id="pjbn">index</b>);<br id="z6im">
+    }<br id="cv9e">
+  </blockquote>
+  This way of iteration has the following characteristics:<br id="a2b0">
+  
+<ol id="p9q9">
+    
+<li id="g2fs">
+      Used parameter - index (not ID), zero based position of a row in the grid;<br id="fv6e">
+    </li>
+    
+<li id="mvhu">
+      The order of iteration equals the order of elements in the grid;
+    </li>
+    
+<li id="nkuy">
+      In case of paging mode - only current page is iterated;
+    </li>
+    
+<li id="pugp">
+      In case of tree grid - only currently&nbsp;visible&nbsp;rows are iterated;
+    </li>
+    
+<li id="tuau">
+      In case of smart rendering mode - <b id="aclc">not usable;</b>
+    </li>
+    
+<li id="ifax">
+      In case of applied filtering&nbsp;-&nbsp;only&nbsp;rows that accept filtering&nbsp;rules&nbsp;will&nbsp;be&nbsp;included&nbsp;in&nbsp;iteration.
+    </li>
+  </ol>
+  
+<h3 id="t_1l">
+    Built-in iterator<br id="efa9">
+  </h3>
+  
+<blockquote id="r:qw">
+    grid.forEachRow(function(id){<br id="qv48">
+    &nbsp;&nbsp;&nbsp;&nbsp;// here id - row <b id="f-t0">ID<br id="s9n.">
+    </b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;do_something_with_row(id);<b id="hwhy"><br id="zefg">
+    </b>})<br id="v-em">
+  </blockquote>
+  This way of iteration has the following characteristics:
+  
+<ol id="hp:-">
+    
+<li id="o:zt">
+      Used parameter - row ID;<br id="kfxj">
+    </li>
+    
+<li id="vu.-">
+      Order of iteration is not equal to the current rows order in grid (basically it is equal to the adding order of rows to the grid, but it can be inconsistent);
+    </li>
+    
+<li id="xcnt">
+      In case of paging or smart rendering mode - all rows parsed at the current moment will be affected;
+    </li>
+    
+<li id="kep_">
+      In case of tree grid - all rows will be processed, including those in closed branches;
+    </li>
+    
+<li id="s6z1">
+      In case of applied filtering&nbsp;-&nbsp;all&nbsp;rows&nbsp;in the grid&nbsp;(including&nbsp;filtered&nbsp;out ones)&nbsp;will&nbsp;be&nbsp;included&nbsp;in&nbsp;iteration.
+    </li>
+  </ol>
+  <br id="qsb7">
+  The cells iteration is more simple task, but it also has two possible ways:<br id="zw3g">
+  
+<ul id="nta7">
+    
+<li id="b0jz">
+      Classic cell iteration;
+    </li>
+    
+<li id="wdw5">
+      Built-in cell iteration.<br id="f4q4">
+    </li>
+  </ul>
+  
+<h3 id="l7tq">
+    Classic cell iteration<br id="vsm.">
+  </h3>
+  
+<blockquote id="sp_v">
+    for (var i=0; i&lt;grid.getColumnCount(); i++){<br id="w5ad">
+    &nbsp;&nbsp;&nbsp;&nbsp;// i - column index<br id="hxac">
+    &nbsp;&nbsp;&nbsp;&nbsp;alert(grid.cells(id,i).getValue());<br id="vxyl">
+    }<br id="yzfb">
+  </blockquote>
+  
+<h3 id="tvzq">
+    Built-in cell iteration<br id="lgip">
+  </h3>
+  
+<blockquote id="dng2">
+    grid.forEachCell(id,function(c){<br id="xkvc">
+    &nbsp;&nbsp;&nbsp;&nbsp;alert(c.getValue());<br id="z6tn">
+    });<br id="jscq">
+  </blockquote>
+  <br id="a9ez">
+  There is <b id="ksj2">no</b> fundamental <b id="k71v">difference</b> between two cell iteration approaches.<br>
+  <br>
+  <br>
+  
+<h2>
+    Iteration through TreeGrid
+  </h2>
+  You can loop from all child-rows of some row in treegrid as<br>
+  grid._h2.forEachChild(parent_id,function(element){<br>
+&nbsp;&nbsp;&nbsp; //element.id - id of child row<br>
+&nbsp;&nbsp;&nbsp; //element.parent.id - parent id<br>
+&nbsp;&nbsp;&nbsp; do_something_with_row(element.id);<br>
+});<br>
+<br>
+where parent_id - id of rows, against which functionality will be executed. <br>
+  
+<h2>
+    Iteration through rows in grop ( grid after groupBy )
+  </h2>
+  You can loop through all rows in some group by <br>
+<br>
+mygrid.forEachRowInGroup(name,function(id){<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; do_something_with_row(id);<br>
+});<br>
+<br>
+where name - key-value of group<br id="x1cu">
+  <br id="c-ro">
+  <br id="kwyr">
+</div>
+<br>
+
+
+	<!--- CONTENT. Ends --->
+	<div class="copyright" zid="223">&copy; DHTMLX, 2008</div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "controllers": [
+            "Navigation",
+            "Inpatient"
+        ],
+        "models": [
+            "VitalsModel",
+            "NhifCredits"
+        ],
+        "name": "Inpatient",
+        "stores": [
+            "VitalsStore",
+            "NhifCreditStore",
+            "WaitingListStore",
+            "ItemsListStore"
+        ],
+        "views": [
+            "DashBoard",
+            "Prescriptions",
+            "VitalsTrend",
+            "OPNotes",
+            "Main",
+            "InvoicesList",
+            "NhifCredits",
+            "AdmDis",
+            "OccupancyList",
+            "WardsList"
+        ]
+    },
+    "configAlternates": {
+        "controllers": "typedarray",
+        "models": "typedarray",
+        "name": "string",
+        "stores": "typedarray",
+        "views": "typedarray"
+    },
+    "name": "Application",
+    "designerId": "application"
+}

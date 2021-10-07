@@ -1,0 +1,57 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "surgicalcheckliststore",
+        "designer|userClassName": "SurgicalChecklistStore",
+        "model": "SurgicalChecklist",
+        "storeId": "SurgicalChecklistStore"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string"
+    },
+    "designerId": "4036cdd3-a148-42bc-bf7d-747bf36453d5",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "../data/getDataFunctions.php?task=getSurgicalCheckLists"
+            },
+            "configAlternates": {
+                "url": "string"
+            },
+            "name": "MyAjaxProxy13",
+            "designerId": "ea06decb-1abb-4e60-97ee-42cc9415f147",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "surgChecklists"
+                    },
+                    "configAlternates": {
+                        "root": "string"
+                    },
+                    "name": "MyJsonReader13",
+                    "designerId": "6fd3e89a-f761-43f6-9e61-44f36a89a8c8"
+                }
+            ]
+        }
+    ]
+}

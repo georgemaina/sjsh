@@ -1,0 +1,52 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "diseases",
+        "designer|userClassName": "Diseases"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "name": "MyModel1",
+    "designerId": "baf2d62f-e3f8-48ce-88fc-4299b26db7b7",
+    "cn": [
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "IcdCode"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField82",
+            "designerId": "e8e0e1cd-f304-4c92-a0c7-6b3bf2da0365"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Description"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField83",
+            "designerId": "397824bf-90b6-4b17-9eb5-9202f966e92e"
+        }
+    ]
+}

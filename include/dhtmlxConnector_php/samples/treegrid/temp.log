@@ -1,0 +1,514 @@
+
+
+====================================
+Log started, 19/01/2010 10:01:33
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => taskName
+		1 => taskName
+	1 => 
+		0 => duration
+		1 => duration
+	2 => 
+		0 => complete
+		1 => complete
+id => 
+	0 => taskId
+	1 => taskId
+pid => 
+	0 => parentId
+	1 => parentId
+table => 
+	0 => tasks
+	1 => tasks
+
+Exec SQL: SELECT taskId , taskName , duration , complete FROM tasks WHERE parentId='0'
+
+Exec SQL: SELECT  COUNT(*)  FROM tasks WHERE parentId='1000'
+
+Exec SQL: SELECT  COUNT(*)  FROM tasks WHERE parentId='2000'
+
+Exec SQL: SELECT  COUNT(*)  FROM tasks WHERE parentId='3000'
+
+Exec SQL: SELECT  COUNT(*)  FROM tasks WHERE parentId='4000'
+
+Exec SQL: SELECT  COUNT(*)  FROM tasks WHERE parentId='5000'
+
+Exec SQL: SELECT  COUNT(*)  FROM tasks WHERE parentId='6000'
+
+Exec SQL: SELECT  COUNT(*)  FROM tasks WHERE parentId='7000'
+
+Exec SQL: SELECT  COUNT(*)  FROM tasks WHERE parentId='8000'
+
+Done in 0.111825942993ms
+
+
+
+====================================
+Log started, 19/01/2010 10:01:45
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => taskName
+		1 => taskName
+	1 => 
+		0 => duration
+		1 => duration
+	2 => 
+		0 => complete
+		1 => complete
+id => 
+	0 => taskId
+	1 => taskId
+pid => 
+	0 => parentId
+	1 => parentId
+table => 
+	0 =>  tasks 
+	1 =>  tasks 
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='0'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='1000'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='1201'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='1203'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='1206'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='1207'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='1208'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='1211'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='1401'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='1403'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='1407'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='1408'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='3000'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='3001'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='3004'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='3005'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='3006'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='3007'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='3008'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='3009'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='3010'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='3011'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='3101'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='3104'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='3105'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='3107'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='3109'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='3111'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='3301'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='3303'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='3305'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='3307'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='3308'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='3310'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='3311'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='3401'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='3405'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='3407'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='3409'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='3410'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='4000'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='4101'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='4102'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='4201'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='4202'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='4206'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='4208'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='4211'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='4301'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='4303'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='4304'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='4305'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='4306'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='4309'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='4310'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='5000'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='5201'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='5203'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='5205'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='5206'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='5207'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='5208'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='5209'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='5211'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='5301'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='5305'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='5308'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='5310'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='5311'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='5401'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='5404'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='5405'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='5406'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='5407'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='5408'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='5409'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='6000'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='6101'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='6102'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='6106'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='6108'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='6111'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='6401'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='6402'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='6403'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='6405'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='6408'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='6409'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='7000'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='7201'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='7203'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='7206'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='7207'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='7211'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='8000'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='8001'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='8003'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='8101'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='8102'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='8104'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='8106'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='8107'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='8110'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='8111'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='8201'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='8202'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='8203'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='8206'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='8208'
+
+Missing argument 5 for TreeGridDataItem::__construct(), called in G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php on line 102 and defined at G:\xampp\htdocs\care2x\include\dhtmlxConnector_php\codebase\treegrid_connector.php line 7
+
+Exec SQL: SELECT  *  FROM  tasks  WHERE  complete>49 AND parentId='8211'
+
+Done in 2.68145704269ms
+

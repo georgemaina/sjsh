@@ -1,0 +1,69 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "mymodel",
+        "designer|userClassName": "MyModel"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "designerId": "d7b2b50b-0787-4473-8fca-d52937f491b5",
+    "cn": [
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ICD_Code"
+            },
+            "configAlternates": {
+                "name": "string",
+                "type": "string"
+            },
+            "name": "MyInteger12",
+            "designerId": "e743badb-df66-42e4-b93b-c64335bc3603"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Description"
+            },
+            "configAlternates": {
+                "name": "string",
+                "type": "string"
+            },
+            "name": "MyString",
+            "designerId": "b2899f40-f579-4404-bda8-30bf6ca75434"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "DiseaseCount"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField84",
+            "designerId": "3fbae83e-3598-4e30-a8db-eaf9fa375aad"
+        }
+    ]
+}

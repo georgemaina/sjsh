@@ -1,0 +1,55 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "procedurenames",
+        "designer|userClassName": "ProcedureNames"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "designerId": "a91be7a9-9637-4f91-84d5-85436b817416",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "mapping": "partcode",
+                "name": "partcode"
+            },
+            "configAlternates": {
+                "mapping": "auto",
+                "name": "string"
+            },
+            "name": "MyField30",
+            "designerId": "7b7f0327-c636-484e-9060-bf9d826c4185"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "mapping": "item_description",
+                "name": "item_description"
+            },
+            "configAlternates": {
+                "mapping": "auto",
+                "name": "string"
+            },
+            "name": "MyField31",
+            "designerId": "cdd93e87-689a-4660-bb7b-87bf59bd6323"
+        }
+    ]
+}

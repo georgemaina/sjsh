@@ -1,0 +1,10 @@
+var age1=this.getPatientdrugstatement().down('#age1').getValue();
+var age2=this.getPatientdrugstatement().down('#age2').getValue();
+var pid=this.getPatientdrugstatement().down('#pid').getValue();
+var status=this.getPatientdrugstatement().down('#status').getValue();
+var gender=this.getPatientdrugstatement().down('#gender').getValue();
+var icd10=this.getPatientdrugstatement().down('#icd10').getValue();
+var visits=this.getPatientdrugstatement().down('#visits').getValue();
+
+
++'&age1='+age1+'&age2='+age2+'&pid='+pid+'&status='+status+'&gender='+gender+'&icd10='+icd10+'&visits='+visits,

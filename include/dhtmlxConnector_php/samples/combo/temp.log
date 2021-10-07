@@ -1,0 +1,498 @@
+
+
+====================================
+Log started, 18/08/2009 12:08:44
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => name
+		1 => name
+id => 
+	0 => country_id
+	1 => country_id
+table => 
+	0 => country_data
+	1 => country_data
+
+Exec SQL: SELECT country_id , name FROM country_data
+
+
+
+====================================
+Log started, 18/08/2009 12:08:10
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => name
+		1 => name
+id => 
+	0 => country_id
+	1 => country_id
+table => 
+	0 => country_data
+	1 => country_data
+rules => 
+	0 => 
+		0 => name
+		1 => k
+
+Exec SQL: SELECT country_id , name FROM country_data WHERE name LIKE '%k%'
+
+
+
+====================================
+Log started, 18/08/2009 12:08:12
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => name
+		1 => name
+id => 
+	0 => country_id
+	1 => country_id
+table => 
+	0 => country_data
+	1 => country_data
+rules => 
+	0 => 
+		0 => name
+		1 => ke
+
+Exec SQL: SELECT country_id , name FROM country_data WHERE name LIKE '%ke%'
+
+
+
+====================================
+Log started, 18/08/2009 12:08:18
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => name
+		1 => name
+id => 
+	0 => country_id
+	1 => country_id
+table => 
+	0 => country_data
+	1 => country_data
+rules => 
+	0 => 
+		0 => name
+		1 => ken
+
+Exec SQL: SELECT country_id , name FROM country_data WHERE name LIKE '%ken%'
+
+
+
+====================================
+Log started, 18/08/2009 12:08:28
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => name
+		1 => name
+id => 
+	0 => country_id
+	1 => country_id
+table => 
+	0 => country_data
+	1 => country_data
+rules => 
+	0 => 
+		0 => name
+		1 => k
+from => 0
+count => 2
+
+Exec SQL: SELECT country_id , name FROM country_data WHERE name LIKE '%k%' LIMIT 0,2
+
+
+
+====================================
+Log started, 18/08/2009 12:08:32
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => name
+		1 => name
+id => 
+	0 => country_id
+	1 => country_id
+table => 
+	0 => country_data
+	1 => country_data
+rules => 
+	0 => 
+		0 => name
+		1 => u
+from => 0
+count => 2
+
+Exec SQL: SELECT country_id , name FROM country_data WHERE name LIKE '%u%' LIMIT 0,2
+
+
+
+====================================
+Log started, 18/08/2009 12:08:33
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => name
+		1 => name
+id => 
+	0 => country_id
+	1 => country_id
+table => 
+	0 => country_data
+	1 => country_data
+rules => 
+	0 => 
+		0 => name
+		1 => ke
+from => 0
+count => 2
+
+Exec SQL: SELECT country_id , name FROM country_data WHERE name LIKE '%ke%' LIMIT 0,2
+
+
+
+====================================
+Log started, 18/08/2009 02:08:41
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => name
+		1 => name
+id => 
+	0 => country_id
+	1 => country_id
+table => 
+	0 => country_data
+	1 => country_data
+
+Exec SQL: SELECT country_id , name FROM country_data
+
+
+
+====================================
+Log started, 18/08/2009 02:08:45
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => name
+		1 => name
+id => 
+	0 => country_id
+	1 => country_id
+table => 
+	0 => country_data
+	1 => country_data
+rules => 
+	0 => 
+		0 => name
+		1 => r
+
+Exec SQL: SELECT country_id , name FROM country_data WHERE name LIKE '%r%'
+
+
+
+====================================
+Log started, 18/08/2009 02:08:15
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => name
+		1 => name
+id => 
+	0 => country_id
+	1 => country_id
+table => 
+	0 =>  country_data  
+	1 =>  country_data  
+
+Exec SQL: SELECT  *  FROM  country_data   WHERE  country_id >40 
+
+
+
+====================================
+Log started, 18/08/2009 02:08:19
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => name
+		1 => name
+id => 
+	0 => country_id
+	1 => country_id
+table => 
+	0 =>  country_data  
+	1 =>  country_data  
+rules => 
+	0 => 
+		0 => name
+		1 => r
+
+Exec SQL: SELECT  *  FROM  country_data   WHERE  country_id >40  AND name LIKE '%r%'
+
+
+
+====================================
+Log started, 18/08/2009 02:08:42
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => name
+		1 => name
+id => 
+	0 => country_id
+	1 => country_id
+table => 
+	0 =>  country_data  
+	1 =>  country_data  
+rules => 
+	0 => 
+		0 => name
+		1 => r
+from => 0
+count => 2
+
+Exec SQL: SELECT  *  FROM  country_data   WHERE  country_id >40  AND name LIKE '%r%' LIMIT 0,2
+
+
+
+====================================
+Log started, 18/08/2009 02:08:46
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => name
+		1 => name
+id => 
+	0 => country_id
+	1 => country_id
+table => 
+	0 =>  country_data  
+	1 =>  country_data  
+rules => 
+	0 => 
+		0 => name
+		1 => *
+from => 0
+count => 2
+
+Exec SQL: SELECT  *  FROM  country_data   WHERE  country_id >40  AND name LIKE '%*%' LIMIT 0,2
+
+
+
+====================================
+Log started, 18/08/2009 02:08:51
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => name
+		1 => name
+id => 
+	0 => country_id
+	1 => country_id
+table => 
+	0 =>  country_data  
+	1 =>  country_data  
+rules => 
+	0 => 
+		0 => name
+		1 => p
+from => 0
+count => 2
+
+Exec SQL: SELECT  *  FROM  country_data   WHERE  country_id >40  AND name LIKE '%p%' LIMIT 0,2
+
+
+
+====================================
+Log started, 18/08/2009 02:08:54
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => name
+		1 => name
+id => 
+	0 => country_id
+	1 => country_id
+table => 
+	0 =>  country_data  
+	1 =>  country_data  
+rules => 
+	0 => 
+		0 => name
+		1 => k
+from => 0
+count => 2
+
+Exec SQL: SELECT  *  FROM  country_data   WHERE  country_id >40  AND name LIKE '%k%' LIMIT 0,2
+
+
+
+====================================
+Log started, 18/08/2009 02:08:59
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => name
+		1 => name
+id => 
+	0 => country_id
+	1 => country_id
+table => 
+	0 =>  country_data  
+	1 =>  country_data  
+rules => 
+	0 => 
+		0 => name
+		1 => k
+
+Exec SQL: SELECT  *  FROM  country_data   WHERE  country_id >40  AND name LIKE '%k%'
+
+
+
+====================================
+Log started, 18/08/2009 02:08:01
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => name
+		1 => name
+id => 
+	0 => country_id
+	1 => country_id
+table => 
+	0 =>  country_data  
+	1 =>  country_data  
+rules => 
+	0 => 
+		0 => name
+		1 => K
+
+Exec SQL: SELECT  *  FROM  country_data   WHERE  country_id >40  AND name LIKE '%K%'
+
+
+
+====================================
+Log started, 18/08/2009 02:08:03
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => name
+		1 => name
+id => 
+	0 => country_id
+	1 => country_id
+table => 
+	0 =>  country_data  
+	1 =>  country_data  
+rules => 
+	0 => 
+		0 => name
+		1 => Ke
+
+Exec SQL: SELECT  *  FROM  country_data   WHERE  country_id >40  AND name LIKE '%Ke%'
+
+
+
+====================================
+Log started, 18/08/2009 02:08:03
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => name
+		1 => name
+id => 
+	0 => country_id
+	1 => country_id
+table => 
+	0 =>  country_data  
+	1 =>  country_data  
+rules => 
+	0 => 
+		0 => name
+		1 => Ken
+
+Exec SQL: SELECT  *  FROM  country_data   WHERE  country_id >40  AND name LIKE '%Ken%'
+
+
+
+====================================
+Log started, 19/01/2010 10:01:43
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => name
+		1 => name
+id => 
+	0 => country_id
+	1 => country_id
+table => 
+	0 => country_data
+	1 => country_data
+
+Exec SQL: SELECT country_id , name FROM country_data
+
+
+
+====================================
+Log started, 19/01/2010 10:01:28
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => name
+		1 => name
+id => 
+	0 => country_id
+	1 => country_id
+table => 
+	0 =>  country_data  
+	1 =>  country_data  
+
+Exec SQL: SELECT  *  FROM  country_data   WHERE  country_id >40 
+

@@ -1,0 +1,65 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "designer|userAlias": "labtestresultstore",
+        "designer|userClassName": "LabTestResultStore",
+        "groupField": "Group",
+        "model": "LabTestResultsModel",
+        "storeId": "LabTestResultStore"
+    },
+    "configAlternates": {
+        "autoLoad": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "groupField": "datafield",
+        "model": "model",
+        "storeId": "string"
+    },
+    "name": "LabResultStore1",
+    "designerId": "d6bb20e0-24b1-4a57-a34a-bece406ff301",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "simpleGroupMode": true,
+                "url": "data/getReportsData.php?task=getLabResults"
+            },
+            "configAlternates": {
+                "simpleGroupMode": "boolean",
+                "url": "string"
+            },
+            "name": "MyAjaxProxy",
+            "designerId": "6f9ad1d4-23a7-4b04-84ea-9be2aa99a265",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "labtests"
+                    },
+                    "configAlternates": {
+                        "root": "string",
+                        "rootProperty": "string"
+                    },
+                    "name": "MyJsonReader",
+                    "designerId": "7910f22a-e6b6-4a5f-af9f-2e3d4a008621"
+                }
+            ]
+        }
+    ]
+}

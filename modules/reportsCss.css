@@ -1,0 +1,191 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 11, 2017, 10:39:21 AM
+    Author     : George
+*/
+
+
+
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #c6c9c5;
+    font: 12pt "Tahoma";
+}
+
+*{
+    box-sizing: border-box;
+    -moz-box-sizing :border-box;
+}
+
+.page{
+    width: 178mm;
+    height: 130mm;
+    padding: 1mm 2mm 2mm 2mm;
+    margin: 1mm auto;
+    border: 1px #d3d3d3 solid;
+    border-radius: 5px;
+    background: white;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.subpage {
+        /*padding: 1mm 1mm 1mm 1mm;*/
+        border: 0px green solid;
+        height: 130mm; /* .page height -40mm (20 off top/bottom) */
+        width: 175mm;
+        outline: 2cm #d3dfea solid;
+        display: table;
+    }
+    
+    @page {
+        size: Letter;
+        margin: 0;
+    }
+    @media print {
+        html, body {
+            width: 216mm;
+            height: 279mm;        
+        }
+        .page {
+            margin: 0;
+            border: initial;
+            border-radius: initial;
+            width: initial;
+            min-height: initial;
+            box-shadow: initial;
+            background: initial;
+            page-break-after: always;
+        }
+    }
+
+    .logo{
+        text-align: center;
+    }
+    
+    .invTitle{
+        text-align: center;
+        font-family: sans-serif;
+        font-size: small;
+        font-weight: bold;
+    }
+    
+    .invDetails{
+        font-style: normal;
+        font-family: helvetica;
+        font-size: smaller;
+        padding: 4px;
+    }
+    
+        
+    .itemTitles{
+        font-style:normal;
+        font-size: small;
+        font-weight: bold;
+    }
+    
+    .titlesRow{
+        border: 2px solid #006064;
+    }
+    
+    .pageNos{
+        font-style: normal;
+        font-family: helvetica;
+        font-size: smaller;
+        text-align: center;
+    }
+    th{
+        border: 1px solid buttonshadow;
+        background-color: #4caf50;
+        color:white;
+    }
+    
+    .errorHeading{
+        position: relative;
+        left:1px;
+        top: 10px;
+        font-family: sans-serif;
+        font-size: 40px;
+        color: #000033;
+        font-weight: bold;
+        text-align: center;
+        /*border:2px solid #D7D7D7;*/
+    }
+    .message1{
+        position: relative;
+        left:5px;
+        top:40px;
+        font-family: sans-serif;
+        font-size: larger;
+        color: red;
+        font-weight: bold;
+        text-align: center;
+        /*border:2px solid #D7D7D7;*/
+    }
+    .message2{
+        position: relative;
+        left:2px;
+        top:50px;
+        font-family: sans-serif;
+        font-size: larger;
+        color: #000033;
+        font-weight: bold;
+        text-align: center;
+        /*border:2px solid #D7D7D7;*/
+    }
+    
+    .payment{
+        position: relative;
+        left:40px;
+        top:65px;
+        width:450px;
+        padding-left: 120px;
+        height: 60px;
+        line-height: 180%;
+        font-family: sans-serif;
+        font-size: larger;
+        color: maroon;
+        font-weight: bold;
+        text-align: center;
+        /*border:2px solid #D7D7D7;*/
+    }
+    
+    .paymentDetails{
+        position: relative;
+        left:5px;
+        top:60px;
+        width:650px;
+        /*border:2px solid #D7D7D7;*/
+    }
+    
+    table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    }
+
+    th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+    
+    td {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+        font-weight: normal;
+        font-size: small;
+        font-style: italic;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+    /*tr:nth-child(even){background-color: #f2f2f2}*/

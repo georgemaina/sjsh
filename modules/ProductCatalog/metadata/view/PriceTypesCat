@@ -1,0 +1,136 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "bodyPadding": 10,
+        "designer|snapToGrid": 5,
+        "designer|userAlias": "pricetypescat",
+        "designer|userClassName": "PriceTypesCat",
+        "height": 109,
+        "layout": "absolute",
+        "title": null,
+        "url": "data/getDataFunctions.php?task=insertNewPrice",
+        "width": 347
+    },
+    "configAlternates": {
+        "bodyPadding": "auto",
+        "designer|snapToGrid": "number",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "layout": "string",
+        "title": "string",
+        "url": "string",
+        "width": "auto"
+    },
+    "name": "PriceTypes1",
+    "designerId": "4d869c95-bca3-48d6-ac3e-3dd0db07d26f",
+    "viewControllerInstanceId": "ce4442a0-fa49-45f3-9f1d-b83211e38061",
+    "viewModelInstanceId": "2106ee96-80ba-4a80-a66a-3b3b10c1924b",
+    "cn": [
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Price Category",
+                "itemId": "priceCat",
+                "layout|x": 10,
+                "layout|y": 10,
+                "name": "priceCat"
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "name": "string",
+                "itemId": "string"
+            },
+            "name": "MyTextField28",
+            "designerId": "54f14963-993b-4d5c-bd3e-51bc82ecdfe6"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": null,
+                "hidden": true,
+                "itemId": "formStatus",
+                "layout|x": 140,
+                "layout|y": 120,
+                "name": "formStatus",
+                "width": 55
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "name": "string",
+                "itemId": "string",
+                "width": "auto",
+                "hidden": "boolean"
+            },
+            "name": "MyTextField31",
+            "designerId": "e6149a73-6b04-475a-8019-8acf0ce00274"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "cmdSavePriceCat",
+                "layout|x": 40,
+                "layout|y": 55,
+                "text": "Save",
+                "width": 75
+            },
+            "configAlternates": {
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "text": "string",
+                "width": "auto"
+            },
+            "name": "MyButton19",
+            "designerId": "fb34e468-021c-4e9d-ab79-bf53d2592484"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "cmdClose",
+                "layout|x": 240,
+                "layout|y": 55,
+                "text": "Close",
+                "width": 75
+            },
+            "configAlternates": {
+                "layout|x": "number",
+                "layout|y": "number",
+                "text": "string",
+                "width": "auto",
+                "itemId": "string"
+            },
+            "name": "MyButton20",
+            "designerId": "5d1f7f9b-8e51-492a-8d22-759b5e41984d"
+        }
+    ]
+}

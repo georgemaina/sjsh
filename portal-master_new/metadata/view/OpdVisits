@@ -1,0 +1,107 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "closable": true,
+        "cls": [
+            "x-portlet"
+        ],
+        "collapsible": true,
+        "designer|userAlias": "opdvisits",
+        "designer|userClassName": "OpdVisits",
+        "draggable": [
+            "{moveOnDrag:false}"
+        ],
+        "height": null,
+        "isPortlet": true,
+        "itemId": "clinics",
+        "title": "Outpatient Clinics Statistics",
+        "width": null
+    },
+    "configAlternates": {
+        "draggable": "object",
+        "closable": "boolean",
+        "cls": "string",
+        "collapsible": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "isPortlet": "boolean",
+        "itemId": "string",
+        "title": "string",
+        "width": "auto",
+        "scrollable": "boolean"
+    },
+    "name": "WardOccupancy1",
+    "designerId": "9ba5520b-c1d0-4763-8ebf-0b5d4320ee3f",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "isPortlet",
+            "type": "boolean"
+        }
+    ],
+    "viewControllerInstanceId": "da5e96f8-0330-4fca-9f8e-e5fea869bf03",
+    "viewModelInstanceId": "dec0815b-80a3-42c5-970b-2391053518b9",
+    "cn": [
+        {
+            "type": "Ext.view.View",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 179,
+                "itemSelector": "div.SelectedClinicsValues",
+                "store": "ClinicInfoStore"
+            },
+            "configAlternates": {
+                "height": "auto",
+                "itemSelector": "string",
+                "store": "store",
+                "scrollable": "boolean"
+            },
+            "name": "MyView",
+            "designerId": "be37afb0-d45d-4a6b-ac40-2a676ccb6561",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "tpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "tpl",
+                        "implHandler": [
+                            "<table class=\"clinics\" border=0 width=\"100%\">",
+                            "    <tr><td class=\"clinics\">Clinic</td><td class=\"clinics\">TotalPatients</td>",
+                            "        <td class=\"clinics\">Males</td><td class=\"clinics\">Females</td>",
+                            "        <td class=\"clinics\">Below 5</td><td class=\"clinics\">Above 5</td></tr>",
+                            "    <tpl for=\".\">",
+                            "        <tpl><tr>",
+                            "            <td class=\"clinics\">{Clinic}</td><td class=\"clinics\">{TotalPatients}</td>",
+                            "            <td class=\"clinics\">{Males}</td><td class=\"clinics\">{Females}</td>",
+                            "            <td class=\"clinics\">{Below5}</td><td class=\"clinics\">{Above5}</td></tr>",
+                            "        </tpl>",
+                            "    </tpl>",
+                            "</table>",
+                            "<div class=\"x-clear\"></div>"
+                        ]
+                    },
+                    "configAlternates": {
+                        "designer|displayName": "string",
+                        "implHandler": "code"
+                    },
+                    "name": "tpl",
+                    "designerId": "bb887c23-c3c7-4621-a422-3190fc55d9ea"
+                }
+            ]
+        }
+    ]
+}

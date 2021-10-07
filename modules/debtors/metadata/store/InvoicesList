@@ -1,0 +1,61 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "invoiceslist",
+        "designer|userClassName": "InvoicesList",
+        "model": "invoices",
+        "pageSize": 200,
+        "storeId": "InvoicesList"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "pageSize": "number",
+        "storeId": "string"
+    },
+    "designerId": "40b43789-f635-4e52-9145-b496d7f3fb5b",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "./data/getDataFunctions.php?task=getInvoicesReceipts&rptType=invoices"
+            },
+            "configAlternates": {
+                "extraParams": "object",
+                "url": "string"
+            },
+            "name": "MyAjaxProxy8",
+            "designerId": "28b3e1eb-f2f4-4ee6-92ae-d83986077d03",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "invoiceLists"
+                    },
+                    "configAlternates": {
+                        "root": "string",
+                        "rootProperty": "string"
+                    },
+                    "name": "MyJsonReader8",
+                    "designerId": "f502a7b5-d61e-448b-bc16-73d08b24dea9"
+                }
+            ]
+        }
+    ]
+}

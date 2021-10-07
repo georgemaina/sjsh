@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="e7fe965e-cc6a-4d2a-b59c-a0bb91d22ef8" name="Centos" url="http://192.168.1.109/litein">
+        <fileTransfer host="192.168.1.10" port="22" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+    <groups>
+      <group>
+        <name>localhost</name>
+      </group>
+    </groups>
+  </component>
+</project>

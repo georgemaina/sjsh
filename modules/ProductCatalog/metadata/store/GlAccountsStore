@@ -1,0 +1,62 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "designer|userAlias": "glaccountsstore",
+        "designer|userClassName": "GlAccountsStore",
+        "model": "GlAccounts",
+        "storeId": "GlAccountsStore"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string",
+        "autoLoad": "boolean"
+    },
+    "name": "UnitsMeasureStore2",
+    "designerId": "c787f9a4-2773-42fb-9749-3c870b784e21",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "idParam": "ID",
+                "url": "data/getDataFunctions.php?task=getGLAccounts"
+            },
+            "configAlternates": {
+                "url": "string",
+                "idParam": "string"
+            },
+            "name": "MyAjaxProxy",
+            "designerId": "d2357cca-22c4-4254-afd6-42892cd1b09e",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "glaccounts"
+                    },
+                    "configAlternates": {
+                        "rootProperty": "string"
+                    },
+                    "name": "MyJsonReader",
+                    "designerId": "ecf3d30a-a0a3-4860-8258-672dbd16c350"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,302 @@
+<html>
+
+<head>
+
+
+<link rel="STYLESHEET" type="text/css" href="../common/styles.css">
+</head>
+<body>
+	<table border="0" cellpadding="0" cellspacing="0" class="sample_header" zid="71">
+		<tbody zid="3">
+			<tr valign="center" zid="4">
+				<td align="center" width="10" zid="5">&nbsp;</td>
+				<td align="left" zid="6">
+					<p zid="224">
+						<a href="http://www.dhtmlx.com/" zid="7">DHTMLX</a> Documentation
+					</p>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<!--- CONTENT. Starts --->
+	<h2 id="qwy00">Dataprocessor usage</h2>
+What is a dataprocessor.
+A dataprocessor is a small library which can integrate ghtmlxGrid (dhtmlxTreeGrid, dhtmlxTree ) with server side backend. The library monitors changes in the grid and uses a simple protocol to interchange with the server side code. The dataprocessor consists of two parts - the client side code, which is common for any use-case and the server side code, which works by the same principles but needs to be adjusted for the used business-logic.<br>
+<br>
+( Starting dhtmlxSuite 2.1, there are ready to use PHP connectors , which can be used instead of custom coding ) <br id="v.lu0">
+<h3 id="q-:o0">Client side initialization </h3>
+To initialize DataProcessor and attach it to the grid, the following two commands can be used:<br id="q-:o1">
+<blockquote id="aqc40">var dp = new dataProcessor(url)<br id="aqc41">
+dp.init(mygrid)<br id="mmf20">
+</blockquote>
+Where: <b id="m0qk0">url</b> - a relative or absolute path to a server side component of the dataprocessor. <br id="aqc42">
+           <b id="m0qk1">mygrid</b> - a dhtmlxGrid object<br id="aqc43">
+<br id="aqc44">
+By default the dataprocessor will be initialized in the auto update mode, which means that after each change in the grid it will send data to the server. In some cases it makes sense to use the manual update mode:<br id="ht780">
+<blockquote id="hy.70">dp.setUpdateMode("off")<br id="hy.71">
+...<br id="hy.72">
+dp.sendData();<br id="aqc45">
+</blockquote>
+In such case the dataprocessor will store the information about all changes in the grid, and will send them to the server only after sendData method is executed.<br id="v.lu1">
+<h3 id="c2op0">Adjusting server side code</h3>
+<b>If you are using php-connectors - please reffer to connectors documentation.</b><br>
+<br>
+The default package contains an example of the server side code for PHP (by additional request the similar code for JSP|ColdFusion|C#.Net|RybyOnRails can be sent).<br id="c2op1">
+The code does the following three tasks:<br id="c2op2">
+    a) Takes parameters from the incoming request;<br id="c2op3">
+    b) Makes the necessary DB operation;<br id="c2op4">
+    c) Returns the information about the operation result.<br id="f24t0">
+<br id="f24t1">
+The incoming parameters are:<br id="il2w0">
+<br id="hwov0">
+    <b id="m0qk2">gr_id</b> - id of a row in the grid for which some operation is executed;<br id="gnk:0">
+    <b id="m0qk3">!nativeeditor_status</b> - the status of the operation;<br id="ymu00">
+            <b id="m0qk4">inserted </b>- the row in question was added;<br id="ymu01">
+            <b id="m0qk5">deleted</b> - the row in question was deleted;<br id="ymu02">
+            <b id="m0qk6">... any other value ...</b> - the row was updated;<br id="hwov1">
+    <b id="m0qk7">c0 </b>- the data of the first column in the updated row;<br id="c5rz0">
+<b id="m0qk8">     c1 </b>- the data of the second column in the updated row;<br id="c5rz1">
+    ....<br id="c5rz2">
+    <span id="m4bc1" style="background-color: rgb(255, 255, 255);"><b id="m0qk9">cN </b></span><span id="jo400" style="background-color: rgb(255, 255, 255);">- the data of the (N+1)th column in the grid.</span><br id="c5rz3">
+<br id="c5rz4">
+    All the parameters are part of GET request.<br id="c5rz5">
+<br id="c5rz6">
+Based on the value of "!nativeeditor_status" the related section of the server side logic is triggered. <br id="c5rz7">
+<br id="c5rz8">
+The response must be in the following format:<br id="c5rz9">
+<blockquote id="wr8w0">&lt;data><br id="c5rz10">
+    &lt;action type="some" sid="some" tid="some" /><br id="mmf22">
+&lt;/data><br id="bt0h0">
+</blockquote>
+Where: <br id="dlwp0">
+<ul id="dlwp1">
+<li id="dlwp2"><b id="m0qk10">type </b>- the type of the operation (it may be "insert", "update", "delete");
+</li>
+<li id="dlwp3"><b id="m0qk11">sid </b>- the original row ID (the same as gr_id);
+</li>
+<li id="dlwp4"><b id="m0qk12">tid </b>- the ID of the row after the operation (may be the same as gr_id, or some different one - it can be used during a new row adding, when a temporary ID created on the client side is replaced with the ID taken from the DB or by any other business rule).</li>
+</ul>
+<br id="oj5c0">
+The response must be a valid XML in order to be processed correctly.<br id="bt0h4">
+<h3 id="cb720">Debug mode<br id="f9ld0">
+</h3>
+Starting from version 2.0 package includes additional debug console, which can be enabled by including dhtmlxdataprocessor_debug.js in addition to default js files.<br>
+<h3 id="m40c0">Data sending modes</h3>
+<b id="m0qk13">a) Meaningfull names </b><br id="boj91">
+The parameters c0-cN, used by default, are not very useful on the server side. The dataprocessor allows to use the grid column IDs instead of them:<br id="boj92">
+<blockquote id="em7i0">    grid.setHeader("Name of the book,Name of the author")<br id="boj93">
+    grid.setColumnIds("book,author");<br id="fh9x0">
+    ...<br id="fh9x1">
+    dp.enableDataNames(true);<br id="fh9x2">
+</blockquote>
+<br id="fh9x3">
+on the server side: <br id="fh9x4">
+    $_GET['c0']     =>     $_GET['book']<br id="fh9x5">
+    $_GET['c1']     =>     $_GET['author']<br id="fh9x6">
+<br id="ysod1">
+<b id="m0qk14">b) Using POST instead of GET</b><br id="ysod2">
+<blockquote id="mnz71">    dp.setTransactionMode("POST")<br id="m40c1">
+</blockquote>
+<br id="m40c2">
+<b id="m0qk15">c) Sending all at once</b><br id="mmf25">
+By default the update for each row will be sent as a separate request. This means that when 20 rows are updated - 20 requests will be sent to the server. This is not the best approach, so instead of it a single (more complex) request can be sent to the server side:<br id="w5m00">
+<blockquote id="w5m01">    dp.setTransactionMode("POST",true)<br id="m40c4">
+    or<br id="m40c5">
+    dp.setTransactionMode("POST",get)<br id="m40c6">
+</blockquote>
+In such mode the server side receives a slightly different set of parameters:<br id="w5m02">
+    <b id="m0qk16">ids </b>- a comma separated list of updated rows IDs, for each ID there will be set of details in the request.<br id="li610">
+<br id="ij740">
+For example if we have two updated rows on the client side with IDs = r2 and  r3, the server side code will receive:<br id="ij741">
+    ids = r2,r3<br id="ij742">
+       <br id="f.yv">
+   <b id="m0qk17"> r2_!nativeeditor_status</b> - the status of the operation for row r2;<br id="li611">
+    <b id="m0qk18">r2_c0 .. r2_cN</b> - the data for a column of row r2;<br id="li612">
+    <b id="m0qk19">r3_!nativeeditor_status</b> - the status of the operation for row r3;<br id="li613">
+    <b id="m0qk20">r3_c0 .. r3_cN </b>- the data for a column of row r3.<br id="poc74">
+<br id="li614">
+The awaited server side response must be in the same format <span id="temu0" style="background-color: rgb(255, 255, 255);">as usual, </span>but must include the data for all processed rows:<br id="zy0e0">
+<blockquote id="temu1">    &lt;data><br id="f.yv0">
+         &lt;action type="some" sid="r2" tid="r2" /><br id="zy0e1">
+         &lt;action type="some" sid="r3" tid="r3" /><br id="f.yv1">
+     &lt;/data><br id="nn0_1">
+</blockquote>
+<h3 id="io2c0">Custom server side responses</h3>
+The dataprocessor has 5 predefined modes of response:<br id="io2c1">
+<ul id="pxm20">
+<li id="pxm21">update
+</li>
+<li id="pxm22">insert
+</li>
+<li id="pxm23">delete</li>
+<li id="pxm23">invalid</li>
+<li id="pxm23">error</li>
+<li id="pxm23"><br>
+</li>
+</ul>
+But in some cases you will need a way to return some additional information (the most common use-case - an error during a DB operation). In such case you can introduce an additional response type:<br id="io2c5">
+<blockquote id="cbk60">    dp.defineAction("my_error",my_action)<br id="d18a0">
+</blockquote>
+Where <b id="m0qk21">my_action</b> - a custom function, which will be called when the response of "my_error" type is received.<br id="d18a1">
+<br id="d18a2">
+<blockquote id="xgkh0">&lt;data><br id="d18a3">
+     &lt;action type="my_error" sid="id" tid="id">Details&lt;/action><br id="io2c6">
+&lt;/data><br id="d18a4">
+<br id="d18a5">
+function my_action(node){<br id="d18a6">
+    alert(node.getAttribute("type"));    // my_error<br id="y1840">
+    alert(node.firstChild.data);    // Details<br id="y1841">
+    return false; <br id="d18a7">
+}<br id="nn0_3">
+</blockquote>
+<h3 id="xgkh1">Events</h3>
+custom code can be attached in common way<br>
+<blockquote>dp.attachEvent(event_name, some_function);<br>
+</blockquote>
+<br>
+onRowMark - occurs each time when row need to be repaint, blockable<br>
+  - row id<br>
+  - row state ( true - updated, false - update mark removed ) <br>
+  - mode - updated,deleted,inserted<br>
+  - invalid - set if row has error or invalid status<br>
+<br>
+onValidatationError - occurs each time when verificator function catch error, blockable<br>
+   - row id<br>
+   - array of error messaged<br>
+<br>
+onBeforeUpdate - occurs before data sending to the server, occurs for each row, blockable<br>
+    - row id<br>
+    - row status<br>
+<br>
+onBeforeDataSending - occurs when data validated and ready to sending , occurs once for all rows in sending group, blockable<br>
+     - row  id - defined only if one row sent, not defined for multi-sending modes<br>
+<br>
+onAfterUpdate - occurs for each action tag in xml response<br>
+     - sid <br>
+     - action<br>
+     - tid<br>
+     - xml node object<br>
+<br>
+onAfterUpdateFinish - occurs when current data sync operation finished<br>
+<br>
+onFullSync - occurs when all data saved ( there are no unsaved changes ) <br>
+<br>
+<h3>Validation </h3>
+Grid allow to define validators which will be activated before data sending. <br>
+            dp.setVerificator(index,method); <br>
+index - index of column for which verificator will be assigned <br>
+method - verificator function<br>
+<br>
+verificator function is a function which will receive<br>
+ - value of cell<br>
+ - id of row<br>
+ - index of columns<br>
+and based on such values must return true or false, to accept or deny value. <br>
+If any value was denied during validation - data sending will be blocked. <br>
+<br>
+<h4><b>Validate message</b></h4>
+If
+you need to collect all validation errors and output a single error
+message it can be done by return a text message from validation
+function instead of false.<br>
+You can check 07_basic_validation_with_message.html sample, inside dataprocessor's package, for more details.<br>
+<h3>Customizing color-marking</h3>
+ Default styles can be aceessed and updated as<br>
+    dp.style.updated - style string for <i>updated </i>status<br>
+    dp.style.inserted- style string for <i>inserted </i>status<br>
+    dp.style.deleted - style string for <i>deleted </i>status<br>
+    dp.style.invalid - style string for <i>ivalid </i>status<br>
+    dp.style.invalid_cell - style assigned to cell which failed validation<br>
+    dp.style.error - style string for <i>error </i>status<br>
+    dp.style.clear - default style of row<br>
+<br>
+More complex coloring rules can be defined though onRowMark event. <br>
+<h3>Common tasks</h3>
+<b id="m0qk22">a) Waiting for update finishing</b><br id="xgkh2">
+There two events which can be used to catch finish of data sync operation<br id="xgkh3">
+<blockquote id="vcsu0">dp.attachEvent("onAfterUpdateFinish",function(){<br id="vcsu1">
+    alert("single row updated")<br id="vcsu2">
+});<br>
+dp.attachEvent("onFullSync",function(){<br id="vcsu1">
+    alert("all rows updated")<br id="vcsu2">
+});<br id="vwzz2">
+</blockquote>
+In any moment of time state of update can be checked as<br>
+<blockquote>dp.getSyncState()<br>
+</blockquote>
+which will return count of changed but not saved rows. <br>
+<br>
+<b id="m0qk23">b) Manual row updating</b><br id="ta3l0">
+The dataprocessor detects only the row changed by edit operations. If a row was changed by a direct API call it will not be updated. You can manually call the dataprocessor to inform about the update operation:<br id="ta3l1">
+<blockquote id="ta3l2">    grid.cells(id,ind).setValue(new_one)<br id="ta3l3">
+    dp.setUpdated(id,true);    <br id="ee-50">
+</blockquote>
+The row can be marked as "not updated" in the same manner (may be useful in some scenarios):<br id="l4dk0">
+<blockquote id="l4dk1">    dp.setUpdated(id,false);    <br id="upq80">
+</blockquote>
+If you want to mark row with status different from "updated" (not sure how it can be useful, but still ) it can be done as <br>
+<blockquote>     dp.setUpdated(id,true,"status name");    <br>
+</blockquote>
+<br>
+<b id="m0qk24">c) Error catching</b><br id="o4uh0">
+<br>
+Starting version 2.1, dataprocessor has default reaction on "error" response type, which can be used to report about server side errors. Row marked as error will be highlighted in grid. And will not be sent back to server untill one of next events<br>
+ - user edit data in row<br>
+ - rows set back to updated status through setUpdated command<br>
+<br>
+<b>d) Sever side validation</b><br>
+<br>
+There is a built in support for "invalid" status in server side response. Which similar to "error", but have different visual marking. <br>
+<br>
+If you want to extend it, it can be done as <br>
+<blockquote>dp.defineAction("invalid",function(sid,response){<br>
+          var message = response.getAttribute("message");<br>
+          alert(message);<br>
+<br>
+          return true;<br>
+})<br>
+</blockquote>
+<br>
+now on server side, if data is not valid you can just output next instead of valid response<br>
+&lt;data><br>
+     &lt;action sid="{gr_id}" type="invalid" message="Data in first column is not valid" /><br>
+&lt;/data><br>
+<br>
+<b>e) Loading extra data during update<br>
+<br>
+</b>
+<blockquote>It possible to extend default after-update reaction as dp.defineAction("updated",function(sid,response){<br>
+          var sid = response.getAttribute("sid");<br>
+          var extra = response.getAttribute("extra");<br>
+<br>
+          this.obj.cells(id,0).setValue(extra);<br>
+          return true;<br>
+})<br>
+</blockquote>
+<br>
+with
+such code you will be able to specify any additional data which need to
+be updated in grid after receiving xml response from server<br>
+&lt;data><br>
+     &lt;action sid="{gr_id}" type="updated" tid="{gr_id}" extra="new value for first column" /><br>
+&lt;/data><br id="j_zr0">
+<br>
+<h3 id="vcuy1">Common errors</h3>
+a) Incorrect XML error <br id="vcuy3">
+Most possible reason - it is caused by some server side error, which breaks the XML. You can enable debug console and check the response of the server side to receive more information. ( debug console can detect may types of xml related errors and show reasons of problems ) <br id="h4t20">
+<br id="h4t21">
+b) Deleted rows are not removed from the grid<br id="h4t22">
+Actually it is not an error - the rows will be removed only after synchronizing with the server.<br>
+You can define custom marking routine - which will hide rows instead or striking-through them<br id="h4t23">
+<br id="h4t24">
+c) Deleted rows are not removed from the grid after synchronizing with the server (updated|inserted rows stay bold)<br id="h4t25">
+Most possible reason - incorrect values of the "action" attribute in the response XML.<br id="ql7s0">
+<br id="ql7s1">
+d) JS error after synchronizing with the server<br id="ql7s2">
+Most possible reason - incorrect values of the "sid" and "tid" attributes in the response XML.<br id="k4ct1">
+
+
+	<!--- CONTENT. Ends --->
+	<div class="copyright" zid="223">&copy; DHTMLX, 2008</div>
+</body>
+</html>

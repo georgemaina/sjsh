@@ -1,0 +1,106 @@
+{
+    "type": "Ext.grid.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "occupancyreport",
+        "designer|userClassName": "OccupancyReport",
+        "title": "Occupancy Report"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "title": "string"
+    },
+    "name": "MyGridPanel2",
+    "designerId": "1c77abcf-b4b3-4ea3-bc52-6e22ed3cd28b",
+    "viewControllerInstanceId": "a90facb6-9b5c-4496-838e-0faf68ba0e49",
+    "viewModelInstanceId": "376193a8-62c0-484d-831e-d90e6013ae68",
+    "cn": [
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "string",
+                "text": "String"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string"
+            },
+            "name": "MyColumn51",
+            "designerId": "fdc69d02-56b5-48a2-9dec-a23b1e3394c8"
+        },
+        {
+            "type": "Ext.grid.column.Number",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "number",
+                "text": "Number"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string"
+            },
+            "name": "MyNumberColumn2",
+            "designerId": "cc716ce2-385a-40d3-8059-c4617d8039a5"
+        },
+        {
+            "type": "Ext.grid.column.Date",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "date",
+                "text": "Date"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string"
+            },
+            "name": "MyDateColumn2",
+            "designerId": "186e6585-4ad8-4e3d-b654-8fe7cf7ec926"
+        },
+        {
+            "type": "Ext.grid.column.Boolean",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "bool",
+                "text": "Boolean"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string"
+            },
+            "name": "MyBooleanColumn2",
+            "designerId": "1c376c5b-8137-47a1-8aab-5926451464d4"
+        },
+        {
+            "type": "Ext.view.Table",
+            "reference": {
+                "name": "viewConfig",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyTable5",
+            "designerId": "69a56b6b-a81b-485b-9c9f-67509577ad18"
+        }
+    ]
+}

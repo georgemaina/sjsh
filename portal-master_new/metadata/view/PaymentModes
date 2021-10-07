@@ -1,0 +1,330 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "bodyPadding": 10,
+        "designer|snapToGrid": 5,
+        "designer|userAlias": "paymentmodes",
+        "designer|userClassName": "PaymentModes",
+        "height": 483,
+        "layout": "absolute",
+        "title": "Payment Modes",
+        "width": 582
+    },
+    "configAlternates": {
+        "bodyPadding": "auto",
+        "designer|snapToGrid": "number",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "layout": "string",
+        "title": "string",
+        "width": "auto"
+    },
+    "name": "MyForm",
+    "designerId": "a34ca6f9-5e1e-42b7-bf01-b460faa07058",
+    "viewControllerInstanceId": "7499b982-aa8c-4017-89b1-4198bae85306",
+    "viewModelInstanceId": "256f9233-b9f4-4966-8f80-14ab9db58fd4",
+    "cn": [
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "glaccount",
+                "fieldLabel": "GL Account",
+                "itemId": "glaccount",
+                "labelAlign": "right",
+                "layout|x": 5,
+                "layout|y": 80,
+                "name": "GLAccount",
+                "width": 205
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "designer|displayName": "string",
+                "itemId": "string",
+                "name": "string",
+                "labelAlign": "string",
+                "width": "auto"
+            },
+            "name": "MyTextField52",
+            "designerId": "4bedc0fd-0a00-463f-9542-1846f1290df5"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": null,
+                "layout|x": 210,
+                "layout|y": 45,
+                "width": 240
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "width": "auto"
+            },
+            "name": "MyTextField56",
+            "designerId": "0a676904-bd7c-4132-8f5a-22cd09867625"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": null,
+                "layout|x": 210,
+                "layout|y": 80,
+                "width": 240
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "width": "auto"
+            },
+            "name": "MyTextField57",
+            "designerId": "6f6509ef-b01e-4d1a-9f77-88bce2544887"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "paymentmode",
+                "fieldLabel": "Payment Mode",
+                "itemId": "paymentmode",
+                "labelAlign": "right",
+                "layout|x": 5,
+                "layout|y": 45,
+                "name": "PaymentMode",
+                "width": 205
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "designer|displayName": "string",
+                "itemId": "string",
+                "name": "string",
+                "labelAlign": "string",
+                "width": "auto"
+            },
+            "name": "MyTextField53",
+            "designerId": "a6675334-ea29-41b5-8c63-bb5823cb7e1b"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "prefix",
+                "fieldLabel": "Prefix",
+                "itemId": "prefix",
+                "labelAlign": "right",
+                "layout|x": 5,
+                "layout|y": 10,
+                "name": "Prefix"
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "designer|displayName": "string",
+                "itemId": "string",
+                "name": "string",
+                "labelAlign": "string"
+            },
+            "name": "MyTextField54",
+            "designerId": "6c76c2a8-69b9-4cdb-899e-6bb88bf931a3"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "save",
+                "itemId": "save",
+                "layout|x": 110,
+                "layout|y": 120,
+                "text": "Save",
+                "width": 100
+            },
+            "configAlternates": {
+                "designer|displayName": "string",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "text": "string",
+                "width": "auto"
+            },
+            "name": "MyButton7",
+            "designerId": "3060a746-1378-4843-884a-e6ee5bbcc9fb"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "refresh",
+                "itemId": "refresh",
+                "layout|x": 295,
+                "layout|y": 120,
+                "text": "Reset",
+                "width": 90
+            },
+            "configAlternates": {
+                "layout|x": "number",
+                "layout|y": "number",
+                "text": "string",
+                "designer|displayName": "string",
+                "itemId": "string",
+                "width": "auto"
+            },
+            "name": "MyButton8",
+            "designerId": "221fa22b-a556-4c49-9db7-190d727ebaf9"
+        },
+        {
+            "type": "Ext.grid.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 250,
+                "layout|x": 5,
+                "layout|y": 160,
+                "store": [
+                    "{paymentsModels}"
+                ],
+                "title": "Payment Modes list"
+            },
+            "configAlternates": {
+                "store": "binding",
+                "height": "auto",
+                "layout|x": "number",
+                "layout|y": "number",
+                "title": "string"
+            },
+            "name": "MyGridPanel4",
+            "designerId": "f244fd0d-3de2-492f-816e-180d25b00ccc",
+            "cn": [
+                {
+                    "type": "Ext.view.Table",
+                    "reference": {
+                        "name": "viewConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyTable3",
+                    "designerId": "d2b59310-2f8f-4b4d-8b4d-c390a5587e8b"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "cashpoint",
+                        "text": "Cashpoint"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string"
+                    },
+                    "name": "MyColumn9",
+                    "designerId": "81b27c6a-37ae-4805-b9db-5e47d207ef51"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "paymode",
+                        "text": "Paymode"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string"
+                    },
+                    "name": "MyColumn22",
+                    "designerId": "a75b1c24-e66a-4bd9-8080-98a0ecc7b5c1"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "description",
+                        "text": "Description",
+                        "width": 202
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyColumn23",
+                    "designerId": "22ee386f-0a5a-4e3b-aa9f-ef3e0c953d2d"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "glaccount",
+                        "text": "Glaccount"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string"
+                    },
+                    "name": "MyColumn24",
+                    "designerId": "9c8fb64f-f01b-4be9-bf1e-359df4a98e88"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,556 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "bodyPadding": 10,
+        "designer|snapToGrid": 5,
+        "designer|uiInterfaceName": "default-framed",
+        "designer|userAlias": "discharge",
+        "designer|userClassName": "Discharge",
+        "frame": true,
+        "height": 425,
+        "layout": "absolute",
+        "url": "../../data/getDataFunctions.php?task=dischargePatients",
+        "width": 672
+    },
+    "configAlternates": {
+        "bodyPadding": "auto",
+        "designer|snapToGrid": "number",
+        "designer|uiInterfaceName": "string",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "frame": "boolean",
+        "height": "auto",
+        "layout": "string",
+        "width": "auto",
+        "url": "string"
+    },
+    "name": "MyForm1",
+    "designerId": "7d7f1bf2-3833-4d24-b4b4-8d82322e775a",
+    "viewControllerInstanceId": "6824401b-a5ea-4da2-8385-b19e7523dc56",
+    "viewModelInstanceId": "82546ec7-cfad-408c-aabf-4ba38ce844b7",
+    "cn": [
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "formBind": true,
+                "height": 175,
+                "layout|x": 5,
+                "layout|y": 80,
+                "padding": "0 0 0 0",
+                "title": "Discharge Types",
+                "width": 444
+            },
+            "configAlternates": {
+                "height": "auto",
+                "layout|x": "number",
+                "layout|y": "number",
+                "padding": "auto",
+                "title": "string",
+                "width": "auto",
+                "formBind": "boolean"
+            },
+            "name": "MyFieldSet8",
+            "designerId": "44c37acd-d840-4782-9d6b-f5b983083999"
+        },
+        {
+            "type": "Ext.form.field.TextArea",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowBlank": false,
+                "emptyText": "Discharge Summary Notes",
+                "frame": true,
+                "height": 110,
+                "layout|x": 5,
+                "layout|y": 260,
+                "name": "dischargeSummary",
+                "shadow": "frame",
+                "shadowOffset": 1,
+                "width": 445
+            },
+            "configAlternates": {
+                "frame": "boolean",
+                "height": "auto",
+                "layout|x": "number",
+                "layout|y": "number",
+                "width": "auto",
+                "emptyText": "string",
+                "name": "string",
+                "shadow": "auto",
+                "shadowOffset": "number",
+                "allowBlank": "boolean"
+            },
+            "name": "MyTextArea2",
+            "designerId": "5cc381b9-22e1-4b1d-9bae-5fa83435ecb9"
+        },
+        {
+            "type": "Ext.form.field.Time",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowBlank": false,
+                "fieldLabel": "Discharge Time",
+                "format": "H:i:s",
+                "itemId": "dischargeTime",
+                "layout|x": 20,
+                "layout|y": 55,
+                "name": "dischargeTime",
+                "width": 275
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "width": "auto",
+                "itemId": "string",
+                "name": "string",
+                "format": "string",
+                "allowBlank": "boolean"
+            },
+            "name": "MyTimeField",
+            "designerId": "25f4b001-ad48-419b-b9a4-40514910f38c"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "formBind": true,
+                "height": 35,
+                "iconCls": "x-fa fa-star",
+                "itemId": "saveDischarge",
+                "layout|x": 5,
+                "layout|y": 380,
+                "text": "Discharge",
+                "value": "cmdDischarge",
+                "width": 110
+            },
+            "configAlternates": {
+                "height": "auto",
+                "layout|x": "number",
+                "layout|y": "number",
+                "text": "string",
+                "value": "auto",
+                "width": "auto",
+                "itemId": "string",
+                "formBind": "boolean",
+                "iconCls": "string"
+            },
+            "name": "MyButton22",
+            "designerId": "2677630c-3298-4dcc-a5fa-69716b73417a"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 35,
+                "iconCls": "x-fa fa-print",
+                "layout|x": 135,
+                "layout|y": 380,
+                "text": "Print Summary",
+                "value": "cmdDischarge",
+                "width": 135
+            },
+            "configAlternates": {
+                "height": "auto",
+                "layout|x": "number",
+                "layout|y": "number",
+                "text": "string",
+                "value": "auto",
+                "width": "auto",
+                "iconCls": "string"
+            },
+            "name": "MyButton24",
+            "designerId": "967df736-654b-4024-82cd-79454c454c28"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 35,
+                "iconCls": "x-fa fa-close",
+                "itemId": "cmdClose",
+                "layout|x": 290,
+                "layout|y": 380,
+                "text": "Cancel",
+                "value": "cmdClose",
+                "width": 110
+            },
+            "configAlternates": {
+                "height": "auto",
+                "layout|x": "number",
+                "layout|y": "number",
+                "text": "string",
+                "width": "auto",
+                "itemId": "string",
+                "value": "auto",
+                "iconCls": "string"
+            },
+            "name": "MyButton23",
+            "designerId": "bc29db57-ba06-4f0f-a396-b2befc20e18b"
+        },
+        {
+            "type": "Ext.form.field.Date",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowBlank": false,
+                "fieldLabel": "Discharge Date",
+                "itemId": "dischargeDate",
+                "layout|x": 20,
+                "layout|y": 20,
+                "name": "dischargeDate"
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "name": "string",
+                "allowBlank": "boolean"
+            },
+            "name": "MyDateField",
+            "designerId": "a1d9bbd1-5979-4df8-8f07-6c84560fc1f3"
+        },
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dock": "left",
+                "height": 421,
+                "layout": "form",
+                "layout|x": 0,
+                "layout|y": 0,
+                "margin": "0 0 0 0",
+                "style": "background:#386d87",
+                "width": 235
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "height": "auto",
+                "layout|x": "number",
+                "layout|y": "number",
+                "width": "auto",
+                "container|align": "string",
+                "dock": "string",
+                "layout": "string",
+                "style": "string",
+                "margin": "auto"
+            },
+            "name": "MyFieldSet7",
+            "designerId": "faa00bb5-3cd0-4a2d-a755-fea47b691952",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "PID",
+                        "fieldStyle": "color:#a7e88b; font-size:12px;font-weight:bold;background:#386d87",
+                        "itemId": "pid",
+                        "labelAlign": "right",
+                        "labelStyle": "font-weight:bold; font-size:11px; color:#f4f6fc;",
+                        "labelWidth": 30,
+                        "margin": "0 0 0 0",
+                        "padding": "0 0 0 0",
+                        "width": 180
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "itemId": "string",
+                        "labelWidth": "number",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "width": "auto",
+                        "fieldStyle": "string",
+                        "labelStyle": "string",
+                        "labelAlign": "string",
+                        "margin": "auto",
+                        "padding": "auto"
+                    },
+                    "name": "MyDisplayField",
+                    "designerId": "2700b3f1-a540-4c93-96a3-028bc2d6e602"
+                },
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Names",
+                        "fieldStyle": "color:#a7e88b; font-size:12px;font-weight:bold;background:#386d87",
+                        "itemId": "names",
+                        "labelAlign": "right",
+                        "labelPad": 0,
+                        "labelStyle": "font-weight:bold; font-size:11px; color:#f4f6fc;",
+                        "labelWidth": 60,
+                        "padding": "0 0 0 0",
+                        "width": 180
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "labelWidth": "number",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "value": "string",
+                        "width": "auto",
+                        "itemId": "string",
+                        "fieldStyle": "string",
+                        "labelPad": "number",
+                        "labelStyle": "string",
+                        "labelAlign": "string",
+                        "padding": "auto"
+                    },
+                    "name": "MyDisplayField1",
+                    "designerId": "6e6a751b-b1bd-44ef-a116-cf0873c2f619"
+                },
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Encounter No",
+                        "fieldStyle": "color:#a7e88b; font-size:12px;font-weight:bold;background:#386d87",
+                        "itemId": "encounterNo",
+                        "labelAlign": "right",
+                        "labelStyle": "font-weight:bold; font-size:11px; color:#f4f6fc;",
+                        "name": "encounter_nr",
+                        "readOnly": true,
+                        "width": 150
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "labelWidth": "number",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "value": "string",
+                        "width": "auto",
+                        "itemId": "string",
+                        "fieldStyle": "string",
+                        "labelStyle": "string",
+                        "hidden": "boolean",
+                        "name": "string",
+                        "readOnly": "boolean",
+                        "labelAlign": "string"
+                    },
+                    "name": "MyDisplayField14",
+                    "designerId": "815c2586-3fa9-4992-9bb7-551c85cd9ad7"
+                },
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Date of Birth",
+                        "fieldStyle": "color:#a7e88b; font-size:12px;font-weight:bold;background:#386d87",
+                        "frame": false,
+                        "height": 150,
+                        "itemId": "Dob",
+                        "labelAlign": "right",
+                        "labelStyle": "font-weight:bold; font-size:11px; color:#f4f6fc;",
+                        "width": 180
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "labelWidth": "number",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "value": "string",
+                        "width": "auto",
+                        "itemId": "string",
+                        "fieldStyle": "string",
+                        "labelStyle": "string",
+                        "frame": "boolean",
+                        "height": "auto",
+                        "labelAlign": "string"
+                    },
+                    "name": "MyDisplayField2",
+                    "designerId": "461b4a15-3aca-4a3b-ab48-a790192f48cd"
+                },
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Ward No",
+                        "fieldStyle": "color:#a7e88b; font-size:12px;font-weight:bold;background:#386d87",
+                        "frame": false,
+                        "height": 150,
+                        "itemId": "wardNo",
+                        "labelAlign": "right",
+                        "labelStyle": "font-weight:bold; font-size:11px; color:#f4f6fc;",
+                        "width": 180
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "labelWidth": "number",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "value": "string",
+                        "width": "auto",
+                        "itemId": "string",
+                        "fieldStyle": "string",
+                        "labelStyle": "string",
+                        "frame": "boolean",
+                        "height": "auto",
+                        "labelAlign": "string"
+                    },
+                    "name": "MyDisplayField13",
+                    "designerId": "253516c9-528c-44a5-b18a-ce1f470425e8"
+                },
+                {
+                    "type": "Ext.toolbar.Spacer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "name": "MySpacer",
+                    "designerId": "06cae359-2049-4f52-8b23-618568735eae"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.RadioGroup",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowBlank": false,
+                "container|align": "stretch",
+                "layout": "vbox",
+                "layout|x": 85,
+                "layout|y": 120,
+                "width": 672
+            },
+            "configAlternates": {
+                "allowBlank": "boolean",
+                "container|align": "string",
+                "layout": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "width": "auto"
+            },
+            "name": "MyRadioGroup1",
+            "designerId": "d8b0c03c-526a-4174-aa2a-7ac717d6fc2e",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Radio",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "boxLabel": "Regular Discharge",
+                        "fieldLabel": null,
+                        "inputValue": "1",
+                        "name": "dischargeType"
+                    },
+                    "configAlternates": {
+                        "boxLabel": "string",
+                        "fieldLabel": "string",
+                        "inputValue": "string",
+                        "name": "string"
+                    },
+                    "name": "MyRadio3",
+                    "designerId": "912a8513-bd1d-49db-9454-11d873c7d0ac"
+                },
+                {
+                    "type": "Ext.form.field.Radio",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "boxLabel": "Medical Discharge",
+                        "fieldLabel": null,
+                        "inputValue": "9",
+                        "name": "dischargeType"
+                    },
+                    "configAlternates": {
+                        "boxLabel": "string",
+                        "fieldLabel": "string",
+                        "inputValue": "string",
+                        "name": "string"
+                    },
+                    "name": "MyRadio4",
+                    "designerId": "41038f57-b5fd-4d65-a815-5b00304bc077"
+                },
+                {
+                    "type": "Ext.form.field.Radio",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "boxLabel": "Death of the Patient",
+                        "fieldLabel": null,
+                        "inputValue": "7",
+                        "name": "dischargeType"
+                    },
+                    "configAlternates": {
+                        "boxLabel": "string",
+                        "fieldLabel": "string",
+                        "inputValue": "string",
+                        "name": "string"
+                    },
+                    "name": "MyRadio5",
+                    "designerId": "bcdd156e-5d00-49e8-9459-f3b8245ac41f"
+                }
+            ]
+        }
+    ]
+}

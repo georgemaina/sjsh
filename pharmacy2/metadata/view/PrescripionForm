@@ -1,0 +1,361 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|align": "stretch",
+        "designer|userAlias": "prescripionform",
+        "designer|userClassName": "PrescripionForm",
+        "height": 558,
+        "layout": "hbox"
+    },
+    "configAlternates": {
+        "bodyPadding": "auto",
+        "container|align": "string",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "layout": "string",
+        "title": "string",
+        "width": "auto"
+    },
+    "designerId": "1c293016-af9a-4135-8926-26de04fee662",
+    "viewControllerInstanceId": "82e8fbd0-8291-4d12-a6ec-1d8baec6419b",
+    "viewModelInstanceId": "7252361e-91f0-43a5-a43e-6ed9c0968491",
+    "cn": [
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 0,
+                "width": 410
+            },
+            "configAlternates": {
+                "layout|flex": "number",
+                "width": "auto"
+            },
+            "name": "itemslist1",
+            "designerId": "37901107-4862-41da-b93a-185930d9495a",
+            "masterInstanceId": "30566b7d-c815-405a-8920-4760ae1f5b05"
+        },
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyPadding": 10,
+                "designer|snapToGrid": 5,
+                "designer|uiInterfaceName": "default-framed",
+                "frame": true,
+                "layout": "absolute",
+                "layout|flex": 0,
+                "width": 61
+            },
+            "configAlternates": {
+                "bodyPadding": "auto",
+                "designer|snapToGrid": "number",
+                "designer|uiInterfaceName": "string",
+                "frame": "boolean",
+                "layout": "string",
+                "layout|flex": "number",
+                "width": "auto"
+            },
+            "name": "MyForm",
+            "designerId": "9f71c90d-f988-4b81-81a6-69aeabf21f43",
+            "cn": [
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|x": 5,
+                        "layout|y": 255,
+                        "text": "<<<"
+                    },
+                    "configAlternates": {
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "text": "string"
+                    },
+                    "name": "MyButton3",
+                    "designerId": "9421860f-e3c3-490d-82c1-2775927761b6"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|x": 5,
+                        "layout|y": 190,
+                        "text": ">>>"
+                    },
+                    "configAlternates": {
+                        "text": "string",
+                        "layout|x": "number",
+                        "layout|y": "number"
+                    },
+                    "name": "MyButton7",
+                    "designerId": "295cb599-1d6f-4af0-8565-03819a19d502"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyPadding": 10,
+                "itemId": "dosageList",
+                "layout|flex": 1,
+                "minWidth": 600,
+                "scrollable": "vertical",
+                "url": "../../data/getDataFunctions.php?task=savePrescription"
+            },
+            "configAlternates": {
+                "bodyPadding": "auto",
+                "itemId": "string",
+                "layout|flex": "number",
+                "minWidth": "number",
+                "scrollable": "auto",
+                "url": "string"
+            },
+            "name": "MyForm1",
+            "designerId": "30bcb4f0-126a-44bc-9b7f-d0f28e3d9d9a",
+            "cn": [
+                {
+                    "type": "Ext.form.FieldContainer",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "stretch",
+                        "container|pack": "center",
+                        "dock": "bottom",
+                        "height": 51,
+                        "layout": "hbox"
+                    },
+                    "configAlternates": {
+                        "container|align": "string",
+                        "container|pack": "string",
+                        "dock": "string",
+                        "height": "auto",
+                        "layout": "string"
+                    },
+                    "name": "MyFieldContainer",
+                    "designerId": "5176db78-735a-4bbe-824e-fd98b31bf130",
+                    "cn": [
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "x-fa fa-plus",
+                                "itemId": "cmdPrescribe",
+                                "margin": "0 10 0 0",
+                                "text": "Prescribe",
+                                "width": 116
+                            },
+                            "configAlternates": {
+                                "iconCls": "string",
+                                "itemId": "string",
+                                "margin": "auto",
+                                "text": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyButton14",
+                            "designerId": "0b52154c-081b-4973-bfe6-ff8affcaa170"
+                        },
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "counter",
+                                "name": "counter",
+                                "value": [
+                                    "0"
+                                ],
+                                "width": 42
+                            },
+                            "configAlternates": {
+                                "itemId": "string",
+                                "name": "string",
+                                "value": "object",
+                                "width": "auto"
+                            },
+                            "name": "MyTextField10",
+                            "designerId": "0bf458a4-9a44-4ac0-8d69-80dd9e7e3ee2"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "stretch",
+                        "dock": "top",
+                        "height": 44,
+                        "itemId": "patientForm1",
+                        "layout": "hbox"
+                    },
+                    "configAlternates": {
+                        "container|align": "string",
+                        "height": "auto",
+                        "layout": "string",
+                        "itemId": "string",
+                        "dock": "string"
+                    },
+                    "name": "MyFieldSet6",
+                    "designerId": "576eae9c-c3d2-446c-9651-2bc9b159358a",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Display",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "PID",
+                                "fieldStyle": "color:green; font-weight:bold;",
+                                "itemId": "Pid",
+                                "labelStyle": "color:red; font-weight:bold;",
+                                "labelWidth": 20,
+                                "margin": "0 10  0 0",
+                                "name": "Pid"
+                            },
+                            "configAlternates": {
+                                "name": "string",
+                                "value": "string",
+                                "itemId": "string",
+                                "fieldLabel": "string",
+                                "fieldStyle": "string",
+                                "labelStyle": "string",
+                                "labelWidth": "number",
+                                "margin": "auto"
+                            },
+                            "name": "MyDisplayField",
+                            "designerId": "41e2e615-5a72-4792-be98-f678264210e9"
+                        },
+                        {
+                            "type": "Ext.form.field.Display",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Patient",
+                                "fieldStyle": "color:green; font-weight:bold;",
+                                "itemId": "Names",
+                                "labelStyle": "color:red; font-weight:bold;",
+                                "labelWidth": 50,
+                                "margin": "0 10 0 0",
+                                "name": "Names"
+                            },
+                            "configAlternates": {
+                                "value": "string",
+                                "name": "string",
+                                "itemId": "string",
+                                "fieldLabel": "string",
+                                "fieldStyle": "string",
+                                "labelStyle": "string",
+                                "labelWidth": "number",
+                                "margin": "auto"
+                            },
+                            "name": "MyDisplayField1",
+                            "designerId": "6d59e447-469f-4c51-9208-7992e07f499e"
+                        },
+                        {
+                            "type": "Ext.form.field.Display",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Encounter No",
+                                "fieldStyle": "color:green; font-weight:bold;",
+                                "itemId": "EncounterNo",
+                                "labelStyle": "color:red; font-weight:bold;",
+                                "margin": "0 10 0 0",
+                                "name": "EncounterNo"
+                            },
+                            "configAlternates": {
+                                "value": "string",
+                                "name": "string",
+                                "itemId": "string",
+                                "fieldLabel": "string",
+                                "fieldStyle": "string",
+                                "labelStyle": "string",
+                                "margin": "auto"
+                            },
+                            "name": "MyDisplayField2",
+                            "designerId": "bab04f73-3889-4dc1-9dd1-c7f98ca2fe62"
+                        },
+                        {
+                            "type": "Ext.form.field.Display",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Prescription Date",
+                                "fieldStyle": "color:green; font-weight:bold;",
+                                "itemId": "PrescribeDate",
+                                "labelStyle": "color:red; font-weight:bold;",
+                                "labelWidth": 120,
+                                "margin": "0 10 0 0",
+                                "name": "PrescribeDate"
+                            },
+                            "configAlternates": {
+                                "value": "string",
+                                "name": "string",
+                                "itemId": "string",
+                                "fieldLabel": "string",
+                                "fieldStyle": "string",
+                                "labelStyle": "string",
+                                "labelWidth": "number",
+                                "margin": "auto"
+                            },
+                            "name": "MyDisplayField3",
+                            "designerId": "3bd584f6-ec72-4032-8d49-5d089c4a7076"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

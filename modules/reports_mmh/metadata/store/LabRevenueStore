@@ -1,0 +1,67 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": false,
+        "designer|userAlias": "labrevenuetore",
+        "designer|userClassName": "LabRevenueStore",
+        "groupField": "Group",
+        "model": "LabRevenue",
+        "pageSize": 200,
+        "storeId": "LabRevenueStore"
+    },
+    "configAlternates": {
+        "autoLoad": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "groupField": "datafield",
+        "model": "model",
+        "pageSize": "number",
+        "storeId": "string"
+    },
+    "name": "LabActivitiesStore1",
+    "designerId": "a5535ab9-eb2b-45d9-be47-f20c3343e69d",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "simpleGroupMode": true,
+                "url": "data/getReportsData.php?task=getLabRevenue"
+            },
+            "configAlternates": {
+                "simpleGroupMode": "boolean",
+                "url": "string"
+            },
+            "name": "MyAjaxProxy",
+            "designerId": "4ece118e-194d-4904-b4af-4b231c34542d",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "labrevenue"
+                    },
+                    "configAlternates": {
+                        "root": "string",
+                        "rootProperty": "string"
+                    },
+                    "name": "MyJsonReader",
+                    "designerId": "f8b7114a-65ea-4311-a103-b54b54575fb2"
+                }
+            ]
+        }
+    ]
+}

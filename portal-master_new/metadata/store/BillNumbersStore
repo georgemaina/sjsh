@@ -1,0 +1,62 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": false,
+        "designer|userAlias": "billnumbersstore",
+        "designer|userClassName": "BillNumbersStore",
+        "model": "BillNumbers",
+        "pageSize": 1000,
+        "storeId": "BillNumbersStore"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "pageSize": "number",
+        "storeId": "string",
+        "autoLoad": "boolean"
+    },
+    "name": "ItemsListStore1",
+    "designerId": "231ad34a-97f7-4245-943a-badaab9339e0",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "../data/getPatientFunctions.php?caller=getBillNumbers"
+            },
+            "configAlternates": {
+                "url": "string"
+            },
+            "name": "MyAjaxProxy",
+            "designerId": "64da799a-7338-413c-80d1-ee4683ff290c",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "billnumbers"
+                    },
+                    "configAlternates": {
+                        "rootProperty": "string"
+                    },
+                    "name": "MyJsonReader",
+                    "designerId": "daf94a63-076b-4793-bed8-4ce2c8737488"
+                }
+            ]
+        }
+    ]
+}

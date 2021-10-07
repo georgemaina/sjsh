@@ -1,0 +1,130 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "bodyPadding": 10,
+        "closable": null,
+        "collapsible": false,
+        "designer|snapToGrid": 5,
+        "designer|userAlias": "syncdata",
+        "designer|userClassName": "SyncData",
+        "frame": true,
+        "height": null,
+        "layout": "absolute",
+        "title": null,
+        "width": null
+    },
+    "name": "MyForm",
+    "designerId": "0bd3adc0-d768-447e-9831-92c14279fa06",
+    "cn": [
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Server Address",
+                "itemId": "ServerAddress",
+                "layout|x": 20,
+                "layout|y": 10,
+                "width": 320
+            },
+            "name": "MyTextField34",
+            "designerId": "9796ac67-48f2-4e79-9a35-e682404a462c"
+        },
+        {
+            "type": "Ext.form.field.Date",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Start Date",
+                "itemId": "StartDate",
+                "layout|x": 20,
+                "layout|y": 35
+            },
+            "name": "MyDateField6",
+            "designerId": "aa97016f-3938-46f7-b44b-16582743387e"
+        },
+        {
+            "type": "Ext.form.field.Date",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "End Date",
+                "itemId": "EndDate",
+                "layout|x": 20,
+                "layout|y": 60
+            },
+            "name": "MyDateField7",
+            "designerId": "d102bbfa-7ba3-4b46-9138-de886fb478e7"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "cmdPreviewJson",
+                "layout|x": 125,
+                "layout|y": 90,
+                "text": "<b>Preview Json Data</b>",
+                "width": 115
+            },
+            "name": "MyButton7",
+            "designerId": "ba2d02e0-c974-447a-8be0-4cbc403dae57"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "cmdSendJson",
+                "layout|x": 295,
+                "layout|y": 90,
+                "text": "<b>Send  Data</b>",
+                "width": 115
+            },
+            "name": "MyButton8",
+            "designerId": "295b7533-8ce6-4489-8950-14ed0fb2053e"
+        },
+        {
+            "type": "Ext.form.field.TextArea",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": null,
+                "height": "",
+                "itemId": "JsonData",
+                "layout|x": 5,
+                "layout|y": 120,
+                "maxWidth": null,
+                "minHeight": 400,
+                "minWidth": 690,
+                "name": "JsonData",
+                "width": ""
+            },
+            "name": "MyTextArea1",
+            "designerId": "dce81daa-e0bf-481b-a9a4-ce2029fbaeaf"
+        }
+    ]
+}

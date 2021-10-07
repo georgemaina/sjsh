@@ -1,0 +1,133 @@
+<html>
+
+<head>
+
+
+<link rel="STYLESHEET" type="text/css" href="../common/styles.css">
+</head>
+<body>
+	<table border="0" cellpadding="0" cellspacing="0" class="sample_header" zid="71">
+		<tbody zid="3">
+			<tr valign="center" zid="4">
+				<td align="center" width="10" zid="5">&nbsp;</td>
+				<td align="left" zid="6">
+					<p zid="224">
+						<a href="http://www.dhtmlx.com/" zid="7">DHTMLX</a> Documentation
+					</p>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<!--- CONTENT. Starts --->
+	<h2 id="se:10">Creating custom skin for grid<br id="rx4-">
+</h2>
+
+<h3 id="se:11">Changing defaults<br id="p_m:">
+</h3>
+The look of the grid can be fully (or nearly fully) customized in CSS. dhtmlxgrid contains a set of CSS classes which define different aspects of the grid.<br id="twc_">
+<h3 id="se:12"><b id="ue0m">Most commonly-used styles</b></h3>
+div.gridbox<br id="dy64">
+&nbsp;&nbsp;&nbsp;&nbsp;grid container<br id="xwj_">
+div.gridbox table.hdr td <br id="xmd_">
+&nbsp;&nbsp;&nbsp;&nbsp;inner element of the header<br id="p5e_">
+div.gridbox table.hdr td div.hdrcell<br id="k2zq">
+&nbsp;&nbsp;&nbsp;&nbsp;outer element of the header<br id="a-xt">
+div.gridbox table.obj tr td <br id="qziu">
+&nbsp;&nbsp;&nbsp;&nbsp;data cell<br id="l7ed">
+div.gridbox table.obj tr.rowselected td.cellselected, div.gridbox table.obj td.cellselected <br id="ec:2">
+&nbsp;&nbsp;&nbsp;&nbsp;element in a selected cell<br id="xmr8">
+div.gridbox table.obj tr.rowselected td<br id="a_17">
+&nbsp;&nbsp;&nbsp;&nbsp;elements in a selected row<br id="le5r">
+<h3 id="se:13"><b id="k:u_">Footers</b></h3>
+div.gridbox div.ftr<br id="ypp:">
+&nbsp;&nbsp;&nbsp;&nbsp;container of all footers<br id="fb-8">
+div.gridbox div.ftr td <br id="mmid">
+&nbsp;&nbsp;&nbsp; footer element<br id="n7wu">
+<h3 id="se:14"><b id="rspy">Column moving</b> </h3>
+div.gridbox table.hdr td.columnTargetR div.hdrcell<br id="lvx1">
+&nbsp;&nbsp;&nbsp;&nbsp;marker used to mark drop-right in case of column moving<br id="sp65">
+div.gridbox table.hdr td.columnTargetL div.hdrcell<br id="h6by">
+&nbsp;&nbsp;&nbsp;&nbsp;marker used to mark drop-left in case of column moving<br id="pe1o">
+.dhx_dragColDiv<br id="a-56">
+&nbsp;&nbsp;&nbsp;&nbsp;representation of the dragged column<br id="v-2y">
+<h3 id="se:15"><b id="xy7e">Edit related styles</b></h3>
+div.gridbox table.obj td.editable{<br id="cgoo">
+&nbsp;&nbsp;&nbsp;&nbsp;data cell in edit state <br id="o.7s">
+.dhx_combo_select<br id="dwwj">
+&nbsp;&nbsp;&nbsp;&nbsp;select boxes inside grid editors<br id="s20v">
+.dhx_combo_edit<br id="lxgb">
+&nbsp;&nbsp;&nbsp;&nbsp;inputs inside grid editors<br id="kjzl">
+.dhx_textarea<br id="rzj6">
+&nbsp;&nbsp;&nbsp;&nbsp;textareas inside grid editors<br id="ywjd">
+.dhx_clist<br id="ab-t">
+&nbsp;&nbsp;&nbsp;&nbsp;checkbox list (clist excell)<br id="hqau">
+<br id="okay">
+<h3 id="se:16"><b id="fpxt">D-n-D related styles</b></h3>
+.dragSpanDiv<br id="liac">
+&nbsp;&nbsp;&nbsp;&nbsp;element used as drag text holder<br id="mac9">
+.gridDragLine<br id="bz82">
+&nbsp;&nbsp;&nbsp;&nbsp;marker of position during d-n-d (sibling and complex modes)<br id="u2ye">
+<h3 id="se:17"><b id="j0gi">Rare used styles</b></h3>
+.dhx_sub_row<br id="xza.">
+&nbsp;&nbsp;&nbsp;&nbsp;sub row inside the grid<br id="cbaz">
+div.gridbox .xhdr<br id="b_bp">
+&nbsp;&nbsp;&nbsp;&nbsp;the space to the right of the last header (if grid width greater than the sum of column's widths)<br id="fzhx">
+div.gridbox table.row20px tr td<br id="mz7x">
+&nbsp;&nbsp;&nbsp;&nbsp;additional styles for data cell in case of fixed row height mode <br id="rf4e">
+div.gridbox .objbox<br id="n6sl">
+&nbsp;&nbsp;&nbsp;&nbsp;data part of grid<br id="x2-:">
+<h2 id="se:18">Skins<br id="y65v">
+</h2>
+<h3 id="se:19"><b id="hq4_">Skins customization</b></h3>
+Each skin is actually a subset of default css class. For example, the following rules are defined in dhtmlxgrid.css for "xp" skin:<br id="rlmi">
+<br id="hxo7">
+div.gridbox<b id="y-tf">_xp</b><br id="x9ho">
+div.gridbox<b id="yxyc">_xp</b> .xhdr<br id="zxug">
+div.gridbox<b id="s8e-">_xp</b> table.hdr td<br id="rauf">
+<br id="o6g2">
+As you can see the only difference is in "_xp" postfix which is the skin name. Thus, it will be "_modern" for "modern" skin, "_light" for "light" skin and etc.<br id="n:ln">
+So if you need to change the font for data cell in case of "xp" skin, you need to edit&nbsp;"div.gridbox<b id="fu40">_xp</b> table.obj td" rule instead of "div.gridbox table.obj td". <br id="n:55">
+<br id="hdi:">
+<span id="pmef" style="background-color: rgb(255, 255, 255);">The grid with </span><span id="pmef" style="background-color: rgb(255, 255, 255);">defined </span><span id="pmef" style="background-color: rgb(255, 255, 255);">skin will use all the default</span> css rules and all skin related rules, so there is no need to write the same values again and again. Skin related styles contain info that differs from the default one.<br id="s6-f">
+<br id="t9nc">
+Skin related css classes have two additional rules that can be set: <br id="osmq">
+<br id="rl5h">
+div.gridbox<b id="g0au">_xp</b> .ev<b id="zfix">_xp</b><br id="hjcc">
+&nbsp;&nbsp;&nbsp;style will be applied to an even row<br id="q5.v">
+div.gridbox<b id="r.i_">_xp</b> .odd<b id="sk.x">_xp</b><br id="prh_">
+&nbsp;&nbsp;&nbsp;style will be applied to an odd row <br id="hs4g">
+<br id="pcb9">
+The right part of the style name here is also based on the name of the used skin as it is described in the previous sample.<br id="ux98">
+<h3 id="se:110"><b id="cau8">New skin creation</b></h3>
+To create a new skin you should just create new css rules with necessary names. There is no need to do any code modifications to apply the new skin.<br id="ot4b">
+For example, we can add the following subset of rules:<br id="jom6">
+<blockquote id="fjvq">div.gridbox_inverse {<br id="pphq">
+&nbsp;&nbsp;&nbsp;&nbsp;border:1px solid #004000;<br id="kcfg">
+}<br id="b0.i">
+div.gridbox_inverse table.hdr td {<br id="lydq">
+&nbsp;&nbsp;&nbsp;&nbsp;background-color:#004000;<br id="z:s.">
+&nbsp;&nbsp;&nbsp;&nbsp;color:white;<br id="fy93">
+&nbsp;&nbsp;&nbsp;&nbsp;font-weight:bold;<br id="c7gc">
+}<br id="xbon">
+div.gridbox_inverse table.obj td{<br id="w9cg">
+&nbsp;&nbsp;&nbsp;&nbsp;background-color:black; <br id="hdl1">
+&nbsp;&nbsp;&nbsp;&nbsp;color:white;<br id="s1qi">
+}</blockquote>
+And later in js code we will use the following line:<br id="m_0:">
+<blockquote id="d:7d">grid.setSkin("inverse");<br id="hcip">
+</blockquote>
+Our custom styles will be applied to the grid and as a result the grid will be displayed like this:<br id="q-3v">
+<div id="s5e3" style="padding: 1em 0pt; text-align: left;"><img alt="[Image]" id="dzez" style="width: 523px; height: 278px;" src="images/dhhqnnw2_7ccp8x5f3.png"></div>
+<br id="dv4d">
+<br id="zd4-">
+<br id="fd36">
+<br id="olu_">
+<br id="fw3b">
+<br id="wikc">
+<br id="izq4">
+<br id="adq3">
+
+	<!--- CONTENT. Ends --->
+	<div class="copyright" zid="223">&copy; DHTMLX, 2008</div>
+</body>
+</html>

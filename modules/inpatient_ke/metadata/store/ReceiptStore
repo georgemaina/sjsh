@@ -1,0 +1,82 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": false,
+        "designer|userAlias": "receiptstore",
+        "designer|userClassName": "ReceiptStore",
+        "model": "ReceiptModel",
+        "pageSize": 500,
+        "storeId": "ReceiptStore"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "pageSize": "number",
+        "storeId": "string",
+        "autoLoad": "boolean"
+    },
+    "name": "BillStore1",
+    "designerId": "76fe3028-7d80-4577-bb60-f6c7192d9624",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "../../data/getDataFunctions.php?task=getReceipts"
+            },
+            "configAlternates": {
+                "url": "string"
+            },
+            "name": "MyAjaxProxy",
+            "designerId": "3338bf11-076d-4f01-84a1-901b8a0ebd5c",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "receipts"
+                    },
+                    "configAlternates": {
+                        "rootProperty": "string"
+                    },
+                    "name": "MyJsonReader",
+                    "designerId": "79284670-a8d1-4267-a577-0914af5c669e"
+                },
+                {
+                    "type": "Ext.data.writer.Json",
+                    "reference": {
+                        "name": "writer",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dateFormat": "YYYY-mm-dd",
+                        "encode": true,
+                        "rootProperty": "updateReceipts"
+                    },
+                    "configAlternates": {
+                        "dateFormat": "string",
+                        "rootProperty": "string",
+                        "encode": "boolean"
+                    },
+                    "name": "MyJsonWriter1",
+                    "designerId": "95d61047-b66f-4fbc-a173-7ba5e529f90f"
+                }
+            ]
+        }
+    ]
+}

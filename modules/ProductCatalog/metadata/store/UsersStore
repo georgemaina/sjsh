@@ -1,0 +1,62 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "designer|userAlias": "usersstore",
+        "designer|userClassName": "UsersStore",
+        "model": "Users",
+        "storeId": "UsersStore"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string",
+        "autoLoad": "boolean"
+    },
+    "name": "UnitsMeasureStore2",
+    "designerId": "32dae368-3e2f-4426-84f1-f6a8aabfcfc4",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "idParam": "ID",
+                "url": "data/getDataFunctions.php?task=getUsers"
+            },
+            "configAlternates": {
+                "url": "string",
+                "idParam": "string"
+            },
+            "name": "MyAjaxProxy",
+            "designerId": "bdde2b91-d8a1-4370-8f66-96cd61e94204",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "users"
+                    },
+                    "configAlternates": {
+                        "rootProperty": "string"
+                    },
+                    "name": "MyJsonReader",
+                    "designerId": "e793c6db-8969-481f-aa6c-d2b8c5cc06f8"
+                }
+            ]
+        }
+    ]
+}

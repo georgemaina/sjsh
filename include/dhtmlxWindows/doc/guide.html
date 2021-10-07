@@ -1,0 +1,2451 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+	<title>dhtmlxWindows 2.0 Guide</title>
+	<link rel="STYLESHEET" type="text/css" href="common/styles.css">
+</head>
+
+<body>
+
+<h1 id="da49">
+ <span id="da490" style="font-family: Verdana;">dhtmlxWindows 2.1 Guide and Code Samples </span><br id="tdmf">
+</h1>
+<h2><a name='win_rjpy'>
+ 1. Introduction
+</a></h2>
+<h3><a name='win_rjpy0'>
+ 1.1 Scope of the Document
+</a></h3>
+<p class="western" id="m8-o" style="margin-bottom: 0.04in;">
+ <font id="i83h" size="2"><span id="i83h0" style="font-family: Verdana;">This document describes </span><b id="p8xk" style="font-family: Verdana;">dhtmlxWindows</b></font><span id="i83h1" style="font-family: Verdana;"><font id="i83h2" size="2"> system, defines its methods and global parameters</font>.</span>
+</p>
+<a id="s.rk" name="Target_readers"></a>
+<h3><a name='win_cofp'>
+ 1.2 Target Readers
+</a></h3>
+<p class="western" id="o_yt" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="aqcn3" size="2">Target readers are users (developers).</font>
+</p>
+<h2><a name='win_jqzv'>
+ 2. What is dhtmlxWindows
+</a></h2>
+<p class="western" id="zzoj" style="margin-bottom: 0.04in;">
+ <font id="cfpn" style="font-family: Verdana;" size="2"><b id="h13t">dhtmlxWindows</b> is a windowing system that enables the user to work with several windows and their content at the same time. This system allows windows to overlap, and provides means for the user to perform standard operations such as moving/resizing a window, sending a window to the foreground/background, minimizing/maximizing a window, changing window’s position, making a window modal and sticking a window.</font>
+</p>
+<p class="western" id="zv9a" style="margin-bottom: 0.04in;">
+ <br id="zzoj0">
+</p>
+<p class="western" id="cfpn1" style="font-family: Verdana;">
+ <font id="cfpn0" size="2">Work with this system involves:</font><br id="cfpn3">
+</p>
+<ul id="bfa-" style="font-family: Verdana;">
+ <li id="ajnh">
+ 
+<p class="western" id="v236" style="margin-bottom: 0.04in;">
+ <font id="cfpn4" size="2">Managing windows and their content; </font>
+ </p>
+ </li>
+ <li id="lg-l">
+ 
+<p class="western" id="i8o_" style="margin-bottom: 0.04in;">
+ <font id="cfpn5" size="2">Applying built-in or user created skins to a window; </font>
+ </p>
+ </li>
+ <li id="wmsh">
+ 
+<p class="western" id="k1h-" style="margin-bottom: 0.04in;">
+ <font id="cfpn6" size="2">Attaching content as an External URL (Web-Page) or a HTML object to a window; </font>
+ </p>
+ </li>
+ <li id="a..x">
+ 
+<p class="western" id="m21." style="margin-bottom: 0.04in;">
+ <font id="cfpn7" size="2">Windows/buttons settings manipulations; </font>
+ </p>
+ </li>
+ <li id="s98_">
+ 
+<p class="western" id="egyg" style="margin-bottom: 0.04in;">
+ <font id="cfpn8" size="2">Adding user defined buttons; </font>
+ </p>
+ </li>
+ <li id="n-gx">
+ 
+<p class="western" id="ol1r" style="margin-bottom: 0.04in;">
+ <font id="cfpn9" size="2">Event handling.</font>
+ </p>
+ </li>
+</ul>
+<h3><a name='win_p1i4'>
+ 2.1. Main Features
+</a></h3>
+<ul id="pu80">
+ <li id="pu800" style="font-family: Verdana;">
+ <font id="th:." size="2">Full control with JavaScript API;</font>
+ </li>
+ <li id="v1z:" style="font-family: Verdana;">
+ <font id="th:.0" size="2">Modal state support;</font>
+ </li>
+ <li id="bq7-" style="font-family: Verdana;">
+ <font id="th:.1" size="2">Built-in and custom buttons;</font>
+ </li>
+ <li id="dbcn" style="font-family: Verdana;">
+ <font id="th:.2" size="2">Resizable;</font>
+ </li>
+ <li id="dbcn0">
+ <font id="th:.3" size="2"><span id="th:.4" style="font-family: Verdana;">Skinable.</span></font><br id="dbcn1">
+ </li>
+</ul>
+<h3><a name='win_p1i40'>
+ 2.2 Browser Compatibility
+</a></h3>
+<ul id="dbcn2">
+ <li id="dbcn3" style="font-family: Verdana;">
+ <font id="th:.5" size="2">IE;</font>
+ </li>
+ <li id="dbcn4" style="font-family: Verdana;">
+ <font id="th:.6" size="2">Mac OS X Safari/Conqueror;</font>
+ </li>
+ <li id="i9v." style="font-family: Verdana;">
+ <font id="th:.7" size="2">Mozilla/Mozilla Firefox;</font>
+ </li>
+ <li>Google Chrome;<br>
+</li>
+<li id="yso20">
+ Opera 8.5+.</li>
+</ul>
+<div id="p1i42">
+ 
+<div id="p1i43">
+ 
+<h2><a name='win_t0di1'>
+ 3. Initializing dhtmlxWindows
+ </a></h2>
+ 
+<h3><a name='win_m6o70'>
+ 3.1 Minimal Initialization
+ 
+ </a></h3>
+<p style="font-family: Verdana;"><font size="2">The first things that need to be done for any type of dhtmlxWindows' initialization are the following: </font></p>
+<p style="font-family: Verdana;"><font size="2"><br>
+</font></p>
+<p style="font-family: Verdana;"><font size="2"> Download the dhtmlxWindows package from the server and place it in a folder; </font></p>
+<p style="font-family: Verdana;"><font size="2"><br>
+ Create an index.html file; </font></p>
+<p style="font-family: Verdana;"><font size="2"><br>
+ Place the full paths to dhtmlxWindows' CSS and JS files into the header of html file. </font></p>
+<p style="font-family: Verdana;"><font size="2"><br>
+ &lt;link rel="stylesheet" type="text/css" href="[full path to this file]/dhtmlxwindows.css"></font></p>
+<p style="font-family: Verdana;"><font size="2"><br>
+ &lt;link rel="stylesheet" type="text/css" href="[full path to this file]/dhtmlxwindows_dhx_blue.css"></font></p>
+<p style="font-family: Verdana;"><font size="2"><br>
+ &lt;script src="[full path to this file]/dhtmlxcommon.js">&lt;/sript></font></p>
+<p style="font-family: Verdana;"><font size="2"><br>
+ &lt;script src="[full path to this file]/dhtmlxwindows.js">&lt;/script></font></p>
+<div id="zmfh3">
+ 
+<p id="m49j"><b id="kgt8">3.1.1 Basic Object for a Set of New Windows</b></p>
+ 
+ 
+ 
+<p class="western" id="wyki" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="nipy" size="2">A base for a set of new windows can be created in the following way:<br id="x1sn">
+ </font>
+ </p>
+ 
+<blockquote id="co2e">
+ 
+<p class="western" id="ujix" style="margin-bottom: 0.04in;">
+ <font id="nipy0" style="font-family: Verdana;" size="2">var dhxWins= new dhtmlXWindows(); <span style="color: rgb(255, 255, 255); background-color: rgb(76, 17, 48);"></span></font><br id="x1sn1">
+ </p>
+ </blockquote>
+ 
+<p id="m49j0"><b id="mwk0">3.1.2 New Window Creation</b></p>
+ 
+<p class="western" id="gdzw" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="nkwd" size="2">While creating a new window with minimal initialization, the user should use <b id="lxa5">createWindow()</b> method and pass the following parameters: </font>
+ </p>
+ 
+<ul id="cg7a">
+ <li id="ddn." style="font-family: Verdana;">
+ 
+<p class="western" id="j-v1" style="margin-bottom: 0.04in;">
+ <font id="nkwd0" size="2">Window Id; </font>
+ </p>
+ </li>
+ <li id="t14-" style="font-family: Verdana;">
+ 
+<p class="western" id="vhbo" style="margin-bottom: 0.04in;">
+ <font id="nkwd1" size="2">Window's position (x &amp; y); </font>
+ </p>
+ </li>
+ <li id="t5ry">
+ 
+<p class="western" id="okkn" style="margin-bottom: 0.04in;">
+ <font id="nkwd2" style="font-family: Verdana;" size="2">Window's width &amp; height.</font><br id="gxbi">
+ </p>
+ </li>
+ </ul>
+ 
+<blockquote id="gxbi0">
+ <font id="s6nn" face="Courier New, monospace"><font id="yi1j" face="Verdana, sans-serif"><font id="alit" color="#000000"><font id="nkwd5" size="2">var win = dhxWins.createWindow(<b id="llky">String</b> id</font></font><font id="nkwd6" size="2"><b id="vamn">,</b></font><font id="qoiz" color="#000000" size="2"> <b id="bdhb">int</b> x</font><font id="nkwd7" size="2"><b id="l.xz">,</b></font><font id="h4q1" color="#000000" size="2"> <b id="dkju">int</b> y,<b id="nypk"> int</b> width</font><font id="nkwd8" size="2"><b id="p4qh">,</b></font><font id="ub2f" color="#000000" size="2"> <b id="h4sh">int</b> height)</font><font id="nkwd9" size="2"><b id="fhwh">;</b></font></font></font>
+ </blockquote>
+ 
+<p id="ptpy" style="border-style: none none none solid; border-color: -moz-use-text-color; border-width: medium medium medium 5pt; padding: 0in 0in 0in 0.06in; background: rgb(255, 255, 255) none repeat scroll 0% 50%; margin-top: 0.05in; margin-bottom: 0.16in;" align="left">
+ </p>
+ 
+<p class="western" id="bdd3" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="nplx" size="2">The user can set the <b id="d874">header text</b> to the newly created window using the command <b id="ovcv">setText()</b>: </font>
+ </p>
+ 
+<blockquote id="gxbi1" style="font-family: Verdana;">
+ <font id="mhp0" size="2"><font id="veuf" color="#000000">dhxWins.window(id).setText(<b id="rnw1">String</b> text);</font></font>
+ </blockquote>
+ 
+<p id="yiu." style="border-style: none none none solid; border-color: -moz-use-text-color; border-width: medium medium medium 5pt; padding: 0in 0in 0in 0.06in; background: rgb(235, 235, 235) none repeat scroll 0% 50%; margin-top: 0.05in; margin-bottom: 0.16in;" align="left">
+ </p>
+ 
+<p id="m49j1"><b id="gn_l">3.1.3 Default Values</b></p>
+ 
+<p class="western" id="jcxa" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <br id="qyg4">
+</p>
+<p class="western" id="qyg40" style="margin-bottom: 0.04in; font-family: Verdana;"><font id="qyg41" size="2">Default values in <b id="zb9.">dhtmlxWindows</b> are:<br id="jcxa0">
+ </font>
+ </p>
+ 
+<ul id="hxnr" style="font-family: Verdana;">
+ <li id="ojlp">
+ 
+<p class="western" id="c7hp" style="margin-bottom: 0.04in;">
+ <font id="qzmn2" size="2">Window control buttons (buttons "Park", "Maximize" and "Close" are enabled and visible by default); </font>
+ </p>
+ </li>
+ <li id="dx8j">
+ 
+<p class="western" id="egeg" style="margin-bottom: 0.04in;">
+ <font id="qzmn3" size="2">Window icon (default icon is defined by the skin); </font>
+ </p>
+ </li>
+ <li id="xaiz">
+ 
+<p class="western" id="x_9q" style="margin-bottom: 0.04in;">
+ <font id="qzmn4" size="2">Window maxDimension (default value is "auto") and minDimension parameters (default value is "200x140px"); </font>
+ </p>
+ </li>
+ <li id="l.qo">
+ 
+<p class="western" id="yqhr" style="margin-bottom: 0.04in;">
+ <font id="qzmn5" size="2">The possibility to resize a window (default value is "true"); </font>
+ </p>
+ </li>
+ <li id="n.ix">
+ 
+<p class="western" id="bb0n" style="margin-bottom: 0.04in;">
+ <font id="qzmn6" size="2">The possibility to move a window (default value is "true"); </font>
+ </p>
+ </li>
+ <li id="e:70">
+ 
+<p class="western" id="jo1x" style="margin-bottom: 0.04in;">
+ <font id="qzmn7" size="2">Window's default skin (default value is "dhx_blue").</font>
+ </p>
+ </li>
+ </ul>
+ 
+<h3><a name='win_m6o74'>
+ 3.2 Extended Initialization
+ </a></h3>
+ 
+<p class="western" id="j7g5" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="ockt0" size="2">When creating a new window with extended initialization, the user should call the same commands described in </font><b id="k.sf"><font id="c4ck" color="#0000ff" size="2"><u id="wg6n"><a href="#_Minimal_initialization" id="gn-h">Minimal initialization</a></u></font></b><font id="ockt1" size="2">. </font>
+ </p>
+ 
+<p class="western" id="i1_q" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="ockt2" size="2">Additional parameters, which can be defined, are: </font>
+ </p>
+ 
+<ul id="e_yl" style="font-family: Verdana;">
+ <li id="chow">
+ 
+<p class="western" id="w-d4" style="margin-bottom: 0.04in;">
+ <font id="ockt3" size="2"><b id="zg4e"><a href="#Header_Icon" id="l4-3" title="Header Icon">Header Icon</a></b>; </font>
+ </p>
+ </li>
+ <li id="nuos">
+ 
+<p class="western" id="j7qj" style="margin-bottom: 0.04in;">
+ <font id="ockt4" size="2"><b id="ue.i"><a href="#Allow/Deny_Resizing" id="u254" title="Allow/Deny Resizing">Allow/Deny Resizing</a></b>; </font>
+ </p>
+ </li>
+ <li id="g28t">
+ 
+<p class="western" id="y05q" style="margin-bottom: 0.04in;">
+ <b id="q:zb"><font id="ockt5" size="2"><a href="#Allow/Deny_Moving" id="fo_5" title="Allow/Deny Move">Allow/Deny Moving</a></font></b><font id="ihbo" size="2">;</font>
+ </p>
+ </li>
+ <li id="ccuj">
+ 
+<p class="western" id="c_2m" style="margin-bottom: 0.04in;">
+ <b id="q:zb0"><font id="ockt6" size="2"><a href="#Allow/Deny_Parking" id="nvad" title="Allow/Deny Park">Allow/Deny Parking</a></font></b><font id="ihbo2" size="2">;</font>
+ </p>
+ </li>
+ <li id="npiu">
+ 
+<p class="western" id="vocx" style="margin-bottom: 0.04in;">
+ <b id="q:zb1"><font id="ockt7" size="2"><a href="#Hide/Disable_Buttons" id="l6s7" title="Hide/Disable Buttons">Hide/Disable Buttons</a></font></b><font id="ji6g" size="2">.</font>
+ </p>
+ </li>
+ </ul>
+ 
+ 
+<p id="m49j2"><font id="r_.o" size="2"><a id="mb_y" name="Header_Icon"></a><b id="m49j3"><span id="m49j4" style="font-family: Verdana;">3.2.1 Header Icon</span></b></font></p>
+ 
+ 
+<p class="western" id="je-n" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <br id="qyg42">
+</p>
+<p class="western" id="qyg43" style="margin-bottom: 0.04in; font-family: Verdana;"><font id="qyg44" size="2">There is also the opportunity to specify any <b id="x4:n">header icon</b> if the default one is not suitable for the user. This can be done in the following way: </font>
+ </p>
+ 
+<blockquote id="zg9z" style="font-family: Verdana;">
+ <font id="gww1" size="2"><font id="ahxj" color="#000000">dhxWins.window(id).setIcon(<b id="a5_5">String</b> iconEnabled, <b id="rna4">String</b> iconDisabled);</font></font>
+ </blockquote>
+ 
+<p id="cqwj" style="border-style: none none none solid; border-color: -moz-use-text-color; border-width: medium medium medium 5pt; padding: 0in 0in 0in 0.06in; background: rgb(235, 235, 235) none repeat scroll 0% 50%; margin-top: 0.05in; margin-bottom: 0.16in; font-family: Verdana;" align="left">
+ </p>
+ 
+<p class="western" id="oq2y" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="gb4m0" size="2">Along with setting a header icon, the user can choose to clear/remove it. In this case there will be just an empty space instead of any header icon. The user should do the following:</font>
+ </p>
+ 
+<blockquote id="p7yz" style="font-family: Verdana;">
+ <font id="ah04" size="2"><font id="fgs6" color="#000000"><font id="s9fu" color="#000000">dhxWins.window(id).clearIcon();</font></font></font><br id="p7yz0">
+ </blockquote>
+ <font id="gb4m2" style="font-family: Verdana;" size="2">It is also possible to restore the default window icon according to the loaded skin:<br id="p7yz1">
+ </font>
+ 
+<blockquote id="p7yz2">
+ <font id="ssf-" style="font-family: Verdana;" face="Courier New, monospace" size="2"><font id="pnfb" color="#000000">dhxWins.window(id).restoreIcon();</font></font><br id="p7yz3">
+ </blockquote>
+ 
+<p class="western" id="p7yz10" style="margin-bottom: 0.04in;">
+ </p>
+ 
+ 
+<p id="xidz"><font id="odze" size="2"><a id="osn5" name="Allow/Deny_Resizing"></a><b id="xidz0"><span id="xidz1" style="font-family: Verdana;">3.2.2 Allow/Deny Resizing</span></b></font></p>
+ 
+ 
+<p class="western" id="iuro" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <br id="qyg45">
+</p>
+<p class="western" id="qyg46" style="margin-bottom: 0.04in; font-family: Verdana;"><font id="qyg47" size="2">By default window resizing is allowed. </font>
+ </p>
+ 
+<p class="western" id="hkgk" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="gb4m4" size="2">Extended initialization allows the user to deny window resizing by calling the method <b id="l0cc">denyResize():</b></font>
+ </p>
+ 
+<blockquote id="znm1" style="font-family: Verdana;">
+ <font id="ewc7" size="2"><font id="s.v5" color="#000000">dhxWins.window(id).denyResize()</font>;</font>
+ </blockquote>
+ 
+<p id="byd_" style="border-style: none none none solid; border-color: -moz-use-text-color; border-width: medium medium medium 5pt; padding: 0in 0in 0in 0.06in; background: rgb(235, 235, 235) none repeat scroll 0% 50%; margin-top: 0.05in; margin-bottom: 0.16in; font-family: Verdana;" align="left">
+ </p>
+ 
+<p class="western" id="xdp7" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="gb4m5" size="2">Resizing of a window can be allowed again with the help of the following method: </font>
+ </p>
+ 
+<blockquote id="znm10" style="font-family: Verdana;">
+ <font id="l:ur" size="2"><font id="s418" color="#000000">dhxWins.window(id).allowResize()</font>;</font>
+ </blockquote>
+ 
+<p id="fm4h" style="border-style: none none none solid; border-color: -moz-use-text-color; border-width: medium medium medium 5pt; padding: 0in 0in 0in 0.06in; background: rgb(235, 235, 235) none repeat scroll 0% 50%; margin-top: 0.05in; margin-bottom: 0.16in;" align="left">
+ </p>
+ 
+ 
+<p id="pvei"><font id="fxa2" size="2"><a id="nv-8" name="Allow/Deny_Moving"></a><b id="pvei0"><span id="pvei1" style="font-family: Verdana;">3.2.3 Allow/Deny Moving</span></b></font></p>
+ 
+ 
+<p class="western" id="rm10" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <br id="qyg48">
+</p>
+<p class="western" id="qyg49" style="margin-bottom: 0.04in; font-family: Verdana;"><font id="qyg410" size="2">By default window moving is allowed.</font>
+ </p>
+ 
+<p class="western" id="r.v8" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="r.v80" size="2">The user can deny window moving by calling the following method: </font>
+ </p>
+ 
+<blockquote id="guke" style="font-family: Verdana;">
+ <font id="fbwd" size="2"><font id="w5bb" color="#000000">dhxWins.window(id).denyMove();</font></font>
+ </blockquote>
+ 
+<p id="j7u." style="border-style: none none none solid; border-color: -moz-use-text-color; border-width: medium medium medium 5pt; padding: 0in 0in 0in 0.06in; background: rgb(235, 235, 235) none repeat scroll 0% 50%; margin-top: 0.05in; margin-bottom: 0.16in; font-family: Verdana;" align="left">
+ </p>
+ 
+<p class="western" id="jwbj" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="gb4m8" size="2">Window moving can be allowed again if the user calls method <b id="k.x.">allowMove()</b>: </font>
+ </p>
+ 
+<blockquote id="guke0" style="font-family: Verdana;">
+ <font id="hgnf" size="2"><font id="y.li" color="#000000">dhxWins.window(id).allowMove();</font></font>
+ </blockquote>
+ 
+<p id="n6fx" style="border-style: none none none solid; border-color: -moz-use-text-color; border-width: medium medium medium 5pt; padding: 0in 0in 0in 0.06in; background: rgb(235, 235, 235) none repeat scroll 0% 50%; margin-top: 0.05in; margin-bottom: 0.16in;" align="left">
+ </p>
+ 
+ 
+<p id="pvei3"><font id="le5n" size="2"><a id="z6qc" name="Allow/Deny_Parking"></a><b id="x2yw"><span id="x2yw0" style="font-family: Verdana;">3.2.4 Allow/Deny Parking</span></b></font></p>
+ 
+ 
+<p class="western" id="m6pq" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <br id="qyg411">
+</p>
+<p class="western" id="qyg412" style="margin-bottom: 0.04in; font-family: Verdana;"><font id="qyg413" size="2">By default window parking is allowed. </font>
+ </p>
+ 
+<p class="western" id="t1t:" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="gb4m10" size="2">The user can choose to deny window parking using the following method: </font>
+ </p>
+ 
+<blockquote id="fxo1" style="font-family: Verdana;">
+ <font id="zyow" size="2"><font id="jggb" color="#000000">dhxWins.window(id).denyPark();</font></font>
+ </blockquote>
+ 
+<p id="g47j" style="border-style: none none none solid; border-color: -moz-use-text-color; border-width: medium medium medium 5pt; padding: 0in 0in 0in 0.06in; background: rgb(235, 235, 235) none repeat scroll 0% 50%; margin-top: 0.05in; margin-bottom: 0.16in; font-family: Verdana;" align="left">
+ </p>
+ 
+<p class="western" id="dh3v" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="gb4m11" size="2">Window parking can be allowed again with the help of the following method: </font>
+ </p>
+ 
+<blockquote id="fxo10" style="font-family: Verdana;">
+ <font id="u_2k" size="2"><font id="xdr1" color="#000000">dhxWins.window(id).allowPark();</font></font>
+ </blockquote>
+ 
+<p id="g78j" style="border-style: none none none solid; border-color: -moz-use-text-color; border-width: medium medium medium 5pt; padding: 0in 0in 0in 0.06in; background: rgb(235, 235, 235) none repeat scroll 0% 50%; margin-top: 0.05in; margin-bottom: 0.16in;" align="left">
+ </p>
+ 
+ 
+<p id="x2yw1"><font id="nhrq" size="2"><a id="xggv" name="Hide/Disable_Buttons"></a><b id="x2yw2"><span id="x2yw3" style="font-family: Verdana;">3.2.5 Hide/Disable Buttons</span></b></font></p>
+ 
+ 
+<p class="western" id="ni:7" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <br id="qyg414">
+</p>
+<p class="western" id="qyg415" style="margin-bottom: 0.04in; font-family: Verdana;"><font id="qyg416" size="2">All default buttons are enabled. The user can hide some of/all these buttons or disable them. </font>
+ </p>
+ 
+<p class="western" id="nhx-" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="gb4m13" size="2">In order to hide/disable these buttons use the following methods: </font>
+ </p>
+ 
+<blockquote id="fxo11" style="font-family: Verdana;">
+ <font id="l9mu" size="2"><font id="ezs0" color="#000000">dhxWins.window(id).button("close").hide();</font></font><br id="fpzq">
+ <font id="fxo12" size="2"><font id="fxo14" color="#000000">dhxWins.window(id).button("park").disable();</font></font>
+ </blockquote>
+ 
+<p id="i3bj" style="border-style: none none none solid; border-color: -moz-use-text-color; border-width: medium medium medium 5pt; padding: 0in 0in 0in 0.06in; background: rgb(235, 235, 235) none repeat scroll 0% 50%; margin-top: 0.05in; margin-bottom: 0.16in;" align="left">
+ </p>
+ <a id="zenb" name="Attach_Object"></a>
+ 
+<h3><a name='win_y3xe'>
+ 3.3 Attach Object
+ 
+ </a></h3>
+ 
+<p class="western" id="b1ir" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="gb4m16" size="2"><b id="wwei">dhtmlxWindows </b>allows users to attach objects to any window by method <b id="mnep">attachObject():</b></font>
+ </p>
+ 
+<blockquote id="xmw0" style="font-family: Verdana;">
+ <font id="jyei" size="2"><font id="z-sz" color="#000000">dhxWins.window(id).attachObject(objId);</font></font><br id="i4.l0">
+ </blockquote>
+ 
+<p id="cc6t" style="border-style: none none none solid; border-color: -moz-use-text-color; border-width: medium medium medium 5pt; padding: 0in 0in 0in 0.06in; background: rgb(235, 235, 235) none repeat scroll 0% 50%; margin-top: 0.05in; margin-bottom: 0.16in; font-family: Verdana;" align="left">
+ </p>
+ 
+<p id="abxv" style="font-family: Verdana;">
+ <font id="k9i0" size="2"><span id="ji8j" style="font-weight: normal;">If the user wants to adjust window's dimension to that of the container attached to the window, one more parameter should be added to <b id="lg4w">attachOnject()</b> method:</span></font>
+ </p>
+ 
+<blockquote id="lg4w0">
+ <font id="neqc0" style="font-family: Verdana;" size="2"><font id="neqc1" color="#000000">dhxWins.window(id).attachObject(objId, <b id="lg4w1">true</b>);</font></font><br id="bgba">
+ </blockquote>
+ 
+<p id="neqc3" style="font-family: Verdana;">
+ <font id="twhj3" style="font-family: Verdana;" size="2"><b id="twhj4">Note: </b>The container (which dimensions the user wants the window to be adjusted to) should have <b id="h5h9">certain constant sizes</b>.</font></p>
+<p id="neqc3" style="font-family: Verdana;"><br>
+</p>
+<p><b>3.3.1 Object Size Handling</b><br>
+</p>
+<p><br>
+</p>
+<p>By default, windows have <b>overflow:hidden</b> style. <br>
+</p>
+<p><br>
+</p>
+<p>In case the window is not able to display the whole object, the following style should be specified for the object:<br>
+</p>
+<blockquote>
+ 
+<p>&lt;div id="objId" style="width:100%;height:100%;overflow:auto;...><br>
+ </p>
+</blockquote>
+<p>Now the window will display the scroll bar in case the object does not fit window 's size.<br>
+</p>
+<p id="neqc3" style="font-family: Verdana;">
+ </p>
+ 
+<h3><a name='win_y3xe10'>
+ 3.4 Append Object
+ </a></h3>
+ 
+<p class="western" id="twhj2" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="abxv3" style="font-family: Verdana;" size="2">The user can append an object from the page to any dhtmlx window. The essence of appending an object is the following: when the user appends more than one object to a window, every next object added doesn't replace the previous one, but is added right after it.<br id="ciyq">
+ To append an object to a window, the user needs to indicate <b id="r5gv">id </b>of the window and <b id="qh8m">id </b>of the appended object:<br id="t4r3">
+ </font>
+ </p>
+ 
+<blockquote id="t4r30">
+ <font id="t4r31" style="font-family: Verdana;" size="2">dhxWins.window(id).appendObject(firstId);</font><br id="t4r32">
+ <font id="t4r33" style="font-family: Verdana;" size="2">dhxWins.window(id).appendObject(secondId);</font><br id="t4r34">
+ </blockquote>
+ <font id="t4r35" style="font-family: Verdana;" size="2">It should be noted that the first object can be added to a window through <a href="#Attach_Object" id="qh5y" title="attachObject() method"><b id="bnbv">attachObject()</b> method</a>, while for appending the second object ,the user should apply </font><font id="bnbv0" style="font-family: Verdana;" size="2"><b id="bnbv1">appendObject()</b> method:<br id="bnbv2">
+ </font>
+ 
+<blockquote id="cjo5">
+ <font id="cjo50" style="font-family: Verdana;" size="2"><font id="cjo51" color="#000000">dhxWins.window(id).attachObject(objId);</font></font><br id="bnbv4">
+ <font id="bnbv5" style="font-family: Verdana;" size="2">dhxWins.window(id).appendObject(secondId);</font><br id="g:jc0">
+ </blockquote>
+ 
+<p class="western" id="i4.l2" style="margin-bottom: 0.04in; font-family: Verdana;">
+ </p>
+ 
+<h3><a name='win_mkyy'>
+ 3.5 Attach URL
+ </a></h3>
+ 
+<p class="western" id="tjce" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="utns" color="#000000" size="2">There is the possibility to attach any external page to a window or any content stored locally (using AJAX) with the help of method <b id="xqy5">attachURL()</b>:</font>
+ </p>
+ 
+<blockquote id="yq4u" style="font-family: Verdana;">
+ <font id="u97g" size="2"><font id="fony" color="#000000">dhxWins.window(id).attachURL(url, AJAX);</font></font>
+ </blockquote>
+ 
+<p class="western" id="yq4u0" style="margin-bottom: 0.04in; font-family: Verdana;">
+ </p>
+ 
+<p class="western" id="cz0r" style="margin-bottom: 0.04in;">
+ <font id="b8.v1" style="font-family: Verdana;" color="#000000" size="2">The second parameter here indicates whether the content stored locally will be loaded through AJAX (the second parameter should be set to <b id="f1h7">true</b>) or not </font><font id="pjrf" style="font-family: Verdana;" color="#000000" size="2">(the second parameter should be omitted)</font><font id="pjrf0" style="font-family: Verdana;" color="#000000" size="2">. </font><font id="cz0r0" size="2"><span id="cz0r1" style="font-family: Verdana;">When the content is loaded into the window, <a href="RawDocContents?docID=dgr5rjkf_0hgqvpxfn&amp;justBody=false&amp;revision=_latest&amp;timestamp=1219064687526&amp;editMode=true&amp;strip=true#onContentLoaded" id="pwf2" title="onContentLoad">onContentLoaded</a> event can be called.</span></font><br>
+</p>
+ 
+<p class="western" id="pt8." style="margin-bottom: 0.04in;">
+ <font id="b8.v4" style="font-family: Verdana;" color="#000000" size="2"><br>
+</font><font id="u_nl" size="2"><font id="rjco1" style="font-family: Verdana;" color="#000000"></font></font></p>
+<p class="western" id="pt8." style="margin-bottom: 0.04in;"><b><font size="2"><font face="Verdana">3.5.1 Accessing Inner Window Content </font></font></b><br>
+</p>
+<br>
+<p class="western" id="pt8." style="margin-bottom: 0.04in;">
+ <font id="b8.v4" style="font-family: Verdana;" color="#000000" size="2">Any object on the external page attached with <b>attachURL()</b> method <span id="gze1" style="background-color: rgb(255, 255, 255);"></span>can be accessed </font><font id="u_nl" size="2"><font id="rjco1" style="font-family: Verdana;" color="#000000">like this:</font></font></p>
+<p class="western" id="pt8." style="margin-bottom: 0.04in;"><font id="u_nl" size="2"><font id="rjco1" style="font-family: Verdana;" color="#000000"><br>
+</font></font></p>
+<ul><li><font id="u_nl" size="2"><font id="rjco1" style="font-family: Verdana;" color="#000000">Page <b>inner.html </b></font></font><font id="u_nl" size="2"><font id="rjco1" style="font-family: Verdana;" color="#000000"><b></b><br>
+</font></font></li></ul>
+<blockquote>
+<p class="western" id="pt8." style="margin-bottom: 0.04in;"><font id="u_nl" size="2"><font id="rjco1" style="font-family: Verdana;" color="#000000">...<br>
+</font></font></p>
+<p class="western" id="pt8." style="margin-bottom: 0.04in;"><font id="u_nl" size="2"><font id="rjco1" style="font-family: Verdana;" color="#000000">&lt;div id = "<b>A</b>">...&lt;/div> <br>
+</font></font></p>
+<p class="western" id="pt8." style="margin-bottom: 0.04in;"><font size="2"><span style="font-family: Verdana;">&lt;script></span><br style="font-family: Verdana;">
+<span style="font-family: Verdana;"> function </span><b style="font-family: Verdana;">myFunc()</b><span style="font-family: Verdana;"> {</span><br style="font-family: Verdana;">
+<span style="font-family: Verdana;"> ...</span><br style="font-family: Verdana;">
+<span style="font-family: Verdana;"> }</span><br style="font-family: Verdana;">
+<span style="font-family: Arial;"><span style="font-family: Verdana;"> &lt;/script</span>></span></font><font id="u_nl" size="2"><font id="rjco1" style="font-family: Verdana;" color="#000000"></font></font></p>
+<p class="western" id="pt8." style="margin-bottom: 0.04in;"><font id="u_nl" size="2"><font id="rjco1" style="font-family: Verdana;" color="#000000">...<br>
+</font></font></p>
+</blockquote>
+<ul><li><font id="u_nl" size="2"><font id="rjco1" style="font-family: Verdana;" color="#000000"></font></font><font id="u_nl" size="2"><font id="rjco1" style="font-family: Verdana;" color="#000000">Page <b>index.html </b></font></font><font id="u_nl" size="2"><font id="rjco1" style="font-family: Verdana;" color="#000000"></font></font></li></ul>
+<blockquote>
+<p class="western" id="pt8." style="margin-bottom: 0.04in; font-family: Verdana;"><sub><font color="#000000"><font size="2">&lt;script></font></font></sub></p>
+<p class="western" id="pt8." style="margin-bottom: 0.04in; font-family: Verdana;"><sub><font color="#000000"><font size="2"> var dhxWins = new dhtmlXWindows(...);<br>
+ dhxWins.createWindow("w1",...);<br>
+ w1.attachURL("inner.html");</font></font></sub></p>
+<p class="western" id="pt8." style="margin-bottom: 0.04in; font-family: Verdana;"><sub><font color="#000000"><font size="2"> // accessing &lt;div id="A"><br>
+</font></font></sub></p>
+<p class="western" id="pt8." style="margin-bottom: 0.04in; font-family: Verdana;"><sub> if (_isIE) {<br>
+ dhxWins.window("w1")._frame.contentWindow.document.getElementById("<b>A</b>")...<br>
+ } else {<br>
+ dhxWins.window("w1")._frame.contentDocument.getElementById("<b>A</b>")...<br>
+ }</sub></p>
+<p class="western" id="pt8." style="margin-bottom: 0.04in; font-family: Verdana;"><sub> </sub> <font size="2"> </font><font size="2">// calling function from inner.html</font><sub></sub></p>
+<p class="western" id="pt8." style="margin-bottom: 0.04in; font-family: Verdana;"><sub> </sub><font size="2">dhxWins.window("w1")._frame.contentWindow.<b>myFunc()</b>;</font><sub></sub></p>
+<p class="western" id="pt8." style="margin-bottom: 0.04in;"><sub style="font-family: Verdana;">&lt;/script></sub></p>
+</blockquote>
+<p class="western" id="pt8." style="margin-bottom: 0.04in; font-family: Verdana;"></p>
+<p class="western" id="pt8." style="margin-bottom: 0.04in;"></p>
+<b id="vmeg">3.5.2 Window Accessing from Attached URL<br>
+<br>
+</b>
+ 
+<p id="s3aw1" style="font-family: Verdana;">
+ <font id="d-8d0" size="2">If the user needs to do some action with a window from the attached URL (for example, close it by clicking some button on page), he should</font><font id="s3aw2" color="#000000" size="2"> write the following code lines </font><font id="q68h" color="#000000" size="2">in the attached external page</font><font id="q68h0" color="#000000" size="2">:<br id="cms92">
+ </font>
+ </p>
+ 
+<blockquote id="o..x" style="font-family: Verdana;">
+ <font id="d-8d1" size="2">&lt;input type="button" value="close window" onclick="closeWindow();"> // create a button<br id="vu48">
+ <br id="a3a8">
+ &lt;script><br id="a3a80">
+ function closeWindow() {<br id="a3a81">
+ parent.dhxWins.window("w1").close(); // close a window<br id="a3a82">
+ // OR<br id="a3a83">
+ parent.win.close(); // close a window<br id="a3a84">
+ }<br id="o..x0">
+ &lt;/script><br id="o..x1">
+ </font>
+ </blockquote>
+ <font id="d-8d2" style="font-family: Verdana;" size="2">It should be noted that variables <b id="sj_f">dhxWins </b>and <b id="sj_f0">win </b>should be created as global ones (in our main dhtmlxWindows script) in order to be seen by the script in the attached </font><font id="asy5" style="font-family: Verdana;" color="#000000" size="2">external </font><font id="d-8d3" style="font-family: Verdana;" size="2"> page.</font><br id="fbna1">
+ 
+<h2><a name='win_r68d'>
+ 4. Global dhtmlxWindows Parameters
+ </a></h2>
+ 
+<p class="western" id="dsfp" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="d-8d5" size="2">Global parameters affect the entire system of <b id="qnv8">dhtmlxWindows</b>.<br id="hdps">
+ </font>
+ </p>
+ 
+<h3><a name='win_hdps0'>
+ 4.1 imagePath
+ 
+ </a></h3>
+ 
+<p class="western" id="hdps66" style="margin-bottom: 0.04in; font-family: Verdana;">
+ </p>
+ 
+<p class="western" id="gkf50" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="r::." size="2">Method <b id="n0.f">setImagePath</b><b id="x604">() </b>should be used to set the full paths to the directory where windows image files are located. </font><font id="r::.0" style="font-family: Verdana;" size="2">In this method the user should set the path to 'codebase/imgs/' directory, where <b id="kxj-">skin </b>images are stored. </font><font id="gkf5" size="2">Skin images are grouped by skin name in the directories inside this <b id="x16s">imgs</b> one. The user shouldn't indicate a certain skin images directory inside <b id="j6._">imgs</b> one in setImagePath() method, as the system will do it itself.</font>
+ </p>
+ 
+<p class="western" id="h5pm" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <br id="gkf52">
+ </p>
+ <font id="t-kd" style="font-family: Verdana;" size="2">The following code string should be placed before any of data loading methods<a id="jcck98" name="_Toc193605132"></a>:</font>
+ 
+<p class="western" id="r::.1" style="margin-bottom: 0.04in; font-family: Verdana;">
+ </p>
+ 
+<blockquote id="qnv81" style="font-family: Verdana;">
+ <font id="gmmk" size="2"><font id="sq6x" color="#000000">dhxWins.setImagePath(</font></font><font id="oyc9" size="2">"[full path to this directory]/codebase/imgs/"</font><font id="oyc90" size="2"><font id="oyc91" color="#000000">)</font><b id="i:dm">;</b></font>
+ </blockquote>
+ 
+<p id="e2l9" style="border-style: none none none solid; border-color: -moz-use-text-color; border-width: medium medium medium 5pt; padding: 0in 0in 0in 0.06in; background: rgb(235, 235, 235) none repeat scroll 0% 50%; margin-top: 0.05in; margin-bottom: 0.16in;" align="left">
+ </p>
+ 
+<h3><a name='win_hdps68'>
+ 4.2 Viewport
+ </a></h3>
+ 
+<p class="western" id="ew9s" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="d-8d10" size="2">This parameter sets the invisible area that limits windows' movements. Windows can’t be completely moved outside the viewport. </font>
+ </p>
+ 
+<p class="western" id="a4ru" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="d-8d11" size="2">Users can specify the size of the viewport. By default the size of the viewport occupies the <b id="pipy">document.body</b> and automatically changes its size when <b id="ayo0">document.body</b>’s size changes. </font>
+ </p>
+ 
+<p class="western" id="a-v6" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="d-8d12" size="2">To enable user-defined viewport, invoke the following code: </font>
+ </p>
+ 
+<blockquote id="tzo2" style="font-family: Verdana;">
+ <font id="f.y9" size="2"><font id="y4hp" color="#000000">dhxWins.enableAutoViewport(false);</font></font><br id="cpkz">
+ <font id="tzo20" size="2"><font id="tzo22" color="#000000">dhxWins.setViewport(10, 10, 1260, 500, </font></font><font id="apmz0" color="#000000" size="2"><b id="ye.y">parentObj</b></font><font id="obsc3" color="#000000" size="2">);</font>
+ </blockquote>
+ 
+<p id="fu-x" style="border-style: none none none solid; border-color: -moz-use-text-color; border-width: medium medium medium 5pt; padding: 0in 0in 0in 0.06in; background: rgb(235, 235, 235) none repeat scroll 0% 50%; margin-top: 0.05in; margin-bottom: 0.16in; font-family: Verdana;" align="left">
+ </p>
+ 
+<p class="western" id="obsc8" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="g9i20" color="#000000" size="2"><b id="obsc5">parentObj </b></font><font id="apmz1" color="#000000" size="2">parameter </font><font id="obsc6" color="#000000" size="2">is used to attach a viewport to a parent object.</font><br id="l36m0">
+ </p>
+ 
+<p class="western" id="obsc9" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="omxp0" color="#000000" size="2">To attach a viewport to the existing object on page, the user should do the following: </font>
+ </p>
+ 
+<blockquote id="pc2c" style="font-family: Verdana;">
+ <font id="obsc11" color="#000000" size="2">dhxWins.enableAutoViewport(false);</font><br id="obsc13">
+ <font id="pc2c0" color="#000000" size="2">dhxWins.attachViewportTo(<b id="omxp1">obj</b></font><font id="obsc14" color="#000000" size="2">);</font><br id="apmz3">
+ </blockquote>
+ 
+<p id="obsc10" style="border-style: none none none solid; border-color: -moz-use-text-color; border-width: medium medium medium 5pt; padding: 0in 0in 0in 0.06in; background: rgb(235, 235, 235) none repeat scroll 0% 50%; margin-top: 0.05in; margin-bottom: 0.16in; font-family: Verdana;" align="left">
+ </p>
+ 
+<p class="western" id="obsc18" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="d-8d17" size="2"><b id="obsc19">keepInViewport()</b> method, when is set to <b id="pc2c2">true</b>, permanently locates a window within the viewport (the window can’t be moved outside the viewport). </font>
+ </p>
+ 
+<blockquote id="pc2c3" style="font-family: Verdana;">
+ <font id="v3_9" size="2"><font id="elwt" color="#000000">window(id).keepInViewport(true/false);</font></font>
+ </blockquote>
+ 
+<p id="h0bf" style="border-style: none none none solid; border-color: -moz-use-text-color; border-width: medium medium medium 5pt; padding: 0in 0in 0in 0.06in; background: rgb(235, 235, 235) none repeat scroll 0% 50%; margin-top: 0.05in; margin-bottom: 0.16in; font-family: Verdana;" align="left">
+ </p>
+ 
+<p class="western" id="r-yh" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="d-8d18" size="2">By default this method is set to <b id="pc2c4">false</b>. Thus, all windows can be moved outside the vieport in such a way that only a tiny part of window’s header will be seen.</font><br id="sz8w">
+ </p>
+ 
+<h3><a name='win_f8jq'>
+ 4.3 Enable/Disable Effects
+ </a></h3>
+ 
+<p class="western" id="r-yh1" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="og5_" size="2">There are some default effects that can be enabled/disabled for <b id="og5_0">dhtmlxWindows</b>:<br id="qu0r">
+ </font>
+ </p>
+ 
+<ul id="qu0r0" style="font-family: Verdana;">
+ <li id="qu0r1">
+ <font id="og5_1" size="2">move; </font>
+ </li>
+ <li id="m9:0275">
+ <font id="og5_2" size="2">resize.</font>
+ </li>
+ </ul>
+ <font id="eagp" style="font-family: Verdana;" size="2"><br id="eagp0">
+ We recommend using effects to make your windows more attractive. However, it must be done reasonably. It should be noted that effects are disabled by default.<br id="p:s1">
+ The below mentioned snippets describe the way how effects can be enabled and disabled:<br id="s6sl">
+ </font>
+ 
+<blockquote id="tn-2">
+ <font id="tn-20" style="font-family: Verdana;" size="2">dhxWins.setEffect(efName, true);</font><br id="tn-21">
+ <font id="tn-22" style="font-family: Verdana;" size="2">dhxWins.setEffect(efName, false);</font><br id="tn-23">
+ </blockquote>
+ <font id="yoi9" style="font-family: Verdana;" size="2">The first argument here is the name of the effect ("<b id="cu6x">move</b>" or "<b id="cu6x0">resize</b>"), and the second one switches the effect on (<b id="cu6x1">true</b>) or off (<b id="cu6x2">false</b>).<br id="ax910">
+ When the user wants to get the current state of an effect, he should use <b id="w238">getEffect()</b> method, where the name of the event is set as an argument:</font><br id="yoi90">
+ 
+<blockquote id="yoi91">
+ <font id="yoi92" style="font-family: Verdana;" size="2">var state = dhxWins.getEffect(efName); // </font><font id="rdgx" style="font-family: Verdana;" size="2"><span id="qgti" style="color: rgb(0, 0, 0);">returns true|false;</span></font>
+ </blockquote>
+ 
+<p class="western" id="r-yh2" style="margin-bottom: 0.04in; font-family: Verdana;">
+ </p>
+ 
+<p id="n4-n" style="font-family: Verdana;">
+ <font id="n4-n0" size="2">The method returns <b id="n4-n1">true </b>if the effect in question is enabled, and <b id="n4-n2">false </b>in case it is disabled.</font>
+ </p>
+ 
+<h3><a name='win_fwyq'>
+ 4.4 Skins 
+ </a></h3>
+ 
+<p class="western" id="s-or" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="rhx9" size="2">This parameter allows users to change <b id="mhli">dhtmlxWindows</b> skins. There is a set of predefined skins, among which the user can choose one with the help of method <b id="fbqm">setSkin():</b></font>
+ </p>
+ 
+<blockquote id="am3c" style="font-family: Verdana;">
+ <font id="z.4l" size="2"><font id="npr9" color="#000000">dhxWins.setSkin(<b id="u96s">String</b> skin)</font><b id="gc:q">;</b></font>
+ </blockquote>
+ 
+<p id="mstq" style="border-style: none none none solid; border-color: -moz-use-text-color; border-width: medium medium medium 5pt; padding: 0in 0in 0in 0.06in; background: rgb(235, 235, 235) none repeat scroll 0% 50%; margin-top: 0.05in; margin-bottom: 0.16in; font-family: Verdana;" align="left">
+ </p>
+ 
+<p class="western" id="lb.j" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="rhx90" size="2">Skins are able to be changed on the fly, i.e. the user can change them very easily in the process of work by using <b id="mtjs">setSkin() </b>method. </font>
+ </p>
+ 
+<p class="western" id="w2u3" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="rhx91" size="2">There is also the possibility for users to create their own skins. </font>
+ </p>
+ 
+<p class="western" id="n3_y" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="rhx92" size="2">The following built-in skins are available in <b id="jknm">dhtmlxWindows</b>:</font>
+ </p>
+ 
+<ul id="bcdv0" style="font-family: Verdana;">
+ <li id="bcdv1">
+ <font id="bcdv2" size="2">dhx_blue (the default one)</font>
+ </li>
+ </ul>
+ 
+<div id="jakn" style="padding: 1em 0pt; text-align: left;">
+ <img id="zcqg" src="common/dgr5rjkf_173db5xvkdm_b.png" height="180" width="185"><br id="bcdv3">
+ </div>
+ 
+<ul id="r-gj2">
+ <li id="bcdv5">
+ <font id="bcdv6" style="font-family: Verdana;" size="2">dhx_black</font>
+ </li>
+ </ul>
+ </div>
+ 
+<div id="brp0">
+ <img id="e5p1" src="common/dgr5rjkf_173hhbpn4dx_b.png" height="180" width="187">
+ 
+<ul id="fy_o1">
+ <li id="r-gj3">
+ <font id="r-gj4" size="2"><span id="r-gj5" style="font-family: Verdana;">web</span></font>
+ </li>
+ </ul>
+ 
+<div id="vng_" style="padding: 1em 0pt; text-align: left;">
+ 
+<div id="zbcu" style="padding: 1em 0pt; text-align: left;">
+ 
+<div id="Section2">
+ <img id="qfit" name="graphics1" src="common/dgr5rjkf_166fw73gc.png" align="bottom" border="0" height="188" width="188"><br id="r-gj7">
+ 
+<ul id="r-gj8" style="font-family: Verdana;">
+ <li id="r-gj9">
+ <font id="rhx910" size="2">aqua_dark</font>
+ </li>
+ </ul>
+ 
+<p class="western" id="htch" style="margin-bottom: 0.04in;">
+ </p>
+ <img id="doc-" name="graphics2" src="common/dgr5rjkf_2g3bms9g6.png" align="bottom" border="0" height="188" width="188"><br id="jebf">
+ 
+<ul id="jebf0" style="font-family: Verdana;">
+ <li id="jebf1">
+ <font id="rhx911" size="2">aqua_orange</font>
+ </li>
+ </ul>
+ 
+<p class="western" id="b:sk" style="margin-bottom: 0.04in;">
+ </p>
+ <img id="v8lf" name="graphics3" src="common/dgr5rjkf_3gd9288fp.png" align="bottom" border="0" height="188" width="188"><br id="jebf2">
+ 
+<ul id="jebf3" style="font-family: Verdana;">
+ <li id="jebf4">
+ <font id="rhx912" size="2">aqua_sky</font>
+ </li>
+ </ul>
+ 
+<p class="western" id="h:lz" style="margin-bottom: 0.04in;">
+ </p>
+ <img id="mgu0" name="graphics4" src="common/dgr5rjkf_4g3pk4xx4.png" align="bottom" border="0" height="188" width="188"><br id="jebf5">
+ 
+<ul id="jebf6" style="font-family: Verdana;">
+ <li id="jebf7">
+ <font id="rhx913" size="2">modern_red</font>
+ </li>
+ </ul>
+ 
+<p class="western" id="dp9j" style="margin-bottom: 0.04in;">
+ </p>
+ <img id="z_yr" name="graphics5" src="common/dgr5rjkf_55ctp6sfp.png" align="bottom" border="0" height="188" width="188"><br id="jebf8">
+ 
+<ul id="jebf9">
+ <li id="jebf10">
+ <font id="rhx914" style="font-family: Verdana;" size="2">modern_black</font>
+ </li>
+ </ul>
+ 
+<p class="western" id="y9n1" style="margin-bottom: 0.04in;">
+ </p>
+ <img id="aoxt" name="graphics6" src="common/dgr5rjkf_673rpb8gw.png" align="bottom" border="0" height="188" width="188"><br id="jebf11">
+ 
+<ul id="jebf12">
+ <li id="jebf13">
+ <font id="rhx915" style="font-family: Verdana;" size="2">modern_blue</font>
+ </li>
+ </ul>
+ 
+<p class="western" id="twi2" style="margin-bottom: 0.04in;">
+ </p>
+ <img id="qfam" name="graphics7" src="common/dgr5rjkf_7fr34w8hs.png" align="bottom" border="0" height="188" width="188"><br id="jebf14">
+ 
+<ul id="jebf15" style="font-family: Verdana;">
+ <li id="jebf16">
+ <font id="rhx916" size="2">clear_blue</font>
+ </li>
+ </ul>
+ 
+<p class="western" id="vb_e" style="margin-bottom: 0.04in;">
+ </p>
+ <img id="c-ds" name="graphics8" src="common/dgr5rjkf_8dw2q8kgm.png" align="bottom" border="0" height="188" width="188"><br id="jebf17">
+ 
+<ul id="jebf18" style="font-family: Verdana;">
+ <li id="jebf19">
+ <font id="rhx917" size="2">clear_silver</font>
+ </li>
+ </ul>
+ 
+<p class="western" id="f.2e" style="margin-bottom: 0.04in;">
+ </p>
+ <img id="k3kp" name="graphics9" src="common/dgr5rjkf_9d6wpcbff.png" align="bottom" border="0" height="188" width="188"><br id="jebf20">
+ 
+<ul id="jebf21" style="font-family: Verdana;">
+ <li id="jebf22">
+ <font id="rhx918" size="2">clear_green</font>
+ </li>
+ </ul>
+ 
+<p class="western" id="raf9" style="margin-bottom: 0.04in;">
+ </p>
+ <img id="wue:" name="graphics10" src="common/dgr5rjkf_10hdd3tpdd.png" align="bottom" border="0" height="188" width="188"><br id="jebf23">
+ 
+<ul id="jebf24">
+ <li id="jebf25">
+ <font id="rhx919" style="font-family: Verdana;" size="2">standard</font>
+ </li>
+ </ul>
+ 
+<p class="western" id="xuel" style="margin-bottom: 0.04in;">
+ </p>
+ <img id="mpx." name="graphics11" src="common/dgr5rjkf_11jn7pk9c9.png" align="bottom" border="0" height="188" width="188"><img alt="" id="rdp_2"><br id="fygx">
+ <font id="fygx0" size="2"><span id="gn10" style="font-family: Verdana;">It should be noted that some skins can be available as <b id="fygx1">addons</b>, and they are not included into the package. But they can be downloaded from the site.</span></font><br id="xq8a">
+ 
+<h2><a name='win_t6lm'>
+ 5. Windows Settings Manipulations
+ </a></h2>
+ 
+<h3><a name='win_pd3:'>
+ 5.1 Window Accessing
+ 
+ </a></h3>
+ 
+<p class="western" id="u8xr" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="vgth" size="2">The user can access a window in the two following ways: </font>
+ </p>
+ 
+<ul id="dnww" style="font-family: Verdana;">
+ <li id="ika4">
+ 
+<p class="western" id="o3vv" style="margin-bottom: 0.04in;">
+ <font id="vgth0" size="2">Using a direct link to the object that will be returned by <b id="ngzm">createWindow()</b> method: </font>
+ </p>
+ </li>
+ </ul>
+ 
+<blockquote id="nmfq" style="font-family: Verdana;">
+ <font id="k6q-" size="2"><font id="ok1w" color="#000000">var dhxWins = new dhtmlxWindows();</font></font><br id="i84v">
+ <font id="nmfq0" size="2"><font id="nmfq2" color="#000000">var win = dhxWins.createWindow(id,…);</font></font>
+ </blockquote>
+ 
+<p id="sg2p" style="border-style: none none none solid; border-color: -moz-use-text-color; border-width: medium medium medium 5pt; padding: 0in 0in 0in 0.06in; background: rgb(235, 235, 235) none repeat scroll 0% 50%; margin-top: 0.05in; margin-bottom: 0.16in; font-family: Verdana;" align="left">
+ </p>
+ 
+<ul id="fi_2" style="font-family: Verdana;">
+ <li id="jsu6">
+ 
+<p class="western" id="oj2_" style="margin-bottom: 0.04in;">
+ <font id="vgth2" size="2">Through the global scope by calling <b id="yb9g">window()</b> function: </font>
+ </p>
+ </li>
+ </ul>
+ 
+<blockquote id="nmfq3" style="font-family: Verdana;">
+ <font id="ztfn" size="2"><font id="jf72" color="#000000">var dhxWins = new dhtmlxWindows();</font></font><br id="w97x">
+ <font id="nmfq4" size="2"><font id="nmfq6" color="#000000">dhxWins.window(id);</font></font>
+ </blockquote>
+ 
+<p id="oi1x" style="border-style: none none none solid; border-color: -moz-use-text-color; border-width: medium medium medium 5pt; padding: 0in 0in 0in 0.06in; background: rgb(235, 235, 235) none repeat scroll 0% 50%; margin-top: 0.05in; margin-bottom: 0.16in; font-family: Verdana;" align="left">
+ </p>
+ 
+<p class="western" id="n-3j" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="vgth4" size="2">Thus, the user can access this window using <b id="m0xh">win </b>variable or by calling <b id="naio">window()</b> function. </font>
+ </p>
+ 
+<p class="western" id="hmcf" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="vgth5" size="2">Regardless of the way the window is accessed, the content of <b id="bl61">win</b> variable and <b id="bl610">windows.window(id)</b> will be equal.</font>
+ </p>
+ 
+<h3><a name='win_rjo7'>
+ 5.2 Window Iterator
+ </a></h3>
+ 
+<p class="western" id="si1." style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="vgth7" size="2">Method <b id="cpci">forEachWindow()</b> calls a user-defined function for <b id="dgpn">every existing window</b> passing a window handler into it. </font>
+ </p>
+ 
+<blockquote id="bl611" style="font-family: Verdana;">
+ <font id="lla9" size="2"><font id="kvnl" color="#000000">forEachWindow(function(winHandler){<br id="bl612">
+ winHandler.show();<br id="bl613">
+ })</font></font>
+ </blockquote>
+ 
+<p id="ucn0" style="border-style: none none none solid; border-color: -moz-use-text-color; border-width: medium medium medium 5pt; padding: 0in 0in 0in 0.06in; background: rgb(235, 235, 235) none repeat scroll 0% 50%; margin-top: 0.05in; margin-bottom: 0.16in;" align="left">
+ </p>
+ 
+<h3><a name='win_rjo7153'>
+ 5.3 Changing Dimension
+ </a></h3>
+ 
+<p id="d2xe" style="border-style: none none none solid; border-color: -moz-use-text-color; border-width: medium medium medium 5pt; padding: 0in 0in 0in 0.06in; background: rgb(235, 235, 235) none repeat scroll 0% 50%; margin-top: 0.05in; margin-bottom: 0.16in; font-family: Verdana;" align="left">
+ </p>
+ 
+<p class="western" id="v-v4" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="vgth12" size="2">If the user wants to change window's dimension, he/she should use method <b id="qrzh">setDimension()</b> and pass width and height values: </font>
+ </p>
+ 
+<blockquote id="s6ok3" style="font-family: Verdana;">
+ <font id="y.b5" size="2"><font id="vw-j" color="#000000">dhxWins.window(id).setDimension(<b id="ky2e">int</b> width</font><b id="beyy">,</b><font id="jgu2" color="#000000"> <b id="yx3b">int</b> height);</font></font>
+ </blockquote>
+ 
+<p id="bnlq" style="border-style: none none none solid; border-color: -moz-use-text-color; border-width: medium medium medium 5pt; padding: 0in 0in 0in 0.06in; background: rgb(235, 235, 235) none repeat scroll 0% 50%; margin-top: 0.05in; margin-bottom: 0.16in; font-family: Verdana;" align="left">
+ </p>
+ 
+<p class="western" id="rned" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="vgth13" size="2">To set only window's width, or only its height, use the following variants of syntax:<br id="akx0">
+ </font>
+ </p>
+ 
+<blockquote id="akx00" style="font-family: Verdana;">
+ <font id="akx01" size="2"><font id="akx02" color="#000000">dhxWins.window(id).setDimension(<b id="akx03">int</b> width</font><font id="akx05" color="#000000">); // only width is set<br id="ejhr">
+ </font></font>
+ 
+<p id="n8k4">
+ <font id="akx09" size="2"><font id="akx010" color="#000000">dhxWins.window(id).setDimension(<b id="akx011">null</b></font><b id="akx012">,</b><font id="akx013" color="#000000"> <b id="akx014">int</b> height); // only height is set</font></font><br id="ejhr0">
+ </p>
+ </blockquote>
+ 
+<p class="western" id="xok-0" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="xok-1" size="2">The same syntax variants are available with methods that are responsible for setting minimum and maximum dimensions.</font>
+ </p>
+ 
+<p class="western" id="b7th" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <br id="b7th1">
+ </p>
+ 
+<p class="western" id="t2mz1" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="wx_50" size="2">Default minimum and maximum Dimensions are set in <b id="t2mz0">dhtmlxWindows.</b>The user has the possibility to set his own </font><font id="s:40" size="2">minimum and maximum</font><font id="s:400" size="2"> Dimension parameters to a window by calling methods <b id="yduh">setMaxDimension()</b> and <b id="zt43">setMinDimension():</b></font>
+ </p>
+ 
+<blockquote id="s6ok" style="font-family: Verdana;">
+ <font id="ewi_" size="2"><font id="ft9h" color="#000000">dhxWins.window(id).setMaxDimension(<b id="ds63">int</b> maxWidth</font><b id="n7kv">,</b><font id="twjh" color="#000000"> <b id="ze0t">int</b> maxHeight);</font></font><br id="hqtm">
+ <font id="s6ok0" size="2"><font id="s6ok2" color="#000000">dhxWins.window(id).setMinDimension(<b id="go.5">int</b> minWidth</font><b id="hy0g">,</b><font id="ydg7" color="#000000"> <b id="fna-">int</b> minHeight);</font></font>
+ </blockquote>
+ 
+<p class="western" id="he.k2" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="he.k3" size="2">There is also a method to get window's dimension (will return array (width, height)): </font>
+ </p>
+ 
+<blockquote id="n5ju" style="font-family: Verdana;">
+ <font id="miwk" size="2"><font id="brwc" color="#000000">var dimension = dhxWins.window(id).getDimension()</font><b id="fqwi">;</b></font>
+ </blockquote>
+ 
+<p id="t1_3" style="border-style: none none none solid; border-color: -moz-use-text-color; border-width: medium medium medium 5pt; padding: 0in 0in 0in 0.06in; background: rgb(235, 235, 235) none repeat scroll 0% 50%; margin-top: 0.05in; margin-bottom: 0.16in; font-family: Verdana;" align="left">
+ </p>
+ 
+<p class="western" id="p0.i" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="vgth14" size="2">The following methods can also be used to get </font><font id="qjbw" size="2">minimum and maximum</font><font id="qjbw0" size="2"> Dimensions: </font>
+ </p>
+ 
+<blockquote id="adk." style="font-family: Verdana;">
+ <font id="v3oe" size="2"><font id="pj0r" color="#000000">var maxDimension = dhxWins.window(id).getMaxDimension();</font></font><br id="unx8">
+ <font id="adk.0" size="2"><font id="adk.2" color="#000000">var minDimension = dhxWins.window(id).getMinDimension();</font></font>
+ </blockquote>
+ 
+<p id="s04c" style="border-style: none none none solid; border-color: -moz-use-text-color; border-width: medium medium medium 5pt; padding: 0in 0in 0in 0.06in; background: rgb(235, 235, 235) none repeat scroll 0% 50%; margin-top: 0.05in; margin-bottom: 0.16in; font-family: Verdana;" align="left">
+ </p>
+ 
+<p class="western" id="c-a3" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="vgth16" size="2"><b id="w5-q"><i id="d00s">Note</i></b>: a window will be able to occupy the whole viewport after minimizing if the user sets maxDimension to <b id="h9mb">auto</b>: </font>
+ </p>
+ 
+<blockquote id="oofa" style="font-family: Verdana;">
+ <font id="l24_" size="2"><font id="vf_p" color="#000000">dhxWins.window(id).setMaxDimension("auto", "auto");</font></font>
+ </blockquote>
+ 
+<p id="k9oo" style="border-style: none none none solid; border-color: -moz-use-text-color; border-width: medium medium medium 5pt; padding: 0in 0in 0in 0.06in; background: rgb(235, 235, 235) none repeat scroll 0% 50%; margin-top: 0.05in; margin-bottom: 0.16in; font-family: Verdana;" align="left">
+ </p>
+ 
+<p class="western" id="fzyx" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="vgth17" size="2">In this case the window becomes unresizable (only in the maximized state). </font>
+ </p>
+ 
+<p class="western" id="ok5x" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="vgth18" size="2"><i id="rejc"><b id="njh9">Note</b>: </i>if the user changes window's dimension in such a way that it cannot display the whole title text, the text will be cut.</font>
+ </p>
+ 
+<h3><a name='win_rjo7307'>
+ 5.4 Changing Position
+ 
+ </a></h3>
+ 
+<p class="western" id="y-36" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="vgth20" size="2">As with window's dimension, it is available to change window's position. In order to do this, method <b id="beb2">setPosition() </b>must be called with values <b id="paso">x</b> and <b id="vw9f">y</b>: </font>
+ </p>
+ 
+<blockquote id="z72t" style="font-family: Verdana;">
+ <font id="s4xk" size="2"><font id="sfz_" color="#000000">dhxWins.window(id).setPosition(<b id="g811">int</b> x</font><b id="t4zt">,</b><font id="tv.v" color="#000000"> <b id="cd9r">int</b> y);</font></font>
+ </blockquote>
+ 
+<p id="v3el" style="border-style: none none none solid; border-color: -moz-use-text-color; border-width: medium medium medium 5pt; padding: 0in 0in 0in 0.06in; background: rgb(235, 235, 235) none repeat scroll 0% 50%; margin-top: 0.05in; margin-bottom: 0.16in; font-family: Verdana;" align="left">
+ </p>
+ 
+<p class="western" id="fh:v" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="vgth21" size="2">There is also a command to get window's position (will return Array(x, y)): </font>
+ </p>
+ 
+<blockquote id="z72t0" style="font-family: Verdana;">
+ <font id="qdep" size="2"><font id="r3of" color="#000000">var position = dhxWins.window(id).getPosition()</font><b id="ho26">;</b></font>
+ </blockquote>
+ 
+<p id="kw47" style="border-style: none none none solid; border-color: -moz-use-text-color; border-width: medium medium medium 5pt; padding: 0in 0in 0in 0.06in; background: rgb(235, 235, 235) none repeat scroll 0% 50%; margin-top: 0.05in; margin-bottom: 0.16in;" align="left">
+ </p>
+ 
+<h3><a name='win_t3of'>
+ 5.5 Window Parking
+ </a></h3>
+ 
+<p class="western" id="h1._" style="margin-bottom: 0.04in;">
+ I<font id="e.du" style="font-family: Verdana;" size="2">f the user wants to park a window, he/she should use the command <b id="mcqu">park()</b>. </font>
+ </p>
+ 
+<p class="western" id="hpic" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="e.du0" size="2">If the window was parked up, this command makes it park down, and vice versa: </font>
+ </p>
+ 
+<blockquote id="fdbp" style="font-family: Verdana;">
+ <font id="i5oc" size="2"><font id="d.52" color="#000000">dhxWins.window(id).park()</font><b id="kap0">;</b></font>
+ </blockquote>
+ 
+<p id="b4v6" style="border-style: none none none solid; border-color: -moz-use-text-color; border-width: medium medium medium 5pt; padding: 0in 0in 0in 0.06in; background: rgb(235, 235, 235) none repeat scroll 0% 50%; margin-top: 0.05in; margin-bottom: 0.16in;" align="left">
+ </p>
+ 
+<h3><a name='win_t3of153'>
+ 5.6 Window Minimizing/Maximizing
+ </a></h3>
+ 
+<p class="western" id="rubk" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="e.du2" size="2">To minimize/maximize a window from script, the user should call the following methods: </font>
+ </p>
+ 
+<ul id="ksf_" style="font-family: Verdana;">
+ <li id="hn2.">
+ 
+<p class="western" id="r0u." style="margin-bottom: 0.04in;">
+ <font id="e.du3" size="2"><b id="srhd">maximize()</b>; </font>
+ </p>
+ </li>
+ <li id="vmkm">
+ 
+<p class="western" id="c3bz" style="margin-bottom: 0.04in;">
+ <font id="e.du4" size="2"><b id="rtt3">minimize()</b>; </font>
+ </p>
+ </li>
+ </ul>
+ 
+<blockquote id="fdbp0" style="font-family: Verdana;">
+ <font id="vwkw" size="2"><font id="tnk1" color="#000000">dhxWins.window(id).maximize()</font><b id="g6qu">;</b></font><br id="po86">
+ <font id="fdbp1" size="2"><font id="ll_t" color="#000000">dhxWins.window(id).minimize()</font><b id="mztc">;</b></font>
+ </blockquote>
+ 
+<p id="ejhi" style="border-style: none none none solid; border-color: -moz-use-text-color; border-width: medium medium medium 5pt; padding: 0in 0in 0in 0.06in; background: rgb(235, 235, 235) none repeat scroll 0% 50%; margin-top: 0.05in; margin-bottom: 0.16in;" align="left">
+ </p>
+ 
+<h3><a name='win_t3of307'>
+ 5.7 Bringing Window to Top/Bottom
+ 
+ </a></h3>
+ 
+<p class="western" id="d.ro" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="um7:" size="2">The user can bring any window to top with the help of method <b id="cxp-">bringToTop():</b></font>
+ </p>
+ 
+<blockquote id="qf1." style="font-family: Verdana;">
+ <font id="v-dw" size="2"><font id="c__v" color="#000000">dhxWins.window(id). bringToTop ();</font></font>
+ </blockquote>
+ 
+<p id="c1fo" style="border-style: none none none solid; border-color: -moz-use-text-color; border-width: medium medium medium 5pt; padding: 0in 0in 0in 0.06in; background: rgb(235, 235, 235) none repeat scroll 0% 50%; margin-top: 0.05in; margin-bottom: 0.16in; font-family: Verdana;" align="left">
+ </p>
+ 
+<p class="western" id="g2yp" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="um7:0" size="2">In this case the window will be automatically focused. </font>
+ </p>
+ 
+<p class="western" id="k4_w" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="um7:1" size="2">Method <b id="wndo">bringToBottom() </b>brings any window to bottom: </font>
+ </p>
+ 
+<blockquote id="qf1.0" style="font-family: Verdana;">
+ <font id="mpsw" size="2"><font id="fcfg" color="#000000">dhxWins.window(id). bringToBottom ();</font></font>
+ </blockquote>
+ 
+<p id="ubg0" style="border-style: none none none solid; border-color: -moz-use-text-color; border-width: medium medium medium 5pt; padding: 0in 0in 0in 0.06in; background: rgb(235, 235, 235) none repeat scroll 0% 50%; margin-top: 0.05in; margin-bottom: 0.16in; font-family: Verdana;" align="left">
+ </p>
+ 
+<p class="western" id="z4tw" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="um7:2" size="2">In the situation when this method was applied to the top window, the window that lies right after the top one, occupies its position and becomes the top window. </font>
+ </p>
+ 
+<p class="western" id="cx65" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="um7:3" size="2">Some peculiarities of these two methods are revealed dealing with </font><font id="ly-." color="#0000ff" size="2"><u id="zzqy"><a href="#_Window_sticking/unsticking" id="nk5_">sticked/unsticked windows</a></u></font><font id="um7:4" size="2">.</font>
+ </p>
+ 
+<h3><a name='win_l0jz'>
+ 5.8 Window Sticking/Unsticking
+ </a></h3>
+ 
+<p class="western" id="vhiv" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="k_5u0" size="2">The user has the opportunity to stick/unstick a window - to place it always on top. To do this the user should use methods <b id="uyx4">stick() </b></font><font id="h6tr" size="2">or<b id="db99"> unstick().</b></font>
+ </p>
+ 
+<blockquote id="n9wg" style="font-family: Verdana;">
+ <font id="t-l:" size="2"><font id="i_0m" color="#000000">dhxWins.window(id).stick();</font></font><br id="goh.">
+ <font id="n9wg0" size="2"><font id="n9wg2" color="#000000">dhxWins.window(id).unstick()</font><b id="xt_v">;</b></font>
+ </blockquote>
+ 
+<p id="jg_5" style="border-style: none none none solid; border-color: -moz-use-text-color; border-width: medium medium medium 5pt; padding: 0in 0in 0in 0.06in; background: rgb(235, 235, 235) none repeat scroll 0% 50%; margin-top: 0.05in; margin-bottom: 0.16in; font-family: Verdana;" align="left">
+ </p>
+ 
+<p class="western" id="pmfr" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="k_5u2" size="2">If there is any window that was made <b id="n9wg3">sticked</b> in the system, global windows behavior will be the following: </font>
+ </p>
+ 
+<ul id="fb.a" style="font-family: Verdana;">
+ <li id="iqkv">
+ 
+<p class="western" id="oqom" style="margin-bottom: 0.04in;">
+ <font id="k_5u3" size="2">All windows will be divided into 2 groups: sticked and unsticked; </font>
+ </p>
+ </li>
+ <li id="gguq">
+ 
+<p class="western" id="vk5b" style="margin-bottom: 0.04in;">
+ <font id="k_5u4" size="2">Sticked windows (even unfocused ones) will always be positioned over the unsticked ones; </font>
+ </p>
+ </li>
+ <li id="ttsx">
+ 
+<p class="western" id="o9l2" style="margin-bottom: 0.04in;">
+ <font id="k_5u5" size="2">Method <b id="wcm1">bringToTop()</b> will place a sticked window on top among the other sticked ones. As for an unsticked window (in case, there is at least one sticked window), it will be placed on top of all unsticked windows, but below the sticked ones; </font>
+ </p>
+ </li>
+ <li id="b8oi">
+ 
+<p class="western" id="u4m6" style="margin-bottom: 0.04in;">
+ <font id="k_5u6" size="2">Method <b id="jir1">bringToBottom()</b> will work the following way with a sticked window: it will be brought to bottom, but will be placed over any unsticked window; </font>
+ </p>
+ </li>
+ <li id="nh:o">
+ 
+<p class="western" id="ok1c" style="margin-bottom: 0.04in;">
+ <font id="k_5u7" size="2">Any sticked/unsticked window will always be placed under any modal window.</font>
+ </p>
+ </li>
+ </ul>
+ 
+<h3><a name='win_l0jz153'>
+ 5.9 Making Window Modal/Modeless
+ </a></h3>
+ 
+<p class="western" id="ql-2" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="k_5u9" size="2">There is the possibility to make a window modal calling method <b id="frhd">setModal()</b>: </font>
+ </p>
+ 
+<blockquote id="ewgk" style="font-family: Verdana;">
+ <font id="x4gs" size="2"><font id="h9do" color="#000000">dhxWins.window(id).setModal(<b id="ae:p">Boolean</b> state);</font></font>
+ </blockquote>
+ 
+<p id="xkfs" style="border-style: none none none solid; border-color: -moz-use-text-color; border-width: medium medium medium 5pt; padding: 0in 0in 0in 0.06in; background: rgb(235, 235, 235) none repeat scroll 0% 50%; margin-top: 0.05in; margin-bottom: 0.16in; font-family: Verdana;" align="left">
+ </p>
+ 
+<p class="western" id="r:2l" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="k_5u10" size="2">Any modal window has the following features: </font>
+ </p>
+ 
+<ul id="zhaq" style="font-family: Verdana;">
+ <li id="curs">
+ 
+<p class="western" id="s6n5" style="margin-bottom: 0.04in;">
+ <font id="k_5u11" size="2">Only one modal window is allowed at a time; </font>
+ </p>
+ </li>
+ <li id="gn8o">
+ 
+<p class="western" id="uv85" style="margin-bottom: 0.04in;">
+ <font id="k_5u12" size="2">If the user wants to set modal option to any other window, this option should be removed from the current modal window. Or current modal window itself should be removed; </font>
+ </p>
+ </li>
+ </ul>
+ 
+<ul id="mjiw" style="font-family: Verdana;">
+ <li id="bk4q">
+ 
+<p class="western" id="d3ha" style="margin-bottom: 0.04in;">
+ <font id="k_5u13" size="2">Any modal window will always be placed over any other windows (even sticked ones); </font>
+ </p>
+ </li>
+ <li id="lirv">
+ 
+<p class="western" id="gzcx" style="margin-bottom: 0.04in;">
+ <font id="k_5u14" size="2">A modal window requires the user to interact with it, before he can return to operating any other windows (i.e. this window is always focused).</font>
+ </p>
+ </li>
+ <li id="obsc20">
+ <font id="dc51" color="#000000" size="2">By default a newly created window is always modeless.</font><br id="buc4">
+ </li>
+ </ul>
+ 
+<p class="western" id="wc-q" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <br id="ewgk0">
+ </p>
+ 
+<p class="western" id="ewgk1" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="k_5u17" size="2">The value <b id="pd0f">true</b> in method <b id="k.ta">setModal()</b> makes a window modal, while the value <b id="pd0f0">false</b> makes it modeless.</font>
+ </p>
+ 
+<p class="western" id="obsc21" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="k_5u18" size="2">A modal window blocks all other work-flow until it is closed. Thus, the user won't be able to do anything else while a modal window is open.</font>
+ </p>
+ 
+<p class="western" id="obsc22" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="k_5u19" size="2">Modal windows can be used in order to warn the user, or draw his attention to some important change, alert, or event that is going to happen.</font>
+ </p>
+ 
+<h3><a name='win_e7hx'>
+ 5.10 Get Topmost/Bottommost Window
+ 
+ </a></h3>
+ 
+<p class="western" id="m0g-" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="k_5u21" size="2">The user is able to get the handler of the topmost window with the help of the following method: </font>
+ </p>
+ 
+<blockquote id="hme2" style="font-family: Verdana;">
+ <font id="g4b8" size="2"><font id="nzor" color="#000000">dhxWins.window(id).getTopmostWindow();</font></font>
+ </blockquote>
+ 
+<p id="y-d4" style="border-style: none none none solid; border-color: -moz-use-text-color; border-width: medium medium medium 5pt; padding: 0in 0in 0in 0.06in; background: rgb(235, 235, 235) none repeat scroll 0% 50%; margin-top: 0.05in; margin-bottom: 0.16in; font-family: Verdana;" align="left">
+ </p>
+ 
+<p class="western" id="zg5q" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="k_5u22" size="2">To get handler of the bottommost window, the user should call the following method: </font>
+ </p>
+ 
+<blockquote id="hme20" style="font-family: Verdana;">
+ <font id="vl7o" size="2"><font id="p55l" color="#000000">dhxWins.window(id).getBottommostWindow();</font></font>
+ </blockquote>
+ 
+<p id="ck73" style="border-style: none none none solid; border-color: -moz-use-text-color; border-width: medium medium medium 5pt; padding: 0in 0in 0in 0.06in; background: rgb(235, 235, 235) none repeat scroll 0% 50%; margin-top: 0.05in; margin-bottom: 0.16in;" align="left">
+ </p>
+ 
+<h3><a name='win_e7hx154'>
+ 5.11 Making Window Centered
+ </a></h3>
+ <font id="d_x1" style="font-family: Verdana;" color="#000000" size="2">There is also the possibility to make any window centered (place it in the center of the viewport) by calling method <b id="obsc24">center()</b></font><font id="cid3" color="#000000"><font id="k_5u23" style="font-family: Verdana;" size="2">. This method is similar to <b id="obsc29">setPosition() </b>method in some way, but the position of a window is set automatically and does not require the user to specify it.</font></font><font id="d_x1" style="font-family: Verdana;" color="#000000" size="2">:<br>
+<span style="color: rgb(0, 0, 0); background-color: rgb(147, 196, 125);"><br>
+<b><span style="background-color: rgb(255, 255, 255);">Note: </span></b><span style="background-color: rgb(255, 255, 255);">Position of a window will be defined relative to the viewport.</span><br id="s5vi">
+</span></font>
+ 
+<blockquote id="i3i." style="font-family: Verdana;">
+ <font id="obsc27" color="#000000" size="2">dhxWins.window(id).center();</font><br id="o55w">
+ </blockquote>
+ <font id="cid3" color="#000000"><font id="k_5u23" style="font-family: Verdana;" size="2"><br>
+<br>
+<span style="background-color: rgb(147, 196, 125);"><span style="background-color: rgb(255, 255, 255);">There is also a method which allows you to center window on the screen:</span> </span></font></font>
+ 
+<blockquote id="i3i." style="font-family: Verdana;">
+ <font id="obsc27" color="#000000" size="2">dhxWins.window(id).centerOnScreen();</font><br id="o55w">
+ </blockquote>
+ 
+<h3><a name='win_e7hx308'>
+ 5.12 Window Progress Indicator
+ 
+ </a></h3>
+ <font id="tilm" style="font-family: Verdana;" color="#000000" size="2">The user can show a progress indicator in any window. This indicator will visually inform the user about the fact that the information in a window is still loading. A progress indicator can be shown in the following way:<br id="ldeb">
+ </font>
+ 
+<blockquote id="izmx" style="font-family: Verdana;">
+ <font id="obsc31" color="#000000" size="2">dhxWins.window(id).progressOn</font><font id="obsc33" color="#000000" size="2">();</font><br id="z9x8">
+ </blockquote>
+ 
+<p id="xvze" style="font-family: Verdana;">
+ <font id="k_5u25" size="2">A progress indicator can be easily hidden in a window in such a way:</font>
+ </p>
+ 
+<p id="yoep" style="font-family: Verdana;">
+ </p>
+ 
+<blockquote id="obsc35">
+ <font id="obsc36" style="font-family: Verdana;" face="Courier New, monospace" size="2"><font id="obsc38" color="#000000">dhxWins.window(id).progressOff</font></font><font id="obsc39" style="font-family: Verdana;" face="Courier New, monospace" size="2"><font id="obsc41" color="#000000">();</font></font><br id="aor34">
+ </blockquote>
+ 
+<h3><a name='win_e7hx463'>
+ 5.13 Window Header Control
+ 
+ </a></h3>
+ 
+<p id="c:t66">
+ <font id="r8lv" size="2"><font id="r8lv0" face="Verdana">A header of a certain window can be easily hidden by the following method:</font></font>
+ </p>
+ 
+<blockquote id="r8lv1">
+ 
+<p id="r8lv2">
+ <font id="nw9p" style="font-family: Verdana;" color="#000000" size="2">dhxWins.window(id)</font><font id="r8lv3" style="font-family: Verdana;" size="2">.hideHeader();</font>
+ </p>
+ </blockquote>
+ 
+<p id="qqn4">
+ <font id="qqn40" style="font-family: Verdana;" size="2">The window header will be made visible again in the following way:</font>
+ </p>
+ 
+<blockquote id="oiur">
+ 
+<p id="r8lv7">
+ <font id="nw9p1" style="font-family: Verdana;" color="#000000" size="2">dhxWins.window(id).</font><font id="oiur0" style="font-family: Verdana;" size="2">showHeader();</font><br id="c:t67">
+ </p>
+ </blockquote>
+ 
+<h2><a name='win_hyqs'>
+ 6. Buttons Settings Manipulations
+ </a></h2>
+ 
+<h3><a name='win_hyqs0'>
+ 6.1 Button Accessing
+ 
+ </a></h3>
+ <font id="h.na0" size="2"><span id="hyqs156" style="font-family: Verdana;">A button can be accessed in the following way:</span> </font>
+ 
+<blockquote id="t33t" style="font-family: Verdana;">
+ <font id="vt2o" size="2"><font id="j8x3" color="#000000">var btn = dhxWins.window(id).button(id);</font></font>
+ </blockquote>
+ 
+<p id="t_q2" style="border-style: none none none solid; border-color: -moz-use-text-color; border-width: medium medium medium 5pt; padding: 0in 0in 0in 0.06in; background: rgb(235, 235, 235) none repeat scroll 0% 50%; margin-top: 0.05in; margin-bottom: 0.16in; font-family: Verdana;" align="left">
+ </p>
+ 
+<p class="western" id="gea6" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="h.na1" size="2">Default buttons ids are: </font>
+ </p>
+ 
+<ul id="z9yw" style="font-family: Verdana;">
+ <li id="u2c:">
+ 
+<p class="western" id="x:al" style="margin-bottom: 0.04in;">
+ <font id="h.na2" size="2">"park" for "Park" button; </font>
+ </p>
+ </li>
+ <li id="k5bb">
+ 
+<p class="western" id="o.dc" style="margin-bottom: 0.04in;">
+ <font id="h.na3" size="2">"close" for "Close" button; </font>
+ </p>
+ </li>
+ <li id="n35m">
+ 
+<p class="western" id="d-6-" style="margin-bottom: 0.04in;">
+ <font id="h.na4" size="2">"help" for "Help" button; </font>
+ </p>
+ </li>
+ <li id="utnu">
+ 
+<p class="western" id="puf6" style="margin-bottom: 0.04in;">
+ <font id="h.na5" size="2">"stick" for "Stick" button; </font>
+ </p>
+ </li>
+ <li id="ty.o">
+ 
+<p class="western" id="l0r4" style="margin-bottom: 0.04in;">
+ <font id="h.na6" size="2">"sticked" for "Sticked" button (pressed "stick", used for "unstuck" action); </font>
+ </p>
+ </li>
+ <li id="j3ib">
+ 
+<p class="western" id="uldb" style="margin-bottom: 0.04in;">
+ <font id="h.na7" size="2">"minmax1" for "Maximize" button; </font>
+ </p>
+ </li>
+ <li id="yx-q">
+ 
+<p class="western" id="r810" style="margin-bottom: 0.04in;">
+ <font id="h.na8" size="2">"minmax2" for "Minimize" button.</font>
+ </p>
+ </li>
+ </ul>
+ 
+<h3><a name='win_hyqs157'>
+ 6.2 Showing/Hiding Buttons
+ 
+ </a></h3>
+ 
+<p class="western" id="suur" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="gnvo0" size="2">There is the possibility to show/hide a button by calling the following methods: </font>
+ </p>
+ 
+<blockquote id="r:rz" style="font-family: Verdana;">
+ <font id="upxo" size="2"><font id="zv58" color="#000000">dhxWins.window(id).button(id).show()</font>;</font><br id="i76k">
+ <font id="r:rz0" size="2"><font id="jjz1" color="#000000">dhxWins.window(id).button(id).hide()</font>;</font>
+ </blockquote>
+ 
+<p id="qq5v" style="border-style: none none none solid; border-color: -moz-use-text-color; border-width: medium medium medium 5pt; padding: 0in 0in 0in 0.06in; background: rgb(235, 235, 235) none repeat scroll 0% 50%; margin-top: 0.05in; margin-bottom: 0.16in; font-family: Verdana;" align="left">
+ </p>
+ 
+<p class="western" id="afbi" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="gnvo6" size="2"><a href="RawDocContents?docID=dgr5rjkf_0hgqvpxfn&amp;justBody=false&amp;revision=_latest&amp;timestamp=1219830255066&amp;editMode=true&amp;strip=true#Creating_User_Buttons" id="k2w1" title="User buttons">User-buttons</a></font><font id="gnvo2" size="2"> also inherit these methods.</font>
+ </p>
+ 
+<h3><a name='win_hyqs312'>
+ 6.3 Button Enabling/Disabling
+ 
+ </a></h3>
+ 
+<p class="western" id="gwwc" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="gnvo4" size="2">The button can be enabled/disabled by user: </font>
+ </p>
+ 
+<blockquote id="fl7z" style="font-family: Verdana;">
+ <font id="z7n-" size="2"><font id="epww" color="#000000">dhxWins.window(id).button(id).enable()</font>;</font><br id="zskf">
+ <font id="fl7z0" size="2"><font id="ola2" color="#000000">dhxWins.window(id).button(id).disable()</font>;</font>
+ </blockquote>
+ 
+<p id="kn-b" style="border-style: none none none solid; border-color: -moz-use-text-color; border-width: medium medium medium 5pt; padding: 0in 0in 0in 0.06in; background: rgb(235, 235, 235) none repeat scroll 0% 50%; margin-top: 0.05in; margin-bottom: 0.16in; font-family: Verdana;" align="left">
+ </p>
+ 
+<p class="western" id="y-g4" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="m95l" size="2"><a href="#Creating_User_Buttons" id="m95l0" title="User buttons">User-buttons</a> also inherit these methods. </font>
+ </p>
+ 
+<p class="western" id="l1z5" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="gnvo7" size="2"><i id="bo4q"><b id="bu54">Note</b>: </i>in some cases button enabling/disabling is determined by Object. </font>
+ </p>
+ 
+<p class="western" id="rf95" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="gnvo8" size="2">For example, when the window is Parked Up, resize buttons are inactive/disabled. But they become active/enabled when the window is Parked Down. Thus, resize buttons are disabled by Object.</font>
+ </p>
+ <a id="jvt3" name="Creating_User_Buttons"></a>
+ 
+<h3><a name='win_hyqs467'>
+ 6.4 Creating User-Buttons
+ 
+ </a></h3>
+ 
+<p class="western" id="uwds" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="n9if" size="2">This example will show the user how to create his own buttons for a window. </font>
+ </p>
+ 
+<ol id="afn4" style="font-family: Verdana;">
+ <li id="pxrn">
+ 
+<p class="western" id="g4gc" style="margin-bottom: 0.04in;">
+ <font id="n9if0" size="2">To get started, the user should decide for which skin the button will be created. Take, for example, the skin "Web". </font>
+ </p>
+ </li>
+ <li id="tg8n">
+ 
+<p class="western" id="ghk4" style="margin-bottom: 0.04in;">
+ <font id="n9if1" size="2">Then the user should get to know the dimensions of buttons for the chosen skin. </font>
+ </p>
+ </li>
+ <li id="f9oz">
+ 
+<p class="western" id="xylq" style="margin-bottom: 0.04in;">
+ <font id="n9if2" size="2">Each button can be divided into <b id="heik">active</b> and <b id="heik0">inactive</b>. Besides, all buttons have the following states: "default", "over_default", "over_pressed", "disabled". </font>
+ </p>
+ </li>
+ </ol>
+ 
+<p class="western" id="p63j" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="n9if3" size="2">Thus, there must be 8 skins for each single user-button: </font>
+ </p>
+ 
+<ul id="ld7g" style="font-family: Verdana; margin-left: 40px;">
+ <li id="y-y6">
+ 
+<p class="western" id="s901" style="margin-bottom: 0.04in;">
+ <font id="n9if4" size="2">Active; </font>
+ </p>
+ </li>
+ </ul>
+ 
+<ul id="nrtz" style="font-family: Verdana; margin-left: 40px;">
+ <li id="o7dw">
+ 
+<p class="western" id="yu5o" style="margin-bottom: 0.04in;">
+ <font id="n9if5" size="2">Default; </font>
+ </p>
+ </li>
+ <li id="h8gi">
+ 
+<p class="western" id="s7sg" style="margin-bottom: 0.04in;">
+ <font id="n9if6" size="2">Over default; </font>
+ </p>
+ </li>
+ <li id="nwft">
+ 
+<p class="western" id="q4li" style="margin-bottom: 0.04in;">
+ <font id="n9if7" size="2">Over pressed; </font>
+ </p>
+ </li>
+ <li id="dm35">
+ 
+<p class="western" id="c6b:" style="margin-bottom: 0.04in;">
+ <font id="n9if8" size="2">Disabled; </font>
+ </p>
+ </li>
+ </ul>
+ 
+<ul id="vmf:" style="font-family: Verdana; margin-left: 40px;">
+ <li id="pju4">
+ 
+<p class="western" id="gnpg" style="margin-bottom: 0.04in;">
+ <font id="n9if9" size="2">Inactive. </font>
+ </p>
+ </li>
+ </ul>
+ 
+<ul id="f.gf" style="font-family: Verdana; margin-left: 40px;"></ul>
+ 
+<ol id="iggj" start="4" style="font-family: Verdana;">
+ <li id="uud-">
+ 
+<p class="western" id="l.1p" style="margin-bottom: 0.04in;">
+ <font id="n9if14" size="2">Then the user should name the newly created button. For example, the name of the button can be "tray". </font>
+ </p>
+ </li>
+ <li id="v_aj">
+ 
+<p class="western" id="jnav" style="margin-bottom: 0.04in;">
+ <font id="n9if15" size="2">The next step is to create the main folder for the new button (for example, "tray_button") and 2 subfolders in it called "active" and "inactive". </font>
+ </p>
+ </li>
+ <li id="db5e">
+ 
+<p class="western" id="zvpg" style="margin-bottom: 0.04in;">
+ <font id="n9if16" size="2">Then the user is to create 4 subfolders in both "active" and "inactive" folders: </font>
+ </p>
+ </li>
+ </ol>
+ 
+<ul id="kc4z" style="font-family: Verdana; margin-left: 40px;">
+ <li id="h74l">
+ 
+<p class="western" id="mosw" style="margin-bottom: 0.04in;">
+ <font id="n9if17" size="2">btns_default; </font>
+ </p>
+ </li>
+ <li id="y:m_">
+ 
+<p class="western" id="warp" style="margin-bottom: 0.04in;">
+ <font id="n9if18" size="2">btns_disabled; </font>
+ </p>
+ </li>
+ <li id="b0k2">
+ 
+<p class="western" id="mrwo" style="margin-bottom: 0.04in;">
+ <font id="n9if19" size="2">btns_over_default; </font>
+ </p>
+ </li>
+ <li id="nh5j">
+ 
+<p class="western" id="wmwz" style="margin-bottom: 0.04in;">
+ <font id="n9if20" size="2">btns_over_pressed. </font>
+ </p>
+ </li>
+ </ul>
+ 
+<p class="western" id="uiou" style="margin-bottom: 0.04in; margin-left: 0.49in; font-family: Verdana;">
+ <font id="n9if21" size="2">As a result there will be the following tree: </font>
+ </p>
+ 
+<p class="western" id="ap63" style="margin-bottom: 0.04in; margin-left: 0.74in; font-family: Verdana;">
+ <font id="n9if22" size="2">tray/ </font>
+ </p>
+ 
+<p class="western" id="ild1" style="margin-bottom: 0.04in; margin-left: 0.74in; font-family: Verdana;">
+ <font id="n9if23" size="2">active/ </font>
+ </p>
+ 
+<p class="western" id="k3wu" style="margin-bottom: 0.04in; margin-left: 0.74in; font-family: Verdana;">
+ <font id="n9if24" size="2">btns_default/ </font>
+ </p>
+ 
+<p class="western" id="ttxc" style="margin-bottom: 0.04in; margin-left: 0.74in; font-family: Verdana;">
+ <font id="n9if25" size="2">btns_disabled/ </font>
+ </p>
+ 
+<p class="western" id="fcv-" style="margin-bottom: 0.04in; margin-left: 0.74in; font-family: Verdana;">
+ <font id="n9if26" size="2">btns_over_default/ </font>
+ </p>
+ 
+<p class="western" id="z5-g" style="margin-bottom: 0.04in; margin-left: 0.74in; font-family: Verdana;">
+ <font id="n9if27" size="2">btns_over_pressed/ </font>
+ </p>
+ 
+<p class="western" id="bu:." style="margin-bottom: 0.04in; margin-left: 0.74in; font-family: Verdana;">
+ <font id="n9if28" size="2">inactive/ </font>
+ </p>
+ 
+<p class="western" id="xvr8" style="margin-bottom: 0.04in; margin-left: 0.74in; font-family: Verdana;">
+ <font id="n9if29" size="2">btns_default/ </font>
+ </p>
+ 
+<p class="western" id="nu4p" style="margin-bottom: 0.04in; margin-left: 0.74in; font-family: Verdana;">
+ <font id="n9if30" size="2">btns_disabled/ </font>
+ </p>
+ 
+<p class="western" id="mib-" style="margin-bottom: 0.04in; margin-left: 0.74in; font-family: Verdana;">
+ <font id="n9if31" size="2">btns_over_default/ </font>
+ </p>
+ 
+<p class="western" id="gdly" style="margin-bottom: 0.04in; margin-left: 0.74in; font-family: Verdana;">
+ <font id="n9if32" size="2">btns_over_pressed/ </font>
+ </p>
+ 
+<ol id="uixb" start="7" style="font-family: Verdana;">
+ <li id="xv.4">
+ 
+<p class="western" id="xaak" style="margin-bottom: 0.04in;">
+ <font id="n9if33" size="2">Now the user should create 8 GIF files with button skins for each button state. Then each GIF file should be placed to a folder according to its state. A inified file name should be used for each skin, for example: "btn_tray.gif". </font>
+ </p>
+ </li>
+ <li id="uu4l">
+ 
+<p class="western" id="ya:o" style="margin-bottom: 0.04in;">
+ <font id="n9if34" size="2">After this the tree will be presented in the following way: </font>
+ </p>
+ </li>
+ </ol>
+ 
+<p class="western" id="stfu" style="margin-bottom: 0.04in; margin-left: 0.74in; font-family: Verdana;">
+ <font id="n9if35" size="2">tray/ </font>
+ </p>
+ 
+<p class="western" id="g.e9" style="margin-bottom: 0.04in; margin-left: 0.74in; font-family: Verdana;">
+ <font id="n9if36" size="2">active/ </font>
+ </p>
+ 
+<p class="western" id="n9lu" style="margin-bottom: 0.04in; margin-left: 0.74in; font-family: Verdana;">
+ <font id="n9if37" size="2">btns_default/ </font>
+ </p>
+ 
+<p class="western" id="gdxl" style="margin-bottom: 0.04in; margin-left: 2.22in; font-family: Verdana;">
+ <font id="n9if38" size="2">btn_tray.gif </font>
+ </p>
+ 
+<p class="western" id="t:xx" style="margin-bottom: 0.04in; margin-left: 0.74in; font-family: Verdana;">
+ <font id="n9if39" size="2">btns_disabled/ </font>
+ </p>
+ 
+<p class="western" id="yl0x" style="margin-bottom: 0.04in; margin-left: 2.22in; font-family: Verdana;">
+ <font id="n9if40" size="2">btn_tray.gif </font>
+ </p>
+ 
+<p class="western" id="kd5b" style="margin-bottom: 0.04in; margin-left: 0.74in; font-family: Verdana;">
+ <font id="n9if41" size="2">btns_over_default/ </font>
+ </p>
+ 
+<p class="western" id="a6uu" style="margin-bottom: 0.04in; margin-left: 2.22in; font-family: Verdana;">
+ <font id="n9if42" size="2">btn_tray.gif </font>
+ </p>
+ 
+<p class="western" id="usun" style="margin-bottom: 0.04in; margin-left: 0.74in; font-family: Verdana;">
+ <font id="n9if43" size="2">btns_over_pressed/ </font>
+ </p>
+ 
+<p class="western" id="d6qm" style="margin-bottom: 0.04in; margin-left: 2.22in; font-family: Verdana;">
+ <font id="n9if44" size="2">btn_tray.gif </font>
+ </p>
+ 
+<p class="western" id="qkpb" style="margin-bottom: 0.04in; margin-left: 0.74in; font-family: Verdana;">
+ <font id="n9if45" size="2">inactive/ </font>
+ </p>
+ 
+<p class="western" id="hr2p" style="margin-bottom: 0.04in; margin-left: 0.74in; font-family: Verdana;">
+ <font id="n9if46" size="2">btns_default/ </font>
+ </p>
+ 
+<p class="western" id="ln1e" style="margin-bottom: 0.04in; margin-left: 2.22in; font-family: Verdana;">
+ <font id="n9if47" size="2">btn_tray.gif </font>
+ </p>
+ 
+<p class="western" id="r23." style="margin-bottom: 0.04in; margin-left: 0.74in; font-family: Verdana;">
+ <font id="n9if48" size="2">btns_disabled/ </font>
+ </p>
+ 
+<p class="western" id="ot_2" style="margin-bottom: 0.04in; margin-left: 2.22in; font-family: Verdana;">
+ <font id="n9if49" size="2">btn_tray.gif </font>
+ </p>
+ 
+<p class="western" id="zsin" style="margin-bottom: 0.04in; margin-left: 0.74in; font-family: Verdana;">
+ <font id="n9if50" size="2">btns_over_default/ </font>
+ </p>
+ 
+<p class="western" id="ke4c" style="margin-bottom: 0.04in; margin-left: 2.22in; font-family: Verdana;">
+ <font id="n9if51" size="2">btn_tray.gif </font>
+ </p>
+ 
+<p class="western" id="plj4" style="margin-bottom: 0.04in; margin-left: 0.74in; font-family: Verdana;">
+ <font id="n9if52" size="2">btns_over_pressed/ </font>
+ </p>
+ 
+<p class="western" id="x38b" style="margin-bottom: 0.04in; margin-left: 2.22in; font-family: Verdana;">
+ <font id="n9if53" size="2">btn_tray.gif </font>
+ </p>
+ 
+<ol id="z.d5" start="9" style="font-family: Verdana;">
+ <li id="rv.e">
+ 
+<p class="western" id="k4rw" style="margin-bottom: 0.04in;">
+ <font id="n9if54" size="2">Now, when button skins are created, the user should proceed to a <a href="#CSS_File_Creation" id="x3pi" title="CSS file creation">CSS file creation</a>.</font>
+ </p>
+ </li>
+ </ol>
+ <a id="it6p" name="CSS_File_Creation"></a>
+ 
+<h3><a name='win_dkgk'>
+ 6.5 CSS File Creation
+ 
+ </a></h3>
+ 
+<p class="western" id="pu_y" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="wc250" size="2">This example is going to show the user how to create a CSS file for buttons. </font>
+ </p>
+ 
+<ol id="by7b" style="font-family: Verdana;">
+ <li id="f637">
+ 
+<p class="western" id="xr56" style="margin-bottom: 0.04in;">
+ <font id="wc251" size="2">The user should find a template CSS file <b id="ly.j">dhtmlxwindows_user_button_template.css</b> and save it with a different name. For example, it can be “user_button_tray.css”. </font>
+ </p>
+ </li>
+ <li id="ro8i">
+ 
+<p class="western" id="eo-v" style="margin-bottom: 0.04in;">
+ <font id="wc252" size="2">Then he should modify this CSS file in the following way: </font>
+ </p>
+ </li>
+ </ol>
+ 
+<ul id="mmmx">
+ 
+<ul id="fvim">
+ <li id="dd7t" style="font-family: Verdana;">
+ 
+<p class="western" id="i357" style="margin-bottom: 0.04in;">
+ <font id="wc253" size="2">Replace <b id="sgpz">%skin%</b> with the skin name (in our example, we chose "<b id="d-zv">web</b>" skin); </font>
+ </p>
+ </li>
+ <li id="w-x-" style="font-family: Verdana;">
+ 
+<p class="western" id="t-sz" style="margin-bottom: 0.04in;">
+ <font id="wc254" size="2">Replace <b id="l36x">%button_root_folder%</b> with the name of the root folder created by user (in our example it’s "<b id="cjcx">tray</b>"); </font>
+ </p>
+ </li>
+ <li id="i.7q" style="font-family: Verdana;">
+ 
+<p class="western" id="c:cz" style="margin-bottom: 0.04in;">
+ <font id="wc255" size="2">Replace <b id="wfl_">%button_name%</b> with the name of the created button (in our example it’s "<b id="w014">tray</b>"); </font>
+ </p>
+ </li>
+ <li id="isq:" style="font-family: Verdana;">
+ 
+<p class="western" id="sm_h" style="margin-bottom: 0.04in;">
+ <font id="wc256" size="2">Replace <b id="afu6">%button_filename%</b> with name of the created GIF files ("<b id="w.2y">btn_tray.gif</b>" in out example);</font> 
+ </p>
+ </li>
+ <li id="fvim0" style="font-family: Verdana;">
+ 
+<p class="western" id="fvim1" style="margin-bottom: 0.04in;">
+ <font id="wc257" style="font-family: Verdana;" size="2">Link this newly created CSS file from the index page.</font><br id="fvim3">
+ </p>
+ </li>
+ </ul>
+ </ul>
+ </div>
+ </div>
+ </div>
+ 
+<div id="fvim4">
+ 
+<h2><a name='win_nq4l'>
+ 7. Adding Necessary Code in the Process of Development
+ </a></h2>
+ 
+<h3><a name='win_nq4l1'>
+ 7.1 Adding User-Button
+ 
+ </a></h3>
+ <font id="hajh" size="2"><span id="i..w0" style="font-family: Verdana;">To add this newly created button to a window the user should use the following method:</span> </font>
+ 
+<blockquote id="c92r" style="font-family: Verdana;">
+ <font id="z.sv" size="2"><font id="i9qh" color="#000000">dhxWins.window(id).<b id="f:ih">addUserButton</b>(id, position, tooltip, name);</font></font>
+ </blockquote>
+ 
+<p id="wylv" style="border-style: none none none solid; border-color: -moz-use-text-color; border-width: medium medium medium 5pt; padding: 0in 0in 0in 0.06in; background: rgb(235, 235, 235) none repeat scroll 0% 50%; margin-top: 0.05in; margin-bottom: 0.16in; font-family: Verdana;" align="left">
+ </p>
+ 
+<p class="western" id="nw0h" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="hajh0" size="2">This method takes the following parameters: </font>
+ </p>
+ 
+<ul id="pnkp" style="font-family: Verdana;">
+ <li id="h_xf">
+ 
+<p class="western" id="aoq-" style="margin-bottom: 0.04in;">
+ <font id="hajh1" size="2"><b id="c92r0">id </b>– id of the newly created button (in our example it can be "tray"); </font>
+ </p>
+ </li>
+ <li id="nn2j">
+ 
+<p class="western" id="k8um" style="margin-bottom: 0.04in;">
+ <font id="hajh2" size="2"><b id="c92r1">position </b>– the type of this parameter is <b id="hp9x">int</b>. This parameter defines the place of the button on the caption bar (left to right: 0 – the first button, 1 – the second, etc); </font>
+ </p>
+ </li>
+ <li id="c08t">
+ 
+<p class="western" id="wp0j" style="margin-bottom: 0.04in;">
+ <font id="hajh3" size="2"><b id="c92r2">tooltip </b>– this parameter sets the title that appears when the user hovers the mouse over the button; </font>
+ </p>
+ </li>
+ <li id="lyvz">
+ 
+<p class="western" id="i_x." style="margin-bottom: 0.04in;">
+ <font id="hajh4" size="2"><b id="c92r3">name </b>– the name of the button (in out example it is "tray").</font></p>
+</li>
+ </ul>
+<span style="background-color: rgb(76, 17, 48); color: rgb(255, 255, 255);"></span>
+ 
+<p style="font-family: Verdana;" id="tzmf"><br id="d76s1">
+</p>
+<p style="font-family: Verdana;" id="d76s2"><b id="d76s3"><font id="d76s4" size="2">7.1.1 Defining Button Position</font></b></p>
+<br id="tzmf0">
+<p id="tzmf1"><font id="d76s5" size="2"><span id="d76s6" style="font-family: Verdana;">All available window buttons are shown in the following picture:</span></font></p>
+<p id="tzmf6"><font id="lrp.8" size="2"><span id="lrp.9" style="font-family: Verdana;">
+<div id="ajld" style="padding: 1em 0pt; text-align: left;"><img id="diuk" style="width: 342px; height: 286px;" src="common/dgr5rjkf_187fcnwzrcv_b.png"></div>
+But not all of these buttons are displayed </span><span id="d76s8" style="font-family: Verdana;">simultaneously. For example, buttons "stick" and "unstick", "minmax1" and "minmax2" are not displayed at the same time. </span><span id="d76s10" style="font-family: Verdana;">Each button has its inner constant position. So, when you insert some user-button, you should </span><span id="d76s12" style="font-family: Verdana;">count </span></font><font id="xkna" size="2"><span id="xkna0" style="font-family: Verdana;">button's position</span></font><font id="xkna1" size="2"><span id="xkna2" style="font-family: Verdana;"> paying attention even to the buttons that are invisible at the moment.</span><br id="d76s13" style="font-family: Verdana;">
+<span id="d76s14" style="font-family: Verdana;">For example, let's put a user-button between "park" and "minmax1" ones. Counting buttons </span><span id="d76s16" style="font-family: Verdana;">from left to right starting from 0, stop on the button "park" - we have "3" as a result. </span><br id="d76s17" style="font-family: Verdana;">
+<span id="d76s18" style="font-family: Verdana;">So, this new button should have "4" as its position index.</span></font><br id="tzmf7">
+ </p>
+<h3><a name='win_tyys'>7.2 Adding Event to Button
+ 
+ </a></h3>
+ 
+<p class="western" id="nd2a" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="hajh6" size="2">The user can attach an event to the newly created button in the following way: </font>
+ </p>
+ 
+<blockquote id="c92r4" style="font-family: Verdana;">
+ <font id="wka4" size="2">dhxWins.window(id).button(id).attachEvent("onClick", handler);</font>
+ </blockquote>
+ 
+<p id="chgk" style="border-style: none none none solid; border-color: -moz-use-text-color; border-width: medium medium medium 5pt; padding: 0in 0in 0in 0.06in; background: rgb(235, 235, 235) none repeat scroll 0% 50%; margin-top: 0.05in; margin-bottom: 0.16in; font-family: Verdana;" align="left">
+ </p>
+ 
+<p class="western" id="psjh" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="hajh7" size="2">The user can also remove an event from any user-created button: </font>
+ </p>
+ 
+<blockquote id="mg2v" style="font-family: Verdana;">
+ <font id="ulek" size="2">dhxWins.window(id).button(id).detachEvent("onClick");</font>
+ </blockquote>
+ 
+<p id="psrz" style="border-style: none none none solid; border-color: -moz-use-text-color; border-width: medium medium medium 5pt; padding: 0in 0in 0in 0.06in; background: rgb(235, 235, 235) none repeat scroll 0% 50%; margin-top: 0.05in; margin-bottom: 0.16in; font-family: Verdana;" align="left">
+ </p>
+ 
+<p class="western" id="ayvj" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="hajh8" size="2">Any user-created button can be removed in the following way: </font>
+ </p>
+ 
+<blockquote id="jwtt" style="font-family: Verdana;">
+ <font id="r1w_" size="2">dhxWins.window(id).button(id).removeUserButton(id);</font>
+ </blockquote>
+ 
+<p id="bn6f" style="border-style: none none none solid; border-color: -moz-use-text-color; border-width: medium medium medium 5pt; padding: 0in 0in 0in 0.06in; background: rgb(235, 235, 235) none repeat scroll 0% 50%; margin-top: 0.05in; margin-bottom: 0.16in; font-family: Verdana;" align="left">
+ </p>
+ 
+<p class="western" id="xxmg" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="hajh9" size="2">Besides, all default button methods will be available for user-created buttons as well: </font>
+ </p>
+ 
+<blockquote id="jwtt0" style="font-family: Verdana;">
+ <font id="qqog" size="2">dhxWins.window(id).button(id).show();</font><br id="ey5w">
+ <font id="jwtt1" size="2">dhxWins.window(id).button(id).hide();</font><br id="cdkm">
+ <font id="jwtt2" size="2">dhxWins.window(id).button(id).isHidden();</font><br id="oe-t">
+ <font id="jwtt3" size="2">dhxWins.window(id).button(id).enable();</font><br id="stko">
+ <font id="jwtt4" size="2">dhxWins.window(id).button(id).disable();</font><br id="l_yt">
+ <font id="jwtt5" size="2">dhxWins.window(id).button(id).isEnabled();</font>
+ </blockquote>
+ 
+<p id="j:7o" style="border-style: none none none solid; border-color: -moz-use-text-color; border-width: medium medium medium 5pt; padding: 0in 0in 0in 0.06in; background: rgb(235, 235, 235) none repeat scroll 0% 50%; margin-top: 0.05in; margin-bottom: 0.16in;" align="left">
+ </p>
+ 
+<h3><a name='win_tyys156'>
+ 7.3 Removing User-Button
+ 
+ </a></h3>
+ 
+<p class="western" id="etrt" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="hajh16" size="2">To remove any user-button from the window the user should call the following method: </font>
+ </p>
+ 
+<blockquote id="w6:y" style="font-family: Verdana;">
+ <font id="i5m-" size="2"><font id="ka2k" color="#000000">dhxWins.window(id).removeUserButton(id);</font></font>
+ </blockquote>
+ 
+<p id="ogxn" style="border-style: none none none solid; border-color: -moz-use-text-color; border-width: medium medium medium 5pt; padding: 0in 0in 0in 0.06in; background: rgb(235, 235, 235) none repeat scroll 0% 50%; margin-top: 0.05in; margin-bottom: 0.16in;" align="left">
+ </p>
+ 
+<h2><a name='win_fmej'>
+ 8. Event Handling
+ </a></h2>
+ 
+<h3><a name='win_fmej1'>
+ 8.1 Default Events
+ 
+ </a></h3>
+ <font id="hajh19" size="2"><span id="fk6y" style="font-family: Verdana;">Default events signal various actions, such as the user clicking a button to Park a window, or a window is being closed. Default events are usually button events.</span> </font>
+ 
+<p class="western" id="tr2v" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="hajh20" size="2">Button events can be as follows: </font>
+ </p>
+ 
+<ul id="fj7d" style="font-family: Verdana;">
+ <li id="u98n">
+ 
+<p class="western" id="nf89" style="margin-bottom: 0.04in;">
+ <font id="hajh21" size="2"><b id="sief">onClick</b>. The <b id="mpcr">onClick</b> event handler executes the specified JS code or function, when the user clicks the left mouse button on the object. </font>
+ </p>
+ </li>
+ </ul>
+ 
+<p class="western" id="o6nk" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="hajh22" size="2">Default events can be redefined by user, who can choose to assign other user-defined events instead. In this case, default events will be ignored until they are restored by user.</font>
+ </p>
+ 
+<h3><a name='win_a6dd'>
+ 8.2 Redefine Default Button Event
+ 
+ </a></h3>
+ 
+<p class="western" id="e3vx" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="hajh24" size="2">The user can choose to redefine a default button event by adding any user-defined event instead. </font>
+ </p>
+ 
+<p class="western" id="q_sx" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="hajh25" size="2">To redefine a button default event the user can use <b id="dzpf">attachEvent()</b> method: </font>
+ </p>
+ 
+<blockquote id="krhs" style="font-family: Verdana;">
+ <font id="julp" size="2"><font id="fy70" color="#000000">dhxWins.window(id).button(id).attachEvent(eventName, handler);</font></font>
+ </blockquote>
+ 
+<p id="k51x" style="border-style: none none none solid; border-color: -moz-use-text-color; border-width: medium medium medium 5pt; padding: 0in 0in 0in 0.06in; background: rgb(235, 235, 235) none repeat scroll 0% 50%; margin-top: 0.05in; margin-bottom: 0.16in;" align="left">
+ </p>
+ 
+<h3><a name='win_rc3v'>
+ 8.3 Adding Window Events Handlers
+ 
+ </a></h3>
+ 
+<p class="western" id="bmu3" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="hajh28" size="2">The entire point of an event is to inform a handler that something has happened to a component in the GUI. A handler can figure out what exactly happened and respond in a meaningful way. </font>
+ </p>
+ 
+<p class="western" id="x50h" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="hajh29" size="2">The list of events to which user-defined handlers can be attached is given below: </font>
+ </p>
+ 
+<ul id="rjwj" style="font-family: Verdana;">
+ <li id="drtd">
+ 
+<p class="western" id="zm6:" style="margin-bottom: 0.04in;">
+ <font id="hajh30" size="2"><b id="gmyf">onMoveFinish</b> – occurs when the window movement was finished; </font>
+ </p>
+ </li>
+ <li id="yy-t">
+ 
+<p class="western" id="fnap" style="margin-bottom: 0.04in;">
+ <font id="hajh31" size="2"><b id="e5.c">onResizeFinish – </b>occurs when the window resizing was finished; </font>
+ </p>
+ </li>
+ <li id="t.82">
+ 
+<p class="western" id="r07:" style="margin-bottom: 0.04in;">
+ <font id="hajh32" size="2"><b id="cz5b">onFocus – </b>occurs when the window was focused; </font>
+ </p>
+ </li>
+ <li id="n1bu">
+ 
+<p class="western" id="ar3c" style="margin-bottom: 0.04in;">
+ <font id="hajh33" size="2"><b id="gwf5">onParkDown/onParkUp – </b>occurs when the window was parked down/up; </font>
+ </p>
+ </li>
+ <li id="teia">
+ 
+<p class="western" id="pn:x" style="margin-bottom: 0.04in;">
+ <font id="hajh34" size="2"><b id="biu1">onMaximize/onMinimize</b> – occurs when the window was maximized/minimized; </font>
+ </p>
+ </li>
+ <li id="g:zo">
+ 
+<p class="western" id="ufxe" style="margin-bottom: 0.04in;">
+ <font id="hajh35" size="2"><b id="wsor">onShow/onHide</b> – occurs when the window was shown/hidden; </font>
+ </p>
+ </li>
+ <li id="dqzn">
+ 
+<p class="western" id="n19y" style="margin-bottom: 0.04in;">
+ <font id="hajh36" size="2"><b id="qkcz">onClose</b> – occurs before the window is closed; </font>
+ </p>
+ </li>
+ <li id="a6yj">
+ 
+<p class="western" id="tnx5" style="margin-bottom: 0.04in;">
+ <font id="hajh37" size="2"><b id="acln">onHelp </b>– occurs when the user clicks the "help" button;</font>
+ </p>
+ </li>
+ <li id="buww">
+ 
+<p class="western" id="buww0" style="margin-bottom: 0.04in;">
+ <font id="buww1" size="2"><b id="g88e"><a id="ycfn" name="onContentLoaded"></a>onContentLoaded</b> - occurs when the external page content is loaded</font><font id="buww2" size="2"> into the window (<b id="mlee">attachURL()</b> and <b id="mlee0">attachURLAJAX()</b> methods).</font>
+ </p>
+ </li>
+ </ul>
+ 
+<h3><a name='win_yn9t'>
+ 8.4 Adding Global Event Handlers for Windows
+ 
+ </a></h3>
+ 
+<p class="western" id="pxfn" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="hajh39" size="2">The user can add global event handlers for windows. This can be done in the following way: </font>
+ </p>
+ 
+<blockquote id="un_k">
+ <font id="xuug" style="font-family: Verdana;" size="2"><font id="q8.8" color="#000000">dhxWins.attachEvent(eventName, handler);</font></font><br id="un_k0">
+ </blockquote>
+ <a id="cpww" name="_Toc193605132"><span id="sij3" style="font-family: Verdana;"><font id="g0lq" size="2"><b id="q.lw">Note: </b>the names of the events are <b id="bmi:">case-insensitive</b>.<br id="un_k2">
+ <br id="un_k3">
+ </font></span></a>
+ 
+<p id="urw1" style="border-style: none none none solid; border-color: -moz-use-text-color; border-width: medium medium medium 5pt; padding: 0in 0in 0in 0.06in; background: rgb(235, 235, 235) none repeat scroll 0% 50%; margin-top: 0.05in; margin-bottom: 0.16in;" align="left">
+ </p>
+ 
+<h3><a name='win_t460'>
+ 8.5 Adding Personal Window Event Handler
+ 
+ </a></h3>
+ 
+<p class="western" id="vlgm" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="fwtz0" size="2">If there is a window to which the user wants to assign a special handler, this can be done by adding the handler to the window directly. </font>
+ </p>
+ 
+<p class="western" id="k8y." style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="fwtz1" size="2">While other windows will be calling global handlers, this window with personal handler will call this personal handler: </font>
+ </p>
+ 
+<blockquote id="lexl" style="font-family: Verdana;">
+ <font id="fqnd" size="2"><font id="ar:1" color="#000000">dhxWins.window(id).attachEvent(eventName, handler);</font></font>
+ </blockquote>
+ 
+<p id="fn1q" style="border-style: none none none solid; border-color: -moz-use-text-color; border-width: medium medium medium 5pt; padding: 0in 0in 0in 0.06in; background: rgb(235, 235, 235) none repeat scroll 0% 50%; margin-top: 0.05in; margin-bottom: 0.16in;" align="left">
+ </p>
+ 
+<h3><a name='win_g4mx'>
+ 8.6 Restore Global Event Handler
+ </a></h3>
+ 
+<p id="utuc">
+ The user can detach a personal event from a window. In this case a global event handler will be restored for this window, i.e. the when personal handler is removed from the window, the widow will call global handler.
+ </p>
+ 
+<blockquote id="ftko" style="font-family: Verdana;">
+ <font id="knpr" size="2"><font id="ruq0" color="#000000">dhxWins.window(id).detachEvent(eventName);</font></font>
+ </blockquote>
+ 
+<p id="p3g-" style="border-style: none none none solid; border-color: -moz-use-text-color; border-width: medium medium medium 5pt; padding: 0in 0in 0in 0.06in; background: rgb(235, 235, 235) none repeat scroll 0% 50%; margin-top: 0.05in; margin-bottom: 0.16in;" align="left">
+ </p>
+ 
+<h3><a name='win_g4mx1'>
+ 8.7 Remove Global Handler
+ 
+ </a></h3>
+ 
+<p class="western" id="z94c" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="fwtz6" size="2">Global handlers can be easily removed with the help of the following method: </font>
+ </p>
+ 
+<blockquote id="elod" style="font-family: Verdana;">
+ <font id="qe0b" size="2"><font id="eo4b" color="#000000">dhxWins.detachEvent(eventName);</font></font>
+ </blockquote>
+ 
+<p id="byoe" style="border-style: none none none solid; border-color: -moz-use-text-color; border-width: medium medium medium 5pt; padding: 0in 0in 0in 0.06in; background: rgb(235, 235, 235) none repeat scroll 0% 50%; margin-top: 0.05in; margin-bottom: 0.16in;" align="left">
+ </p>
+ 
+<h3><a name='win_g4mx158'>
+ 8.8 Understanding Event Handlers Priority
+ 
+ </a></h3>
+ 
+<p class="western" id="pyc5" style="margin-bottom: 0.04in;">
+ <img id="od23" src="common/dgr5rjkf_12c6wmchdw.png">
+ </p>
+ 
+<p class="western" id="zs3m" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="fwtz8" size="2">In the situation described above windows <b id="ul5q">w2</b> and <b id="ul5q0">w3 </b>will call "globalHandler" when they are focused. </font>
+ </p>
+ 
+<p class="western" id="kvu0" style="margin-bottom: 0.04in; font-family: Verdana;">
+ <font id="fwtz9" size="2">The window <b id="ul5q1">w1 </b>will call personal "w1Handler" when focused.</font>
+ </p>
+ 
+<p class="western" id="nba1" style="margin-bottom: 0.04in;">
+ <a id="mp4y" name="_PictureBullets"></a>
+ </p>
+ </div>
+ 
+<div id="w5q7" type="FOOTER">
+ 
+<h2><a name='win_qkel'>
+ 9. Integration with Other Components
+ </a></h2>
+ 
+<h3><a name='win_qkel1'>
+ 9.1 Status Bar
+ 
+ </a></h3>
+ 
+<p id="qkel156" style="font-family: Verdana;">
+ <font id="fwtz11" size="2">The user can add a status bar to any window in <b id="obsc43">dhtmlxWindows </b>with the help of <b id="ufl9">attachStatusBar()</b> method:</font>
+ </p>
+ 
+<blockquote id="jiil" style="font-family: Verdana;">
+ <font id="obsc44" size="2"><font id="obsc46" color="#000000">var sb = dhxWins.window(id).attachStatusBar();</font></font>
+ </blockquote>
+ 
+ <font id="ysh:" size="2">When the status bar is added to a window, the user can write any custom text into it using the following methods:</font>
+ 
+<blockquote id="nrg5" style="font-family: Verdana;">
+ <font id="obsc47" size="2"><font id="obsc49" color="#000000">sb.setText("Some custom text");</font></font><br id="fkuk">
+ </blockquote>
+ <font id="fwtz13" style="font-family: Verdana;" size="2">There is also the possibility to get the current Status Bar text in the following way:<br id="aylz">
+ </font>
+ 
+<blockquote id="vt9q" style="font-family: Verdana;">
+ <font id="obsc50" size="2"><font id="obsc52" color="#000000">var text = sb.getText();</font></font><br id="a2d:">
+ </blockquote>
+ <font id="fwtz15" style="font-family: Verdana;" size="2"><b id="lfu50">getText()</b> method returns the current Status Bar text.</font><br id="rooi">
+ 
+<h3><a name='win_qear'>
+ 9.2 dhtmlxMenu
+ </a></h3>
+ 
+<p id="qamj">
+ <font id="z0.0" size="2"><span id="qamj0" style="font-family: Verdana;">A </span><b id="lfu51" style="font-family: Verdana;">dxtmlxMenu 2.0 </b><span id="qamj1" style="font-family: Verdana;">can be easily added to any window in the following way:</span><br id="v1jh">
+ </font>
+ </p>
+ 
+<blockquote id="n8hd" style="font-family: Verdana;">
+ <font id="obsc58" size="2"><font id="obsc60" color="#000000">dhxWins.window(id).attachMenu</font></font><font id="obsc61" size="2"><font id="obsc63" color="#000000">();</font></font>
+ </blockquote>
+ 
+<p id="obsc64" style="margin-top: 0.26in; margin-bottom: 0in; font-family: Verdana;" align="left">
+ </p>
+ 
+<p id="obsc65" style="margin-top: 0.26in; margin-bottom: 0in;" align="left">
+ <font id="obsc66" color="#999999"><font id="xyc5" style="font-family: Verdana;" color="#000000" size="2">The method returns <b id="lfu52">dhtmlxMenu 2.0 </b>object, which the user should customize according to his needs.</font><br id="qknk">
+ </font>
+ </p>
+ 
+<h3><a name='win_qamj2'>
+ 9.3 dhtmlxToolbar
+ </a></h3>
+ 
+<p id="obsc68" style="margin-top: 0.26in; margin-bottom: 0in; font-family: Verdana;" align="left">
+ <font id="obsc69" color="#000000" size="2">A toolbar can be added to any window in the following way:</font>
+ </p>
+ 
+<blockquote id="obsc70" style="font-family: Verdana;">
+ <font id="obsc71" size="2"><font id="obsc73" color="#000000">dhxWins.window(id).attachToolbar</font></font><font id="obsc74" size="2"><font id="obsc76" color="#000000">();</font></font>
+ </blockquote>
+ 
+<p id="obsc77" style="margin-top: 0.26in; margin-bottom: 0in; font-family: Verdana;" align="left">
+ <font id="obsc78" color="#999999" size="2"><font id="obsc79" color="#000000">The method returns <b id="lfu53">dhtmlxToolbar 2.0 </b>object, which the user should customize according to his needs.</font></font>
+ </p>
+ 
+<h3><a name='win_qamj158'>
+ 9.4 dhtmlxTree
+ </a></h3>
+ <font id="t38x" style="font-family: Verdana;" size="2">The user can add a Tree to any window in </font><font id="bgwt1" style="font-family: Verdana;" size="2"><b id="obsc81">dhtmlxWindows </b>with the help of attachTree() method:</font><br id="u:gl0">
+ 
+<blockquote id="o5mo" style="font-family: Verdana;">
+ <font id="o5mo0" size="2"><font id="o5mo2" color="#000000">dhxWins.window(id).attachTree</font></font><font id="o5mo3" size="2"><font id="o5mo5" color="#000000">();</font></font>
+ </blockquote>
+ <font id="ppiy" style="font-family: Verdana;" size="2"><span id="m9:0541" style="background-color: rgb(255, 255, 255);">There is only one input parameter for this method. The parameter is the id of a virtual super item that is a parent to all the top level tree nodes of the added dhtmlxTree (see dhtmlxTree constructor description for details). If super root element id is 0, this parameter can be omitted. </span></font><font id="e773" style="font-family: Verdana;" size="2">This method returns dhtmlxTree object, which the user can customize.</font>
+ 
+<h3><a name='win_dzgg'>
+ 9.5 dhtmlxGrid
+ </a></h3>
+ <font id="t38x0" style="font-family: Verdana;" size="2">The user can add a Grid to any window in <b id="t38x1">dhtmlxWindows </b>with the help of <b id="obsc82">attachGrid()</b> method:<br id="r_75">
+ </font>
+ 
+<blockquote id="obsc83" style="font-family: Verdana;">
+ <font id="obsc84" size="2"><font id="obsc86" color="#000000">dhxWins.window(id).attachGrid</font></font><font id="obsc87" size="2"><font id="obsc89" color="#000000">();</font></font><br id="s_vz">
+ </blockquote>
+ 
+ <font id="obsc91" color="#999999" size="2"><font id="obsc92" color="#000000">The method returns dhtmlxGrid object, which the user should customize according to his needs.</font></font>
+ 
+<h3><a name='win_rhg7'>
+ 9.6 dhtmlxTreeGrid
+ </a></h3>
+ <font id="bgwt4" style="font-family: Verdana;" size="2"> A TreeGrid can </font><font id="obsc94" style="font-family: Verdana;" color="#000000" size="2">be added to any window in the following way:<br id="kvm1">
+ </font>
+ 
+<blockquote id="q.df" style="font-family: Verdana;">
+ <font id="obsc95" size="2"><font id="obsc97" color="#000000">dhxWins.window(id).attachTreeGrid</font></font><font id="obsc98" size="2"><font id="obsc100" color="#000000">();</font></font><br id="vr.l">
+ </blockquote>
+ 
+ <font id="obsc102" style="font-weight: normal;" color="#999999" size="2"><font id="obsc103" color="#000000">The method returns dhtmlxTreeGrid object, which the user should customize according to his needs.</font></font><br id="whj6">
+ 
+<h3><a name='win_rhg7155'>
+ 9.7 dhtmlxFolders
+ </a></h3>
+ <font id="bgwt7" style="font-family: Verdana;" size="2"> There is an easy way to add a Folders to any window in the following way:<br id="eo2r">
+ </font>
+ 
+<blockquote id="sqxn" style="font-family: Verdana;">
+ <font id="obsc105" size="2"><font id="obsc107" color="#000000">dhxWins.window(id).attachFolders</font></font><font id="obsc108" size="2"><font id="obsc110" color="#000000">();</font></font><br id="ppnz">
+ </blockquote>
+ <font id="obsc111" color="#999999" size="3"><font id="obsc112" color="#000000"><font id="bgwt9" style="font-family: Verdana;" size="2">The method returns <b id="lfu56">dhtmlxFolders </b>object, which the user should customize according to his needs.</font><br id="hdgp">
+ </font></font>
+ 
+<h3><a name='win_rhg7311'>
+ 9.8 dhtmlxTabbar
+ </a></h3>
+ <font id="bgwt11" style="font-family: Verdana;" size="2"> There is an easy way to add a Tabbar to any window in the following way:<br id="yx3s">
+ </font>
+ 
+<blockquote id="uq8s" style="font-family: Verdana;">
+ <font id="obsc114" size="2"><font id="obsc116" color="#000000">dhxWins.window(id).attachTabbar</font></font><font id="obsc117" size="2"><font id="obsc119" color="#000000">();</font></font><br id="v2_5">
+ </blockquote>
+ <font id="obsc120" color="#999999" size="3"><font id="obsc121" color="#000000"><font id="bgwt13" style="font-family: Verdana;" size="2">The method returns <b id="lfu57">dhtmlxTabbar </b>object, which the user should customize according to his needs.</font><br id="e0op">
+ </font></font>
+ 
+<h3><a name='win_rhg7467'>
+ 9.9 dhtmlxLayout
+ </a></h3>
+ <font id="bgwt15" style="font-family: Verdana;" size="2">A Layout can be added to any window this way:<br id="oi_y">
+ </font>
+ 
+<blockquote id="oi_y0" style="font-family: Verdana;">
+ <font id="bgwt16" size="2">dhxWins.window(id).attachLayout(pattern, skin);<br id="e0op2">
+ </font>
+ </blockquote>
+ 
+<p id="tw9n" style="font-family: Verdana;">
+ <font id="bgwt17" size="2">The parameters of this method are the following:</font>
+ </p>
+ 
+<p id="prec" style="font-family: Verdana;">
+ <br id="prec0">
+ </p>
+ 
+<ul id="pl7j" style="font-family: Verdana;">
+ <li id="pl7j0">
+ <font id="bgwt19" size="2"><b id="ol7l">pattern </b>- the code of the Layout's pattern;</font>
+ </li>
+ <li id="pfs.">
+ <font id="bgwt20" size="2"><b id="ol7l0">skin </b>- the name of the chosen skin (optional). If this parameter is not indicated, the Layout will be attached with the default skin (dhx_blue).<br id="o7gd">
+ </font>
+ </li>
+ </ul>
+ <font id="m.8y" color="#999999" size="3"><font id="m.8y0" color="#000000"><font id="m.8y1" style="font-family: Verdana;" size="2">The method returns <b id="m.8y2">dhtmlxLayout </b>object, which the user should customize according to his needs.</font></font></font><br id="e0op10">
+ 
+<h3><a name='win_rhg7623'>
+ 9.10 dhtmlxAccordion
+ </a></h3>
+ 
+<p id="gyon2" style="font-family: Verdana;">
+ <font id="y.3j" size="2">A dhtmlxAccordion can be attached to a window like this:</font>
+ </p>
+ 
+<blockquote id="y.3j0">
+ 
+<p id="zcj2" style="font-family: Verdana;">
+ <font id="zcj20" size="2">dhxWins.window(id).attachAccordion();</font>
+ </p>
+ </blockquote>
+ <font id="y.3j1" color="#999999" size="3"><font id="y.3j2" color="#000000"><font id="y.3j3" style="font-family: Verdana;" size="2">The method returns <b id="y.3j4">dhtmlxAccordion </b>object, which the user should customize according to his needs.<br id="y8lm">
+ </font></font></font>
+ 
+<h3><a name='win_y8lm0'>
+ 9.11 dhtmlxEditor
+ </a></h3>
+ 
+<p id="y8lm156" style="font-family: Verdana;">
+ <font id="y8lm157" size="2">A dhtmlxEditor can be attached to a window this way:</font>
+ </p>
+ 
+<blockquote id="lsje">
+ 
+<p id="lsje0" style="font-family: Verdana;">
+ <font id="g7y8" size="2">dhxWins.window(id).</font><font id="lsje1" size="2">attachEditor();</font>
+ </p>
+ </blockquote>
+ <font id="g7y80" color="#999999" size="3"><font id="g7y81" color="#000000"><font id="g7y82" style="font-family: Verdana;" size="2">The method returns <b id="g7y83">dhtmlxEditor </b>object, which the user should customize according to his needs.</font></font></font>
+ </div>
+ </div>
+ <br id="h6sm">
+ </div>
+</div>
+<br>
+<h2><a name='win_j106'>  9.12 Using dhtmlxLayout and dhtmlxWindows together   
+</a></h2>
+<font size="2"><span style="font-family: Verdana;">Sometimes when using layout you may need to show a pop-up
+window. To do this you should first create an instance of dhtmlxWindows and
+then create a window. But as far as layout is based on windows as well, you can use a dhtmlxWindows instance that has been already created by layout. To achieve this you
+should do the following:</span><br style="font-family: Verdana;" id="e2iu">
+</font>
+<div>
+<div>
+
+ 
+<blockquote style="font-family: Verdana;" id="i_.m">
+ <font size="2">&lt;script><br>
+ // creating layout instance<br id="i_.m0">
+ var dhxLayout = new dhtmlXLayoutObject("3L");<br>
+ ...<br>
+ // creating pop-up window from layout's dhtmlxWindows' instance<br>
+ var popupWindow = dhxLayour.dhxWins.createWindow("popupWindow", ...);<br id="i_.m3">
+&lt;/script><br id="p_p3">
+</font>
+
+
+
+ 
+ </blockquote>
+<font style="font-family: Verdana;" color="#000000" size="2">This allows you to reduce used memory</font><font size="2"><span style="font-family: Verdana;"> and increase script's performance.</span><br style="font-family: Verdana;">
+<br style="font-family: Verdana;">
+<b style="font-family: Verdana;">Note</b><span style="font-family: Verdana;">: There are cases when some windows' ids are already used by layout so you can't use them for creating another windows. How to identify the id you are not allowed to use?</span><br style="font-family: Verdana;">
+<span style="font-family: Verdana;"> Take for example a layout with 3 cells called "a", "b" and "c". Windows' ids used for
+them are "wa", "wb" and "wc". Windows's ids for the layout with 5 cells could be called "wa", "wb", "wc", "wd" and "we". None of these ids can not be used.</span><br style="font-family: Verdana;">
+<br style="font-family: Verdana;">
+<span style="font-family: Verdana;"> 
+There is a function which allows you to check availability of any "id":</span><br style="font-family: Verdana;" id="e2iu">
+</font>
+
+
+
+
+
+ 
+<blockquote id="i_.m">
+ <font size="2"><span id="e2iu0" style="font-family: Verdana;">&lt;script><br>
+ // check if id in use<br>
+ if (dhxLayout.dhxWins(id)) {<br>
+ // id is already in use, checked id can not be used for new window<br>
+ } else {<br>
+ // id is free for use<br>
+ }<br>
+</span><span id="ozly1" style="font-family: Verdana;">&lt;/script></span><br id="p_p3">
+</font>
+ </blockquote>
+<br id="a3so">
+</div>
+</div>
+<br>
+
+	
+</body>
+</html>

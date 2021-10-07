@@ -1,0 +1,180 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|padding": "1 1 1 1",
+        "designer|userAlias": "headerpanel",
+        "designer|userClassName": "HeaderPanel",
+        "frame": true,
+        "height": 29,
+        "layout": "hbox",
+        "title": null,
+        "width": null
+    },
+    "configAlternates": {
+        "container|padding": "auto",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "frame": "boolean",
+        "height": "auto",
+        "layout": "string",
+        "title": "string",
+        "width": "auto",
+        "scrollable": "boolean"
+    },
+    "name": "MyPanel3",
+    "designerId": "3cef6015-e11f-420c-bfee-e5be0296bf2b",
+    "viewControllerInstanceId": "c1bc1439-454e-4e3b-94cd-1958edf0e1c5",
+    "viewModelInstanceId": "55b34e46-807e-47d5-be79-1916e1932f3e",
+    "cn": [
+        {
+            "type": "Ext.form.field.Display",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Name",
+                "fieldStyle": "font-size: small;font-weight: bold;color: green;font-style:normal;color: #2E5494;",
+                "itemId": "PatientName",
+                "labelStyle": "font-size: small;font-weight: bold;color: green;",
+                "labelWidth": 60,
+                "value": "George Maina Chege",
+                "width": 215
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "fieldStyle": "string",
+                "itemId": "string",
+                "labelStyle": "string",
+                "labelWidth": "number",
+                "value": "string",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyDisplayField",
+            "designerId": "c5544f0b-dbeb-4949-b145-a423ff805cc1"
+        },
+        {
+            "type": "Ext.form.field.Display",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Gender",
+                "fieldStyle": "font-size: small;font-weight: bold;color: green;font-style:normal;color: #2E5494;",
+                "itemId": "Gender",
+                "labelStyle": "font-size: small;font-weight: bold;color: green;",
+                "labelWidth": 70,
+                "value": null,
+                "width": 112
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "fieldStyle": "string",
+                "itemId": "string",
+                "labelStyle": "string",
+                "labelWidth": "number",
+                "value": "string",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyDisplayField1",
+            "designerId": "f851930e-481f-46f7-80c3-0f405fff3e5d"
+        },
+        {
+            "type": "Ext.form.field.Display",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Age",
+                "fieldStyle": "font-size: small;font-weight: bold;color: green;font-style:normal;color: #2E5494;",
+                "itemId": "Age",
+                "labelStyle": "font-size: small;font-weight: bold;color: green;",
+                "labelWidth": 50,
+                "value": null,
+                "width": 72
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "fieldStyle": "string",
+                "itemId": "string",
+                "labelStyle": "string",
+                "labelWidth": "number",
+                "value": "string",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyDisplayField2",
+            "designerId": "2a9b4329-edbe-4fec-8240-fd6f02c66736"
+        },
+        {
+            "type": "Ext.form.field.Display",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "PID",
+                "fieldStyle": "font-size: medium;font-weight: bold;color: green;font-style:normal;color: #2E5494;",
+                "itemId": "PID",
+                "labelStyle": "font-size: small;font-weight: bold;color: green;",
+                "labelWidth": 50,
+                "value": null,
+                "width": 107
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "fieldStyle": "string",
+                "itemId": "string",
+                "labelStyle": "string",
+                "labelWidth": "number",
+                "value": "string",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyDisplayField3",
+            "designerId": "1b587dbe-0271-4ffe-8059-1c88fcb987fa"
+        },
+        {
+            "type": "Ext.form.field.Display",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Encounter No",
+                "fieldStyle": "font-size: small;font-weight: bold;color: green;font-style:normal;color: #2E5494;",
+                "itemId": "EncounterNo",
+                "labelStyle": "font-size: small;font-weight: bold;color: green;",
+                "labelWidth": 130,
+                "value": null,
+                "width": 222
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "fieldStyle": "string",
+                "itemId": "string",
+                "labelStyle": "string",
+                "labelWidth": "number",
+                "value": "string",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyDisplayField4",
+            "designerId": "6a88dd03-5c2e-4872-b08d-062f21fe1e78"
+        }
+    ]
+}

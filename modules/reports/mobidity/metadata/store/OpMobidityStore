@@ -1,0 +1,46 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": false,
+        "designer|userAlias": "opmobiditystore",
+        "designer|userClassName": "OpMobidityStore",
+        "model": "OpMobidity",
+        "storeId": "OpMobidityStore"
+    },
+    "designerId": "042ab3e7-29d9-407e-b6d7-a0a3184f2b05",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "../getReports.php?task=mobidity"
+            },
+            "name": "MyAjaxProxy",
+            "designerId": "c75293b5-09d5-49a4-825f-5d15d2c20058",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "mobidity"
+                    },
+                    "name": "MyJsonReader",
+                    "designerId": "d69938d5-4b20-4c61-8120-5e914186a393"
+                }
+            ]
+        }
+    ]
+}

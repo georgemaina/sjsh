@@ -1,0 +1,211 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "bodyPadding": 10,
+        "designer|snapToGrid": 5,
+        "designer|userAlias": "shiftstartend",
+        "designer|userClassName": "ShiftStartEnd",
+        "height": 247,
+        "layout": "absolute",
+        "width": 382
+    },
+    "configAlternates": {
+        "bodyPadding": "auto",
+        "designer|snapToGrid": "number",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "layout": "string",
+        "title": "string",
+        "width": "auto"
+    },
+    "name": "MyForm1",
+    "designerId": "78983eee-d73b-4734-843f-d0199bead7d9",
+    "viewControllerInstanceId": "0151f6e7-4a2c-4bf4-8c2c-3a961379b6c5",
+    "viewModelInstanceId": "86620bdc-5d68-4610-a4a2-152f3cdb3e7f",
+    "cn": [
+        {
+            "type": "Ext.form.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 10,
+                "layout|x": 1,
+                "layout|y": 1,
+                "style": "color:green; font-size:20px;font-weight:bold;",
+                "text": "Your are about to start a shift",
+                "width": 395
+            },
+            "configAlternates": {
+                "layout|x": "number",
+                "layout|y": "number",
+                "text": "string",
+                "style": "string",
+                "height": "auto",
+                "width": "auto"
+            },
+            "name": "MyLabel3",
+            "designerId": "afdfbeb3-bb5e-4c38-9601-52dcc158fb49"
+        },
+        {
+            "type": "Ext.form.field.ComboBox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "cashpoint",
+                "fieldLabel": "Cash Point",
+                "itemId": "cashpoint",
+                "layout|x": 0,
+                "layout|y": 30,
+                "name": "CashPoint"
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "name": "string",
+                "designer|displayName": "string"
+            },
+            "name": "MyComboBox",
+            "designerId": "d4d54336-b356-4d96-a5aa-b7f00acad6e5"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "description",
+                "fieldLabel": "Description",
+                "itemId": "description",
+                "layout|x": 0,
+                "layout|y": 65,
+                "name": "Description"
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "name": "string",
+                "designer|displayName": "string"
+            },
+            "name": "MyTextField",
+            "designerId": "5aa68e79-93f2-415f-a606-838e111ca67a"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "cashier",
+                "fieldLabel": "Cashier",
+                "itemId": "cashier",
+                "layout|x": 0,
+                "layout|y": 100,
+                "name": "Cashier"
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "name": "string",
+                "designer|displayName": "string"
+            },
+            "name": "MyTextField1",
+            "designerId": "8093894c-db70-4677-9522-5821e571b93c"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "startdate",
+                "fieldLabel": "Start Date",
+                "itemId": "startdate",
+                "layout|x": 0,
+                "layout|y": 135,
+                "name": "StartDate"
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "name": "string",
+                "designer|displayName": "string"
+            },
+            "name": "MyTextField2",
+            "designerId": "0df62b14-e239-40a1-9861-89ea6b73e7da"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "starttime",
+                "fieldLabel": "Start Time",
+                "itemId": "starttime",
+                "layout|x": 0,
+                "layout|y": 170,
+                "name": "StartTime"
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "name": "string",
+                "designer|displayName": "string"
+            },
+            "name": "MyTextField3",
+            "designerId": "1839072f-bff0-4251-8702-702cbcb66d6c"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "startshift",
+                "layout|x": 140,
+                "layout|y": 210,
+                "text": "Start Shift"
+            },
+            "configAlternates": {
+                "layout|x": "number",
+                "layout|y": "number",
+                "text": "string",
+                "designer|displayName": "string"
+            },
+            "name": "MyButton",
+            "designerId": "561c4f6b-1d3b-47dd-8846-a7acaea13bd5"
+        }
+    ]
+}

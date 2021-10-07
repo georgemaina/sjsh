@@ -1,0 +1,198 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "vitalstrend",
+        "designer|userClassName": "VitalsTrend",
+        "height": 735,
+        "scrollable": "vertical",
+        "title": "Vitals Trend",
+        "width": 825
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "scrollable": "auto",
+        "title": "string",
+        "width": "auto"
+    },
+    "name": "MyPanel7",
+    "designerId": "ddcaeade-10d1-4577-bf1f-4729b8d71a8c",
+    "viewControllerInstanceId": "c1375651-4eb1-40ea-a0da-6685c1f6a106",
+    "viewModelInstanceId": "717c0415-f411-48f3-8177-d0b5f41365a3",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "collapsed": true,
+                "collapsible": true,
+                "height": 261,
+                "title": "Temperature"
+            },
+            "configAlternates": {
+                "collapsed": "boolean",
+                "collapsible": "boolean",
+                "height": "auto",
+                "title": "string"
+            },
+            "name": "MyPanel7",
+            "designerId": "81f9c8b4-2a01-457a-8bd5-860a42d0787f"
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "collapsed": true,
+                "collapsible": true,
+                "height": 261,
+                "title": "BP"
+            },
+            "configAlternates": {
+                "height": "auto",
+                "title": "string",
+                "collapsed": "boolean",
+                "collapsible": "boolean"
+            },
+            "name": "MyPanel8",
+            "designerId": "f8e11f7e-2a11-46d6-ae27-2e069d184f67"
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "collapsed": true,
+                "collapsible": true,
+                "height": 44,
+                "title": "Pulse"
+            },
+            "configAlternates": {
+                "height": "auto",
+                "title": "string",
+                "collapsed": "boolean",
+                "collapsible": "boolean"
+            },
+            "name": "MyPanel9",
+            "designerId": "d840d4f3-47a3-4c4f-8582-0c52abd38499"
+        },
+        {
+            "type": "Ext.grid.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 247,
+                "title": "Vitals"
+            },
+            "configAlternates": {
+                "height": "auto",
+                "title": "string"
+            },
+            "name": "MyGridPanel1",
+            "designerId": "893d594d-a510-4974-953f-5f4092e67563",
+            "cn": [
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "string",
+                        "text": "String"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string"
+                    },
+                    "name": "MyColumn40",
+                    "designerId": "05583ccf-16d7-4381-8b55-35a14008d569"
+                },
+                {
+                    "type": "Ext.grid.column.Number",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "number",
+                        "text": "Number"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string"
+                    },
+                    "name": "MyNumberColumn",
+                    "designerId": "0dfcc5d4-4f83-4c7f-b62f-374f1cccaf1d"
+                },
+                {
+                    "type": "Ext.grid.column.Date",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "date",
+                        "text": "Date"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string"
+                    },
+                    "name": "MyDateColumn",
+                    "designerId": "0146ea6f-9dfc-4279-9de8-ee0caf71ec03"
+                },
+                {
+                    "type": "Ext.grid.column.Boolean",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "bool",
+                        "text": "Boolean"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string"
+                    },
+                    "name": "MyBooleanColumn",
+                    "designerId": "e3936a14-763b-405a-afd2-6c50eaedcc8c"
+                },
+                {
+                    "type": "Ext.view.Table",
+                    "reference": {
+                        "name": "viewConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyTable5",
+                    "designerId": "760e15b3-42fd-46e4-85fd-672d7b6cec1d"
+                }
+            ]
+        }
+    ]
+}

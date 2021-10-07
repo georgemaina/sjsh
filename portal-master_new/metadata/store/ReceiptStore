@@ -1,0 +1,58 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "receiptstore",
+        "designer|userClassName": "ReceiptStore",
+        "model": "ReceiptModel",
+        "storeId": "ReceiptStore"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string"
+    },
+    "name": "MyJsonStore1",
+    "designerId": "0a777719-2002-4a4f-9db0-79e91e3ad6db",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "../data/getPatientFunctions.php?caller=getReceipts"
+            },
+            "configAlternates": {
+                "url": "string"
+            },
+            "name": "MyAjaxProxy5",
+            "designerId": "4af6b55e-67bb-4e0f-a48e-0955046b7db3",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "updateReceipts"
+                    },
+                    "configAlternates": {
+                        "rootProperty": "string"
+                    },
+                    "name": "MyJsonReader5",
+                    "designerId": "80d950be-c95d-4173-88ae-31c05b0a34fb"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,94 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "controllers": [
+            "Main",
+            "Inpatient"
+        ],
+        "models": [
+            "Procedures",
+            "BillNumbers",
+            "EncounterNumbers",
+            "PriceTypes",
+            "Departments",
+            "CashPintsModel",
+            "CashSale",
+            "WaitingList",
+            "DiagnosisCodes"
+        ],
+        "name": "CarePortal",
+        "stores": [
+            "ProcedureStore",
+            "MenusStore",
+            "ReceiptStore",
+            "Wards",
+            "PriceTypeStore",
+            "Consultations",
+            "DepartmentsStore",
+            "CashSaleStore",
+            "WaitingListStore",
+            "DiseaseCodeStore"
+        ],
+        "views": [
+            "InsuranceCredit",
+            "Discharge",
+            "FinaliseInvoice",
+            "NHIFCredit",
+            "Credits",
+            "Register",
+            "PatientInfo",
+            "ViewSlips",
+            "BedCharge",
+            "OccupancyReport",
+            "ShiftStartEnd",
+            "CashSale",
+            "ReprintReceipt",
+            "Payments",
+            "PaymentReceipts",
+            "PaymentModes",
+            "CashPointsList",
+            "Vitalslist",
+            "Diagnosis",
+            "LabTests",
+            "Radiology",
+            "Services",
+            "NewPrescriptions"
+        ]
+    },
+    "configAlternates": {
+        "controllers": "typedarray",
+        "models": "typedarray",
+        "name": "string",
+        "stores": "typedarray",
+        "views": "typedarray"
+    },
+    "name": "Application",
+    "designerId": "application",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "launch",
+                "implHandler": [
+                    "//parent.STARTPAGE.location.reload();"
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "launch",
+            "designerId": "f126be9c-a96d-4327-b651-5081bf9f483a"
+        }
+    ]
+}

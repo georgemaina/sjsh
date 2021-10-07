@@ -1,0 +1,475 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "bodyPadding": 10,
+        "container|align": "stretch",
+        "designer|userAlias": "urinalysis",
+        "designer|userClassName": "Urinalysis",
+        "itemId": "Urinalysis",
+        "layout": "hbox",
+        "title": "Urinalysis Microscopy",
+        "width": 643
+    },
+    "configAlternates": {
+        "bodyPadding": "auto",
+        "container|align": "string",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "layout": "string",
+        "title": "string",
+        "width": "auto",
+        "itemId": "string"
+    },
+    "name": "MyForm",
+    "designerId": "b14eb125-a5e6-45e2-9769-7ab4b7d2b90b",
+    "viewControllerInstanceId": "edb90026-3e47-4616-9352-464fde189c2b",
+    "viewModelInstanceId": "8d6224e1-cce0-4979-897a-836eb2a77776",
+    "cn": [
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout": "vbox",
+                "margin": "0 10 0 0",
+                "title": ""
+            },
+            "configAlternates": {
+                "layout": "string",
+                "margin": "auto",
+                "title": "string"
+            },
+            "name": "MyFieldSet8",
+            "designerId": "f8d1bbc6-470f-4abd-b852-967098aba698",
+            "cn": [
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "PDT",
+                        "labelAlign": "right",
+                        "layout|flex": 1,
+                        "margin": "0 0 3 0",
+                        "name": "group-ltest103-1",
+                        "store": [
+                            "['POS','NEG']"
+                        ],
+                        "width": 209
+                    },
+                    "configAlternates": {
+                        "store": "array",
+                        "fieldLabel": "string",
+                        "labelAlign": "string",
+                        "layout|flex": "number",
+                        "margin": "auto",
+                        "width": "auto",
+                        "name": "string"
+                    },
+                    "name": "MyComboBox9",
+                    "designerId": "3b39ef49-c007-48c7-94cc-7bfc9c7c7719"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "GLUCOSE",
+                        "labelAlign": "right",
+                        "layout|flex": 1,
+                        "margin": "0 0 3 0",
+                        "name": "group-ltest103-2"
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "labelAlign": "string",
+                        "layout|flex": "number",
+                        "margin": "auto",
+                        "name": "string"
+                    },
+                    "name": "MyTextField86",
+                    "designerId": "ae95ad0e-3524-4ed3-961b-8683a4acb47c"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "PROTEIN",
+                        "labelAlign": "right",
+                        "layout|flex": 1,
+                        "margin": "0 0 3 0",
+                        "name": "group-ltest103-3"
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "labelAlign": "string",
+                        "layout|flex": "number",
+                        "margin": "auto",
+                        "name": "string"
+                    },
+                    "name": "MyTextField87",
+                    "designerId": "cb8da7f1-357e-4d86-a8e5-7d81f3df3d21"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "SP GRAVITY",
+                        "labelAlign": "right",
+                        "layout|flex": 1,
+                        "margin": "0 0 3 0",
+                        "name": "group-ltest103-4"
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "labelAlign": "string",
+                        "layout|flex": "number",
+                        "margin": "auto",
+                        "name": "string"
+                    },
+                    "name": "MyTextField88",
+                    "designerId": "ab5fdcb0-063e-49df-8e1c-0d417d2b0267"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "PH",
+                        "labelAlign": "right",
+                        "layout|flex": 1,
+                        "margin": "0 0 3 0",
+                        "name": "group-ltest103-5"
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "labelAlign": "string",
+                        "layout|flex": "number",
+                        "margin": "auto",
+                        "name": "string"
+                    },
+                    "name": "MyTextField89",
+                    "designerId": "23655e0c-1080-4dd9-81df-76bca3368a94"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "KETONES",
+                        "labelAlign": "right",
+                        "layout|flex": 1,
+                        "margin": "0 0 3 0",
+                        "name": "group-ltest103-6"
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "labelAlign": "string",
+                        "layout|flex": "number",
+                        "margin": "auto",
+                        "name": "string"
+                    },
+                    "name": "MyTextField95",
+                    "designerId": "825e9efe-6ae3-4fe3-b0b6-f717eb4a9415"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "BILIRUBIN",
+                        "labelAlign": "right",
+                        "layout|flex": 1,
+                        "margin": "0 0 3 0",
+                        "name": "group-ltest103-7"
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "labelAlign": "string",
+                        "layout|flex": "number",
+                        "margin": "auto",
+                        "name": "string"
+                    },
+                    "name": "MyTextField94",
+                    "designerId": "c225b8de-7b7b-473c-9b42-198631e1f9a3"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "UROBILINOGEN",
+                        "labelAlign": "right",
+                        "layout|flex": 1,
+                        "margin": "0 0 3 0",
+                        "name": "group-ltest103-8"
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "labelAlign": "string",
+                        "layout|flex": "number",
+                        "margin": "auto",
+                        "name": "string"
+                    },
+                    "name": "MyTextField93",
+                    "designerId": "15b1f7f9-7b0c-493b-850e-2ece8199d3fc"
+                },
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "NITRITES",
+                        "labelAlign": "right",
+                        "layout|flex": 1,
+                        "margin": "0 0 3 0",
+                        "name": "group-ltest103-9",
+                        "store": [
+                            "['POS','NEG']"
+                        ],
+                        "width": 178
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "labelAlign": "string",
+                        "layout|flex": "number",
+                        "margin": "auto",
+                        "width": "auto",
+                        "store": "array",
+                        "name": "string"
+                    },
+                    "name": "MyComboBox16",
+                    "designerId": "eeb48507-df38-45c4-b17a-dabee8df2483"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "LEUCOCYTES",
+                        "labelAlign": "right",
+                        "layout|flex": 1,
+                        "margin": "0 0 3 0",
+                        "name": "group-ltest103-10"
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "labelAlign": "string",
+                        "layout|flex": "number",
+                        "margin": "auto",
+                        "name": "string"
+                    },
+                    "name": "MyTextField91",
+                    "designerId": "dc38d206-17f2-4499-bf50-31587fa08517"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "BLOOD",
+                        "labelAlign": "right",
+                        "layout|flex": 1,
+                        "margin": "0 0 3 0",
+                        "name": "group-ltest103-11"
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "labelAlign": "string",
+                        "layout|flex": "number",
+                        "margin": "auto",
+                        "name": "string"
+                    },
+                    "name": "MyTextField90",
+                    "designerId": "20bb11b6-73f4-4fb2-afc1-aefbc25575b0"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout": "vbox",
+                "title": "Deposits"
+            },
+            "configAlternates": {
+                "layout": "string",
+                "title": "string"
+            },
+            "name": "MyFieldSet9",
+            "designerId": "d1e0df4c-84d9-43ad-aa5c-9c235e708375",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "CELLS",
+                        "labelAlign": "right",
+                        "layout|flex": 1,
+                        "margin": "0 0 3 0",
+                        "name": "group-ltest103-43",
+                        "width": 275
+                    },
+                    "configAlternates": {
+                        "store": "array",
+                        "fieldLabel": "string",
+                        "labelAlign": "string",
+                        "layout|flex": "number",
+                        "margin": "auto",
+                        "width": "auto",
+                        "name": "string"
+                    },
+                    "name": "MyTextField96",
+                    "designerId": "5881aa98-dc94-46f9-be70-7038aa36372a"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Trophozoites",
+                        "labelAlign": "right",
+                        "layout|flex": 1,
+                        "margin": "0 0 3 0",
+                        "name": "group-ltest103-44"
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "labelAlign": "string",
+                        "layout|flex": "number",
+                        "margin": "auto",
+                        "name": "string"
+                    },
+                    "name": "MyTextField97",
+                    "designerId": "137acfa5-f0c5-4c37-8c9c-251b053677df"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Crystals",
+                        "labelAlign": "right",
+                        "layout|flex": 1,
+                        "margin": "0 0 3 0",
+                        "name": "group-ltest103-45"
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "labelAlign": "string",
+                        "layout|flex": "number",
+                        "margin": "auto",
+                        "name": "string"
+                    },
+                    "name": "MyTextField87",
+                    "designerId": "005e2e56-fd43-49d7-af84-4b46a8638f19"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "CASTS",
+                        "labelAlign": "right",
+                        "layout|flex": 1,
+                        "margin": "0 0 3 0",
+                        "name": "group-ltest103-46"
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "labelAlign": "string",
+                        "layout|flex": "number",
+                        "margin": "auto",
+                        "name": "string"
+                    },
+                    "name": "MyTextField88",
+                    "designerId": "85cf0888-f129-42a9-8c58-5d203e774c59"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "ABNOMALITY",
+                        "labelAlign": "right",
+                        "layout|flex": 1,
+                        "margin": "0 0 3 0",
+                        "name": "group-ltest103-47"
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "labelAlign": "string",
+                        "layout|flex": "number",
+                        "margin": "auto",
+                        "name": "string"
+                    },
+                    "name": "MyTextField89",
+                    "designerId": "e15a54f4-31f1-49ac-ab34-2b14fe765ac0"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,64 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": false,
+        "designer|userAlias": "occupancystore",
+        "designer|userClassName": "OccupancyStore",
+        "groupField": null,
+        "model": "OccupancyList",
+        "pageSize": 500,
+        "storeId": "OccupancyStore"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "pageSize": "number",
+        "storeId": "string",
+        "autoLoad": "boolean",
+        "groupField": "datafield"
+    },
+    "name": "WardListStore1",
+    "designerId": "ffa89926-775d-46e7-859e-27ce96520f38",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "../data/getPatientFunctions.php?caller=getPatientsInWard"
+            },
+            "configAlternates": {
+                "url": "string"
+            },
+            "name": "MyAjaxProxy",
+            "designerId": "6dd6f7bf-960c-4cbb-995c-c9fb5c8c1745",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "occupancy"
+                    },
+                    "configAlternates": {
+                        "rootProperty": "string"
+                    },
+                    "name": "MyJsonReader",
+                    "designerId": "1da28823-ca2a-43aa-99cf-16691fc740bf"
+                }
+            ]
+        }
+    ]
+}

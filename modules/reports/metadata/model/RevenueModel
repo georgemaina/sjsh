@@ -1,0 +1,54 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "revenuemodel",
+        "designer|userClassName": "RevenueModel"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "designerId": "113ca781-721f-4b1c-bfea-636babaf87fc",
+    "cn": [
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Category"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField1",
+            "designerId": "d8dca208-23d6-4184-b73b-a041d5810183"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Amount",
+                "sortType": null
+            },
+            "configAlternates": {
+                "name": "string",
+                "sortType": "string",
+                "type": "string"
+            },
+            "name": "MyField2",
+            "designerId": "d43e4fab-8a99-4a00-907c-79ce8b3f1342"
+        }
+    ]
+}

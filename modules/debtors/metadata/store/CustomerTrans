@@ -1,0 +1,62 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "designer|userClassName": "CustomerTrans",
+        "model": "DebtorJobs",
+        "pageSize": null,
+        "storeId": "CustomerTrans"
+    },
+    "configAlternates": {
+        "autoLoad": "boolean",
+        "buffered": "boolean",
+        "designer|userClassName": "string",
+        "model": "model",
+        "pageSize": "number",
+        "storeId": "string",
+        "designer|userAlias": "string"
+    },
+    "designerId": "5b1dea56-1446-462d-b477-8170ea5dcaee",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "./data/getDataFunctions.php?task=getDebtorJobs"
+            },
+            "configAlternates": {
+                "url": "string"
+            },
+            "name": "MyAjaxProxy",
+            "designerId": "6ea5f95e-8403-4c84-a8cf-d74c36ea4bbb",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "Debtors"
+                    },
+                    "configAlternates": {
+                        "root": "string",
+                        "rootProperty": "string"
+                    },
+                    "name": "MyJsonReader",
+                    "designerId": "f4f0b0e2-6754-467a-9f35-62f169083e05"
+                }
+            ]
+        }
+    ]
+}

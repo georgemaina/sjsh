@@ -1,0 +1,43 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "waitinglist",
+        "designer|userClassName": "WaitingListViewController"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "designerId": "49a37630-6929-4965-89a6-612378506427",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "pid"
+                ],
+                "fn": "assignBed",
+                "implHandler": [
+                    "Ext.Msg.alert('Test','Selected Pid is '+pid);"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "assignBed",
+            "designerId": "1258a817-c0a5-4ea9-becf-37420ee375b6"
+        }
+    ]
+}

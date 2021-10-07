@@ -1,0 +1,381 @@
+#waitingList li.list-row { 
+    border: 1px solid #f90; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    list-style: none outside; 
+    padding: 5px; 
+} 
+
+.list-row-selected { 
+    background-color: #f90; 
+}
+
+.app-header {
+    color: #596F8F;
+    font-size: 22px;
+    font-weight: 200;
+    padding: 8px 15px;
+    text-shadow: 0 1px 0 #fff;
+}
+.app-msg {
+    background: #D1DDEF;
+    border: 1px solid #ACC3E4;
+    padding: 3px 15px;
+    font-weight: bold;
+    font-size: 13px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.x-panel-ghost {
+    z-index: 1;
+}
+.x-portal-body {
+    padding: 0 0 0 8px;
+}
+.x-portal .x-portal-column {
+    /* columns must have vertical padding to avoid losing dimensions when empty */
+    padding: 8px 8px 0 0;
+}
+.x-portal .x-panel-dd-spacer {
+    border: 2px dashed #99bbe8;
+    background: #f6f6f6;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    margin-bottom: 10px;
+}
+.x-portlet {
+    margin-bottom:10px;
+    padding: 1px;
+}
+.portlet-content {
+    padding: 10px;
+    font-size: 11px;
+}
+
+.app-options .portlet-content {
+    padding: 5px;
+    font-size: 12px;
+}
+.settings {
+    background-image:url(../images/icons/folder_wrench.png);
+}
+.nav {
+    background-image:url(../images/icons/folder_go.png);
+}
+.info {
+    background-image:url(../images/icons/information.png);
+}
+
+#vitals
+{
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+    width:100%;
+    border-collapse:collapse;
+}
+#vitals td, #vitals th 
+{
+    font-size:1em;
+    border:1px solid #98bf21;
+    padding:3px 7px 2px 7px;
+}
+#vitals th 
+{
+    font-size:1.1em;
+    text-align:left;
+    padding-top:5px;
+    padding-bottom:4px;
+    background-color:#A7C942;
+    color:#ffffff;
+}
+#vitals tr.alt td 
+{
+    color:#000000;
+    background-color:#EAF2D3;
+}
+
+#vitals td.titles  
+{
+    color:#04648c;
+    font-size: medium;
+    font-weight: bold;
+    text-align: center;
+}
+#vitals td.totals  
+{
+    color:#04648c;
+    font-size: medium;
+    font-weight: bold;
+    text-align: center;
+}
+
+#vitals td.danger  
+{
+    background-color:#FF0000;
+    font-size: small;
+    font-weight: bold;
+    text-align: left;
+    color:#FFFF00;
+}
+
+#vitals td.good  
+{
+    background-color:#FFFFFF;
+    font-size: small;
+    font-weight: bold;
+    text-align: left;
+}
+
+
+
+#diagnosis
+{
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+    width:100%;
+    border-collapse:collapse;
+}
+#diagnosis td, #diagnosis th 
+{
+    font-size:1em;
+    border:1px solid #98bf21;
+    padding:3px 7px 2px 7px;
+}
+#diagnosis th 
+{
+    font-size:1.1em;
+    text-align:left;
+    padding-top:5px;
+    padding-bottom:4px;
+    background-color:#A7C942;
+    color:#ffffff;
+}
+#diagnosis tr.alt td 
+{
+    color:#000000;
+    background-color:#EAF2D3;
+}
+
+#diagnosis td.titles  
+{
+    color:#04648c;
+    font-size: medium;
+    font-weight: bold;
+    text-align: center;
+}
+#diagnosis td.totals  
+{
+    color:#04648c;
+    font-size: medium;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+#investigations
+{
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+    width:100%;
+    border-collapse:collapse;
+}
+#investigations td, #investigations th 
+{
+    font-size:1em;
+    border:1px solid #98bf21;
+    padding:3px 7px 2px 7px;
+}
+#investigations th 
+{
+    font-size:1.1em;
+    text-align:left;
+    padding-top:5px;
+    padding-bottom:4px;
+    background-color:#A7C942;
+    color:#ffffff;
+}
+#investigations tr.alt td 
+{
+    color:#000000;
+    background-color:#EAF2D3;
+}
+
+#investigations td.titles  
+{
+    color:#04648c;
+    font-size: medium;
+    font-weight: bold;
+    text-align: center;
+}
+#investigations td.totals  
+{
+    color:#04648c;
+    font-size: medium;
+    font-weight: bold;
+    text-align: center;
+}
+
+#investigations td.status1  
+{
+    background-color:#FF0000;
+    font-size: small;
+    font-weight: bold;
+    text-align: center;
+    color:#FFFFFF;
+}
+
+#investigations td.status2 
+{
+    background-color:#32CD32;
+    font-size: small;
+    font-weight: bold;
+    text-align: left;
+    color:#FFFF00;
+}
+
+
+
+#clinics
+{
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+    width:100%;
+    border-collapse:collapse;
+}
+#clinics td, #clinics th 
+{
+    font-size:1em;
+    border:1px solid #98bf21;
+    padding:3px 7px 2px 7px;
+}
+#clinics th 
+{
+    font-size:1.1em;
+    text-align:left;
+    padding-top:5px;
+    padding-bottom:4px;
+    background-color:#A7C942;
+    color:#ffffff;
+}
+#clinics tr.alt td 
+{
+    color:#000000;
+    background-color:#EAF2D3;
+}
+
+#clinics td.titles  
+{
+    color:#04648c;
+    font-size: medium;
+    font-weight: bold;
+    text-align: center;
+}
+#clinics td.totals  
+{
+    color:#04648c;
+    font-size: medium;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+#notes
+{
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+    width:100%;
+    border-collapse:collapse;
+}
+#notes td, #notes th 
+{
+    font-size:1em;
+    border:1px solid #98bf21;
+    padding:3px 7px 2px 7px;
+}
+#notes th 
+{
+    font-size:1.1em;
+    text-align:left;
+    padding-top:5px;
+    padding-bottom:4px;
+    background-color:#A7C942;
+    color:#ffffff;
+}
+#notes tr.alt td 
+{
+    color:#000000;
+    background-color:#EAF2D3;
+}
+
+#notes td.titles  
+{
+    color:#04648c;
+    font-size: medium;
+    font-weight: bold;
+    text-align: center;
+     
+}
+#notes td.content  
+{
+    color:#04648c;
+    font-size: small;
+    text-align: left;
+    height:50px;
+    overflow: scroll;
+    
+}
+
+#announcements
+{
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+    width:100%;
+    border-collapse:collapse;
+}
+#announcements td, #announcements th 
+{
+    font-size:1em;
+    border:1px solid #98bf21;
+    padding:3px 7px 2px 7px;
+}
+#announcements th 
+{
+    font-size:1.1em;
+    text-align:left;
+    padding-top:5px;
+    padding-bottom:4px;
+    background-color:#A7C942;
+    color:#ffffff;
+}
+
+#announcements tr.alt td 
+{
+    color:#000000;
+    background-color:#EAF2D3;
+}
+
+#announcements td.titles  
+{
+    color:#04648c;
+    font-size: medium;
+    font-weight: bold;
+    text-align: center;
+}
+#announcements td.totals  
+{
+    color:#04648c;
+    font-size: medium;
+    font-weight: bold;
+    text-align: center;
+}
+
+#waitinglist td
+{
+    color:red;
+    font-size:small;
+}
+
+#diagnosisSelector {
+    color:#04648c;
+    font-size: medium;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+

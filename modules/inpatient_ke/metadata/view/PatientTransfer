@@ -1,0 +1,272 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "bodyPadding": 3,
+        "designer|uiInterfaceName": "default-framed",
+        "designer|userAlias": "patienttransfer",
+        "designer|userClassName": "PatientTransfer",
+        "frame": true,
+        "id": "patientTransfer",
+        "width": 743
+    },
+    "configAlternates": {
+        "bodyPadding": "auto",
+        "designer|uiInterfaceName": "string",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "frame": "boolean",
+        "height": "auto",
+        "width": "auto",
+        "id": "string"
+    },
+    "designerId": "cf3e1af7-2c30-413f-b841-86ec26b53fbc",
+    "viewControllerInstanceId": "485f16e4-f90c-46fa-94f5-6ba88a552cb0",
+    "viewModelInstanceId": "75a05ac1-79d4-478e-adb4-2ee255977747",
+    "cn": [
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "name": "patientdetails2",
+            "designerId": "3ddfd72c-412a-40e9-acab-74ed77047b67",
+            "masterInstanceId": "59198028-f230-40f4-9404-6ef9ffcd6d5e"
+        },
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": "stretch",
+                "layout": "hbox",
+                "margin": "5 0 5 0",
+                "padding": "0 0 0 15"
+            },
+            "configAlternates": {
+                "container|align": "string",
+                "layout": "string",
+                "margin": "auto",
+                "padding": "auto"
+            },
+            "name": "MyFieldSet15",
+            "designerId": "d227a8ad-5318-4fe3-b277-3c4b4055895a",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "margin": "0 20 0 0",
+                        "value": "Where should the patient be transferred to?"
+                    },
+                    "configAlternates": {
+                        "margin": "auto",
+                        "value": "string"
+                    },
+                    "name": "MyDisplayField19",
+                    "designerId": "a4003be4-e5ca-4ab2-a843-cce0fda3bccb"
+                },
+                {
+                    "type": "Ext.form.field.Checkbox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Transfer to Ward",
+                        "id": "treansferWard",
+                        "itemId": "treansferWard",
+                        "labelWidth": 120,
+                        "layout|flex": 1,
+                        "name": "transType"
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "itemId": "string",
+                        "labelWidth": "number",
+                        "layout|flex": "number",
+                        "name": "string",
+                        "id": "string"
+                    },
+                    "name": "MyCheckbox5",
+                    "designerId": "828d5161-8f22-4c0a-b2a7-6b481f01d775"
+                },
+                {
+                    "type": "Ext.form.field.Checkbox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Transfer to Bed",
+                        "id": "treansferBed",
+                        "itemId": "treansferBed",
+                        "labelWidth": 120,
+                        "layout|flex": 1,
+                        "name": "transType"
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "itemId": "string",
+                        "labelWidth": "number",
+                        "layout|flex": "number",
+                        "name": "string",
+                        "id": "string"
+                    },
+                    "name": "MyCheckbox6",
+                    "designerId": "1776d563-0e6a-4077-81d5-a2b48d5bc035"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": "stretch",
+                "hidden": true,
+                "id": "transBed",
+                "itemId": "transBed",
+                "layout": "hbox",
+                "padding": "0 0 0 15"
+            },
+            "configAlternates": {
+                "container|align": "string",
+                "layout": "string",
+                "padding": "auto",
+                "hidden": "boolean",
+                "id": "string",
+                "itemId": "string"
+            },
+            "name": "MyFieldSet10",
+            "designerId": "93ed663b-4dff-4786-8f79-0d920b01144d",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "margin": "0 10 0 0",
+                        "value": "Transfer to another bed in this ward "
+                    },
+                    "configAlternates": {
+                        "value": "string",
+                        "margin": "auto"
+                    },
+                    "name": "MyDisplayField21",
+                    "designerId": "f444fd55-ccc6-4367-b5d1-0b5ccb20aad3"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "margin": "0 20 0 0"
+                    },
+                    "configAlternates": {
+                        "margin": "auto"
+                    },
+                    "name": "MyTextField31",
+                    "designerId": "6a0a11bd-89d3-4437-8a46-e852886baa93"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "margin": "0 10 0 20",
+                        "text": "Show Bed",
+                        "width": 115
+                    },
+                    "configAlternates": {
+                        "margin": "auto",
+                        "text": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyButton21",
+                    "designerId": "b69f0f2c-d670-4cda-8b55-352d67852939"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 564,
+                "hidden": true,
+                "itemId": "transWard",
+                "padding": "0 0 0 15"
+            },
+            "configAlternates": {
+                "padding": "auto",
+                "height": "auto",
+                "hidden": "boolean",
+                "itemId": "string"
+            },
+            "name": "MyFieldSet17",
+            "designerId": "ddec9cf9-dacd-4302-81a2-53af2944c65b",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|anchor": "100%",
+                        "value": "Transfer to another ward"
+                    },
+                    "configAlternates": {
+                        "layout|anchor": "string",
+                        "value": "string"
+                    },
+                    "name": "MyDisplayField22",
+                    "designerId": "3f9e1679-9c08-4762-9bdf-6f4df4c2e121"
+                },
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "name": "wardslist",
+                    "designerId": "fea4a4d4-8694-4f39-8930-35d855cdf3d0",
+                    "masterInstanceId": "4f27dea6-00ba-446b-9b04-db1eae23d5b7"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,379 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "bodyPadding": 10,
+        "container|align": "stretch",
+        "designer|uiInterfaceName": "default-framed",
+        "designer|userAlias": "opnotes",
+        "designer|userClassName": "OPNotes",
+        "frame": true,
+        "height": 502,
+        "layout": "hbox",
+        "width": 860
+    },
+    "configAlternates": {
+        "bodyPadding": "auto",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "title": "string",
+        "width": "auto",
+        "container|align": "string",
+        "designer|uiInterfaceName": "string",
+        "frame": "boolean",
+        "layout": "string"
+    },
+    "name": "Notes1",
+    "designerId": "7effe66f-fe0a-445c-b719-9c36928f704b",
+    "viewControllerInstanceId": "8560dd23-56b4-48b3-a65c-bf51a8feda90",
+    "viewModelInstanceId": "e68a9074-4917-4b35-8340-1f14416002e8",
+    "cn": [
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|snapToGrid": 5,
+                "dock": "top",
+                "height": 94,
+                "layout": "absolute",
+                "layout|flex": 1
+            },
+            "configAlternates": {
+                "designer|snapToGrid": "number",
+                "dock": "string",
+                "height": "auto",
+                "layout": "string",
+                "layout|flex": "number"
+            },
+            "name": "MyContainer7",
+            "designerId": "322f41f8-0bd6-4090-b2dd-a8ebacdb0133",
+            "cn": [
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "name": "patientdetails1",
+                    "designerId": "a90bdf12-2766-4f8f-b51c-91cdfc27dcd5",
+                    "masterInstanceId": "59198028-f230-40f4-9404-6ef9ffcd6d5e"
+                }
+            ]
+        },
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 300
+            },
+            "configAlternates": {
+                "height": "auto"
+            },
+            "name": "MyContainer4",
+            "designerId": "4f5c6e36-a322-48ce-8a95-0e1340fe76dc",
+            "cn": [
+                {
+                    "type": "Ext.form.RadioGroup",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "stretch",
+                        "layout": "vbox",
+                        "width": 217
+                    },
+                    "configAlternates": {
+                        "container|align": "string",
+                        "layout": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyRadioGroup2",
+                    "designerId": "64e44832-75a3-4edf-bf72-69d23928c32e",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Radio",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "Chief Complains",
+                                "fieldLabel": null
+                            },
+                            "configAlternates": {
+                                "boxLabel": "string",
+                                "fieldLabel": "string"
+                            },
+                            "name": "MyRadio6",
+                            "designerId": "ef3ebd39-0795-40a0-92c8-2b05fcd83589"
+                        },
+                        {
+                            "type": "Ext.form.field.Radio",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "History/ Previous illness",
+                                "fieldLabel": null
+                            },
+                            "configAlternates": {
+                                "boxLabel": "string",
+                                "fieldLabel": "string"
+                            },
+                            "name": "MyRadio7",
+                            "designerId": "3f594eb8-460e-4f44-b244-04c68760a531"
+                        },
+                        {
+                            "type": "Ext.form.field.Radio",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "Reviewed Symptoms",
+                                "fieldLabel": null
+                            },
+                            "configAlternates": {
+                                "boxLabel": "string",
+                                "fieldLabel": "string"
+                            },
+                            "name": "MyRadio8",
+                            "designerId": "b0d9b761-bff3-40a9-bc37-3095bf22730c"
+                        },
+                        {
+                            "type": "Ext.form.field.Radio",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "OBS & Gynaecology",
+                                "fieldLabel": null
+                            },
+                            "configAlternates": {
+                                "boxLabel": "string",
+                                "fieldLabel": "string"
+                            },
+                            "name": "MyRadio9",
+                            "designerId": "d4fc08d2-652f-4436-92b8-9ed2a1713b1c"
+                        },
+                        {
+                            "type": "Ext.form.field.Radio",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "Past Medical/Surgery",
+                                "fieldLabel": null
+                            },
+                            "configAlternates": {
+                                "boxLabel": "string",
+                                "fieldLabel": "string"
+                            },
+                            "name": "MyRadio10",
+                            "designerId": "64e1c76e-2ee7-492b-98e8-ab7909166970"
+                        },
+                        {
+                            "type": "Ext.form.field.Radio",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "Family Social History",
+                                "fieldLabel": null
+                            },
+                            "configAlternates": {
+                                "boxLabel": "string",
+                                "fieldLabel": "string"
+                            },
+                            "name": "MyRadio11",
+                            "designerId": "a9bc0799-3cb9-4d6e-8e5b-183ed8b99250"
+                        },
+                        {
+                            "type": "Ext.form.field.Radio",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "Physical Exam",
+                                "fieldLabel": null
+                            },
+                            "configAlternates": {
+                                "boxLabel": "string",
+                                "fieldLabel": "string"
+                            },
+                            "name": "MyRadio12",
+                            "designerId": "b42f947a-f7b7-4e9a-87b2-6d59eb90e1e8"
+                        },
+                        {
+                            "type": "Ext.form.field.Radio",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "Admission Notes",
+                                "fieldLabel": null,
+                                "layout|flex": 1
+                            },
+                            "configAlternates": {
+                                "boxLabel": "string",
+                                "fieldLabel": "string",
+                                "layout|flex": "number"
+                            },
+                            "name": "MyRadio13",
+                            "designerId": "b8aaaf37-7620-4446-95ad-989651a42cbd"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "frame": true,
+                "height": 217
+            },
+            "configAlternates": {
+                "frame": "boolean",
+                "height": "auto"
+            },
+            "name": "MyContainer5",
+            "designerId": "dccc545e-5cad-4ec2-8a23-b83bc881c2ae",
+            "cn": [
+                {
+                    "type": "Ext.form.field.HtmlEditor",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 351,
+                        "scrollable": "vertical"
+                    },
+                    "configAlternates": {
+                        "height": "auto",
+                        "layout|anchor": "string",
+                        "scrollable": "auto"
+                    },
+                    "name": "MyHtmlEditor",
+                    "designerId": "a7462812-b121-4016-b209-4b6071acf373"
+                }
+            ]
+        },
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|snapToGrid": 5,
+                "dock": "bottom",
+                "frame": true,
+                "height": 56,
+                "layout": "absolute",
+                "layout|flex": 1
+            },
+            "configAlternates": {
+                "dock": "string",
+                "height": "auto",
+                "layout|flex": "number",
+                "designer|snapToGrid": "number",
+                "frame": "boolean",
+                "layout": "string"
+            },
+            "name": "MyContainer8",
+            "designerId": "2299d7bc-841b-4de4-9aa5-009feb087873",
+            "cn": [
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 35,
+                        "iconCls": "x-fa fa-save",
+                        "layout|x": 505,
+                        "layout|y": 10,
+                        "text": "Save",
+                        "width": 135
+                    },
+                    "configAlternates": {
+                        "height": "auto",
+                        "iconCls": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "text": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyButton26",
+                    "designerId": "8222ebe7-ec89-4099-bf66-68342e71acd1"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 35,
+                        "iconCls": "x-fa fa-close",
+                        "layout|x": 695,
+                        "layout|y": 10,
+                        "text": "Close",
+                        "width": 135
+                    },
+                    "configAlternates": {
+                        "height": "auto",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "text": "string",
+                        "width": "auto",
+                        "iconCls": "string"
+                    },
+                    "name": "MyButton30",
+                    "designerId": "3245cab4-fefa-4874-8f33-cc436d2089cb"
+                }
+            ]
+        }
+    ]
+}

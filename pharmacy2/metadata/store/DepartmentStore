@@ -1,0 +1,58 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "designer|userAlias": "departmentstore",
+        "designer|userClassName": "DepartmentStore",
+        "model": "Locations",
+        "storeId": "DepartmentStore"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string",
+        "autoLoad": "boolean"
+    },
+    "name": "LocationsStore1",
+    "designerId": "80f98edd-e37b-442e-b807-fcd40cbe908f",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "extraParams": [
+                    "{mainStore:'0'}"
+                ],
+                "url": "../../data/getDataFunctions.php?task=getStoreLocations"
+            },
+            "configAlternates": {
+                "url": "string",
+                "extraParams": "object"
+            },
+            "name": "MyAjaxProxy7",
+            "designerId": "45e0b95a-ad23-4de5-94aa-d37eaa50d44b",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyJsonReader7",
+                    "designerId": "f54a040f-d759-405c-979e-465cc708be97"
+                }
+            ]
+        }
+    ]
+}

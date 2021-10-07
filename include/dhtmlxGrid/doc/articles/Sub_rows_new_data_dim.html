@@ -1,0 +1,147 @@
+<html>
+
+<head>
+
+
+<link rel="STYLESHEET" type="text/css" href="../common/styles.css">
+</head>
+<body>
+	<table border="0" cellpadding="0" cellspacing="0" class="sample_header" zid="71">
+		<tbody zid="3">
+			<tr valign="center" zid="4">
+				<td align="center" width="10" zid="5">&nbsp;</td>
+				<td align="left" zid="6">
+					<p zid="224">
+						<a href="http://www.dhtmlx.com/" zid="7">DHTMLX</a> Documentation
+					</p>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<!--- CONTENT. Starts --->
+	<h2 id="b9_e0">            Sub rows - new data dimension</h2>
+Sometimes grid data may contain some extra content, that is too big to be included in a grid line. But on the other hand, this content is related to the grid row and needs to be shown with it. <br id="ve.q">
+<span id="iryu" style="background-color: rgb(255, 255, 255);">T</span><span id="n.r0" style="background-color: rgb(255, 255, 255);">o implement such "main record -&gt; details" pattern </span>sub_rows can be used. Basically, a sub_row is a hidden row attached to the main one, which may be shown|hidden by using the related control.<br id="k2rh">
+<h3 id="zb4_">Sub rows basics</h3>
+A simple sub row can be created by using "sub_row" excell type:<br id="kge.">
+<blockquote id="bfs_">grid.setColTypes("sub_row,ed,ed");<br id="n-yv">
+</blockquote>
+<span id="b:f-" style="background-color: rgb(255, 255, 255);">And later in XML we'll have the following code:</span><br id="kjjs">
+<blockquote id="ujn_">&lt;rows&gt;<br id="ns4a">
+&lt;row id="some"&gt;<br id="xxdp">
+&nbsp;&nbsp;&nbsp; &lt;cell&gt; Some long data here .... &lt;/cell&gt;&lt;cell&gt;Data &lt;/cell&gt;&lt;cell&gt;Data &lt;/cell&gt;<br id="aupk">
+&lt;row&gt;<br id="mnvu">
+&lt;/rows&gt;<br id="xks2">
+</blockquote>
+<br id="aktp">
+Immediately after loading the row will look like this:<br id="c::o">
+<div id="hwym" style="padding: 1em 0pt; text-align: center;"><img alt="[Image]" style="width: 304px; height: 56px;" src="images/dhhqnnw2_19gkt2g6cq.png" id="abix"></div>
+<br id="bfyd">
+And after clicking "<img alt="[Image]" id="ulr." src="images/dgr5rjkf_17fsx2nbg9.png" name="graphics3" align="bottom" border="0" height="13" width="13">" image it will look in the following way:<br id="rm9u">
+<div id="f.en" style="padding: 1em 0pt; text-align: center;"><img alt="[Image]" style="width: 313px; height: 89px;" src="images/dhhqnnw2_18hh6v4fcs.png" id="cd3l"></div>
+The content of the sub_row may contain any HTML tags, so the additional data may be not only the content itself, but some kind of a form, for example.<br id="isgo">
+<br id="nf91">
+In case of adding a<span id="xyst" style="background-color: rgb(255, 255, 255);"> new row with a sub row</span>, the value of the row is defined in the standard manner:<br id="kb0-">
+<blockquote id="hr4x">grid.addRow(id,["Some long data here ....","Data","Data"]);<br id="dr69">
+</blockquote>
+API of the grid allows you to expand|collapse the sub row programmatically in such a way:<br id="pf1c">
+<blockquote id="g:fg">grid.cells(i,j).open();<br id="r5_k">
+grid.cells(i,j).close();<br id="jf.9">
+</blockquote>
+<h3 id="jykm">Loading sub rows by AJAX<br id="tcuq">
+</h3>
+By default the data of the sub_row is provided as a part of the main data which is not very useful if the additional data is big.<br id="x9nc">
+In such case sub_row_ajax column type may be used. It works exactly the same as the default one, but it will treat cell value as a link to the external file: <br id="i.g.">
+<blockquote id="b:lp">grid.setColTypes("sub_row_ajax,ed,ed");<br id="nqym">
+</blockquote>
+<span id="g6ts" style="background-color: rgb(255, 255, 255);">Later in XML we'll have the following code:</span>
+<blockquote id="kanj">&lt;rows&gt;<br id="uz79">
+ &lt;row id="some"&gt;<br id="lvk-">
+ &nbsp;&nbsp;&nbsp; &lt;cell&gt;my_data.html&lt;/cell&gt;&lt;cell&gt;Data &lt;/cell&gt;&lt;cell&gt;Data &lt;/cell&gt;<br id="d5-i">
+ &lt;row&gt;<br id="t8nj">
+ &lt;/rows&gt;</blockquote>
+And in "my_data.html" there will be the following line:<br id="q2x9">
+<blockquote id="vlz_">Some long data here<br id="x0ea">
+</blockquote>
+After pressing "<img alt="[Image]" id="g6ts0" src="images/dgr5rjkf_17fsx2nbg9.png" name="graphics3" align="bottom" border="0" height="13" width="13">" image, the component will load "my_data.html" and will show its content as a sub row of the related one. <br id="na5a">
+<h3 id="t1i8">Loading sub grid<br id="d51l">
+</h3>
+As we can load any content as a value of the sub row, one of the possible use cases is to load a sub grid as a sub row. While it can be achieved with the usage of a sub_row only, the component also provides a special type of excell sub_row_grid, which allows you to simplify such task. <br id="zsyr">
+In case of sub_row_grid usage, the value of the cell is treated as an URL to the configuration XML of the sub grid:<br id="ti28">
+<blockquote id="u::.">grid.setColTypes("sub_row_grid,ed,ed");<br id="l-6j">
+</blockquote>
+<span id="g6ts1" style="background-color: rgb(255, 255, 255);">Later in XML we'll have the following code:</span>
+<blockquote id="u134">&lt;rows&gt;<br id="uyl-">
+ &lt;row id="some"&gt;<br id="lv:v">
+ &nbsp;&nbsp;&nbsp; &lt;cell&gt;my_grid.xml&lt;/cell&gt;&lt;cell&gt;Data &lt;/cell&gt;&lt;cell&gt;Data &lt;/cell&gt;<br id="b1xm">
+ &lt;row&gt;<br id="fou1">
+ &lt;/rows&gt;</blockquote>
+ And in my_data.html there will be the following lines:<br id="txj9">
+<blockquote id="lm7f">&lt;rows&gt;<br id="x_zr">
+&nbsp;&nbsp;&nbsp; &lt;head&gt;<br id="sy2:">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ... configuration of grid here ...<br id="d-nz">
+&nbsp;&nbsp;&nbsp; &lt;/head&gt;<br id="ncgc">
+&nbsp;&nbsp;&nbsp; ... data of grid here ...<br id="zo:n">
+&lt;/rows&gt;<br id="a4g4">
+</blockquote>
+After clicking "<img alt="[Image]" id="g6ts2" src="images/dgr5rjkf_17fsx2nbg9.png" name="graphics3" align="bottom" border="0" height="13" width="13">" image, the component will fetch configuration XML and build the subgrid based on it:<br id="v85w">
+<div id="adbb" style="padding: 1em 0pt; text-align: center;"><img alt="[Image]" style="width: 648px; height: 378px;" src="images/dhhqnnw2_20gnz2fggc.png" id="vuu9"></div>
+As the sub grid has different configuration, it can have a different set of columns and its style can differ from that of the main grid.<br id="c11f">
+The sub grid object can be accessed in the following way:<br id="yxlu">
+<blockquote id="sf-z">grid.cells(i,j).getSubGrid();<br id="hgxn">
+</blockquote>
+<h3 id="nz62">Sub grid events and sub grid customizing</h3>
+There are two events in the component that allow  you to customize the sub grid:<br id="osvf">
+<br id="u.8q">
+a) <b id="d4ga">onSubGridCreated</b><br id="a7na">
+It is called when the sub grid object is created (triggered by sub_row opening), but before data is loaded from the related XML file.<br id="or44">
+It provides the following values:<br id="q_1m">
+<ul id="m2h7">
+<li id="n..:">sub grid object;</li>
+<li id="u:52">row id;</li>
+<li id="cka1">cell index;</li>
+<li id="vrbd">sub_row_grid cell value.<br id="kigz">
+</li>
+</ul>
+b) <b id="zr3q">onSubGridLoaded</b><br id="ggdr">
+<span id="s3ii" style="background-color: rgb(255, 255, 255);">This event is called when the sub grid has loaded the configuration XML and parsed its values.</span><br id="wa25">
+It provides the following values:<br id="xdn:">
+<ul id="fhvc">
+<li id="f44y">sub grid object;</li>
+<li id="t2ou">row id;</li>
+<li id="w-y5">cell index;</li>
+<li id="p0nb">sub_row_grid cell value.&nbsp;</li>
+</ul>
+<br id="ssna">
+Events can be used to change the grid behavior:<br id="cim_">
+<blockquote id="sucq">grid.attachEvent("onSubGridCreated",function(subgrid){<br id="ru65">
+&nbsp;&nbsp;&nbsp; subgrid.enableMultiselect(true);<br id="qhu5">
+&nbsp;&nbsp;&nbsp; subgrid.enableEditEvents(false,false,false);<br id="ht8f">
+&nbsp;&nbsp;&nbsp; return true; // mandatory!<br id="fhk_">
+})<br id="venu">
+</blockquote>
+<span id="xxpe" style="background-color: rgb(255, 255, 255);">Add|preselect some data after configuration was loaded:</span><br id="g4jz">
+<blockquote id="rpqf">grid.attachEvent("onSubGridLoaded",function(subgrid){<br id="eesm">
+&nbsp;&nbsp;&nbsp; subgrid.addRow(someid,value);<br id="lx:c">
+&nbsp;&nbsp;&nbsp; subgid.selectCell(someid,0);<br id="sk6y">
+ })<br id="e4mv">
+</blockquote>
+Events can be used to fully change the way the sub grid is loaded. E.g. the sub grid can be built manually:<br id="zniw">
+<blockquote id="q3ws">grid.attachEvent("onSubGridCreated",function(subgrid){<br id="kki2">
+&nbsp;&nbsp;&nbsp; subgrid.setHeader("A,B,C");<br id="oo2b">
+ &nbsp;&nbsp;&nbsp; subgrid.setColTypes("ro,ro,ro");<br id="iy1s">
+&nbsp;&nbsp;&nbsp; subgrid.setInitWidths("100,100,100")<br id="z7:d">
+&nbsp;&nbsp;&nbsp; subgrid.init();<br id="q.0t">
+&nbsp;&nbsp;&nbsp; return false;&nbsp; // block default behavior<br id="wuec">
+ })<br id="x71_">
+</blockquote>
+Or the sub grid can be loaded from XML string:<br id="s4ao">
+<blockquote id="ixzv">grid.attachEvent("onSubGridCreated",function(subgrid,id,ind,data){<br id="tftk">
+&nbsp;&nbsp;&nbsp; subgrid.loadXMLString(data); // use the current data as configuration xml<br id="s-as">
+&nbsp;&nbsp;&nbsp; return false; // prevent default behavior<br id="ydeb">
+ })<br id="uq9k">
+</blockquote>
+	<!--- CONTENT. Ends --->
+	<div class="copyright" zid="223">&copy; DHTMLX, 2008</div>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<html>
+
+<head>
+
+
+<link rel="STYLESHEET" type="text/css" href="../common/styles.css">
+</head>
+<body>
+	<table border="0" cellpadding="0" cellspacing="0" class="sample_header" zid="71">
+		<tbody zid="3">
+			<tr valign="center" zid="4">
+				<td align="center" width="10" zid="5">&nbsp;</td>
+				<td align="left" zid="6">
+					<p zid="224">
+						<a href="http://www.dhtmlx.com/" zid="7">DHTMLX</a> Documentation
+					</p>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<!--- CONTENT. Starts --->
+	<H1 id=mj:q0>Common problems in grid. Troubleshooting<BR id=kab91>
+</H1>
+<H3 id=mj:q1>XML loading<BR id=kab93>
+</H3>
+There are several common problems with XML loading: <BR id=kab94>
+<BR id=kab95>
+<SPAN id=mj:q2><B id=mh2o0>a) Incorrect XML </B></SPAN><BR id=cu8z0>
+<BR id=cu8z1>
+In case of any problem with an incoming XML stream the grid will show "Incorrect XML" message.<BR id=g.t60>
+The reasons of this problem are:<BR id=hb1y0>
+<UL id=hb1y1>
+<LI id=hb1y2>Incorrect XML structure - it may be caused by incorrectly formed XML tags, or by using some special content (&amp; &lt; &gt; chars) inside the tag values. The simplest way to detect the reason of an XML error is open the url used for XML loading in a separate browser window. It will show the error details and exact position of the problematic code;
+<LI id=hb1y3>(IE specific) Usage of incorrect content type - if you are using dynamic XML source (generate it by the script), you need to send the data with Content-type:text/xml;
+<LI id=hb1y3>(FF specific) In case of FF the problem may occur because of any whitespace before &lt;?xml declaraton (the declaration must be the first text in the output).<BR id=wyye0>
+</LI>
+</UL>
+<BR id=wai30>
+If you are using a dynamic XML source, pay attention to the fact that the output during a stand alone test may not be equal to the output during the usage of the same feed with the component. You can try to use the debug version of dhtmlxcommon to check which urls are used and which xml output was sent during the data loading. <BR id=wai31>
+(The debug version of dhtmlxcommon can be taken from <A id=rxgs title=here href="http://dhtmlx.com/docs/products/kb/index.shtml?cat=search&amp;q=2545&amp;ssr=yes&amp;s=dhtmlxcommon">here</A>).<BR id=z3j01>
+<BR id=z3j02>
+<BR id=j3d80>
+<P id=mj:q3><B id=mh2o1>b) Asynchronous way of XML loading</B></P>
+<BR id=u4b.1>
+By default XML loading is asynchronous, which means that the following command will be executed after loadXML in the moment when the data <SPAN id=u4b.2><B id=mh2o2>has not really loaded yet</B></SPAN>. You need to catch the moment when the data will be loaded before executing any commands against it:<BR id=eu6m0>
+<BR id=eu6m1>
+<BLOCKQUOTE id=nn-i0>&nbsp;&nbsp;&nbsp; grid.loadXML(url,function(){<BR id=myiy0>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //any code<BR id=myiy1>
+&nbsp;&nbsp;&nbsp; });<BR id=myiy2>
+</BLOCKQUOTE>
+or<BR id=myiy3>
+<BLOCKQUOTE id=nezz0>&nbsp;&nbsp;&nbsp; grid.attachEvent("onXLE",function(){<BR id=myiy4>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //any code<BR id=myiy5>
+&nbsp;&nbsp;&nbsp;&nbsp;})<BR id=e0c00>
+</BLOCKQUOTE>
+<BR id=nn-i1>
+<SPAN id=mj:q4><B id=mh2o3>c) Data encoding </B></SPAN><BR id=nn-i2>
+<BR id=nn-i3>
+The component is encoding-agnostic and can work with any encoding supported by the browser (which means with any common encoding), but to process the data correctly the following steps must be executed:<BR id=nn-i4>
+&nbsp;- an HTML page must be loaded in the desired encoding;<BR id=nn-i5>
+&nbsp;- an XML must have correct encoding defined:<BR id=m_8g0>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;?xml version="1.0" <SPAN id=yz450><B id=mh2o4>encoding="iso-8859-1"</B></SPAN> &gt;<BR id=yz451>
+<BR id=yz452>
+Pay your attention to the fact that in loadXMLString mode, IE can load only UTF8 based XML data.<BR id=j7.i0>
+<BR id=j7.i1>
+<H3 id=mj:q5>Events<BR id=j7.i3>
+</H3>
+a) The names of the events are case sensitive. The component will not throw an error if you are using an incorrect event name.<BR id=z8qy0>
+<BR id=octa0>
+b) Many events are blockable (the details can be checked in the related document), which means returning "false" from it will block the default reaction. Pay attention to the fact that the function which returns nothing is equal to returning "false". This means the following: if a custom event handler does not end with <BR id=z8qy1>
+&nbsp;&nbsp;&nbsp; return true;<BR id=z8qy2>
+it will block the default event processing. (It is always a good habit to finish the custom event handlers with "return true;").<BR id=z8qy3>
+<BR id=e0c01>
+c) You can attach multiple custom functions to one and the same event. When you attaching a new one, the previous function is <SPAN id=yalc0><B id=mh2o5>not detached</B></SPAN>. Both the new and the old one will be executed when the event is fired. (To detach an event grid.detachEvent can be used).<BR id=yalc2>
+<BR id=e0c02>
+<H3 id=mj:q6>Split mode</H3>
+<BR id=yalc3>
+a) In the split mode the grid is slower than in the normal one. This can't be fixed.<BR id=ptoi0>
+b) The only one split per grid is possible.<BR id=qre90>
+c) After applying of the split mode to the grid, it is not possible to recreate the grid structure (reload the grid with a different structure). Such grid can be only destructed.<BR id=qre91>
+d) The <SPAN id=hime0><I id=iqzv0>splitAt </I></SPAN>must be executed only after defining of structure, but before data loading.<BR id=qre92>
+&nbsp;&nbsp;&nbsp;&nbsp;In case of initialization from JavaScript:<BR id=qre93>
+<BLOCKQUOTE id=f9l:0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; grid.setHeader(....<BR id=qre94>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ...<BR id=qre95>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; grid.init()<BR id=qre96>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; grid.splitAt(2)<BR id=qre97>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; grid.load(...<BR id=qre98>
+</BLOCKQUOTE>
+<BR id=qre99>
+&nbsp;&nbsp;&nbsp; In case of loading configuration from XML:<BR id=zfyg0>
+<BLOCKQUOTE id=fep40>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;rows&gt;<BR id=zfyg1>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;head&gt;<BR id=zfyg2>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;column....<BR id=zfyg3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ....<BR id=zfyg4>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;afterInit&gt;<BR id=zfyg5>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;call command="splitAt"&gt;&lt;param&gt;2&lt;/param&gt;&lt;/call&gt;<BR id=zfyg6>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/afterInit&gt;<BR id=oiu00>
+</BLOCKQUOTE>
+<BR id=oiu01>
+&nbsp;&nbsp;&nbsp; In case of loading from HTML<BR id=oiu02>
+<BLOCKQUOTE id=jn4p0>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;table class="dhtmlxGrid" split="2"....<BR id=s5400>
+</BLOCKQUOTE>
+<H3 id=mj:q7>Used js files</H3>
+<BR id=s5402>
+a) The "method is undefined" error - the functionality of the component is split between a few files. So the most common reason of the problem is that some necessary file is not included (you can check API reference, it contains the names of the files in which the related functionality is stored).<BR id=s5404>
+<BR id=sj0h0>
+b) The "dhtmlxExcell undefined" or a similar error - the order of files loading is the problem here. The correct order is the following:<BR id=sj0h1>
+&nbsp;&nbsp;&nbsp; dhtmlxcommon.js<BR id=sj0h2>
+&nbsp;&nbsp;&nbsp; dhtmlxgrid.js<BR id=sj0h3>
+&nbsp;&nbsp;&nbsp; dhtmlxgridcell.js<BR id=bhcu0>
+&nbsp;&nbsp;&nbsp; any other js file<BR id=bhcu1>
+<BR id=bhcu2>
+c) Be sure that file names are written in exactly the same case as in the file system (lowercase). While it may not be important for Window based software, it is crucial for MacOs|Linux based one. <BR id=bhcu3>
+<BR id=bhcu4>
+<H3 id=v9t10>Problems with adding|sorting|deleting</H3>
+<BR id=i_8o0>
+a) Be sure that each row has a unique ID. If IDs are not unique, the grid can show a lot of weird errors. If you are adding a row, the most simple way to get a unique ID - grid.uid()<BR id=i_8o1>
+<BR id=yalc5>
+b) Mixing a row ID and a row Index - each row in the grid can be addressed by an ID or an index. IDs are consistent, indexes can be changed by sorting|adding|deleting. Most functions of the grid use rowID but some of them can accept rowIndexes - be sure to use the necessary ones (the API reference contains the description of all incoming parameters).<BR id=i_8o2>
+<BR id=i_8o3>
+c) If you are loading data from an external file, you need to wait while the data is loaded (asynchronous loading is described above).<BR id=dt_40>
+<BR id=dt_41>
+<BR id=dt_42>
+<BR id=dt_43>
+<BR id=dt_44>
+<BR id=dt_45>
+<BR id=dt_46>
+<BR id=dt_47>
+<BR id=dt_48>
+<BR id=dt_49>
+<BR id=dt_410>
+<BR id=dt_411>
+<BR id=dt_412>
+<BR id=dt_413>
+<BR id=dt_414>
+<BR id=il:v0>
+<BR id=ebo_0>
+<BR id=ebo_1>
+<BR id=lyyp1>
+<BR id=lyyp2>
+<BR id=kab96>
+<BR id=z3j03>
+
+	<!--- CONTENT. Ends --->
+	<div class="copyright" zid="223">&copy; DHTMLX, 2008</div>
+</body>
+</html>

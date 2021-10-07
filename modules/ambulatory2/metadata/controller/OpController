@@ -1,0 +1,110 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "opcontroller",
+        "designer|userClassName": "OpController",
+        "models": [
+            "SlipsModel"
+        ],
+        "stores": [
+            "SlipsStore"
+        ],
+        "views": [
+            "SlipsGrid"
+        ]
+    },
+    "name": "MyController",
+    "designerId": "278f7ecf-f947-4bd4-a99b-62df730b22c3",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "application"
+                ],
+                "fn": "init",
+                "implHandler": [
+                    "this.control({",
+                    "    '#cmdSearchSlip':{",
+                    "        click:this.searchSlips",
+                    "    },",
+                    "    '#cmdReprintSlip':{",
+                    "        click:this.reprintSlip",
+                    "    }",
+                    "    ",
+                    "});"
+                ]
+            },
+            "name": "init",
+            "designerId": "0fe48ad6-beb1-45cc-8c7c-4b661638a094"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "searchSlips",
+                "implHandler": [
+                    "//Ext.Msg.alert('Test','Search param is '+button.up('grid').down('#txtSearchSlip').getValue());",
+                    "",
+                    "   var slipsStore=Ext.data.StoreManager.lookup('SlipsStore');",
+                    "",
+                    "       var searchparam=button.up('grid').down('#txtSearchSlip').getValue();",
+                    "",
+                    "        slipsStore.load({",
+                    "            params:{",
+                    "                sParam:searchparam",
+                    "            }",
+                    "        });"
+                ]
+            },
+            "name": "searchSlips",
+            "designerId": "31b5313e-b66a-44b7-9f4c-6a06a343460d"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "reprintSlip",
+                "implHandler": [
+                    "var grid=button.up('grid');",
+                    "var row=grid.getSelectionModel().getSelection()[0];",
+                    "",
+                    "//Ext.Msg.alert('test','Selected pid is '+row.get('pid'));",
+                    "var strPid=row.get('pid');",
+                    "var strSlip=row.get('slipNo');",
+                    "var slipDate=row.get('slipDate');",
+                    "//reprintSlip(strPid,strSlip,slipDate);",
+                    "",
+                    "",
+                    " window.open('reports/creditSlipPdf.php?pid='+strPid+'&slipNo='+strSlip+'&reprint=1',\"receipt\",\"menubar=no,toolbar=no,width=300,height=550,location=yes,resizable=no,scrollbars=no,status=yes\");"
+                ]
+            },
+            "name": "reprintSlip",
+            "designerId": "9d2c4b18-e97a-4fac-96d1-a59c5bbeb3d6"
+        }
+    ]
+}

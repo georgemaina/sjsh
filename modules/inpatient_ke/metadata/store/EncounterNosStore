@@ -1,0 +1,62 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "designer|userAlias": "encounternosstore",
+        "designer|userClassName": "EncounterNosStore",
+        "model": "EncounterNumbers",
+        "pageSize": 20,
+        "storeId": "EncounterNosStore"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "pageSize": "number",
+        "storeId": "string",
+        "autoLoad": "boolean"
+    },
+    "name": "BillNumbersStore1",
+    "designerId": "774515c5-cead-4b4d-b5d3-fd0ae8183e16",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "../../data/getDataFunctions.php?task=getEncounterNumbers"
+            },
+            "configAlternates": {
+                "url": "string"
+            },
+            "name": "MyAjaxProxy",
+            "designerId": "e99e22fc-b12e-4d70-827b-f4e045b4bb06",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "encounters"
+                    },
+                    "configAlternates": {
+                        "rootProperty": "string"
+                    },
+                    "name": "MyJsonReader",
+                    "designerId": "af950cf9-2e19-4f1d-a5f0-5f905728571c"
+                }
+            ]
+        }
+    ]
+}

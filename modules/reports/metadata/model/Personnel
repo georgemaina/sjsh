@@ -1,0 +1,52 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "personnel",
+        "designer|userClassName": "Personnel"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "name": "MyModel1",
+    "designerId": "457e9e3e-2559-433d-b407-b87aef5670a6",
+    "cn": [
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ID"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField109",
+            "designerId": "4e507b67-d1cf-42f6-88eb-d845aea6c8e4"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "StaffName"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField110",
+            "designerId": "9e220c27-3508-4406-a837-1bd900c6246a"
+        }
+    ]
+}

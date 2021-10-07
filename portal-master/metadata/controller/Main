@@ -1,0 +1,1067 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Main",
+        "views": [
+            "Portal",
+            "PortalPanel",
+            "ChartPortlet",
+            "GridPortlet",
+            "Message",
+            "WardOccupancy",
+            "HeaderPanel",
+            "Vitals",
+            "DiagnosisPanel",
+            "Investigations",
+            "DoctorsNotes",
+            "Prescriptions",
+            "Complains",
+            "DoctorsArea",
+            "Radiology",
+            "PatientStatus",
+            "RoomAllocation",
+            "DoctorsWorkload",
+            "TriagePanel",
+            "Announcements"
+        ]
+    },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "views": "typedarray"
+    },
+    "designerId": "6a0acaee-7d2e-4004-b317-0ab61506e797",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "panel[isPortlet]",
+                "designer|targetType": "Ext.panel.Panel",
+                "fn": "onPortletBeforeClose",
+                "implHandler": [
+                    "// Provide a custom fade out effect when a portlet is removed from the portal",
+                    "if (!panel.closing) {",
+                    "    panel.closing = true;",
+                    "    panel.el.animate({",
+                    "        opacity: 0,",
+                    "        callback: panel.doClose,",
+                    "        scope: panel",
+                    "    });",
+                    "}",
+                    "return false;",
+                    ""
+                ],
+                "name": "beforeclose",
+                "scope": "me"
+            },
+            "configAlternates": {
+                "designer|controlQuery": "string",
+                "designer|targetType": "view",
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
+            },
+            "name": "onPortletBeforeClose",
+            "designerId": "4690992a-7342-4d76-8b24-1ef349e8abbd"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "msg"
+                ],
+                "fn": "showMsg",
+                "implHandler": [
+                    "var msgId = Ext.id(),",
+                    "    msgCmp = this.getMsg();",
+                    "",
+                    "this.msgId = msgId;",
+                    "msgCmp.update(msg);",
+                    "msgCmp.show();",
+                    "",
+                    "Ext.defer(this.clearMsg, 3000, this, [msgId]);"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "showMsg",
+            "designerId": "3f66cf28-7e4f-4b6c-8aa9-9e398efba77d"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "msgId"
+                ],
+                "fn": "clearMsg",
+                "implHandler": [
+                    "if (msgId === this.msgId) {",
+                    "    this.getMsg().hide();",
+                    "}"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "clearMsg",
+            "designerId": "371fdd0d-7011-4775-b692-14034d18582b"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "autoCreate": true,
+                "ref": "msg",
+                "selector": "message",
+                "xtype": "message"
+            },
+            "configAlternates": {
+                "autoCreate": "boolean",
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "msg",
+            "designerId": "3b72f320-2675-4345-a479-f5caa87ab95e"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "panel[isPortlet]",
+                "designer|params": [
+                    "panel"
+                ],
+                "designer|targetType": "Ext.panel.Panel",
+                "fn": "onPortletClose",
+                "implHandler": [
+                    "this.showMsg('\"' + panel.title + '\" was removed');"
+                ],
+                "name": "close",
+                "scope": "me"
+            },
+            "configAlternates": {
+                "designer|controlQuery": "string",
+                "designer|params": "typedarray",
+                "designer|targetType": "view",
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
+            },
+            "name": "onPortletClose",
+            "designerId": "53834857-2e8c-4c9e-962e-62ccb0591c17"
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "application"
+                ],
+                "fn": "init",
+                "implHandler": [
+                    "this.control({",
+                    "    \"#mnuHome\":{",
+                    "        click:this.openHome",
+                    "    },",
+                    "    \"#mnuDoctorsArea\":{",
+                    "        click:this.openDoctorsArea",
+                    "    },",
+                    "    \"outpatientlist\":{",
+                    "        itemclick:this.updateHeaderDetails//,",
+                    "        //itemdblclick:this.getPatientData",
+                    "    },",
+                    "    '#OutpatientAdmissions':{",
+                    "        itemdblclick:this.openAdmissionData",
+                    "    },",
+                    "    '#mnuNursingArea':{",
+                    "        click:this.openTriage",
+                    "    },",
+                    "    '#txtOpSearch':{",
+                    "        change:this.searchPatients",
+                    "    }",
+                    "});"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "init",
+            "designerId": "c056d7e4-8074-4969-a3f3-2846790f0319"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "openDoctorsArea",
+                "implHandler": [
+                    "headerPanel=Ext.create(\"CarePortal.view.HeaderPanel\",{});",
+                    "",
+                    "doctorsArea=Ext.create(\"CarePortal.view.DoctorsArea\",{});",
+                    "centerContainer=this.getViewport().down(\"#PortalDetails\");",
+                    "centerContainer.removeAll();",
+                    "",
+                    "centerContainer.add(headerPanel,doctorsArea);"
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "openDoctorsArea",
+            "designerId": "74929d54-1471-41a3-922d-d658892e5b01"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "openHome",
+                "implHandler": [
+                    "        homeArea=Ext.create(\"CarePortal.view.PortalPanel\",{});",
+                    "        centerContainer=this.getViewport().down(\"#PortalDetails\");",
+                    "        centerContainer.removeAll();",
+                    "",
+                    "        centerContainer.add(homeArea);",
+                    "",
+                    "        this.getAnnouncements();"
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "openHome",
+            "designerId": "a228871a-a949-49ae-b30e-807629012d80"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "viewport",
+                "selector": "viewport",
+                "xtype": "portal"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "viewport",
+            "designerId": "d76f4c22-1de3-4638-a87d-4b7d21f811d9"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "headerpanel",
+                "selector": "headerpanel",
+                "xtype": "headerpanel"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "headerpanel",
+            "designerId": "dab693d5-d67e-463d-93ed-b100313751e9"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "gridpanel",
+                    "record",
+                    "item",
+                    "index",
+                    "e",
+                    "eOpts"
+                ],
+                "fn": "updateHeaderDetails",
+                "implHandler": [
+                    "// Ext.Msg.alert('Test',record.get('FirstName'));",
+                    "",
+                    "this.getHeaderpanel().down('#PatientName').setValue(record.get('Names'));",
+                    "this.getHeaderpanel().down('#Age').setValue(record.get('Age'));",
+                    "this.getHeaderpanel().down('#Gender').setValue(record.get('Gender'));",
+                    "this.getHeaderpanel().down('#PID').setValue(record.get('Pid'));",
+                    "this.getHeaderpanel().down('#EncounterNo').setValue(record.get('EncounterNo'));",
+                    "",
+                    "//this.getTriagepanel().down('#Names').setValue(record.get('Names'));",
+                    "",
+                    "",
+                    "// this.openDoctorsArea();",
+                    "",
+                    "var encNo=record.get('EncounterNo');",
+                    "",
+                    "var presStore=Ext.data.StoreManager.lookup(\"PrescriptionStore\");",
+                    "",
+                    "presStore.load({",
+                    "    params: {",
+                    "        encNo:encNo",
+                    "    },",
+                    "    callback: function(records, operation, success) {",
+                    "        //this.getVitals(encNo);",
+                    "    },",
+                    "    scope: this",
+                    "});",
+                    "",
+                    "//vitalsPanel = Ext.create('CarePortal.view.Vitals', {});",
+                    "",
+                    "",
+                    "var vitalsStore=Ext.data.StoreManager.lookup(\"VitalsStore\");",
+                    "",
+                    "vitalsStore.load({",
+                    "    params: {",
+                    "        encNo:encNo",
+                    "    },",
+                    "    callback: function(records, operation, success) {",
+                    "        var tpl=new Ext.XTemplate(",
+                    "            '<Table id=vitals>',",
+                    "            '<tr><td colspan=4 class=titles>VITALS</td></tr>',",
+                    "            '<tr><td class=titles>ID</td><td class=titles>Time</td><td class=titles>Description</td><td class=titles>Values</td></tr>',",
+                    "            '<tpl for=\"vitals\">',",
+                    "",
+                    "            '<tr>',",
+                    "            '<td>{VitalID}</td>',",
+                    "            '<td>{VitalsTime}</td>',",
+                    "            '<td>{Description}</td>',",
+                    "            \"<tpl if='Value &gt;= Lower' && 'Value &lt;= Upper'>\",",
+                    "            '<td class=good>{Value}</td>',",
+                    "            '<tpl else>',",
+                    "            '<td class=danger>{Value}</td>',",
+                    "            '</tpl>',",
+                    "            '</tpl>',",
+                    "            '</table>'",
+                    "        );",
+                    "",
+                    "        var data1=vitalsStore.proxy.reader.rawData;",
+                    "",
+                    "        tpl.overwrite(vitalsPanel.body,data1);",
+                    "    },",
+                    "    scope: this",
+                    "});",
+                    "",
+                    "vitalsPanel=this.getViewport().down(\"#vitals\");",
+                    "",
+                    "//",
+                    "",
+                    "this.getDiagnosis(record.get('EncounterNo'));",
+                    "this.getInvestigations(record.get('EncounterNo'));",
+                    "this.getNotes(record.get('EncounterNo'));",
+                    "this.getRadiology(record.get('EncounterNo'));"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "updateHeaderDetails",
+            "designerId": "4cb8815c-5500-47f2-aef5-07a86fe4e986"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "gridpanel",
+                    "record",
+                    "item",
+                    "index",
+                    "e",
+                    "eOpts"
+                ],
+                "fn": "getPatientData",
+                "implHandler": [
+                    "this.openDoctorsArea();",
+                    "",
+                    "var encNo=record.get('EncounterNo');",
+                    "",
+                    "var presStore=Ext.data.StoreManager.lookup(\"PrescriptionStore\");",
+                    "",
+                    "presStore.load({",
+                    "    params: {",
+                    "        encNo:encNo",
+                    "    },",
+                    "    callback: function(records, operation, success) {",
+                    "        this.getVitals(encNo);",
+                    "        this.getDiagnosis(encNo);",
+                    "    },",
+                    "    scope: this",
+                    "});",
+                    "",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "getPatientData",
+            "designerId": "b08eb59c-2b7e-4e3e-9f21-161991615f4f"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "encNo"
+                ],
+                "fn": "getVitals",
+                "implHandler": [
+                    "//vitalsPanel = Ext.create('CarePortal.view.Vitals', {});",
+                    "vitalsPanel=this.getViewport().down(\"#vitals\");",
+                    "",
+                    "",
+                    "var vitalsStore=Ext.data.StoreManager.lookup(\"VitalsStore\");",
+                    "",
+                    "vitalsStore.load({",
+                    "    params: {",
+                    "        encNo:encNo",
+                    "    },",
+                    "    callback: function(records, operation, success) {",
+                    "            var tpl=new Ext.XTemplate(",
+                    "                '<Table id=vitals>',",
+                    "                '<tr><td colspan=3 class=titles>VITALS</td></tr>',",
+                    "                '<tpl for=\"vitals\">',",
+                    "                '<table>',",
+                    "                '<tr>',",
+                    "                '<td>{VitalID}</td>',",
+                    "                '<td>{Description}</td>',",
+                    "                '<td>{Value}</td>',",
+                    "                '</table>',",
+                    "                '</tpl>',",
+                    "                '</table>'",
+                    "            );",
+                    "",
+                    "        tpl.overwrite(vitalsPanel.body,records);",
+                    "    },",
+                    "    scope: this",
+                    "});",
+                    "",
+                    "// var data1=vitalsStore.proxy.reader.rawData;",
+                    "",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "getVitals",
+            "designerId": "681652b5-397a-4b85-b9e0-042b76246ac4"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "encNo"
+                ],
+                "fn": "getDiagnosis",
+                "implHandler": [
+                    "//vitalsPanel = Ext.create('CarePortal.view.Vitals', {});",
+                    "diagnosisPanel=this.getViewport().down(\"#diagnosispanel\");",
+                    "",
+                    "",
+                    "var diagnosisStore=Ext.data.StoreManager.lookup(\"DiagnosisStore\");",
+                    "",
+                    "diagnosisStore.load({",
+                    "    params: {",
+                    "        encNo:encNo",
+                    "    },",
+                    "    callback: function(records, operation, success) {",
+                    "            var tpl=new Ext.XTemplate(",
+                    "                '<Table id=diagnosis>',",
+                    "                '<tr><td colspan=4 class=titles>DIAGNOSIS</td></tr>',",
+                    "                        '<tr><td class=titles>Code</td>',",
+                    "                            '<td class=titles>Description</td>',",
+                    "                            '<td class=titles>Time</td>',",
+                    "                            '<td class=titles>Type</td>',",
+                    "                        '</tr>',",
+                    "                 '<tpl for=\"diagnosis\">',",
+                    "                        '<tr>',",
+                    "                            '<td>{Code}</td>',",
+                    "                            '<td>{Description}</td>',",
+                    "                            '<td>{Time}</td>',",
+                    "                            '<td>{Type}</td>',",
+                    "                        '</tr>',",
+                    "                '</tpl>',",
+                    "                '</table>'",
+                    "            );",
+                    "",
+                    "//         tpl.overwrite(diagnosisPanel.body,records);",
+                    "         var data1=diagnosisStore.proxy.reader.rawData;",
+                    "        tpl.overwrite(diagnosisPanel.body,data1);",
+                    "    },",
+                    "    scope: this",
+                    "});",
+                    "",
+                    "// var data1=vitalsStore.proxy.reader.rawData;",
+                    "",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "getDiagnosis",
+            "designerId": "fd0d1076-feac-40f5-bf52-2ea9af801552"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "encNo"
+                ],
+                "fn": "getInvestigations",
+                "implHandler": [
+                    "//vitalsPanel = Ext.create('CarePortal.view.Vitals', {});",
+                    "investigationsPanel=this.getViewport().down(\"#investigations\");",
+                    "",
+                    "",
+                    "var investigationsStore=Ext.data.StoreManager.lookup(\"InvestigationsStore\");",
+                    "",
+                    "investigationsStore.load({",
+                    "    params: {",
+                    "        encNo:encNo",
+                    "    },",
+                    "    callback: function(records, operation, success) {",
+                    "            var tpl=new Ext.XTemplate(",
+                    "                '<Table id=investigations>',",
+                    "                '<tr><td colspan=5 class=titles>INVESTIGATIONS</td></tr>',",
+                    "                        '<tr><td class=titles>Status</td>',",
+                    "                            '<td class=titles>Description</td>',",
+                    "                            '<td class=titles>TimeRequested</td>',",
+                    "                            '<td class=titles>BatchNo</td>',",
+                    "                            '<td class=titles>RequestedBy</td>',",
+                    "                        '</tr>',",
+                    "                 '<tpl for=\"labtests\">',",
+                    "",
+                    "                        '<tr>',",
+                    "                            '<tpl if=\"Status == pending\">',",
+                    "                                '<td class=status1>{Status}</td>',",
+                    "                            '<tpl else>',",
+                    "                                 '<td class=status1>{Status}</td>',",
+                    "                            '</tpl>',",
+                    "                            '<td>{Description}</td>',",
+                    "                            '<td>{TimeRequested}</td>',",
+                    "                            '<td>{BatchNo}</td>',",
+                    "                            '<td>{RequestedBy}</td>',",
+                    "                        '</tr>',",
+                    "                '</tpl>',",
+                    "                '</table>'",
+                    "            );",
+                    "",
+                    "         var data1=investigationsStore.proxy.reader.rawData;",
+                    "        tpl.overwrite(investigationsPanel.body,data1);",
+                    "    },",
+                    "    scope: this",
+                    "});",
+                    "",
+                    "",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "getInvestigations",
+            "designerId": "cb91972b-b976-4090-a4f5-7203916a4086"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "encNo"
+                ],
+                "fn": "getRadiology",
+                "implHandler": [
+                    "//vitalsPanel = Ext.create('CarePortal.view.Vitals', {});",
+                    "radiologyPanel=this.getViewport().down(\"#radiology\");",
+                    "",
+                    "var radiologyStore=Ext.data.StoreManager.lookup(\"RadiologyStore\");",
+                    "",
+                    "radiologyStore.load({",
+                    "    params: {",
+                    "        encNo:encNo",
+                    "    },",
+                    "    callback: function(records, operation, success) {",
+                    "            var tpl=new Ext.XTemplate(",
+                    "                '<Table id=investigations>',",
+                    "                '<tr><td colspan=5 class=titles>RADIOLOGY TESTS</td></tr>',",
+                    "                        '<tr><td class=titles>Status</td>',",
+                    "                            '<td class=titles>Description</td>',",
+                    "                            '<td class=titles>TimeRequested</td>',",
+                    "                            '<td class=titles>BatchNo</td>',",
+                    "                            '<td class=titles>RequestedBy</td>',",
+                    "                        '</tr>',",
+                    "                 '<tpl for=\"radiology\">',",
+                    "",
+                    "                        '<tr>',",
+                    "                            '<tpl if=\"Status == pending\">',",
+                    "                                '<td class=status1>{Status}</td>',",
+                    "                            '<tpl else>',",
+                    "                                 '<td class=status1>{Status}</td>',",
+                    "                            '</tpl>',",
+                    "                            '<td>{Description}</td>',",
+                    "                            '<td>{TimeRequested}</td>',",
+                    "                            '<td>{BatchNo}</td>',",
+                    "                            '<td>{RequestedBy}</td>',",
+                    "                        '</tr>',",
+                    "                '</tpl>',",
+                    "                '</table>'",
+                    "            );",
+                    "",
+                    "         var data1=radiologyStore.proxy.reader.rawData;",
+                    "        tpl.overwrite(radiologyPanel.body,data1);",
+                    "    },",
+                    "    scope: this",
+                    "});",
+                    "",
+                    "",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "getRadiology",
+            "designerId": "66bc7b5e-cd2a-4f34-870b-f6571f9f8998"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "encNo"
+                ],
+                "fn": "getNotes",
+                "implHandler": [
+                    "//vitalsPanel = Ext.create('CarePortal.view.Vitals', {});",
+                    "notesPanel=this.getViewport().down(\"#notes\");",
+                    "",
+                    "",
+                    "var notesStore=Ext.data.StoreManager.lookup(\"NotesStore\");",
+                    "",
+                    "notesStore.load({",
+                    "    params: {",
+                    "        encNo:encNo",
+                    "    },",
+                    "    callback: function(records, operation, success) {",
+                    "            var tpl=new Ext.XTemplate(",
+                    "                '<Table id=notes>',",
+                    "                '<tr><td colspan=4 class=titles>DOCTORS NOTES</td></tr>',",
+                    "                        '<tr><td class=titles>Note Type</td>',",
+                    "                            '<td class=titles>Note</td>',",
+                    "                            '<td class=titles>Time</td>',",
+                    "                            '<td class=titles>TreatedBy</td>',",
+                    "                 '<tpl for=\"notes\">',",
+                    "                        '<tr>',",
+                    "                            '<td>{NotesType}</td>',",
+                    "                            '<td style=\"width:400px;\"><div class=content>{Notes}</div></td>',",
+                    "                            '<td>{CreateTime}</td>',",
+                    "                            '<td>{TreatedBy}</td>',",
+                    "                        '</tr>',",
+                    "                '</tpl>',",
+                    "                '</table>'",
+                    "            );",
+                    "",
+                    "         var data1=notesStore.proxy.reader.rawData;",
+                    "        tpl.overwrite(notesPanel.body,data1);",
+                    "    },",
+                    "    scope: this",
+                    "});",
+                    "",
+                    "",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "getNotes",
+            "designerId": "5d7ba14f-b3a1-4e0e-8854-9f658a9d303c"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "vitals",
+                "selector": "vitals",
+                "xtype": "vitals"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "vitals",
+            "designerId": "c3bed1a3-3810-4dcf-923d-d4cee5f20f8d"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "gridpanel",
+                    "record",
+                    "item",
+                    "index",
+                    "e",
+                    "options"
+                ],
+                "fn": "openAdmissionData",
+                "implHandler": [
+                    "strPid=record.get('Pid');",
+                    "//getinfo(strPid)",
+                    "url=\"../modules/registration_admission/aufnahme_pass.php?target=search&fwd_nr=\"+strPid+\"&title=Click to show data\";",
+                    "//runModul (url);",
+                    "window.parent.CONTENTS.location.href=url;",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "openAdmissionData",
+            "designerId": "e13a98c6-8094-4e06-be08-4724977cf570"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "diagnosispanel",
+                "selector": "diagnosispanel",
+                "xtype": "diagnosispanel"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "diagnosispanel",
+            "designerId": "6e2cf03f-9483-403e-94fe-4458ff03d9e5"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "investigations",
+                "selector": "investigations",
+                "xtype": "investigations"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "investigations",
+            "designerId": "6d40e640-dbad-4f2e-a5f0-e0ad1e0c6309"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "doctorsnotes",
+                "selector": "doctorsnotes",
+                "xtype": "doctorsnotes"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "doctorsnotes",
+            "designerId": "c261a2a8-36e3-42dd-8372-12ad17aeba60"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "radiology",
+                "selector": "radiology",
+                "xtype": "radiology"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "radiology",
+            "designerId": "e4dd3671-7cc4-4a10-89d5-588180762250"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "openTriage",
+                "implHandler": [
+                    "        //headerPanel=Ext.create(\"CarePortal.view.HeaderPanel\",{});",
+                    "",
+                    "        triageArea=Ext.create(\"CarePortal.view.TriagePanel\",{});",
+                    "        centerContainer=this.getViewport().down(\"#PortalDetails\");",
+                    "        centerContainer.removeAll();",
+                    "",
+                    "        centerContainer.add(triageArea);"
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "openTriage",
+            "designerId": "75d148fb-ea2a-4259-b12b-5741b0d1d340"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "viewport",
+                "selector": "viewport",
+                "xtype": "triagepanel"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "viewport",
+            "designerId": "a8da7524-c827-4f2f-aa05-3c8fab66fed9"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "announcements",
+                "selector": "announcements",
+                "xtype": "announcements"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "announcements",
+            "designerId": "dd86e424-2dae-4399-a2c3-9e2084792ed9"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "getAnnouncements",
+                "implHandler": [
+                    "//newsWindow = Ext.create('CarePortal.view.Announcements', {});",
+                    "newsWindow=this.getViewport().down(\"#announcements\");",
+                    "",
+                    "var newsStore=Ext.data.StoreManager.lookup(\"AnnouncementStore\");",
+                    "",
+                    "newsStore.load({",
+                    "    params: {},",
+                    "    callback: function(records, operation, success) {",
+                    "        var tpl=new Ext.XTemplate(",
+                    "            '<Table id=announcements>',",
+                    "            '<tpl for=\"Announcements\">',",
+                    "            '<tr>',",
+                    "            '<td class=titles>{title}</td></tr>',",
+                    "            '<tr><td>{body}</td></tr>',",
+                    "            '</tpl>',",
+                    "           '</table>'",
+                    "        );",
+                    "        var data1=newsStore.proxy.reader.rawData;",
+                    "        tpl.overwrite(newsWindow.body,data1);",
+                    "    },",
+                    "    scope: this",
+                    "});",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "getAnnouncements",
+            "designerId": "cb83ffad-d668-4c24-aef3-273e110a8920"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "field",
+                    "newValue",
+                    "oldValue",
+                    "eOpts"
+                ],
+                "fn": "searchPatients",
+                "implHandler": [
+                    "",
+                    "if(newValue.length>2){",
+                    "    //Ext.Msg.alert('test',newValue);",
+                    "    var opStore=Ext.data.StoreManager.lookup(\"OPAdmissionsStore\");",
+                    "",
+                    "        opStore.load({",
+                    "            params: {",
+                    "                searchParam:newValue",
+                    "            },",
+                    "            callback: function(records, operation, success) {",
+                    "            },",
+                    "            scope: this",
+                    "        });",
+                    "}",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "searchPatients",
+            "designerId": "1c08b027-ebb0-4b65-9472-61024ba51314"
+        }
+    ]
+}

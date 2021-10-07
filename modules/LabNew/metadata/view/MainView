@@ -1,0 +1,414 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userAlias": "mainview",
+        "designer|userClassName": "MainView",
+        "layout": "border"
+    },
+    "configAlternates": {
+        "designer|initialView": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "layout": "string"
+    },
+    "name": "MyViewport",
+    "designerId": "fed5c795-72db-42c2-9b4d-e7231421117f",
+    "viewControllerInstanceId": "7395c36f-5263-4d2a-a2b5-38a622ea7f18",
+    "viewModelInstanceId": "301df347-95d0-4ee1-af12-7ce1ec46ee7e",
+    "cn": [
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "mainDetails",
+                "layout|region": "center"
+            },
+            "configAlternates": {
+                "itemId": "string",
+                "layout|region": "string"
+            },
+            "name": "MyContainer",
+            "designerId": "f2dc0732-aea0-4dd5-9f16-c9fffbe13eab"
+        },
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "mainMenu",
+                "layout": "accordion",
+                "layout|region": "west",
+                "width": 202
+            },
+            "configAlternates": {
+                "itemId": "string",
+                "layout": "string",
+                "layout|region": "string",
+                "width": "auto"
+            },
+            "name": "MyContainer1",
+            "designerId": "783c4c63-44e1-49bb-b24e-c3ec9695c36c",
+            "cn": [
+                {
+                    "type": "Ext.menu.Menu",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "floating": false,
+                        "title": "Lab Activities",
+                        "width": 120
+                    },
+                    "configAlternates": {
+                        "floating": "boolean",
+                        "title": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyMenu",
+                    "designerId": "61cf3fe7-21b3-43f8-bd2e-aabd8dc33dee",
+                    "cn": [
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "mnuRequest",
+                                "text": "Test Requests"
+                            },
+                            "configAlternates": {
+                                "text": "string",
+                                "itemId": "string"
+                            },
+                            "name": "MyMenuItem",
+                            "designerId": "d8016a45-3dcb-4cae-b8c1-408ab9425564"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "mnuPending",
+                                "text": "Pending Requests"
+                            },
+                            "configAlternates": {
+                                "text": "string",
+                                "itemId": "string"
+                            },
+                            "name": "MyMenuItem1",
+                            "designerId": "470c072a-c270-4886-ae7c-f38feced894f"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "mnuWorkflow",
+                                "text": "Workflow"
+                            },
+                            "configAlternates": {
+                                "text": "string",
+                                "itemId": "string"
+                            },
+                            "name": "MyMenuItem2",
+                            "designerId": "609febe2-4950-44de-9f7e-de4a662c1ac9"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "mnuResults",
+                                "text": "Lab Results"
+                            },
+                            "configAlternates": {
+                                "text": "string",
+                                "itemId": "string"
+                            },
+                            "name": "MyMenuItem6",
+                            "designerId": "ea1ede29-7270-4c10-b137-a548e6e7e97f"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "mnuEditResult",
+                                "text": "Edit Results"
+                            },
+                            "configAlternates": {
+                                "text": "string",
+                                "itemId": "string"
+                            },
+                            "name": "MyMenuItem7",
+                            "designerId": "bde9a28a-081a-4d41-886a-d2660b0bf820"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "mnuLabTests",
+                                "text": "Lab Tests"
+                            },
+                            "configAlternates": {
+                                "text": "string",
+                                "itemId": "string"
+                            },
+                            "name": "MyMenuItem9",
+                            "designerId": "aee2b3fd-9c2c-477e-8489-e601d83be846"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.menu.Menu",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "floating": false,
+                        "title": "Administration",
+                        "width": 120
+                    },
+                    "configAlternates": {
+                        "floating": "boolean",
+                        "title": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyMenu1",
+                    "designerId": "ff10d0e7-6adf-4b1f-921c-a5566c699d82",
+                    "cn": [
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "mnuLabParams",
+                                "text": "Laboratory Parameters"
+                            },
+                            "configAlternates": {
+                                "text": "string",
+                                "itemId": "string"
+                            },
+                            "name": "MyMenuItem3",
+                            "designerId": "6ad54908-91b3-4cac-903c-3caf6ffa07b4"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "mnuGroups",
+                                "text": "Test Groups"
+                            },
+                            "configAlternates": {
+                                "text": "string",
+                                "itemId": "string"
+                            },
+                            "name": "MyMenuItem4",
+                            "designerId": "940ee18e-63b3-4017-a501-3192a4e793df"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "text": "Results Templates"
+                            },
+                            "configAlternates": {
+                                "text": "string"
+                            },
+                            "name": "MyMenuItem5",
+                            "designerId": "e7eedab1-d047-4d2b-91b1-4e66e2a145f4"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "mnuStaff",
+                                "text": "Laboratory Staff"
+                            },
+                            "configAlternates": {
+                                "text": "string",
+                                "itemId": "string"
+                            },
+                            "name": "MyMenuItem8",
+                            "designerId": "b6cd354a-31e4-495f-b64c-78696278870b"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.menu.Menu",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "floating": false,
+                        "title": "Reports",
+                        "width": 120
+                    },
+                    "configAlternates": {
+                        "floating": "boolean",
+                        "width": "auto",
+                        "title": "string"
+                    },
+                    "name": "MyMenu2",
+                    "designerId": "9ee4d9b3-ae27-40b4-b58e-d14d42e0cc13",
+                    "cn": [
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "text": "Lab Tests"
+                            },
+                            "configAlternates": {
+                                "text": "string"
+                            },
+                            "name": "MyMenuItem3",
+                            "designerId": "7819a7e7-88ba-4245-8465-fe8b70d34115"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "text": "Workloads"
+                            },
+                            "configAlternates": {
+                                "text": "string"
+                            },
+                            "name": "MyMenuItem4",
+                            "designerId": "5759febb-d056-4bb2-acd3-7d91e359fcaa"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "mnuReportForm",
+                                "text": "ReportForm"
+                            },
+                            "configAlternates": {
+                                "text": "string",
+                                "itemId": "string"
+                            },
+                            "name": "MyMenuItem5",
+                            "designerId": "0635aacc-8442-41b7-b2c3-b7cb99822788"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|snapToGrid": 5,
+                "height": 34,
+                "itemId": "mainTitle",
+                "layout": "absolute",
+                "layout|region": "north"
+            },
+            "configAlternates": {
+                "designer|snapToGrid": "number",
+                "height": "auto",
+                "itemId": "string",
+                "layout": "string",
+                "layout|region": "string"
+            },
+            "name": "MyContainer2",
+            "designerId": "8b3878bc-0ee2-4835-a1f8-1e661d914d18",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldStyle": "font-size: 16px;font-weight: bold;color: green;",
+                        "itemId": "title",
+                        "layout|x": 20,
+                        "layout|y": -1,
+                        "value": "LABORATORY",
+                        "width": 570
+                    },
+                    "configAlternates": {
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "value": "string",
+                        "fieldStyle": "string",
+                        "width": "auto",
+                        "itemId": "string"
+                    },
+                    "name": "MyDisplayField",
+                    "designerId": "aa754e61-b6a8-42fc-b182-2d1f3dde287d"
+                }
+            ]
+        }
+    ]
+}

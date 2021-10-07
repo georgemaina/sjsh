@@ -1,0 +1,108 @@
+<html>
+
+<head>
+
+
+<link rel="STYLESHEET" type="text/css" href="../common/styles.css">
+</head>
+<body>
+	<table border="0" cellpadding="0" cellspacing="0" class="sample_header" zid="71">
+		<tbody zid="3">
+			<tr valign="center" zid="4">
+				<td align="center" width="10" zid="5">&nbsp;</td>
+				<td align="left" zid="6">
+					<p zid="224">
+						<a href="http://www.dhtmlx.com/" zid="7">DHTMLX</a> Documentation
+					</p>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<!--- CONTENT. Starts --->
+	<h2>Math Operations in Group-by mode<br>
+</h2>
+<div><br>
+</div>
+
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+Runtime grouping allows to change the look of data in the grid dynamically, re-organizing it for better presentation of information. <br>
+By default, grouping allows the user to show only grouping-key and count of items in the group. <br>
+<blockquote>&lt;script><br>
+    grid.groupBy(2);<br>
+&lt;/script><br>
+</blockquote>
+<div id="o75s" style="padding: 1em 0pt; text-align: left;"><img style="width: 568px; height: 115px;" src="images/dhhqnnw2_65gs3mjbgq_b.png"></div>
+<br>
+But, in many cases, such look and feel is not enough. The group contains a value that may be aggregated and shown as some kind of total.<br>
+The second parameter of <b>groupBy()</b> command allows to define the mask used by group-line:<br>
+<blockquote>&lt;script><br>
+    grid.groupBy(2,["#stat_max","#title","","#stat_total","","#cspan","#cspan","#cspan"]);<br>
+&lt;/script><br>
+</blockquote>
+<img style="width: 595px; height: 124px;" src="images/dhhqnnw2_66csfkwsfg_b.png"><br>
+<br>
+The second parameter of <b>groupBy()</b> command is an array, each value of which is mapped to the related column. <br>
+The possible values are:<br>
+<br>
+<ul><li><b>title </b>- will be used for group-key;</li>
+<li><b>cspan </b>- organize colspan with a sibling cell (the same as in <b>cspan</b> in header);</li>
+<li><b>stat_total</b> - calculates total of values for the group;</li>
+<li><b>stat_max</b> - calculates maximum value in the group;</li>
+<li><b>stat_min</b> - calculates minimum value in the group;</li>
+<li><b>stat_average</b> - calculates average value in the group;</li>
+<li><b>stat_count</b> - calculates count of records in the group.</li></ul>
+<br>
+Stat-based values are rendered using the same exCell as the related column. This allows to use <b>setNumberFormat()</b> against them (when the source column is of ron|edn type).<br>
+<br>
+In normal mode, the grid allows to redefine the text of group-row with the help of <b>grid.customGroupFormat</b>:<br>
+<blockquote>&lt;script><br>
+    grid.groupBy(2);<br>
+    grid.customGroupFormat=function(name,count){<br>
+        return name+" :: found " +count+ " records";<br>
+    }<br>
+&lt;/script><br>
+</blockquote>
+<div id="kvyl" style="padding: 1em 0pt; text-align: left;"><img style="width: 564px; height: 117px;" src="images/dhhqnnw2_67c676jsgj_b.png"></div>
+It is possible to add aggregation values to such custom defined group-line as well. It can be done through <b>groupStat()</b> method that returns the result of aggregation for the group and accepts the following parameters:<br>
+<br>
+<ul><li>group name;</li>
+<li>column index;</li>
+<li>name of stat operation (the same as markers above). <br>
+</li></ul>
+<br>
+<blockquote>&lt;script><br>
+    grid.groupBy(2);<br>
+    grid.customGroupFormat=function(name,count){<br>
+        return name+", Max sales="+<b>grid.groupStat(name,3,"stat_max")</b>+", total="+<b>grid.groupStat(name,3,"stat_total")</b>;<br>
+    }<br>
+&lt;/script><br>
+</blockquote>
+<div id="c5x3" style="padding: 1em 0pt; text-align: left;"><img style="width: 557px; height: 121px;" src="images/dhhqnnw2_68dfj7q3fw_b.png"></div>
+<br>
+If all stated above is still not enough, there is a way to iterate through all rows in some group and calculate any custom math. <br>
+It can be done using built-in iterator:<br>
+<blockquote>&lt;script><br>
+    grid.forEachRowInGroup(name,function(id){<br>
+          do_something_with_row(id);<br>
+    });<br>
+&lt;/script><br>
+</blockquote>
+
+The parameter <b>name</b> is the key-value of the group.<br id="x1cu">
+ <br>
+	<!--- CONTENT. Ends --->
+	<div class="copyright" zid="223">&copy; DHTMLX, 2008</div>
+</body>
+</html>

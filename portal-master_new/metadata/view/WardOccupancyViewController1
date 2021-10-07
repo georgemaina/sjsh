@@ -1,0 +1,112 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "assignbeds",
+        "designer|userClassName": "WardOccupancyViewController1"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "name": "WardOccupancyViewController1",
+    "designerId": "747cadb9-eec3-4477-994e-3bb3f81acee1",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "item"
+                ],
+                "fn": "onWardsItemClick",
+                "implHandler": [
+                    "var view = this.getView();",
+                    "var wardsMenu = this.lookupReference('wardsButton').menu;",
+                    "",
+                    "//Ext.Msg.alert('Test',item.value);",
+                    "",
+                    "view.store.load({",
+                    "    params:{",
+                    "        wardId:item.value",
+                    "    }",
+                    "});",
+                    "",
+                    "var d = new Date();",
+                    "this.lookupReference('wardTitle').setValue(item.text + \"(\"+ d.toLocaleString() +\")\");",
+                    "",
+                    "this.getWaitingList(item.value);",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "designer|params": "typedarray"
+            },
+            "name": "onWardsItemClick",
+            "designerId": "372722f9-77a1-4c3b-a341-c5fb8d8ab5bb"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "wrdNr"
+                ],
+                "fn": "getWaitingList",
+                "implHandler": [
+                    "//vitalsPanel = Ext.create('CarePortal.view.Vitals', {});",
+                    "//waitingListPanel=this.getWardoccupancy().down(\"#waitingList\");",
+                    "waitingListPanel=this.lookupReference('waitingList');",
+                    "",
+                    "",
+                    "var waitingStore=Ext.data.StoreManager.lookup(\"WaitingListStore\");",
+                    "",
+                    "waitingStore.load({",
+                    "    params: {",
+                    "        wardNo:wrdNr",
+                    "    },",
+                    "    callback: function(records, operation, success) {",
+                    "            var tpl=new Ext.XTemplate(",
+                    "                '<tpl for=\".\">',",
+                    "                    '<li style=\"border:1px solid #1faf2e; border-radius: 5px;cursor: pointer;list-style: none outside;color:white; padding:5px;background-color:#1faf2e; margin:3px;\" id={Pid}>{Pid} {Names}</li>',",
+                    "                '</tpl>'",
+                    "            );",
+                    "        var data = [];",
+                    "",
+                    "        waitingStore.each(function(record) {",
+                    "            data.push(record.getData());",
+                    "",
+                    "",
+                    "        });",
+                    "",
+                    "        tpl.overwrite(waitingListPanel.body,data);",
+                    "    },",
+                    "    scope: this",
+                    "});",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "getWaitingList",
+            "designerId": "52904f94-2bce-4d93-a810-ff1cbf0bc305"
+        }
+    ]
+}

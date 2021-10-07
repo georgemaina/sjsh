@@ -1,0 +1,64 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "designer|userAlias": "itemlocationstore",
+        "designer|userClassName": "ItemLocationStore",
+        "model": "ItemLocations",
+        "pageSize": 100,
+        "storeId": "ItemLocationStore"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string",
+        "autoLoad": "boolean",
+        "pageSize": "number"
+    },
+    "name": "UnitsMeasureStore2",
+    "designerId": "a8108ea0-b845-44b0-81a1-9227dab2a04c",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "idParam": "ID",
+                "url": "data/getDataFunctions.php?task=getItemLocation"
+            },
+            "configAlternates": {
+                "url": "string",
+                "idParam": "string"
+            },
+            "name": "MyAjaxProxy",
+            "designerId": "2786fd60-4d6b-4e96-b145-4282f3fda957",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "itemLocations"
+                    },
+                    "configAlternates": {
+                        "rootProperty": "string"
+                    },
+                    "name": "MyJsonReader",
+                    "designerId": "9f8a9d9d-f0d9-492f-9768-e97946b0d1ef"
+                }
+            ]
+        }
+    ]
+}

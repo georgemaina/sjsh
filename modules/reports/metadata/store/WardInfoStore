@@ -1,0 +1,63 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "clearOnPageLoad": false,
+        "designer|userAlias": "wardinfostore",
+        "designer|userClassName": "WardInfoStore",
+        "model": "WardInfo",
+        "storeId": "WardInfoStore"
+    },
+    "configAlternates": {
+        "autoLoad": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string",
+        "clearOnPageLoad": "boolean"
+    },
+    "name": "WardStore1",
+    "designerId": "a7bba4b4-d628-492f-8f3a-049eb900f2ac",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "data/getReportsData.php?task=getWardsInfo"
+            },
+            "configAlternates": {
+                "url": "string"
+            },
+            "name": "MyAjaxProxy",
+            "designerId": "4cf151e5-9617-4b19-9f07-f6ab439c1cbd",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "wardinfo"
+                    },
+                    "configAlternates": {
+                        "root": "string",
+                        "rootProperty": "string"
+                    },
+                    "name": "MyJsonReader",
+                    "designerId": "fd5c1f5b-e2db-41b2-b8be-92f884e70a44"
+                }
+            ]
+        }
+    ]
+}

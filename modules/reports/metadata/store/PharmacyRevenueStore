@@ -1,0 +1,65 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": false,
+        "designer|userAlias": "pharmacyrevenuestore",
+        "designer|userClassName": "PharmacyRevenueStore",
+        "groupField": "parent",
+        "model": "PharmacyRevenue",
+        "pageSize": 600,
+        "storeId": "PharmacyRevenueStore"
+    },
+    "configAlternates": {
+        "autoLoad": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "groupField": "datafield",
+        "model": "model",
+        "pageSize": "number",
+        "storeId": "string"
+    },
+    "name": "OpVisitsStore1",
+    "designerId": "b759db5c-05e3-4a61-84db-00a0ee4dceba",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "data/getReportsData.php?task=pharmacyrevenue"
+            },
+            "configAlternates": {
+                "url": "string"
+            },
+            "name": "MyAjaxProxy",
+            "designerId": "50dae2bd-cdba-49f1-8054-bec251f87592",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "pharmacyrevenue"
+                    },
+                    "configAlternates": {
+                        "root": "string",
+                        "rootProperty": "string"
+                    },
+                    "name": "MyJsonReader",
+                    "designerId": "aa723341-0de0-495f-9629-ce242ed41342"
+                }
+            ]
+        }
+    ]
+}

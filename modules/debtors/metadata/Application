@@ -1,0 +1,56 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "controllers": [
+            "Main"
+        ],
+        "models": [
+            "Kins",
+            "DebtorLocations"
+        ],
+        "name": "Debtors",
+        "stores": [
+            "KinsStore",
+            "DebtorLocationStore",
+            "DebtorSubLocationStore"
+        ]
+    },
+    "configAlternates": {
+        "controllers": "typedarray",
+        "name": "string",
+        "views": "typedarray",
+        "models": "typedarray",
+        "stores": "typedarray"
+    },
+    "name": "Application",
+    "designerId": "application",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "launch",
+                "implHandler": [
+                    "//this.getController(\"Debtors.controller.Main\").showMain();",
+                    "",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "launch",
+            "designerId": "df610ec7-bf7d-4e29-bb1b-2f35dfcce9d8"
+        }
+    ]
+}

@@ -1,0 +1,215 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "bodyPadding": 10,
+        "designer|snapToGrid": 5,
+        "designer|userAlias": "newmembersform",
+        "designer|userClassName": "NewMembersForm",
+        "frame": true,
+        "height": 152,
+        "layout": "absolute",
+        "title": null,
+        "url": "./data/getDataFunctions.php?task=addMember",
+        "width": 359
+    },
+    "configAlternates": {
+        "bodyPadding": "auto",
+        "designer|snapToGrid": "number",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "frame": "boolean",
+        "height": "auto",
+        "layout": "string",
+        "title": "string",
+        "url": "string",
+        "width": "auto",
+        "scrollable": "boolean"
+    },
+    "designerId": "6eb6f422-9d85-4bcb-bd45-45130b6b373c",
+    "viewControllerInstanceId": "c2d5b2ee-8f1f-4f19-8c17-706c8ae6f216",
+    "viewModelInstanceId": "d0bee5e9-45cd-4ca0-8ea2-b43a9ee7ce6b",
+    "cn": [
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Account No",
+                "labelAlign": "right",
+                "layout|x": 5,
+                "layout|y": 5,
+                "name": "txtAccno"
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "labelAlign": "string",
+                "name": "string",
+                "scrollable": "boolean",
+                "layout|x": "number",
+                "layout|y": "number"
+            },
+            "name": "MyTextField5",
+            "designerId": "60d530a8-3028-4ec6-83a4-ec46157296f9",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "afterLabelTextTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "afterLabelTextTpl",
+                        "implHandler": [
+                            "<span style=\"color:red;font-weight:bold\" data-qtip=\"Required\">*</span>"
+                        ]
+                    },
+                    "configAlternates": {
+                        "designer|displayName": "string",
+                        "implHandler": "code"
+                    },
+                    "name": "tpl",
+                    "designerId": "2e05ba06-2e89-4168-99e5-78e606623f14"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Pid:",
+                "labelAlign": "right",
+                "layout|x": 5,
+                "layout|y": 40,
+                "name": "txtPid"
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "labelAlign": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "name": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyTextField6",
+            "designerId": "26d91341-2e54-4611-9683-cc193b53afc2",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "afterLabelTextTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "afterLabelTextTpl",
+                        "implHandler": [
+                            "<span style=\"color:red;font-weight:bold\" data-qtip=\"Required\">*</span>"
+                        ]
+                    },
+                    "configAlternates": {
+                        "designer|displayName": "string",
+                        "implHandler": "code"
+                    },
+                    "name": "tpl1",
+                    "designerId": "85705ea4-6318-4dcc-84d0-864e1093ddf5"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "MemberID",
+                "labelAlign": "right",
+                "layout|x": 5,
+                "layout|y": 75,
+                "name": "memberID"
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "labelAlign": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "name": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyTextField42",
+            "designerId": "38ba8a0c-6d40-4bf7-9ee1-35a95c787f62"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 31,
+                "id": null,
+                "itemId": "cmdSaveMembers",
+                "layout|x": 50,
+                "layout|y": 110,
+                "text": "Save",
+                "width": 93
+            },
+            "configAlternates": {
+                "height": "auto",
+                "id": "string",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyButton30",
+            "designerId": "3b8ebcb0-19c1-40df-af85-69d248e8c222"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 31,
+                "id": null,
+                "itemId": "cmdClose",
+                "layout|x": 225,
+                "layout|y": 110,
+                "text": "Close",
+                "width": 83
+            },
+            "configAlternates": {
+                "height": "auto",
+                "id": "string",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyButton31",
+            "designerId": "9ae8b10e-20c9-4243-a909-90215e798393"
+        }
+    ]
+}

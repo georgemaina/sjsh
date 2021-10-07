@@ -1,0 +1,83 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "animCollapse": true,
+        "closable": true,
+        "cls": [
+            "x-portlet"
+        ],
+        "collapsible": true,
+        "designer|snapToGrid": 5,
+        "designer|userAlias": "announcements",
+        "designer|userClassName": "Announcements",
+        "height": null,
+        "isPortlet": true,
+        "itemId": "announcements",
+        "layout": "absolute",
+        "scrollable": true,
+        "title": "Announcements",
+        "width": null
+    },
+    "configAlternates": {
+        "isPortlet": "boolean",
+        "animCollapse": "boolean",
+        "autoScroll": "boolean",
+        "closable": "boolean",
+        "cls": "string",
+        "collapsible": "boolean",
+        "designer|snapToGrid": "number",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "itemId": "string",
+        "layout": "string",
+        "title": "string",
+        "width": "auto",
+        "scrollable": "boolean"
+    },
+    "name": "MyPanel2",
+    "designerId": "32adb029-aa05-4350-9034-004eafdaf48a",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "isPortlet",
+            "type": "string"
+        }
+    ],
+    "viewControllerInstanceId": "cc9d4162-a7bf-4f8b-80fd-ed9f9b163ee5",
+    "viewModelInstanceId": "b29080bd-a2ef-4d0e-8c12-5fe1639dd650",
+    "cn": [
+        {
+            "type": "Ext.form.field.Display",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": null,
+                "fieldStyle": "font-size: smaller;font-weight: bold;color: green;font-style:normal;color: #2E5494;",
+                "layout|x": 30,
+                "layout|y": 10,
+                "value": "MAUA HOSPITAL HOSPITAL ANNOUNCEMENTS",
+                "width": 275
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "fieldStyle": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "value": "string",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyDisplayField6",
+            "designerId": "75e19ecf-1bc0-41e1-a4f7-1741e73a4630"
+        }
+    ]
+}

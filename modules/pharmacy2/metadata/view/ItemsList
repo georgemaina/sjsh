@@ -1,0 +1,262 @@
+{
+    "type": "Ext.grid.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "bodyStyle": "background-color: #d9f2e6;",
+        "columnLines": true,
+        "designer|userAlias": "itemslist",
+        "designer|userClassName": "ItemsList",
+        "height": 414,
+        "itemId": "itemsList",
+        "store": "ItemslistStore",
+        "width": 632
+    },
+    "configAlternates": {
+        "columnLines": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "store": "store",
+        "width": "auto",
+        "bodyStyle": "string",
+        "itemId": "string"
+    },
+    "name": "MyGridPanel5",
+    "designerId": "30566b7d-c815-405a-8920-4760ae1f5b05",
+    "viewControllerInstanceId": "a34ab4a5-9471-43b2-9e71-f535e2ac126a",
+    "viewModelInstanceId": "b05e0379-8845-45bb-a220-bd4f806c0555",
+    "cn": [
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|snapToGrid": 5,
+                "dock": "top",
+                "height": 43,
+                "layout": "absolute",
+                "padding": 0,
+                "style": "background-color: #d9f2e6;",
+                "width": 100
+            },
+            "configAlternates": {
+                "designer|snapToGrid": "number",
+                "dock": "string",
+                "height": "auto",
+                "layout": "string",
+                "padding": "auto",
+                "width": "auto",
+                "style": "string"
+            },
+            "name": "MyFieldSet4",
+            "designerId": "be96e134-efbb-4a07-9977-e55e96c57184",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "emptyText": "Search by Description, PartCode",
+                        "itemId": "txtSearchItems",
+                        "layout|x": 5,
+                        "layout|y": 5,
+                        "padding": 0,
+                        "width": 380
+                    },
+                    "configAlternates": {
+                        "emptyText": "string",
+                        "itemId": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "padding": "auto",
+                        "width": "auto"
+                    },
+                    "name": "MyTextField2",
+                    "designerId": "93719ebc-fc56-42f3-adff-d8130e796c91"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "hidden": true,
+                        "itemId": "sourceID",
+                        "layout|x": 285,
+                        "layout|y": 5
+                    },
+                    "configAlternates": {
+                        "itemId": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "hidden": "boolean"
+                    },
+                    "name": "MyTextField8",
+                    "designerId": "2ea5e476-481a-411c-822d-93aa88084e2c"
+                }
+            ]
+        },
+        {
+            "type": "Ext.view.Table",
+            "reference": {
+                "name": "viewConfig",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyTable5",
+            "designerId": "fda045d7-cc3a-4e45-b248-597e19482b1f"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "partcode",
+                "text": "Partcode"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string"
+            },
+            "name": "MyColumn2",
+            "designerId": "1353abe5-1e9c-4499-a7ea-07d33919ccab"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "item_description",
+                "text": "Item Description",
+                "width": 272
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "width": "auto"
+            },
+            "name": "MyColumn3",
+            "designerId": "64dbead0-26cd-482b-a035-02cf546ea807"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "qty",
+                "text": "Qty"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string"
+            },
+            "name": "MyColumn1",
+            "designerId": "7aede477-620c-4d28-9b57-1d8056987a57"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "unit_price",
+                "text": "Unit Price"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string"
+            },
+            "name": "MyColumn40",
+            "designerId": "8ae11012-162c-42f4-8e37-e44785257ce1"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "purchasing_class",
+                "hidden": true,
+                "text": "Purchasing Class",
+                "width": 135
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "hidden": "boolean",
+                "text": "string",
+                "width": "auto"
+            },
+            "name": "MyColumn4",
+            "designerId": "91a667b1-bed1-4e1c-879d-f6067d5f0e19"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "category",
+                "hidden": true,
+                "text": "Category",
+                "width": 150
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "hidden": "boolean",
+                "text": "string",
+                "width": "auto"
+            },
+            "name": "MyColumn5",
+            "designerId": "2f59d7da-d12d-4e2f-8081-334eca3f9a90"
+        },
+        {
+            "type": "Ext.toolbar.Paging",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "displayInfo": true,
+                "dock": "bottom",
+                "store": "ItemslistStore",
+                "width": 360
+            },
+            "configAlternates": {
+                "displayInfo": "boolean",
+                "dock": "string",
+                "store": "store",
+                "width": "auto"
+            },
+            "name": "MyPagingToolbar1",
+            "designerId": "c9ebf604-3e59-4a41-a912-8ad235b30b4a"
+        }
+    ]
+}

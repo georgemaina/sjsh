@@ -1,0 +1,40 @@
+
+
+====================================
+Log started, 12/08/2015 11:08:59
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => pid
+		1 => pid
+	1 => 
+		0 => name_first
+		1 => name_first
+	2 => 
+		0 => name_2
+		1 => name_2
+	3 => 
+		0 => name_last
+		1 => name_last
+	4 => 
+		0 => encounter_nr
+		1 => encounter_nr
+id => 
+	0 => a.pid
+	1 => pid
+table => 
+	0 =>  care_person a
+INNER JOIN care_encounter b ON a.pid=b.pid
+	1 => pid
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_person a
+INNER JOIN care_encounter b ON a.pid=b.pid
+
+Exec SQL: SELECT   a.pid,a.name_first,a.name_2,a.name_last,b.encounter_nr  FROM  care_person a
+INNER JOIN care_encounter b ON a.pid=b.pid LIMIT 0,100
+
+Done in 0.13416004180908ms
+

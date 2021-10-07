@@ -1,0 +1,61 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "customerslist",
+        "designer|userClassName": "CustomersList",
+        "model": "customersList",
+        "pageSize": 50,
+        "storeId": "CustomersList"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "pageSize": "number",
+        "storeId": "string",
+        "trailingBufferZone": "number"
+    },
+    "designerId": "085038ad-a14a-410b-abee-ac5aab044e3d",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "./data/getDataFunctions.php?task=getCustomersList"
+            },
+            "configAlternates": {
+                "url": "string"
+            },
+            "name": "MyAjaxProxy7",
+            "designerId": "469a4498-353f-4bd9-ab62-75012b36bef1",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "customersList"
+                    },
+                    "configAlternates": {
+                        "root": "string",
+                        "rootProperty": "string"
+                    },
+                    "name": "MyJsonReader7",
+                    "designerId": "494710f3-f5ff-44d7-b1fc-b9a4b3d911ea"
+                }
+            ]
+        }
+    ]
+}

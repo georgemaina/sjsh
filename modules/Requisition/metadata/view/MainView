@@ -1,0 +1,305 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userAlias": "mainview",
+        "designer|userClassName": "MainView",
+        "itemId": "mainView",
+        "layout": "border"
+    },
+    "configAlternates": {
+        "designer|initialView": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "itemId": "string",
+        "layout": "string"
+    },
+    "designerId": "353f0c49-9162-4dc5-8e2d-ffb09f0d3a62",
+    "viewControllerInstanceId": "e0b7feb2-75c1-4538-ad8b-f4ba408c7b59",
+    "viewModelInstanceId": "e06398df-21db-494a-8ccf-784239a17dcd",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "collapsible": true,
+                "itemId": "menuPanel",
+                "layout|region": "west",
+                "layout|split": true,
+                "title": "Menu",
+                "width": 183
+            },
+            "configAlternates": {
+                "itemId": "string",
+                "layout|region": "string",
+                "layout|split": "boolean",
+                "title": "string",
+                "width": "auto",
+                "collapsible": "boolean"
+            },
+            "name": "MyPanel1",
+            "designerId": "70e4bdc2-8c21-4da3-b357-bdac73847e65",
+            "cn": [
+                {
+                    "type": "Ext.menu.Menu",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "floating": false,
+                        "itemId": "menu",
+                        "width": null
+                    },
+                    "configAlternates": {
+                        "floating": "boolean",
+                        "itemId": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyMenu",
+                    "designerId": "25abbee3-e977-4e92-bc3a-73fcf2aea764",
+                    "cn": [
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "focusable": true,
+                                "href": null,
+                                "itemId": "requisitionform",
+                                "text": "Requisition Form"
+                            },
+                            "configAlternates": {
+                                "focusable": "boolean",
+                                "href": "string",
+                                "itemId": "string",
+                                "text": "string"
+                            },
+                            "name": "MyMenuItem4",
+                            "designerId": "81f79613-c062-4521-9b8e-bfa4f664aaff"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "focusable": true,
+                                "href": null,
+                                "itemId": "orderstemp",
+                                "text": "Meds Orders Template"
+                            },
+                            "configAlternates": {
+                                "focusable": "boolean",
+                                "href": "string",
+                                "itemId": "string",
+                                "text": "string"
+                            },
+                            "name": "MyMenuItem",
+                            "designerId": "2d21cd52-2bd4-4f26-99f8-ecb1b8453ece"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "focusable": true,
+                                "href": null,
+                                "itemId": "orders",
+                                "text": "Approve Requisition"
+                            },
+                            "configAlternates": {
+                                "focusable": "boolean",
+                                "href": "string",
+                                "itemId": "string",
+                                "text": "string"
+                            },
+                            "name": "MyMenuItem2",
+                            "designerId": "9f67ea74-e63c-4b04-b4c2-4130f7cbd1f8"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "focusable": true,
+                                "href": null,
+                                "itemId": "requisitionslist",
+                                "text": "Detailed Order",
+                                "tooltip": "The dispplays the itemised Order"
+                            },
+                            "configAlternates": {
+                                "focusable": "boolean",
+                                "href": "string",
+                                "itemId": "string",
+                                "text": "string",
+                                "tooltip": "string"
+                            },
+                            "name": "MyMenuItem1",
+                            "designerId": "a9c5c2c5-e485-4719-a39d-1f3df3d72393"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "focusable": true,
+                                "href": null,
+                                "itemId": "contact1",
+                                "text": "Preview Order"
+                            },
+                            "configAlternates": {
+                                "focusable": "boolean",
+                                "href": "string",
+                                "itemId": "string",
+                                "text": "string"
+                            },
+                            "name": "MyMenuItem3",
+                            "designerId": "3407ef42-11b8-409f-9e23-c1f6c8b4abbc"
+                        },
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onMenuClick",
+                                "implHandler": [
+                                    "location.hash = item.itemId;"
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onMenuClick",
+                            "designerId": "6aabf84c-692c-4a9f-9b11-0d46214a63b5"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "contentPanel",
+                "layout": "card",
+                "layout|region": "center",
+                "title": null
+            },
+            "configAlternates": {
+                "itemId": "string",
+                "layout": "string",
+                "layout|region": "string",
+                "title": "string"
+            },
+            "name": "MyPanel2",
+            "designerId": "c98c4f91-6f66-4054-8e31-2ccc2ab4f975",
+            "cn": [
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "orderstempPanel"
+                    },
+                    "configAlternates": {
+                        "itemId": "string"
+                    },
+                    "name": "orderstemplate",
+                    "designerId": "edde52a7-38f8-42a2-affc-113c24e27023",
+                    "masterInstanceId": "b6e0a83d-a0ff-4b1b-9797-617f20c2a8af"
+                },
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "requisitionslistPanel"
+                    },
+                    "configAlternates": {
+                        "itemId": "string"
+                    },
+                    "name": "pendingrequisitions",
+                    "designerId": "cafeb932-0304-42d8-9da8-37bce0427635",
+                    "masterInstanceId": "1f4aef2d-17e1-4b5e-b744-5f017a8560c1"
+                },
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "ordersPanel"
+                    },
+                    "configAlternates": {
+                        "itemId": "string"
+                    },
+                    "name": "orderslist",
+                    "designerId": "25939492-aa61-41f4-88f5-92a066bcab39",
+                    "masterInstanceId": "0af74016-4585-4638-93f1-ed66101df599"
+                },
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "requisitionformPanel"
+                    },
+                    "configAlternates": {
+                        "itemId": "string"
+                    },
+                    "name": "requisitionform1",
+                    "designerId": "f76c895e-b4c4-4f8f-933b-6678e9c6e99f",
+                    "masterInstanceId": "ad850bca-2403-49ee-8a2e-3baa3589f061"
+                }
+            ]
+        }
+    ]
+}

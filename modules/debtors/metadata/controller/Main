@@ -1,0 +1,2904 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Main",
+        "models": [
+            "customerInfo",
+            "customerJobs",
+            "ReceiptsAllocate",
+            "debtorsList",
+            "debtorDetails",
+            "invoices",
+            "customerBill",
+            "allocations",
+            "receipts",
+            "billNumbers",
+            "customersList",
+            "CustomerType",
+            "debtorTransactions",
+            "DebtorJobs",
+            "Memberslist",
+            "DebtorBalances"
+        ],
+        "stores": [
+            "CustomerInfo",
+            "CustomerJobs",
+            "ReceiptsAllocateSt",
+            "DebtorsList",
+            "DebtorDetails",
+            "CustomerBill",
+            "InvoicesList",
+            "Allocations",
+            "ReceiptsList",
+            "BillNumbers",
+            "CustomersList",
+            "CustomerType",
+            "DebtorTransactions",
+            "CustomerTrans",
+            "InvoiceAllocateSt",
+            "MembersListStore",
+            "DebtorBalancesStore"
+        ],
+        "views": [
+            "CustomersList",
+            "DebtorsList",
+            "CustomerBill",
+            "CustomerInformation",
+            "BillingCustInfo",
+            "CustomerBillList",
+            "InvoicesList",
+            "Allocations",
+            "ReceiptsList",
+            "NewMembersForm",
+            "MyViewport",
+            "DebtorRegisterForm",
+            "DebtorRegisterWindow",
+            "CustomerInfo",
+            "AllocateReceipts",
+            "DebtorMembers",
+            "DebtorsWindow",
+            "DebtorBalances",
+            "RemoveMembersForm",
+            "GuarantorsForm",
+            "InsuranceCredits",
+            "InsuranceDebits"
+        ]
+    },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "models": "typedarray",
+        "stores": "typedarray",
+        "views": "typedarray"
+    },
+    "designerId": "be5644d2-0336-477e-a79a-ad9451488f89",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "application"
+                ],
+                "fn": "init",
+                "implHandler": [
+                    "this.control({",
+                    "    'debtorDetails button[id=refresh]': {",
+                    "        click: this.refreshCustomerTrans",
+                    "    },",
+                    "    '#cmdSaveDebtor': {",
+                    "        click: this.onRegisterSave",
+                    "    },",
+                    "    \"debtorDetails menuitem[id=debtorslist]\": {",
+                    "        click: this.opendebtorslist",
+                    "    },",
+                    "    \"#mnuAllocateReceipts\": {",
+                    "        click: this.openAllocateReceipts",
+                    "    },",
+                    "    \"debtorDetails menuitem[id=invoices]\": {",
+                    "        click: this.openInvoicesList",
+                    "    },",
+                    "    \"debtorDetails menuitem[id=receipts]\": {",
+                    "        click: this.openReceiptsList",
+                    "    },",
+                    "    \"debtordetailsgrid button[id=cmdPreview]\": {",
+                    "        click: this.loadDebtorTrans",
+                    "    },",
+                    "    \"#cmdSaveMembers\": {",
+                    "        click: this.onMembersSave",
+                    "    },",
+                    "    \"debtorDetails menuitem[id=customers]\": {",
+                    "        click: this.openCustomersList",
+                    "    },",
+                    "    \"customerslist button[id=custFind]\": {",
+                    "        click: this.findCustomer",
+                    "    },",
+                    "    \"#cmdNewCustomer1\": {",
+                    "        click: this.createNewCustomer",
+                    "    },",
+                    "    \"#editCustomer\": {",
+                    "        click: this.openNewCustomer2",
+                    "    },",
+                    "    \"#mnuDebtorsRegister\": {",
+                    "        click: this.createNewCustomer",
+                    "    },",
+                    "    \"#mnuDebtorsList\":{",
+                    "        click: this.opendebtorslist",
+                    "    },",
+                    "    \"#mnuDebtorMembers\":{",
+                    "        click: this.openDebtorMembers",
+                    "    },",
+                    "    \"#mnuInvoices\":{",
+                    "        click: this.openInvoicesList",
+                    "    },",
+                    "    \"#mnuReceipts\":{",
+                    "        click: this.openReceiptsList",
+                    "    },",
+                    "    \"#mnuTransactions\":{",
+                    "        click: this.openTransactions",
+                    "    },",
+                    "    \"#debtorslist\":{",
+                    "        itemdblclick: this.openNewCustomer2",
+                    "    },",
+                    "    \"#debtorBalances\":{",
+                    "        itemclick: this.getDebtorsInfo",
+                    "    },",
+                    "    \"customerinfo button[id=cmdNewCustomer]\":{",
+                    "        click: this.createNewCustomer",
+                    "    },",
+                    "    \"customerinfo button[id=cmdEditCustomer]\":{",
+                    "        click: this.getDebtorDetails",
+                    "    },",
+                    "    '#mnuStatement':{",
+                    "        click: this.openStatement",
+                    "    },",
+                    "    '#printInvoices':{",
+                    "        click: this.printInvoices",
+                    "    },",
+                    "    '#cmdNewCustomer':{",
+                    "        click:this.createNewCustomer",
+                    "    },",
+                    "    '#cmdAddMembers':{",
+                    "        click:this.addMembers",
+                    "    },",
+                    "    '#cmdPreviewTrans':{",
+                    "        click:this.previewTransactions",
+                    "    },",
+                    "    '#cmdPreviewInvoices':{",
+                    "        click:this.previewInvoices",
+                    "    },",
+                    "    '#cmdPreviewReceipts':{",
+                    "        click:this.previewReceipts",
+                    "    },",
+                    "    '#allocateReceiptsGrid':{",
+                    "        itemclick:this.getIndividualInvoices",
+                    "    },",
+                    "    '#allocateInvoicesGrid':{",
+                    "        selectionchange:this.getInvoiceTotals",
+                    "    },",
+                    "    '#cmdAllocateReceipt':{",
+                    "        click:this.allocateReceipts",
+                    "    },",
+                    "    '#cmdClose':{",
+                    "        click:this.closeWindow",
+                    "    },",
+                    "    '#cmdAddMembers2':{",
+                    "        click:this.addMembers",
+                    "    },",
+                    "    '#cmdCloseMembersform':{",
+                    "        click:this.closeMembersForm",
+                    "    },",
+                    "    '#mdebtorslist':{",
+                    "        itemclick:this.loadMembersList",
+                    "    },",
+                    "    '#cmdSearchDebtors':{",
+                    "        click:this.searchDebtors",
+                    "    },",
+                    "    '#debtorCategory':{",
+                    "        select:this.searchDebtors",
+                    "    },",
+                    "    '#cmdDebtorsSearch':{",
+                    "        click:this.searchDebtorsList",
+                    "    },",
+                    "    '#mnuDebtorBalances':{",
+                    "        click:this.openDebtorBalances",
+                    "    },",
+                    "    '#cmdSearchDebtorBalances':{",
+                    "        click:this.searchDebtorBalances",
+                    "    },",
+                    "    '#debtorBalanceCategory':{",
+                    "        select:this.searchDebtorBalances",
+                    "    },",
+                    "    '#cmdPrint':{",
+                    "        click:this.printRegister",
+                    "    },",
+                    "    '#cmdNewCustomer2':{",
+                    "        click:this.openNewCustomer3",
+                    "    },",
+                    "    '#cbCategory':{",
+                    "        select:this.onComboboxChange",
+                    "    },",
+                    "    '#txtSearchParam':{",
+                    "        change:this.searchDebtorTrans",
+                    "    },",
+                    "    '#mnuExportToExcel':{",
+                    "        click:this.exportStatementToExcel",
+                    "    },",
+                    "    '#cmdDiagnosisReport':{",
+                    "        click:this.openDiagnosisReport",
+                    "    },",
+                    "    '#cmdRemoveMember':{",
+                    "        click:this.openRemoveMember",
+                    "    },",
+                    "    '#cmdRemoveMember2':{",
+                    "        click:this.openRemoveMember",
+                    "    },",
+                    "    '#cmdRemoveMembers':{",
+                    "        click:this.removeMembers",
+                    "    },",
+                    "    '#mnuGuarantorsForm':{",
+                    "        click:this.openGuarantorsForm",
+                    "    },",
+                    "    '#cmdPrintGuarantors':{",
+                    "        click:this.printGarantorsForm",
+                    "    },",
+                    "    '#cmdSaveGuarantors':{",
+                    "        click:this.saveGuarantor",
+                    "    },",
+                    "    '#txtDebtorsParams':{",
+                    "         specialkey:this.getPressedKey",
+                    "    },",
+                    "    '#txtDebtorsParams2':{",
+                    "        specialkey:this.getPressedKey2",
+                    "    },",
+                    "    '#cmdSearch':{",
+                    "        click:this.searchDebtorslist",
+                    "    },",
+                    "    '#mnuCredits':{",
+                    "        click:this.openCredits",
+                    "    },",
+                    "    '#cmdSaveCredit':{",
+                    "        click:this.saveCredits",
+                    "    },",
+                    "    '#mnuDebits':{",
+                    "        click:this.openDebits",
+                    "    },",
+                    "    '#mnuAllocations':{",
+                    "        click:this.openDebtorAllocations",
+                    "    },",
+                    "    '#cmdSearchInvoices':{",
+                    "        click:this.searchInvoices",
+                    "    }",
+                    "",
+                    "});"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "init",
+            "designerId": "6d4519c8-b24d-4d7d-b2bd-31b12f0fd9ee"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "showMain",
+                "implHandler": [
+                    "mainGrid=Ext.create(\"Debtors.view.DebtorDetails\",{});",
+                    "westContainer=this.getViewport().down(\"container[region=west]\");",
+                    "westContainer.add(mainGrid);",
+                    "",
+                    "customerInfo=Ext.create(\"Debtors.view.CustomerInfo\",{});",
+                    "centerContainer=this.getViewport().down(\"container[region=center]\");",
+                    "centerContainer.add(customerInfo);",
+                    "",
+                    "",
+                    "//westContainer=this.getViewport().down(\"container[region=center]\");",
+                    "//westContainer.add(infoGrid);",
+                    "",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "showMain",
+            "designerId": "e1b0b4b8-2d8d-4440-90a4-bd5849ec9b5d"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "viewport",
+                "selector": "viewport"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string"
+            },
+            "name": "viewport",
+            "designerId": "4cccbaa1-c19b-47ba-810e-ad8480a90188"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onDebtorDetailsLoad",
+                "implHandler": [
+                    "var debtorDetails=Ext.data.StoreManager.lookup('DebtorTransactions');\r",
+                    "debtorDetails.load({\r",
+                    "});"
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "onDebtorDetailsLoad",
+            "designerId": "9e86e3e7-97e9-4524-b1a3-84b28669fae3"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "gridpanel, record, item, index, e, options"
+                ],
+                "fn": "loadDebtorInfo",
+                "implHandler": [
+                    "\r",
+                    "var debtorDetails=Ext.data.StoreManager.lookup('DebtorDetails');\r",
+                    "debtorDetails.load({\r",
+                    "    params: {\r",
+                    "        accno: record.get('accno')\r",
+                    "    },\r",
+                    "    callback: function(records, operation, success) {\r",
+                    "        var data1=this.getStore('DebtorDetails').getAt(0);\r",
+                    "        customerinfo.loadRecord(record);\r",
+                    "\r",
+                    "    },\r",
+                    "    scope: this\r",
+                    "\r",
+                    "});\r",
+                    "\r",
+                    "var DebtorTransactions=Ext.data.StoreManager.lookup('DebtorTransactions');\r",
+                    "DebtorTransactions.load({\r",
+                    "    params: {\r",
+                    "        accno: record.get('accno')\r",
+                    "    },\r",
+                    "    callback: function(records, operation, success) {\r",
+                    "\r",
+                    "\r",
+                    "    },\r",
+                    "    scope: this\r",
+                    "\r",
+                    "});\r",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "loadDebtorInfo",
+            "designerId": "db50a733-c9c1-47b1-bcef-fd5f1a93f87b"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "customerbill",
+                "selector": "customerbill",
+                "xtype": "customerbill"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "customerbill",
+            "designerId": "3b5e478e-8c23-4663-8015-fdd25228bfec"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button, e, options"
+                ],
+                "fn": "onRegisterSave",
+                "implHandler": [
+                    "//alert('test');",
+                    "var form = button.up('panel').getForm(); // get the basic form",
+                    "if (form.isValid()) { // make sure the form contains valid data before submitting",
+                    "    form.submit({",
+                    "        success: function(form, action) {",
+                    "            Ext.Msg.alert('Success', 'Saved new debtor successfully.');",
+                    "",
+                    "            var win = button.up('debtorregister');",
+                    "            win.destroy();",
+                    "            ",
+                    "            var debtorsList=Ext.data.StoreManager.lookup('DebtorsList');",
+                    "            debtorsList.load({});",
+                    "",
+                    "        },",
+                    "        failure: function(form, action) {",
+                    "            Ext.Msg.alert('Failed', 'Could not save debtor. Error='+action.result.errors.clientNo);",
+                    "        }",
+                    "    });",
+                    "} else { // display error alert if the data is invalid",
+                    "    Ext.Msg.alert('Invalid Data', 'Please correct form errors.');",
+                    "}",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "onRegisterSave",
+            "designerId": "f9b613b7-32e3-40c8-807c-8c5d62f97380"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button, e, option"
+                ],
+                "fn": "opendebtorslist",
+                "implHandler": [
+                    "//alert('test');",
+                    "",
+                    "",
+                    "debtorsList = Ext.create('Debtors.view.DebtorsList', {});",
+                    "center_container = this.getViewport().down('container[region=center]');",
+                    "center_container.removeAll(); //removing existing views.",
+                    "center_container.add(debtorsList);",
+                    "",
+                    "",
+                    "var debtorsListStore=Ext.data.StoreManager.lookup('DebtorsList');",
+                    "debtorsListStore.load({});"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "opendebtorslist",
+            "designerId": "00f6bbd1-3a66-461d-a5f2-c2bf40f5bb24"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "refreshCustomerTrans",
+                "implHandler": [
+                    "var customerTransStore=Ext.data.StoreManager.lookup('CustomerTrans');\r",
+                    "customerTransStore.load({\r",
+                    "});"
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "refreshCustomerTrans",
+            "designerId": "22e99ea2-8389-4f48-8fde-6003e0f4efa1"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "openInvoicesList",
+                "implHandler": [
+                    "",
+                    "//alert('test');",
+                    "",
+                    "invoicesList = Ext.create('Debtors.view.InvoicesList', {});",
+                    "center_container = this.getViewport().down('container[region=center]');",
+                    "center_container.removeAll(); //removing existing views.",
+                    "center_container.add(invoicesList);",
+                    "",
+                    "var strParam=this.getInvoiceslist().down('#txtInvoices').getValue();",
+                    "var startDate=this.getInvoiceslist().down('#startDate').getValue();",
+                    "var endDate=this.getInvoiceslist().down('#endDate').getValue();",
+                    "var accno=this.getInvoiceslist().down('#accNo').getValue();",
+                    "",
+                    "var invoicesStore=Ext.data.StoreManager.lookup('InvoicesList');",
+                    "invoicesStore.load({",
+                    "    params: {",
+                    "        rptType: 'invoices',",
+                    "        accno:accno,",
+                    "        irParam:strParam,",
+                    "        startDate:startDate,",
+                    "        endDate:endDate",
+                    "",
+                    "    },",
+                    "    callback: function(records, operation, success) {",
+                    "",
+                    "",
+                    "    },",
+                    "    scope: this",
+                    "});"
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "openInvoicesList",
+            "designerId": "db988020-24bb-4519-9a6f-7c5fc561433d"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "openReceiptsList",
+                "implHandler": [
+                    "//alert('test 2');",
+                    "",
+                    "receiptsList = Ext.create('Debtors.view.ReceiptsList', {});",
+                    "center_container = this.getViewport().down('container[region=center]');",
+                    "center_container.removeAll(); //removing existing views.",
+                    "center_container.add(receiptsList);",
+                    "",
+                    "",
+                    "var receiptsStore=Ext.data.StoreManager.lookup('ReceiptsList');",
+                    "",
+                    "var strParam=this.getReceiptslist().down('#txtReceipts').getValue();",
+                    "var startDate=this.getReceiptslist().down('#startDate').getValue();",
+                    "var endDate=this.getReceiptslist().down('#endDate').getValue();",
+                    "var accno=this.getReceiptslist().down('#accNo').getValue();",
+                    "",
+                    "receiptsStore.load({",
+                    "    params: {",
+                    "        rptType: 'receipts',",
+                    "        accno:accno,",
+                    "        irParam:strParam,",
+                    "        startDate:startDate,",
+                    "        endDate:endDate",
+                    "    },",
+                    "    callback: function(records, operation, success) {",
+                    "",
+                    "",
+                    "    },",
+                    "    scope: this",
+                    "});"
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "openReceiptsList",
+            "designerId": "859fd878-44c1-4b73-addd-6163e599cbfa"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "tabpanel, record, item, index, e, options"
+                ],
+                "fn": "loadDebtorTrans",
+                "implHandler": [
+                    "var accountNo=Ext.getCmp('accountNo').getValue();\r",
+                    "//alert('Test'+accountNo);\r",
+                    "\r",
+                    "\r",
+                    "var strDate1=Ext.Date.format(new Date(Ext.getCmp('startDate').getValue()), 'Y-m-d');\r",
+                    "var strDate2=Ext.Date.format(new Date(Ext.getCmp('endDate').getValue()), 'Y-m-d');\r",
+                    "\r",
+                    "var debtorTrans=Ext.data.StoreManager.lookup('DebtorTransactions');\r",
+                    "debtorTrans.load({\r",
+                    "    params: {\r",
+                    "        accno: accountNo,//record.get('accno'),\r",
+                    "        startDate:strDate1,\r",
+                    "        endDate:strDate2\r",
+                    "    },\r",
+                    "    callback: function(records, operation, success) {\r",
+                    "        // var data1=this.getStore('DebtorTransactions').getAt(0);\r",
+                    "        //myform.loadRecord(data1);\r",
+                    "\r",
+                    "    },\r",
+                    "    scope: this\r",
+                    "\r",
+                    "});"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "loadDebtorTrans",
+            "designerId": "e84c11a1-5b48-4238-bfc8-7a0ad029bbc1"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button, e, options"
+                ],
+                "fn": "onMembersSave",
+                "implHandler": [
+                    "",
+                    "var form = button.up('form').getForm(); // get the basic form",
+                    "if (form.isValid()) { // make sure the form contains valid data before submitting",
+                    "    form.submit({",
+                    "        success: function(form, action) {",
+                    "            Ext.Msg.alert('Success', 'Saved new Member successfully.');",
+                    "",
+                    "            var win = button.up('window');",
+                    "            win.removeAll();",
+                    "            win.destroy();",
+                    "        },",
+                    "        failure: function(form, action) {",
+                    "            Ext.Msg.alert('Failed', 'Could not save Member. Error='+action.result.errors.clientNo);",
+                    "        }",
+                    "    });",
+                    "} else { // display error alert if the data is invalid",
+                    "    Ext.Msg.alert('Invalid Data', 'Please correct form errors.');",
+                    "}",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "onMembersSave",
+            "designerId": "a1ac6fed-e4ac-4a42-9248-030f6bc25dfd"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "openCustomersList",
+                "implHandler": [
+                    "",
+                    "//alert('test');",
+                    "",
+                    "customersList = Ext.create('Debtors.view.CustomersList', {});",
+                    "center_container = this.getViewport().down('container[region=center]');",
+                    "center_container.removeAll(); //removing existing views.",
+                    "center_container.add(customersList);",
+                    "",
+                    "",
+                    "var customersList=Ext.data.StoreManager.lookup('CustomersList');",
+                    "customersList.load({",
+                    "    param:{",
+                    "        start:0,",
+                    "        limit:100",
+                    "    }",
+                    "});"
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "openCustomersList",
+            "designerId": "0111d20d-d114-493c-bc49-740d38d37fdc"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "openAllocations",
+                "implHandler": [
+                    "",
+                    "allocations = Ext.create('Debtors.view.Allocations', {});",
+                    "center_container = this.getViewport().down('container[region=center]');",
+                    "center_container.removeAll(); //removing existing views.",
+                    "center_container.add(allocations);",
+                    "",
+                    "",
+                    "var allocationsStore=Ext.data.StoreManager.lookup('Allocations');",
+                    "allocationsStore.load({",
+                    "    param:{",
+                    "        start:0,",
+                    "        limit:100",
+                    "    }",
+                    "});"
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "openAllocations",
+            "designerId": "a5307908-6688-4268-a4e3-deb94e5891be"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "field,options"
+                ],
+                "fn": "findCustomer",
+                "implHandler": [
+                    "//alert('Test');\r",
+                    "var pid=Ext.getCmp('txtParam').getValue();\r",
+                    "var cutomerslist=Ext.data.StoreManager.lookup('CustomersList');\r",
+                    "cutomerslist.load({\r",
+                    "    params: {\r",
+                    "        param1: pid\r",
+                    "    },\r",
+                    "    callback: function(records, operation, success) {\r",
+                    "\r",
+                    "\r",
+                    "    },\r",
+                    "    scope: this\r",
+                    "});"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "findCustomer",
+            "designerId": "405d93b0-0cba-4dce-9113-049d0929e2c6"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "customerslist",
+                "selector": "customerslist",
+                "xtype": "customerslist"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "customerslist",
+            "designerId": "74f97880-efd9-4dc4-b43f-7a822ce28bcf"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "openAllocateReceipts",
+                "implHandler": [
+                    "//var frmAllocaterctWindow=Ext.create('Ext.window.Window', {",
+                    "// title: 'Allocate Receipts',",
+                    "// resizable:false",
+                    "//});",
+                    "",
+                    "var allocWindow=Ext.create('Ext.window.Window',{",
+                    "    title: 'Allocate Receipts',",
+                    "    resizable:false",
+                    "});",
+                    "var frmAllocaterct = Ext.create('Debtors.view.AllocateReceipts', {});",
+                    "",
+                    "allocWindow.add(frmAllocaterct);",
+                    "allocWindow.show();",
+                    "",
+                    "var allocatedReceipts=Ext.data.StoreManager.lookup('ReceiptsAllocateSt');",
+                    "allocatedReceipts.load({});",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "openAllocateReceipts",
+            "designerId": "7eece0dc-5b61-4ff6-ac7a-3eb7bae873ab"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "allocatereceipts",
+                "selector": "allocatereceipts",
+                "xtype": "allocatereceipts"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "allocatereceipts",
+            "designerId": "30a04a83-bc23-4024-8aae-bef11459758a"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "createNewCustomer",
+                "implHandler": [
+                    "registerform = Ext.create('Debtors.view.DebtorRegisterForm', {});",
+                    "        var registerformWindow=Ext.create('Ext.window.Window', {",
+                    "            title: 'Debtors Register',",
+                    "            resizable:false",
+                    "        });",
+                    "",
+                    "        registerformWindow.add(registerform);",
+                    "        registerformWindow.show();",
+                    "",
+                    "registerform.getForm().findField(\"formStatus\").setValue('insert');"
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "createNewCustomer",
+            "designerId": "af7ff359-8131-4718-a344-14fb49e7376c"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "customerslist",
+                "selector": "customerslist",
+                "xtype": "customerslist"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "customerslist",
+            "designerId": "5fe05ab0-6804-46c1-9cfa-dddb0b1456ec"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "debtorslist",
+                "selector": "debtorslist",
+                "xtype": "debtorslist"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "debtorslist",
+            "designerId": "ee513d81-0948-4994-9363-7bda7f4ec129"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "gridpanel, record, item, index, e, options"
+                ],
+                "fn": "openNewCustomer2",
+                "implHandler": [
+                    "",
+                    "//var registerform=Ext.create('Debtors.view.DebtorRegisterForm', {});",
+                    "",
+                    "//center_container = this.getViewport().down('container[region=center]');",
+                    "//center_container.removeAll(); //removing existing views.",
+                    "//center_container.add(registerform);",
+                    "",
+                    "",
+                    "//registerform.getForm().loadRecord(record);",
+                    "",
+                    "//registerform.query('textfield[name=\"formStatus\"]')[0].setValue('update');",
+                    "",
+                    "var registerform = Ext.create('Debtors.view.DebtorRegisterForm', {});",
+                    "var registerformWindow=Ext.create('Ext.window.Window', {",
+                    "            title: 'Debtors Register',",
+                    "            resizable:false",
+                    "        });",
+                    "",
+                    "        registerformWindow.add(registerform);",
+                    "        registerformWindow.show();",
+                    "registerform.getForm().loadRecord(record);",
+                    "",
+                    "registerform.getForm().findField(\"formStatus\").setValue('update');",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "openNewCustomer2",
+            "designerId": "f05a92fd-95f3-4fc7-b126-3492269c7752"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "openTransactions",
+                "implHandler": [
+                    "customerinfo=Ext.create(\"Debtors.view.CustomerInfo\",{});",
+                    "//infoGrid=Ext.create(\"Debtors.view.DebtorDetailsGrid\",{});",
+                    "centerContainer=this.getViewport().down(\"container[region=center]\");",
+                    "",
+                    "centerContainer.removeAll(); //removing existing views.",
+                    "",
+                    "centerContainer.add(customerinfo);"
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "openTransactions",
+            "designerId": "998c64a3-1024-4ede-8444-915c5b7f5aef"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "gridpanel, record, item, index, e, options"
+                ],
+                "fn": "getDebtorsInfo",
+                "implHandler": [
+                    "",
+                    "if(!Ext.ClassManager.isCreated('Debtors.View.MyForm') && !Ext.ClassManager.isCreated('Debtors.View.DebtorDetailsGrid')){",
+                    "    this.openTransactions();",
+                    "}",
+                    "",
+                    "",
+                    "var debtorDetails=Ext.data.StoreManager.lookup('DebtorDetails');",
+                    "debtorDetails.load({",
+                    "    params: {",
+                    "        accno: record.get('accno')",
+                    "    },",
+                    "    callback: function(records, operation, success) {",
+                    "        var data1=this.getStore('DebtorDetails').getAt(0);",
+                    "        customerinfo.loadRecord(data1);",
+                    "",
+                    "    },",
+                    "    scope: this",
+                    "",
+                    "});",
+                    "",
+                    "var accountNo=record.get('accno'); //Ext.getCmp('accountNo').getValue();",
+                    "",
+                    "",
+                    "",
+                    "//var strDate1=Ext.Date.format(new Date(this.getDebtordetailsgrid.down('#startDate').getValue()), 'Y-m-d');",
+                    "//var strDate2=Ext.Date.format(new Date(this.getDebtordetailsgrid.down('#endDate').getValue()), 'Y-m-d');",
+                    "",
+                    "      //  alert('Test '+accountNo);",
+                    "",
+                    "var debtorTrans=Ext.data.StoreManager.lookup('DebtorTransactions');",
+                    "debtorTrans.load({",
+                    "    params: {",
+                    "        accno:record.get('accno')//,",
+                    "        //startDate:strDate1,",
+                    "        //endDate:strDate2",
+                    "    },",
+                    "    callback: function(records, operation, success) {",
+                    "",
+                    "        // var data1=this.getStore('DebtorTransactions').getAt(0);",
+                    "        //myform.loadRecord(data1);",
+                    "",
+                    "    },",
+                    "    scope: this",
+                    "",
+                    "});"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "getDebtorsInfo",
+            "designerId": "20863744-01bc-416b-93ea-5541607a7d5d"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "debtorDetails",
+                "selector": "debtorDetails",
+                "xtype": "debtorDetails"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "debtorDetails",
+            "designerId": "eb7dc553-d6e7-45f0-8b2b-04375def60f7"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "record"
+                ],
+                "fn": "getDebtorDetails",
+                "implHandler": [
+                    "var debtorDetails=Ext.data.StoreManager.lookup('DebtorsList');",
+                    "",
+                    "",
+                    "var accountNo=this.getCustomerinfo().down('#Accno').getValue();",
+                    "//alert(accountNo);",
+                    "debtorDetails.load({",
+                    "    params: {",
+                    "        accno:accountNo",
+                    "    },",
+                    "    callback: function(records, operation, success) {",
+                    "        var data1=this.getStore('DebtorsList').getAt(0);",
+                    "        //  myform.loadRecord(data1);",
+                    "",
+                    "        var registerform=Ext.create('Debtors.view.DebtorRegisterForm', {});",
+                    "",
+                    "        center_container = this.getViewport().down('container[region=center]');",
+                    "        center_container.removeAll(); //removing existing views.",
+                    "        center_container.add(registerform);",
+                    "",
+                    "",
+                    "        registerform.getForm().loadRecord(data1);",
+                    "",
+                    "        registerform.query('textfield[name=\"formStatus\"]')[0].setValue('update');",
+                    "",
+                    "    },",
+                    "    scope: this",
+                    "",
+                    "});",
+                    "",
+                    "//alert('Test'+accountNo);",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "getDebtorDetails",
+            "designerId": "c94530a8-302b-4ba6-8dc3-f67cbb00193a"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "openStatement",
+                "implHandler": [
+                    "    var accountNo = this.getCustomerinfo().down(\"#Accno\").value;\r",
+                    "\r",
+                    "    var strDate1=Ext.Date.format(new Date(this.getCustomerinfo().down('#startDate').getValue()), 'Y-m-d');\r",
+                    "    var strDate2=Ext.Date.format(new Date(this.getCustomerinfo().down('#endDate').getValue()), 'Y-m-d');\r",
+                    "\r",
+                    "\r",
+                    "    //Ext.Msg.alert('Test '+strDate1);\r",
+                    "    window.open('reports/statement_pdf.php?acc1='+accountNo+'&strDate1='+strDate1+'&strDate2='+strDate2+'&rptType=statement',\"Reports\",\r",
+                    "    \"menubar=yes,toolbar=yes,width=500,height=550,location=yes,resizable=no,scrollbars=yes,status=yes\");\r",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "openStatement",
+            "designerId": "1f7c4678-14a8-47e3-a167-f2c727063317"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "printInvoices",
+                "implHandler": [
+                    "    var accountNo = this.getCustomerinfo().down(\"#Accno\").value;",
+                    "",
+                    "    var strDate1=Ext.Date.format(new Date(this.getCustomerinfo().down('#startDate').getValue()), 'Y-m-d');",
+                    "    var strDate2=Ext.Date.format(new Date(this.getCustomerinfo().down('#endDate').getValue()), 'Y-m-d');",
+                    "",
+                    "   // alert(accountNo);",
+                    "    window.open('reports/detailedInvoices.php?accNo='+accountNo+'&strDate1='+strDate1+'&strDate2='+strDate2+'&single=true',\"Reports\",",
+                    "    \"menubar=yes,toolbar=yes,width=500,height=550,location=yes,resizable=no,scrollbars=yes,status=yes\");",
+                    "",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "printInvoices",
+            "designerId": "253c9f1e-d26a-490e-8d28-63cb5ab5ce47"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "addMembers",
+                "implHandler": [
+                    "",
+                    "//Ext.Msg.alert('test',button.getItemId());",
+                    "",
+                    "var membersWin=Ext.create('Ext.window.Window', {",
+                    "    title: 'New Members Form',",
+                    "    resizable:false",
+                    "});",
+                    "",
+                    "var membersForm = Ext.create('Debtors.view.NewMembersForm', {});",
+                    "",
+                    "membersWin.add(membersForm);",
+                    "",
+                    "if(button.getItemId()==='cmdAddMembers'){",
+                    "    var accountNo = this.getCustomerinfo().down(\"#Accno\").value;",
+                    "    membersForm.getForm().findField(\"txtAccno\").setValue(accountNo);",
+                    "",
+                    "}else if(button.getItemId()==='cmdAddMembers2'){",
+                    "    var grid=this.getDebtorslist();",
+                    "    var srecord=grid.getSelectionModel().getSelection();",
+                    "    Ext.iterate(srecord,function(record,index){",
+                    "        // selectedRowIndexes.push(grid.getStore().indexOf(record));",
+                    "        if(grid.getSelectionModel().hasSelection()){",
+                    "            var accountNo=record.get('accno');",
+                    "            membersForm.getForm().findField(\"txtAccno\").setValue(accountNo);",
+                    "        }else{",
+                    "            Ext.Msg.alert('Error','Please Select a debtor in the list');",
+                    "        }",
+                    "    });",
+                    "}",
+                    "",
+                    "",
+                    "//Ext.getCmp(\"txtAccno\").setValue(accountNo);",
+                    "",
+                    "membersWin.show();"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "addMembers",
+            "designerId": "277981c7-c860-4e91-aa93-d09dd62e7ab0"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "previewTransactions",
+                "implHandler": [
+                    "\r",
+                    "var showAllocated=this.getCustomerinfo().down('#showAllocated').getValue();\r",
+                    "var accountNo=this.getCustomerinfo().down('#Accno').getValue();\r",
+                    "\r",
+                    "var strDate1=Ext.Date.format(new Date(this.getCustomerinfo().down('#startDate').getValue()), 'Y-m-d');\r",
+                    "var strDate2=Ext.Date.format(new Date(this.getCustomerinfo().down('#endDate').getValue()), 'Y-m-d');\r",
+                    "\r",
+                    "//alert('Test '+strDate1);\r",
+                    "\r",
+                    "var debtorTrans=Ext.data.StoreManager.lookup('DebtorTransactions');\r",
+                    "debtorTrans.load({\r",
+                    "    params: {\r",
+                    "        accno:accountNo,\r",
+                    "        startDate:strDate1,\r",
+                    "        endDate:strDate2,\r",
+                    "        showAllocated:showAllocated\r",
+                    "    },\r",
+                    "    callback: function(records, operation, success) {\r",
+                    "\r",
+                    "        // var data1=this.getStore('DebtorTransactions').getAt(0);\r",
+                    "        //myform.loadRecord(data1);\r",
+                    "\r",
+                    "    },\r",
+                    "    scope: this\r",
+                    "\r",
+                    "});"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "previewTransactions",
+            "designerId": "50f107ae-57d7-4bfd-a968-21fc6957641b"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "customerinfo",
+                "selector": "customerinfo",
+                "xtype": "customerinfo"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "customerinfo",
+            "designerId": "5825d77c-4ab4-4c1a-bda1-b6cff4443880"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "invoiceslist",
+                "selector": "invoiceslist",
+                "xtype": "invoiceslist"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "invoiceslist",
+            "designerId": "d4e9ea37-4a16-4070-ad84-409d416ea4a3"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "previewInvoices",
+                "implHandler": [
+                    "\r",
+                    "var strParam=this.getInvoiceslist().down('#txtInvoices').getValue();\r",
+                    "var startDate=this.getInvoiceslist().down('#startDate').getValue();\r",
+                    "var endDate=this.getInvoiceslist().down('#endDate').getValue();\r",
+                    "var accno=this.getInvoiceslist().down('#accNo').getValue();\r",
+                    "//var rptType=\"invoices\";\r",
+                    "\r",
+                    "var invoicesStore=Ext.data.StoreManager.lookup('InvoicesList');\r",
+                    "invoicesStore.load({\r",
+                    "    params: {\r",
+                    "        rptType: 'invoices',\r",
+                    "        accno:accno,\r",
+                    "        irParam:strParam,\r",
+                    "        startDate:startDate,\r",
+                    "        endDate:endDate\r",
+                    "\r",
+                    "    },\r",
+                    "    callback: function(records, operation, success) {\r",
+                    "\r",
+                    "\r",
+                    "    },\r",
+                    "    scope: this\r",
+                    "});"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "previewInvoices",
+            "designerId": "762edb0e-1f93-4acb-9a96-caf36ec50b1d"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "previewReceipts",
+                "implHandler": [
+                    "var strParam=this.getReceiptslist().down('#txtReceipts').getValue();\r",
+                    "var startDate=this.getReceiptslist().down('#startDate').getValue();\r",
+                    "var endDate=this.getReceiptslist().down('#endDate').getValue();\r",
+                    "var accno=this.getReceiptslist().down('#accNo').getValue();\r",
+                    "//var rptType=\"receipts\";\r",
+                    "\r",
+                    "//alert('test test');\r",
+                    "var receiptsStore=Ext.data.StoreManager.lookup('ReceiptsList');\r",
+                    "receiptsStore.load({\r",
+                    "    params: {\r",
+                    "        rptType: 'receipts',\r",
+                    "        accno:accno,\r",
+                    "        irParam:strParam,\r",
+                    "        startDate:startDate,\r",
+                    "        endDate:endDate\r",
+                    "\r",
+                    "    },\r",
+                    "    callback: function(records, operation, success) {\r",
+                    "\r",
+                    "\r",
+                    "    },\r",
+                    "    scope: this\r",
+                    "});"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "previewReceipts",
+            "designerId": "7585280f-e137-4d2d-8e94-1d19e5e40f3f"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "gridpanel, record, item, index, e, options"
+                ],
+                "fn": "getIndividualInvoices",
+                "implHandler": [
+                    "var allocateInvStore=Ext.data.StoreManager.lookup('InvoiceAllocateSt');",
+                    "allocateInvStore.load({",
+                    "    params: {",
+                    "        accno: record.get('accno')",
+                    "    }",
+                    "});",
+                    "",
+                    "this.getAllocatereceipts().down('#totalReceipt').setValue(record.get('InvoiceAmount'));",
+                    "this.getAllocatereceipts().down('#accno').setValue(record.get('accno'));",
+                    "",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "getIndividualInvoices",
+            "designerId": "e0495a7f-5bbc-40de-a021-3a27f65d2d7e"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "gridpanel, record, index, eOpts"
+                ],
+                "fn": "getInvoiceTotals",
+                "implHandler": [
+                    "this.getAllocatereceipts().down('#totals').setValue('0');\r",
+                    "var grid=this.getAllocatereceipts().down('#allocateInvoicesGrid');\r",
+                    "\r",
+                    "var srecords=grid.getSelectionModel().getSelection();\r",
+                    "var receipt=this.getAllocatereceipts().down('#totalReceipt').getValue();\r",
+                    "var receipt=this.getAllocatereceipts().down('#totalReceipt').getValue();\r",
+                    "\r",
+                    "var selectedRowIndexes = [];\r",
+                    "var total=0;\r",
+                    "Ext.iterate(srecords,function(record,index){\r",
+                    "\r",
+                    "     selectedRowIndexes.push(grid.getStore().indexOf(record));\r",
+                    "    if(grid.getSelectionModel().hasSelection()){\r",
+                    "        var amount=parseInt(record.get('InvoiceAmount'),10);\r",
+                    "        //record.set(\"AllocatedAmount\",amount);\r",
+                    "        var  alAmount=parseInt(record.get('AllocatedAmount'),10);\r",
+                    "        if(alAmount>0 && alAmount!==''){\r",
+                    "            allocAmount=alAmount;\r",
+                    "        }else{\r",
+                    "            allocAmount=amount;\r",
+                    "        }\r",
+                    "        total=parseInt(total,10)+allocAmount;\r",
+                    "    }else{\r",
+                    "        total=parseInt(total,10)+0;\r",
+                    "    }\r",
+                    "\r",
+                    "\r",
+                    "\r",
+                    "});\r",
+                    "\r",
+                    "this.getAllocatereceipts().down('#totals').setValue(total);\r",
+                    "\r",
+                    "if(total>receipt){\r",
+                    "          Ext.Msg.alert(\"Allocate Error\",\"The Value Allocated cannot be greater than the Receipt value\");\r",
+                    "    }\r",
+                    "\r",
+                    "\r",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "getInvoiceTotals",
+            "designerId": "72bfc7e0-4281-457a-be9f-753a1f2fc913"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "allocatereceipts",
+                "selector": "allocatereceipts",
+                "xtype": "allocatereceipts"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "allocatereceipts",
+            "designerId": "a5023e6a-2a19-4b00-a7aa-15097684c8ff"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "allocateReceipts",
+                "implHandler": [
+                    "var invoiceTotals=this.getAllocatereceipts().down('#totals').getValue();",
+                    "var receipt=this.getAllocatereceipts().down('#totalReceipt').getValue();",
+                    "",
+                    "if(parseInt(invoiceTotals,10)>parseInt(receipt)){",
+                    "    Ext.Msg.alert(\"Allocate Error\",\"The Value Allocated cannot be greater than the Receipt value<br> Please Select Invoices with lesser Amounts \"+invoiceTotals+'>'+receipt);",
+                    "}else{",
+                    "    var grid=this.getAllocatereceipts().down('#allocateInvoicesGrid');",
+                    "",
+                    "    var srecords=grid.getSelectionModel().getSelection();",
+                    "",
+                    "",
+                    "",
+                    "    var selectedRowIndexes = [];",
+                    "    var transNos=[];",
+                    "    Ext.iterate(srecords,function(record,index){",
+                    "        selectedRowIndexes.push(grid.getStore().indexOf(record));",
+                    "        invoiceAmount=record.get('InvoiceAmount');",
+                    "        allocAmount=record.get('AllocatedAmount');",
+                    "        receiptTransNo=record.get('transno');",
+                    "        billNumber=record.get('bill_number');",
+                    "        pid=record.get('pid');",
+                    "",
+                    "        if(allocAmount>0 && allocAmount!==''){",
+                    "            allocatedAmount=allocAmount;",
+                    "        }else{",
+                    "            allocatedAmount=invoiceAmount;",
+                    "        }",
+                    "",
+                    "        transNos.push(record.get('transno')+'-'+invoiceAmount+'-'+allocatedAmount+'-'+billNumber);",
+                    "        //transNos.push=parseInt(record.get('transNo'),10);",
+                    "",
+                    "    });",
+                    "",
+                    "",
+                    "    var grid2=this.getAllocatereceipts().down('#allocateReceiptsGrid');",
+                    "",
+                    "    var srecords2=grid2.getSelectionModel().getSelection();",
+                    "",
+                    "    var receiptTransNo;",
+                    "    var invoiceAmount;",
+                    "    Ext.iterate(srecords2,function(record,index){",
+                    "        receiptTransNo=record.get('transno');",
+                    "        receiptAmount=record.get('InvoiceAmount');",
+                    "        // pid=record.get('pid');",
+                    "        // billNumber=record.get('bill_number');",
+                    "    });",
+                    "",
+                    "",
+                    "    Ext.Msg.show({",
+                    "        title:\"Allocate Receipts\",",
+                    "        msg:\"Are you sure you want to allocate receipts to the above invoices \"+transNos,",
+                    "        buttons:Ext.Msg.YESNO,",
+                    "        icon:Ext.Msg.QUESTION,",
+                    "        fn:function(rec){",
+                    "            if(rec==='yes'){",
+                    "                //Ext.Msg.alert('test','Test test test test');",
+                    "                Ext.Ajax.request({",
+                    "                    url:\"data/getDataFunctions.php?task=allocateReceipts&transNos=\"+transNos,",
+                    "                    params:{",
+                    "                        receiptTransNo:receiptTransNo,",
+                    "                        receiptAmount:receiptAmount,",
+                    "                        billNumber:billNumber,",
+                    "                        pid:pid",
+                    "                    }",
+                    "                });",
+                    "            }",
+                    "        }",
+                    "    });",
+                    "",
+                    "    // Ext.Msg.alert(\"Success\",\"The Values have been Allocated Successfully\");",
+                    "}"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "allocateReceipts",
+            "designerId": "f195767c-5453-4a30-8d8d-591b174033ea"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "closeWindow",
+                "implHandler": [
+                    "var win = button.up('window');\r",
+                    "win.close();"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "closeWindow",
+            "designerId": "52d55575-ad06-4f17-80a8-e8a64522e90d"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "receiptslist",
+                "selector": "receiptslist",
+                "xtype": "receiptslist"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "receiptslist",
+            "designerId": "a331a164-9c09-4ec2-bf19-ff0dfecf4ed7"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "debtorregisterform",
+                "selector": "debtorregisterform",
+                "xtype": "debtorregisterform"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "debtorregisterform",
+            "designerId": "bcb7279f-f29f-472a-8793-4b1835677bba"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "closeMembersForm",
+                "implHandler": [
+                    "var win2 = button.up('newmemberswindow');\r",
+                    "win2.close();"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "closeMembersForm",
+            "designerId": "5873097a-8383-4104-b3d4-8bb9bf17f9a2"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "newmembersform",
+                "selector": "newmembersform",
+                "xtype": "newmembersform"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "newmembersform",
+            "designerId": "86878830-62a3-4c17-a04c-e92f7dd6b62e"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "openDebtorMembers",
+                "implHandler": [
+                    "",
+                    "debtorMembers = Ext.create('Debtors.view.DebtorMembers', {});",
+                    "center_container = this.getViewport().down('container[region=center]');",
+                    "center_container.removeAll(); //removing existing views.",
+                    "center_container.add(debtorMembers);",
+                    "",
+                    "",
+                    "var debtorsListStore=Ext.data.StoreManager.lookup('DebtorsList');",
+                    "debtorsListStore.load({});"
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "openDebtorMembers",
+            "designerId": "48e1f63b-faef-404b-a37d-55416940c8fe"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "debtormembers",
+                "selector": "debtormembers",
+                "xtype": "debtormembers"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "debtormembers",
+            "designerId": "287af035-a863-4550-b854-5a5bc9f60b27"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "gridpanel",
+                    "record",
+                    "item",
+                    "index",
+                    "e",
+                    "options"
+                ],
+                "fn": "loadMembersList",
+                "implHandler": [
+                    "var stmemberslist=Ext.data.StoreManager.lookup('MembersListStore');\r",
+                    "stmemberslist.load({\r",
+                    "    params: {\r",
+                    "        accno: record.get('accno')\r",
+                    "    },\r",
+                    "    callback: function(records, operation, success) {\r",
+                    "\r",
+                    "    },\r",
+                    "    scope: this\r",
+                    "\r",
+                    "});"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "loadMembersList",
+            "designerId": "0c669303-3cf3-40c1-b5bc-aa3aa555b1e7"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "searchDebtors",
+                "implHandler": [
+                    "var stparams=this.getDebtormembers().down('#txtDebtorsParams').getValue();\r",
+                    "var stCategory=this.getDebtormembers().down('#debtorCategory').getValue();\r",
+                    "//Ext.Msg.alert('test',stparams);\r",
+                    "\r",
+                    "var stDebtorsList=Ext.data.StoreManager.lookup('DebtorsList');\r",
+                    "\r",
+                    "stDebtorsList.load({\r",
+                    "    params:{\r",
+                    "        accno:stparams,\r",
+                    "        category:stCategory\r",
+                    "    }\r",
+                    "});"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "searchDebtors",
+            "designerId": "297d2970-6425-453f-a997-a1bd0479aaab"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "searchDebtorsList",
+                "implHandler": [
+                    "var stparams=this.getDebtorslist().down('#txtDebtorsParams').getValue();\r",
+                    "var stCategory=this.getDebtorslist().down('#debtorCategory').getValue();\r",
+                    "//Ext.Msg.alert('test',stparams);\r",
+                    "\r",
+                    "var stDebtorsList=Ext.data.StoreManager.lookup('DebtorsList');\r",
+                    "\r",
+                    "stDebtorsList.load({\r",
+                    "    params:{\r",
+                    "        accno:stparams,\r",
+                    "        category:stCategory\r",
+                    "    }\r",
+                    "});"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "searchDebtorsList",
+            "designerId": "ced699e1-d659-42fd-8036-1908658cf4c5"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "debtorswindow",
+                "selector": "debtorswindow",
+                "xtype": "debtorswindow"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "debtorswindow",
+            "designerId": "be685830-5633-43df-8ace-7d2e7a4ac988"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "openDebtorBalances",
+                "implHandler": [
+                    "",
+                    "//alert('test');",
+                    "",
+                    "debtorBalances = Ext.create('Debtors.view.DebtorBalances', {});",
+                    "center_container = this.getViewport().down('container[region=center]');",
+                    "center_container.removeAll(); //removing existing views.",
+                    "center_container.add(debtorBalances);",
+                    "",
+                    "",
+                    "var debtorBalancesList=Ext.data.StoreManager.lookup('DebtorBalancesStore');",
+                    "debtorBalancesList.load({",
+                    "    param:{",
+                    "        start:0,",
+                    "        limit:100",
+                    "    }",
+                    "});"
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "openDebtorBalances",
+            "designerId": "59674299-e33e-4b57-8a39-37bc69c90ec3"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "searchDebtorBalances",
+                "implHandler": [
+                    "//Ext.Msg.alert('test',stparams);\r",
+                    "\r",
+                    "var stparams=this.getDebtorbalances().down('#txtDebtorsParams').getValue();\r",
+                    "var stCategory=this.getDebtorbalances().down('#debtorBalanceCategory').getValue();\r",
+                    "\r",
+                    "var stDebtorBalances=Ext.data.StoreManager.lookup('DebtorBalancesStore');\r",
+                    "\r",
+                    "stDebtorBalances.load({\r",
+                    "    params:{\r",
+                    "        searchParam:stparams,\r",
+                    "        category:stCategory\r",
+                    "    }\r",
+                    "});"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "searchDebtorBalances",
+            "designerId": "c728eae8-38b3-445c-aa1e-07c41d851d89"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "debtorbalances",
+                "selector": "debtorbalances",
+                "xtype": "debtorbalances"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "debtorbalances",
+            "designerId": "02cdca26-2f14-4bc1-bf6b-9f0cfffe633d"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "printRegister",
+                "implHandler": [
+                    "",
+                    "    var accountNo = this.getDebtorregisterform().down(\"#accno\").value;",
+                    "    // Ext.Msg.alert('test','Test '+accountNo);",
+                    "    //var strDate1=Ext.Date.format(new Date(this.getCustomerinfo().down('#startDate').getValue()), 'Y-m-d');",
+                    "    //var strDate2=Ext.Date.format(new Date(this.getCustomerinfo().down('#endDate').getValue()), 'Y-m-d');",
+                    "",
+                    "",
+                    "    //Ext.Msg.alert('Test '+strDate1);",
+                    "    window.open('reports/register_pdf.php?acc1='+accountNo+'&rptType=statement',\"Reports\",",
+                    "    \"menubar=yes,toolbar=yes,width=500,height=550,location=yes,resizable=no,scrollbars=yes,status=yes\");",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "printRegister",
+            "designerId": "b6f1cfc1-093f-4df8-89c3-849bdf1a8094"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "openNewCustomer3",
+                "implHandler": [
+                    "var custWin=Ext.create('Ext.window.Window',{",
+                    "    title:\"test\",",
+                    "    width:100,",
+                    "    height:100",
+                    "",
+                    "});",
+                    "custWin.show();"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "openNewCustomer3",
+            "designerId": "9e38def2-b84b-491f-bd52-dd2087b8588f"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "field",
+                    "newValue",
+                    "oldValue",
+                    "eOpts"
+                ],
+                "fn": "onComboboxChange",
+                "implHandler": [
+                    "  var debtorjobs=Ext.data.StoreManager.lookup('CustomerTrans');",
+                    "        debtorjobs.load({",
+                    "            params: {",
+                    "                category: field.value",
+                    "            },",
+                    "            callback: function(records, operation, success) {",
+                    "",
+                    "",
+                    "            },",
+                    "            scope: this",
+                    "",
+                    "        });"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "onComboboxChange",
+            "designerId": "392ea4ea-c9ad-45b8-a674-fe04949d5078"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "component",
+                    "newValue",
+                    "oldValue",
+                    "eOpts"
+                ],
+                "fn": "searchDebtorTrans",
+                "implHandler": [
+                    "          var debtorjobs=Ext.data.StoreManager.lookup('CustomerTrans');",
+                    "                debtorjobs.load({",
+                    "                    params: {",
+                    "                        category: component.value",
+                    "                    },",
+                    "                    callback: function(records, operation, success) {",
+                    "",
+                    "",
+                    "                    },",
+                    "                    scope: this",
+                    "",
+                    "                });"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "searchDebtorTrans",
+            "designerId": "387dc755-916d-466b-a019-a9f6e2d33a39"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "exportStatementToExcel",
+                "implHandler": [
+                    "var accountNo=this.getCustomerinfo().down('#Accno').getValue();",
+                    "var strDate1=Ext.Date.format(new Date(this.getCustomerinfo().down('#startDate').getValue()), 'Y-m-d');",
+                    "var strDate2=Ext.Date.format(new Date(this.getCustomerinfo().down('#endDate').getValue()), 'Y-m-d');",
+                    "",
+                    "window.open('reports/exportDebtorStatement.php?accNo='+accountNo+'&strDate1='+strDate1+'&strDate2='+strDate2+'&single=false',\"Reports\",",
+                    "            \"menubar=yes,toolbar=yes,width=500,height=300,location=yes,resizable=no,scrollbars=yes,status=yes\");",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "exportStatementToExcel",
+            "designerId": "5a16ece0-3a9f-46bd-9c85-635d0812df3d"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "openDiagnosisReport",
+                "implHandler": [
+                    "var accountNo=this.getCustomerinfo().down('#Accno').getValue();",
+                    "var strDate1=Ext.Date.format(new Date(this.getCustomerinfo().down('#startDate').getValue()), 'Y-m-d');",
+                    "var strDate2=Ext.Date.format(new Date(this.getCustomerinfo().down('#endDate').getValue()), 'Y-m-d');",
+                    "",
+                    "window.open('reports/diagnosisReportPDF.php?accNo='+accountNo+'&strDate1='+strDate1+'&strDate2='+strDate2+'&single=false',\"Reports\",",
+                    "            \"menubar=yes,toolbar=yes,width=500,height=550,location=yes,resizable=no,scrollbars=yes,status=yes\");",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "openDiagnosisReport",
+            "designerId": "0cd72e4a-c88f-4867-914a-357897371956"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "openRemoveMember",
+                "implHandler": [
+                    "// Ext.Msg.alert('Error','Please Select a debtor in the list');",
+                    "",
+                    "var membersWin=Ext.create('Ext.window.Window', {",
+                    "    title: 'Remove Members Form',",
+                    "    resizable:false",
+                    "});",
+                    "",
+                    "var membersForm = Ext.create('Debtors.view.RemoveMembersForm', {});",
+                    "",
+                    "membersWin.add(membersForm);",
+                    "",
+                    "if(button.getItemId()==='cmdRemoveMember'){",
+                    "    var accountNo = this.getCustomerinfo().down(\"#Accno\").value;",
+                    "    membersForm.getForm().findField(\"txtAccno\").setValue(accountNo);",
+                    "",
+                    "}else if(button.getItemId()==='cmdRemoveMember2'){",
+                    "    var grid=this.getDebtorslist();",
+                    "    var srecord=grid.getSelectionModel().getSelection();",
+                    "    Ext.iterate(srecord,function(record,index){",
+                    "",
+                    "        // selectedRowIndexes.push(grid.getStore().indexOf(record));",
+                    "        if(grid.getSelectionModel().hasSelection()){",
+                    "            var accountNo=record.get('accno');",
+                    "            membersForm.getForm().findField(\"txtAccno\").setValue(accountNo);",
+                    "        }else{",
+                    "            Ext.Msg.alert('Error','Please Select a debtor in the list');",
+                    "        }",
+                    "",
+                    "",
+                    "",
+                    "    });",
+                    "}",
+                    "",
+                    "membersWin.show();"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "openRemoveMember",
+            "designerId": "60a86b35-a6d7-4577-9606-2497e86b4a14"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "addmembersform",
+                "selector": "addmembersform"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string"
+            },
+            "name": "addmembersform",
+            "designerId": "d986f5e3-d4a6-47d2-82e4-886a47d6861b"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "removemembersform",
+                "selector": "removemembersform",
+                "xtype": "removemembersform"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "removemembersform",
+            "designerId": "4055acd7-5924-459f-92a7-21fd6a1ba4fc"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "removeMembers",
+                "implHandler": [
+                    "var form = button.up('form').getForm(); // get the basic form",
+                    "if (form.isValid()) { // make sure the form contains valid data before submitting",
+                    "    form.submit({",
+                    "        success: function(form, action) {",
+                    "            Ext.Msg.alert('Success', 'Saved new Member successfully.');",
+                    "",
+                    "            var win = button.up('membersWin');",
+                    "            win.removeAll();",
+                    "            win.destroy();",
+                    "        },",
+                    "        failure: function(form, action) {",
+                    "            Ext.Msg.alert('Failed', 'Could not Remove Member. Error='+action.result.errors.clientNo);",
+                    "        }",
+                    "    });",
+                    "} else { // display error alert if the data is invalid",
+                    "    Ext.Msg.alert('Invalid Data', 'Please correct form errors.');",
+                    "}",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "removeMembers",
+            "designerId": "dfc605ab-e5f2-45aa-820f-1a4f094feb5a"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "guarantorsform",
+                "selector": "guarantorsform",
+                "xtype": "guarantorsform"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "guarantorsform",
+            "designerId": "517fc5ac-a62e-46f9-8f25-c9d36f6e8882"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "openGuarantorsForm",
+                "implHandler": [
+                    "var guarantorsform = Ext.create('Debtors.view.GuarantorsForm', {});",
+                    "var guarantorsWindow=Ext.create('Ext.window.Window', {",
+                    "    title: 'DEBTORS GUARANTORS FORM',",
+                    "    resizable:false",
+                    "});",
+                    "",
+                    "guarantorsWindow.add(guarantorsform);",
+                    "guarantorsWindow.show();",
+                    "//registerform.getForm().loadRecord(record);",
+                    "",
+                    "var accName=this.getCustomerinfo().down('#accName').getValue();",
+                    "guarantorsform.getForm().findField('accName').setValue(accName);",
+                    "",
+                    "var address=this.getCustomerinfo().down('#accAddress').getValue();",
+                    "guarantorsform.getForm().findField('address').setValue(address);",
+                    "",
+                    "var phone=this.getCustomerinfo().down('#accPhone').getValue();",
+                    "guarantorsform.getForm().findField('phone').setValue(phone);",
+                    "",
+                    "var grid=this.getCustomerinfo().down('#customerTransactions');",
+                    "",
+                    "var srecords=grid.getSelectionModel().getSelection();",
+                    "",
+                    "var selectedRowIndexes = [];",
+                    "var transNos=[];",
+                    "Ext.iterate(srecords,function(record,index){",
+                    "    guarantorsform.getForm().findField('pid').setValue(record.get('pid'));",
+                    "    guarantorsform.getForm().findField('pnames').setValue(record.get('pnames'));",
+                    "    guarantorsform.getForm().findField('amount').setValue(record.get('amount'));",
+                    "    guarantorsform.getForm().findField('billNumber').setValue(record.get('billNumber'));",
+                    "",
+                    "    guarantorsform.getForm().findField('accNo').setValue(record.get('accno'));",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "});",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "openGuarantorsForm",
+            "designerId": "2a936739-f2c1-461d-b0b1-a1022cb3de66"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "printGarantorsForm",
+                "implHandler": [
+                    "var accountNo=this.getCustomerinfo().down('#Accno').getValue();",
+                    "var pid=this.getGuarantorsform().down('#pid').getValue();",
+                    "",
+                    "window.open('reports/guarantorsFormPDF.php?accNo='+accountNo+'&pid='+pid+'&single=false',\"Reports\",",
+                    "            \"menubar=yes,toolbar=yes,width=500,height=550,location=yes,resizable=no,scrollbars=yes,status=yes\");",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "printGarantorsForm",
+            "designerId": "e0b1102d-1094-475b-804b-efd35a6db992"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "customerinfo",
+                "selector": "customerinfo",
+                "xtype": "customerinfo"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "customerinfo",
+            "designerId": "33719731-223d-46c4-bcf0-918d66ba7968"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "saveGuarantor",
+                "implHandler": [
+                    "var form = button.up('form').getForm(); // get the basic form",
+                    "if (form.isValid()) { // make sure the form contains valid data before submitting",
+                    "    form.submit({",
+                    "        success: function(form, action) {",
+                    "            Ext.Msg.alert('Success', 'Saved new Guarantor successfully.');",
+                    "",
+                    "            //var win = button.up('newmemberswindow');",
+                    "            //win.removeAll();",
+                    "            //win.destroy();",
+                    "        },",
+                    "        failure: function(form, action) {",
+                    "            Ext.Msg.alert('Failed', 'Could not save Guarantor. Error='+action.result.errors.clientNo);",
+                    "        }",
+                    "    });",
+                    "} else { // display error alert if the data is invalid",
+                    "    Ext.Msg.alert('Invalid Data', 'Please correct form errors.');",
+                    "}",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "saveGuarantor",
+            "designerId": "208f50ca-0a77-4d59-81ac-c7000f01fc18"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "field",
+                    "e",
+                    "options"
+                ],
+                "fn": "getPressedKey",
+                "implHandler": [
+                    "this.searchDebtors();"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "getPressedKey",
+            "designerId": "816e0979-151d-4d98-9461-16fa28d4e608"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "field",
+                    "e",
+                    "options"
+                ],
+                "fn": "getPressedKey2",
+                "implHandler": [
+                    "this.searchDebtorsList2();"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "getPressedKey2",
+            "designerId": "52e939c1-20ba-4869-9510-b9f4e74c7aa3"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "searchDebtorsList2",
+                "implHandler": [
+                    "var stparams=this.getDebtorslist().down('#txtDebtorsParams2').getValue();",
+                    "var stCategory=this.getDebtorslist().down('#debtorCategory2').getValue();",
+                    "//Ext.Msg.alert('test',stparams);",
+                    "",
+                    "var stDebtorsList=Ext.data.StoreManager.lookup('DebtorsList');",
+                    "",
+                    "stDebtorsList.load({",
+                    "    params:{",
+                    "        accno:stparams,",
+                    "        category:stCategory",
+                    "    }",
+                    "});"
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "searchDebtorsList2",
+            "designerId": "679de265-c55f-476e-966b-305743389e3b"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "searchDebtorslist",
+                "implHandler": [
+                    "var stparams=this.getDebtorslist().down('#txtDebtorsParams2').getValue();",
+                    "var stCategory=this.getDebtorslist().down('#debtorCategory2').getValue();",
+                    "//Ext.Msg.alert('test',stparams);",
+                    "",
+                    "var stDebtorsList=Ext.data.StoreManager.lookup('DebtorsList');",
+                    "",
+                    "stDebtorsList.load({",
+                    "    params:{",
+                    "        accno:stparams,",
+                    "        category:stCategory",
+                    "    }",
+                    "});"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "searchDebtorslist",
+            "designerId": "cd25bc70-5eec-4ae0-8c7f-f9d56ce63bd6"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "openCredits",
+                "implHandler": [
+                    "//Ext.Msg.alert('Test','Test Test');",
+                    "",
+                    "var creditsWin=Ext.create('Ext.window.Window', {",
+                    "    title: 'Miscellaneous Credits',",
+                    "    resizable:false",
+                    "});",
+                    "",
+                    "var insuranceCredits = Ext.create('Debtors.view.InsuranceCredits', {});",
+                    "",
+                    "creditsWin.add(insuranceCredits);",
+                    "",
+                    "var grid=this.getDebtorslist();",
+                    "    var srecord=grid.getSelectionModel().getSelection();",
+                    "    Ext.iterate(srecord,function(record,index){",
+                    "        if(grid.getSelectionModel().hasSelection()){",
+                    "            var accountNo=record.get('accno');",
+                    "            var pid=record.get('pid');",
+                    "            var pnames=record.get('pnames');",
+                    "            insuranceCredits.getForm().findField(\"accno\").setValue(accountNo);",
+                    "            insuranceCredits.getForm().findField(\"pid\").setValue(pid);",
+                    "            insuranceCredits.getForm().findField(\"pnames\").setValue(pnames);",
+                    "        }else{",
+                    "            Ext.Msg.alert('Error','Please Select a debtor in the list');",
+                    "        }",
+                    "    });",
+                    "",
+                    "creditsWin.show();"
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "openCredits",
+            "designerId": "6ef1f740-0081-439b-b002-772e804812a4"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "insurancecredits",
+                "selector": "insurancecredits",
+                "xtype": "insurancecredits"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "insurancecredits",
+            "designerId": "4e27202b-14ef-48bf-883b-f94e45ad5da6"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "saveCredits",
+                "implHandler": [
+                    "Ext.Msg.alert('Test','Test Test');",
+                    "var form = button.up('form').getForm(); // get the basic form",
+                    "if (form.isValid()) { // make sure the form contains valid data before submitting",
+                    "    form.submit({",
+                    "        success: function(form, action) {",
+                    "            Ext.Msg.alert('Success', 'Saved new Credit successfully.');",
+                    "",
+                    "            var win = button.up('window');",
+                    "            win.close();",
+                    "        },",
+                    "        failure: function(form, action) {",
+                    "            Ext.Msg.alert('Failed', 'Could not save Credit. Error='+action.result.errors.clientNo);",
+                    "        }",
+                    "    });",
+                    "} else { // display error alert if the data is invalid",
+                    "    Ext.Msg.alert('Invalid Data', 'Please correct form errors.');",
+                    "}"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "saveCredits",
+            "designerId": "1c6040e7-984d-451b-8f8d-e0f8d4c28448"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "insurancedebits",
+                "selector": "insurancedebits",
+                "xtype": "insurancedebits"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "insurancedebits",
+            "designerId": "75bf2037-4442-406c-b006-398fbe2306de"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "openDebits",
+                "implHandler": [
+                    "      var debitsWin=Ext.create('Ext.window.Window', {",
+                    "            title: 'Miscellaneous Debits',",
+                    "            resizable:false",
+                    "        });",
+                    "",
+                    "        var insuranceDebits= Ext.create('Debtors.view.InsuranceDebits', {});",
+                    "",
+                    "        debitsWin.add(insuranceDebits);",
+                    "",
+                    "        debitsWin.show();"
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "openDebits",
+            "designerId": "92f61cf3-ece6-4dff-876c-684b0f098939"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "openDebtorAllocations",
+                "implHandler": [
+                    "debtorAllocations = Ext.create('Debtors.view.Allocations', {});",
+                    "center_container = this.getViewport().down('container[region=center]');",
+                    "center_container.removeAll(); //removing existing views.",
+                    "center_container.add(debtorAllocations);"
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "openDebtorAllocations",
+            "designerId": "9bb641da-5f5c-4e19-b92e-46fa3e072fd8"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "searchInvoices",
+                "implHandler": [
+                    "var stparams=this.getAllocatereceipts().down('#txtInvoiceSearch').getValue();",
+                    "var startDate=this.getAllocatereceipts().down('#startDate').getValue();",
+                    "var endDate=this.getAllocatereceipts().down('#endDate').getValue();",
+                    "var accno=this.getAllocatereceipts().down('#accno').getValue();",
+                    "",
+                    "var invoicesStore=Ext.data.StoreManager.lookup('InvoiceAllocateSt');",
+                    "",
+                    "invoicesStore.load({",
+                    "    params:{",
+                    "        searchParam:stparams,",
+                    "        startDate:startDate,",
+                    "        accno:accno,",
+                    "        endDate:endDate",
+                    "    }",
+                    "});"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "searchInvoices",
+            "designerId": "57e3aee0-e633-4ca1-b5f4-426c85c3e1af"
+        }
+    ]
+}

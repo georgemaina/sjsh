@@ -1,0 +1,53 @@
+{
+    "type": "Ext.app.ViewModel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "inventoryusage",
+        "designer|userClassName": "InventoryUsageViewModel"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "designerId": "b5de11c3-d534-46fb-9f11-182e94843392",
+    "cn": [
+        {
+            "type": "Ext.data.Store",
+            "reference": {
+                "name": "stores",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "data": [
+                    "[{\"Month\":\"consequuntur\",\"OpeningStock\":\"nihil\",\"Received\":\"rem\",\"ClosingStock\":\"eos\",\"Usage\":\"explicabo\"},{\"Month\":\"repellat\",\"OpeningStock\":\"aut\",\"Received\":\"id\",\"ClosingStock\":\"doloremque\",\"Usage\":\"quo\"},{\"Month\":\"aperiam\",\"OpeningStock\":\"fugit\",\"Received\":\"nostrum\",\"ClosingStock\":\"illum\",\"Usage\":\"provident\"},{\"Month\":\"qui\",\"OpeningStock\":\"odit\",\"Received\":\"voluptas\",\"ClosingStock\":\"sint\",\"Usage\":\"quasi\"},{\"Month\":\"alias\",\"OpeningStock\":\"quam\",\"Received\":\"repellendus\",\"ClosingStock\":\"quaerat\",\"Usage\":\"atque\"},{\"Month\":\"eos\",\"OpeningStock\":\"culpa\",\"Received\":\"labore\",\"ClosingStock\":\"omnis\",\"Usage\":\"voluptatibus\"},{\"Month\":\"rerum\",\"OpeningStock\":\"esse\",\"Received\":\"est\",\"ClosingStock\":\"velit\",\"Usage\":\"ut\"},{\"Month\":\"saepe\",\"OpeningStock\":\"asperiores\",\"Received\":\"omnis\",\"ClosingStock\":\"voluptatem\",\"Usage\":\"odit\"},{\"Month\":\"consectetur\",\"OpeningStock\":\"nemo\",\"Received\":\"mollitia\",\"ClosingStock\":\"sit\",\"Usage\":\"rerum\"},{\"Month\":\"rem\",\"OpeningStock\":\"sed\",\"Received\":\"natus\",\"ClosingStock\":\"ut\",\"Usage\":\"dignissimos\"},{\"Month\":\"sit\",\"OpeningStock\":\"labore\",\"Received\":\"pariatur\",\"ClosingStock\":\"cumque\",\"Usage\":\"dolore\"},{\"Month\":\"ut\",\"OpeningStock\":\"temporibus\",\"Received\":\"eligendi\",\"ClosingStock\":\"porro\",\"Usage\":\"facilis\"},{\"Month\":\"dolorum\",\"OpeningStock\":\"optio\",\"Received\":\"rerum\",\"ClosingStock\":\"voluptas\",\"Usage\":\"qui\"},{\"Month\":\"id\",\"OpeningStock\":\"quod\",\"Received\":\"magni\",\"ClosingStock\":\"omnis\",\"Usage\":\"aut\"},{\"Month\":\"eligendi\",\"OpeningStock\":\"quo\",\"Received\":\"aut\",\"ClosingStock\":\"asperiores\",\"Usage\":\"laboriosam\"},{\"Month\":\"aut\",\"OpeningStock\":\"illum\",\"Received\":\"asperiores\",\"ClosingStock\":\"et\",\"Usage\":\"reprehenderit\"},{\"Month\":\"molestias\",\"OpeningStock\":\"ratione\",\"Received\":\"ea\",\"ClosingStock\":\"temporibus\",\"Usage\":\"repudiandae\"},{\"Month\":\"voluptatem\",\"OpeningStock\":\"animi\",\"Received\":\"doloremque\",\"ClosingStock\":\"vitae\",\"Usage\":\"consectetur\"},{\"Month\":\"voluptas\",\"OpeningStock\":\"et\",\"Received\":\"aut\",\"ClosingStock\":\"iste\",\"Usage\":\"rerum\"},{\"Month\":\"autem\",\"OpeningStock\":\"quos\",\"Received\":\"impedit\",\"ClosingStock\":\"error\",\"Usage\":\"ut\"},{\"Month\":\"quis\",\"OpeningStock\":\"quam\",\"Received\":\"illo\",\"ClosingStock\":\"aliquam\",\"Usage\":\"nihil\"},{\"Month\":\"aliquid\",\"OpeningStock\":\"nostrum\",\"Received\":\"eum\",\"ClosingStock\":\"blanditiis\",\"Usage\":\"repudiandae\"},{\"Month\":\"totam\",\"OpeningStock\":\"laboriosam\",\"Received\":\"in\",\"ClosingStock\":\"voluptatum\",\"Usage\":\"et\"},{\"Month\":\"consequatur\",\"OpeningStock\":\"nulla\",\"Received\":\"iusto\",\"ClosingStock\":\"est\",\"Usage\":\"nisi\"},{\"Month\":\"sed\",\"OpeningStock\":\"dolorum\",\"Received\":\"dolorem\",\"ClosingStock\":\"et\",\"Usage\":\"ut\"},{\"Month\":\"incidunt\",\"OpeningStock\":\"explicabo\",\"Received\":\"dolore\",\"ClosingStock\":\"earum\",\"Usage\":\"iste\"},{\"Month\":\"in\",\"OpeningStock\":\"ullam\",\"Received\":\"et\",\"ClosingStock\":\"mollitia\",\"Usage\":\"natus\"},{\"Month\":\"suscipit\",\"OpeningStock\":\"accusantium\",\"Received\":\"qui\",\"ClosingStock\":\"dolorem\",\"Usage\":\"natus\"},{\"Month\":\"porro\",\"OpeningStock\":\"veritatis\",\"Received\":\"et\",\"ClosingStock\":\"odio\",\"Usage\":\"quod\"},{\"Month\":\"rerum\",\"OpeningStock\":\"quam\",\"Received\":\"in\",\"ClosingStock\":\"molestias\",\"Usage\":\"vel\"}]"
+                ],
+                "model": "InventoryUsage",
+                "name": "inventoryUsages"
+            },
+            "configAlternates": {
+                "data": "array",
+                "model": "model",
+                "name": "string"
+            },
+            "name": "inventoryUsages",
+            "designerId": "a8417b88-1ab1-4a4d-8b49-14d692b55c00",
+            "cn": [
+                {
+                    "type": "Ext.data.proxy.Memory",
+                    "reference": {
+                        "name": "proxy",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyMemoryProxy1",
+                    "designerId": "b58b5e62-bd16-46a2-8ba1-4e8bd788bf1e"
+                }
+            ]
+        }
+    ]
+}

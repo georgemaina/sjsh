@@ -1,0 +1,52 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "sullhaemogramstore",
+        "designer|userClassName": "FullHaemogramStore",
+        "model": "FullhamogramParams",
+        "storeId": "FullHaemogramStore"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string"
+    },
+    "name": "MyJsonStore",
+    "designerId": "6ca3ba7c-47b9-4c91-95d7-eb6439c1c2a9",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "../../data/getDataFunctions.php?task=getHaemoParams"
+            },
+            "configAlternates": {
+                "url": "string"
+            },
+            "name": "MyAjaxProxy8",
+            "designerId": "e4ef54e3-083a-4584-98bf-8a2e3802c17f",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyJsonReader8",
+                    "designerId": "acdfecc1-cb61-4f0e-bd77-a2528f7830d9"
+                }
+            ]
+        }
+    ]
+}

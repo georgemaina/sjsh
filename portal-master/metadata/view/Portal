@@ -1,0 +1,243 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|padding": "0 5 5 5",
+        "designer|initialView": true,
+        "designer|userAlias": "portal",
+        "designer|userClassName": "Portal",
+        "layout": "border"
+    },
+    "configAlternates": {
+        "container|padding": "auto",
+        "designer|initialView": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "layout": "string",
+        "scrollable": "boolean"
+    },
+    "designerId": "93836fcc-3d24-4393-b45f-254d04cec350",
+    "viewControllerInstanceId": "d4fc7cb0-69bc-486e-92da-4c6ba4cfa94d",
+    "viewModelInstanceId": "23ae1bff-d2c8-4b5f-9142-dc2ef521c741",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "collapsible": true,
+                "container|animate": true,
+                "id": "app-options",
+                "layout": "accordion",
+                "layout|region": "west",
+                "layout|split": true,
+                "maxWidth": 400,
+                "minWidth": 250,
+                "title": "Options",
+                "width": 365
+            },
+            "configAlternates": {
+                "collapsible": "boolean",
+                "container|animate": "boolean",
+                "id": "string",
+                "layout": "string",
+                "layout|region": "string",
+                "layout|split": "boolean",
+                "maxWidth": "number",
+                "minWidth": "number",
+                "title": "string",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyPanel",
+            "designerId": "a06f4909-53ac-4373-a2d5-9c42b7f26a2d",
+            "cn": [
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 417,
+                        "html": null,
+                        "iconCls": "nav",
+                        "scrollable": true,
+                        "title": "Navigation"
+                    },
+                    "configAlternates": {
+                        "autoScroll": "boolean",
+                        "height": "auto",
+                        "html": "object",
+                        "iconCls": "string",
+                        "title": "string",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyPanel1",
+                    "designerId": "1226f757-f33d-459d-a438-7256c7e04c17",
+                    "cn": [
+                        {
+                            "type": "Ext.menu.Menu",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "floating": false,
+                                "height": 119,
+                                "style": null,
+                                "width": null
+                            },
+                            "configAlternates": {
+                                "floating": "boolean",
+                                "height": "auto",
+                                "style": "object",
+                                "width": "auto",
+                                "scrollable": "boolean"
+                            },
+                            "name": "MyMenu",
+                            "designerId": "c73f615d-5906-4a7c-b21d-20ef35adff9b",
+                            "cn": [
+                                {
+                                    "type": "Ext.menu.Item",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "focusable": true,
+                                        "itemId": "mnuHome",
+                                        "text": "<span style=\"color: green; font-size:small;\">Home</span>"
+                                    },
+                                    "configAlternates": {
+                                        "itemId": "string",
+                                        "text": "string",
+                                        "scrollable": "boolean",
+                                        "focusable": "boolean"
+                                    },
+                                    "name": "MyMenuItem",
+                                    "designerId": "5a762ddd-ab94-437e-9cec-5f3525add581"
+                                },
+                                {
+                                    "type": "Ext.menu.Item",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "focusable": true,
+                                        "icon": "../icons/triage.png",
+                                        "iconCls": null,
+                                        "itemId": "mnuNursingArea",
+                                        "text": "<span style=\"color: green; font-size:small;\">Triage</span>"
+                                    },
+                                    "configAlternates": {
+                                        "icon": "string",
+                                        "iconCls": "string",
+                                        "itemId": "string",
+                                        "text": "string",
+                                        "scrollable": "boolean",
+                                        "focusable": "boolean"
+                                    },
+                                    "name": "MyMenuItem2",
+                                    "designerId": "c469e439-5db7-436f-9509-5d0762409f32"
+                                },
+                                {
+                                    "type": "Ext.menu.Item",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "focusable": true,
+                                        "icon": "../icons/doctors.png",
+                                        "itemId": "mnuDoctorsArea",
+                                        "style": null,
+                                        "text": "<span style=\" color: green; font-size:small;\">Doctors Rooms</span>"
+                                    },
+                                    "configAlternates": {
+                                        "icon": "string",
+                                        "itemId": "string",
+                                        "style": "object",
+                                        "text": "string",
+                                        "scrollable": "boolean",
+                                        "focusable": "boolean"
+                                    },
+                                    "name": "MyMenuItem1",
+                                    "designerId": "d360e0e6-3035-41b7-99de-348b464a4860"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "linkedinstance",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "width": null
+                            },
+                            "configAlternates": {
+                                "width": "auto",
+                                "scrollable": "boolean"
+                            },
+                            "name": "outpatientlist1",
+                            "designerId": "b98b8550-3ebf-492e-8a62-e62536a5473d",
+                            "masterInstanceId": "7f8e01e4-554f-4b06-a866-cedd3e803d75"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "PortalDetails",
+                "itemId": "PortalDetails",
+                "layout|region": "center"
+            },
+            "configAlternates": {
+                "designer|displayName": "string",
+                "itemId": "string",
+                "layout|region": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyContainer6",
+            "designerId": "244a5f67-b772-47cb-ae2d-69aa38e8b19f",
+            "cn": [
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
+                    "name": "portalpanel",
+                    "designerId": "99a25b83-3839-45b4-a84d-f4ad8a0e28de",
+                    "masterInstanceId": "ad317224-0098-4201-bb56-938cce221502"
+                }
+            ]
+        }
+    ]
+}

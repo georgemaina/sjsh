@@ -1,0 +1,82 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": false,
+        "designer|userAlias": "billstore",
+        "designer|userClassName": "BillStore",
+        "model": "BillModel",
+        "pageSize": 500,
+        "storeId": "BillStore"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "pageSize": "number",
+        "storeId": "string",
+        "autoLoad": "boolean"
+    },
+    "name": "MyJsonStore",
+    "designerId": "71e54bab-4c45-4cda-ad13-8246bdef93df",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "../../data/getDataFunctions.php?task=getBills"
+            },
+            "configAlternates": {
+                "url": "string"
+            },
+            "name": "MyAjaxProxy",
+            "designerId": "db3f563c-2c89-4f99-b33f-9b113028619a",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "bills"
+                    },
+                    "configAlternates": {
+                        "rootProperty": "string"
+                    },
+                    "name": "MyJsonReader",
+                    "designerId": "0e90aa91-7064-4e91-a02d-39e4ea447cdc"
+                },
+                {
+                    "type": "Ext.data.writer.Json",
+                    "reference": {
+                        "name": "writer",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dateFormat": "YYYY-mm-dd",
+                        "encode": true,
+                        "rootProperty": "updatedBills"
+                    },
+                    "configAlternates": {
+                        "dateFormat": "string",
+                        "rootProperty": "string",
+                        "encode": "boolean"
+                    },
+                    "name": "MyJsonWriter1",
+                    "designerId": "f124f99a-3ea8-4dfb-be02-231224785691"
+                }
+            ]
+        }
+    ]
+}

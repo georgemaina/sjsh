@@ -1,0 +1,242 @@
+{
+    "type": "Ext.grid.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "columnLines": true,
+        "designer|userAlias": "laboratoryparams",
+        "designer|userClassName": "LaboratoryParams",
+        "height": 630,
+        "store": "LabParamsStore",
+        "title": "Laboratory Parameters"
+    },
+    "configAlternates": {
+        "columnLines": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "store": "store",
+        "title": "string"
+    },
+    "name": "MyGridPanel1",
+    "designerId": "908b3661-9a86-4140-97d2-f2c96ef0fd2c",
+    "viewControllerInstanceId": "9357987c-4ea2-4503-af55-f8686f04f796",
+    "viewModelInstanceId": "1d6cc999-bfc4-4d04-ae33-a840f862a9e5",
+    "cn": [
+        {
+            "type": "Ext.view.Table",
+            "reference": {
+                "name": "viewConfig",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyTable4",
+            "designerId": "29d5e78c-02e3-45b5-81ec-d6948bea8268"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "PartCode",
+                "text": "Part Code"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string"
+            },
+            "name": "MyColumn65",
+            "designerId": "8d4a90d1-f45d-40a4-8a5f-9b4dba00f1bb"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "Description",
+                "text": "Description",
+                "width": 269
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "width": "auto"
+            },
+            "name": "MyColumn66",
+            "designerId": "9900f333-98d4-42b8-b789-d7452dd47ebd"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "GroupID",
+                "text": "Group Id",
+                "width": 173
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "width": "auto"
+            },
+            "name": "MyColumn67",
+            "designerId": "2429148c-193a-406d-93e6-f539198298c7"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "Price",
+                "text": "Price"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string"
+            },
+            "name": "MyColumn68",
+            "designerId": "d61b39bd-1c36-4695-851c-e21b7b98d239"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "FieldType",
+                "text": "Field Type"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string"
+            },
+            "name": "MyColumn69",
+            "designerId": "9b095435-8e93-423f-8215-b6aa95fdaafe"
+        },
+        {
+            "type": "Ext.toolbar.Paging",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "displayInfo": true,
+                "dock": "bottom",
+                "store": "LabParamsStore",
+                "width": 360
+            },
+            "configAlternates": {
+                "displayInfo": "boolean",
+                "dock": "string",
+                "store": "store",
+                "width": "auto"
+            },
+            "name": "MyPagingToolbar1",
+            "designerId": "7244924e-403b-4112-b15c-bb3f4493d26f"
+        },
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|snapToGrid": 5,
+                "dock": "top",
+                "height": 43,
+                "layout": "absolute",
+                "width": 100
+            },
+            "configAlternates": {
+                "designer|snapToGrid": "number",
+                "dock": "string",
+                "height": "auto",
+                "layout": "string",
+                "width": "auto"
+            },
+            "name": "MyContainer8",
+            "designerId": "a1058760-0899-448d-aec0-13246a3908b1",
+            "cn": [
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "x-fa fa-plus",
+                        "itemId": "cmdNewParams",
+                        "layout|x": 365,
+                        "layout|y": 5,
+                        "text": "New Parameter"
+                    },
+                    "configAlternates": {
+                        "iconCls": "string",
+                        "itemId": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "text": "string"
+                    },
+                    "name": "MyButton1",
+                    "designerId": "31fb293d-aa3d-4935-b989-04c70bd37240"
+                },
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "displayField": "Description",
+                        "emptyText": "Select Parameter Group",
+                        "itemId": "labParams",
+                        "layout|x": 5,
+                        "layout|y": 5,
+                        "minChars": 1,
+                        "queryMode": "local",
+                        "store": "LabParamGroups",
+                        "typeAhead": true,
+                        "valueField": "Description",
+                        "width": 285
+                    },
+                    "configAlternates": {
+                        "displayField": "datafield",
+                        "emptyText": "string",
+                        "itemId": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "minChars": "number",
+                        "queryMode": "string",
+                        "store": "store",
+                        "typeAhead": "boolean",
+                        "valueField": "datafield",
+                        "width": "auto"
+                    },
+                    "name": "MyComboBox14",
+                    "designerId": "feeec589-86b7-4169-a3b9-93f0538f2e50"
+                }
+            ]
+        }
+    ]
+}

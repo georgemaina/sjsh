@@ -1,0 +1,42 @@
+<html>
+
+<head>
+
+
+<link rel="STYLESHEET" type="text/css" href="../common/styles.css">
+</head>
+<body>
+	<table border="0" cellpadding="0" cellspacing="0" class="sample_header" zid="71">
+		<tbody zid="3">
+			<tr valign="center" zid="4">
+				<td align="center" width="10" zid="5">&nbsp;</td>
+				<td align="left" zid="6">
+					<p zid="224">
+						<a href="http://www.dhtmlx.com/" zid="7">DHTMLX</a> Documentation
+					</p>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<!--- CONTENT. Starts --->
+	<h1>Filtering Data in dhtmlxTreeGrid</h1>
+	<DIV>While filtering in plain grid is pretty obvious and has not space for variations, filtering in TreeGrid can be applied in many different ways.<BR><BR>
+<H3>Filtering by level </H3><BR>By default filtering in TreeGrid affects only last level of hierarchy (leaf items)<BR>( the mode can be also enalbled by using grid.setFilrationLevel(-1) )<BR>For example next dataset<BR>
+<DIV id=dzj3 style="PADDING-RIGHT: 0pt; PADDING-LEFT: 0pt; PADDING-BOTTOM: 1em; PADDING-TOP: 1em; TEXT-ALIGN: left"><IMG src="images/dhhqnnw2_54dwspt3cg_b.png"> </DIV>Will be filtered as<BR>
+<DIV id=gz6d style="PADDING-RIGHT: 0pt; PADDING-LEFT: 0pt; PADDING-BOTTOM: 1em; PADDING-TOP: 1em; TEXT-ALIGN: left"><IMG style="WIDTH: 543px; HEIGHT: 117px" src="images/dhhqnnw2_55d49zjdch_b.png"> </DIV>the branches , there item not find, will be full hidden<BR>
+<DIV id=kkn4 style="PADDING-RIGHT: 0pt; PADDING-LEFT: 0pt; PADDING-BOTTOM: 1em; PADDING-TOP: 1em; TEXT-ALIGN: left"><IMG style="WIDTH: 542px; HEIGHT: 58px" src="images/dhhqnnw2_56kv5mwjd8_b.png"> </DIV>values on not last levels ignored.<BR><BR>By using setFiltrationLevel method , it possible to change level of filtration<BR><BR><BR>&nbsp;&nbsp;&nbsp;<BR></DIV>
+<BLOCKQUOTE>grid.setFiltrationLevel(1); //upmost level has index 0<BR></BLOCKQUOTE>
+<DIV id=z3dg style="PADDING-RIGHT: 0pt; PADDING-LEFT: 0pt; PADDING-BOTTOM: 1em; PADDING-TOP: 1em; TEXT-ALIGN: left"><BR>After such command filtering use data from different level of hierarchy and filtering will show next results<BR>
+<DIV id=hby5 style="PADDING-RIGHT: 0pt; PADDING-LEFT: 0pt; PADDING-BOTTOM: 1em; PADDING-TOP: 1em; TEXT-ALIGN: left"><IMG src="images/dhhqnnw2_57crwwj4hd_b.png"> </DIV>
+<DIV id=cxpr style="PADDING-RIGHT: 0pt; PADDING-LEFT: 0pt; PADDING-BOTTOM: 1em; PADDING-TOP: 1em; TEXT-ALIGN: left"><IMG style="WIDTH: 542px; HEIGHT: 195px" src="images/dhhqnnw2_58cn29rqcs_b.png"><BR><BR>In second case you can see that items below find math preserved<BR><BR><BR>It possible to force grid to filter data on all levels of hierarchy at the same time.<BR>
+<BLOCKQUOTE>grid.setFiltrationLevel(-2);<BR></BLOCKQUOTE></DIV>
+<DIV id=it:j style="PADDING-RIGHT: 0pt; PADDING-LEFT: 0pt; PADDING-BOTTOM: 1em; PADDING-TOP: 1em; TEXT-ALIGN: left"><IMG style="WIDTH: 543px; HEIGHT: 112px" src="images/dhhqnnw2_59gm34qndv_b.png"> </DIV><IMG style="WIDTH: 544px; HEIGHT: 94px" src="images/dhhqnnw2_60d5bqjjfq_b.png"> </DIV>In such mode filtering show only items that math filtering criteria, lower level items not shown<BR><BR>
+<H3>"Top level show" mode </H3><BR>Mode can be enabled by<BR><BR>
+<BLOCKQUOTE>grid.enableFiltrationMode(-1,<B>true</B>) </BLOCKQUOTE>In such mode, the upper level items, which has not childs matching for filtering criteria still shown, items from filtration level and below - are hidden.<BR>
+<DIV id=st2t style="PADDING-RIGHT: 0pt; PADDING-LEFT: 0pt; PADDING-BOTTOM: 1em; PADDING-TOP: 1em; TEXT-ALIGN: left"><IMG style="WIDTH: 543px; HEIGHT: 137px" src="images/dhhqnnw2_61fmwxcvdn_b.png"></DIV>
+<DIV id=b3q0 style="PADDING-RIGHT: 0pt; PADDING-LEFT: 0pt; PADDING-BOTTOM: 1em; PADDING-TOP: 1em; TEXT-ALIGN: left"><IMG style="WIDTH: 541px; HEIGHT: 117px" src="images/dhhqnnw2_62fcjgzjjj_b.png"></DIV>( on second item , both Music and DVD not matched to filtering criteria, because filtering run only against last level items, but still shown )<BR><BR><BR>
+
+	<!--- CONTENT. Ends --->
+	<div class="copyright" zid="223">&copy; DHTMLX, 2008</div>
+</body>
+</html>

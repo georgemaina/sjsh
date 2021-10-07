@@ -1,0 +1,157 @@
+<html>
+
+<head>
+
+
+<link rel="STYLESHEET" type="text/css" href="../common/styles.css">
+</head>
+<body>
+	<table border="0" cellpadding="0" cellspacing="0" class="sample_header" zid="71">
+		<tbody zid="3">
+			<tr valign="center" zid="4">
+				<td align="center" width="10" zid="5">&nbsp;</td>
+				<td align="left" zid="6">
+					<p zid="224">
+						<a href="http://www.dhtmlx.com/" zid="7">DHTMLX</a> Documentation
+					</p>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<!--- CONTENT. Starts --->
+	<H1 id=r1sj>Initialization of grid from HTML </H1>
+<BR id=ziwi>
+dhtlmxGrid can be initialized from an HTML markup. This allows to convert the existing tables to active grids, or you can generate the data as an HTML table and convert it into the grid, instead of working with a raw XML.<BR id=vnz4>
+<BR id=f4jz>
+There are two ways to initialize the grid from the HTML. In both cases you need to add <strong>codebase/ext/dhtmlxgrid_start.js</strong> file to the page<BR id=s90->
+<BR id=ln43>
+<H3 id=ih0b>Initialization by a special command </H3>
+A table can be converted to the grid by <SPAN id=sc7->dhtmlXGridFromTable command:<BR id=tcv60>
+<BR id=wtoz>
+</SPAN>
+<BLOCKQUOTE id=p2gu0>&lt;table id="<SPAN id=ctv6><B id=trpm0>some_table</B></SPAN>"&gt;<BR id=cy5l>
+&nbsp;&nbsp;&nbsp; &lt;tr&gt;<BR id=mygj>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt;Header A&lt;/td&gt;&lt;td&gt;Header B&lt;/td&gt;<BR id=itjp>
+&nbsp;&nbsp;&nbsp; &lt;/tr&gt;<BR id=co18>
+&nbsp;&nbsp;&nbsp; &lt;tr&gt;<BR id=mygj>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt;Data A&lt;/td&gt;&lt;td&gt;Data B&lt;/td&gt;<BR id=su5q>
+&nbsp;&nbsp;&nbsp; &lt;/tr&gt;<BR id=k60:>
+&nbsp;&nbsp;&nbsp; ...<BR id=g_jl>
+&lt;/table&gt;<BR id=fy4n>
+&lt;script&gt;<BR id=ja3x>
+&nbsp;&nbsp;&nbsp; var grid = <SPAN id=sc7-><B id=trpm1>dhtmlXGridFromTable</B></SPAN>("<SPAN id=ewl.><B id=trpm2>some_table</B></SPAN>")<BR id=jris>
+&lt;/script&gt;<BR id=hdd5>
+</BLOCKQUOTE>
+<BR id=sxu9>
+Before the initialization:<BR id=rm-a>
+<DIV id=m:8u style="PADDING-RIGHT: 0pt; PADDING-LEFT: 0pt; PADDING-BOTTOM: 1em; MARGIN-LEFT: 40px; PADDING-TOP: 1em; TEXT-ALIGN: left"><IMG id=d.ik style="WIDTH: 350px; HEIGHT: 117px" src="images/dhhqnnw2_23c37x8wdq.png"></DIV>
+<BR id=wslg>
+After the initialization:<BR id=i6hn>
+<BR id=w933>
+<DIV id=jhyu style="PADDING-RIGHT: 0pt; PADDING-LEFT: 0pt; PADDING-BOTTOM: 1em; MARGIN-LEFT: 40px; PADDING-TOP: 1em; TEXT-ALIGN: left"><IMG id=giah style="WIDTH: 395px; HEIGHT: 119px" src="images/dhhqnnw2_22g9q4rgfn.png"></DIV>
+<BR id=nd:e>
+<H3 id=dakw>Automatic initialization by a CSS class&nbsp;&nbsp;&nbsp;<BR id=or.2>
+</H3>
+<BLOCKQUOTE id=p2gu1>&lt;table id="some_table" <SPAN id=id9x><B id=trpm3>class="dhtmlxGrid"</B></SPAN>&gt;<BR id=cy5l>
+&nbsp;&nbsp;&nbsp; &lt;tr&gt;<BR id=mygj>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt;Header A&lt;/td&gt;&lt;td&gt;Header B&lt;/td&gt;<BR id=itjp>
+&nbsp;&nbsp;&nbsp; &lt;/tr&gt;<BR id=co18>
+&nbsp;&nbsp;&nbsp; &lt;tr&gt;<BR id=mygj>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt;Data A&lt;/td&gt;&lt;td&gt;Data B&lt;/td&gt;<BR id=su5q>
+&nbsp;&nbsp;&nbsp; &lt;/tr&gt;<BR id=k60:>
+&nbsp;&nbsp;&nbsp; ...<BR id=g_jl>
+&lt;/table&gt;<BR id=nkhq>
+</BLOCKQUOTE>
+<BR id=by3x>
+The initialization by a <SPAN id=sc7->CSS </SPAN>class will work only for those tables which were on page at the moment of loading. If the page was created dynamically or loaded by some kind of AJAX, only the direct initialization method can be used.<BR id=t_5y0>
+<BR id=t_5y1>
+Pay your attention to the following: you need to use only one of the above mentioned methods (not both at the same time).<BR id=p2gu2>
+<BR id=p2gu3>
+<H3 id=p2gu4>Grid configuration during loading from HTML </H3>
+<BR id=p2gu5>
+The first row of the label will be used as grid headers. You can use some attributes to define the properties of grid's columns (all of them are optional).<BR id=b_3i0>
+<BR id=b_3i1>
+<BLOCKQUOTE id=o7350>&lt;table <SPAN id=id9x>class="dhtmlxGrid"</SPAN>&gt;<BR id=b_3i2>
+&nbsp;&nbsp;&nbsp; &lt;tr&gt;<BR id=b_3i3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td width="150" align="left"&gt;Column 1&lt;/td&gt;<BR id=b_3i4>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td type="co" sort="str"&gt;Column 2&lt;/td&gt;<BR id=b_3i5>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td type="edn" format="0,000.00"&gt;Column 3&lt;/td&gt;<BR id=b_3i6>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt;Column 4&lt;/td&gt;<BR id=b_3i7>
+&nbsp;&nbsp;&nbsp; &lt;/tr&gt;<BR id=t_5y2>
+</BLOCKQUOTE>
+<BR id=t_5y3>
+<UL id=o7351>
+<LI id=o7352><SPAN id=ywwx0><B id=t1qu0>width </B></SPAN>- the width of a column in pixels, by default the width of a column in the source table will be taken; 
+<LI id=o7353><SPAN id=ywwx1><B id=t1qu1>align </B></SPAN>- the align of data in a column;<BR id=o7354>
+<LI id=o7355><SPAN id=ywwx2><B id=t1qu2>sort </B></SPAN>- the type of sorting used against a column; 
+<LI id=o7356><SPAN id=ywwx3><B id=t1qu3>type </B></SPAN>- the cell type ("ro" by default); 
+<LI id=o7357><SPAN id=ywwx4><B id=t1qu4>format</B></SPAN> - the data format (can be used against edn|ron|dhxCalendar|dhxCalendarA column types - mimics setNumberFormat|setDateFormat functionality). </LI>
+</UL>
+<BR id=o7358>
+<H3 id=ujpg0>Global grid settings </H3>
+<BR id=gszg1>
+Some grid modes can be enabled directly from the source table attributes:<BR id=k2-m0>
+&nbsp;&nbsp;&nbsp; &lt;table <SPAN id=id9x>class="dhtmlxGrid"</SPAN> dragAndDrop="true"<BR id=cd7i0>
+&nbsp;&nbsp;&nbsp; enables d-n-d in the grid<BR id=cd7i1>
+<BR id=cd7i2>
+&nbsp;&nbsp;&nbsp; &lt;table <SPAN id=id9x>class="dhtmlxGrid"</SPAN> imgpath="../some/.."<BR id=cd7i3>
+&nbsp;&nbsp;&nbsp; sets path to the image folder of the grid<BR id=cd7i4>
+<BR id=cd7i5>
+&nbsp;&nbsp;&nbsp; <SPAN id=fznd0 style="BACKGROUND-COLOR: rgb(255,255,255)">&lt;table </SPAN><SPAN id=id9x style="BACKGROUND-COLOR: rgb(255,255,255)">class="dhtmlxGrid"</SPAN><SPAN id=fznd1 style="BACKGROUND-COLOR: rgb(255,255,255)"> multiline="true"</SPAN><BR id=cd7i6 style="BACKGROUND-COLOR: rgb(255,255,255)">
+<SPAN id=fznd2 style="BACKGROUND-COLOR: rgb(255,255,255)">&nbsp;&nbsp;&nbsp; enables multiline mode in the grid</SPAN><BR id=cd7i7>
+<BR id=cd7i8>
+&nbsp;&nbsp;&nbsp; &lt;table <SPAN id=id9x>class="dhtmlxGrid"</SPAN> lightnavigation="true"<BR id=cd7i9>
+&nbsp;&nbsp;&nbsp; enables light mouse navigation mode<BR id=cd7i10>
+<BR id=cd7i11>
+&nbsp;&nbsp;&nbsp; &lt;table <SPAN id=id9x>class="dhtmlxGrid"</SPAN> unevenrow="someA" evenrow="someB"<BR id=cd7i12>
+&nbsp;&nbsp;&nbsp; enables the alter css mode (it is equal to grid.enableAlterCss("someA","someB"))<BR id=zx8h0>
+<BR id=zx8h1>
+&nbsp;&nbsp;&nbsp; &lt;table <SPAN id=id9x>class="dhtmlxGrid"</SPAN> split="2"<BR id=cd7i12>
+&nbsp;&nbsp;&nbsp; enables the split mode<BR id=ujpg1>
+<BR id=ujpg2>
+<H3 id=qs2-0>Size of the resulting grid<BR id=cd7i13>
+</H3>
+By default the grid will take the same size as the table, from which it was created. But you can specify its size directly as source table attributes:<BR id=a-821>
+<BLOCKQUOTE id=kbdc0>&nbsp;&nbsp;&nbsp; &lt;table <SPAN id=id9x>class="dhtmlxGrid"</SPAN> gridWidth="600" gridHeight="400"<BR id=cd7i12>
+</BLOCKQUOTE>
+<BR id=ujpg1>
+If you want to set the grid's size to auto, you can use the default approach:&nbsp;&nbsp;<BR id=qs2-2>
+<BLOCKQUOTE id=e-1b0><SPAN id=sc7->&nbsp;&nbsp;&nbsp; var grid=dhtmlXGridFromTable</SPAN>("<SPAN id=ewl.>some_table</SPAN>")<BR id=qs2-3>
+&nbsp;&nbsp;&nbsp; grid.enableAutoWidth(true);<BR id=qs2-4>
+&nbsp;&nbsp;&nbsp; grid.enableAutoHeight(true);<BR id=qs2-5>
+&nbsp;&nbsp;&nbsp; grid.setSizes();<BR id=o7359>
+</BLOCKQUOTE>
+<BR id=fy4n>
+<H3 id=pw9t0>Reference to the grid object and initialization events<BR id=wtjp>
+</H3>
+When the grid is created by <SPAN id=sc7->dhtmlXGridFromTable command, the reference to the grid object is returned from the method.<BR id=e-1b1>
+<BR id=e-1b2>
+In case of initialization by a CSS class, you can define the name of the global variable which will be used as a reference:<BR id=e-1b3>
+</SPAN>
+<BLOCKQUOTE id=e-1b4>&nbsp;&nbsp;&nbsp;&nbsp;&lt;table <SPAN id=id9x>class="dhtmlxGrid"</SPAN> name="mygrid"<BR id=e-1b5>
+</BLOCKQUOTE>
+It allows to call any API method of such grid by:<BR id=e-1b6>
+<BLOCKQUOTE id=pw9t1>&nbsp;&nbsp;&nbsp; mygrid.some(...<BR id=e-1b7>
+</BLOCKQUOTE>
+Pay your attention to the fact that the object becomes available only after the initialization (which occurs with <SPAN id=r8570><I id=t1qu5>onLoad </I></SPAN>event).<BR id=vgse0>
+<BR id=e-1b8>
+<SPAN id=sc7->It is possible to attach some custom code to the moment when the grid configuration is being initialized and to the moment when the grid has already been initialized:</SPAN><BR id=vgse1>
+<BLOCKQUOTE id=vgse2>&lt;table <SPAN id=id9x>name="mygrid" class="dhtmlxGrid"</SPAN> onbeforeinit="myfunc1()" oninit="myfunc2()"<BR id=vgse3>
+...<BR id=vgse4>
+&lt;script&gt;<BR id=vgse5>
+&nbsp;&nbsp;&nbsp; function myfunc1(){<BR id=vgse6>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mygrid.enableMultiselect(true)<BR id=vgse7>
+&nbsp;&nbsp;&nbsp;&nbsp;}<BR id=vgse8>
+&nbsp;&nbsp;&nbsp; function myfunc2(){<BR id=hgxq0>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mygrid.selectRow(0);<BR id=vgse9>
+&nbsp;&nbsp;&nbsp;&nbsp;}<BR id=vgse10>
+</BLOCKQUOTE>
+The code of "onbeforeinit" attribute is executed before the grid structure and data are initialized from the HTML, so you can place any global setting here.<BR id=bzol0>
+<BR id=hgxq1>
+The code of "oninit" attribute is executed after the configuration and data were loaded, so it is the best place for some after-initialization calls - row selecting, data operation, etc.<BR id=snh_0>
+
+
+	<!--- CONTENT. Ends --->
+	<div class="copyright" zid="223">&copy; DHTMLX, 2008</div>
+</body>
+</html>

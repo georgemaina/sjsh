@@ -1,0 +1,332 @@
+{
+    "type": "Ext.grid.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "closable": true,
+        "collapsible": true,
+        "columnLines": true,
+        "designer|userAlias": "xrayrevenue",
+        "designer|userClassName": "XrayRevenue",
+        "height": 615,
+        "store": "XrayRevenueStore",
+        "title": "X-Ray Revenue ",
+        "width": null
+    },
+    "configAlternates": {
+        "closable": "boolean",
+        "collapsible": "boolean",
+        "columnLines": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "store": "store",
+        "title": "string",
+        "width": "auto",
+        "scrollable": "boolean"
+    },
+    "name": "LaboratoryRevenue1",
+    "designerId": "641b2263-a6a5-440d-99a6-4badbde1b152",
+    "viewControllerInstanceId": "1b62a943-2a6c-4869-a4a9-974cd1dabafd",
+    "viewModelInstanceId": "a9f5ccae-cca1-47e1-8823-2c67fff93348",
+    "cn": [
+        {
+            "type": "Ext.view.Table",
+            "reference": {
+                "name": "viewConfig",
+                "type": "object"
+            },
+            "codeClass": null,
+            "configAlternates": {
+                "scrollable": "boolean"
+            },
+            "name": "MyGridView5",
+            "designerId": "c8ed4d94-630c-492e-9b61-8dede3921f85"
+        },
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|snapToGrid": 5,
+                "dock": "top",
+                "height": 48,
+                "layout": "absolute",
+                "title": null,
+                "width": 100
+            },
+            "configAlternates": {
+                "designer|snapToGrid": "number",
+                "dock": "string",
+                "height": "auto",
+                "layout": "string",
+                "title": "string",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyFieldSet",
+            "designerId": "1e64186a-adae-4a0a-b28e-9ad94d73f211",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Date",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "From Date",
+                        "itemId": "strDate1",
+                        "labelWidth": 80,
+                        "layout|x": 0,
+                        "layout|y": 0
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "itemId": "string",
+                        "labelWidth": "number",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyDateField10",
+                    "designerId": "aa0f575c-e83d-4db5-b7d3-26821675de32"
+                },
+                {
+                    "type": "Ext.form.field.Date",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "To Date",
+                        "itemId": "strDate2",
+                        "labelWidth": 60,
+                        "layout|x": 265,
+                        "layout|y": 0
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "itemId": "string",
+                        "labelWidth": "number",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyDateField11",
+                    "designerId": "4b04fc78-a413-4f08-9ed0-9946292aa772"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "cmdPreviewXrayRevenue",
+                        "layout|x": 525,
+                        "layout|y": -3,
+                        "text": "<b>Preview</b>",
+                        "width": 135
+                    },
+                    "configAlternates": {
+                        "itemId": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "text": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyButton13",
+                    "designerId": "bd871ddf-682d-4db3-a453-1015d69589ea"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "cmdExportXrayRevenue",
+                        "layout|x": 810,
+                        "layout|y": 0,
+                        "text": "<b>Export</b>",
+                        "width": 130
+                    },
+                    "configAlternates": {
+                        "itemId": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "text": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyButton14",
+                    "designerId": "94c59bb3-9b4d-436e-9db6-385177adc1c0"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "cmdPrintXrayrevenue",
+                        "layout|x": 670,
+                        "layout|y": -1,
+                        "text": "<b>Print</b>",
+                        "width": 130
+                    },
+                    "configAlternates": {
+                        "itemId": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "text": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyButton15",
+                    "designerId": "f7079b2e-ae12-4bfd-a72b-aab552e01470"
+                }
+            ]
+        },
+        {
+            "type": "Ext.toolbar.Paging",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "displayInfo": true,
+                "dock": "bottom",
+                "store": "XrayRevenueStore",
+                "width": 360
+            },
+            "configAlternates": {
+                "displayInfo": "boolean",
+                "dock": "string",
+                "store": "store",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyPagingToolbar3",
+            "designerId": "5f1ff490-a8fe-4d0d-a0f2-ca0fdb4e10dc"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "xraycode",
+                "text": "Xraycode"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn100",
+            "designerId": "6462de73-f69f-4ad8-b8df-49412d9833fd"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "Description",
+                "text": "Description",
+                "width": 281
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn101",
+            "designerId": "6baf7147-6381-490c-8895-34f30ae341a4"
+        },
+        {
+            "type": "Ext.grid.column.Number",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "align": "right",
+                "dataIndex": "TotalTests",
+                "format": "000",
+                "text": "Total Tests"
+            },
+            "configAlternates": {
+                "align": "string",
+                "dataIndex": "datafield",
+                "format": "string",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyNumberColumn10",
+            "designerId": "f65a627c-a3a6-4383-aa37-3b2241b15e74"
+        },
+        {
+            "type": "Ext.grid.column.Number",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "align": "right",
+                "dataIndex": "Price",
+                "text": "Price"
+            },
+            "configAlternates": {
+                "align": "string",
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyNumberColumn9",
+            "designerId": "ae722727-1824-4072-b541-12817f8ecd39"
+        },
+        {
+            "type": "Ext.grid.column.Number",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "align": "right",
+                "dataIndex": "Total",
+                "text": "Total"
+            },
+            "configAlternates": {
+                "align": "string",
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyNumberColumn8",
+            "designerId": "86483c8d-e2d0-4ca3-bc94-44ad9f6ee0f0"
+        }
+    ]
+}

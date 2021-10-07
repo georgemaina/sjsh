@@ -1,0 +1,426 @@
+{
+    "type": "Ext.grid.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoDestroy": false,
+        "closable": true,
+        "cls": [
+            "x-portlet"
+        ],
+        "collapsible": true,
+        "columnLines": true,
+        "designer|userAlias": "outpatientlist",
+        "designer|userClassName": "OutpatientList",
+        "draggable": [
+            "{moveOnDrag:false}"
+        ],
+        "frame": true,
+        "height": 470,
+        "isPortlet": true,
+        "itemId": "OutpatientAdmissions",
+        "minHeight": null,
+        "store": "OPAdmissionsStore",
+        "title": "OutPatients Admissions",
+        "width": null
+    },
+    "configAlternates": {
+        "draggable": "object",
+        "autoDestroy": "boolean",
+        "closable": "boolean",
+        "cls": "string",
+        "collapsible": "boolean",
+        "columnLines": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "frame": "boolean",
+        "height": "auto",
+        "isPortlet": "boolean",
+        "itemId": "string",
+        "minHeight": "number",
+        "store": "store",
+        "title": "string",
+        "width": "auto",
+        "scrollable": "boolean"
+    },
+    "name": "GridPortlet1",
+    "designerId": "7f8e01e4-554f-4b06-a866-cedd3e803d75",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "isPortlet",
+            "type": "boolean"
+        }
+    ],
+    "viewControllerInstanceId": "b030328e-e0a9-4012-aa7d-0737e0411ddf",
+    "viewModelInstanceId": "2c64db50-db60-4e37-98f5-a84fa1bac705",
+    "cn": [
+        {
+            "type": "Ext.view.Table",
+            "reference": {
+                "name": "viewConfig",
+                "type": "object"
+            },
+            "codeClass": null,
+            "configAlternates": {
+                "scrollable": "boolean"
+            },
+            "name": "MyGridView",
+            "designerId": "a7d273b8-b90d-4352-8ec5-b67309ac7e59",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onViewRefresh",
+                        "implHandler": [
+                            "// get all grid view nodes",
+                            "var nodes = dataview.getNodes();",
+                            "",
+                            "for (var i = 0; i < nodes.length; i++) {",
+                            "",
+                            "    var node = nodes[i];",
+                            "",
+                            "    // get node record",
+                            "    var record = dataview.getRecord(node);",
+                            "",
+                            "    // get color from record data",
+                            "    var ActiveColor = '#98FB98'; //record.get('StatusColor');",
+                            "    var dischargedColor = '#DC143C'; //record.get('StatusColor');",
+                            "    ",
+                            "    var status=record.get('Status');",
+                            "",
+                            "    // get all td elements",
+                            "    var cells = Ext.get(node).query('td');",
+                            "",
+                            "    // set bacground color to all row td elements",
+                            "    for(var j = 0; j < cells.length; j++) {",
+                            "        // Ext.Msg.alert('test', j);",
+                            "    ",
+                            "        if(j===0 && status==='Active'){",
+                            "            Ext.fly(cells[j]).setStyle('background-color', ActiveColor);",
+                            "            Ext.fly(cells[j]).setStyle('font-color', 'black');",
+                            "        }else if(j===0 && status!='Active'){",
+                            "            Ext.fly(cells[j]).setStyle('background-color', dischargedColor);",
+                            "            Ext.fly(cells[j]).setStyle('font-color', 'white');",
+                            "        }",
+                            "",
+                            "    }",
+                            "}"
+                        ],
+                        "name": "refresh",
+                        "scope": "me"
+                    },
+                    "configAlternates": {
+                        "fn": "string",
+                        "implHandler": "code",
+                        "name": "string",
+                        "scope": "string"
+                    },
+                    "name": "onViewRefresh",
+                    "designerId": "12898ee2-e924-4767-b119-78fc8f2ff4cd"
+                },
+                {
+                    "type": "Ext.grid.plugin.DragDrop",
+                    "reference": {
+                        "name": "plugins",
+                        "type": "array"
+                    },
+                    "codeClass": "Ext.grid.plugin.DragDrop",
+                    "userConfig": {
+                        "dragGroup": "mainGroup",
+                        "dropGroup": "rooms"
+                    },
+                    "configAlternates": {
+                        "dragGroup": "string",
+                        "dropGroup": "string"
+                    },
+                    "name": "MyGridDragDropPlugin",
+                    "designerId": "5195d30a-ca29-46ce-8837-ae340c30c0f1"
+                }
+            ]
+        },
+        {
+            "type": "Ext.toolbar.Paging",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "displayInfo": true,
+                "dock": "bottom",
+                "store": "OPAdmissionsStore",
+                "width": 360
+            },
+            "configAlternates": {
+                "displayInfo": "boolean",
+                "dock": "string",
+                "store": "store",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyPagingToolbar",
+            "designerId": "64abd2a6-1815-431e-af6d-8be05f46fce3"
+        },
+        {
+            "type": "Ext.form.FieldContainer",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|snapToGrid": 5,
+                "dock": "top",
+                "fieldLabel": null,
+                "height": 30,
+                "layout": "absolute",
+                "width": 100
+            },
+            "configAlternates": {
+                "designer|snapToGrid": "number",
+                "dock": "string",
+                "fieldLabel": "string",
+                "height": "auto",
+                "layout": "string",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyFieldContainer",
+            "designerId": "95ec767c-36fa-4b18-803a-f6ea6d0defc4",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "emptyText": "Search by PId, Names",
+                        "fieldLabel": null,
+                        "itemId": "txtOpSearch",
+                        "layout|x": 0,
+                        "layout|y": 5,
+                        "width": 205
+                    },
+                    "configAlternates": {
+                        "emptyText": "string",
+                        "fieldLabel": "string",
+                        "itemId": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyTextField",
+                    "designerId": "8fbb01d0-654e-4e97-ac9f-dd985be7c747"
+                }
+            ]
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "Status",
+                "text": "Status",
+                "width": 82
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn30",
+            "designerId": "f0ec5329-eb1a-4159-8d8e-ffda56d72943"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "Pid",
+                "text": "Pid",
+                "width": 56
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn31",
+            "designerId": "0e714c03-5e7c-452a-9e9d-0a0e46592808"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "Names",
+                "text": "Names",
+                "width": 124
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn32",
+            "designerId": "41cadbde-3abb-40da-aa42-d509a145422c"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "PaymentMode",
+                "text": "Payment Mode"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn33",
+            "designerId": "f8afaf63-8cf9-40e2-85b3-fdf87d01a6cc"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "EncounterTime",
+                "text": "Encounter Time"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn34",
+            "designerId": "ce8cfc6e-8ba9-434d-b708-f01422c1f85a"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "EncounterNo",
+                "text": "Encounter No"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn35",
+            "designerId": "4f63481d-48f7-410b-8e22-a1a6354d7e63"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "Clinic",
+                "text": "Clinic"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn36",
+            "designerId": "a441d67d-aced-4f09-81b2-cd41e11b0405"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "Gender",
+                "text": "Gender"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn37",
+            "designerId": "475989a2-8d01-4980-959a-c983496f50bb"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "DOB",
+                "text": "Dob"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn38",
+            "designerId": "6c4a0194-b313-4cda-8eba-d0b8129abc56"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "Age",
+                "text": "Age"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn39",
+            "designerId": "fb0c7383-ec66-4193-a523-1bd21461999d"
+        }
+    ]
+}

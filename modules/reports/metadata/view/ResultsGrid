@@ -1,0 +1,188 @@
+{
+    "type": "Ext.grid.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "border": false,
+        "columnLines": true,
+        "designer|userAlias": "resultsgrid",
+        "designer|userClassName": "ResultsGrid",
+        "height": 615,
+        "minHeight": null,
+        "minWidth": null,
+        "scrollable": [
+            "{\"x\":true,\"y\":true}"
+        ],
+        "store": "RevenueStore",
+        "title": "Results Grid",
+        "width": null
+    },
+    "configAlternates": {
+        "border": "auto",
+        "columnLines": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "minHeight": "number",
+        "minWidth": "number",
+        "overflowX": "string",
+        "overflowY": "string",
+        "store": "store",
+        "title": "string",
+        "width": "auto",
+        "scrollable": "object"
+    },
+    "designerId": "4f0951d4-24e7-4843-adaa-a8e139a4278e",
+    "viewControllerInstanceId": "296f740a-591d-44ee-b7bd-bd873ce091db",
+    "viewModelInstanceId": "918e57c7-e430-47b7-95cc-01945ef79687",
+    "cn": [
+        {
+            "type": "Ext.view.Table",
+            "reference": {
+                "name": "viewConfig",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": null,
+                "scrollable": [
+                    "{\"x\":true,\"y\":true}"
+                ]
+            },
+            "configAlternates": {
+                "height": "auto",
+                "overflowX": "string",
+                "overflowY": "string",
+                "scrollable": "object"
+            },
+            "name": "MyGridView",
+            "designerId": "83fccd3f-f8a6-4904-a24b-4f135f72de6b"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "Category",
+                "text": "Category",
+                "width": 235
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn1",
+            "designerId": "938ac5e4-674e-4954-bb8e-4ed952761ef1"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "align": "right",
+                "dataIndex": "Amount",
+                "text": "Amount"
+            },
+            "configAlternates": {
+                "align": "string",
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn2",
+            "designerId": "f4d1fc28-6e5d-441f-ab39-ecc8e86d04cc"
+        },
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|snapToGrid": 5,
+                "dock": "bottom",
+                "height": 24,
+                "layout": "absolute",
+                "width": 100
+            },
+            "configAlternates": {
+                "designer|snapToGrid": "number",
+                "dock": "string",
+                "height": "auto",
+                "layout": "string",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyContainer5",
+            "designerId": "8ac21f06-a34d-4ab4-9704-40732bc8fbd1",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Total",
+                        "fieldStyle": "font-size: small;font-weight: bold;color: blue;",
+                        "itemId": "txtTotal",
+                        "labelStyle": "font-size: small;font-weight: bold;color: green;",
+                        "layout|x": 200,
+                        "layout|y": -3,
+                        "value": "",
+                        "width": 115
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "fieldStyle": "string",
+                        "itemId": "string",
+                        "labelStyle": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "value": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyDisplayField3",
+                    "designerId": "87281740-e3c5-4103-b065-a090296de6ba"
+                }
+            ]
+        },
+        {
+            "type": "Ext.toolbar.Paging",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "displayInfo": true,
+                "dock": "bottom",
+                "store": "RevenueStore",
+                "width": 360
+            },
+            "configAlternates": {
+                "displayInfo": "boolean",
+                "dock": "string",
+                "store": "store",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyPagingToolbar",
+            "designerId": "074119c4-27c7-48ca-bf16-72a613b74358"
+        }
+    ]
+}

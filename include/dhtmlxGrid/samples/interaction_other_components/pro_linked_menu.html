@@ -1,0 +1,106 @@
+<!--exclude
+<sample>
+              <product version="1.4" edition="pro"/>
+                     <modifications>
+                            <modified date="070101"/>
+                     </modifications>
+               </sample>
+ --> 
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+	<title>Grid linked to menu</title>
+	
+</head>
+<body>
+<link rel='STYLESHEET' type='text/css' href='../common/style.css'>
+<table cellspacing="0" cellpadding="0" class="sample_header" border="0">
+	<tr valign="middle">
+		<!-- COMPONENT ICON -->
+		<td width="40" align="center"><img src="../common/dhtmlxgrid_icon.gif" border="0"></td>
+		<!-- COMPONENT NAME -->
+		<td width="150" align="left" nowrap="true">Sample: dhtmlxGrid</td>
+		<!-- SAMPLE TITLE -->
+		<td width="0" align="left" nowrap><b>Grid linked to menu</b></td>
+		<!-- LINK TO COMPONENT PAGE -->
+		<td width="0" align="right"><a href="http://www.dhtmlx.com/docs/products/dhtmlxGrid/index.shtml">dhtmlxGrid main page</a></td>
+		<!-- CLOSE BUTTON -->
+		<td width="50"><div class="sample_close"><a href="javascript:void(0);" onclick="self.close();"><img src="../common/sample_close.gif" width="14" height="14" border="0" alt="X"></a></div></td>
+	</tr>
+</table>
+	
+	
+	<p>Excell "context" allows to set menu as editor for grid's cell. Just try to edit column with authors.</p>
+	<link rel="STYLESHEET" type="text/css" href="../../../dhtmlxMenu/codebase/dhtmlxmenu.css">
+	<link rel="STYLESHEET" type="text/css" href="../../../dhtmlxMenu/codebase/dhtmlxmenu_xp.css">
+	<link rel="STYLESHEET" type="text/css" href="../../../dhtmlxMenu/codebase/context.css">
+	<link rel="STYLESHEET" type="text/css" href="../../codebase/dhtmlxgrid.css">
+	<link rel="STYLESHEET" type="text/css" href="../../codebase/dhtmlxgrid_skins.css">
+	<script  src="../../codebase/dhtmlxcommon.js"></script>
+	<script  src="../../codebase/dhtmlxgrid.js"></script>
+	<script  src="../../codebase/dhtmlxgridcell.js"></script>	
+	<script  src="../../../dhtmlxMenu/codebase/dhtmlxprotobar.js"></script>
+	<script  src="../../../dhtmlxMenu/codebase/dhtmlxmenubar.js"></script>
+	<script  src="../../../dhtmlxMenu/codebase/dhtmlxmenubar_cp.js"></script>
+	<script  src="../../codebase/excells/dhtmlxgrid_excell_context.js"></script>
+	<table width="600px">
+		<tr>
+			<td>
+				<div id="gridbox" width="100%" height="250px" style="background-color:white;"></div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div id="context" ></div>
+            </td>
+		</tr>
+	</table>
+<div class='sample_code'><div class="hl-main"><pre><span class="hl-code"> 
+</span><span class="hl-reserved">var</span><span class="hl-code"> </span><span class="hl-identifier">ctx</span><span class="hl-code">=</span><span class="hl-reserved">new</span><span class="hl-code"> </span><span class="hl-identifier">dhtmlXMenuBarObject</span><span class="hl-brackets">(</span><span class="hl-builtin">document</span><span class="hl-code">.</span><span class="hl-identifier">getElementById</span><span class="hl-brackets">(</span><span class="hl-quotes">'</span><span class="hl-string">context</span><span class="hl-quotes">'</span><span class="hl-brackets">)</span><span class="hl-code">,</span><span class="hl-quotes">'</span><span class="hl-string">120</span><span class="hl-quotes">'</span><span class="hl-code">,</span><span class="hl-number">0</span><span class="hl-code">,</span><span class="hl-quotes">'</span><span class="hl-string">Demo</span><span class="hl-quotes">'</span><span class="hl-code">,</span><span class="hl-number">1</span><span class="hl-brackets">)</span><span class="hl-code">;
+...
+</span><span class="hl-identifier">ctx</span><span class="hl-code">.</span><span class="hl-identifier">enableDirectOnClick</span><span class="hl-brackets">(</span><span class="hl-reserved">true</span><span class="hl-brackets">)</span><span class="hl-code">;
+</span><span class="hl-identifier">ctx</span><span class="hl-code">.</span><span class="hl-identifier">enableWindowOpenMode</span><span class="hl-brackets">(</span><span class="hl-reserved">false</span><span class="hl-brackets">)</span><span class="hl-code">;
+ 
+</span><span class="hl-identifier">mygrid</span><span class="hl-code"> = </span><span class="hl-reserved">new</span><span class="hl-code"> </span><span class="hl-identifier">dhtmlXGridObject</span><span class="hl-brackets">(</span><span class="hl-quotes">'</span><span class="hl-string">gridbox</span><span class="hl-quotes">'</span><span class="hl-brackets">)</span><span class="hl-code">;
+...
+</span><span class="hl-identifier">mygrid</span><span class="hl-code">.</span><span class="hl-identifier">setColTypes</span><span class="hl-brackets">(</span><span class="hl-quotes">&quot;</span><span class="hl-string">dyn,ed,context,price,ch,co,ra,ro</span><span class="hl-quotes">&quot;</span><span class="hl-brackets">)</span><span class="hl-code">;
+</span><span class="hl-identifier">mygrid</span><span class="hl-code">.</span><span class="hl-identifier">setSubContext</span><span class="hl-brackets">(</span><span class="hl-identifier">ctx</span><span class="hl-code">,</span><span class="hl-number">2</span><span class="hl-code">,</span><span class="hl-number">0</span><span class="hl-brackets">)</span><span class="hl-code">;
+</span><span class="hl-identifier">mygrid</span><span class="hl-code">.</span><span class="hl-identifier">init</span><span class="hl-brackets">(</span><span class="hl-brackets">)</span><span class="hl-code">;
+    
+</span><span class="hl-identifier">ctx</span><span class="hl-code">.</span><span class="hl-identifier">loadXML</span><span class="hl-brackets">(</span><span class="hl-quotes">&quot;</span><span class="hl-string">_menuV1.xml</span><span class="hl-quotes">&quot;</span><span class="hl-code">,</span><span class="hl-reserved">function</span><span class="hl-brackets">(</span><span class="hl-brackets">)</span><span class="hl-brackets">{</span><span class="hl-code">
+    </span><span class="hl-identifier">mygrid</span><span class="hl-code">.</span><span class="hl-identifier">loadXML</span><span class="hl-brackets">(</span><span class="hl-quotes">&quot;</span><span class="hl-string">grid.xml</span><span class="hl-quotes">&quot;</span><span class="hl-brackets">)</span><span class="hl-code">;
+</span><span class="hl-brackets">}</span><span class="hl-brackets">)</span><span class="hl-code">;</span></pre></div></div>
+
+
+
+<script>
+window.onload = function() {
+	var ctx=new dhtmlXMenuBarObject(document.getElementById('context'),'120',0,'Demo',1);
+	ctx.setGfxPath("../../../dhtmlxMenu/codebase/imgs/");
+	ctx.enableDirectOnClick(true);
+	ctx.enableWindowOpenMode(false);
+
+	mygrid = new dhtmlXGridObject('gridbox');
+	mygrid.setImagePath("../../codebase/imgs/");
+	mygrid.setHeader("A,B,ed,Price,In Store,Shipping,Bestseller,Date of Publication");
+	mygrid.setInitWidths("50,150,100,80,80,80,80,200")
+	mygrid.setColAlign("right,left,left,right,center,left,center,center")
+	mygrid.setColTypes("dyn,ed,context,price,ch,co,ra,ro");
+	mygrid.setSubContext(ctx,2,0);
+	mygrid.init();
+	mygrid.setSkin("modern");
+
+	ctx.loadXML("_menuV1.xml",function(){
+		mygrid.loadXML("linked_grid.xml");
+		
+	});
+}
+</script>
+
+<!-- FOOTER -->
+<table callspacing="0" cellpadding="0" border="0" class="sample_footer"><tr><td style="padding-left: 8px;">&copy; <a href="http://www.dhtmlx.com">DHTMLX LTD</a>. All rights reserved</td></tr></table>
+<!-- FOOTER -->
+
+</body>
+</html>

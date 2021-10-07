@@ -1,0 +1,365 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userAlias": "mainview",
+        "designer|userClassName": "MainView",
+        "itemId": "mainView",
+        "layout": "border"
+    },
+    "configAlternates": {
+        "designer|initialView": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "itemId": "string",
+        "layout": "string"
+    },
+    "designerId": "353f0c49-9162-4dc5-8e2d-ffb09f0d3a62",
+    "viewControllerInstanceId": "e0b7feb2-75c1-4538-ad8b-f4ba408c7b59",
+    "viewModelInstanceId": "e06398df-21db-494a-8ccf-784239a17dcd",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "menuPanel",
+                "layout|region": "west",
+                "layout|split": true,
+                "title": "Menu",
+                "width": 150
+            },
+            "configAlternates": {
+                "itemId": "string",
+                "layout|region": "string",
+                "layout|split": "boolean",
+                "title": "string",
+                "width": "auto"
+            },
+            "name": "MyPanel1",
+            "designerId": "70e4bdc2-8c21-4da3-b357-bdac73847e65",
+            "cn": [
+                {
+                    "type": "Ext.menu.Menu",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "floating": false,
+                        "itemId": "menu",
+                        "width": null
+                    },
+                    "configAlternates": {
+                        "floating": "boolean",
+                        "itemId": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyMenu",
+                    "designerId": "25abbee3-e977-4e92-bc3a-73fcf2aea764",
+                    "cn": [
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "focusable": true,
+                                "href": null,
+                                "itemId": "home",
+                                "text": "Home"
+                            },
+                            "configAlternates": {
+                                "focusable": "boolean",
+                                "href": "string",
+                                "itemId": "string",
+                                "text": "string"
+                            },
+                            "name": "MyMenuItem",
+                            "designerId": "2d21cd52-2bd4-4f26-99f8-ecb1b8453ece"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "focusable": true,
+                                "href": null,
+                                "itemId": "about",
+                                "text": "Test Request"
+                            },
+                            "configAlternates": {
+                                "focusable": "boolean",
+                                "href": "string",
+                                "itemId": "string",
+                                "text": "string"
+                            },
+                            "name": "MyMenuItem1",
+                            "designerId": "a9c5c2c5-e485-4719-a39d-1f3df3d72393"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "focusable": true,
+                                "href": null,
+                                "itemId": "contact",
+                                "text": "Pending Requests"
+                            },
+                            "configAlternates": {
+                                "focusable": "boolean",
+                                "href": "string",
+                                "itemId": "string",
+                                "text": "string"
+                            },
+                            "name": "MyMenuItem2",
+                            "designerId": "9f67ea74-e63c-4b04-b4c2-4130f7cbd1f8"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "focusable": true,
+                                "href": null,
+                                "itemId": "contact1",
+                                "text": "Dicom Images"
+                            },
+                            "configAlternates": {
+                                "focusable": "boolean",
+                                "href": "string",
+                                "itemId": "string",
+                                "text": "string"
+                            },
+                            "name": "MyMenuItem3",
+                            "designerId": "756166d7-6a16-4e83-ad2d-c73f58e9a38c"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "focusable": true,
+                                "href": null,
+                                "itemId": "contact2",
+                                "text": "Reports"
+                            },
+                            "configAlternates": {
+                                "focusable": "boolean",
+                                "href": "string",
+                                "itemId": "string",
+                                "text": "string"
+                            },
+                            "name": "MyMenuItem4",
+                            "designerId": "a8786491-3431-4110-9a05-51703bc18ca8"
+                        },
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onMenuClick",
+                                "implHandler": [
+                                    "location.hash = item.itemId;"
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onMenuClick",
+                            "designerId": "6aabf84c-692c-4a9f-9b11-0d46214a63b5"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "contentPanel",
+                "layout": "card",
+                "layout|region": "center",
+                "title": null
+            },
+            "configAlternates": {
+                "itemId": "string",
+                "layout": "string",
+                "layout|region": "string",
+                "title": "string"
+            },
+            "name": "MyPanel2",
+            "designerId": "c98c4f91-6f66-4054-8e31-2ccc2ab4f975",
+            "cn": [
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "center",
+                        "container|pack": "center",
+                        "itemId": "homePanel",
+                        "layout": "vbox",
+                        "title": "Radiology",
+                        "width": null
+                    },
+                    "configAlternates": {
+                        "container|align": "string",
+                        "container|pack": "string",
+                        "itemId": "string",
+                        "layout": "string",
+                        "title": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyPanel3",
+                    "designerId": "6e0310e2-3829-40e2-acea-c3d80afea341",
+                    "cn": [
+                        {
+                            "type": "Ext.form.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "text": "Home View"
+                            },
+                            "configAlternates": {
+                                "text": "string"
+                            },
+                            "name": "MyLabel",
+                            "designerId": "3c8a041c-5502-4ce2-a822-597ddafe4b34"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "center",
+                        "container|pack": "center",
+                        "itemId": "aboutPanel",
+                        "layout": "vbox",
+                        "title": "About Us"
+                    },
+                    "configAlternates": {
+                        "container|align": "string",
+                        "container|pack": "string",
+                        "itemId": "string",
+                        "layout": "string",
+                        "title": "string"
+                    },
+                    "name": "MyPanel4",
+                    "designerId": "daf95a82-9e4f-4afd-b806-c2cc1b902fad",
+                    "cn": [
+                        {
+                            "type": "Ext.form.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "text": "About Us View"
+                            },
+                            "configAlternates": {
+                                "layout|flex": "number",
+                                "text": "string"
+                            },
+                            "name": "MyLabel1",
+                            "designerId": "7179b2cc-4d46-4d6f-81d7-7672eac6c1e6"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "center",
+                        "container|pack": "center",
+                        "itemId": "contactPanel",
+                        "layout": "vbox",
+                        "title": "Contact Us"
+                    },
+                    "configAlternates": {
+                        "container|align": "string",
+                        "container|pack": "string",
+                        "itemId": "string",
+                        "layout": "string",
+                        "title": "string"
+                    },
+                    "name": "MyPanel5",
+                    "designerId": "bdce8a33-1e17-42fa-bdbd-f2e50d0d22da",
+                    "cn": [
+                        {
+                            "type": "Ext.form.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "text": "Contact Us View"
+                            },
+                            "configAlternates": {
+                                "layout|flex": "number",
+                                "text": "string"
+                            },
+                            "name": "MyLabel2",
+                            "designerId": "d6c3094e-58c9-4996-a39e-015335bf8746"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,338 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "bodyPadding": 10,
+        "designer|snapToGrid": 5,
+        "designer|userAlias": "cashpointslist",
+        "designer|userClassName": "CashPointsList",
+        "height": 687,
+        "layout": "absolute",
+        "title": "Cash Points",
+        "width": 798
+    },
+    "configAlternates": {
+        "bodyPadding": "auto",
+        "designer|snapToGrid": "number",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "layout": "string",
+        "title": "string",
+        "width": "auto"
+    },
+    "name": "MyForm",
+    "designerId": "fbabdd12-2fbf-48c4-bf1a-45305ad595ec",
+    "viewControllerInstanceId": "6ace3c09-92b1-442d-98cb-0001eb62a626",
+    "viewModelInstanceId": "2eee70c0-2aee-48f9-aade-6288348bb293",
+    "cn": [
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "cashpoint",
+                "fieldLabel": "Cash Point",
+                "itemId": "cashpoint",
+                "layout|x": 5,
+                "layout|y": 5,
+                "name": "CashPoint"
+            },
+            "configAlternates": {
+                "designer|displayName": "string",
+                "fieldLabel": "string",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "name": "string"
+            },
+            "name": "MyTextField63",
+            "designerId": "eb6780fa-12e0-4746-a1e3-221b9c1f50c0"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "prefix",
+                "fieldLabel": "Prefix",
+                "itemId": "prefix",
+                "layout|x": 5,
+                "layout|y": 75,
+                "name": "Prefix"
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "designer|displayName": "string",
+                "itemId": "string",
+                "name": "string"
+            },
+            "name": "MyTextField64",
+            "designerId": "6039e9e7-cd77-4a93-8a4f-b3925d253a20"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "description",
+                "fieldLabel": "Description",
+                "itemId": "description",
+                "layout|x": 5,
+                "layout|y": 40,
+                "name": "Description"
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "designer|displayName": "string",
+                "itemId": "string",
+                "name": "string"
+            },
+            "name": "MyTextField65",
+            "designerId": "1b3747e0-ac44-40e7-996d-de1a09019c0f"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "save",
+                "itemId": "save",
+                "layout|x": 145,
+                "layout|y": 110,
+                "text": "Save",
+                "width": 95
+            },
+            "configAlternates": {
+                "designer|displayName": "string",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "text": "string",
+                "width": "auto"
+            },
+            "name": "MyButton11",
+            "designerId": "21315685-7610-478a-9099-1afef86952c0"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "refresh",
+                "itemId": "refresh",
+                "layout|x": 260,
+                "layout|y": 110,
+                "text": "Reset"
+            },
+            "configAlternates": {
+                "designer|displayName": "string",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "text": "string"
+            },
+            "name": "MyButton12",
+            "designerId": "3a82753f-a6fa-41e5-92b5-0300e740c76a"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "deletecashpoint",
+                "itemId": "deletecashpoint",
+                "layout|x": 5,
+                "layout|y": 545,
+                "text": "Delete Cash Point"
+            },
+            "configAlternates": {
+                "designer|displayName": "string",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "text": "string"
+            },
+            "name": "MyButton13",
+            "designerId": "f2ff7199-30b0-4400-add6-bbe831b0f29b"
+        },
+        {
+            "type": "Ext.grid.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 395,
+                "layout|x": 5,
+                "layout|y": 145,
+                "store": [
+                    "{cashPointsModels}"
+                ],
+                "title": "My Grid Panel"
+            },
+            "configAlternates": {
+                "store": "binding",
+                "height": "auto",
+                "layout|x": "number",
+                "layout|y": "number",
+                "title": "string"
+            },
+            "name": "MyGridPanel5",
+            "designerId": "a378e29a-8815-4dd4-8807-b3450483beb1",
+            "cn": [
+                {
+                    "type": "Ext.view.Table",
+                    "reference": {
+                        "name": "viewConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "width": 733
+                    },
+                    "configAlternates": {
+                        "width": "auto"
+                    },
+                    "name": "MyTable4",
+                    "designerId": "f8a60994-9401-42ee-b905-7e87bb24f65b"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "code",
+                        "text": "Code"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string"
+                    },
+                    "name": "MyColumn19",
+                    "designerId": "5f5f3b21-4efa-459f-96f4-c8b9083348d2"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "name",
+                        "text": "Name"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string"
+                    },
+                    "name": "MyColumn20",
+                    "designerId": "cd230840-01d0-4b0d-a88e-e289798517b4"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "prefix",
+                        "text": "Prefix"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string"
+                    },
+                    "name": "MyColumn21",
+                    "designerId": "f0011572-3ecd-4f2b-9abc-d62a3966d944"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "nextreceiptNo",
+                        "text": "Nextreceipt No"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string"
+                    },
+                    "name": "MyColumn25",
+                    "designerId": "31139d07-18ae-46cc-8913-cd211509b93e"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "nextvoucherNo",
+                        "text": "Nextvoucher No"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string"
+                    },
+                    "name": "MyColumn26",
+                    "designerId": "b80a914a-4e4f-4497-8045-1ec2a7e31fb2"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "nextshiftNo",
+                        "text": "Nextshift No"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string"
+                    },
+                    "name": "MyColumn27",
+                    "designerId": "1a5fb057-ee71-42c3-82c5-d7a9feb637f3"
+                }
+            ]
+        }
+    ]
+}

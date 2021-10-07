@@ -1,0 +1,162 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "bodyCls": [
+            "x-portal-body"
+        ],
+        "cls": [
+            "x-portal"
+        ],
+        "designer|userAlias": "triagepanel",
+        "designer|userClassName": "TriagePanel",
+        "height": null,
+        "layout": "column",
+        "title": null,
+        "width": null
+    },
+    "configAlternates": {
+        "bodyCls": "typedarray",
+        "cls": "string",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "layout": "string",
+        "title": "string",
+        "width": "auto",
+        "scrollable": "boolean"
+    },
+    "name": "MyPanel2",
+    "designerId": "b7073dee-f976-4dc5-8012-af65ecee1178",
+    "viewControllerInstanceId": "2d5a9f33-6397-4f7e-bf5f-89d0007fd64d",
+    "viewModelInstanceId": "3555cb70-43c0-4112-92a8-9a27070199de",
+    "cn": [
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "x-portal-column"
+                ],
+                "designer|displayName": "Column1",
+                "layout|columnWidth": 0.33333,
+                "padding": "5 3 3 1"
+            },
+            "configAlternates": {
+                "cls": "string",
+                "designer|displayName": "string",
+                "layout|columnWidth": "auto",
+                "padding": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyContainer7",
+            "designerId": "437265a5-2e04-495b-b977-670479325ac4",
+            "cn": [
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
+                    "name": "roomallocation",
+                    "designerId": "118c0aac-fad5-42fe-8ca5-fac44003167c",
+                    "masterInstanceId": "49f8c362-673b-4fa1-85b3-039d6f906d94"
+                }
+            ]
+        },
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "x-portal-column"
+                ],
+                "designer|displayName": "Column2",
+                "layout|columnWidth": 0.33333,
+                "padding": "5 3 3 1"
+            },
+            "configAlternates": {
+                "cls": "string",
+                "designer|displayName": "string",
+                "layout|columnWidth": "auto",
+                "padding": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyContainer8",
+            "designerId": "8ff5383e-df69-4d6c-a595-9250827754c7",
+            "cn": [
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
+                    "name": "doctorsworkload",
+                    "designerId": "eaae5d9f-12e9-4899-a16b-56f8cda5fb13",
+                    "masterInstanceId": "9009b61c-9d43-43a7-bd2e-a346ddc1263d"
+                }
+            ]
+        },
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "x-portal-column"
+                ],
+                "designer|displayName": "Column3",
+                "layout|columnWidth": 0.33333,
+                "padding": "5 3 3 1"
+            },
+            "configAlternates": {
+                "cls": "string",
+                "designer|displayName": "string",
+                "layout|columnWidth": "auto",
+                "padding": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyContainer9",
+            "designerId": "2fab0f4c-0414-4d23-b2c2-33a1d4495224",
+            "cn": [
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
+                    "name": "patientstatus",
+                    "designerId": "302c3d48-eb5d-4c31-b130-bbdee52294b8",
+                    "masterInstanceId": "d30af8fd-2eac-4734-a747-4e5ac6b5d17b"
+                }
+            ]
+        }
+    ]
+}

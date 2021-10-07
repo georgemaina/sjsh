@@ -1,0 +1,406 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "baseCls": "",
+        "bodyCls": [
+            "x-portal-body"
+        ],
+        "cls": [
+            "x-portal"
+        ],
+        "designer|uiInterfaceName": "light-framed-framed",
+        "designer|userAlias": "doctorsarea",
+        "designer|userClassName": "DoctorsArea",
+        "frame": true,
+        "frameHeader": false,
+        "height": null,
+        "layout": "column",
+        "scrollable": true,
+        "title": null,
+        "ui": "light-framed-framed",
+        "width": null
+    },
+    "configAlternates": {
+        "autoScroll": "boolean",
+        "baseCls": "string",
+        "bodyCls": "typedarray",
+        "cls": "string",
+        "designer|uiInterfaceName": "string",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "frame": "boolean",
+        "frameHeader": "boolean",
+        "height": "auto",
+        "layout": "string",
+        "title": "string",
+        "ui": "string",
+        "width": "auto",
+        "scrollable": "boolean"
+    },
+    "name": "MyPanel3",
+    "designerId": "8d2f2e84-fc52-4244-b0b2-176ee5f30163",
+    "viewControllerInstanceId": "2cbad9f7-8aac-4c05-970b-eff6d7b16732",
+    "viewModelInstanceId": "eb4a9e88-fd0a-4906-90c8-2f491ee7798c",
+    "cn": [
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "x-portal-column"
+                ],
+                "designer|displayName": "Column1",
+                "layout": "anchor",
+                "layout|columnWidth": 0.33333,
+                "padding": "5 3 3 1"
+            },
+            "configAlternates": {
+                "cls": "string",
+                "designer|displayName": "string",
+                "layout": "string",
+                "layout|columnWidth": "auto",
+                "padding": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyContainer3",
+            "designerId": "208a982b-686e-4a37-8686-d24ffe773db4",
+            "cn": [
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "closable": true,
+                        "collapsible": true,
+                        "draggable": true,
+                        "height": 319
+                    },
+                    "configAlternates": {
+                        "closable": "boolean",
+                        "collapsible": "boolean",
+                        "draggable": "boolean",
+                        "height": "auto",
+                        "scrollable": "boolean"
+                    },
+                    "name": "doctorsnotes1",
+                    "designerId": "2cb21800-5e6e-445a-bc88-a5094b820448",
+                    "masterInstanceId": "fd3b387e-3ffb-4a63-90ae-5aac51f73d32"
+                },
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "closable": true,
+                        "cls": [
+                            "x-portlet"
+                        ],
+                        "collapsible": true,
+                        "draggable": true,
+                        "minHeight": 250
+                    },
+                    "configAlternates": {
+                        "closable": "boolean",
+                        "cls": "string",
+                        "collapsible": "boolean",
+                        "draggable": "boolean",
+                        "minHeight": "number",
+                        "scrollable": "boolean"
+                    },
+                    "name": "prescriptions",
+                    "designerId": "adfdf256-6c52-4c89-bec7-a8bfe9828c1b",
+                    "masterInstanceId": "bc54039b-0cb9-4fe4-8756-8487066d5c21"
+                }
+            ]
+        },
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "x-portal-column"
+                ],
+                "designer|displayName": "Column2",
+                "layout": "anchor",
+                "layout|columnWidth": 0.33333,
+                "padding": "5 3 3 3"
+            },
+            "configAlternates": {
+                "cls": "string",
+                "designer|displayName": "string",
+                "layout": "string",
+                "layout|columnWidth": "auto",
+                "padding": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyContainer4",
+            "designerId": "5bb82ee6-1b2b-4030-91f6-a51b74320562",
+            "cn": [
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "closable": true,
+                        "collapsible": true,
+                        "draggable": true
+                    },
+                    "configAlternates": {
+                        "closable": "boolean",
+                        "collapsible": "boolean",
+                        "draggable": "boolean",
+                        "scrollable": "boolean"
+                    },
+                    "name": "vitals1",
+                    "designerId": "33622d33-3491-43a8-beff-6e19ab4e34e8",
+                    "masterInstanceId": "51a55267-5db3-4711-b5c7-edee77fa8892"
+                },
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "closable": true,
+                        "cls": [
+                            "x-portlet"
+                        ],
+                        "collapsible": true,
+                        "draggable": true,
+                        "isPortlet": true,
+                        "simpleDrag": true,
+                        "width": null
+                    },
+                    "configAlternates": {
+                        "isPortlet": "boolean",
+                        "closable": "boolean",
+                        "cls": "string",
+                        "collapsible": "boolean",
+                        "draggable": "boolean",
+                        "height": "auto",
+                        "simpleDrag": "boolean",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
+                    "name": "complains",
+                    "designerId": "78911825-2db1-44d8-8654-d82f6d37c940",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "isPortlet",
+                            "type": "string"
+                        }
+                    ],
+                    "masterInstanceId": "b8855c90-aefb-4ab9-b56d-66a36d44b4d6"
+                }
+            ]
+        },
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "x-portal-column"
+                ],
+                "designer|displayName": "Column3",
+                "layout": "anchor",
+                "layout|columnWidth": 0.33333,
+                "padding": "5 5 5 5",
+                "toFrontOnShow": false
+            },
+            "configAlternates": {
+                "cls": "string",
+                "designer|displayName": "string",
+                "layout": "string",
+                "layout|columnWidth": "auto",
+                "padding": "auto",
+                "toFrontOnShow": "boolean",
+                "scrollable": "boolean"
+            },
+            "name": "MyContainer5",
+            "designerId": "bf8aaf08-e41b-4ba7-9a7a-b9670e149b09",
+            "cn": [
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "closable": true,
+                        "collapsible": true,
+                        "draggable": true
+                    },
+                    "configAlternates": {
+                        "closable": "boolean",
+                        "collapsible": "boolean",
+                        "draggable": "boolean",
+                        "scrollable": "boolean"
+                    },
+                    "name": "investigations1",
+                    "designerId": "d437b3ef-d701-48b9-89b6-0d34252e3b00",
+                    "masterInstanceId": "f7876c12-4d7e-4693-ab27-e7fcba5c56ee"
+                },
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "closable": true,
+                        "collapsible": true,
+                        "draggable": true,
+                        "height": 200,
+                        "width": null
+                    },
+                    "configAlternates": {
+                        "closable": "boolean",
+                        "collapsible": "boolean",
+                        "draggable": "boolean",
+                        "height": "auto",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
+                    "name": "diagnosispanel1",
+                    "designerId": "a660fefa-e9e7-46b9-b0b4-7c39274c51a1",
+                    "masterInstanceId": "06100a01-c0e3-4334-882d-7bbd37ff148c"
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onPanelAfterRender",
+                "implHandler": [
+                    "this.dd = Ext.create('CarePortal.view.PortalDropZone', this, this.dropConfig);"
+                ],
+                "name": "afterrender",
+                "scope": "me"
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
+            },
+            "name": "onPanelAfterRender",
+            "designerId": "13c25f78-86a8-4187-b895-40b1e61213c5"
+        },
+        {
+            "type": "customevent",
+            "reference": {
+                "name": "customEvents",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "drop"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "CustomEvent5",
+            "designerId": "4a7597b7-3fc3-4aba-8339-a53939993ec1"
+        },
+        {
+            "type": "customevent",
+            "reference": {
+                "name": "customEvents",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "beforedrop"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "CustomEvent6",
+            "designerId": "5068f23f-8be1-4bdf-9f16-5d3200e3f5b7"
+        },
+        {
+            "type": "customevent",
+            "reference": {
+                "name": "customEvents",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "drugover"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "CustomEvent7",
+            "designerId": "c80ce740-0f89-4fbb-95bd-3f91a6193a1f"
+        },
+        {
+            "type": "customevent",
+            "reference": {
+                "name": "customEvents",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "beforedrugover"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "CustomEvent8",
+            "designerId": "58951d38-41aa-421f-93f7-adeda6e17d07"
+        },
+        {
+            "type": "customevent",
+            "reference": {
+                "name": "customEvents",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "validatedrop"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "CustomEvent9",
+            "designerId": "e3ec7135-2009-4699-87f5-f848e62928d9"
+        }
+    ]
+}

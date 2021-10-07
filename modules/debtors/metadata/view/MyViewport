@@ -1,0 +1,940 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userAlias": "myviewport",
+        "designer|userClassName": "MyViewport",
+        "layout": "border"
+    },
+    "configAlternates": {
+        "designer|initialView": "boolean",
+        "designer|userClassName": "string",
+        "layout": "string",
+        "designer|userAlias": "string",
+        "scrollable": "boolean"
+    },
+    "designerId": "d054f66c-2e0d-49b4-9c91-854174f0319d",
+    "viewControllerInstanceId": "af400bac-79ea-4000-ba80-41a0a8bc61c5",
+    "viewModelInstanceId": "dfc95c9c-8124-4f20-b1f0-5da17a4a4d5e",
+    "cn": [
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|region": "center"
+            },
+            "configAlternates": {
+                "layout|region": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyContainer",
+            "designerId": "9869bd8b-4da1-406f-a0a2-586967dc20dd"
+        },
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|region": "west",
+                "resizable": false,
+                "width": 318
+            },
+            "configAlternates": {
+                "layout|region": "string",
+                "width": "auto",
+                "scrollable": "boolean",
+                "resizable": "boolean"
+            },
+            "name": "MyContainer1",
+            "designerId": "f85d3047-1823-4772-85d5-cc196762da21",
+            "cn": [
+                {
+                    "type": "Ext.tab.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "activeTab": 0,
+                        "height": 933,
+                        "width": null
+                    },
+                    "configAlternates": {
+                        "activeTab": "auto",
+                        "height": "auto",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyTabPanel1",
+                    "designerId": "15c15d26-da8c-41a6-9e5c-7aeb27bffd4d",
+                    "cn": [
+                        {
+                            "type": "Ext.panel.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "height": 742,
+                                "id": "debtorJobs",
+                                "layout": "anchor",
+                                "title": "Debtors & Jobs",
+                                "width": null
+                            },
+                            "configAlternates": {
+                                "height": "auto",
+                                "id": "string",
+                                "title": "string",
+                                "width": "auto",
+                                "scrollable": "boolean",
+                                "layout": "string"
+                            },
+                            "name": "MyPanel",
+                            "designerId": "a520a956-e525-4281-912c-4a6b9086a767",
+                            "cn": [
+                                {
+                                    "type": "Ext.tab.Tab",
+                                    "reference": {
+                                        "name": "tabConfig",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "configAlternates": {
+                                        "scrollable": "boolean"
+                                    },
+                                    "name": "TabConfig",
+                                    "designerId": "33c5cd05-6329-4bfc-b655-ce14be14beec"
+                                },
+                                {
+                                    "type": "Ext.panel.Panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "animCollapse": true,
+                                        "collapsed": true,
+                                        "collapsible": true,
+                                        "designer|snapToGrid": 5,
+                                        "frame": true,
+                                        "height": 208,
+                                        "layout": "absolute",
+                                        "title": "Debtors Details",
+                                        "titleCollapse": true,
+                                        "width": null
+                                    },
+                                    "configAlternates": {
+                                        "designer|snapToGrid": "number",
+                                        "frame": "boolean",
+                                        "height": "auto",
+                                        "layout": "string",
+                                        "title": "string",
+                                        "width": "auto",
+                                        "scrollable": "boolean",
+                                        "animCollapse": "auto",
+                                        "collapsible": "boolean",
+                                        "collapsed": "boolean",
+                                        "titleCollapse": "boolean"
+                                    },
+                                    "name": "MyPanel1",
+                                    "designerId": "ce580bf3-bdb5-4083-b117-c9412785f697",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.menu.Menu",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|displayName": "DebtorsMenus",
+                                                "floating": false,
+                                                "width": null
+                                            },
+                                            "configAlternates": {
+                                                "designer|displayName": "string",
+                                                "floating": "boolean",
+                                                "width": "auto",
+                                                "scrollable": "boolean"
+                                            },
+                                            "name": "MyMenu",
+                                            "designerId": "5f28d314-cfca-434a-a6ed-fff7cef9f991",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.menu.Item",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "focusable": true,
+                                                        "icon": "../../icons/register.png",
+                                                        "id": null,
+                                                        "itemId": "mnuDebtorsRegister",
+                                                        "text": "Debtors Register"
+                                                    },
+                                                    "configAlternates": {
+                                                        "icon": "string",
+                                                        "id": "string",
+                                                        "itemId": "string",
+                                                        "text": "string",
+                                                        "scrollable": "boolean",
+                                                        "focusable": "boolean"
+                                                    },
+                                                    "name": "MyMenuItem",
+                                                    "designerId": "5c1d8c9d-22cb-46c5-8613-c41a9e6e1429"
+                                                },
+                                                {
+                                                    "type": "Ext.menu.Item",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "focusable": true,
+                                                        "icon": "../../icons/list.png",
+                                                        "id": null,
+                                                        "itemId": "mnuDebtorsList",
+                                                        "text": "Debtors List"
+                                                    },
+                                                    "configAlternates": {
+                                                        "icon": "string",
+                                                        "id": "string",
+                                                        "itemId": "string",
+                                                        "text": "string",
+                                                        "scrollable": "boolean",
+                                                        "focusable": "boolean"
+                                                    },
+                                                    "name": "MyMenuItem1",
+                                                    "designerId": "eecf83e1-778b-43f8-85d6-c717a4f27ba1"
+                                                },
+                                                {
+                                                    "type": "Ext.menu.Item",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "focusable": true,
+                                                        "icon": "../../icons/blogs-icon.png",
+                                                        "id": null,
+                                                        "itemId": "mnuDebtorMembers",
+                                                        "text": "Debtor Members"
+                                                    },
+                                                    "configAlternates": {
+                                                        "icon": "string",
+                                                        "id": "string",
+                                                        "itemId": "string",
+                                                        "text": "string",
+                                                        "scrollable": "boolean",
+                                                        "focusable": "boolean"
+                                                    },
+                                                    "name": "MyMenuItem2",
+                                                    "designerId": "17d89345-947e-4091-9c0f-f0d0af2610a6"
+                                                },
+                                                {
+                                                    "type": "Ext.menu.Item",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "focusable": true,
+                                                        "hidden": true,
+                                                        "icon": "../../icons/document-next-icon.png",
+                                                        "itemId": "mnuTransactions",
+                                                        "text": "Transactions"
+                                                    },
+                                                    "configAlternates": {
+                                                        "icon": "string",
+                                                        "itemId": "string",
+                                                        "text": "string",
+                                                        "scrollable": "boolean",
+                                                        "focusable": "boolean",
+                                                        "hidden": "boolean"
+                                                    },
+                                                    "name": "MyMenuItem3",
+                                                    "designerId": "a86b00e8-93c4-4b11-b122-0d61fa4c8e8c"
+                                                },
+                                                {
+                                                    "type": "Ext.menu.Item",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "focusable": true,
+                                                        "icon": "../../icons/report_check.png",
+                                                        "id": null,
+                                                        "itemId": "mnuInvoices",
+                                                        "text": "Invoices"
+                                                    },
+                                                    "configAlternates": {
+                                                        "icon": "string",
+                                                        "id": "string",
+                                                        "itemId": "string",
+                                                        "text": "string",
+                                                        "scrollable": "boolean",
+                                                        "focusable": "boolean"
+                                                    },
+                                                    "name": "MyMenuItem4",
+                                                    "designerId": "b8235c68-61d8-44e0-a971-d5b40d3783d0"
+                                                },
+                                                {
+                                                    "type": "Ext.menu.Item",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "focusable": true,
+                                                        "icon": "../../icons/blogs-icon.png",
+                                                        "id": null,
+                                                        "itemId": "mnuReceipts",
+                                                        "text": "Receipts"
+                                                    },
+                                                    "configAlternates": {
+                                                        "icon": "string",
+                                                        "id": "string",
+                                                        "itemId": "string",
+                                                        "text": "string",
+                                                        "scrollable": "boolean",
+                                                        "focusable": "boolean"
+                                                    },
+                                                    "name": "MyMenuItem5",
+                                                    "designerId": "c5c4fdfc-1f67-4f58-b5a3-912d481ed765"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.grid.Panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "animCollapse": true,
+                                        "collapsible": true,
+                                        "columnLines": true,
+                                        "height": 400,
+                                        "itemId": "debtorBalances",
+                                        "maxHeight": 600,
+                                        "minHeight": 500,
+                                        "scrollable": true,
+                                        "store": "CustomerTrans",
+                                        "title": "Balances",
+                                        "width": null
+                                    },
+                                    "configAlternates": {
+                                        "autoScroll": "boolean",
+                                        "columnLines": "boolean",
+                                        "height": "auto",
+                                        "itemId": "string",
+                                        "minHeight": "number",
+                                        "store": "store",
+                                        "title": "string",
+                                        "width": "auto",
+                                        "scrollable": "boolean",
+                                        "animCollapse": "auto",
+                                        "collapsible": "boolean",
+                                        "maxHeight": "number"
+                                    },
+                                    "name": "MyGridPanel",
+                                    "designerId": "6ff4868e-bb6d-4982-beab-a2c16dd2cea9",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.view.Table",
+                                            "reference": {
+                                                "name": "viewConfig",
+                                                "type": "object"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "height": 288
+                                            },
+                                            "configAlternates": {
+                                                "scrollable": "boolean",
+                                                "height": "auto"
+                                            },
+                                            "name": "MyGridView",
+                                            "designerId": "89629a15-3652-417a-ad11-638b3df8a12a"
+                                        },
+                                        {
+                                            "type": "Ext.grid.column.Column",
+                                            "reference": {
+                                                "name": "columns",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "dataIndex": "accno",
+                                                "text": "Accno",
+                                                "width": 60
+                                            },
+                                            "configAlternates": {
+                                                "dataIndex": "datafield",
+                                                "text": "string",
+                                                "width": "auto",
+                                                "scrollable": "boolean"
+                                            },
+                                            "name": "MyColumn",
+                                            "designerId": "2be808e7-1cd2-4a4b-9582-4de95a4f1955"
+                                        },
+                                        {
+                                            "type": "Ext.grid.column.Column",
+                                            "reference": {
+                                                "name": "columns",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "dataIndex": "names",
+                                                "text": "Names",
+                                                "width": 145
+                                            },
+                                            "configAlternates": {
+                                                "dataIndex": "datafield",
+                                                "text": "string",
+                                                "width": "auto",
+                                                "scrollable": "boolean"
+                                            },
+                                            "name": "MyColumn1",
+                                            "designerId": "65e3bd99-a62c-464b-b6b6-b8efa979547f"
+                                        },
+                                        {
+                                            "type": "Ext.grid.column.Column",
+                                            "reference": {
+                                                "name": "columns",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "align": "end",
+                                                "dataIndex": "balance",
+                                                "text": "Balance"
+                                            },
+                                            "configAlternates": {
+                                                "dataIndex": "datafield",
+                                                "text": "string",
+                                                "scrollable": "boolean",
+                                                "align": "string"
+                                            },
+                                            "name": "MyColumn2",
+                                            "designerId": "48d0d2c0-610f-4eca-9b67-746380588f64"
+                                        },
+                                        {
+                                            "type": "Ext.container.Container",
+                                            "reference": {
+                                                "name": "dockedItems",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|snapToGrid": 5,
+                                                "dock": "top",
+                                                "height": 30,
+                                                "layout": "absolute",
+                                                "width": 100
+                                            },
+                                            "configAlternates": {
+                                                "designer|snapToGrid": "number",
+                                                "dock": "string",
+                                                "height": "auto",
+                                                "layout": "string",
+                                                "width": "auto"
+                                            },
+                                            "name": "MyContainer4",
+                                            "designerId": "f8106fc8-2c1a-408f-bb1b-24121e364865",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.form.field.Text",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|displayName": null,
+                                                        "emptyText": "Find Debtor",
+                                                        "fieldLabel": null,
+                                                        "itemId": "txtSearchParam",
+                                                        "labelAlign": "right",
+                                                        "labelWidth": 80,
+                                                        "layout|x": 150,
+                                                        "layout|y": 0,
+                                                        "name": "txtFind",
+                                                        "width": 165
+                                                    },
+                                                    "configAlternates": {
+                                                        "designer|displayName": "string",
+                                                        "fieldLabel": "string",
+                                                        "itemId": "string",
+                                                        "labelWidth": "number",
+                                                        "layout|x": "number",
+                                                        "layout|y": "number",
+                                                        "name": "string",
+                                                        "width": "auto",
+                                                        "scrollable": "boolean",
+                                                        "labelAlign": "string",
+                                                        "emptyText": "string"
+                                                    },
+                                                    "name": "MyTextField",
+                                                    "designerId": "5723dee5-aec6-418d-9a27-3b8ed4364c9d",
+                                                    "cn": [
+                                                        {
+                                                            "type": "basiceventbinding",
+                                                            "reference": {
+                                                                "name": "listeners",
+                                                                "type": "array"
+                                                            },
+                                                            "codeClass": null,
+                                                            "userConfig": {
+                                                                "fn": "onTextfieldBlur",
+                                                                "implHandler": [
+                                                                    "var debtorjobs=Ext.data.StoreManager.lookup('CustomerTrans');  \r",
+                                                                    "debtorjobs.load({\r",
+                                                                    "    params: {\r",
+                                                                    "        accno: component.value\r",
+                                                                    "    },\r",
+                                                                    "    callback: function(records, operation, success) {\r",
+                                                                    "\r",
+                                                                    "\r",
+                                                                    "    },\r",
+                                                                    "    scope: this\r",
+                                                                    "});"
+                                                                ],
+                                                                "name": "blur",
+                                                                "scope": "me"
+                                                            },
+                                                            "configAlternates": {
+                                                                "fn": "string",
+                                                                "implHandler": "code",
+                                                                "name": "string",
+                                                                "scope": "string"
+                                                            },
+                                                            "name": "onTextfieldBlur",
+                                                            "designerId": "3486d7f1-6cd5-4974-a7e1-9a7fbaf6210f"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "Ext.form.field.ComboBox",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "displayField": "custNames",
+                                                        "emptyText": "Debtor Category",
+                                                        "fieldLabel": null,
+                                                        "itemId": "cbCategory",
+                                                        "labelAlign": "right",
+                                                        "labelWidth": 80,
+                                                        "layout|x": 0,
+                                                        "layout|y": 0,
+                                                        "queryMode": "local",
+                                                        "stateful": true,
+                                                        "store": "CustomerType",
+                                                        "typeAhead": true,
+                                                        "valueField": "ID",
+                                                        "width": 150
+                                                    },
+                                                    "configAlternates": {
+                                                        "displayField": "datafield",
+                                                        "fieldLabel": "string",
+                                                        "itemId": "string",
+                                                        "labelWidth": "number",
+                                                        "queryMode": "string",
+                                                        "stateful": "boolean",
+                                                        "store": "store",
+                                                        "typeAhead": "boolean",
+                                                        "valueField": "datafield",
+                                                        "width": "auto",
+                                                        "scrollable": "boolean",
+                                                        "layout|x": "number",
+                                                        "layout|y": "number",
+                                                        "labelAlign": "string",
+                                                        "emptyText": "string"
+                                                    },
+                                                    "name": "MyComboBox",
+                                                    "designerId": "16eb5ef3-8581-4ab3-a3e6-eee77622a29d"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.panel.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "height": 1200,
+                                "id": "debtorTrans",
+                                "title": "Customer Transactions",
+                                "width": 934
+                            },
+                            "configAlternates": {
+                                "height": "auto",
+                                "id": "string",
+                                "title": "string",
+                                "width": "auto",
+                                "scrollable": "boolean"
+                            },
+                            "name": "MyPanel2",
+                            "designerId": "532e1858-f216-40ed-b874-8da6848ac806",
+                            "cn": [
+                                {
+                                    "type": "Ext.tab.Tab",
+                                    "reference": {
+                                        "name": "tabConfig",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "configAlternates": {
+                                        "scrollable": "boolean"
+                                    },
+                                    "name": "TabConfig1",
+                                    "designerId": "6c32aaa4-9ee0-4426-b85c-b894080ced1c"
+                                },
+                                {
+                                    "type": "Ext.menu.Menu",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "floating": false,
+                                        "title": "Transactions",
+                                        "width": 283
+                                    },
+                                    "configAlternates": {
+                                        "floating": "boolean",
+                                        "title": "string",
+                                        "width": "auto",
+                                        "scrollable": "boolean"
+                                    },
+                                    "name": "MyMenu1",
+                                    "designerId": "f799c213-f9c0-4da3-9d2c-e9c61a6802be",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.menu.Item",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "focusable": true,
+                                                "id": null,
+                                                "itemId": "mnuAllocateReceipts",
+                                                "text": "Allocate Receipts"
+                                            },
+                                            "configAlternates": {
+                                                "id": "string",
+                                                "itemId": "string",
+                                                "text": "string",
+                                                "scrollable": "boolean",
+                                                "focusable": "boolean"
+                                            },
+                                            "name": "MyMenuItem6",
+                                            "designerId": "3bc52f9a-fc1c-4768-a6e0-10eb7be2d032"
+                                        },
+                                        {
+                                            "type": "Ext.menu.Item",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "focusable": true,
+                                                "itemId": "mnuCredits",
+                                                "text": "Miscellaneous Credit"
+                                            },
+                                            "configAlternates": {
+                                                "itemId": "string",
+                                                "text": "string",
+                                                "scrollable": "boolean",
+                                                "focusable": "boolean"
+                                            },
+                                            "name": "MyMenuItem7",
+                                            "designerId": "5308a559-4de2-461c-bcea-8048c25f3797"
+                                        },
+                                        {
+                                            "type": "Ext.menu.Item",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "focusable": true,
+                                                "itemId": "mnuDebits",
+                                                "text": "Miscellaneous Debit"
+                                            },
+                                            "configAlternates": {
+                                                "itemId": "string",
+                                                "text": "string",
+                                                "scrollable": "boolean",
+                                                "focusable": "boolean"
+                                            },
+                                            "name": "MyMenuItem8",
+                                            "designerId": "61baa4f9-9697-46a6-a901-7ef699082d62"
+                                        },
+                                        {
+                                            "type": "Ext.menu.Item",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "focusable": true,
+                                                "itemId": "mnuModifybills",
+                                                "text": "Modify Bills"
+                                            },
+                                            "configAlternates": {
+                                                "itemId": "string",
+                                                "text": "string",
+                                                "scrollable": "boolean",
+                                                "focusable": "boolean"
+                                            },
+                                            "name": "MyMenuItem9",
+                                            "designerId": "e1053c54-de5c-4ba4-bfe5-6c9cde3aa9ad"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.menu.Menu",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "floating": false,
+                                        "height": 261,
+                                        "title": null,
+                                        "width": 283
+                                    },
+                                    "configAlternates": {
+                                        "floating": "boolean",
+                                        "height": "auto",
+                                        "title": "string",
+                                        "width": "auto",
+                                        "scrollable": "boolean"
+                                    },
+                                    "name": "MyMenu2",
+                                    "designerId": "6cbce750-0b12-4ed7-a681-bb0d6d9aa44d",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.menu.Item",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "focusable": true,
+                                                "id": "debtorslist",
+                                                "text": "Debtors List "
+                                            },
+                                            "configAlternates": {
+                                                "id": "string",
+                                                "text": "string",
+                                                "scrollable": "boolean",
+                                                "focusable": "boolean"
+                                            },
+                                            "name": "MyMenuItem10",
+                                            "designerId": "843b4c12-189c-46a7-a415-6ade31feb7d5"
+                                        },
+                                        {
+                                            "type": "Ext.menu.Item",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "focusable": true,
+                                                "id": "debtorslist1",
+                                                "itemId": "mnuDebtorBalances",
+                                                "text": "Debtor Balances"
+                                            },
+                                            "configAlternates": {
+                                                "id": "string",
+                                                "itemId": "string",
+                                                "text": "string",
+                                                "scrollable": "boolean",
+                                                "focusable": "boolean"
+                                            },
+                                            "name": "MyMenuItem11",
+                                            "designerId": "f8b646f5-86ee-45f2-aef5-0381de00008f"
+                                        },
+                                        {
+                                            "type": "Ext.menu.Item",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "focusable": true,
+                                                "id": "customers",
+                                                "text": "Customers"
+                                            },
+                                            "configAlternates": {
+                                                "id": "string",
+                                                "text": "string",
+                                                "scrollable": "boolean",
+                                                "focusable": "boolean"
+                                            },
+                                            "name": "MyMenuItem12",
+                                            "designerId": "8f991976-2056-4c2f-a4ba-4d09eaa894de"
+                                        },
+                                        {
+                                            "type": "Ext.menu.Item",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "focusable": true,
+                                                "height": 32,
+                                                "id": "invoices",
+                                                "text": "Invoices"
+                                            },
+                                            "configAlternates": {
+                                                "height": "auto",
+                                                "id": "string",
+                                                "text": "string",
+                                                "scrollable": "boolean",
+                                                "focusable": "boolean"
+                                            },
+                                            "name": "MyMenuItem13",
+                                            "designerId": "3ad09275-454c-4f66-960f-1bb9ee95cdb4"
+                                        },
+                                        {
+                                            "type": "Ext.menu.Item",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "focusable": true,
+                                                "id": "receipts",
+                                                "text": "Receipts"
+                                            },
+                                            "configAlternates": {
+                                                "id": "string",
+                                                "text": "string",
+                                                "scrollable": "boolean",
+                                                "focusable": "boolean"
+                                            },
+                                            "name": "MyMenuItem14",
+                                            "designerId": "c86deeae-cf37-4044-929d-e2dd7ba44b0b"
+                                        },
+                                        {
+                                            "type": "Ext.menu.Item",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "focusable": true,
+                                                "id": "allocations",
+                                                "itemId": "mnuAllocations",
+                                                "text": "Allocations"
+                                            },
+                                            "configAlternates": {
+                                                "id": "string",
+                                                "text": "string",
+                                                "scrollable": "boolean",
+                                                "focusable": "boolean",
+                                                "itemId": "string"
+                                            },
+                                            "name": "MyMenuItem15",
+                                            "designerId": "3cd5a974-1263-44f1-824a-8b4961375b1e"
+                                        },
+                                        {
+                                            "type": "Ext.menu.Item",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "focusable": true,
+                                                "text": "Members expenditure"
+                                            },
+                                            "configAlternates": {
+                                                "text": "string",
+                                                "scrollable": "boolean",
+                                                "focusable": "boolean"
+                                            },
+                                            "name": "MyMenuItem16",
+                                            "designerId": "8ab7fa62-2e58-452e-9bac-832d061bd85a"
+                                        },
+                                        {
+                                            "type": "Ext.menu.Item",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "focusable": true,
+                                                "text": "Member dependants"
+                                            },
+                                            "configAlternates": {
+                                                "text": "string",
+                                                "scrollable": "boolean",
+                                                "focusable": "boolean"
+                                            },
+                                            "name": "MyMenuItem17",
+                                            "designerId": "7af58f87-f771-4da7-b016-77b1dea564f8"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,928 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|snapToGrid": 5,
+        "designer|userAlias": "laboratorystaff",
+        "designer|userClassName": "LaboratoryStaff",
+        "height": 557,
+        "layout": "absolute",
+        "title": "Laboratory Staff List",
+        "url": "../../data/getDataFunctions.php?task=updateUserRights"
+    },
+    "configAlternates": {
+        "designer|snapToGrid": "number",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "layout": "string",
+        "title": "string",
+        "url": "string"
+    },
+    "designerId": "a7cfd99c-65ef-401b-91dd-1635e91c7ee8",
+    "viewControllerInstanceId": "85156845-6233-4528-ab20-e201f2a14b65",
+    "viewModelInstanceId": "8e5c67e0-6230-4bc8-be77-29841d9ef569",
+    "cn": [
+        {
+            "type": "Ext.grid.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "columnLines": true,
+                "designer|uiInterfaceName": "default",
+                "height": 455,
+                "itemId": "staffListGrid",
+                "layout|x": 5,
+                "layout|y": 55,
+                "store": "StaffList",
+                "title": "Staff List",
+                "width": 535
+            },
+            "configAlternates": {
+                "columnLines": "boolean",
+                "designer|uiInterfaceName": "string",
+                "height": "auto",
+                "layout|x": "number",
+                "layout|y": "number",
+                "store": "store",
+                "title": "string",
+                "width": "auto",
+                "itemId": "string"
+            },
+            "name": "MyGridPanel1",
+            "designerId": "44c3e6f0-55cf-42b9-86bf-f47725349871",
+            "cn": [
+                {
+                    "type": "Ext.view.Table",
+                    "reference": {
+                        "name": "viewConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyTable3",
+                    "designerId": "a7b4fbcd-b25f-4020-ac02-05fe55046042"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "ID",
+                        "text": "ID",
+                        "width": 46
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyColumn54",
+                    "designerId": "720dd1df-2e8e-452a-840a-2f96d1da7d78"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "staff_name",
+                        "text": "Staff Name",
+                        "width": 136
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyColumn55",
+                    "designerId": "8b607d40-68b8-4f69-a6b4-bc501cb502e5"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "JobTitle",
+                        "text": "Job Title"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string"
+                    },
+                    "name": "MyColumn56",
+                    "designerId": "01d69430-8cee-438f-9712-a56e7af6e622"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "Department",
+                        "text": "Department"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string"
+                    },
+                    "name": "MyColumn57",
+                    "designerId": "dbf49d32-6b70-4aac-ad21-016ea341010a"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "EnterRequest",
+                        "text": "Enter Request"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string"
+                    },
+                    "name": "MyColumn58",
+                    "designerId": "36c9178e-11b4-468d-aa6c-a6de0db298c8"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "EnterResults",
+                        "text": "Enter Results"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string"
+                    },
+                    "name": "MyColumn59",
+                    "designerId": "42ce700e-7c8c-4b35-b601-641e87486f21"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "ViewResults",
+                        "text": "View Results"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string"
+                    },
+                    "name": "MyColumn60",
+                    "designerId": "ff4a9e6b-645b-460a-9092-d1c956501a4f"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "TakeSamples",
+                        "text": "Take Samples"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string"
+                    },
+                    "name": "MyColumn61",
+                    "designerId": "bdd5b05b-dd50-4e13-8fad-4b4bea5c5eea"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "ReceiveSamples",
+                        "text": "Receive Samples"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string"
+                    },
+                    "name": "MyColumn62",
+                    "designerId": "2fcb09bc-e951-418d-8fe0-9f098138a1b3"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "VerifyResults",
+                        "text": "Verify Results"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string"
+                    },
+                    "name": "MyColumn63",
+                    "designerId": "b067140a-0384-4124-81a6-11d3e1ef00eb"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "ApproveResults",
+                        "text": "Approve Results"
+                    },
+                    "configAlternates": {
+                        "dataIndex": "datafield",
+                        "text": "string"
+                    },
+                    "name": "MyColumn64",
+                    "designerId": "e93e7a86-22f5-4650-9a14-09963310a104"
+                },
+                {
+                    "type": "Ext.toolbar.Paging",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "displayInfo": true,
+                        "dock": "bottom",
+                        "store": "StaffList",
+                        "width": 360
+                    },
+                    "configAlternates": {
+                        "displayInfo": "boolean",
+                        "dock": "string",
+                        "store": "store",
+                        "width": "auto"
+                    },
+                    "name": "MyPagingToolbar2",
+                    "designerId": "ab992b3d-c64b-4f1b-b720-8128c3775ef2"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|snapToGrid": 5,
+                "designer|uiInterfaceName": "default",
+                "height": 565,
+                "itemId": "staffListForm",
+                "layout": "absolute",
+                "layout|x": 550,
+                "layout|y": -52,
+                "url": "../../data/getDataFunctions.php?task=updateUserRights",
+                "width": 420
+            },
+            "configAlternates": {
+                "designer|snapToGrid": "number",
+                "height": "auto",
+                "layout": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "title": "string",
+                "width": "auto",
+                "designer|uiInterfaceName": "string",
+                "itemId": "string",
+                "url": "string"
+            },
+            "name": "MyForm",
+            "designerId": "84a21c57-e1bd-49cc-b241-663e9713d409",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldStyle": "font-size: 20px;font-weight: bold;color: red;",
+                        "layout|x": 115,
+                        "layout|y": 55,
+                        "value": "Staff Permissions",
+                        "width": 230
+                    },
+                    "configAlternates": {
+                        "fieldStyle": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "value": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyDisplayField14",
+                    "designerId": "38169f06-608a-4da1-b889-1f8befb6ce1b"
+                },
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "frame": true,
+                        "height": 350,
+                        "layout|x": -4,
+                        "layout|y": 185
+                    },
+                    "configAlternates": {
+                        "height": "auto",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "frame": "boolean"
+                    },
+                    "name": "MyFieldSet14",
+                    "designerId": "874e7270-69b5-4ec6-99d8-9facd356ae2b",
+                    "cn": [
+                        {
+                            "type": "Ext.form.RadioGroup",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Request Lab Test",
+                                "labelWidth": 120
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "labelWidth": "number"
+                            },
+                            "name": "MyRadioGroup",
+                            "designerId": "88b5d203-0b12-4781-b184-00d5e5604c82",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Radio",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "Yes",
+                                        "fieldLabel": null,
+                                        "inputValue": "Yes",
+                                        "name": "EnterRequest"
+                                    },
+                                    "configAlternates": {
+                                        "boxLabel": "string",
+                                        "fieldLabel": "string",
+                                        "name": "string",
+                                        "inputValue": "string"
+                                    },
+                                    "name": "MyRadio",
+                                    "designerId": "47288685-2a6c-4579-87ba-6d322a3eed28"
+                                },
+                                {
+                                    "type": "Ext.form.field.Radio",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "No",
+                                        "fieldLabel": null,
+                                        "inputValue": "No",
+                                        "name": "EnterRequest"
+                                    },
+                                    "configAlternates": {
+                                        "boxLabel": "string",
+                                        "fieldLabel": "string",
+                                        "name": "string",
+                                        "inputValue": "string"
+                                    },
+                                    "name": "MyRadio1",
+                                    "designerId": "84aa2896-3e56-452c-8c87-f2faffed0665"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.RadioGroup",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Enter Results",
+                                "labelWidth": 120
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "labelWidth": "number"
+                            },
+                            "name": "MyRadioGroup1",
+                            "designerId": "b9c49e1a-c000-48bc-9794-0be2a749798f",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Radio",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "Yes",
+                                        "fieldLabel": null,
+                                        "inputValue": "Yes",
+                                        "name": "EnterResults"
+                                    },
+                                    "configAlternates": {
+                                        "boxLabel": "string",
+                                        "fieldLabel": "string",
+                                        "name": "string",
+                                        "inputValue": "string"
+                                    },
+                                    "name": "MyRadio",
+                                    "designerId": "be276496-c8c3-4370-aa08-9a98ad20c74b"
+                                },
+                                {
+                                    "type": "Ext.form.field.Radio",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "No",
+                                        "fieldLabel": null,
+                                        "inputValue": "No",
+                                        "name": "EnterResults"
+                                    },
+                                    "configAlternates": {
+                                        "boxLabel": "string",
+                                        "fieldLabel": "string",
+                                        "name": "string",
+                                        "inputValue": "string"
+                                    },
+                                    "name": "MyRadio1",
+                                    "designerId": "277695c5-fb57-45f0-ac9f-ee52d83b8dc1"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.RadioGroup",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "View Results",
+                                "labelWidth": 120
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "labelWidth": "number"
+                            },
+                            "name": "MyRadioGroup2",
+                            "designerId": "cfa09852-82ee-4d45-86a4-1a6b85b6ab42",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Radio",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "Yes",
+                                        "fieldLabel": null,
+                                        "inputValue": "Yes",
+                                        "name": "ViewResults"
+                                    },
+                                    "configAlternates": {
+                                        "boxLabel": "string",
+                                        "fieldLabel": "string",
+                                        "name": "string",
+                                        "inputValue": "string"
+                                    },
+                                    "name": "MyRadio",
+                                    "designerId": "b1afae22-78ed-4465-a60c-dcf77d9bb5c5"
+                                },
+                                {
+                                    "type": "Ext.form.field.Radio",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "No",
+                                        "fieldLabel": null,
+                                        "inputValue": "No",
+                                        "name": "ViewResults"
+                                    },
+                                    "configAlternates": {
+                                        "boxLabel": "string",
+                                        "fieldLabel": "string",
+                                        "name": "string",
+                                        "inputValue": "string"
+                                    },
+                                    "name": "MyRadio1",
+                                    "designerId": "7b7228ee-7c9f-4eb0-9b36-2b47b57bab77"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.RadioGroup",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Take Samples",
+                                "labelWidth": 120
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "labelWidth": "number"
+                            },
+                            "name": "MyRadioGroup6",
+                            "designerId": "e59e5580-915a-41eb-8267-f32eba2e4741",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Radio",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "Yes",
+                                        "fieldLabel": null,
+                                        "inputValue": "Yes",
+                                        "name": "TakeSamples"
+                                    },
+                                    "configAlternates": {
+                                        "boxLabel": "string",
+                                        "fieldLabel": "string",
+                                        "name": "string",
+                                        "inputValue": "string"
+                                    },
+                                    "name": "MyRadio",
+                                    "designerId": "b5b26a11-1f60-44ae-aabd-2d7d910f2f8f"
+                                },
+                                {
+                                    "type": "Ext.form.field.Radio",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "No",
+                                        "fieldLabel": null,
+                                        "inputValue": "No",
+                                        "name": "TakeSamples"
+                                    },
+                                    "configAlternates": {
+                                        "boxLabel": "string",
+                                        "fieldLabel": "string",
+                                        "name": "string",
+                                        "inputValue": "string"
+                                    },
+                                    "name": "MyRadio1",
+                                    "designerId": "653e652d-32cb-4ef7-b24d-8e5b68ead45e"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.RadioGroup",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Receive Samples",
+                                "labelWidth": 120
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "labelWidth": "number"
+                            },
+                            "name": "MyRadioGroup5",
+                            "designerId": "177c181b-b847-4ad3-a152-54c14a2d048b",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Radio",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "Yes",
+                                        "fieldLabel": null,
+                                        "inputValue": "Yes",
+                                        "name": "ReceiveSamples"
+                                    },
+                                    "configAlternates": {
+                                        "boxLabel": "string",
+                                        "fieldLabel": "string",
+                                        "name": "string",
+                                        "inputValue": "string"
+                                    },
+                                    "name": "MyRadio",
+                                    "designerId": "64f223ee-9b31-4391-8a6b-24c540cdb05b"
+                                },
+                                {
+                                    "type": "Ext.form.field.Radio",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "No",
+                                        "fieldLabel": null,
+                                        "inputValue": "No",
+                                        "name": "ReceiveSamples"
+                                    },
+                                    "configAlternates": {
+                                        "boxLabel": "string",
+                                        "fieldLabel": "string",
+                                        "name": "string",
+                                        "inputValue": "string"
+                                    },
+                                    "name": "MyRadio1",
+                                    "designerId": "d52d3344-1066-40e3-988d-8797bd542854"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.RadioGroup",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Verify Results",
+                                "labelWidth": 120
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "labelWidth": "number"
+                            },
+                            "name": "MyRadioGroup4",
+                            "designerId": "4d359c48-d474-4a60-bf72-0dbf59295d1f",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Radio",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "Yes",
+                                        "fieldLabel": null,
+                                        "inputValue": "Yes",
+                                        "name": "VerifyResults"
+                                    },
+                                    "configAlternates": {
+                                        "boxLabel": "string",
+                                        "fieldLabel": "string",
+                                        "name": "string",
+                                        "inputValue": "string"
+                                    },
+                                    "name": "MyRadio",
+                                    "designerId": "b85a48a1-2d80-406b-bcdb-9126d3ee740e"
+                                },
+                                {
+                                    "type": "Ext.form.field.Radio",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "No",
+                                        "fieldLabel": null,
+                                        "inputValue": "No",
+                                        "name": "VerifyResults"
+                                    },
+                                    "configAlternates": {
+                                        "boxLabel": "string",
+                                        "fieldLabel": "string",
+                                        "name": "string",
+                                        "inputValue": "string"
+                                    },
+                                    "name": "MyRadio1",
+                                    "designerId": "83fe9e29-ffe7-4134-8e88-2323d00ec1e3"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.RadioGroup",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Approve Results",
+                                "labelWidth": 120
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "labelWidth": "number"
+                            },
+                            "name": "MyRadioGroup3",
+                            "designerId": "04c80ccb-2163-4740-86e8-b50c57be0c5f",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Radio",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "Yes",
+                                        "fieldLabel": null,
+                                        "inputValue": "Yes",
+                                        "name": "ApproveResults"
+                                    },
+                                    "configAlternates": {
+                                        "boxLabel": "string",
+                                        "fieldLabel": "string",
+                                        "name": "string",
+                                        "inputValue": "string"
+                                    },
+                                    "name": "MyRadio",
+                                    "designerId": "87354523-beb6-43b2-a47a-d7db58179f79"
+                                },
+                                {
+                                    "type": "Ext.form.field.Radio",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "No",
+                                        "fieldLabel": null,
+                                        "inputValue": "No",
+                                        "name": "ApproveResults"
+                                    },
+                                    "configAlternates": {
+                                        "boxLabel": "string",
+                                        "fieldLabel": "string",
+                                        "name": "string",
+                                        "inputValue": "string"
+                                    },
+                                    "name": "MyRadio1",
+                                    "designerId": "2853e6e8-444f-40f6-a15c-d3749491527a"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "height": 38,
+                                "iconCls": "x-fa fa-save",
+                                "itemId": "cmdSaveLabRights",
+                                "text": "Save",
+                                "width": 93
+                            },
+                            "configAlternates": {
+                                "height": "auto",
+                                "iconCls": "string",
+                                "itemId": "string",
+                                "text": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyButton6",
+                            "designerId": "bd5c2c2b-16c0-441f-b5c3-b281d8a3a42d"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Staff ID",
+                        "labelWidth": 60,
+                        "layout|x": 10,
+                        "layout|y": 95,
+                        "name": "ID"
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "labelWidth": "number",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "name": "string"
+                    },
+                    "name": "MyTextField119",
+                    "designerId": "fd941889-ccdc-455f-a3ce-f85775ac6ace"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Name",
+                        "labelWidth": 60,
+                        "layout|x": 10,
+                        "layout|y": 135,
+                        "name": "staff_name",
+                        "width": 335
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "labelWidth": "number",
+                        "name": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyTextField120",
+                    "designerId": "6566e66f-d632-40c6-abad-089b309e2257"
+                }
+            ]
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "iconCls": "x-fa fa-users",
+                "itemId": "cmdNewStaff",
+                "layout|x": 5,
+                "layout|y": 5,
+                "text": "New Staff"
+            },
+            "configAlternates": {
+                "iconCls": "string",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "text": "string"
+            },
+            "name": "MyButton7",
+            "designerId": "51bf1da2-b8fa-490b-a27a-0a53442c132d"
+        }
+    ]
+}

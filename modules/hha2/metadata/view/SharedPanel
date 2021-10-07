@@ -1,0 +1,1587 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "bodyPadding": 10,
+        "designer|snapToGrid": 5,
+        "designer|userAlias": "sharedpanel",
+        "designer|userClassName": "SharedPanel",
+        "frame": true,
+        "height": 652,
+        "layout": "absolute",
+        "title": null,
+        "width": 1084
+    },
+    "configAlternates": {
+        "bodyPadding": "auto",
+        "designer|snapToGrid": "number",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "frame": "boolean",
+        "height": "auto",
+        "layout": "string",
+        "title": "string",
+        "width": "auto",
+        "scrollable": "boolean"
+    },
+    "name": "MyForm",
+    "designerId": "0a956f1b-46da-43bf-b7f5-37a97a187fc0",
+    "viewControllerInstanceId": "cdeb37b4-6e62-427f-914a-5f907bd1fa1c",
+    "viewModelInstanceId": "0ca1cfdb-d674-4273-89ba-f7090627dd94",
+    "cn": [
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|snapToGrid": 5,
+                "height": 50,
+                "layout": "absolute",
+                "layout|x": 5,
+                "layout|y": 0,
+                "title": "3. Contra indications"
+            },
+            "configAlternates": {
+                "designer|snapToGrid": "number",
+                "height": "auto",
+                "layout": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "title": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyFieldSet3",
+            "designerId": "b45b7955-7241-48f4-afef-54885a3cfc12",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Specify",
+                        "labelWidth": 60,
+                        "layout|x": 400,
+                        "layout|y": 0,
+                        "name": "AllergiesSpecify",
+                        "tabIndex": 27,
+                        "width": 500
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "labelWidth": "number",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "name": "string",
+                        "tabIndex": "number",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyTextField20",
+                    "designerId": "ed11ebaf-84bb-4938-85c7-981a109a0b6b"
+                },
+                {
+                    "type": "Ext.form.RadioGroup",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "3a. Any known allergies to drugs?",
+                        "labelWidth": 200,
+                        "layout|x": 5,
+                        "layout|y": 0,
+                        "width": 320
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "labelWidth": "number",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "width": "auto"
+                    },
+                    "name": "MyRadioGroup9",
+                    "designerId": "da7169a5-4f1f-4648-b84e-835f89d2063a",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Radio",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "Yes",
+                                "fieldLabel": null,
+                                "name": "DrugAllergies"
+                            },
+                            "configAlternates": {
+                                "boxLabel": "string",
+                                "fieldLabel": "string",
+                                "name": "string"
+                            },
+                            "name": "MyRadio",
+                            "designerId": "3d92ab56-1e64-4020-98fa-8bc89f26fcad"
+                        },
+                        {
+                            "type": "Ext.form.field.Radio",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "No",
+                                "fieldLabel": null,
+                                "name": "DrugAllergies"
+                            },
+                            "configAlternates": {
+                                "boxLabel": "string",
+                                "fieldLabel": "string",
+                                "name": "string"
+                            },
+                            "name": "MyRadio7",
+                            "designerId": "9fa3d3aa-cb09-4bda-8f54-d5cc3f57fede"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|snapToGrid": 5,
+                "height": 50,
+                "layout": "absolute",
+                "layout|x": 5,
+                "layout|y": 60,
+                "title": "4. Current Treatment"
+            },
+            "configAlternates": {
+                "designer|snapToGrid": "number",
+                "height": "auto",
+                "layout": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "title": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyFieldSet4",
+            "designerId": "f6544b29-77b1-4cde-9a62-d412f50a8fd9",
+            "cn": [
+                {
+                    "type": "Ext.form.RadioGroup",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "allowBlank": false,
+                        "fieldLabel": "Adhering to current medications?",
+                        "labelWidth": 200,
+                        "width": 371
+                    },
+                    "configAlternates": {
+                        "allowBlank": "boolean",
+                        "fieldLabel": "string",
+                        "labelWidth": "number",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyRadioGroup4",
+                    "designerId": "d9286a26-88a7-4d77-bf93-9a095f6a8c2a",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Radio",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "N/A",
+                                "fieldLabel": null,
+                                "inputValue": "NA",
+                                "name": "AdheringMedication",
+                                "tabIndex": 28
+                            },
+                            "configAlternates": {
+                                "boxLabel": "string",
+                                "fieldLabel": "string",
+                                "inputValue": "string",
+                                "name": "string",
+                                "tabIndex": "number",
+                                "scrollable": "boolean"
+                            },
+                            "name": "MyRadio4",
+                            "designerId": "8db482b5-4810-486b-a6c2-6096630d4113"
+                        },
+                        {
+                            "type": "Ext.form.field.Radio",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "Yes",
+                                "fieldLabel": null,
+                                "inputValue": "Y",
+                                "name": "AdheringMedication"
+                            },
+                            "configAlternates": {
+                                "boxLabel": "string",
+                                "fieldLabel": "string",
+                                "inputValue": "string",
+                                "name": "string",
+                                "scrollable": "boolean"
+                            },
+                            "name": "MyRadio6",
+                            "designerId": "efc494bd-9274-489e-9cd2-a435a41f1ca3"
+                        },
+                        {
+                            "type": "Ext.form.field.Radio",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "No",
+                                "fieldLabel": null,
+                                "inputValue": "N",
+                                "name": "AdheringMedication"
+                            },
+                            "configAlternates": {
+                                "boxLabel": "string",
+                                "fieldLabel": "string",
+                                "inputValue": "string",
+                                "name": "string",
+                                "scrollable": "boolean"
+                            },
+                            "name": "MyRadio5",
+                            "designerId": "4c5a95c9-4026-4b6f-b7da-51bf2abcbe12"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Specify Reason",
+                        "layout|x": 360,
+                        "layout|y": 0,
+                        "name": "AdheringSpecify",
+                        "tabIndex": 29,
+                        "width": 540
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "name": "string",
+                        "tabIndex": "number",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyTextField20",
+                    "designerId": "6d19c637-66dd-4b88-a442-5bd8eb7d23c8"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|snapToGrid": 5,
+                "height": 120,
+                "layout": "absolute",
+                "layout|x": 5,
+                "layout|y": 115,
+                "title": "5a. Prescribed Treatment - Protocol"
+            },
+            "configAlternates": {
+                "designer|snapToGrid": "number",
+                "height": "auto",
+                "layout": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "title": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyFieldSet5",
+            "designerId": "b1a525f4-9b2f-447e-9ab1-fd9e28e400da",
+            "cn": [
+                {
+                    "type": "Ext.form.RadioGroup",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": null,
+                        "labelWidth": 200,
+                        "layout|x": 20,
+                        "layout|y": 70,
+                        "width": 371
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "labelWidth": "number",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyRadioGroup4",
+                    "designerId": "177c078b-2cab-4b9e-b044-2fa2ae1ad032",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Checkbox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "Lifestyle",
+                                "fieldLabel": null,
+                                "inputValue": "Lifestyle",
+                                "name": "MildHypertensionLife",
+                                "tabIndex": 30
+                            },
+                            "configAlternates": {
+                                "boxLabel": "string",
+                                "fieldLabel": "string",
+                                "inputValue": "string",
+                                "name": "string",
+                                "tabIndex": "number",
+                                "scrollable": "boolean"
+                            },
+                            "name": "MyCheckbox",
+                            "designerId": "208d4831-0867-4504-91f5-07f9fe27deda"
+                        },
+                        {
+                            "type": "Ext.form.field.Checkbox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "CCBs",
+                                "fieldLabel": null,
+                                "inputValue": "CCBs",
+                                "name": "MildHypertensionCcbs"
+                            },
+                            "configAlternates": {
+                                "boxLabel": "string",
+                                "fieldLabel": "string",
+                                "inputValue": "string",
+                                "name": "string",
+                                "scrollable": "boolean"
+                            },
+                            "name": "MyCheckbox1",
+                            "designerId": "ae502de7-6a52-48f3-8995-cc5f62c47046"
+                        },
+                        {
+                            "type": "Ext.form.field.Checkbox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "Diuretic",
+                                "fieldLabel": null,
+                                "inputValue": "Diuretic",
+                                "name": "MildHypertensionDiuretic"
+                            },
+                            "configAlternates": {
+                                "boxLabel": "string",
+                                "fieldLabel": "string",
+                                "inputValue": "string",
+                                "name": "string",
+                                "scrollable": "boolean"
+                            },
+                            "name": "MyCheckbox2",
+                            "designerId": "f829e7ca-fef2-4eaf-b29e-381990c06134"
+                        },
+                        {
+                            "type": "Ext.form.field.Checkbox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "Others",
+                                "fieldLabel": null,
+                                "inputValue": "Others",
+                                "name": "MildHypertensionOthers"
+                            },
+                            "configAlternates": {
+                                "boxLabel": "string",
+                                "fieldLabel": "string",
+                                "inputValue": "string",
+                                "name": "string",
+                                "scrollable": "boolean"
+                            },
+                            "name": "MyCheckbox3",
+                            "designerId": "ae480e07-d4da-4679-8ea1-243ef02228ca"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.RadioGroup",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": null,
+                        "labelWidth": 200,
+                        "layout|x": 520,
+                        "layout|y": 70,
+                        "width": 371
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "labelWidth": "number",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyRadioGroup5",
+                    "designerId": "6b8e55a8-7002-4dfc-b421-56817c5ea6a7",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Checkbox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "Lifestyle",
+                                "fieldLabel": null,
+                                "inputValue": "Lifestyle",
+                                "name": "ModerateHypertensionLife",
+                                "tabIndex": 31
+                            },
+                            "configAlternates": {
+                                "boxLabel": "string",
+                                "fieldLabel": "string",
+                                "inputValue": "string",
+                                "name": "string",
+                                "tabIndex": "number",
+                                "scrollable": "boolean"
+                            },
+                            "name": "MyCheckbox4",
+                            "designerId": "f2e12320-2764-4159-ae33-82b7dff769a1"
+                        },
+                        {
+                            "type": "Ext.form.field.Checkbox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "CCBs",
+                                "fieldLabel": null,
+                                "inputValue": "CCBs",
+                                "name": "ModerateHypertensionCcbs"
+                            },
+                            "configAlternates": {
+                                "boxLabel": "string",
+                                "fieldLabel": "string",
+                                "inputValue": "string",
+                                "name": "string",
+                                "scrollable": "boolean"
+                            },
+                            "name": "MyCheckbox5",
+                            "designerId": "e529ff4e-1112-4b9c-95e7-8fd0113899c7"
+                        },
+                        {
+                            "type": "Ext.form.field.Checkbox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "Diuretic",
+                                "fieldLabel": null,
+                                "inputValue": "Diuretic",
+                                "name": "ModerateHypertensionDiuretic"
+                            },
+                            "configAlternates": {
+                                "boxLabel": "string",
+                                "fieldLabel": "string",
+                                "inputValue": "string",
+                                "name": "string",
+                                "scrollable": "boolean"
+                            },
+                            "name": "MyCheckbox6",
+                            "designerId": "1188a14f-aef9-4f44-8d5f-2ddc429d8246"
+                        },
+                        {
+                            "type": "Ext.form.field.Checkbox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "ACE",
+                                "fieldLabel": null,
+                                "inputValue": "ACE",
+                                "name": "ModerateHypertensionAce"
+                            },
+                            "configAlternates": {
+                                "boxLabel": "string",
+                                "fieldLabel": "string",
+                                "inputValue": "string",
+                                "name": "string",
+                                "scrollable": "boolean"
+                            },
+                            "name": "MyCheckbox7",
+                            "designerId": "3fbce3fb-72a6-4abe-a76d-30f63af5c72f"
+                        },
+                        {
+                            "type": "Ext.form.field.Checkbox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "Others",
+                                "fieldLabel": null,
+                                "inputValue": "Others",
+                                "name": "ModerateHypertensionOthers"
+                            },
+                            "configAlternates": {
+                                "boxLabel": "string",
+                                "fieldLabel": "string",
+                                "inputValue": "string",
+                                "name": "string",
+                                "scrollable": "boolean"
+                            },
+                            "name": "MyCheckbox8",
+                            "designerId": "d55edfc0-8263-4541-968e-301d8838c546"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|x": 130,
+                        "layout|y": 10,
+                        "text": "Mild Hypertension"
+                    },
+                    "configAlternates": {
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "text": "string",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyLabel7",
+                    "designerId": "db1a6c70-c9eb-4dde-9ded-2d6af37d4ad0"
+                },
+                {
+                    "type": "Ext.form.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|x": 645,
+                        "layout|y": 10,
+                        "text": "Moderate to Severe Hypertension"
+                    },
+                    "configAlternates": {
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "text": "string",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyLabel9",
+                    "designerId": "bf81a8ee-6008-4450-ad8f-bb5797f543b8"
+                },
+                {
+                    "type": "Ext.form.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|x": 75,
+                        "layout|y": 35,
+                        "text": "SBP 140-159 and/or DBP 90-99 mmHg"
+                    },
+                    "configAlternates": {
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "text": "string",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyLabel8",
+                    "designerId": "2dcf5051-200b-418a-b8f5-106879e42dfd"
+                },
+                {
+                    "type": "Ext.form.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|x": 580,
+                        "layout|y": 40,
+                        "text": "SBP >=160 and/or DBP >=100 mmHg"
+                    },
+                    "configAlternates": {
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "text": "string",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyLabel10",
+                    "designerId": "031a5a5e-e836-4b0e-ab59-5805690dae76"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "collapsible": true,
+                "designer|snapToGrid": 5,
+                "height": 250,
+                "layout": "absolute",
+                "layout|x": 5,
+                "layout|y": 240,
+                "title": "5b. Prescribed Treatment - Formulary (drug names to be inserted per institutiion formulary)"
+            },
+            "configAlternates": {
+                "collapsible": "boolean",
+                "designer|snapToGrid": "number",
+                "height": "auto",
+                "layout": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "title": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyFieldSet6",
+            "designerId": "2e273b54-1aae-4381-9fe3-173069978c2d",
+            "cn": [
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "disabled": true,
+                        "displayField": "Description",
+                        "fieldLabel": "Drug Name",
+                        "itemId": "DrugName",
+                        "labelAlign": "top",
+                        "layout|x": 0,
+                        "layout|y": 10,
+                        "minChars": 2,
+                        "name": "DrugName",
+                        "queryMode": "local",
+                        "store": "DrugsLIstStore",
+                        "tabIndex": 32,
+                        "valueField": "Description",
+                        "width": 240
+                    },
+                    "configAlternates": {
+                        "disabled": "boolean",
+                        "displayField": "datafield",
+                        "fieldLabel": "string",
+                        "itemId": "string",
+                        "labelAlign": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "minChars": "number",
+                        "name": "string",
+                        "queryMode": "string",
+                        "store": "store",
+                        "tabIndex": "number",
+                        "valueField": "datafield",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyComboBox3",
+                    "designerId": "d743d8ad-f50e-44eb-bb3b-96b52c63fa5b"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "disabled": true,
+                        "fieldLabel": "Drug Code",
+                        "itemId": "DrugCode",
+                        "labelAlign": "top",
+                        "layout|x": 245,
+                        "layout|y": 10,
+                        "name": "DrugName",
+                        "tabIndex": 32,
+                        "width": 80
+                    },
+                    "configAlternates": {
+                        "disabled": "boolean",
+                        "fieldLabel": "string",
+                        "itemId": "string",
+                        "labelAlign": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "name": "string",
+                        "tabIndex": "number",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyTextField32",
+                    "designerId": "b77832df-ad8a-4364-8322-73df1cd31032"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "disabled": true,
+                        "fieldLabel": "Strength",
+                        "itemId": "Strength",
+                        "labelAlign": "top",
+                        "layout|x": 335,
+                        "layout|y": 10,
+                        "tabIndex": 33,
+                        "width": 90
+                    },
+                    "configAlternates": {
+                        "disabled": "boolean",
+                        "fieldLabel": "string",
+                        "itemId": "string",
+                        "labelAlign": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "tabIndex": "number",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyTextField22",
+                    "designerId": "2a8bfce2-36c6-4fda-b063-1f2a458db817"
+                },
+                {
+                    "type": "Ext.form.RadioGroup",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "disabled": true,
+                        "fieldLabel": null,
+                        "itemId": "PrescriptionStatus",
+                        "layout|x": 435,
+                        "layout|y": 30,
+                        "width": 290
+                    },
+                    "configAlternates": {
+                        "disabled": "boolean",
+                        "fieldLabel": "string",
+                        "itemId": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyRadioGroup6",
+                    "designerId": "8c5218c8-f0c8-4421-bc70-14d506fcd5a4",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Radio",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "Start",
+                                "fieldLabel": null,
+                                "inputValue": "Start",
+                                "name": "PrescriptionStatus",
+                                "tabIndex": 34
+                            },
+                            "configAlternates": {
+                                "boxLabel": "string",
+                                "fieldLabel": "string",
+                                "inputValue": "string",
+                                "name": "string",
+                                "tabIndex": "number",
+                                "scrollable": "boolean"
+                            },
+                            "name": "MyRadio9",
+                            "designerId": "7df40b9e-bab6-45c4-a245-4358639f97b5"
+                        },
+                        {
+                            "type": "Ext.form.field.Radio",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "CT",
+                                "fieldLabel": null,
+                                "inputValue": "CT",
+                                "name": "PrescriptionStatus"
+                            },
+                            "configAlternates": {
+                                "boxLabel": "string",
+                                "fieldLabel": "string",
+                                "inputValue": "string",
+                                "name": "string",
+                                "scrollable": "boolean"
+                            },
+                            "name": "MyRadio10",
+                            "designerId": "90baa7dc-abd7-4b17-9088-768bc36a6b57"
+                        },
+                        {
+                            "type": "Ext.form.field.Radio",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "Titration",
+                                "fieldLabel": null,
+                                "inputValue": "Titration",
+                                "name": "PrescriptionStatus"
+                            },
+                            "configAlternates": {
+                                "boxLabel": "string",
+                                "fieldLabel": "string",
+                                "inputValue": "string",
+                                "name": "string",
+                                "scrollable": "boolean"
+                            },
+                            "name": "MyRadio11",
+                            "designerId": "93ec3b6f-5571-44d7-83f1-14b2a7d07593"
+                        },
+                        {
+                            "type": "Ext.form.field.Radio",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "Stop",
+                                "fieldLabel": null,
+                                "inputValue": "Stop",
+                                "name": "PrescriptionStatus"
+                            },
+                            "configAlternates": {
+                                "boxLabel": "string",
+                                "fieldLabel": "string",
+                                "inputValue": "string",
+                                "name": "string",
+                                "scrollable": "boolean"
+                            },
+                            "name": "MyRadio12",
+                            "designerId": "3cbd84a5-99b8-4086-ae51-db700e40fa89"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "disabled": true,
+                        "fieldLabel": "Frequency",
+                        "itemId": "Frequency",
+                        "labelWidth": 70,
+                        "layout|x": 705,
+                        "layout|y": 30,
+                        "name": "Frequency",
+                        "store": [
+                            "['OD','BD']"
+                        ],
+                        "tabIndex": 35
+                    },
+                    "configAlternates": {
+                        "store": "array",
+                        "disabled": "boolean",
+                        "fieldLabel": "string",
+                        "itemId": "string",
+                        "labelWidth": "number",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "name": "string",
+                        "tabIndex": "number",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyComboBox1",
+                    "designerId": "cd21ab10-f6cc-4c1d-93ac-8e7ce9379e22"
+                },
+                {
+                    "type": "Ext.grid.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "columnLines": true,
+                        "height": 165,
+                        "layout|x": 5,
+                        "layout|y": 60,
+                        "store": "PrescriptionsStore",
+                        "title": "Drug Prescriptions"
+                    },
+                    "configAlternates": {
+                        "columnLines": "boolean",
+                        "height": "auto",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "store": "store",
+                        "title": "string",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyGridPanel",
+                    "designerId": "65b2b933-fd6f-4817-9126-3a1937ccd1af",
+                    "cn": [
+                        {
+                            "type": "Ext.view.Table",
+                            "reference": {
+                                "name": "viewConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "configAlternates": {
+                                "scrollable": "boolean"
+                            },
+                            "name": "MyGridView1",
+                            "designerId": "5b362463-a17c-4860-a82a-c68195bc3fd5"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "PID",
+                                "hidden": true,
+                                "text": "Pid",
+                                "width": 69
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "hidden": "boolean",
+                                "text": "string",
+                                "width": "auto",
+                                "scrollable": "boolean"
+                            },
+                            "name": "MyColumn12",
+                            "designerId": "f36c5751-8323-40eb-9d89-36feea452655"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "EncounterNo",
+                                "text": "Encounter No"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string",
+                                "scrollable": "boolean"
+                            },
+                            "name": "MyColumn24",
+                            "designerId": "ff983347-cded-443d-8692-bffbc8beaef7"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "InputDate",
+                                "hidden": true,
+                                "text": "Input Date",
+                                "width": 77
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "hidden": "boolean",
+                                "text": "string",
+                                "width": "auto",
+                                "scrollable": "boolean"
+                            },
+                            "name": "MyColumn25",
+                            "designerId": "ef101354-3d51-40b4-8712-b4994f0070ff"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "InputTime",
+                                "hidden": true,
+                                "text": "Input Time",
+                                "width": 62
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "hidden": "boolean",
+                                "text": "string",
+                                "width": "auto",
+                                "scrollable": "boolean"
+                            },
+                            "name": "MyColumn26",
+                            "designerId": "680128d2-bc2b-4c7a-be77-2ffd8be2089b"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "Description",
+                                "text": "Description",
+                                "width": 222
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string",
+                                "width": "auto",
+                                "scrollable": "boolean"
+                            },
+                            "name": "MyColumn28",
+                            "designerId": "fada2914-cc46-4de3-8f4d-d6cdd2f00631"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "DrugCode",
+                                "text": "Drug Code",
+                                "width": 63
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string",
+                                "width": "auto",
+                                "scrollable": "boolean"
+                            },
+                            "name": "MyColumn27",
+                            "designerId": "65047bc1-736e-41a5-8fb7-8f807c3eb961"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "PrescriptionStatus",
+                                "text": "Prescription Status"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string",
+                                "scrollable": "boolean"
+                            },
+                            "name": "MyColumn30",
+                            "designerId": "bd5148d5-6237-4156-a83d-1acfa1d0140e"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "Dosage",
+                                "text": "Dose",
+                                "width": 43
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string",
+                                "width": "auto",
+                                "scrollable": "boolean"
+                            },
+                            "name": "MyColumn32",
+                            "designerId": "91be836f-445d-4809-b1b7-ad35960f6c45",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Number",
+                                    "reference": {
+                                        "name": "editor",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "configAlternates": {
+                                        "scrollable": "boolean"
+                                    },
+                                    "name": "MyNumberField",
+                                    "designerId": "f16de17b-8c87-4ace-984d-04ada7213e2f"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "TimesPerDay",
+                                "text": "Times Per Day"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string",
+                                "scrollable": "boolean"
+                            },
+                            "name": "MyColumn33",
+                            "designerId": "6a150e24-b34a-4d61-91fa-cf85767e25ec",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Number",
+                                    "reference": {
+                                        "name": "editor",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "configAlternates": {
+                                        "scrollable": "boolean"
+                                    },
+                                    "name": "MyNumberField1",
+                                    "designerId": "c83b88c7-f428-44b0-8141-c6634474b49b"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "Days",
+                                "text": "Days"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string",
+                                "scrollable": "boolean"
+                            },
+                            "name": "MyColumn34",
+                            "designerId": "0f6bf266-60f6-4d3d-8362-563a943a1058",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Number",
+                                    "reference": {
+                                        "name": "editor",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "configAlternates": {
+                                        "scrollable": "boolean"
+                                    },
+                                    "name": "MyNumberField2",
+                                    "designerId": "62f93090-8a6b-41be-ac77-8e7b556fdc59"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.toolbar.Paging",
+                            "reference": {
+                                "name": "dockedItems",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "displayInfo": true,
+                                "dock": "bottom",
+                                "store": "PrescriptionsStore",
+                                "width": 360
+                            },
+                            "configAlternates": {
+                                "displayInfo": "boolean",
+                                "dock": "string",
+                                "store": "store",
+                                "width": "auto",
+                                "scrollable": "boolean"
+                            },
+                            "name": "MyPagingToolbar3",
+                            "designerId": "aa206cb5-a4ae-4625-8b18-796413af12e6"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "disabled": true,
+                        "itemId": "AddPrescription",
+                        "layout|x": 935,
+                        "layout|y": 30,
+                        "tabIndex": 11,
+                        "text": "<b>Add >>></b>"
+                    },
+                    "configAlternates": {
+                        "disabled": "boolean",
+                        "itemId": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "tabIndex": "number",
+                        "text": "string",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyButton",
+                    "designerId": "7c5e615c-331c-492a-8759-ce652da9b5a9"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|snapToGrid": 5,
+                "height": 50,
+                "layout": "absolute",
+                "layout|x": 5,
+                "layout|y": 500,
+                "title": "6 Follow up plan"
+            },
+            "configAlternates": {
+                "designer|snapToGrid": "number",
+                "height": "auto",
+                "layout": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "title": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyFieldSet7",
+            "designerId": "0f26c6a9-ef38-47d1-a80a-eec95d977a46",
+            "cn": [
+                {
+                    "type": "Ext.form.RadioGroup",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "allowBlank": false,
+                        "fieldLabel": null,
+                        "layout|x": 25,
+                        "layout|y": 5,
+                        "width": 400
+                    },
+                    "configAlternates": {
+                        "allowBlank": "boolean",
+                        "fieldLabel": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyRadioGroup7",
+                    "designerId": "031e7d1f-62d5-41aa-ace3-994d48dc4971",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Radio",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "Continue care at facility",
+                                "fieldLabel": null,
+                                "inputValue": "Continue",
+                                "name": "FollowupPlan",
+                                "tabIndex": 36
+                            },
+                            "configAlternates": {
+                                "boxLabel": "string",
+                                "fieldLabel": "string",
+                                "inputValue": "string",
+                                "name": "string",
+                                "tabIndex": "number",
+                                "scrollable": "boolean"
+                            },
+                            "name": "MyRadio13",
+                            "designerId": "ee54d545-de15-49ca-baf8-e3aa9fb5adee"
+                        },
+                        {
+                            "type": "Ext.form.field.Radio",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "Refer to another facility",
+                                "fieldLabel": null,
+                                "inputValue": "Refer",
+                                "name": "FollowupPlan"
+                            },
+                            "configAlternates": {
+                                "boxLabel": "string",
+                                "fieldLabel": "string",
+                                "inputValue": "string",
+                                "name": "string",
+                                "scrollable": "boolean"
+                            },
+                            "name": "MyRadio14",
+                            "designerId": "242ac3ad-19a8-4236-a1af-c65adc1c926f"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.Date",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "allowBlank": false,
+                        "fieldLabel": "Return date",
+                        "labelWidth": 80,
+                        "layout|x": 480,
+                        "layout|y": 5,
+                        "name": "ReturnDate",
+                        "tabIndex": 37
+                    },
+                    "configAlternates": {
+                        "allowBlank": "boolean",
+                        "fieldLabel": "string",
+                        "labelWidth": "number",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "name": "string",
+                        "tabIndex": "number",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyDateField3",
+                    "designerId": "8ac45ca7-8fa4-4605-b34d-2e7150754188"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|snapToGrid": 5,
+                "height": 50,
+                "layout": "absolute",
+                "layout|x": 5,
+                "layout|y": 560,
+                "title": "7. Clinician"
+            },
+            "configAlternates": {
+                "designer|snapToGrid": "number",
+                "height": "auto",
+                "layout": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "title": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyFieldSet8",
+            "designerId": "cd6d13d7-9b41-4b3a-9e4c-fe7417b183bc",
+            "cn": [
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Designation",
+                        "labelWidth": 80,
+                        "layout|x": 20,
+                        "layout|y": 0,
+                        "name": "Designation",
+                        "store": [
+                            "['Doctor','Nurse','Clinical Office',]"
+                        ],
+                        "tabIndex": 38,
+                        "width": 250
+                    },
+                    "configAlternates": {
+                        "store": "array",
+                        "fieldLabel": "string",
+                        "labelWidth": "number",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "name": "string",
+                        "tabIndex": "number",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyComboBox2",
+                    "designerId": "70a2c439-0373-4596-8280-5045a0dfee64"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": null,
+                        "itemId": "ClinicianName",
+                        "layout|x": 275,
+                        "layout|y": 0,
+                        "name": "ClinicianName",
+                        "tabIndex": 39,
+                        "width": 280
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "itemId": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "name": "string",
+                        "tabIndex": "number",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyTextField23",
+                    "designerId": "631bf5a4-3b9e-4c6d-8b49-a124415b2426"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 30,
+                        "hidden": true,
+                        "itemId": "cmdInitialEncounter",
+                        "layout|x": 710,
+                        "layout|y": 0,
+                        "tabIndex": 40,
+                        "text": "<b>Save Encounter</b>",
+                        "width": 130
+                    },
+                    "configAlternates": {
+                        "height": "auto",
+                        "hidden": "boolean",
+                        "itemId": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "tabIndex": "number",
+                        "text": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyButton2",
+                    "designerId": "7f54f173-1101-4d48-b0dc-b6ffc86a3a94"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,327 @@
+{
+    "type": "Ext.grid.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "columnLines": true,
+        "designer|userAlias": "procedureclassgrid",
+        "designer|userClassName": "ProcedureClassGrid",
+        "height": null,
+        "maxHeight": null,
+        "minHeight": 600,
+        "minWidth": 1000,
+        "store": "ProcedureClassListStore",
+        "title": "Procedure Classes",
+        "width": null
+    },
+    "configAlternates": {
+        "columnLines": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "maxHeight": "number",
+        "minHeight": "number",
+        "minWidth": "number",
+        "store": "store",
+        "title": "string",
+        "width": "auto"
+    },
+    "designerId": "ebd8797f-fd20-42bb-a166-8353e3957eeb",
+    "cn": [
+        {
+            "type": "Ext.grid.View",
+            "reference": {
+                "name": "viewConfig",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "enableTextSelection": true
+            },
+            "configAlternates": {
+                "enableTextSelection": "boolean"
+            },
+            "name": "MyGridView8",
+            "designerId": "378d4bd5-1197-4c1b-8f98-18a84c73bd55"
+        },
+        {
+            "type": "Ext.toolbar.Paging",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "displayInfo": true,
+                "dock": "bottom",
+                "store": "ProcedureClassListStore",
+                "width": 360
+            },
+            "configAlternates": {
+                "displayInfo": "boolean",
+                "dock": "string",
+                "store": "store",
+                "width": "auto"
+            },
+            "name": "MyPagingToolbar2",
+            "designerId": "54c6de04-f8d1-4e6a-a50e-c466f23a3906"
+        },
+        {
+            "type": "Ext.grid.plugin.CellEditing",
+            "reference": {
+                "name": "plugins",
+                "type": "array"
+            },
+            "codeClass": "Ext.grid.plugin.CellEditing",
+            "userConfig": {
+                "triggerEvent": "celldblclick"
+            },
+            "configAlternates": {
+                "triggerEvent": "string"
+            },
+            "name": "MyCellEditingPlugin4",
+            "designerId": "a1b7486e-1e87-456c-b848-edb327c694fe"
+        },
+        {
+            "type": "Ext.toolbar.Toolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dock": "top"
+            },
+            "configAlternates": {
+                "dock": "string"
+            },
+            "name": "MyToolbar3",
+            "designerId": "e7063a79-8ad6-4917-b44f-526aceca2a57",
+            "cn": [
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "newClass",
+                        "layout|flex": null,
+                        "text": "New Class"
+                    },
+                    "configAlternates": {
+                        "id": "string",
+                        "layout|flex": "number",
+                        "text": "string"
+                    },
+                    "name": "MyButton10",
+                    "designerId": "c894d786-f9b7-42e6-a0cf-bc520421c071"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "cmdSaveClass",
+                        "layout|flex": null,
+                        "text": "Save"
+                    },
+                    "configAlternates": {
+                        "id": "string",
+                        "layout|flex": "number",
+                        "text": "string"
+                    },
+                    "name": "MyButton11",
+                    "designerId": "a384b2a0-630d-4d58-90ae-7c6a5a450554"
+                },
+                {
+                    "type": "Ext.toolbar.Fill",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null
+                    },
+                    "configAlternates": {
+                        "layout|flex": "number"
+                    },
+                    "name": "MyFill",
+                    "designerId": "2e40214a-f9bb-443b-9999-cdb1a6eaee7e"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "text": "Delete Class"
+                    },
+                    "configAlternates": {
+                        "layout|flex": "number",
+                        "text": "string"
+                    },
+                    "name": "MyButton12",
+                    "designerId": "833d0c8f-679c-491f-bebd-e996fcd6b8c2"
+                }
+            ]
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "ID",
+                "text": "ID",
+                "width": 51
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "width": "auto"
+            },
+            "name": "MyColumn149",
+            "designerId": "2b20784e-b182-4ab8-8579-ec89f1c47309",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "editor",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "name": "ID"
+                    },
+                    "configAlternates": {
+                        "name": "string"
+                    },
+                    "name": "MyTextField133",
+                    "designerId": "460e98ad-4bce-4c11-b094-96d8215b3566"
+                }
+            ]
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "proc_class",
+                "text": "Proc_class"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string"
+            },
+            "name": "MyColumn150",
+            "designerId": "9c27e6e6-d322-4f9e-9166-7d41d0a58600",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "editor",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "name": "proc_class"
+                    },
+                    "configAlternates": {
+                        "name": "string"
+                    },
+                    "name": "MyTextField134",
+                    "designerId": "e8500529-ddc5-4d2c-af2e-d97f37326854"
+                }
+            ]
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "class_value",
+                "text": "Class_value"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string"
+            },
+            "name": "MyColumn151",
+            "designerId": "853be4a5-352d-467f-896e-f2c9402027dc",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "editor",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "name": "class_value"
+                    },
+                    "configAlternates": {
+                        "name": "string"
+                    },
+                    "name": "MyTextField135",
+                    "designerId": "54200621-4624-4e32-a550-59f1e9537b57"
+                }
+            ]
+        },
+        {
+            "type": "Ext.grid.column.Number",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "cost",
+                "text": "Cost"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string"
+            },
+            "name": "MyNumberColumn1",
+            "designerId": "8781e089-3504-469b-89d1-2ce2e3e97897",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "editor",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "name": "cost"
+                    },
+                    "configAlternates": {
+                        "name": "string"
+                    },
+                    "name": "MyTextField136",
+                    "designerId": "4fb505f7-0fd1-46e1-a1ef-10f9126f6489"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,64 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "designer|userAlias": "debtorsublocations",
+        "designer|userClassName": "DebtorSubLocationStore",
+        "model": "DebtorLocations",
+        "pageSize": 200,
+        "storeId": "DebtorSubLocationStore"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "pageSize": "number",
+        "storeId": "string",
+        "autoLoad": "boolean"
+    },
+    "name": "DebtorLocationStore1",
+    "designerId": "e5905b62-db02-4c89-b222-1cc3f5a1ceb1",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "./data/getDataFunctions.php?task=getDebtorSubLocations"
+            },
+            "configAlternates": {
+                "extraParams": "object",
+                "url": "string"
+            },
+            "name": "MyAjaxProxy10",
+            "designerId": "8454698e-e32c-44fa-ab88-496335648faa",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "SubLocations"
+                    },
+                    "configAlternates": {
+                        "root": "string",
+                        "rootProperty": "string"
+                    },
+                    "name": "MyJsonReader10",
+                    "designerId": "a60be0ec-1737-4a6a-8bb6-8219b79df766"
+                }
+            ]
+        }
+    ]
+}

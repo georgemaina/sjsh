@@ -1,0 +1,126 @@
+<!--exclude
+<sample in_favorites="false">
+              <product version="1.4" edition="pro"/>
+                     <modifications>
+                            <modified date="070101"/>
+                     </modifications>
+               <sampledescription><![CDATA[You do not need to write lots of lines of code to split your data into pages and load into grid. dhtmlxGrid has built-in support for paginal output. This sample demonstrates how it works in conection with dhtmlxToolbar.]]></sampledescription></sample>
+ --> 
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+	<title>Paginal Output with Toolbar</title>
+	<link rel="STYLESHEET" type="text/css" href="../../codebase/dhtmlxgrid.css">
+	<link rel="STYLESHEET" type="text/css" href="../../codebase/skins/dhtmlxgrid_dhx_blue.css">
+	<link rel="STYLESHEET" type="text/css" href="../../../dhtmlxToolbar/codebase/skins/dhtmlxtoolbar_dhx_blue.css">
+	<script  src="../../codebase/dhtmlxcommon.js"></script>
+	<script  src="../../codebase/dhtmlxgrid.js"></script>	
+	<script  src="../../codebase/ext/dhtmlxgrid_pgn.js"></script>	
+	<script  src="../../codebase/dhtmlxgridcell.js"></script>	
+	
+	<script  src="../../../dhtmlxToolbar/codebase/dhtmlxtoolbar.js"></script>
+<style>
+		.toolbarTable{
+			background-color:#EDEDED;
+		}
+
+	</style>
+</head>
+
+<script>
+	var mygrid;
+	function doOnLoad(){
+		mygrid = new dhtmlXGridObject('gridbox');
+		mygrid.selMultiRows = true;
+		mygrid.setImagePath("../../codebase/imgs/");
+		var flds = "Sales,Book Title,Author,Price";
+		flds += ",In Store,Shipping,Bestseller,Date of Publication";
+		mygrid.setHeader(flds);
+		mygrid.setInitWidths("50,130,120,80,80,80,80,200")
+		mygrid.setColAlign("right,left,left,right,center,left,center,center")
+		mygrid.setColTypes("dyn,ed,ed,price,ch,coro,ra,ro");
+		mygrid.setColSorting("int,str,str,int,str,str,str,date")
+
+		//set values for select box in 5th column
+		var combobox = mygrid.getCombo(5);
+		combobox.put("1","1 Hour");
+		combobox.put("12","12 Hours")
+		combobox.put("24","24 Hours")
+		combobox.put("48","2 days")
+		combobox.put("168","1 week")
+		combobox.put("pick","pick up")
+		combobox.put("na","na")
+		//start grid
+		mygrid.setSkin("dhx_blue")
+		mygrid.enablePaging(true,10,3,"recinfoArea");
+		mygrid.setPagingSkin("toolbar")
+
+		mygrid.init();
+		mygrid.loadXML("grid.xml");
+	}
+</script>
+<body onload="doOnLoad()">
+<link rel='STYLESHEET' type='text/css' href='../common/style.css'>
+<table cellspacing="0" cellpadding="0" class="sample_header" border="0">
+	<tr valign="middle">
+		<!-- COMPONENT ICON -->
+		<td width="40" align="center"><img src="../common/dhtmlxgrid_icon.gif" border="0"></td>
+		<!-- COMPONENT NAME -->
+		<td width="150" align="left" nowrap="true">Sample: dhtmlxGrid</td>
+		<!-- SAMPLE TITLE -->
+		<td width="0" align="left" nowrap><b>Paginal Output with Toolbar</b></td>
+		<!-- LINK TO COMPONENT PAGE -->
+		<td width="0" align="right"><a href="http://www.dhtmlx.com/docs/products/dhtmlxGrid/index.shtml">dhtmlxGrid main page</a></td>
+		<!-- CLOSE BUTTON -->
+		<td width="50"><div class="sample_close"><a href="javascript:void(0);" onclick="self.close();"><img src="../common/sample_close.gif" width="14" height="14" border="0" alt="X"></a></div></td>
+	</tr>
+</table>
+	
+	
+	<p>	
+		Other Paginal Output samples:<br>
+			<li><a href="pro_paging.html" target="_blank">Paginal output</a></li>
+			<li><a href="pro_paging_dynload.html" target="_blank">Paginal output with dynamical loading</a></li>
+	</p>
+	
+	<table width="600" cellpadding="0" cellspacing="0">
+		<tr>
+			<td>
+				<div id="gridbox" width="100%" height="155px" style="background-color:white;overflow:hidden"></div>
+			</td>
+		</tr>
+		<tr>
+			<td id="recinfoArea"></td>
+		</tr>
+	</table>
+<br>
+<div class='sample_code'><div class="hl-main"><pre><span class="hl-code"> 
+</span><span class="hl-brackets">&lt;</span><span class="hl-reserved">div</span><span class="hl-code"> </span><span class="hl-var">id</span><span class="hl-code">=</span><span class="hl-quotes">&quot;</span><span class="hl-string">gridbox</span><span class="hl-quotes">&quot;</span><span class="hl-code"> </span><span class="hl-var">width</span><span class="hl-code">=</span><span class="hl-quotes">&quot;</span><span class="hl-string">100%</span><span class="hl-quotes">&quot;</span><span class="hl-code"> </span><span class="hl-var">height</span><span class="hl-code">=</span><span class="hl-quotes">&quot;</span><span class="hl-string">250px</span><span class="hl-quotes">&quot;</span><span class="hl-code"> </span><span class="hl-var">style</span><span class="hl-code">=</span><span class="hl-quotes">&quot;</span><span class="hl-string">background-color:white;overflow:hidden</span><span class="hl-quotes">&quot;</span><span class="hl-brackets">&gt;</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">div</span><span class="hl-brackets">&gt;</span><span class="hl-code">
+</span><span class="hl-brackets">&lt;</span><span class="hl-reserved">div</span><span class="hl-code"> </span><span class="hl-var">id</span><span class="hl-code">=</span><span class="hl-quotes">&quot;</span><span class="hl-string">recinfoArea</span><span class="hl-quotes">&quot;</span><span class="hl-code"> </span><span class="hl-var">style</span><span class="hl-code">=</span><span class="hl-quotes">&quot;</span><span class="hl-string">width:100%;</span><span class="hl-quotes">&quot;</span><span class="hl-brackets">&gt;</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">div</span><span class="hl-brackets">&gt;</span><span class="hl-code">
+</span><span class="hl-brackets">&lt;</span><span class="hl-reserved">script</span><span class="hl-brackets">&gt;</span><span class="hl-code"><div class="hl-main"><pre><span class="hl-code"> 
+        </span><span class="hl-identifier">mygrid</span><span class="hl-code"> = </span><span class="hl-reserved">new</span><span class="hl-code"> </span><span class="hl-identifier">dhtmlXGridObject</span><span class="hl-brackets">(</span><span class="hl-quotes">'</span><span class="hl-string">gridbox</span><span class="hl-quotes">'</span><span class="hl-brackets">)</span><span class="hl-code">;
+        ...
+        </span><span class="hl-comment">//</span><span class="hl-comment">should be called before init()</span><span class="hl-comment"></span><span class="hl-code">
+        </span><span class="hl-identifier">mygrid</span><span class="hl-code">.</span><span class="hl-identifier">enablePaging</span><span class="hl-brackets">(</span><span class="hl-reserved">true</span><span class="hl-code">,</span><span class="hl-number">10</span><span class="hl-code">,</span><span class="hl-number">3</span><span class="hl-code">,</span><span class="hl-quotes">&quot;</span><span class="hl-string">recinfoArea</span><span class="hl-quotes">&quot;</span><span class="hl-brackets">)</span><span class="hl-code">;
+        </span><span class="hl-identifier">mygrid</span><span class="hl-code">.</span><span class="hl-identifier">setPagingSkin</span><span class="hl-brackets">(</span><span class="hl-quotes">&quot;</span><span class="hl-string">toolbar</span><span class="hl-quotes">&quot;</span><span class="hl-brackets">)</span><span class="hl-code">;
+        ...
+        </span><span class="hl-identifier">mygrid</span><span class="hl-code">.</span><span class="hl-identifier">init</span><span class="hl-brackets">(</span><span class="hl-brackets">)</span><span class="hl-code">;
+        </span><span class="hl-comment">//</span><span class="hl-comment">mygrid.setXMLAutoLoading(&quot;dynscroll.php&quot;);//optional. Use it if you want to load rows dynamicaly from time to time</span><span class="hl-comment"></span><span class="hl-code">
+        </span><span class="hl-identifier">mygrid</span><span class="hl-code">.</span><span class="hl-identifier">loadXML</span><span class="hl-brackets">(</span><span class="hl-quotes">&quot;</span><span class="hl-string">dynscroll.xml</span><span class="hl-quotes">&quot;</span><span class="hl-brackets">)</span><span class="hl-code">;</span><span class="hl-comment">//</span><span class="hl-comment">this sample uses static loading</span><span class="hl-comment"></span></pre></div></span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">script</span><span class="hl-brackets">&gt;</span></pre></div></div>
+		
+		<strong>Parameters passed to enablePagingWT method:</strong>
+			<li>true - means enable paginal output</li>
+			<li>10 - number of rows per page</li>
+			<li>3 - number of pages in group. You can set any number, but it is recommended to use smaller. There is also some auto-limits when using autoloading (grid will correct value automatically).</li>
+			<li>"recinfoArea" - ID of element to append Toolbar to</li>
+			
+		
+
+
+<!-- FOOTER -->
+<table callspacing="0" cellpadding="0" border="0" class="sample_footer"><tr><td style="padding-left: 8px;">&copy; <a href="http://www.dhtmlx.com">DHTMLX LTD</a>. All rights reserved</td></tr></table>
+<!-- FOOTER -->
+
+</body>
+</html>

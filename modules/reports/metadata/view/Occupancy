@@ -1,0 +1,210 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "occupancy",
+        "designer|userClassName": "Occupancy",
+        "height": 615,
+        "title": "Occupancy Report",
+        "width": null
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "title": "string",
+        "width": "auto",
+        "scrollable": "boolean"
+    },
+    "name": "MyPanel5",
+    "designerId": "74131eb0-13d9-431a-95b6-c5ae378edf73",
+    "viewControllerInstanceId": "1aecce91-5f97-4dc2-99f0-0e6961d48bd5",
+    "viewModelInstanceId": "be7acd49-f809-45c2-9aa2-afe3fccbbecd",
+    "cn": [
+        {
+            "type": "Ext.chart.CartesianChart",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 250,
+                "insetPadding": [
+                    "20"
+                ],
+                "store": "WardInfoStore",
+                "theme": "muted",
+                "width": null
+            },
+            "configAlternates": {
+                "height": "auto",
+                "insetPadding": "object",
+                "store": "store",
+                "theme": "string",
+                "width": "auto"
+            },
+            "name": "ColumnChart3D",
+            "designerId": "99acc558-2dfc-44e0-b9aa-aef723325b6b",
+            "isBuiltIn": true,
+            "iconCls": "icon-column-chart",
+            "autoName": "ColumnChart3D",
+            "cn": [
+                {
+                    "type": "Ext.chart.axis.Category3D",
+                    "reference": {
+                        "name": "axes",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fields": [
+                            "Ward"
+                        ],
+                        "grid": true,
+                        "position": "bottom",
+                        "title": [
+                            "List of Wards",
+                            "",
+                            ""
+                        ]
+                    },
+                    "configAlternates": {
+                        "grid": "boolean",
+                        "fields": "typedarray",
+                        "position": "string",
+                        "title": "object"
+                    },
+                    "name": "My3DCategoryAxis3",
+                    "designerId": "bd39e13e-5ca5-4392-b681-2536e46baa45"
+                },
+                {
+                    "type": "Ext.chart.axis.Numeric3D",
+                    "reference": {
+                        "name": "axes",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fields": [
+                            "Occupied"
+                        ],
+                        "grid": [
+                            "{",
+                            "    odd: {",
+                            "        fillStyle: 'rgba(255, 255, 255, 0.06)'",
+                            "    },",
+                            "    even: {",
+                            "        fillStyle: 'rgba(0, 0, 0, 0.03)'",
+                            "    }",
+                            "}"
+                        ],
+                        "maximum": 150,
+                        "position": "left",
+                        "title": [
+                            "Occupancy",
+                            ""
+                        ]
+                    },
+                    "configAlternates": {
+                        "fields": "typedarray",
+                        "grid": "object",
+                        "maximum": "number",
+                        "position": "string",
+                        "title": "object"
+                    },
+                    "name": "My3DNumericAxis3",
+                    "designerId": "ee8028d7-98f2-477f-b1b2-d507d7f76be9",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "axis",
+                                    "label",
+                                    "layoutContext",
+                                    "lastLabel"
+                                ],
+                                "fn": "renderer",
+                                "implHandler": [
+                                    " // Custom renderer overrides the native axis label renderer.",
+                                    "        // Since we don't want to do anything fancy with the value",
+                                    "        // ourselves except adding a thousands separator, but at the same time",
+                                    "        // don't want to loose the formatting done by the native renderer,",
+                                    "        // we let the native renderer process the value first.",
+                                    "        return Ext.util.Format.number(layoutContext.renderer(label) / 1000, '0,000');",
+                                    ""
+                                ]
+                            },
+                            "configAlternates": {
+                                "designer|params": "typedarray",
+                                "fn": "string",
+                                "implHandler": "code"
+                            },
+                            "name": "renderer",
+                            "designerId": "625bebae-1089-4876-aef4-b548a528c430"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.chart.series.Bar3D",
+                    "reference": {
+                        "name": "series",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "highlightCfg": [
+                            "{saturationFactor:1.5}"
+                        ],
+                        "label": [
+                            "{field: 'Occupied',",
+                            "display: 'insideEnd'}"
+                        ],
+                        "style": [
+                            "{minGapWidth:20}"
+                        ],
+                        "xField": "Ward",
+                        "yField": [
+                            "Occupied"
+                        ]
+                    },
+                    "configAlternates": {
+                        "highlightCfg": "object",
+                        "label": "object",
+                        "style": "object",
+                        "xField": "datafield",
+                        "yField": "typedarray"
+                    },
+                    "name": "My3DBarSeries3",
+                    "designerId": "aa04a65a-a9df-448f-9c4f-dd6141f92c43"
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Occupancy Data"
+            },
+            "configAlternates": {
+                "title": "string"
+            },
+            "name": "MyPanel3",
+            "designerId": "8b60a2d6-d9aa-43ef-aa5e-35be939390bf"
+        }
+    ]
+}

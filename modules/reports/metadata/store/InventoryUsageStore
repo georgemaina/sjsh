@@ -1,0 +1,62 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "clearOnPageLoad": false,
+        "designer|userAlias": "inventoryusagestore",
+        "designer|userClassName": "InventoryUsageStore",
+        "model": "InventoryUsage",
+        "storeId": "InventoryUsageStore"
+    },
+    "configAlternates": {
+        "autoLoad": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string",
+        "clearOnPageLoad": "boolean"
+    },
+    "name": "MyJsonStore",
+    "designerId": "39555b45-adb8-4bea-890c-3d7dd38af40b",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "data/getReportsData.php?task=getInventoryUsage"
+            },
+            "configAlternates": {
+                "url": "string"
+            },
+            "name": "MyAjaxProxy2",
+            "designerId": "e80109cb-e043-47d9-bcd4-943309573b68",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "usage"
+                    },
+                    "configAlternates": {
+                        "rootProperty": "string"
+                    },
+                    "name": "MyJsonReader2",
+                    "designerId": "a1e26094-f374-44d1-8ada-aebf5e279046"
+                }
+            ]
+        }
+    ]
+}

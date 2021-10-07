@@ -1,0 +1,56 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "designer|userAlias": "pendingprescriptions",
+        "designer|userClassName": "PendingPrescriptions",
+        "groupField": "PrescribeDate",
+        "model": "PendingPrescription",
+        "storeId": "PendingPrescriptions"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string",
+        "groupField": "datafield",
+        "autoLoad": "boolean"
+    },
+    "name": "MyJsonStore",
+    "designerId": "0d85a43e-c684-4df1-87e8-594fc4ab05b0",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "../../data/getDataFunctions.php?task=getPendingPrescriptions"
+            },
+            "configAlternates": {
+                "url": "string"
+            },
+            "name": "MyAjaxProxy8",
+            "designerId": "597df17a-cfa0-443d-ac60-1a46b0c46a9d",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyJsonReader8",
+                    "designerId": "e2b7f339-7d74-4c9f-89b4-ef224a2a3778"
+                }
+            ]
+        }
+    ]
+}

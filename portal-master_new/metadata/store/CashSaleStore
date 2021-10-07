@@ -1,0 +1,56 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "cashsalestore",
+        "designer|userClassName": "CashSaleStore",
+        "model": "CashSale"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model"
+    },
+    "name": "MyJsonStore",
+    "designerId": "5cf99baa-bb19-4292-821c-836201beb97b",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "../data/getDataFunctions.php?task=getCashSale"
+            },
+            "configAlternates": {
+                "url": "string"
+            },
+            "name": "MyAjaxProxy11",
+            "designerId": "9a231718-3c53-4a5e-8a9e-970777a2fdcf",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "cashsale"
+                    },
+                    "configAlternates": {
+                        "rootProperty": "string"
+                    },
+                    "name": "MyJsonReader10",
+                    "designerId": "d368fbfd-5c8f-4d0a-8dc9-b546553bf7eb"
+                }
+            ]
+        }
+    ]
+}

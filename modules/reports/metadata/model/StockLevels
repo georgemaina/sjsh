@@ -1,0 +1,100 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "stocklevels",
+        "designer|userClassName": "StockLevels"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "name": "MyModel1",
+    "designerId": "3b3a62fc-6bdb-45e0-a86a-fed48d4c4698",
+    "cn": [
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "item_number"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField169",
+            "designerId": "5b44b13d-18b1-4a27-83ef-7806effbdaa8"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "loccode"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField170",
+            "designerId": "10fb554d-1fd3-4c1c-b81a-265a4e29dec4"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "item_Description"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField171",
+            "designerId": "200e4970-d835-42e4-a431-836ae75d11e5"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Quantity"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField172",
+            "designerId": "7f9362e2-85a4-4007-b4e1-b90c4f8f484a"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "reorderlevel"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField173",
+            "designerId": "fa205278-1aa8-4d1a-b6fe-822a14e19fbb"
+        }
+    ]
+}

@@ -1,0 +1,69 @@
+{
+    "type": "arraystore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "data": [
+            "[",
+            "{",
+            "\"ID\": \"1\",",
+            "\"Name\": \"Inpatient\"",
+            "},",
+            "{",
+            "\"ID\": \"2\",",
+            "\"Name\": \"Outpatient\"",
+            "},",
+            "",
+            "]"
+        ],
+        "designer|userAlias": "admissiontypestore",
+        "designer|userClassName": "AdmissionTypeStore",
+        "model": "AdmissionTypes",
+        "storeId": "AdmissionTypeStore"
+    },
+    "configAlternates": {
+        "autoLoad": "boolean",
+        "data": "array",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string"
+    },
+    "name": "MyArrayStore",
+    "designerId": "f55c0180-dd3f-4084-ba8f-72f1aa92728f",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyAjaxProxy",
+            "designerId": "a6866d03-2701-48c4-9089-04c762ffeb51",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Array",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "Admissions"
+                    },
+                    "configAlternates": {
+                        "root": "string",
+                        "rootProperty": "string"
+                    },
+                    "name": "MyArrayReader",
+                    "designerId": "79870985-4bdd-49fc-8b1c-fc3ad56bf121"
+                }
+            ]
+        }
+    ]
+}

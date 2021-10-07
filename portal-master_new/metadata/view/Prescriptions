@@ -1,0 +1,350 @@
+{
+    "type": "Ext.grid.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "columnLines": true,
+        "designer|userAlias": "prescriptions",
+        "designer|userClassName": "Prescriptions",
+        "minHeight": 300,
+        "store": "PrescriptionStore",
+        "title": "Prescriptions"
+    },
+    "configAlternates": {
+        "columnLines": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "minHeight": "number",
+        "store": "store",
+        "title": "string",
+        "scrollable": "boolean"
+    },
+    "name": "MyGridPanel",
+    "designerId": "bc54039b-0cb9-4fe4-8756-8487066d5c21",
+    "viewControllerInstanceId": "943c21f2-e66f-4a2e-b573-20a68da1141a",
+    "viewModelInstanceId": "4037fefe-3fe0-4f7a-bdc5-039b51f77870",
+    "cn": [
+        {
+            "type": "Ext.view.Table",
+            "reference": {
+                "name": "viewConfig",
+                "type": "object"
+            },
+            "codeClass": null,
+            "configAlternates": {
+                "scrollable": "boolean"
+            },
+            "name": "MyGridView1",
+            "designerId": "fd4443f4-bf7c-4d26-94d1-301aa8ee74c4",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onViewRefresh",
+                        "implHandler": [
+                            "// get all grid view nodes",
+                            "var nodes = dataview.getNodes();",
+                            "",
+                            "for (var i = 0; i < nodes.length; i++) {",
+                            "",
+                            "    var node = nodes[i];",
+                            "",
+                            "    // get node record",
+                            "    var record = dataview.getRecord(node);",
+                            "",
+                            "    // get color from record data",
+                            "    var pendingColor = '#FF0000'; //record.get('StatusColor');",
+                            "    var servicedColor = '#3CB371'; //record.get('StatusColor');",
+                            "",
+                            "    var status=record.get('Status');",
+                            "",
+                            "    // get all td elements",
+                            "    var cells = Ext.get(node).query('td');",
+                            "",
+                            "    // set bacground color to all row td elements",
+                            "    for(var j = 0; j < cells.length; j++) {",
+                            "        // Ext.Msg.alert('test', j);",
+                            "",
+                            "        if(j===0 && status==='pending'){",
+                            "            Ext.fly(cells[j]).setStyle('background-color', pendingColor);",
+                            "            Ext.fly(cells[j]).setStyle('color', 'white');",
+                            "        }else if(j===0 && status==='serviced'){",
+                            "            Ext.fly(cells[j]).setStyle('background-color', servicedColor);",
+                            "            Ext.fly(cells[j]).setStyle('color', '#FFFFFF');",
+                            "        }",
+                            "",
+                            "    }",
+                            "}"
+                        ],
+                        "name": "refresh",
+                        "scope": "me"
+                    },
+                    "configAlternates": {
+                        "fn": "string",
+                        "implHandler": "code",
+                        "name": "string",
+                        "scope": "string"
+                    },
+                    "name": "onViewRefresh",
+                    "designerId": "845d6803-3ab9-41ff-bd66-419af829e786"
+                }
+            ]
+        },
+        {
+            "type": "Ext.toolbar.Paging",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "displayInfo": true,
+                "dock": "bottom",
+                "store": "PrescriptionStore",
+                "width": 360
+            },
+            "configAlternates": {
+                "displayInfo": "boolean",
+                "dock": "string",
+                "store": "store",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyPagingToolbar1",
+            "designerId": "d0e16d53-dd57-4a3c-822f-ac9960e38117"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "Status",
+                "text": "Status"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn1",
+            "designerId": "423f4ddb-1aff-440b-96af-13257009f602"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "Pid",
+                "text": "Pid",
+                "width": 76
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn10",
+            "designerId": "ad05f166-d9ac-4d8d-a69e-e7a572ba4c1f"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "PartCode",
+                "text": "Part Code",
+                "width": 71
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn11",
+            "designerId": "179a60e0-d2ce-44a3-a4d7-a36e33cdb8d2"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "Description",
+                "text": "Description",
+                "width": 154
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn12",
+            "designerId": "bc40abd3-446f-4c94-a3c7-cf7c5391da39"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "Dosage",
+                "text": "Dosage",
+                "width": 52
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn13",
+            "designerId": "f0da2405-4ff1-4a87-bdc9-c6626b99ac32"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "TimesPerDay",
+                "text": "Times Per Day",
+                "width": 64
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn14",
+            "designerId": "550247c2-8cb2-4bfd-aaae-88377d018d59"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "Days",
+                "text": "Days",
+                "width": 49
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn15",
+            "designerId": "c06ced90-0707-4879-8aa2-94b1a2488096"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "Price",
+                "text": "Price",
+                "width": 56
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn16",
+            "designerId": "5b63de48-0e8e-42f8-91ee-d59204860a7c"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "Total",
+                "text": "Total",
+                "width": 56
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn17",
+            "designerId": "6927b6ee-c0e6-45b9-ac1b-cb250908fe70"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "EncounterNo",
+                "text": "Encounter No"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn18",
+            "designerId": "ec8f9451-cf4a-458e-a06d-0e60d89689c2"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "PrescribeDate",
+                "text": "Prescribe Date"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn19",
+            "designerId": "6e187803-ed53-4eb3-892b-d4328b57c1ab"
+        }
+    ]
+}

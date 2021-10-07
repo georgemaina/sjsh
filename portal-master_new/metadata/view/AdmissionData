@@ -1,0 +1,877 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|align": "stretch",
+        "designer|uiInterfaceName": "default-framed",
+        "designer|userAlias": "admissiondata",
+        "designer|userClassName": "AdmissionData",
+        "frame": true,
+        "itemId": "admissionData",
+        "layout": "hbox",
+        "margin": "5 0 5 0",
+        "scrollable": "both",
+        "ui": "default-framed",
+        "width": 958
+    },
+    "configAlternates": {
+        "container|align": "string",
+        "designer|uiInterfaceName": "string",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "frame": "boolean",
+        "height": "auto",
+        "layout": "string",
+        "margin": "auto",
+        "ui": "string",
+        "width": "auto",
+        "scrollable": "auto",
+        "itemId": "string"
+    },
+    "name": "MyPanel2",
+    "designerId": "5d9297c1-0282-4969-819e-38d8776149b4",
+    "viewControllerInstanceId": "cca8e798-b109-4d12-90c2-0c353138983d",
+    "viewModelInstanceId": "ba818470-f0e6-42d4-a23e-cb704b68070a",
+    "cn": [
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "border": "1 1 1 1",
+                "designer|uiInterfaceName": "default",
+                "layout|flex": 1,
+                "margin": "0 0 5 0",
+                "width": 630
+            },
+            "configAlternates": {
+                "designer|uiInterfaceName": "string",
+                "layout|flex": "number",
+                "title": "string",
+                "border": "auto",
+                "margin": "auto",
+                "width": "auto"
+            },
+            "name": "MyContainer18",
+            "designerId": "e8aa03d2-8dbe-4b4e-b9f8-f6e2e9a64cbd",
+            "cn": [
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "margin": "0 0 5 0"
+                    },
+                    "configAlternates": {
+                        "margin": "auto"
+                    },
+                    "name": "patientstatus",
+                    "designerId": "278421c4-2274-4da5-bf3b-76b74fead219",
+                    "masterInstanceId": "d30af8fd-2eac-4734-a747-4e5ac6b5d17b"
+                },
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "border": "",
+                        "height": 40,
+                        "padding": "0 0 0 0"
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "height": "auto",
+                        "width": "auto",
+                        "border": "auto",
+                        "padding": "auto"
+                    },
+                    "name": "MyFieldSet1",
+                    "designerId": "d3b8a031-c81b-4265-885f-8be7125b25d2",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Display",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Admission Status",
+                                "fieldStyle": "color:#ba3b3b; font-size:12px;font-weight:bold;",
+                                "itemId": "admissionStatus",
+                                "labelStyle": "color:green; font-size:14px;font-weight:bold;",
+                                "labelWidth": 150,
+                                "layout|anchor": "100%",
+                                "value": "Patient is Currently Admitted in Outpatient"
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "fieldStyle": "string",
+                                "labelStyle": "string",
+                                "labelWidth": "number",
+                                "layout|anchor": "string",
+                                "value": "string",
+                                "itemId": "string"
+                            },
+                            "name": "MyDisplayField18",
+                            "designerId": "d05e11de-25f6-4348-935e-aa3cd48bd6f0"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "border": "",
+                        "container|align": "stretch",
+                        "height": 75,
+                        "itemId": "admissionButtons",
+                        "layout": "vbox",
+                        "padding": "0 0 0 0"
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "height": "auto",
+                        "width": "auto",
+                        "border": "auto",
+                        "container|align": "string",
+                        "itemId": "string",
+                        "layout": "string",
+                        "padding": "auto"
+                    },
+                    "name": "MyFieldSet2",
+                    "designerId": "1e501c3b-0f77-4dbd-ae28-eecee80e21bf",
+                    "cn": [
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "x-fa fa-arrow-right",
+                                "itemId": "cmdAdmitOutpatient",
+                                "layout|flex": 1,
+                                "margin": "0 0 5 0",
+                                "text": "Visit Outpatient"
+                            },
+                            "configAlternates": {
+                                "iconCls": "string",
+                                "itemId": "string",
+                                "text": "string",
+                                "layout|flex": "number",
+                                "margin": "auto"
+                            },
+                            "name": "MyButton12",
+                            "designerId": "3d4df2aa-880d-44b8-b4e1-a684e835b6e3"
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "x-fa fa-arrow-right",
+                                "itemId": "cmdAdmitInpatient",
+                                "margin": "0 0 5 0",
+                                "text": "Admission Inpatient",
+                                "width": 197
+                            },
+                            "configAlternates": {
+                                "iconCls": "string",
+                                "itemId": "string",
+                                "margin": "auto",
+                                "text": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyButton10",
+                            "designerId": "e0cfab40-e0ce-4ccd-9ce5-91588b45e08a"
+                        }
+                    ]
+                },
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "hidden": true,
+                        "itemId": "admitOutpatient"
+                    },
+                    "configAlternates": {
+                        "hidden": "boolean",
+                        "itemId": "string"
+                    },
+                    "name": "admitoutpatient1",
+                    "designerId": "6e067872-8f9b-404e-ab19-09f7dbb429aa",
+                    "masterInstanceId": "896c132a-61ba-4092-8a81-9c97772705e6"
+                },
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "hidden": true,
+                        "itemId": "admitInpatient"
+                    },
+                    "configAlternates": {
+                        "hidden": "boolean",
+                        "itemId": "string"
+                    },
+                    "name": "admitinpatient1",
+                    "designerId": "84f6620b-b444-42a8-ac43-f247d70d7af2",
+                    "masterInstanceId": "87fe3abf-da76-4b19-ab72-6fe778172774"
+                },
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "border": "",
+                        "designer|displayName": "Admission Details",
+                        "hidden": true,
+                        "itemId": "admissionDetails",
+                        "padding": "0 0 0 0"
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "height": "auto",
+                        "width": "auto",
+                        "border": "auto",
+                        "designer|displayName": "string",
+                        "padding": "auto",
+                        "hidden": "boolean",
+                        "itemId": "string"
+                    },
+                    "name": "MyFieldSet3",
+                    "designerId": "49463609-1335-47dc-be2b-be5fc8c6a714",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Display",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Encounter No",
+                                "fieldStyle": "color:#ba3b3b; font-size:14px;font-weight:bold;",
+                                "itemId": "encounterNr",
+                                "labelStyle": "color:green; font-size:12px;font-weight:bold;",
+                                "labelWidth": 150,
+                                "margin": "0 0 0 0",
+                                "padding": "0 0 0 0",
+                                "value": "1001",
+                                "width": 311
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "labelWidth": "number",
+                                "layout|anchor": "string",
+                                "margin": "auto",
+                                "padding": "auto",
+                                "value": "string",
+                                "fieldStyle": "string",
+                                "labelAlign": "string",
+                                "labelStyle": "string",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "itemId": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyDisplayField8",
+                            "designerId": "2dde16df-0f53-4a39-9f0c-38a78648b487"
+                        },
+                        {
+                            "type": "Ext.form.field.Display",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Encounter Date / Time",
+                                "fieldStyle": "color:#ba3b3b; font-size:14px;font-weight:bold;",
+                                "itemId": "encounterDate",
+                                "labelStyle": "color:green; font-size:12px;font-weight:bold;",
+                                "labelWidth": 150,
+                                "layout|anchor": "100%",
+                                "margin": "0 0 0 0"
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "layout|anchor": "string",
+                                "value": "string",
+                                "labelWidth": "number",
+                                "margin": "auto",
+                                "fieldStyle": "string",
+                                "labelAlign": "string",
+                                "labelStyle": "string",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "itemId": "string"
+                            },
+                            "name": "MyDisplayField9",
+                            "designerId": "ae13377f-3b46-46ee-a131-61c4840da012"
+                        },
+                        {
+                            "type": "Ext.form.field.Display",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Admission Class",
+                                "fieldStyle": "color:#ba3b3b; font-size:12px;font-weight:bold;",
+                                "itemId": "inpatient",
+                                "labelStyle": "color:green; font-size:12px;font-weight:bold;",
+                                "labelWidth": 150,
+                                "layout|anchor": "100%",
+                                "margin": "0 0 0 0",
+                                "value": "Inpatient"
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "fieldStyle": "string",
+                                "labelStyle": "string",
+                                "labelWidth": "number",
+                                "layout|anchor": "string",
+                                "value": "string",
+                                "margin": "auto",
+                                "itemId": "string"
+                            },
+                            "name": "MyDisplayField19",
+                            "designerId": "a8305960-cabd-4076-bf54-058e8559aa50"
+                        },
+                        {
+                            "type": "Ext.form.field.Display",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Ward / Station",
+                                "fieldStyle": "color:#ba3b3b; font-size:12px;font-weight:bold;",
+                                "itemId": "ward",
+                                "labelStyle": "color:green; font-size:12px;font-weight:bold;",
+                                "labelWidth": 150,
+                                "layout|anchor": "100%",
+                                "margin": "0 0 0 0 ",
+                                "value": "Male Ward/ Room 1/ Bed 45"
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "fieldStyle": "string",
+                                "labelStyle": "string",
+                                "labelWidth": "number",
+                                "layout|anchor": "string",
+                                "value": "string",
+                                "margin": "auto",
+                                "itemId": "string"
+                            },
+                            "name": "MyDisplayField20",
+                            "designerId": "ec641169-d0c6-4510-815f-82abad919bba"
+                        },
+                        {
+                            "type": "Ext.form.field.Display",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Payment Method",
+                                "fieldStyle": "color:#ba3b3b; font-size:12px;font-weight:bold;",
+                                "itemId": "financeClass",
+                                "labelStyle": "color:green; font-size:12px;font-weight:bold;",
+                                "labelWidth": 150,
+                                "layout|anchor": "100%",
+                                "margin": "0 0 0 0",
+                                "value": "Cash"
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "fieldStyle": "string",
+                                "labelStyle": "string",
+                                "labelWidth": "number",
+                                "layout|anchor": "string",
+                                "value": "string",
+                                "margin": "auto",
+                                "itemId": "string"
+                            },
+                            "name": "MyDisplayField21",
+                            "designerId": "f3d72c93-5133-4309-8cbf-48375470b493"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "border": "",
+                        "designer|displayName": "Outpatient Details",
+                        "hidden": true,
+                        "itemId": "outpatientDetails",
+                        "padding": "0 0 0 0"
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "height": "auto",
+                        "width": "auto",
+                        "border": "auto",
+                        "designer|displayName": "string",
+                        "padding": "auto",
+                        "hidden": "boolean",
+                        "itemId": "string"
+                    },
+                    "name": "MyFieldSet4",
+                    "designerId": "ce9eafc4-fb02-4e18-8888-4d10b6b23173",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Display",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Encounter No",
+                                "fieldStyle": "color:#ba3b3b; font-size:14px;font-weight:bold;",
+                                "itemId": "encounterNr2",
+                                "labelStyle": "color:green; font-size:12px;font-weight:bold;",
+                                "labelWidth": 150,
+                                "margin": "0 0 0 0",
+                                "padding": "0 0 0 0",
+                                "value": "1001",
+                                "width": 311
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "labelWidth": "number",
+                                "layout|anchor": "string",
+                                "margin": "auto",
+                                "padding": "auto",
+                                "value": "string",
+                                "fieldStyle": "string",
+                                "labelAlign": "string",
+                                "labelStyle": "string",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "itemId": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyDisplayField24",
+                            "designerId": "5f78b3af-cc26-4fd7-9a03-69d784090775"
+                        },
+                        {
+                            "type": "Ext.form.field.Display",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Encounter Date / Time",
+                                "fieldStyle": "color:#ba3b3b; font-size:14px;font-weight:bold;",
+                                "itemId": "encounterDate2",
+                                "labelStyle": "color:green; font-size:12px;font-weight:bold;",
+                                "labelWidth": 150,
+                                "layout|anchor": "100%",
+                                "margin": "0 0 0 0"
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "layout|anchor": "string",
+                                "value": "string",
+                                "labelWidth": "number",
+                                "margin": "auto",
+                                "fieldStyle": "string",
+                                "labelAlign": "string",
+                                "labelStyle": "string",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "itemId": "string"
+                            },
+                            "name": "MyDisplayField23",
+                            "designerId": "ff82e311-10ce-4c84-94b9-da20f61e9a64"
+                        },
+                        {
+                            "type": "Ext.form.field.Display",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Admission Section",
+                                "fieldStyle": "color:#ba3b3b; font-size:12px;font-weight:bold;",
+                                "itemId": "outpatient",
+                                "labelStyle": "color:green; font-size:12px;font-weight:bold;",
+                                "labelWidth": 150,
+                                "layout|anchor": "100%",
+                                "margin": "0 0 0 0",
+                                "value": "OutPatient"
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "fieldStyle": "string",
+                                "labelStyle": "string",
+                                "labelWidth": "number",
+                                "layout|anchor": "string",
+                                "value": "string",
+                                "margin": "auto",
+                                "itemId": "string"
+                            },
+                            "name": "MyDisplayField19",
+                            "designerId": "9792b0db-3153-47e1-ae33-b03803e55461"
+                        },
+                        {
+                            "type": "Ext.form.field.Display",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Department",
+                                "fieldStyle": "color:#ba3b3b; font-size:12px;font-weight:bold;",
+                                "itemId": "department",
+                                "labelStyle": "color:green; font-size:12px;font-weight:bold;",
+                                "labelWidth": 150,
+                                "layout|anchor": "100%",
+                                "margin": "0 0 0 0 ",
+                                "value": "Outpatient"
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "fieldStyle": "string",
+                                "labelStyle": "string",
+                                "labelWidth": "number",
+                                "layout|anchor": "string",
+                                "value": "string",
+                                "margin": "auto",
+                                "itemId": "string"
+                            },
+                            "name": "MyDisplayField20",
+                            "designerId": "85e7f332-8eb3-4ae1-bb33-ff410ee6db5a"
+                        },
+                        {
+                            "type": "Ext.form.field.Display",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Consultation Requested",
+                                "fieldStyle": "color:#ba3b3b; font-size:12px;font-weight:bold;",
+                                "itemId": "consultationFee",
+                                "labelStyle": "color:green; font-size:12px;font-weight:bold;",
+                                "labelWidth": 150,
+                                "layout|anchor": "100%",
+                                "margin": "0 0 0 0",
+                                "value": "Registration"
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "fieldStyle": "string",
+                                "labelStyle": "string",
+                                "labelWidth": "number",
+                                "layout|anchor": "string",
+                                "value": "string",
+                                "margin": "auto",
+                                "itemId": "string"
+                            },
+                            "name": "MyDisplayField21",
+                            "designerId": "478b3ee6-92c1-4a21-bb40-0bda3ce26fa8"
+                        },
+                        {
+                            "type": "Ext.form.field.Display",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Payment Plan",
+                                "fieldStyle": "color:#ba3b3b; font-size:12px;font-weight:bold;",
+                                "itemId": "financePlan",
+                                "labelStyle": "color:green; font-size:12px;font-weight:bold;",
+                                "labelWidth": 150,
+                                "layout|anchor": "100%",
+                                "margin": "0 0 0 0",
+                                "value": "Cash"
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "fieldStyle": "string",
+                                "labelStyle": "string",
+                                "labelWidth": "number",
+                                "layout|anchor": "string",
+                                "value": "string",
+                                "margin": "auto",
+                                "itemId": "string"
+                            },
+                            "name": "MyDisplayField22",
+                            "designerId": "b03b3ac7-1daf-4cce-bb51-224ba7557b0d"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 651,
+                "layout|flex": 1,
+                "margin": "0 0 0 10"
+            },
+            "configAlternates": {
+                "layout|flex": "number",
+                "title": "string",
+                "margin": "auto",
+                "height": "auto"
+            },
+            "name": "MyContainer19",
+            "designerId": "25fe15f9-07e4-45be-86d4-8d8395520f96",
+            "cn": [
+                {
+                    "type": "Ext.grid.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "columnLines": true,
+                        "height": 202,
+                        "scrollable": "both",
+                        "store": "EncountersListStore"
+                    },
+                    "configAlternates": {
+                        "height": "auto",
+                        "columnLines": "boolean",
+                        "store": "store",
+                        "scrollable": "auto"
+                    },
+                    "name": "MyGridPanel1",
+                    "designerId": "358694db-9e39-4716-9a4c-a18a990919c5",
+                    "cn": [
+                        {
+                            "type": "Ext.view.Table",
+                            "reference": {
+                                "name": "viewConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "MyTable1",
+                            "designerId": "0c88dfb1-d52c-4650-b401-8be517bb90a1"
+                        },
+                        {
+                            "type": "Ext.container.Container",
+                            "reference": {
+                                "name": "dockedItems",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|snapToGrid": 5,
+                                "dock": "top",
+                                "height": 25,
+                                "layout": "absolute",
+                                "width": 100
+                            },
+                            "configAlternates": {
+                                "designer|snapToGrid": "number",
+                                "dock": "string",
+                                "height": "auto",
+                                "layout": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyContainer6",
+                            "designerId": "ce1d9f4f-8e91-4519-9ec1-a6ed3ff8c149",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.Label",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|x": 135,
+                                        "layout|y": 5,
+                                        "style": "color:green; font-size:14px;font-weight:bold;",
+                                        "text": "Encounter List"
+                                    },
+                                    "configAlternates": {
+                                        "style": "string",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "text": "string"
+                                    },
+                                    "name": "MyLabel3",
+                                    "designerId": "6f03f4ce-c940-4b2e-ba5f-25920ae10fbc"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "Date",
+                                "text": "Date"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string"
+                            },
+                            "name": "MyColumn26",
+                            "designerId": "36c9c483-ef65-41d5-85ab-dbfa7cc52abd"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "EncounterNr",
+                                "text": "Enc No",
+                                "width": 67
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyColumn27",
+                            "designerId": "c2fd2b80-7b98-4c76-91b3-6f323b9e64af"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "AdmissionType",
+                                "text": "Type",
+                                "width": 90
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyColumn28",
+                            "designerId": "32b572d5-1d6e-4100-b60e-3eac65202352"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "Status",
+                                "text": "Status",
+                                "width": 91
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyColumn29",
+                            "designerId": "d08ee320-b6b3-40de-8d87-10ef3897bf55"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "DischargeDate",
+                                "text": "Discharge Date"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string"
+                            },
+                            "name": "MyColumn40",
+                            "designerId": "6a7c3c5a-dd11-46e3-b330-e9fca5afa700"
+                        }
+                    ]
+                },
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "hidden": true,
+                        "itemId": "menuDiagram"
+                    },
+                    "configAlternates": {
+                        "hidden": "boolean",
+                        "itemId": "string"
+                    },
+                    "name": "menudiagram",
+                    "designerId": "d9a3f08d-fabf-4400-a7d8-7de340223b18",
+                    "masterInstanceId": "882719c8-0702-4a24-a89c-c7720d2b4bca"
+                }
+            ]
+        }
+    ]
+}

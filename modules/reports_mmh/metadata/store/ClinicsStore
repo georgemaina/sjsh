@@ -1,0 +1,69 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "clearOnPageLoad": false,
+        "designer|userAlias": "clinicsstore",
+        "designer|userClassName": "ClinicsStore",
+        "groupField": "Group",
+        "model": "Clinics",
+        "pageSize": 200,
+        "storeId": "ClinicsStore"
+    },
+    "configAlternates": {
+        "autoLoad": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "groupField": "datafield",
+        "model": "model",
+        "pageSize": "number",
+        "storeId": "string",
+        "clearOnPageLoad": "boolean"
+    },
+    "name": "XrayRevenueStore1",
+    "designerId": "624475f9-39b6-4807-8bfa-23e6eaae6f16",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "simpleGroupMode": true,
+                "url": "data/getReportsData.php?task=getClinics"
+            },
+            "configAlternates": {
+                "simpleGroupMode": "boolean",
+                "url": "string"
+            },
+            "name": "MyAjaxProxy",
+            "designerId": "f7159041-dbe0-4cd7-9812-323cdb5ebe6e",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "clinics"
+                    },
+                    "configAlternates": {
+                        "root": "string",
+                        "rootProperty": "string"
+                    },
+                    "name": "MyJsonReader",
+                    "designerId": "24c0670c-0107-432c-994b-2967f8b49288"
+                }
+            ]
+        }
+    ]
+}

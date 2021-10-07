@@ -1,0 +1,52 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "valuationstore",
+        "designer|userClassName": "ValuationStore",
+        "model": "ValuationModel",
+        "storeId": "ValuationStore"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string"
+    },
+    "name": "MyJsonStore",
+    "designerId": "eec99e64-2708-4071-9db4-3d26b0a33939",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "../../getdataFunctions.php?task=getValuationReport"
+            },
+            "configAlternates": {
+                "url": "string"
+            },
+            "name": "MyAjaxProxy13",
+            "designerId": "6c7f9d22-a2ff-4403-a6d1-d7215ae497d0",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyJsonReader13",
+                    "designerId": "0c200b92-9748-427d-8d84-7f45686cb5e3"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,66 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": false,
+        "designer|userAlias": "invoices",
+        "designer|userClassName": "Invoices",
+        "model": "BillModel",
+        "pageSize": 500,
+        "storeId": "Invoices"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "pageSize": "number",
+        "storeId": "string",
+        "autoLoad": "boolean"
+    },
+    "name": "BillStore1",
+    "designerId": "a7718857-03fc-48e8-88f8-4334f4c6f79b",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "../../data/getDataFunctions.php?task=getAllBills"
+            },
+            "configAlternates": {
+                "url": "string"
+            },
+            "name": "MyAjaxProxy",
+            "designerId": "30985c8a-1cc2-4e7b-9454-c490c1682ba2",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "keepRawData": true,
+                        "preserveRawData": true,
+                        "rootProperty": "bills"
+                    },
+                    "configAlternates": {
+                        "rootProperty": "string",
+                        "keepRawData": "boolean",
+                        "preserveRawData": "boolean"
+                    },
+                    "name": "MyJsonReader",
+                    "designerId": "eaa77b9a-5389-4230-804b-ad3ec9634e3d"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,459 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "bodyPadding": 10,
+        "designer|userAlias": "newprescriptions",
+        "designer|userClassName": "NewPrescriptions",
+        "height": 626,
+        "width": 984
+    },
+    "configAlternates": {
+        "bodyPadding": "auto",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "width": "auto"
+    },
+    "name": "Services1",
+    "designerId": "c2724053-7e59-4b94-93ac-ec69e0df83fa",
+    "viewControllerInstanceId": "e70a6482-9d27-4a25-8e02-a7956043a285",
+    "viewModelInstanceId": "cc8fa604-8821-4544-ae4a-19c32cd80ec6",
+    "cn": [
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": "stretch",
+                "dock": "top",
+                "height": 45,
+                "layout": "hbox",
+                "style": "background:#386d87",
+                "width": 744
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "height": "auto",
+                "layout|x": "number",
+                "layout|y": "number",
+                "width": "auto",
+                "container|align": "string",
+                "dock": "string",
+                "layout": "string",
+                "style": "string"
+            },
+            "name": "MyFieldSet6",
+            "designerId": "e876ac2c-9b8d-4d30-9187-b755f48abee0",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "PID",
+                        "fieldStyle": "color:#a7e88b;font-weight-bold;",
+                        "itemId": "pid",
+                        "labelStyle": "font-weight:bold; color:#f4f6fc;",
+                        "labelWidth": 30,
+                        "width": 83
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "itemId": "string",
+                        "labelWidth": "number",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "width": "auto",
+                        "fieldStyle": "string",
+                        "labelStyle": "string"
+                    },
+                    "name": "MyDisplayField",
+                    "designerId": "edd90b65-349b-408c-9ee2-2af190be5a9c"
+                },
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Names",
+                        "fieldStyle": "color:#a7e88b;font-weight-bold;",
+                        "itemId": "names",
+                        "labelPad": 0,
+                        "labelStyle": "font-weight:bold; color:#f4f6fc;",
+                        "labelWidth": 60,
+                        "width": 230
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "labelWidth": "number",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "value": "string",
+                        "width": "auto",
+                        "itemId": "string",
+                        "fieldStyle": "string",
+                        "labelPad": "number",
+                        "labelStyle": "string"
+                    },
+                    "name": "MyDisplayField1",
+                    "designerId": "d7af34a5-2bce-4ab6-81f0-ddc4422af478"
+                },
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Encounter No",
+                        "fieldStyle": "color:#a7e88b;font-weight-bold;",
+                        "itemId": "encounterNo",
+                        "labelStyle": "font-weight:bold; color:#f4f6fc;",
+                        "name": "encounter_nr",
+                        "readOnly": true,
+                        "width": 211
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "labelWidth": "number",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "value": "string",
+                        "width": "auto",
+                        "itemId": "string",
+                        "fieldStyle": "string",
+                        "labelStyle": "string",
+                        "hidden": "boolean",
+                        "name": "string",
+                        "readOnly": "boolean"
+                    },
+                    "name": "MyDisplayField25",
+                    "designerId": "c57421c0-e8a0-4a46-beff-7149947cfc12"
+                },
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Date of Birth",
+                        "fieldStyle": "color:#a7e88b;font-weight-bold;",
+                        "itemId": "Dob",
+                        "labelStyle": "font-weight:bold; color:#f4f6fc;",
+                        "width": 239
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "labelWidth": "number",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "value": "string",
+                        "width": "auto",
+                        "itemId": "string",
+                        "fieldStyle": "string",
+                        "labelStyle": "string"
+                    },
+                    "name": "MyDisplayField2",
+                    "designerId": "9fdee402-81ce-4817-be84-63ca3ddf69d0"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.FieldContainer",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": "stretch",
+                "height": 534,
+                "layout": "hbox"
+            },
+            "configAlternates": {
+                "container|align": "string",
+                "height": "auto",
+                "layout": "string"
+            },
+            "name": "MyFieldContainer6",
+            "designerId": "5cc313b8-220d-406e-bed9-2745a683959d",
+            "cn": [
+                {
+                    "type": "Ext.grid.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 120,
+                        "layout|flex": 0,
+                        "width": 313
+                    },
+                    "configAlternates": {
+                        "height": "auto",
+                        "layout|flex": "number",
+                        "width": "auto"
+                    },
+                    "name": "MyGridPanel",
+                    "designerId": "d5c0216a-0a7b-4a2a-aab3-bb31c22d0955",
+                    "cn": [
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "string",
+                                "text": "String"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string"
+                            },
+                            "name": "MyColumn41",
+                            "designerId": "7b90602a-b2c8-426a-852a-577961ddd485"
+                        },
+                        {
+                            "type": "Ext.grid.column.Number",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "number",
+                                "text": "Number"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string"
+                            },
+                            "name": "MyNumberColumn1",
+                            "designerId": "285afa9e-d2e1-4220-9379-5bf89b9e3097"
+                        },
+                        {
+                            "type": "Ext.grid.column.Date",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "date",
+                                "text": "Date"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string"
+                            },
+                            "name": "MyDateColumn1",
+                            "designerId": "748683fb-9914-4ac2-b4c0-302734984532"
+                        },
+                        {
+                            "type": "Ext.grid.column.Boolean",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "bool",
+                                "text": "Boolean"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string"
+                            },
+                            "name": "MyBooleanColumn1",
+                            "designerId": "2fea174e-cda9-404c-9486-af5a84f1d414"
+                        },
+                        {
+                            "type": "Ext.view.Table",
+                            "reference": {
+                                "name": "viewConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "MyTable",
+                            "designerId": "d4db835f-54e2-4b1a-adb9-9997339292d7"
+                        },
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "dockedItems",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dock": "top",
+                                "emptyText": "Search Drugs",
+                                "width": 100
+                            },
+                            "configAlternates": {
+                                "dock": "string",
+                                "emptyText": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyTextField8",
+                            "designerId": "4f319eeb-74ab-4905-8108-650973912099"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "stretchmax",
+                        "height": 397,
+                        "layout": "hbox",
+                        "layout|flex": 1,
+                        "padding": 5
+                    },
+                    "configAlternates": {
+                        "container|align": "string",
+                        "layout": "string",
+                        "padding": "auto",
+                        "height": "auto",
+                        "layout|flex": "number"
+                    },
+                    "name": "MyFieldSet10",
+                    "designerId": "a43b69cd-4277-4320-ac60-bdeef775aa00",
+                    "cn": [
+                        {
+                            "type": "Ext.form.FieldSet",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "container|align": "stretch",
+                                "layout": "hbox",
+                                "layout|flex": 1
+                            },
+                            "configAlternates": {
+                                "container|align": "string",
+                                "layout": "string",
+                                "layout|flex": "number"
+                            },
+                            "name": "MyFieldSet13",
+                            "designerId": "49de7855-c855-4c41-b297-70eaef085c01",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.ComboBox",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fieldLabel": "Route",
+                                        "labelAlign": "top",
+                                        "layout|flex": 1,
+                                        "margin": "0 5 0 0"
+                                    },
+                                    "configAlternates": {
+                                        "fieldLabel": "string",
+                                        "labelAlign": "string",
+                                        "layout|flex": "number",
+                                        "margin": "auto"
+                                    },
+                                    "name": "MyComboBox8",
+                                    "designerId": "6687183e-ea72-441f-bc8b-1689e65a9122"
+                                },
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fieldLabel": "Dosage",
+                                        "labelAlign": "top",
+                                        "layout|flex": 1,
+                                        "margin": "0 5 0 0"
+                                    },
+                                    "configAlternates": {
+                                        "fieldLabel": "string",
+                                        "labelAlign": "string",
+                                        "layout|flex": "number",
+                                        "margin": "auto"
+                                    },
+                                    "name": "MyTextField21",
+                                    "designerId": "6cba6c2a-8f7a-4a89-996e-ffa7ae3d896a"
+                                },
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fieldLabel": "Frequency",
+                                        "labelAlign": "top",
+                                        "layout|flex": 1,
+                                        "margin": "0 5 0 0"
+                                    },
+                                    "configAlternates": {
+                                        "fieldLabel": "string",
+                                        "labelAlign": "string",
+                                        "layout|flex": "number",
+                                        "margin": "auto"
+                                    },
+                                    "name": "MyTextField22",
+                                    "designerId": "e92e5fe5-3663-41ea-8d58-3d707b2d59de"
+                                },
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fieldLabel": "Duration",
+                                        "labelAlign": "top",
+                                        "layout|flex": 1
+                                    },
+                                    "configAlternates": {
+                                        "fieldLabel": "string",
+                                        "labelAlign": "string",
+                                        "layout|flex": "number"
+                                    },
+                                    "name": "MyTextField23",
+                                    "designerId": "5dec57b8-6b36-4779-9475-f40c305d6978"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

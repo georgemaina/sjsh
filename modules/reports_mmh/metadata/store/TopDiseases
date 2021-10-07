@@ -1,0 +1,35 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "topdiseases",
+        "designer|userClassName": "TopDiseases",
+        "model": "TopDiseases",
+        "pageSize": 200,
+        "storeId": "TopDiseases"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "pageSize": "number",
+        "storeId": "string"
+    },
+    "designerId": "c6650024-bfd6-44f9-9446-a3b67c5ba43b",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Memory",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyMemoryProxy1",
+            "designerId": "09c490fc-17f2-4849-af5d-67814f512dbb"
+        }
+    ]
+}

@@ -1,0 +1,262 @@
+{
+    "type": "Ext.grid.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "columnLines": true,
+        "designer|userAlias": "labresultsgrid",
+        "designer|userClassName": "LabResultsGrid",
+        "height": 511,
+        "store": "LabResultsStore",
+        "width": 798
+    },
+    "configAlternates": {
+        "columnLines": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "store": "store",
+        "width": "auto"
+    },
+    "name": "MyGridPanel1",
+    "designerId": "9c72b8d6-798d-4e79-a765-9c4a457e93b1",
+    "viewControllerInstanceId": "c02e5944-6961-4f41-87f4-dbd5172b969f",
+    "viewModelInstanceId": "2ca94e1c-af42-4d51-ab51-a268382045a9",
+    "cn": [
+        {
+            "type": "Ext.view.Table",
+            "reference": {
+                "name": "viewConfig",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyTable2",
+            "designerId": "407e6074-93ec-4421-9195-7400bf043380"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "PartCode",
+                "text": "Part Code"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string"
+            },
+            "name": "MyColumn48",
+            "designerId": "fce09044-180f-4eae-b6af-d86eba4227b4"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "TestName",
+                "hidden": true,
+                "text": "Test Name",
+                "width": 199
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "hidden": "boolean",
+                "text": "string",
+                "width": "auto"
+            },
+            "name": "MyColumn49",
+            "designerId": "406f89f8-3134-4486-81c5-aa20e4bfe246"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "ResultName",
+                "text": "Result Name"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string"
+            },
+            "name": "MyColumn50",
+            "designerId": "5ab84eb8-d6ae-4eae-b8fe-05755f150622"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "ResultsValue",
+                "text": "Results Value"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string"
+            },
+            "name": "MyColumn51",
+            "designerId": "2afd4691-7ded-48ed-b7f9-e551664018a9"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "LowerRange",
+                "text": "Lower Range"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string"
+            },
+            "name": "MyColumn52",
+            "designerId": "7a7e5382-8c0e-4a49-adca-ec828abd6a21"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "UpperRange",
+                "text": "Upper Range"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string"
+            },
+            "name": "MyColumn53",
+            "designerId": "68d2eb52-fa1f-46ee-9fc6-4af5f077b069"
+        },
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|snapToGrid": 5,
+                "dock": "top",
+                "height": 40,
+                "layout": "absolute",
+                "width": 100
+            },
+            "configAlternates": {
+                "designer|snapToGrid": "number",
+                "dock": "string",
+                "height": "auto",
+                "layout": "string",
+                "width": "auto"
+            },
+            "name": "MyContainer7",
+            "designerId": "0a93246f-cebe-4613-aa9a-38c92178db8e",
+            "cn": [
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "x-fa fa-share-square-o",
+                        "itemId": "cmdVerifyResults",
+                        "layout|x": 30,
+                        "layout|y": 5,
+                        "text": "Verify Results",
+                        "width": 135
+                    },
+                    "configAlternates": {
+                        "iconCls": "string",
+                        "itemId": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "text": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyButton5",
+                    "designerId": "9adcf782-eb16-402f-9cda-fa5847c42052"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "emptyText": "encNr",
+                        "itemId": "encNr",
+                        "layout|x": 190,
+                        "layout|y": 5,
+                        "width": 110
+                    },
+                    "configAlternates": {
+                        "emptyText": "string",
+                        "itemId": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "width": "auto"
+                    },
+                    "name": "MyTextField10",
+                    "designerId": "e8f371c3-7205-4140-9769-a360173d0ef1"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "emptyText": "labNo",
+                        "itemId": "labNo",
+                        "layout|x": 305,
+                        "layout|y": 5,
+                        "width": 110
+                    },
+                    "configAlternates": {
+                        "emptyText": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "width": "auto",
+                        "itemId": "string"
+                    },
+                    "name": "MyTextField11",
+                    "designerId": "7b75ed1e-213e-4445-9c8c-51e1d6a63af4"
+                }
+            ]
+        },
+        {
+            "type": "Ext.grid.feature.Grouping",
+            "reference": {
+                "name": "features",
+                "type": "array"
+            },
+            "codeClass": null,
+            "name": "MyGroupingFeature",
+            "designerId": "7ac576ca-407a-4048-9724-22502f8bc262"
+        }
+    ]
+}

@@ -1,0 +1,194 @@
+<html>
+
+<head>
+
+
+<link rel="STYLESHEET" type="text/css" href="../common/styles.css">
+</head>
+<body>
+	<table border="0" cellpadding="0" cellspacing="0" class="sample_header" zid="71">
+		<tbody zid="3">
+			<tr valign="center" zid="4">
+				<td align="center" width="10" zid="5">&nbsp;</td>
+				<td align="left" zid="6">
+					<p zid="224">
+						<a href="http://www.dhtmlx.com/" zid="7">DHTMLX</a> Documentation
+					</p>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<!--- CONTENT. Starts --->
+	<H1 id=d-v30>Customized paging<BR id=d-v31>
+</H1>
+<H3 id=d-v32>Existing skins</H3>
+There are three predefined skins for the paging mode:<BR id=u.tf0>
+<BR id=b.-y1>
+<UL id=u.tf1>
+<LI id=u.tf2>"Default" - uses the configurable text line, requires two areas</LI>
+</UL>
+<DIV id=ied_ style="PADDING-RIGHT: 0pt; PADDING-LEFT: 0pt; PADDING-BOTTOM: 1em; PADDING-TOP: 1em; TEXT-ALIGN: left"><IMG id=f:g10 style="WIDTH: 638px; HEIGHT: 263px" src="images/dhhqnnw2_42frc8vndv_b.png"></DIV>
+<BR id=eiw.0>
+<UL id=i-j_0>
+<LI id=i-j_1>"Toolbar" - uses dhtmlxToolbar for navigation, requires a single area<BR id=f9es0>
+</LI>
+</UL>
+<DIV id=fyqn style="PADDING-RIGHT: 0pt; PADDING-LEFT: 0pt; PADDING-BOTTOM: 1em; PADDING-TOP: 1em; TEXT-ALIGN: left"><IMG id=rttr3 style="WIDTH: 601px; HEIGHT: 242px" src="images/dhhqnnw2_43ffjnghfq_b.png"></DIV>
+<BR id=eiw.1>
+<UL id=f9es1>
+<LI id=f9es2>"Bricks" - uses a slick, web-like navigation, requires a single area</LI>
+</UL>
+<DIV id=jpav style="PADDING-RIGHT: 0pt; PADDING-LEFT: 0pt; PADDING-BOTTOM: 1em; PADDING-TOP: 1em; TEXT-ALIGN: left"><IMG id=xgia0 style="WIDTH: 616px; HEIGHT: 254px" src="images/dhhqnnw2_45p9p5c9hb_b.png"></DIV>
+A skin can be assigned to the grid in the following way:<BR id=ugjw0>
+<BLOCKQUOTE id=szsj0>&nbsp;&nbsp;&nbsp; grid.setPagingSkin(name);<BR id=d-v34>
+</BLOCKQUOTE>
+<BR id=d-v35>
+<H3 id=rv6r0>Customizing the default skin</H3>
+The default skin creates two information lines, one of which provides the information about the current state of paging. The second one provides navigation controls.<BR id=rf3t0>
+Both lines can be configured through templates:<BR id=c2oi0>
+<BLOCKQUOTE id=cro_0>&nbsp;&nbsp;&nbsp; grid.setPagingTemplates(navigation_template,info_template)<BR id=qldt0>
+</BLOCKQUOTE>
+The default templates are:<BR id=gau20>
+<BR id=qldt1>
+<UL id=gau21>
+<LI id=gau22>Navigation_template</LI>
+</UL>
+<BLOCKQUOTE id=gau23>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[prevpages:&amp;lt;:&amp;nbsp;] [currentpages:,&amp;nbsp;] [nextpages:&amp;gt;:&amp;nbsp;]<BR id=qldt3>
+</BLOCKQUOTE>
+<UL id=gau24>
+<LI id=gau25>Info_template</LI>
+</UL>
+<BLOCKQUOTE id=gau26>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Results &lt;b&gt;[from]-[to]&lt;/b&gt; of &lt;b&gt;[total]&lt;/b&gt;<BR id=a4z11>
+</BLOCKQUOTE>
+<BR id=a4z12>
+The following values are automatically replaced:<BR id=gau27>
+&nbsp;<BR id=a4z13>
+&nbsp;&nbsp;&nbsp; [from]&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp; an index of the first row on the page;<BR id=a4z14>
+&nbsp;&nbsp;&nbsp; [to]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&nbsp;&nbsp; an index of the last row on the page;<BR id=a4z15>
+&nbsp;&nbsp;&nbsp; [total]&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp; the total count of rows in the grid;<BR id=a4z16>
+&nbsp;&nbsp;&nbsp; [current] -&nbsp;&nbsp; a link to the current page (or next | prev - the relative position can be used);<BR id=c.vq0>
+&nbsp;&nbsp;&nbsp; [prepages] - a link to the previous set of pages;<BR id=c.vq3>
+&nbsp;&nbsp;&nbsp; [nextpages] - a link to the next set of pages;<BR id=c.vq4>
+&nbsp;&nbsp;&nbsp; [currentpages] - renders the current set of pages.<BR id=c.vq5>
+<BR id=c.vq6>
+All link markers allow to define the text as <BR id=k..j0>
+<BLOCKQUOTE id=t8_20>&nbsp;&nbsp;&nbsp; [prev:text_in_normal_state:text_in_disabled_state]<BR id=k..j1>
+</BLOCKQUOTE>
+You can use any combination of markers and static text|HTML inside a template:<BR id=wdq90>
+<BR id=wdq91>
+<BLOCKQUOTE id=iiu90>mygrid.setPagingTemplates("Pages - [current:0] [current:+1] [current:+2] , from [total] rows","")<BR id=c-5m0>
+</BLOCKQUOTE>
+<DIV id=sf5g style="PADDING-RIGHT: 0pt; PADDING-LEFT: 0pt; PADDING-BOTTOM: 1em; PADDING-TOP: 1em; TEXT-ALIGN: left"><IMG id=c-5m1 style="WIDTH: 611px; HEIGHT: 68px" src="images/dhhqnnw2_46dkk37rg5_b.png"></DIV>
+<BR id=c-5m2>
+<BLOCKQUOTE id=iiu91>mygrid.setPagingTemplates("Pages - [prevpages:Previos:] [currentpages:-] [nextpages:Next:]","")</BLOCKQUOTE>
+<DIV id=prdf style="PADDING-RIGHT: 0pt; PADDING-LEFT: 0pt; PADDING-BOTTOM: 1em; PADDING-TOP: 1em; TEXT-ALIGN: left"><IMG id=eaom0 src="images/dhhqnnw2_47db2v9tcc_b.png"></DIV>
+<BR id=qldt4>
+<BR id=f10m2>
+<H3 id=ugjw1>Customizing the "toolbar" skin</H3>
+The "Toolbar" skin is based on dhtmlxToolbar. You can get reference to the toolbar object as <BR id=eaom3>
+<BLOCKQUOTE id=luu90>&nbsp;&nbsp;&nbsp; grid.aToolBar<BR id=y6k90>
+</BLOCKQUOTE>
+And use any of toolbar related methods to change the toolbar object. <BR id=b61v0>
+<BR id=b61v1>
+In addition to that, you can also configure which buttons (among the default ones) you expect to see in the toolbar:<BR id=b61v2>
+<BLOCKQUOTE id=lbak0>&nbsp;&nbsp;&nbsp; grid..setPagingWTMode(navButtons,navLabel,pageSelect,perPageSelect)<BR id=b61v3>
+</BLOCKQUOTE>
+Each variable can be true or false:<BR id=b61v4>
+<UL id=h_-j0>
+<LI id=h_-j1>navButtons - the first, prev, next, last buttons;
+<LI id=h_-j2>navLabel - a label with the information about currently shown pages;
+<LI id=h_-j3>pageSelect - a selectbox which allows to choose the current page;
+<LI id=h_-j4>perPageSelect - a selectbox which allows to choose the count of rows per page.<BR id=eaom4>
+</LI>
+</UL>
+<BR id=y.zl0>
+<H3 id=qm_50>Customizing the "bricks" skin</H3>
+The "Bricks" skin requires an additional CSS file to be included:<BR id=hr9i0>
+<BLOCKQUOTE id=w4ox0>&nbsp;&nbsp;&nbsp; ext/dhtlmxgrid_pgn_bricks.css<BR id=ct3j0>
+</BLOCKQUOTE>
+This file defines the<SPAN id=w4ox1 style="BACKGROUND-COLOR: rgb(255,255,255)"> look and feel </SPAN>of controls. You can adjust the necessary class in it in order to change their look and feel:<BR id=no6b0>
+<BR id=ct3j1>
+<UL id=h_-j5>
+<LI id=h_-j6>.dhx_pbox - a border line around navigation controls;
+<LI id=h_-j7>.dhx_pline - an area with page buttons;
+<LI id=h_-j8>.dhx_page - a navigation button;
+<LI id=h_-j9>.dhx_pager_info - an area with the information about the current position inside paging;<BR id=kk_e0>
+<LI id=h_-j10>.dhx_page_active - an active page button.</LI>
+</UL>
+<BR id=qm_52>
+The file contains different styles for different grid skins:<BR id=qm_53>
+<BR id=qm_54>
+<UL id=kk_e1>
+<LI id=kk_e2>.dhx_pbox - the default skin;
+<LI id=kk_e3>.dhx_pbox_modern - the modern skin;
+<LI id=kk_e4>.dhx_pbox_light - the light skin;
+<LI id=kk_e5>etc.<BR id=s-9j0>
+</LI>
+</UL>
+<BR id=f10m3>
+<H3 id=c2uv0>Internationalization</H3>
+<SPAN id=kted0 style="BACKGROUND-COLOR: rgb(255,255,255)">All text labels used in the "Toolbar" and "Bricks" skins are stored in a separate structure. So it might not cause any problems to support different languages.</SPAN><BR id=c2uv1>
+<BLOCKQUOTE id=kted1>grid.i18n.paging={<BR id=c2uv2>
+&nbsp;&nbsp;&nbsp; results:"Results",<BR id=c2uv3>
+&nbsp;&nbsp;&nbsp; records:"Records from ",<BR id=c2uv4>
+&nbsp;&nbsp;&nbsp; to:" to ",<BR id=c2uv5>
+&nbsp;&nbsp;&nbsp; page:"Page ",<BR id=c2uv6>
+&nbsp;&nbsp;&nbsp; perpage:"rows per page",<BR id=c2uv7>
+&nbsp;&nbsp;&nbsp; first:"To first Page",<BR id=c2uv8>
+&nbsp;&nbsp;&nbsp; previous:"Previous Page",<BR id=c2uv9>
+&nbsp;&nbsp;&nbsp; found:"Found records",<BR id=c2uv10>
+&nbsp;&nbsp;&nbsp; next:"Next Page",<BR id=c2uv11>
+&nbsp;&nbsp;&nbsp; last:"To last Page",<BR id=c2uv12>
+&nbsp;&nbsp;&nbsp; of:" of ",<BR id=c2uv13>
+&nbsp;&nbsp;&nbsp; notfound:"No Records Found" }<BR id=qm_511>
+</BLOCKQUOTE>
+<BR id=ygju0>
+<H3 id=kmnx0>Creating a custom skin</H3>
+If none of built in skins suits your needs, you can create a custom one. Basically you can attach some custom code to events of the grid, but paging provides more simple way to define custom skins.<BR id=kmnx1>
+Just define a grid method with the name:<BR id=kmnx2>
+&nbsp;&nbsp;&nbsp; grid._pgn_[NAME]<BR id=y4tc0>
+And call<BR id=y4tc1>
+&nbsp;&nbsp;&nbsp; grid.setSkin("[NAME]")<BR id=y4tc2>
+As a result this new grid method will be called each time when some paging information was changed and needs to be updated.<BR id=y4tc3>
+<BR id=y4tc4>
+For example, we need to create a group of paging controls like this:<BR id=y4tc5>
+<BR id=y4tc6>
+<BLOCKQUOTE id=ekcg0>&lt;input type="button" value="Previos"&gt;<BR id=y4tc7>
+&lt;span&gt;Current page: NN&lt;/span&gt;<BR id=y4tc8>
+&lt;input type="button" value="Next"&gt;<BR id=kmnx3>
+</BLOCKQUOTE>
+<BR id=y4tc9>
+This can be done in the following way:<BR id=y2540>
+<BLOCKQUOTE id=r3l40>&nbsp;&nbsp;&nbsp; grid._pgn_custom=function(page,start,end){ <BR id=n63-0>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/* page - the current page<BR id=n63-1>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; start - the first visible row<BR id=n63-2>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; last - the last visible row */<BR id=n63-3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var html='&lt;input type="button" value="Previos"&gt;&lt;span&gt;Current page: '+page+'&lt;/span&gt;&lt;input type="button" value="Next"&gt;';<BR id=xqkt0>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; grid._pgn_parentObj.innerHTML=html;<BR id=swfd0>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; grid._pgn_parentObj.childNodes[0].onclick=function() { // the previous button logic<BR id=swfd1>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; grid.changePageRelative(-1);<BR id=swfd2>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<BR id=s5ub0>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; grid._pgn_parentObj.childNodes[2].onclick=function() { // the next button logic<BR id=swfd1>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; grid.changePageRelative(1);<BR id=swfd2>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<BR id=rbfb0>
+&nbsp;&nbsp;&nbsp; }<BR id=wzly0>
+&nbsp;&nbsp;&nbsp; grid.setPagingSkin("custom");<BR id=w-gg0>
+</BLOCKQUOTE>
+<BR id=w-gg1>
+<BR id=w-gg2>
+<BR id=w-gg3>
+<BR id=w-gg4>
+<BR id=w-gg5>
+<BR id=w-gg6>
+<BR id=w-gg7>
+<BR id=w-gg8>
+<BR id=w-gg9>
+<BR id=w-gg10>
+<BR id=w-gg11>
+<BR id=w-gg12>
+<BR id=cr732>
+
+	<!--- CONTENT. Ends --->
+	<div class="copyright" zid="223">&copy; DHTMLX, 2008</div>
+</body>
+</html>

@@ -1,0 +1,265 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "animCollapse": false,
+        "collapseDirection": "left",
+        "collapsible": false,
+        "designer|userAlias": "procmenus",
+        "designer|userClassName": "ProcMenus",
+        "height": null,
+        "minHeight": 600,
+        "title": null,
+        "width": 214
+    },
+    "configAlternates": {
+        "animCollapse": "boolean",
+        "collapseDirection": "string",
+        "collapsible": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "minHeight": "number",
+        "title": "string",
+        "width": "auto"
+    },
+    "designerId": "6db262df-4624-41a9-8b50-f12a596c6383",
+    "cn": [
+        {
+            "type": "Ext.menu.Menu",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "animCollapse": true,
+                "collapsible": true,
+                "floating": false,
+                "frame": true,
+                "height": 232,
+                "title": "Activities",
+                "width": 215
+            },
+            "configAlternates": {
+                "animCollapse": "boolean",
+                "collapsible": "boolean",
+                "floating": "boolean",
+                "frame": "boolean",
+                "height": "auto",
+                "title": "string",
+                "width": "auto"
+            },
+            "name": "MyMenu",
+            "designerId": "afb66a45-9e85-4cb5-a2f0-3a87cbe3974c",
+            "cn": [
+                {
+                    "type": "Ext.menu.Item",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "mnuNewBooking",
+                        "text": "New Booking"
+                    },
+                    "configAlternates": {
+                        "id": "string",
+                        "text": "string"
+                    },
+                    "name": "MyMenuItem",
+                    "designerId": "e4325a4e-b54b-424e-97c1-4a8dc23c2eee"
+                },
+                {
+                    "type": "Ext.menu.Item",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "mnuTheatreList",
+                        "text": "Theatre List"
+                    },
+                    "configAlternates": {
+                        "id": "string",
+                        "text": "string"
+                    },
+                    "name": "MyMenuItem1",
+                    "designerId": "01b76073-f5eb-4e81-b47c-77eeaa4e0518"
+                },
+                {
+                    "type": "Ext.menu.Item",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "mnuCheckList",
+                        "text": "Check List"
+                    },
+                    "configAlternates": {
+                        "id": "string",
+                        "text": "string"
+                    },
+                    "name": "MyMenuItem2",
+                    "designerId": "e942fd1e-3c67-4c9c-8d9e-be4dfaed4788"
+                },
+                {
+                    "type": "Ext.menu.Item",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "mnuAnaesthesia",
+                        "text": "Aneathesia record"
+                    },
+                    "configAlternates": {
+                        "id": "string",
+                        "text": "string"
+                    },
+                    "name": "MyMenuItem3",
+                    "designerId": "28ffbc21-665f-4653-849f-77160614a9ac"
+                },
+                {
+                    "type": "Ext.menu.Item",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "mnuProceduresList",
+                        "text": "Procedures List"
+                    },
+                    "configAlternates": {
+                        "id": "string",
+                        "text": "string"
+                    },
+                    "name": "MyMenuItem4",
+                    "designerId": "414d789d-4ebe-46d1-865e-c6698e2770cd"
+                },
+                {
+                    "type": "Ext.menu.Item",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "procClassList",
+                        "text": "Procedure Class"
+                    },
+                    "configAlternates": {
+                        "id": "string",
+                        "text": "string"
+                    },
+                    "name": "MyMenuItem5",
+                    "designerId": "6f4516e6-8b41-49ca-97b4-57a1759b9d66"
+                }
+            ]
+        },
+        {
+            "type": "Ext.menu.Menu",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "animCollapse": true,
+                "collapsible": true,
+                "floating": false,
+                "height": 209,
+                "title": "Reports",
+                "width": 218
+            },
+            "configAlternates": {
+                "animCollapse": "boolean",
+                "collapsible": "boolean",
+                "floating": "boolean",
+                "height": "auto",
+                "title": "string",
+                "width": "auto"
+            },
+            "name": "MyMenu1",
+            "designerId": "413269e3-b9b5-47be-a734-5f422074df48",
+            "cn": [
+                {
+                    "type": "Ext.menu.Item",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "text": "Procedures"
+                    },
+                    "configAlternates": {
+                        "text": "string"
+                    },
+                    "name": "MyMenuItem6",
+                    "designerId": "38d20100-a350-41a7-b6ed-849d9e9442a4"
+                },
+                {
+                    "type": "Ext.menu.Item",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "text": "Booking Report"
+                    },
+                    "configAlternates": {
+                        "text": "string"
+                    },
+                    "name": "MyMenuItem7",
+                    "designerId": "9c66e02c-3716-468d-b89d-df2eab37a013"
+                },
+                {
+                    "type": "Ext.menu.Item",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "text": "Surgeons"
+                    },
+                    "configAlternates": {
+                        "text": "string"
+                    },
+                    "name": "MyMenuItem8",
+                    "designerId": "3d5c1d92-1a18-4cc1-accf-c183ebd81448"
+                },
+                {
+                    "type": "Ext.toolbar.Toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": "top",
+                        "width": 400
+                    },
+                    "configAlternates": {
+                        "dock": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyToolbar",
+                    "designerId": "ff221977-bb6b-4758-a2be-c59a1243f936"
+                }
+            ]
+        }
+    ]
+}

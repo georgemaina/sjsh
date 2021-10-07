@@ -1,0 +1,119 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "pharmacyrevenue",
+        "designer|userClassName": "PharmacyRevenue"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "name": "MyModel1",
+    "designerId": "c1f5c78b-c89b-4b75-b012-c2158db8362e",
+    "cn": [
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ItemNo"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField84",
+            "designerId": "f3926887-156c-45cf-9860-10a2a7bdcc22"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Description"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField86",
+            "designerId": "28ccdb7a-1e61-4fa8-8351-f4d999b1e596"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Category"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField87",
+            "designerId": "026ae838-91f5-484b-9acb-d9bd7cf9ab37"
+        },
+        {
+            "type": "Ext.data.field.Number",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "UnitPrice"
+            },
+            "configAlternates": {
+                "name": "string",
+                "type": "string"
+            },
+            "name": "MyNumber",
+            "designerId": "07594033-04ca-4f33-8610-9414d3c36756"
+        },
+        {
+            "type": "Ext.data.field.Number",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Quantities"
+            },
+            "configAlternates": {
+                "name": "string",
+                "type": "string"
+            },
+            "name": "MyNumber1",
+            "designerId": "a7987bdf-fcf6-4e1d-a346-e6e711b4a76b"
+        },
+        {
+            "type": "Ext.data.field.Number",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "TotalAmount"
+            },
+            "configAlternates": {
+                "name": "string",
+                "type": "string"
+            },
+            "name": "MyNumber2",
+            "designerId": "36310c5f-6648-4685-953c-01515a79b501"
+        }
+    ]
+}

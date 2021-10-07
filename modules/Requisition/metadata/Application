@@ -1,0 +1,33 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "controllers": [
+            "Navigation",
+            "Main"
+        ],
+        "models": [
+            "Departments"
+        ],
+        "name": "Requisition",
+        "stores": [
+            "DepartmentStore"
+        ],
+        "views": [
+            "CompleteRequisition"
+        ]
+    },
+    "configAlternates": {
+        "controllers": "typedarray",
+        "models": "typedarray",
+        "name": "string",
+        "views": "typedarray",
+        "stores": "typedarray"
+    },
+    "name": "Application",
+    "designerId": "application"
+}

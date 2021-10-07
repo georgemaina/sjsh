@@ -1,0 +1,59 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "designer|userAlias": "itemsliststore",
+        "designer|userClassName": "ItemsListStore",
+        "model": "ItemsList",
+        "pageSize": 3000,
+        "storeId": "ItemslistStore"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string",
+        "autoLoad": "boolean",
+        "pageSize": "number"
+    },
+    "name": "MyJsonStore",
+    "designerId": "837ce398-e093-499d-ba73-fcc4e1b9d8f4",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "../../data/getDataFunctions.php?task=getItemsList&sParams='Drug_list','medical-supplies'"
+            },
+            "configAlternates": {
+                "url": "string"
+            },
+            "name": "MyAjaxProxy6",
+            "designerId": "491609f5-c31a-42c7-a201-fa8147849327",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "configAlternates": {
+                        "rootProperty": "string"
+                    },
+                    "name": "MyJsonReader6",
+                    "designerId": "3c8e673e-a7cf-48fa-a12b-978b219aefa6"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,305 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|padding": "0 5 5 5",
+        "designer|initialView": true,
+        "designer|userAlias": "portal",
+        "designer|userClassName": "Portal",
+        "layout": "border"
+    },
+    "configAlternates": {
+        "container|padding": "auto",
+        "designer|initialView": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "layout": "string",
+        "scrollable": "boolean"
+    },
+    "designerId": "93836fcc-3d24-4393-b45f-254d04cec350",
+    "viewControllerInstanceId": "38097997-12e0-4065-b5a6-dbcf737ded47",
+    "viewModelInstanceId": "3ee39839-ad9b-4385-b174-6bb7d8d030de",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "collapsible": true,
+                "container|animate": true,
+                "id": "app-options",
+                "itemId": "menusPanel",
+                "layout": "accordion",
+                "layout|region": "west",
+                "layout|split": true,
+                "maxWidth": 400,
+                "minWidth": 250,
+                "title": "Modules Select",
+                "width": 250
+            },
+            "configAlternates": {
+                "collapsible": "boolean",
+                "container|animate": "boolean",
+                "id": "string",
+                "layout": "string",
+                "layout|region": "string",
+                "layout|split": "boolean",
+                "maxWidth": "number",
+                "minWidth": "number",
+                "title": "string",
+                "width": "auto",
+                "scrollable": "boolean",
+                "itemId": "string"
+            },
+            "name": "MyPanel",
+            "designerId": "a06f4909-53ac-4373-a2d5-9c42b7f26a2d"
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "PortalDetails",
+                "itemId": "detailsPanel",
+                "layout|region": "center",
+                "title": "Details"
+            },
+            "configAlternates": {
+                "designer|displayName": "string",
+                "itemId": "string",
+                "layout|region": "string",
+                "scrollable": "boolean",
+                "title": "string"
+            },
+            "name": "MyPanel6",
+            "designerId": "244a5f67-b772-47cb-ae2d-69aa38e8b19f"
+        },
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "header",
+                "height": 33,
+                "layout": "border",
+                "layout|region": "north",
+                "margin": "0 0 2 0"
+            },
+            "configAlternates": {
+                "height": "auto",
+                "layout|region": "string",
+                "title": "string",
+                "designer|displayName": "string",
+                "layout": "string",
+                "margin": "auto"
+            },
+            "name": "MyContainer11",
+            "designerId": "cde5695a-882b-4f4e-88e3-cbb867404b9f",
+            "cn": [
+                {
+                    "type": "Ext.container.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "stretch",
+                        "dock": "left",
+                        "layout": "hbox",
+                        "layout|region": "east"
+                    },
+                    "configAlternates": {
+                        "container|align": "string",
+                        "dock": "string",
+                        "layout": "string",
+                        "layout|region": "string"
+                    },
+                    "name": "MyContainer12",
+                    "designerId": "a6d8b394-c8bb-42b8-bb33-91d6d4534ca1",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Display",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Welcome",
+                                "fieldStyle": "font-size: small;font-weight: bold;color: green;",
+                                "labelStyle": "font-size: small;font-weight: bold;color: green;",
+                                "layout|flex": 1,
+                                "value": "Admin",
+                                "width": 136
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "fieldStyle": "string",
+                                "labelStyle": "string",
+                                "layout|flex": "number",
+                                "value": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyDisplayField7",
+                            "designerId": "b69d8126-4555-4382-a727-951787dadfa9"
+                        },
+                        {
+                            "type": "Ext.toolbar.Spacer",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": 1,
+                                "width": 47
+                            },
+                            "configAlternates": {
+                                "layout|flex": "number",
+                                "width": "auto"
+                            },
+                            "name": "MySpacer",
+                            "designerId": "16225570-6f02-48fe-903c-7fa7b04e4375"
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "height": 42,
+                                "text": "Intranet Email",
+                                "width": 110
+                            },
+                            "configAlternates": {
+                                "height": "auto",
+                                "text": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyButton5",
+                            "designerId": "f4ecdb3e-7434-43b7-a930-d6cb759f2150"
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "height": 44,
+                                "text": "System Admin",
+                                "width": 119
+                            },
+                            "configAlternates": {
+                                "height": "auto",
+                                "text": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyButton6",
+                            "designerId": "c4c7d0a9-6ea4-4d74-8493-367757b156e1"
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "height": 39,
+                                "text": "Special Tools",
+                                "width": 125
+                            },
+                            "configAlternates": {
+                                "height": "auto",
+                                "text": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyButton7",
+                            "designerId": "8cc98936-e86a-421e-9dd1-98473be862f6"
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "height": 47,
+                                "text": "logout",
+                                "width": 86
+                            },
+                            "configAlternates": {
+                                "height": "auto",
+                                "text": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyButton8",
+                            "designerId": "15ba6922-b11c-4525-afc0-370de79a49c0"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.container.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": "right",
+                        "layout|region": "west",
+                        "width": 150
+                    },
+                    "configAlternates": {
+                        "dock": "string",
+                        "layout|region": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyContainer13",
+                    "designerId": "a037559c-2840-4d79-86ab-9f3ad497293c",
+                    "cn": [
+                        {
+                            "type": "Ext.Img",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "height": 36,
+                                "src": "resources/care_logo.gif",
+                                "width": 140
+                            },
+                            "configAlternates": {
+                                "height": "auto",
+                                "src": "uri",
+                                "width": "auto"
+                            },
+                            "name": "MyImg",
+                            "designerId": "94fb14f1-0bff-48d4-99f5-facc2a67ed1b"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

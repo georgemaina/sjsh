@@ -1,0 +1,432 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userAlias": "mainview",
+        "designer|userClassName": "MainView",
+        "height": 250,
+        "layout": "border",
+        "width": 400
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "layout": "string",
+        "width": "auto",
+        "designer|initialView": "boolean"
+    },
+    "name": "MyViewport",
+    "designerId": "bfd64150-8105-46dd-842d-656fee7813df",
+    "viewControllerInstanceId": "efdb28fb-667c-4ccb-aa5d-8068d1344156",
+    "viewModelInstanceId": "52442000-a62c-4291-8f6c-c725ae2484e4",
+    "cn": [
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "centerContainer",
+                "layout": "fit",
+                "layout|region": "center",
+                "padding": "2 0 0 10"
+            },
+            "configAlternates": {
+                "layout|region": "string",
+                "itemId": "string",
+                "padding": "auto",
+                "layout": "string"
+            },
+            "name": "MyContainer",
+            "designerId": "a357f561-bff2-403a-b549-a1e4fb91a59d"
+        },
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout": "accordion",
+                "layout|region": "west",
+                "style": "background-color: #d9f2e6;",
+                "width": 201
+            },
+            "configAlternates": {
+                "layout": "string",
+                "layout|region": "string",
+                "width": "auto",
+                "style": "string"
+            },
+            "name": "MyContainer1",
+            "designerId": "16df169f-a768-48c2-9107-25e94cea7d4c",
+            "cn": [
+                {
+                    "type": "Ext.menu.Menu",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "floating": false,
+                        "title": "Pharmcy",
+                        "width": 120
+                    },
+                    "configAlternates": {
+                        "floating": "boolean",
+                        "title": "string",
+                        "width": "auto",
+                        "bodyStyle": "string",
+                        "style": "string"
+                    },
+                    "name": "MyMenu",
+                    "designerId": "5ff29226-c500-4b90-b2c6-39734d0ea42f",
+                    "cn": [
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "",
+                                "itemId": "mnuPrescriptions",
+                                "text": "Prescriptions"
+                            },
+                            "configAlternates": {
+                                "itemId": "string",
+                                "text": "string",
+                                "style": "string",
+                                "iconCls": "string"
+                            },
+                            "name": "MyMenuItem",
+                            "designerId": "ee0832d2-24da-4749-b4f1-67a0abc2af29"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "mnuIssue",
+                                "text": "Issue to Patients"
+                            },
+                            "configAlternates": {
+                                "itemId": "string",
+                                "text": "string"
+                            },
+                            "name": "MyMenuItem3",
+                            "designerId": "059b8785-a6e1-4262-b4ed-0836e16906a3"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "mnuOrders",
+                                "text": "Internal Orders"
+                            },
+                            "configAlternates": {
+                                "itemId": "string",
+                                "text": "string"
+                            },
+                            "name": "MyMenuItem1",
+                            "designerId": "853879f1-1474-4f63-af88-58bbadb89591"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "mnuServiceOrders",
+                                "text": "Service Orders"
+                            },
+                            "configAlternates": {
+                                "itemId": "string",
+                                "text": "string"
+                            },
+                            "name": "MyMenuItem2",
+                            "designerId": "0edbf2b2-21fa-4373-b17c-03cf03a1142b"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "mnuPatientReturns",
+                                "text": "Returns from Patients"
+                            },
+                            "configAlternates": {
+                                "text": "string",
+                                "itemId": "string"
+                            },
+                            "name": "MyMenuItem7",
+                            "designerId": "0c138eb1-fc1e-4517-870b-11661432f192"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "mnuOrdersReturns",
+                                "text": "Returns Internal Orders"
+                            },
+                            "configAlternates": {
+                                "text": "string",
+                                "itemId": "string"
+                            },
+                            "name": "MyMenuItem8",
+                            "designerId": "6d8a7acb-b087-4fad-94e3-d158a0675740"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "mnuStockLevels",
+                                "text": "Stock Levels"
+                            },
+                            "configAlternates": {
+                                "text": "string",
+                                "itemId": "string",
+                                "style": "string"
+                            },
+                            "name": "MyMenuItem9",
+                            "designerId": "293863d4-a297-448f-91a5-81cd90ee7160"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.menu.Menu",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "floating": false,
+                        "title": "Reports",
+                        "width": 120
+                    },
+                    "configAlternates": {
+                        "floating": "boolean",
+                        "title": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyMenu3",
+                    "designerId": "e710380b-700b-41c4-baff-f12b366ca313",
+                    "cn": [
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "x-fa fa-anchor",
+                                "itemId": "mnuIssuedDrugs",
+                                "text": "Issues to Patients"
+                            },
+                            "configAlternates": {
+                                "text": "string",
+                                "iconCls": "string",
+                                "itemId": "string"
+                            },
+                            "name": "MyMenuItem4",
+                            "designerId": "28cec24d-69b4-4cb4-86e3-b78b9128e6a5"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "x-fa fa-atlas",
+                                "itemId": "mnuInternalOrders",
+                                "text": "Internal Orders"
+                            },
+                            "configAlternates": {
+                                "text": "string",
+                                "iconCls": "string",
+                                "itemId": "string"
+                            },
+                            "name": "MyMenuItem5",
+                            "designerId": "4a3098a1-0953-4593-8aed-faf30e1a4b51"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "mnuStockMovements",
+                                "text": "Stocks Movements"
+                            },
+                            "configAlternates": {
+                                "text": "string",
+                                "itemId": "string"
+                            },
+                            "name": "MyMenuItem6",
+                            "designerId": "473ae06b-b31a-44a3-8627-d597d3c6eb52"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "mnuStockAdjustments",
+                                "text": "Stocks Adjustments"
+                            },
+                            "configAlternates": {
+                                "text": "string",
+                                "itemId": "string"
+                            },
+                            "name": "MyMenuItem10",
+                            "designerId": "81daef77-87f5-4aa7-b2d8-7eb7085eda0e"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "mnuStockValuation",
+                                "text": "Valuation Report"
+                            },
+                            "configAlternates": {
+                                "text": "string",
+                                "itemId": "string"
+                            },
+                            "name": "MyMenuItem11",
+                            "designerId": "83381e80-5320-4d43-bdee-b788e85e84a6"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "text": "Returns from Patients"
+                            },
+                            "configAlternates": {
+                                "text": "string"
+                            },
+                            "name": "MyMenuItem12",
+                            "designerId": "277d351d-09e5-4d31-aa7f-da09882236fd"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.menu.Menu",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "floating": false,
+                        "title": "Settings",
+                        "width": 120
+                    },
+                    "configAlternates": {
+                        "floating": "boolean",
+                        "title": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyMenu2",
+                    "designerId": "221f7130-2201-459c-a974-952c2d7d5b3d",
+                    "cn": [
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "text": "Locations"
+                            },
+                            "configAlternates": {
+                                "text": "string"
+                            },
+                            "name": "MyMenuItem4",
+                            "designerId": "67878a6c-2f97-431e-ad57-1a8c5c9c1136"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "text": "Items Category"
+                            },
+                            "configAlternates": {
+                                "text": "string"
+                            },
+                            "name": "MyMenuItem5",
+                            "designerId": "93b28f7d-0904-4715-b472-497e7eeebc0f"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "text": "Menu Item"
+                            },
+                            "configAlternates": {
+                                "text": "string"
+                            },
+                            "name": "MyMenuItem6",
+                            "designerId": "c2297398-b4fb-4e82-a4b0-9a08f3a234b8"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

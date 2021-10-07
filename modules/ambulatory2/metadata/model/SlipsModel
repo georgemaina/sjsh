@@ -1,0 +1,127 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "slipsmodel",
+        "designer|userClassName": "SlipsModel"
+    },
+    "name": "MyModel",
+    "designerId": "8a1bdee5-c6a3-400b-8c1f-70bfd998d40d",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id",
+                "sortDir": "DESC",
+                "sortType": "asInt",
+                "type": "int"
+            },
+            "name": "MyField",
+            "designerId": "6ad32f40-3235-43d5-8ace-d0383deaaf36"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "pid"
+            },
+            "name": "MyField1",
+            "designerId": "c742879c-9b97-4527-93d9-3cf06219a42c"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "slipNo"
+            },
+            "name": "MyField2",
+            "designerId": "2a6466e6-0f39-4810-a261-d97b875b2246"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "slipDate",
+                "sortDir": "DESC",
+                "sortType": "asDate"
+            },
+            "name": "MyField3",
+            "designerId": "0f752226-5f8d-4ecc-af15-e51b479c6a81"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "slipTime",
+                "sortDir": "DESC",
+                "sortType": null
+            },
+            "name": "MyField7",
+            "designerId": "5e4f3ab5-6786-4b68-922e-fcfc53955af1"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Names"
+            },
+            "name": "MyField4",
+            "designerId": "45a67dcf-a9ea-4aa2-a056-316919a6a694"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "accNo"
+            },
+            "name": "MyField5",
+            "designerId": "0a2e9c34-0c20-4d8d-958f-2265cfacddc6"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "accName"
+            },
+            "name": "MyField6",
+            "designerId": "1d33a03e-d78c-43d3-8b4e-24996e15fd88"
+        }
+    ]
+}

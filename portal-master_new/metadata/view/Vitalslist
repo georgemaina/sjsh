@@ -1,0 +1,172 @@
+{
+    "type": "Ext.grid.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "vitalslist",
+        "designer|userClassName": "Vitalslist",
+        "height": 360,
+        "scrollable": "both",
+        "store": "VitalsStore",
+        "title": "Vitals"
+    },
+    "configAlternates": {
+        "height": "auto",
+        "layout|x": "number",
+        "layout|y": "number",
+        "scrollable": "auto",
+        "store": "store",
+        "title": "string",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "name": "MyGridPanel",
+    "designerId": "f580265d-7661-41b7-b8ee-d75030671d13",
+    "viewControllerInstanceId": "1ef3aba0-cba8-4351-ba56-dd59c02e926e",
+    "viewModelInstanceId": "82f48457-b4e4-47f3-9dfa-d26e1b196d0b",
+    "cn": [
+        {
+            "type": "Ext.view.Table",
+            "reference": {
+                "name": "viewConfig",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyTable",
+            "designerId": "174451fc-2b46-42a9-8ca0-6314818acc3b"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "Description",
+                "text": "Description"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string"
+            },
+            "name": "MyColumn45",
+            "designerId": "c67ac9ce-fcbd-4af5-b60a-d5744aa12485"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "Value",
+                "text": "Value"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string"
+            },
+            "name": "MyColumn46",
+            "designerId": "ed3fa7dc-4e5b-4205-92c2-e41a55354fd4"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "Lower",
+                "text": "Lower"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string"
+            },
+            "name": "MyColumn47",
+            "designerId": "e7165d3d-3b6a-46d2-b30b-82b66285d544"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "Upper",
+                "text": "Upper"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string"
+            },
+            "name": "MyColumn48",
+            "designerId": "57a3570d-6f37-476f-9023-6e8f03e02530"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "EncounterNo",
+                "text": "Encounter No",
+                "width": 128
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "width": "auto"
+            },
+            "name": "MyColumn42",
+            "designerId": "b8c186dc-087c-4e71-ae90-97e1087b0718"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "VitalsTime",
+                "text": "Vitals Time",
+                "width": 161
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "width": "auto"
+            },
+            "name": "MyColumn43",
+            "designerId": "91107e1f-9cfe-4dc1-9219-e46ec8f2f847"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "VitalID",
+                "text": "Vital Id"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string"
+            },
+            "name": "MyColumn44",
+            "designerId": "eb21d2bb-7cee-455c-bbd2-7588602403e3"
+        }
+    ]
+}

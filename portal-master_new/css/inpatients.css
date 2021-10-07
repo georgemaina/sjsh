@@ -1,0 +1,59 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 9, 2017, 4:43:40 PM
+    Author     : George
+*/
+
+#billDetails
+{
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+    width:100%;
+    border-collapse:collapse;
+}
+#billDetails td, #billDetails th 
+{
+    font-size:1em;
+    border:1px solid #98bf21;
+    padding:3px 7px 2px 7px;
+}
+#billDetails th 
+{
+    font-size:1.1em;
+    text-align:left;
+    padding-top:5px;
+    padding-bottom:4px;
+    background-color:#A7C942;
+    color:#ffffff;
+}
+#billDetails tr.alt td 
+{
+    color:#000000;
+    background-color:#EAF2D3;
+}
+
+#billDetails td.titles  
+{
+    color:#04648c;
+    font-size: medium;
+    font-weight: bold;
+    text-align: center;
+}
+#billDetails td.totals  
+{
+    color:#04648c;
+    font-size: medium;
+    font-weight: bold;
+    text-align: center;
+}
+
+#wardsTitle {
+    font-family: serif;
+    font-size: 20px;
+    font-weight: bold;
+    font-variant: normal;
+    color:white;
+}

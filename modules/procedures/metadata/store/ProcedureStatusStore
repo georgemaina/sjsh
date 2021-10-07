@@ -1,0 +1,61 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "data": null,
+        "designer|userAlias": "procedurestatusstore",
+        "designer|userClassName": "ProcedureStatusStore",
+        "model": "ProcedureStatus",
+        "storeId": "ProcedureStatusStore"
+    },
+    "configAlternates": {
+        "autoLoad": "boolean",
+        "data": "array",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string"
+    },
+    "designerId": "a01bdcc9-7405-45df-b8d8-12796937eafa",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "../data/getDataFunctions.php?task=getStatusList"
+            },
+            "configAlternates": {
+                "url": "string"
+            },
+            "name": "MyAjaxProxy2",
+            "designerId": "7bd9605c-87cf-45d4-8413-e0799e07e837",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "procStatus"
+                    },
+                    "configAlternates": {
+                        "root": "string"
+                    },
+                    "name": "MyJsonReader2",
+                    "designerId": "e9acf152-8ed2-4bf0-bcc1-bfcd603ae823"
+                }
+            ]
+        }
+    ]
+}

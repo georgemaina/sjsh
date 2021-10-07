@@ -1,0 +1,60 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "receiptsallocatest",
+        "designer|userClassName": "ReceiptsAllocateSt",
+        "model": "ReceiptsAllocate",
+        "pageSize": 700,
+        "storeId": "ReceiptsAllocateSt"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "pageSize": "number",
+        "storeId": "string"
+    },
+    "designerId": "b0b08926-9b06-4420-b372-d0d4b98300b6",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "./data/getDataFunctions.php?task=getUnallocatedReceipts"
+            },
+            "configAlternates": {
+                "url": "string"
+            },
+            "name": "MyAjaxProxy11",
+            "designerId": "2c2c0b33-5171-4fed-8c9e-e6787f758d6b",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "receiptsList"
+                    },
+                    "configAlternates": {
+                        "root": "string",
+                        "rootProperty": "string"
+                    },
+                    "name": "MyJsonReader11",
+                    "designerId": "96ff101c-206c-4574-95a7-f432adae3379"
+                }
+            ]
+        }
+    ]
+}

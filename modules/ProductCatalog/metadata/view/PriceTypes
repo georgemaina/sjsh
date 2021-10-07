@@ -1,0 +1,222 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "bodyPadding": 10,
+        "designer|snapToGrid": 5,
+        "designer|userAlias": "pricetypes",
+        "designer|userClassName": "PriceTypes",
+        "height": 167,
+        "layout": "absolute",
+        "title": null,
+        "url": "data/getDataFunctions.php?task=insertNewPrice",
+        "width": 347
+    },
+    "configAlternates": {
+        "bodyPadding": "auto",
+        "designer|snapToGrid": "number",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "layout": "string",
+        "title": "string",
+        "url": "string",
+        "width": "auto"
+    },
+    "name": "MyForm2",
+    "designerId": "83c91255-b1b4-441a-8f4f-b37ff7405d43",
+    "viewControllerInstanceId": "46a536f6-85aa-49d3-88da-2979c18feefa",
+    "viewModelInstanceId": "05aa9682-5bad-4f44-854e-b625462b6cbb",
+    "cn": [
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "PartCode",
+                "itemId": "partcode",
+                "layout|x": 10,
+                "layout|y": 10,
+                "name": "PartCode"
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "name": "string",
+                "itemId": "string"
+            },
+            "name": "MyTextField28",
+            "designerId": "3acd3a5d-4124-4182-9c19-e74cc47f4f67"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Price",
+                "itemId": "price",
+                "layout|x": 10,
+                "layout|y": 80,
+                "name": "Price"
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "name": "string",
+                "itemId": "string"
+            },
+            "name": "MyTextField29",
+            "designerId": "0d8c363f-f097-480b-8bc9-c82058c5c765"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": null,
+                "hidden": true,
+                "itemId": "formStatus",
+                "layout|x": 140,
+                "layout|y": 120,
+                "name": "formStatus",
+                "width": 55
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "name": "string",
+                "itemId": "string",
+                "width": "auto",
+                "hidden": "boolean"
+            },
+            "name": "MyTextField31",
+            "designerId": "3265494d-10dc-438d-9e35-c2adf083976a"
+        },
+        {
+            "type": "Ext.form.field.ComboBox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "displayField": "PriceType",
+                "fieldLabel": "Price Type",
+                "itemId": "pricetype",
+                "layout|x": 10,
+                "layout|y": 45,
+                "minChars": 2,
+                "name": "PriceType",
+                "queryMode": "local",
+                "store": "PricesTypeStore",
+                "typeAhead": true,
+                "valueField": "ID"
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "displayField": "datafield",
+                "minChars": "number",
+                "name": "string",
+                "queryMode": "string",
+                "store": "store",
+                "typeAhead": "boolean",
+                "valueField": "datafield",
+                "itemId": "string"
+            },
+            "name": "MyComboBox15",
+            "designerId": "f9e7dadf-356e-4a52-bbea-33b427de439f"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "cmdSave",
+                "layout|x": 45,
+                "layout|y": 120,
+                "text": "Save",
+                "width": 75
+            },
+            "configAlternates": {
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "text": "string",
+                "width": "auto"
+            },
+            "name": "MyButton19",
+            "designerId": "31b3631a-233d-4e42-9202-087e390dd38e"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "cmdClose",
+                "layout|x": 250,
+                "layout|y": 120,
+                "text": "Close",
+                "width": 75
+            },
+            "configAlternates": {
+                "layout|x": "number",
+                "layout|y": "number",
+                "text": "string",
+                "width": "auto",
+                "itemId": "string"
+            },
+            "name": "MyButton20",
+            "designerId": "f271653c-d7e2-4416-bf50-ea8fd30e6902"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "prices",
+                "itemId": "cmdDelete",
+                "layout|x": 145,
+                "layout|y": 120,
+                "text": "Delete",
+                "width": 75
+            },
+            "configAlternates": {
+                "layout|x": "number",
+                "layout|y": "number",
+                "text": "string",
+                "width": "auto",
+                "itemId": "string",
+                "id": "string"
+            },
+            "name": "MyButton25",
+            "designerId": "8dc8fe21-b2a8-4a18-aaf6-20732f911cc6"
+        }
+    ]
+}

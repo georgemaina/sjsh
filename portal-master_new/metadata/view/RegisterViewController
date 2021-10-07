@@ -1,0 +1,49 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "register",
+        "designer|userClassName": "RegisterViewController"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "designerId": "b39afad0-1ae0-4953-97a4-9fd0c732624c",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "component"
+                ],
+                "fn": "printTime",
+                "implHandler": [
+                    "var d = new Date();",
+                    "var hours = d.getHours();",
+                    "var mins = d.getMinutes();",
+                    "var secs = d.getSeconds();",
+                    "var strTime=hours+\":\"+mins+\":\"+secs;",
+                    "",
+                    "component.setValue(strTime);"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "printTime",
+            "designerId": "8f00ae72-e937-467c-af13-01a4b666f552"
+        }
+    ]
+}

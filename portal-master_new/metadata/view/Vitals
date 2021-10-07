@@ -1,0 +1,112 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "cls": [
+            "x-portlet"
+        ],
+        "designer|userAlias": "vitals",
+        "designer|userClassName": "Vitals",
+        "frame": null,
+        "html": null,
+        "isPortlet": true,
+        "itemId": "vitals",
+        "minHeight": 300,
+        "scrollable": true,
+        "title": "Vitals"
+    },
+    "configAlternates": {
+        "isPortlet": "boolean",
+        "autoScroll": "boolean",
+        "cls": "string",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "frame": "boolean",
+        "html": "object",
+        "itemId": "string",
+        "minHeight": "number",
+        "title": "string",
+        "scrollable": "boolean"
+    },
+    "name": "Diagnosis1",
+    "designerId": "51a55267-5db3-4711-b5c7-edee77fa8892",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "isPortlet",
+            "type": "string"
+        }
+    ],
+    "viewControllerInstanceId": "4f32428c-7982-432c-8f98-8b30a738bc33",
+    "viewModelInstanceId": "f3cbcf3c-2df7-48b6-a6bb-d45c07d62169",
+    "cn": [
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|snapToGrid": 5,
+                "dock": "top",
+                "height": 35,
+                "layout": "absolute"
+            },
+            "configAlternates": {
+                "designer|snapToGrid": "number",
+                "dock": "string",
+                "height": "auto",
+                "layout": "string"
+            },
+            "name": "MyContainer10",
+            "designerId": "5f7007f9-4880-4ea4-9fa9-1e7b83c8cee7",
+            "cn": [
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "x-fa fa-plus",
+                        "itemId": "cmdNew",
+                        "layout|x": 20,
+                        "layout|y": 0,
+                        "text": "New Vitals"
+                    },
+                    "configAlternates": {
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "text": "string",
+                        "iconCls": "string",
+                        "itemId": "string"
+                    },
+                    "name": "MyButton1",
+                    "designerId": "002dec43-7667-42cf-a9ff-d07e40b94f5b"
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Tool",
+            "reference": {
+                "name": "tools",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "tooltip": "Create New Vitals"
+            },
+            "configAlternates": {
+                "tooltip": "string"
+            },
+            "name": "MyTool",
+            "designerId": "a9f80386-48b7-4218-b157-31891e9595d3"
+        }
+    ]
+}

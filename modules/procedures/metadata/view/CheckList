@@ -1,0 +1,2723 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "animCollapse": true,
+        "bodyPadding": 2,
+        "closable": true,
+        "collapsible": true,
+        "designer|userAlias": "checklist",
+        "designer|userClassName": "CheckList",
+        "height": 781,
+        "minWidth": 1000,
+        "title": "Surgical Safety Checklist",
+        "width": 1000
+    },
+    "configAlternates": {
+        "animCollapse": "boolean",
+        "bodyPadding": "auto",
+        "closable": "boolean",
+        "collapsible": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "minWidth": "number",
+        "title": "string",
+        "width": "auto"
+    },
+    "designerId": "e07ed49e-060c-4790-a4c6-d6ad349a604b",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": "stretch",
+                "designer|displayName": "topBar",
+                "frame": true,
+                "height": 38,
+                "layout": "hbox",
+                "title": null
+            },
+            "configAlternates": {
+                "container|align": "string",
+                "designer|displayName": "string",
+                "frame": "boolean",
+                "height": "auto",
+                "layout": "string",
+                "title": "string"
+            },
+            "name": "MyPanel1",
+            "designerId": "578c3f30-fb13-4583-8ee1-d8e4b8c44ac4",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "PATIENT NAME",
+                        "id": null,
+                        "labelWidth": 90,
+                        "name": "pnamesDisp",
+                        "width": 332
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "id": "string",
+                        "labelWidth": "number",
+                        "name": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyTextField10",
+                    "designerId": "bc1b41a6-16df-4740-bb90-aea6235ad67f"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "IN-PATIENT NO",
+                        "id": null,
+                        "labelWidth": 90,
+                        "name": "pid",
+                        "width": 219
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "id": "string",
+                        "labelWidth": "number",
+                        "name": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyTextField11",
+                    "designerId": "674195d8-206e-4e22-b584-09fd41db3225"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "PROCEDURE",
+                        "id": null,
+                        "labelWidth": 80,
+                        "layout|flex": 1,
+                        "name": "procedure_type",
+                        "width": 267
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "id": "string",
+                        "labelWidth": "number",
+                        "layout|flex": "number",
+                        "name": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyTextField12",
+                    "designerId": "78583352-64b5-468d-97c0-fe487cd2b4af"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "DATE",
+                        "id": null,
+                        "labelWidth": 40,
+                        "layout|flex": 1,
+                        "name": "procedure_date",
+                        "width": 220
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "id": "string",
+                        "labelWidth": "number",
+                        "layout|flex": "number",
+                        "name": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyTextField13",
+                    "designerId": "7bb10c53-3fa3-4512-9a80-bf3a42e9444f"
+                }
+            ]
+        },
+        {
+            "type": "Ext.tab.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "activeTab": 0,
+                "frame": true,
+                "height": 756
+            },
+            "configAlternates": {
+                "activeTab": "auto",
+                "frame": "boolean",
+                "height": "auto"
+            },
+            "name": "MyTabPanel",
+            "designerId": "777dabce-b21d-4dc3-8f98-317c3694227d",
+            "cn": [
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 481,
+                        "title": "SIGN IN"
+                    },
+                    "configAlternates": {
+                        "height": "auto",
+                        "title": "string"
+                    },
+                    "name": "MyPanel2",
+                    "designerId": "02b10678-0044-4df0-b74a-17403c7f4b8d",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "padding": null
+                            },
+                            "configAlternates": {
+                                "padding": "auto"
+                            },
+                            "name": "TabConfig",
+                            "designerId": "69fe07b6-59c7-4079-a56f-07bc4e6c3a0d"
+                        },
+                        {
+                            "type": "Ext.form.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|snapToGrid": 5,
+                                "frame": true,
+                                "height": 718,
+                                "layout": "absolute",
+                                "padding": "5 5 5 20",
+                                "title": null,
+                                "url": "data/getDataFunctions.php?task=createCheckList1",
+                                "width": 983
+                            },
+                            "configAlternates": {
+                                "designer|snapToGrid": "number",
+                                "frame": "boolean",
+                                "height": "auto",
+                                "layout": "string",
+                                "padding": "auto",
+                                "title": "string",
+                                "url": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyForm",
+                            "designerId": "c51a37f4-6849-4afe-a851-a0c6e421910c",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.CheckboxGroup",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fieldLabel": null,
+                                        "height": 25,
+                                        "layout|x": 60,
+                                        "layout|y": 20,
+                                        "width": 440
+                                    },
+                                    "configAlternates": {
+                                        "fieldLabel": "string",
+                                        "height": "auto",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "width": "auto"
+                                    },
+                                    "name": "MyCheckboxGroup",
+                                    "designerId": "9cfa7860-82c3-48f9-9b46-5adadecf0603",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.form.field.Checkbox",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "boxLabel": "IDENTITY",
+                                                "fieldLabel": null,
+                                                "inputValue": "YES",
+                                                "name": "identity",
+                                                "uncheckedValue": "NO"
+                                            },
+                                            "configAlternates": {
+                                                "boxLabel": "string",
+                                                "fieldLabel": "string",
+                                                "inputValue": "string",
+                                                "name": "string",
+                                                "uncheckedValue": "string"
+                                            },
+                                            "name": "MyCheckbox",
+                                            "designerId": "1824e3dd-2649-4ef4-8e71-66ae73c32bc9"
+                                        },
+                                        {
+                                            "type": "Ext.form.field.Checkbox",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "boxLabel": "SITE",
+                                                "fieldLabel": null,
+                                                "inputValue": "YES",
+                                                "name": "site",
+                                                "uncheckedValue": "NO"
+                                            },
+                                            "configAlternates": {
+                                                "boxLabel": "string",
+                                                "fieldLabel": "string",
+                                                "inputValue": "string",
+                                                "name": "string",
+                                                "uncheckedValue": "string"
+                                            },
+                                            "name": "MyCheckbox1",
+                                            "designerId": "5e329d19-4331-49bb-8359-688cb6e2a31d"
+                                        },
+                                        {
+                                            "type": "Ext.form.field.Checkbox",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "boxLabel": "PROCEDURE",
+                                                "fieldLabel": null,
+                                                "inputValue": "YES",
+                                                "name": "procedure_check",
+                                                "uncheckedValue": "NO"
+                                            },
+                                            "configAlternates": {
+                                                "boxLabel": "string",
+                                                "fieldLabel": "string",
+                                                "inputValue": "string",
+                                                "name": "string",
+                                                "uncheckedValue": "string"
+                                            },
+                                            "name": "MyCheckbox2",
+                                            "designerId": "138e8869-4d35-4ccd-9ba5-65c7675754ce"
+                                        },
+                                        {
+                                            "type": "Ext.form.field.Checkbox",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "boxLabel": "CONSENT",
+                                                "fieldLabel": null,
+                                                "inputValue": "YES",
+                                                "name": "consent",
+                                                "uncheckedValue": "NO"
+                                            },
+                                            "configAlternates": {
+                                                "boxLabel": "string",
+                                                "fieldLabel": "string",
+                                                "inputValue": "string",
+                                                "name": "string",
+                                                "uncheckedValue": "string"
+                                            },
+                                            "name": "MyCheckbox3",
+                                            "designerId": "8e550843-292d-4d87-ba72-7de4aa3f6f15"
+                                        },
+                                        {
+                                            "type": "Ext.form.field.Checkbox",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "boxLabel": "AGE",
+                                                "fieldLabel": null,
+                                                "inputValue": "YES",
+                                                "name": "age",
+                                                "uncheckedValue": "NO"
+                                            },
+                                            "configAlternates": {
+                                                "boxLabel": "string",
+                                                "fieldLabel": "string",
+                                                "inputValue": "string",
+                                                "name": "string",
+                                                "uncheckedValue": "string"
+                                            },
+                                            "name": "MyCheckbox4",
+                                            "designerId": "d4fc76ed-de2e-40c4-8631-b3d6283a81e3"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.form.field.Checkbox",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "IDENTIFICATION BRACELET ON PATIENT",
+                                        "fieldLabel": null,
+                                        "inputValue": "YES",
+                                        "layout|x": 0,
+                                        "layout|y": 40,
+                                        "name": "id_bracelet",
+                                        "uncheckedValue": "NO"
+                                    },
+                                    "configAlternates": {
+                                        "boxLabel": "string",
+                                        "fieldLabel": "string",
+                                        "inputValue": "string",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "name": "string",
+                                        "uncheckedValue": "string"
+                                    },
+                                    "name": "MyCheckbox5",
+                                    "designerId": "204334b5-ac96-4ad5-b09b-7b763f3e278c"
+                                },
+                                {
+                                    "type": "Ext.form.field.Checkbox",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "SITE MARKED/ NOT APPLICABLE",
+                                        "fieldLabel": null,
+                                        "inputValue": "YES",
+                                        "layout|x": 0,
+                                        "layout|y": 60,
+                                        "name": "site_marked",
+                                        "uncheckedValue": "NO"
+                                    },
+                                    "configAlternates": {
+                                        "boxLabel": "string",
+                                        "fieldLabel": "string",
+                                        "inputValue": "string",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "name": "string",
+                                        "uncheckedValue": "string"
+                                    },
+                                    "name": "MyCheckbox6",
+                                    "designerId": "a1937508-24ff-4cf1-aec9-683fa5354c0d"
+                                },
+                                {
+                                    "type": "Ext.form.field.Checkbox",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "BATHED",
+                                        "fieldLabel": null,
+                                        "inputValue": "YES",
+                                        "layout|x": 0,
+                                        "layout|y": 80,
+                                        "name": "bathed",
+                                        "uncheckedValue": "NO"
+                                    },
+                                    "configAlternates": {
+                                        "boxLabel": "string",
+                                        "fieldLabel": "string",
+                                        "inputValue": "string",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "name": "string",
+                                        "uncheckedValue": "string"
+                                    },
+                                    "name": "MyCheckbox7",
+                                    "designerId": "0e536ac7-6bba-4c44-a187-91ed446cab62"
+                                },
+                                {
+                                    "type": "Ext.form.field.Checkbox",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "SCRUBBED / CUTTING OF TOE / FINGER NAILS",
+                                        "fieldLabel": null,
+                                        "inputValue": "YES",
+                                        "layout|x": 0,
+                                        "layout|y": 100,
+                                        "name": "scrubbed",
+                                        "uncheckedValue": "NO"
+                                    },
+                                    "configAlternates": {
+                                        "boxLabel": "string",
+                                        "fieldLabel": "string",
+                                        "inputValue": "string",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "name": "string",
+                                        "uncheckedValue": "string"
+                                    },
+                                    "name": "MyCheckbox8",
+                                    "designerId": "9aa3881e-15a1-4620-8ab1-c782403925ac"
+                                },
+                                {
+                                    "type": "Ext.form.field.Checkbox",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "BLOOD AVAILABLE, IF INDICATED",
+                                        "fieldLabel": null,
+                                        "inputValue": "YES",
+                                        "layout|x": 0,
+                                        "layout|y": 170,
+                                        "name": "blood_available",
+                                        "uncheckedValue": "NO"
+                                    },
+                                    "configAlternates": {
+                                        "boxLabel": "string",
+                                        "fieldLabel": "string",
+                                        "inputValue": "string",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "name": "string",
+                                        "uncheckedValue": "string"
+                                    },
+                                    "name": "MyCheckbox9",
+                                    "designerId": "7fce1e89-3d3d-4bd3-8432-d6f7475ef0da"
+                                },
+                                {
+                                    "type": "Ext.form.field.Checkbox",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "X-RAYS IN OR, IF INDICATED",
+                                        "fieldLabel": null,
+                                        "inputValue": "YES",
+                                        "layout|x": 0,
+                                        "layout|y": 190,
+                                        "name": "xray",
+                                        "uncheckedValue": "NO"
+                                    },
+                                    "configAlternates": {
+                                        "boxLabel": "string",
+                                        "fieldLabel": "string",
+                                        "inputValue": "string",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "name": "string",
+                                        "uncheckedValue": "string"
+                                    },
+                                    "name": "MyCheckbox10",
+                                    "designerId": "35ee457c-6040-44f6-b405-95d4154b0b6d"
+                                },
+                                {
+                                    "type": "Ext.form.field.Checkbox",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "PRE-ANAESTHESIA EVALUATION",
+                                        "fieldLabel": null,
+                                        "inputValue": "YES",
+                                        "layout|x": 0,
+                                        "layout|y": 270,
+                                        "name": "pre_anaesthesia_eva",
+                                        "uncheckedValue": "NO"
+                                    },
+                                    "configAlternates": {
+                                        "boxLabel": "string",
+                                        "fieldLabel": "string",
+                                        "inputValue": "string",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "name": "string",
+                                        "uncheckedValue": "string"
+                                    },
+                                    "name": "MyCheckbox11",
+                                    "designerId": "f43f13d8-c099-419d-94cf-90d8361bf0c3"
+                                },
+                                {
+                                    "type": "Ext.form.field.Checkbox",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "PATIENT VOIDED ON-CALL TO OR",
+                                        "fieldLabel": null,
+                                        "inputValue": "YES",
+                                        "layout|x": 0,
+                                        "layout|y": 585,
+                                        "name": "PT_Voided",
+                                        "uncheckedValue": "NO"
+                                    },
+                                    "configAlternates": {
+                                        "boxLabel": "string",
+                                        "fieldLabel": "string",
+                                        "inputValue": "string",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "name": "string",
+                                        "uncheckedValue": "string"
+                                    },
+                                    "name": "MyCheckbox12",
+                                    "designerId": "d6cce0c8-1021-448a-a65a-af42328e56eb"
+                                },
+                                {
+                                    "type": "Ext.form.field.Checkbox",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "REMOVED JEWERLY, EYE CONTACTS, BODY PIERCINGS",
+                                        "fieldLabel": null,
+                                        "inputValue": "YES",
+                                        "layout|x": 0,
+                                        "layout|y": 610,
+                                        "name": "removal_extras",
+                                        "uncheckedValue": "NO"
+                                    },
+                                    "configAlternates": {
+                                        "boxLabel": "string",
+                                        "fieldLabel": "string",
+                                        "inputValue": "string",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "name": "string",
+                                        "uncheckedValue": "string"
+                                    },
+                                    "name": "MyCheckbox13",
+                                    "designerId": "3283dfa9-7a1b-426c-ae52-9a04aeb2f5ab"
+                                },
+                                {
+                                    "type": "Ext.form.RadioGroup",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fieldLabel": "DOES PATIENT HAVE KNOWN ALERGIES",
+                                        "labelAlign": "top",
+                                        "layout|x": -4,
+                                        "layout|y": 130,
+                                        "width": 475
+                                    },
+                                    "configAlternates": {
+                                        "fieldLabel": "string",
+                                        "labelAlign": "string",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "width": "auto"
+                                    },
+                                    "name": "MyRadioGroup",
+                                    "designerId": "f611b226-3ce8-4fd5-a3f4-ead6b3b61436",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.form.field.Radio",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "boxLabel": "NO",
+                                                "fieldLabel": null,
+                                                "inputValue": "NO",
+                                                "labelWidth": 20,
+                                                "name": "allergy",
+                                                "value": [
+                                                    "NO"
+                                                ]
+                                            },
+                                            "configAlternates": {
+                                                "boxLabel": "string",
+                                                "fieldLabel": "string",
+                                                "inputValue": "string",
+                                                "labelWidth": "number",
+                                                "name": "string",
+                                                "value": "object"
+                                            },
+                                            "name": "MyRadio",
+                                            "designerId": "c14d4c7b-756f-4925-89e3-b1eea5625234"
+                                        },
+                                        {
+                                            "type": "Ext.form.field.Radio",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "boxLabel": "YES",
+                                                "fieldLabel": null,
+                                                "inputValue": "YES",
+                                                "labelWidth": 20,
+                                                "name": "allergy"
+                                            },
+                                            "configAlternates": {
+                                                "boxLabel": "string",
+                                                "fieldLabel": "string",
+                                                "inputValue": "string",
+                                                "labelWidth": "number",
+                                                "name": "string"
+                                            },
+                                            "name": "MyRadio1",
+                                            "designerId": "5af7d263-52a9-4ead-8f9e-dacb9e84a720"
+                                        },
+                                        {
+                                            "type": "Ext.form.field.Text",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fieldLabel": "If Yes",
+                                                "labelWidth": 40,
+                                                "name": "allergy_name",
+                                                "width": 315
+                                            },
+                                            "configAlternates": {
+                                                "fieldLabel": "string",
+                                                "labelWidth": "number",
+                                                "name": "string",
+                                                "width": "auto"
+                                            },
+                                            "name": "MyTextField14",
+                                            "designerId": "87f9e555-e85f-4427-86ad-6ae4a1ac2391"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fieldLabel": "HB",
+                                        "labelWidth": 15,
+                                        "layout|x": 25,
+                                        "layout|y": 215,
+                                        "name": "HB",
+                                        "width": 110
+                                    },
+                                    "configAlternates": {
+                                        "fieldLabel": "string",
+                                        "labelWidth": "number",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "name": "string",
+                                        "width": "auto"
+                                    },
+                                    "name": "MyTextField15",
+                                    "designerId": "377fce5b-39fe-4c46-9e6b-ec92d845c93f"
+                                },
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fieldLabel": "HCT",
+                                        "labelWidth": 30,
+                                        "layout|x": 165,
+                                        "layout|y": 215,
+                                        "name": "HCT"
+                                    },
+                                    "configAlternates": {
+                                        "fieldLabel": "string",
+                                        "labelWidth": "number",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "name": "string"
+                                    },
+                                    "name": "MyTextField16",
+                                    "designerId": "bb835a46-170d-4c90-b88f-f46726f18b77"
+                                },
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fieldLabel": "Weight",
+                                        "labelWidth": 40,
+                                        "layout|x": 0,
+                                        "layout|y": 240,
+                                        "name": "weight",
+                                        "width": 135
+                                    },
+                                    "configAlternates": {
+                                        "fieldLabel": "string",
+                                        "labelWidth": "number",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "name": "string",
+                                        "width": "auto"
+                                    },
+                                    "name": "MyTextField17",
+                                    "designerId": "26801f73-ad71-4328-ab28-774d3203e6b5"
+                                },
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fieldLabel": "SOLIDS FROM",
+                                        "labelWidth": 132,
+                                        "layout|x": 65,
+                                        "layout|y": 310,
+                                        "name": "solids_from"
+                                    },
+                                    "configAlternates": {
+                                        "fieldLabel": "string",
+                                        "labelWidth": "number",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "name": "string"
+                                    },
+                                    "name": "MyTextField18",
+                                    "designerId": "7b1eb27b-5474-44b7-8e6b-101b66ef7119"
+                                },
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fieldLabel": "BREASTFEEDING FROM",
+                                        "labelWidth": 132,
+                                        "layout|x": 65,
+                                        "layout|y": 360,
+                                        "name": "breastfeeding_from"
+                                    },
+                                    "configAlternates": {
+                                        "fieldLabel": "string",
+                                        "labelWidth": "number",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "name": "string"
+                                    },
+                                    "name": "MyTextField19",
+                                    "designerId": "acbeab49-228b-4627-aa29-4e176ed0f50d"
+                                },
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fieldLabel": "LIQUIDS FROM",
+                                        "labelWidth": 132,
+                                        "layout|x": 65,
+                                        "layout|y": 335,
+                                        "name": "liquids_from"
+                                    },
+                                    "configAlternates": {
+                                        "fieldLabel": "string",
+                                        "labelWidth": "number",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "name": "string"
+                                    },
+                                    "name": "MyTextField20",
+                                    "designerId": "66553176-7ca6-4ef6-93af-8dd6e70d2ba6"
+                                },
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fieldLabel": "MEDICATION RECEIVED",
+                                        "labelWidth": 180,
+                                        "layout|x": 20,
+                                        "layout|y": 390,
+                                        "name": "Medication_rs",
+                                        "width": 450
+                                    },
+                                    "configAlternates": {
+                                        "fieldLabel": "string",
+                                        "labelWidth": "number",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "name": "string",
+                                        "width": "auto"
+                                    },
+                                    "name": "MyTextField21",
+                                    "designerId": "ea999ee0-505f-4dff-b0c6-f974ee343564"
+                                },
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fieldLabel": "IV ANTIBIOTIC GIVEN IN WARD",
+                                        "labelWidth": 180,
+                                        "layout|x": 20,
+                                        "layout|y": 420,
+                                        "name": "antibiotic_given",
+                                        "width": 450
+                                    },
+                                    "configAlternates": {
+                                        "fieldLabel": "string",
+                                        "labelWidth": "number",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "name": "string",
+                                        "width": "auto"
+                                    },
+                                    "name": "MyTextField22",
+                                    "designerId": "2b9d6b87-d3e2-41f4-8c7a-9b9c8d637a14"
+                                },
+                                {
+                                    "type": "Ext.form.FieldSet",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|snapToGrid": 10,
+                                        "height": 120,
+                                        "layout": "absolute",
+                                        "layout|x": 0,
+                                        "layout|y": 450,
+                                        "title": "AM VITAL SIGNS",
+                                        "width": 530
+                                    },
+                                    "configAlternates": {
+                                        "designer|snapToGrid": "number",
+                                        "height": "auto",
+                                        "layout": "string",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "title": "string",
+                                        "width": "auto"
+                                    },
+                                    "name": "MyFieldSet3",
+                                    "designerId": "6de6d23b-d44b-4448-9c6a-48a6892b303c",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.form.field.Text",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fieldLabel": "BP",
+                                                "labelWidth": 20,
+                                                "layout|x": 40,
+                                                "layout|y": 10,
+                                                "name": "BP"
+                                            },
+                                            "configAlternates": {
+                                                "fieldLabel": "string",
+                                                "labelWidth": "number",
+                                                "layout|x": "number",
+                                                "layout|y": "number",
+                                                "name": "string"
+                                            },
+                                            "name": "MyTextField23",
+                                            "designerId": "fc1baea9-d491-4aca-8ad8-3dbc6bb7d3e0"
+                                        },
+                                        {
+                                            "type": "Ext.form.field.Text",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fieldLabel": "HR",
+                                                "labelWidth": 20,
+                                                "layout|x": 300,
+                                                "layout|y": 10,
+                                                "name": "HR",
+                                                "width": 150
+                                            },
+                                            "configAlternates": {
+                                                "fieldLabel": "string",
+                                                "labelWidth": "number",
+                                                "layout|x": "number",
+                                                "layout|y": "number",
+                                                "name": "string",
+                                                "width": "auto"
+                                            },
+                                            "name": "MyTextField24",
+                                            "designerId": "3356f669-a818-49c0-ad2e-e32146c2e78b"
+                                        },
+                                        {
+                                            "type": "Ext.form.field.Text",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fieldLabel": "TEMP",
+                                                "labelWidth": 31,
+                                                "layout|x": 290,
+                                                "layout|y": 40,
+                                                "name": "TEMP",
+                                                "width": 160
+                                            },
+                                            "configAlternates": {
+                                                "fieldLabel": "string",
+                                                "labelWidth": "number",
+                                                "layout|x": "number",
+                                                "layout|y": "number",
+                                                "name": "string",
+                                                "width": "auto"
+                                            },
+                                            "name": "MyTextField25",
+                                            "designerId": "1aac1578-34ae-4714-9e2c-8d28b52d4329"
+                                        },
+                                        {
+                                            "type": "Ext.form.field.Text",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fieldLabel": "(AX,RECTAL, PO)",
+                                                "layout|x": 220,
+                                                "layout|y": 70,
+                                                "name": "other_vitals",
+                                                "width": 230
+                                            },
+                                            "configAlternates": {
+                                                "fieldLabel": "string",
+                                                "layout|x": "number",
+                                                "layout|y": "number",
+                                                "name": "string",
+                                                "width": "auto"
+                                            },
+                                            "name": "MyTextField26",
+                                            "designerId": "a93c101d-426b-44b3-9485-10d29465a65c"
+                                        },
+                                        {
+                                            "type": "Ext.form.field.Text",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fieldLabel": "O2 SAT",
+                                                "labelWidth": 50,
+                                                "layout|x": 10,
+                                                "layout|y": 70,
+                                                "name": "O2_sat"
+                                            },
+                                            "configAlternates": {
+                                                "fieldLabel": "string",
+                                                "labelWidth": "number",
+                                                "layout|x": "number",
+                                                "layout|y": "number",
+                                                "name": "string"
+                                            },
+                                            "name": "MyTextField27",
+                                            "designerId": "3376e7ca-d8b8-4bfa-b24e-74bf695c28af"
+                                        },
+                                        {
+                                            "type": "Ext.form.field.Text",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fieldLabel": "RR",
+                                                "labelWidth": 20,
+                                                "layout|x": 40,
+                                                "layout|y": 40,
+                                                "name": "RR"
+                                            },
+                                            "configAlternates": {
+                                                "fieldLabel": "string",
+                                                "labelWidth": "number",
+                                                "layout|x": "number",
+                                                "layout|y": "number",
+                                                "name": "string"
+                                            },
+                                            "name": "MyTextField28",
+                                            "designerId": "2b09dd53-9709-4608-ba4f-08391b773ece"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fieldLabel": "Ward Nurse",
+                                        "labelWidth": 70,
+                                        "layout|x": 0,
+                                        "layout|y": 640,
+                                        "name": "checklist_user",
+                                        "width": 345
+                                    },
+                                    "configAlternates": {
+                                        "fieldLabel": "string",
+                                        "labelWidth": "number",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "name": "string",
+                                        "width": "auto"
+                                    },
+                                    "name": "MyTextField29",
+                                    "designerId": "ee10d06b-25c0-4380-8d50-415f30d8e4c2"
+                                },
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "height": 60,
+                                        "id": "cmdCreateChecklist",
+                                        "layout|x": 590,
+                                        "layout|y": 600,
+                                        "text": "Save Form",
+                                        "width": 115
+                                    },
+                                    "configAlternates": {
+                                        "height": "auto",
+                                        "id": "string",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "text": "string",
+                                        "width": "auto"
+                                    },
+                                    "name": "MyButton2",
+                                    "designerId": "f3736726-3e94-4e9a-b693-0e4ac578d809"
+                                },
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "height": 60,
+                                        "layout|x": 745,
+                                        "layout|y": 600,
+                                        "text": "Cancel ",
+                                        "width": 120
+                                    },
+                                    "configAlternates": {
+                                        "height": "auto",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "text": "string",
+                                        "width": "auto"
+                                    },
+                                    "name": "MyButton3",
+                                    "designerId": "a9104592-a6d5-4c56-b14e-3979c769abd4"
+                                },
+                                {
+                                    "type": "Ext.form.Label",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|x": 5,
+                                        "layout|y": 5,
+                                        "text": "PATIENT / CARETAKE HAS CONFIRMED "
+                                    },
+                                    "configAlternates": {
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "text": "string"
+                                    },
+                                    "name": "MyLabel",
+                                    "designerId": "0da74db7-24cf-44f0-b19f-62eec2f8adce"
+                                },
+                                {
+                                    "type": "Ext.form.Label",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "height": 10,
+                                        "layout|x": 10,
+                                        "layout|y": 295,
+                                        "text": "PATIENT HAS BEEN NPO FOR"
+                                    },
+                                    "configAlternates": {
+                                        "height": "auto",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "text": "string"
+                                    },
+                                    "name": "MyLabel1",
+                                    "designerId": "5a49c749-1864-4c7c-b836-54d57320012a"
+                                },
+                                {
+                                    "type": "Ext.form.field.Hidden",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fieldLabel": "Label",
+                                        "name": "encounter_nr"
+                                    },
+                                    "configAlternates": {
+                                        "fieldLabel": "string",
+                                        "name": "string"
+                                    },
+                                    "name": "MyHiddenField",
+                                    "designerId": "c1725bc0-5630-418e-b590-45ad8a226f37"
+                                },
+                                {
+                                    "type": "Ext.form.field.Hidden",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fieldLabel": "Label",
+                                        "layout|x": 573,
+                                        "layout|y": 54,
+                                        "name": "pid2"
+                                    },
+                                    "configAlternates": {
+                                        "fieldLabel": "string",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "name": "string"
+                                    },
+                                    "name": "MyHiddenField1",
+                                    "designerId": "3fda70cb-74ac-4995-a0ab-d3cfc3d2235f"
+                                },
+                                {
+                                    "type": "Ext.form.field.Hidden",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fieldLabel": "Label",
+                                        "layout|x": 575,
+                                        "layout|y": 102,
+                                        "name": "pname"
+                                    },
+                                    "configAlternates": {
+                                        "fieldLabel": "string",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "name": "string"
+                                    },
+                                    "name": "MyHiddenField2",
+                                    "designerId": "8d58a53f-4cbf-4d9c-acae-feb0012fc0ad"
+                                },
+                                {
+                                    "type": "Ext.form.field.Hidden",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fieldLabel": "Label",
+                                        "layout|x": 588,
+                                        "layout|y": 112,
+                                        "name": "procedure_name"
+                                    },
+                                    "configAlternates": {
+                                        "fieldLabel": "string",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "name": "string"
+                                    },
+                                    "name": "MyHiddenField3",
+                                    "designerId": "d652c0f5-0c9c-4e3a-86c1-a16d1183d9f7"
+                                },
+                                {
+                                    "type": "Ext.form.field.Hidden",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fieldLabel": "Label",
+                                        "layout|x": 534,
+                                        "layout|y": 108,
+                                        "name": "procedure_date2"
+                                    },
+                                    "configAlternates": {
+                                        "fieldLabel": "string",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "name": "string"
+                                    },
+                                    "name": "MyHiddenField4",
+                                    "designerId": "31efd3e5-231a-401d-88a3-b3e8692aaa4f"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|snapToGrid": 5,
+                        "frame": true,
+                        "layout": "absolute",
+                        "title": "TIME OUT",
+                        "url": "data/getDataFunctions.php?task=createCheckList2",
+                        "width": 984
+                    },
+                    "configAlternates": {
+                        "designer|snapToGrid": "number",
+                        "frame": "boolean",
+                        "layout": "string",
+                        "title": "string",
+                        "url": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyForm1",
+                    "designerId": "6cb79985-1c96-49e4-9e5a-a79ffd10255e",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "id": null
+                            },
+                            "configAlternates": {
+                                "id": "string"
+                            },
+                            "name": "TabConfig1",
+                            "designerId": "056ab1b0-d5ca-4b8e-b843-a71d14ab139e"
+                        },
+                        {
+                            "type": "Ext.form.field.Checkbox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "CONFIRM ALL TEAM MEMBERS HAVE INTRODUCED THEMSELVES BY NAME AND ROLE",
+                                "fieldLabel": "",
+                                "inputValue": "Yes",
+                                "labelAlign": "top",
+                                "labelWidth": 160,
+                                "layout|x": 50,
+                                "layout|y": 10,
+                                "name": "members_confirm",
+                                "uncheckedValue": "No"
+                            },
+                            "configAlternates": {
+                                "boxLabel": "string",
+                                "fieldLabel": "string",
+                                "inputValue": "string",
+                                "labelAlign": "string",
+                                "labelWidth": "number",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "name": "string",
+                                "uncheckedValue": "string"
+                            },
+                            "name": "MyCheckbox14",
+                            "designerId": "380388c7-4e8b-442e-ac88-a67e3ded02b8"
+                        },
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "",
+                                "labelAlign": "top",
+                                "layout|x": 60,
+                                "layout|y": 55,
+                                "name": "new_member"
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "labelAlign": "string",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "name": "string"
+                            },
+                            "name": "MyTextField30",
+                            "designerId": "0fc8a56b-651d-45c1-a6f1-ca9ac57fdbd9"
+                        },
+                        {
+                            "type": "Ext.form.CheckboxGroup",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|snapToGrid": 10,
+                                "fieldLabel": "SURGEON, ANESTHESIA PROFFESSIONAL AND NURSE VERBALLY CONFIRM",
+                                "labelAlign": "top",
+                                "layout": "absolute",
+                                "layout|x": 20,
+                                "layout|y": 85,
+                                "width": 290
+                            },
+                            "configAlternates": {
+                                "designer|snapToGrid": "number",
+                                "fieldLabel": "string",
+                                "labelAlign": "string",
+                                "layout": "string",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "width": "auto"
+                            },
+                            "name": "MyCheckboxGroup1",
+                            "designerId": "d3f6fd81-91cf-401c-a8ab-317b67e7c242",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Checkbox",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "PATIENT AND BIRTH DATE",
+                                        "fieldLabel": null,
+                                        "inputValue": "Yes",
+                                        "layout|x": 40,
+                                        "layout|y": 20,
+                                        "name": "age",
+                                        "uncheckedValue": "No"
+                                    },
+                                    "configAlternates": {
+                                        "boxLabel": "string",
+                                        "fieldLabel": "string",
+                                        "inputValue": "string",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "name": "string",
+                                        "uncheckedValue": "string"
+                                    },
+                                    "name": "MyCheckbox15",
+                                    "designerId": "b87da863-75f5-41cf-8a4e-f142ca184b2b"
+                                },
+                                {
+                                    "type": "Ext.form.field.Checkbox",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "SITE",
+                                        "fieldLabel": null,
+                                        "inputValue": "Yes",
+                                        "layout|x": 40,
+                                        "layout|y": -2,
+                                        "name": "site",
+                                        "uncheckedValue": "No"
+                                    },
+                                    "configAlternates": {
+                                        "boxLabel": "string",
+                                        "fieldLabel": "string",
+                                        "inputValue": "string",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "name": "string",
+                                        "uncheckedValue": "string"
+                                    },
+                                    "name": "MyCheckbox16",
+                                    "designerId": "a12d1c52-2d39-4e97-93cd-bcaa69caf931"
+                                },
+                                {
+                                    "type": "Ext.form.field.Checkbox",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "PROCEDURE",
+                                        "fieldLabel": null,
+                                        "inputValue": "Yes",
+                                        "layout|x": 40,
+                                        "layout|y": 40,
+                                        "name": "procedure_check",
+                                        "uncheckedValue": "No"
+                                    },
+                                    "configAlternates": {
+                                        "boxLabel": "string",
+                                        "fieldLabel": "string",
+                                        "inputValue": "string",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "name": "string",
+                                        "uncheckedValue": "string"
+                                    },
+                                    "name": "MyCheckbox17",
+                                    "designerId": "0d451661-d557-42b6-a176-c4d20322f226"
+                                },
+                                {
+                                    "type": "Ext.form.field.Checkbox",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "ANTIBIOTIC GIVEN, IF INDICATED",
+                                        "fieldLabel": null,
+                                        "inputValue": "Yes",
+                                        "layout|x": 40,
+                                        "layout|y": 60,
+                                        "name": "antibiotic_check",
+                                        "uncheckedValue": "No"
+                                    },
+                                    "configAlternates": {
+                                        "boxLabel": "string",
+                                        "fieldLabel": "string",
+                                        "inputValue": "string",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "name": "string",
+                                        "uncheckedValue": "string"
+                                    },
+                                    "name": "MyCheckbox18",
+                                    "designerId": "8dbb6efd-9fc2-4236-8658-0e27721798ad"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.field.Time",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "TIME",
+                                "format": "H:i:s",
+                                "labelWidth": 30,
+                                "layout|x": 25,
+                                "layout|y": 210,
+                                "name": "Time"
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "format": "string",
+                                "labelWidth": "number",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "name": "string"
+                            },
+                            "name": "MyTimeField2",
+                            "designerId": "91b23c93-6913-4152-b5f1-933953f0c234"
+                        },
+                        {
+                            "type": "Ext.form.RadioGroup",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|snapToGrid": 10,
+                                "fieldLabel": "HAS ANTIBIOTIC PROPHYLAXIS BEEN GIVEN WITHIN THE LAST 60 MINUTES PRIOR TO INCISION",
+                                "labelAlign": "top",
+                                "layout": "absolute",
+                                "layout|x": 10,
+                                "layout|y": 230,
+                                "width": 340
+                            },
+                            "configAlternates": {
+                                "designer|snapToGrid": "number",
+                                "fieldLabel": "string",
+                                "labelAlign": "string",
+                                "layout": "string",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "width": "auto"
+                            },
+                            "name": "MyRadioGroup1",
+                            "designerId": "e97cf2db-a893-4c40-840a-69cd66d6f27f",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Radio",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "YES",
+                                        "fieldLabel": null,
+                                        "inputValue": "Yes",
+                                        "layout|x": 30,
+                                        "layout|y": -1,
+                                        "name": "antibiotic_prophy_60"
+                                    },
+                                    "configAlternates": {
+                                        "boxLabel": "string",
+                                        "fieldLabel": "string",
+                                        "inputValue": "string",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "name": "string"
+                                    },
+                                    "name": "MyRadio2",
+                                    "designerId": "f13101cf-df1e-48a0-a7d5-17f13e5a5abc"
+                                },
+                                {
+                                    "type": "Ext.form.field.Radio",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "NO",
+                                        "fieldLabel": null,
+                                        "inputValue": "No",
+                                        "layout|x": 30,
+                                        "layout|y": 20,
+                                        "name": "antibiotic_prophy_60"
+                                    },
+                                    "configAlternates": {
+                                        "boxLabel": "string",
+                                        "fieldLabel": "string",
+                                        "inputValue": "string",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "name": "string"
+                                    },
+                                    "name": "MyRadio3",
+                                    "designerId": "1f66e006-00ce-4d57-98fb-7c44e4283548"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "(indicate reason)",
+                                "labelWidth": 95,
+                                "layout|x": 85,
+                                "layout|y": 285,
+                                "name": "antibiotic_reason",
+                                "width": 425
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "labelWidth": "number",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "name": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyTextField31",
+                            "designerId": "ee3f8c9b-3ce7-4cc9-b738-00ac0cceb482"
+                        },
+                        {
+                            "type": "Ext.form.FieldSet",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|snapToGrid": 10,
+                                "height": 310,
+                                "layout": "absolute",
+                                "layout|x": 20,
+                                "layout|y": 310,
+                                "title": "CRITICAL EVENTS REVIEWED (Prior to anesthesia)",
+                                "width": 580
+                            },
+                            "configAlternates": {
+                                "designer|snapToGrid": "number",
+                                "height": "auto",
+                                "layout": "string",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "title": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyFieldSet4",
+                            "designerId": "35b76b83-37bb-47af-82de-fd90a82be158",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.Label",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|x": 200,
+                                        "layout|y": 10,
+                                        "text": "WHAT ARE THE CRITICAL OR UNEXPECTED STEPS, OPERATIVE DURATION ANTICIPATED BLOOD LOSS?"
+                                    },
+                                    "configAlternates": {
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "text": "string"
+                                    },
+                                    "name": "MyLabel2",
+                                    "designerId": "37e3b4a8-d074-45cb-b501-d3fea67fb943"
+                                },
+                                {
+                                    "type": "Ext.form.Label",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "height": 20,
+                                        "layout|x": 200,
+                                        "layout|y": 100,
+                                        "text": "ARE THERE ANY PATIENT-SPECIFIC CONCERNS"
+                                    },
+                                    "configAlternates": {
+                                        "height": "auto",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "text": "string"
+                                    },
+                                    "name": "MyLabel3",
+                                    "designerId": "0cd624c6-3bf1-4817-bbc1-981ab0b278a9"
+                                },
+                                {
+                                    "type": "Ext.form.Label",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "height": 20,
+                                        "layout|x": 200,
+                                        "layout|y": 180,
+                                        "text": "HAS STERILITY (INCLUDING INDICATOR RESULTS) BEEN CONFIRMED? ARE THERE EQUIPMENT ISSUES OR ANY CONCERNS)"
+                                    },
+                                    "configAlternates": {
+                                        "height": "auto",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "text": "string"
+                                    },
+                                    "name": "MyLabel4",
+                                    "designerId": "6a9cb371-f2e7-4e8b-a4b1-c3f26d2f4140"
+                                },
+                                {
+                                    "type": "Ext.form.field.TextArea",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fieldLabel": null,
+                                        "height": 52,
+                                        "layout|x": 200,
+                                        "layout|y": 40,
+                                        "name": "surgeon_reviews",
+                                        "width": 370
+                                    },
+                                    "configAlternates": {
+                                        "fieldLabel": "string",
+                                        "height": "auto",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "name": "string",
+                                        "width": "auto"
+                                    },
+                                    "name": "MyTextArea",
+                                    "designerId": "9096c0c8-b3a1-4b0b-a3e9-c0d5551475e8"
+                                },
+                                {
+                                    "type": "Ext.form.field.TextArea",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fieldLabel": null,
+                                        "height": 52,
+                                        "layout|x": 200,
+                                        "layout|y": 120,
+                                        "name": "anaesthesia_review",
+                                        "width": 370
+                                    },
+                                    "configAlternates": {
+                                        "fieldLabel": "string",
+                                        "height": "auto",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "name": "string",
+                                        "width": "auto"
+                                    },
+                                    "name": "MyTextArea1",
+                                    "designerId": "b9f1d470-8261-4a0a-bc5f-69218f3a7ff9"
+                                },
+                                {
+                                    "type": "Ext.form.field.TextArea",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fieldLabel": null,
+                                        "height": 52,
+                                        "layout|x": 200,
+                                        "layout|y": 230,
+                                        "name": "nursing_review",
+                                        "width": 370
+                                    },
+                                    "configAlternates": {
+                                        "fieldLabel": "string",
+                                        "height": "auto",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "name": "string",
+                                        "width": "auto"
+                                    },
+                                    "name": "MyTextArea2",
+                                    "designerId": "c6fb9538-0115-4cf0-b20e-68ebfa1ddeb7"
+                                },
+                                {
+                                    "type": "Ext.form.Label",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "height": 10,
+                                        "layout|x": 30,
+                                        "layout|y": 240,
+                                        "text": "NURSING TEAM REVIEWS:"
+                                    },
+                                    "configAlternates": {
+                                        "height": "auto",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "text": "string"
+                                    },
+                                    "name": "MyLabel5",
+                                    "designerId": "6090adde-38f4-42f2-a272-c046df2549e3"
+                                },
+                                {
+                                    "type": "Ext.form.Label",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|x": 30,
+                                        "layout|y": 130,
+                                        "text": "ANESTHESIA TEAM REVIEWS:"
+                                    },
+                                    "configAlternates": {
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "text": "string"
+                                    },
+                                    "name": "MyLabel6",
+                                    "designerId": "8b80beef-4d24-441a-a27e-8ac856e375b7"
+                                },
+                                {
+                                    "type": "Ext.form.Label",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "height": 10,
+                                        "layout|x": 30,
+                                        "layout|y": 50,
+                                        "text": "SURGEON REVIEWS:"
+                                    },
+                                    "configAlternates": {
+                                        "height": "auto",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "text": "string"
+                                    },
+                                    "name": "MyLabel7",
+                                    "designerId": "b0352649-5a2b-40b7-b270-372e8b05778c"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Scrub Nurse/Surgical Scrub",
+                                "labelWidth": 170,
+                                "layout|x": 55,
+                                "layout|y": 625,
+                                "name": "checklist_user",
+                                "width": 530
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "labelWidth": "number",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "name": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyTextField32",
+                            "designerId": "29567226-37e4-4ea1-9ece-b998c2b2e0b4"
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "height": 60,
+                                "id": "cmdCreateChecklist2",
+                                "layout|x": 670,
+                                "layout|y": 580,
+                                "text": "Save",
+                                "width": 100
+                            },
+                            "configAlternates": {
+                                "height": "auto",
+                                "id": "string",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "text": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyButton4",
+                            "designerId": "d8e0e11d-6498-474a-89b5-b6a541bcf177"
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "height": 60,
+                                "layout|x": 785,
+                                "layout|y": 580,
+                                "text": "Cancel",
+                                "width": 110
+                            },
+                            "configAlternates": {
+                                "height": "auto",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "text": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyButton5",
+                            "designerId": "9f98291c-8e94-44bd-b453-c61e361c9107"
+                        },
+                        {
+                            "type": "Ext.form.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|x": 25,
+                                "layout|y": 40,
+                                "text": "IF THERE IS ANYONE NEW TO THE TEAM"
+                            },
+                            "configAlternates": {
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "text": "string"
+                            },
+                            "name": "MyLabel8",
+                            "designerId": "fe427d55-95b7-493b-8342-c37ed5817782"
+                        },
+                        {
+                            "type": "Ext.form.field.Hidden",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Label",
+                                "layout|x": 595,
+                                "layout|y": 164,
+                                "name": "pid3"
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "name": "string"
+                            },
+                            "name": "MyHiddenField5",
+                            "designerId": "ad70aa0f-02a3-4044-bff0-b01e5146941d"
+                        },
+                        {
+                            "type": "Ext.form.field.Hidden",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Label",
+                                "layout|x": 840,
+                                "layout|y": 125,
+                                "name": "pname3"
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "name": "string"
+                            },
+                            "name": "MyHiddenField6",
+                            "designerId": "b5c2bd3a-d691-45f8-8199-53ca8590547f"
+                        },
+                        {
+                            "type": "Ext.form.field.Hidden",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Label",
+                                "layout|x": 572,
+                                "layout|y": 115,
+                                "name": "procedure_name3"
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "name": "string"
+                            },
+                            "name": "MyHiddenField7",
+                            "designerId": "c70cd49a-fc77-4c20-b682-4f0886f906be"
+                        },
+                        {
+                            "type": "Ext.form.field.Hidden",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Label",
+                                "layout|x": 623,
+                                "layout|y": 151,
+                                "name": "procedure_date3"
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "name": "string"
+                            },
+                            "name": "MyHiddenField8",
+                            "designerId": "40c7d0f8-928b-49b2-b57b-dc6087ccc67c"
+                        },
+                        {
+                            "type": "Ext.form.field.Hidden",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Label",
+                                "layout|x": 853,
+                                "layout|y": 135,
+                                "name": "encounter_nr2"
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "name": "string"
+                            },
+                            "name": "MyHiddenField9",
+                            "designerId": "f3cb6a80-d897-4f40-8aa1-4f13ab2c8bf3"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "frame": true,
+                        "height": 323,
+                        "title": "SIGN OUT",
+                        "url": "data/getDataFunctions.php?task=createCheckList3",
+                        "width": 984
+                    },
+                    "configAlternates": {
+                        "frame": "boolean",
+                        "height": "auto",
+                        "title": "string",
+                        "url": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyForm2",
+                    "designerId": "997119f3-a751-4541-b47e-c063e425a6b6",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "TabConfig2",
+                            "designerId": "db4942fb-2da7-4cad-b442-7214dd6fa950"
+                        },
+                        {
+                            "type": "Ext.form.FieldSet",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|snapToGrid": 5,
+                                "height": 672,
+                                "layout": "absolute",
+                                "title": null,
+                                "width": 1002
+                            },
+                            "configAlternates": {
+                                "designer|snapToGrid": "number",
+                                "height": "auto",
+                                "layout": "string",
+                                "title": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyFieldSet5",
+                            "designerId": "50801913-1a4e-49b3-923c-818865996e54",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.TextArea",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fieldLabel": null,
+                                        "height": 112,
+                                        "layout|x": 55,
+                                        "layout|y": 245,
+                                        "name": "equipment_problems",
+                                        "width": 565
+                                    },
+                                    "configAlternates": {
+                                        "fieldLabel": "string",
+                                        "height": "auto",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "name": "string",
+                                        "width": "auto"
+                                    },
+                                    "name": "MyTextArea3",
+                                    "designerId": "dfa9d8d5-3680-442d-a3ec-ecfc597a62dc"
+                                },
+                                {
+                                    "type": "Ext.form.field.TextArea",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fieldLabel": null,
+                                        "height": 112,
+                                        "layout|x": 55,
+                                        "layout|y": 390,
+                                        "name": "final_review",
+                                        "width": 565
+                                    },
+                                    "configAlternates": {
+                                        "fieldLabel": "string",
+                                        "height": "auto",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "name": "string",
+                                        "width": "auto"
+                                    },
+                                    "name": "MyTextArea4",
+                                    "designerId": "11161410-6ad6-444f-8ee4-7bdc401e97a8"
+                                },
+                                {
+                                    "type": "Ext.form.field.Checkbox",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "NAME OF PROCEDURE RECORDED",
+                                        "fieldLabel": null,
+                                        "inputValue": "Yes",
+                                        "layout|x": 30,
+                                        "layout|y": 40,
+                                        "name": "procedure_check",
+                                        "uncheckedValue": "No"
+                                    },
+                                    "configAlternates": {
+                                        "boxLabel": "string",
+                                        "fieldLabel": "string",
+                                        "inputValue": "string",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "name": "string",
+                                        "uncheckedValue": "string"
+                                    },
+                                    "name": "MyCheckbox19",
+                                    "designerId": "7dcc8cd4-3822-4a34-8d87-0b5051285173"
+                                },
+                                {
+                                    "type": "Ext.form.Label",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|x": 10,
+                                        "layout|y": 20,
+                                        "text": "NURSE VERBALLY CONFIRMS WITH THE TEAM"
+                                    },
+                                    "configAlternates": {
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "text": "string"
+                                    },
+                                    "name": "MyLabel9",
+                                    "designerId": "1a14acc4-34b3-4924-9e3b-87afb19d0e29"
+                                },
+                                {
+                                    "type": "Ext.form.field.Checkbox",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "Throat pack removed if applicable",
+                                        "fieldLabel": null,
+                                        "inputValue": "Yes",
+                                        "layout|x": 30,
+                                        "layout|y": 130,
+                                        "name": "throat_pack",
+                                        "uncheckedValue": "No"
+                                    },
+                                    "configAlternates": {
+                                        "boxLabel": "string",
+                                        "fieldLabel": "string",
+                                        "inputValue": "string",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "name": "string",
+                                        "uncheckedValue": "string"
+                                    },
+                                    "name": "MyCheckbox20",
+                                    "designerId": "52d3fa83-3666-4db6-b6ef-efd71e10d2e8"
+                                },
+                                {
+                                    "type": "Ext.form.field.Checkbox",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "XRAY taken if count is not correct",
+                                        "fieldLabel": null,
+                                        "inputValue": "Yes",
+                                        "layout|x": 30,
+                                        "layout|y": 100,
+                                        "name": "xray",
+                                        "uncheckedValue": "No"
+                                    },
+                                    "configAlternates": {
+                                        "boxLabel": "string",
+                                        "fieldLabel": "string",
+                                        "inputValue": "string",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "name": "string",
+                                        "uncheckedValue": "string"
+                                    },
+                                    "name": "MyCheckbox21",
+                                    "designerId": "d9fc574d-2256-479b-938a-4885fe8d3f43"
+                                },
+                                {
+                                    "type": "Ext.form.field.Checkbox",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "THE INSTRUMENTS, SPONGE AND NEEDLE COUNTS ARE CORRECT (OR NOT APPLICABLE)",
+                                        "fieldLabel": null,
+                                        "inputValue": "Yes",
+                                        "layout|x": 30,
+                                        "layout|y": 70,
+                                        "name": "instruments",
+                                        "uncheckedValue": "No"
+                                    },
+                                    "configAlternates": {
+                                        "boxLabel": "string",
+                                        "fieldLabel": "string",
+                                        "inputValue": "string",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "name": "string",
+                                        "uncheckedValue": "string"
+                                    },
+                                    "name": "MyCheckbox22",
+                                    "designerId": "0f45f099-0d29-4cab-b900-1397ce679a8f"
+                                },
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fieldLabel": "CIRCULATING NURSE COMPLETING FORM",
+                                        "labelAlign": "top",
+                                        "layout|x": 55,
+                                        "layout|y": 520,
+                                        "name": "checklist_user",
+                                        "width": 260
+                                    },
+                                    "configAlternates": {
+                                        "fieldLabel": "string",
+                                        "labelAlign": "string",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "name": "string",
+                                        "width": "auto"
+                                    },
+                                    "name": "MyTextField33",
+                                    "designerId": "e34bb2b8-2819-4eca-8f5d-f48011127436"
+                                },
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "height": 60,
+                                        "id": "cmdCreateChecklist3",
+                                        "layout|x": 575,
+                                        "layout|y": 575,
+                                        "text": "SAVE",
+                                        "width": 130
+                                    },
+                                    "configAlternates": {
+                                        "height": "auto",
+                                        "id": "string",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "text": "string",
+                                        "width": "auto"
+                                    },
+                                    "name": "MyButton6",
+                                    "designerId": "2fcd9baa-1a95-4b33-bef7-3d974088c9d5"
+                                },
+                                {
+                                    "type": "Ext.button.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "height": 60,
+                                        "layout|x": 720,
+                                        "layout|y": 575,
+                                        "text": "CLOSE",
+                                        "width": 125
+                                    },
+                                    "configAlternates": {
+                                        "height": "auto",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "text": "string",
+                                        "width": "auto"
+                                    },
+                                    "name": "MyButton7",
+                                    "designerId": "03c01104-6781-45f8-84b2-e8461b636c43"
+                                },
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fieldLabel": null,
+                                        "layout|x": 55,
+                                        "layout|y": 185,
+                                        "name": "speciment_label",
+                                        "width": 565
+                                    },
+                                    "configAlternates": {
+                                        "fieldLabel": "string",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "name": "string",
+                                        "width": "auto"
+                                    },
+                                    "name": "MyTextField34",
+                                    "designerId": "b53207db-5a24-4fec-bd02-b3281a94d437"
+                                },
+                                {
+                                    "type": "Ext.form.Label",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "height": 15,
+                                        "layout|x": 30,
+                                        "layout|y": 165,
+                                        "text": "HOW IS THE SPECIMEN IS LABELED(INCLUDING PATIENT NAME)"
+                                    },
+                                    "configAlternates": {
+                                        "height": "auto",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "text": "string"
+                                    },
+                                    "name": "MyLabel10",
+                                    "designerId": "35cfdf14-379f-4f23-bd83-7df900aaffc9"
+                                },
+                                {
+                                    "type": "Ext.form.Label",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "height": 10,
+                                        "layout|x": 30,
+                                        "layout|y": 220,
+                                        "text": "WHETHER THERE ARE ANY EQUIPMENT PROBLEMS TO BE ADDRESSED AND WHO WILL ADDRESS IT"
+                                    },
+                                    "configAlternates": {
+                                        "height": "auto",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "text": "string"
+                                    },
+                                    "name": "MyLabel11",
+                                    "designerId": "f4d6ffd0-936b-496f-bdef-5bdba68b7c9e"
+                                },
+                                {
+                                    "type": "Ext.form.Label",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|x": 35,
+                                        "layout|y": 365,
+                                        "text": "SURGEON, ANASTHESIA PROFFESSIONAL AND NURSE REVIEW THE KEY CONCERNS FOR RECOVERY AND MANAGEMENT OF PATIENT"
+                                    },
+                                    "configAlternates": {
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "text": "string"
+                                    },
+                                    "name": "MyLabel12",
+                                    "designerId": "f306bf27-08a1-4855-bc06-d8884f21f935"
+                                },
+                                {
+                                    "type": "Ext.form.field.Hidden",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fieldLabel": "Label",
+                                        "layout|x": 587,
+                                        "layout|y": 92,
+                                        "name": "pid4"
+                                    },
+                                    "configAlternates": {
+                                        "fieldLabel": "string",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "name": "string"
+                                    },
+                                    "name": "MyHiddenField10",
+                                    "designerId": "1cb36693-1262-41ac-af65-b7301aa03473"
+                                },
+                                {
+                                    "type": "Ext.form.field.Hidden",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fieldLabel": "Label",
+                                        "layout|x": 716,
+                                        "layout|y": 118,
+                                        "name": "pname4"
+                                    },
+                                    "configAlternates": {
+                                        "fieldLabel": "string",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "name": "string"
+                                    },
+                                    "name": "MyHiddenField11",
+                                    "designerId": "7d6c320f-ac1e-4a8c-828d-ba02bbb272c5"
+                                },
+                                {
+                                    "type": "Ext.form.field.Hidden",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fieldLabel": "Label",
+                                        "layout|x": 726,
+                                        "layout|y": 130,
+                                        "name": "procedure_name4"
+                                    },
+                                    "configAlternates": {
+                                        "fieldLabel": "string",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "name": "string"
+                                    },
+                                    "name": "MyHiddenField12",
+                                    "designerId": "c3cbfa31-0c9b-491f-a2a7-3bd43754f963"
+                                },
+                                {
+                                    "type": "Ext.form.field.Hidden",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fieldLabel": "Label",
+                                        "layout|x": 690,
+                                        "layout|y": 34,
+                                        "name": "procedure_date4"
+                                    },
+                                    "configAlternates": {
+                                        "fieldLabel": "string",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "name": "string"
+                                    },
+                                    "name": "MyHiddenField13",
+                                    "designerId": "24e58024-a303-466e-916c-57e8ec02208c"
+                                },
+                                {
+                                    "type": "Ext.form.field.Hidden",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fieldLabel": "Label",
+                                        "layout|x": 745,
+                                        "layout|y": 93,
+                                        "name": "encounter_nr4"
+                                    },
+                                    "configAlternates": {
+                                        "fieldLabel": "string",
+                                        "layout|x": "number",
+                                        "layout|y": "number",
+                                        "name": "string"
+                                    },
+                                    "name": "MyHiddenField14",
+                                    "designerId": "c2485434-98b6-4e64-bb54-903b850cb3a1"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Tool",
+            "reference": {
+                "name": "tools",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "type": "maximize"
+            },
+            "configAlternates": {
+                "type": "string"
+            },
+            "name": "MyTool",
+            "designerId": "b55d90c0-0828-426d-80df-d18364226fc2"
+        },
+        {
+            "type": "Ext.panel.Tool",
+            "reference": {
+                "name": "tools",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "type": "minimize"
+            },
+            "configAlternates": {
+                "type": "string"
+            },
+            "name": "MyTool1",
+            "designerId": "a536e7a6-c5ac-472a-8578-d25ff10c2320"
+        }
+    ]
+}

@@ -1,0 +1,64 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "autoSync": true,
+        "designer|userAlias": "ordersstore",
+        "designer|userClassName": "OrdersStore",
+        "model": "OrdersModel",
+        "pageSize": 200,
+        "storeId": "OrdersStore"
+    },
+    "configAlternates": {
+        "autoLoad": "boolean",
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string",
+        "autoSync": "boolean",
+        "pageSize": "number",
+        "designer|userAlias": "string"
+    },
+    "name": "RequisitionStore2",
+    "designerId": "902422bc-6d44-4ad6-a591-0589fb3e050e",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "data/getDataFunctions.php?task=getOrders"
+            },
+            "configAlternates": {
+                "url": "string"
+            },
+            "name": "MyAjaxProxy",
+            "designerId": "4169be8d-b699-4a9f-aee6-252f90185a0d",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "orders"
+                    },
+                    "configAlternates": {
+                        "rootProperty": "string"
+                    },
+                    "name": "MyJsonReader1",
+                    "designerId": "8bfb7aee-2a4a-4f42-99c3-17330a046b5f"
+                }
+            ]
+        }
+    ]
+}

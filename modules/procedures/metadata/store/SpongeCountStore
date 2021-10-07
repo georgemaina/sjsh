@@ -1,0 +1,75 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "spongecountstore",
+        "designer|userClassName": "SpongeCountStore",
+        "model": "SpongeCount",
+        "storeId": "SpongeCountStore"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string"
+    },
+    "designerId": "1e98e311-ddc7-4ccc-9008-923561907acd",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "../data/getDataFunctions.php?task=getSpongeItems"
+            },
+            "configAlternates": {
+                "url": "string"
+            },
+            "name": "MyAjaxProxy15",
+            "designerId": "0753ae75-3569-4acf-ad14-5b91edef79fb",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "spongecounts"
+                    },
+                    "configAlternates": {
+                        "root": "string"
+                    },
+                    "name": "MyJsonReader15",
+                    "designerId": "ae385a5e-5840-4d5b-acba-db97fd16a074"
+                },
+                {
+                    "type": "Ext.data.writer.Json",
+                    "reference": {
+                        "name": "writer",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "encode": true,
+                        "root": "editedData"
+                    },
+                    "configAlternates": {
+                        "encode": "boolean",
+                        "root": "string"
+                    },
+                    "name": "MyJsonWriter5",
+                    "designerId": "65941797-ee95-4e59-8424-9e5de3acbc09"
+                }
+            ]
+        }
+    ]
+}

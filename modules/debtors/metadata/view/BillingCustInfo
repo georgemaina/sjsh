@@ -1,0 +1,618 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "closeAction": "hide",
+        "container|align": "stretchmax",
+        "designer|userAlias": "billingcustinfo",
+        "designer|userClassName": "BillingCustInfo",
+        "height": 185,
+        "layout": "hbox",
+        "width": 833
+    },
+    "configAlternates": {
+        "closeAction": "string",
+        "container|align": "string",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "layout": "string",
+        "width": "auto",
+        "scrollable": "boolean"
+    },
+    "designerId": "972ac4ac-502a-479d-902a-4001928a671b",
+    "viewControllerInstanceId": "4eb5b872-487e-49d5-b0b7-52c64b494518",
+    "viewModelInstanceId": "7ff8fd23-90c4-42ea-b042-f37f59a61af8",
+    "cn": [
+        {
+            "type": "Ext.form.FieldContainer",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "CustInfo1",
+                "height": 185,
+                "layout|flex": null,
+                "width": 318
+            },
+            "configAlternates": {
+                "designer|displayName": "string",
+                "height": "auto",
+                "layout|flex": "number",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyFieldContainer3",
+            "designerId": "665623ef-f555-4cc6-827b-2cbb5b123ebe",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "PID",
+                        "frame": false,
+                        "id": null,
+                        "itemId": "pid",
+                        "name": "pid",
+                        "value": null,
+                        "width": 306
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "frame": "boolean",
+                        "id": "string",
+                        "name": "string",
+                        "value": "object",
+                        "width": "auto",
+                        "scrollable": "boolean",
+                        "itemId": "string"
+                    },
+                    "name": "MyTextField1",
+                    "designerId": "f3953eb3-13dc-4420-bc51-d351c79aadcc"
+                },
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "displayField": "billNumber",
+                        "fieldLabel": "Bill Number",
+                        "id": null,
+                        "itemId": "billNumber",
+                        "name": "billNumber",
+                        "store": "BillNumbers",
+                        "valueField": "encounterNr",
+                        "width": 305
+                    },
+                    "configAlternates": {
+                        "displayField": "datafield",
+                        "fieldLabel": "string",
+                        "id": "string",
+                        "name": "string",
+                        "store": "store",
+                        "valueField": "datafield",
+                        "width": "auto",
+                        "scrollable": "boolean",
+                        "itemId": "string"
+                    },
+                    "name": "MyComboBox2",
+                    "designerId": "44e57632-9eb3-48e3-9768-587fe3b5957e",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onBillNumberSelect",
+                                "implHandler": [
+                                    "var CustomerBillItems=Ext.data.StoreManager.lookup('CustomerBill');  \r",
+                                    "var pid=this.getForm().findField(\"pid\").getValue();\r",
+                                    "var encNr=combo.getValue();\r",
+                                    "var billNo=combo.getRawValue();\r",
+                                    "\r",
+                                    "//alert(pid);\r",
+                                    "\r",
+                                    "CustomerBillItems.load({\r",
+                                    "    params: {\r",
+                                    "        pid: pid,\r",
+                                    "        encNr: encNr,\r",
+                                    "        billNumber:billNo\r",
+                                    "\r",
+                                    "    },\r",
+                                    "    callback: function(records, operation, success) {\r",
+                                    "\r",
+                                    "\r",
+                                    "    },\r",
+                                    "    scope: this\r",
+                                    "\r",
+                                    "});\r",
+                                    "\r",
+                                    "\r",
+                                    "var CustomerInfo=Ext.data.StoreManager.lookup('CustomerInfo');  \r",
+                                    "CustomerInfo.load({\r",
+                                    "    params: {\r",
+                                    "        pid: this.getForm().findField(\"pid\").getValue(),\r",
+                                    "        encNr: encNr,\r",
+                                    "        billNumber:billNo\r",
+                                    "\r",
+                                    "    },\r",
+                                    "    callback: function(records, operation, success) {\r",
+                                    "        // var data3=this.getStore('CustomerInfo').getAt(0);\r",
+                                    "        // customerinfos.loadRecord(this);\r",
+                                    "        var cust = CustomerInfo.first();\r",
+                                    "        var billingcustinfo = Ext.widget('billingcustinfo');\r",
+                                    "        //customerinfos.getForm().findField(\"pid\").setValue(cust.get('pid'));\r",
+                                    "        this.getForm().findField(\"pnames\").setValue(cust.get('pnames'));\r",
+                                    "        this.getForm().findField(\"addr_zip\").setValue(cust.get('addr_zip'));\r",
+                                    "        this.getForm().findField(\"addr_zip2\").setValue(cust.get('addr_zip2'));\r",
+                                    "        this.getForm().findField(\"cellPhone\").setValue(cust.get('cellPhone'));\r",
+                                    "        this.getForm().findField(\"email\").setValue(cust.get('email'));\r",
+                                    "        this.getForm().findField(\"location\").setValue(cust.get('location'));\r",
+                                    "        this.getForm().findField(\"admDate\").setValue(cust.get('admDate'));\r",
+                                    "        this.getForm().findField(\"disDate\").setValue(cust.get('disDate'));\r",
+                                    "        // billingcustinfo.getForm().findField(\"billNumber\").setValue(record.get('billNumber'));\r",
+                                    "        this.getForm().findField(\"encNr\").setValue(cust.get('encNr'));\r",
+                                    "        //billingcustinfo.getForm().findField(\"accno\").setValue(record.get('accno'));\r",
+                                    "        this.getForm().findField(\"encClass\").setValue(cust.get('encClass'));\r",
+                                    "\r",
+                                    "        // alert(cust.get('admDate'));\r",
+                                    "\r",
+                                    "\r",
+                                    "    },\r",
+                                    "    scope: this\r",
+                                    "\r",
+                                    "});"
+                                ],
+                                "name": "select",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onBillNumberSelect",
+                            "designerId": "f28ff0be-68b5-4985-8c89-12be3c704cb1"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Names",
+                        "id": "pnames",
+                        "name": "pnames",
+                        "width": 307
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "id": "string",
+                        "name": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyDisplayField23",
+                    "designerId": "e75fd51a-9801-4eae-9338-ec9c9995e1aa"
+                },
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Address",
+                        "id": null,
+                        "name": "addr_zip",
+                        "width": 307
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "id": "string",
+                        "name": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyDisplayField24",
+                    "designerId": "7cef2af9-7b49-489d-b73e-200bd2913525"
+                },
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Address2",
+                        "id": null,
+                        "name": "addr_zip2",
+                        "width": 305
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "id": "string",
+                        "name": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyDisplayField25",
+                    "designerId": "69ce6f86-8c16-46fe-a66f-22ac1c199198"
+                },
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Phone",
+                        "id": "cellPhone",
+                        "name": "phone_1_nr",
+                        "width": 305
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "id": "string",
+                        "name": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyDisplayField26",
+                    "designerId": "ae5ce970-7946-438e-88ed-876e283f573c"
+                },
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Email",
+                        "id": "email",
+                        "name": "email",
+                        "width": 305
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "id": "string",
+                        "name": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyDisplayField27",
+                    "designerId": "b9d00e6c-3851-489f-a185-d5a3336cabb3"
+                },
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Location",
+                        "id": "location",
+                        "name": "location",
+                        "width": 305
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "id": "string",
+                        "name": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyDisplayField28",
+                    "designerId": "f8664819-3712-48ed-b2cd-833091efb270"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.FieldContainer",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "CustInfo2",
+                "height": 180,
+                "labelAlign": "top",
+                "layout|flex": null,
+                "width": 319
+            },
+            "configAlternates": {
+                "designer|displayName": "string",
+                "height": "auto",
+                "labelAlign": "string",
+                "layout|flex": "number",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyFieldContainer4",
+            "designerId": "1e435e57-4d07-4612-8e5d-65c33f8f968b",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Admission Date",
+                        "id": null,
+                        "name": "admDate",
+                        "width": 305
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "id": "string",
+                        "name": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyDisplayField29",
+                    "designerId": "03476024-11a6-4914-9068-e3ab3a2f7288"
+                },
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Discharge Date",
+                        "id": null,
+                        "name": "disDate",
+                        "width": 305
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "id": "string",
+                        "name": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyDisplayField30",
+                    "designerId": "c972aec4-c8ff-4b8e-9415-17fb2fe499f2"
+                },
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Encounter No",
+                        "id": "encNr",
+                        "name": "encounter_nr",
+                        "width": 305
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "id": "string",
+                        "name": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyDisplayField31",
+                    "designerId": "4cff8344-6a1b-4a12-957a-212a13676992"
+                },
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "accno",
+                        "id": "accno",
+                        "name": "accno",
+                        "width": 307
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "id": "string",
+                        "name": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyDisplayField32",
+                    "designerId": "ff5824ef-b8fb-4c6e-97a2-5f0ed7bba6f0"
+                },
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "IP-OP",
+                        "id": "encClass",
+                        "name": "encClass",
+                        "width": 307
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "id": "string",
+                        "name": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyDisplayField33",
+                    "designerId": "1dee724a-0829-4dcb-839a-c4ecadc10f7e"
+                }
+            ]
+        },
+        {
+            "type": "Ext.menu.Menu",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "floating": false,
+                "layout|flex": 1,
+                "width": 120
+            },
+            "configAlternates": {
+                "floating": "boolean",
+                "layout|flex": "number",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyMenu4",
+            "designerId": "95d1d98c-2f5e-4bad-8e6e-9a669262e864",
+            "cn": [
+                {
+                    "type": "Ext.menu.Item",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "focusable": true,
+                        "id": "mnuPrintInvoice2",
+                        "text": "Print INvoice"
+                    },
+                    "configAlternates": {
+                        "id": "string",
+                        "text": "string",
+                        "scrollable": "boolean",
+                        "focusable": "boolean"
+                    },
+                    "name": "MyMenuItem22",
+                    "designerId": "d341c8c2-f752-4b2a-aec5-f3fb829a0187",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onMnuPrintInvoice2Click",
+                                "implHandler": [
+                                    "",
+                                    "",
+                                    "var pid = this.getForm().findField(\"pid\").value;",
+                                    "var billNumber=this.getForm().findField(\"billNumber\").getRawValue();",
+                                    "var encClass=this.getForm().findField(\"encClass\").value;",
+                                    "",
+                                    "window.open('reports/detail_invoice_pdf.php?pid='+pid+\"&receipt=1&final=Final&billNumber=\"+billNumber+\"&encClass=\"+encClass ,",
+                                    "\"Summary Invoice\",\"menubar=yes,toolbar=yes,width=600,height=800,location=yes,resizable=yes,scrollbars=yes,status=yes\");"
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onMnuPrintInvoice2Click",
+                            "designerId": "49b2a1e3-7a89-4d3b-b3b0-a394ad736e76"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.menu.Item",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "focusable": true,
+                        "id": "mnuCloseInvoice",
+                        "text": "Close Invoice"
+                    },
+                    "configAlternates": {
+                        "id": "string",
+                        "text": "string",
+                        "scrollable": "boolean",
+                        "focusable": "boolean"
+                    },
+                    "name": "MyMenuItem23",
+                    "designerId": "3931a97b-1df1-4b8c-b2e9-8b083da3543c",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onMnuCloseInvoiceClick",
+                                "implHandler": [
+                                    "var pid = this.getForm().findField(\"pid\").value;\r",
+                                    "var billNumber=this.getForm().findField(\"billNumber\").getRawValue();\r",
+                                    "var encounter_nr=this.getForm().findField(\"encounter_nr\").value;\r",
+                                    "\r",
+                                    "Ext.Ajax.request({\r",
+                                    "    url: './data/getDataFunctions.php?task=closeInvoice',\r",
+                                    "    params: {\r",
+                                    "        pid: pid,\r",
+                                    "        encounterNo: encounter_nr\r",
+                                    "    },\r",
+                                    "    success: function(response){\r",
+                                    "        var text = response.responseText;\r",
+                                    "        alert('Successfully Closed invoice, Proceed to Finalize the Invoice');\r",
+                                    "    }\r",
+                                    "});\r",
+                                    ""
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "configAlternates": {
+                                "fn": "string",
+                                "implHandler": "code",
+                                "name": "string",
+                                "scope": "string"
+                            },
+                            "name": "onMnuCloseInvoiceClick",
+                            "designerId": "581e8d08-d611-4163-9191-d0f53cf527b5"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

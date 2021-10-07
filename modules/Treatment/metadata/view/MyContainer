@@ -1,0 +1,342 @@
+{
+    "type": "Ext.container.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userClassName": "MyContainer",
+        "height": null,
+        "width": null
+    },
+    "name": "MyContainer",
+    "designerId": "e8c9ed70-64b2-411f-a4ee-a8ccb51b6475",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyBorder": true,
+                "bodyPadding": "0 0 0 0",
+                "bodyStyle": [
+                    " 'background:#99ccff; padding:1px;'"
+                ],
+                "border": "1 1 1 1",
+                "designer|snapToGrid": 5,
+                "height": 31,
+                "layout": "absolute",
+                "title": null
+            },
+            "name": "MyPanel",
+            "designerId": "cc2a216c-d36c-442e-b262-63845bbec0b5",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": null,
+                        "fieldStyle": "font-family:verdana,arial,tahoma;font-size:22px;font-weight: bold;color: #330066;",
+                        "layout|x": 15,
+                        "layout|y": 5,
+                        "value": "Patient Treatment",
+                        "width": 260
+                    },
+                    "name": "MyDisplayField",
+                    "designerId": "b23f56da-d420-41ef-8e1e-666155f85b31"
+                }
+            ]
+        },
+        {
+            "type": "Ext.tab.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyBorder": false,
+                "border": "0 0 0 0 ",
+                "height": null,
+                "width": null
+            },
+            "name": "MyTabPanel",
+            "designerId": "4d8fbb45-70b8-4d33-a062-f0c7213ddd8e",
+            "cn": [
+                {
+                    "type": "Ext.form.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "bodyBorder": false,
+                        "bodyPadding": "0 0 0 0",
+                        "frame": true,
+                        "title": "Doctors Notes"
+                    },
+                    "name": "MyForm",
+                    "designerId": "828583f9-bd82-452a-a96a-f4e2fb48f943",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "TabConfig",
+                            "designerId": "01ca6446-8f56-4338-9052-5402c728f8b6"
+                        },
+                        {
+                            "type": "Ext.form.FieldSet",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|snapToGrid": 5,
+                                "frame": false,
+                                "height": 88,
+                                "layout": "absolute",
+                                "title": ""
+                            },
+                            "name": "MyFieldSet",
+                            "designerId": "5bac7233-1d84-420b-b3d0-789c115610ba",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.ComboBox",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fieldLabel": "Complaint",
+                                        "labelAlign": "top",
+                                        "layout|x": 10,
+                                        "layout|y": 0,
+                                        "width": 390
+                                    },
+                                    "name": "MyComboBox",
+                                    "designerId": "a1a4bef1-902b-4dbf-bb1c-5a58317c5947"
+                                },
+                                {
+                                    "type": "Ext.form.field.TextArea",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fieldLabel": "Comments",
+                                        "height": 71,
+                                        "labelAlign": "top",
+                                        "layout|x": 405,
+                                        "layout|y": -3,
+                                        "width": 415
+                                    },
+                                    "name": "MyTextArea",
+                                    "designerId": "e06a253d-e1f6-473f-b861-2818392f77a6"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.grid.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "height": 486,
+                                "title": "Notes"
+                            },
+                            "name": "MyGridPanel",
+                            "designerId": "cfb750b0-20c3-4044-83c0-7448d98faf17",
+                            "cn": [
+                                {
+                                    "type": "Ext.grid.column.Column",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "string",
+                                        "text": "String"
+                                    },
+                                    "name": "MyColumn",
+                                    "designerId": "5d40fa76-59c9-4a96-bc90-003c7a68b08d"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Number",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "number",
+                                        "text": "Number"
+                                    },
+                                    "name": "MyNumberColumn",
+                                    "designerId": "fcccd89e-e4ed-44d3-b73e-09c75ade581f"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Date",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "date",
+                                        "text": "Date"
+                                    },
+                                    "name": "MyDateColumn",
+                                    "designerId": "5a37cb8f-a758-49af-b298-a4daa8b8a684"
+                                },
+                                {
+                                    "type": "Ext.grid.column.Boolean",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "bool",
+                                        "text": "Boolean"
+                                    },
+                                    "name": "MyBooleanColumn",
+                                    "designerId": "41f017a0-fd8c-4bb1-8539-5af8b8e2d512"
+                                },
+                                {
+                                    "type": "Ext.grid.View",
+                                    "reference": {
+                                        "name": "viewConfig",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "name": "MyGridView",
+                                    "designerId": "02da3877-e636-4b3d-b775-a3eb0dd56da8"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": "Investigations"
+                    },
+                    "name": "MyPanel1",
+                    "designerId": "503b7ecd-8aa9-498b-9c93-57a60b4bc4bc",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "TabConfig1",
+                            "designerId": "51ebac7d-81e2-434b-9c9c-6c7f046bee3f"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": "Diagnosis"
+                    },
+                    "name": "MyPanel2",
+                    "designerId": "55879dc2-bbd4-438a-924b-61f755786306",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "TabConfig2",
+                            "designerId": "a1181867-55bc-42ba-9861-3e943c3abc5f"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": "Allergies"
+                    },
+                    "name": "MyPanel3",
+                    "designerId": "049cb425-a44c-4528-b726-382f96d37c75",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "TabConfig3",
+                            "designerId": "48fc6daf-3f42-47a6-bba4-399cbfaab060"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": "Relationships"
+                    },
+                    "name": "MyPanel5",
+                    "designerId": "f9f993c0-bf3d-4427-aad5-44397d07b488",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "TabConfig3",
+                            "designerId": "66ba35f1-59cc-40c7-b486-b47d49bfce71"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

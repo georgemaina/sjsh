@@ -1,0 +1,1096 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+	<title>DHTML Calendar guide and samples</title><link rel="STYLESHEET" type="text/css" href="common/styles.css">
+</head>
+   
+<body>
+        
+<h1>
+  dhtmlxCalendar Guide and Code Samples
+</h1>
+<h2><a name='calendar_mn4c'>
+  1. Introduction&nbsp;</a></h2>
+<h3><a name='calendar_mejf'>
+  1.1 Scope of the Document
+</a></h3>
+This document describes <b id="s0c4">dhtmlxCalendar </b>component, defines its features and global parameters. This documentation is created to give users full understanding of every feature of this component, and also to enable users to implement this component quickly and easily.<br id="xure">
+<h3><a name='calendar_ph-x'>
+  1.2 Target Readers
+</a></h3>
+<p class="MsoNormal" id="h:xr">
+  Target readers are users (developers).
+</p>
+<h2><a name='calendar_ol1w'>
+  2. What is dhtmlxCalendar
+</a></h2>
+
+ <b>dhtmlxCalendar </b>is a component that can take the form either of a popup datepicker or a flat calendar. Being a smart datepicker solution for users' websites or applications, this component is really easy to use and fully customizable to fit everyone's needs. The calendar supports various features for date range selection, setting custom date format, using different languages and skins, and many others. Complete JavaScript API is provided to help users to save time on configuring.
+
+<br>
+<br>
+<b>dhtmlxCalendar </b>provides users with the possibilities to:
+
+<ul></ul>
+<ul>
+<li>Set any date as the first day of the week; </li>
+<li> Use year drop down list; </li>
+<li> Manipulate with date format; </li>
+<li> Activate date range selection; </li>
+<li> Make the calendar multilingual; </li>
+<li> Set holidays.</li>
+</ul>
+ 
+<ul></ul>
+<h3><a name='calendar_5gy9p'>
+  2.1 Main Features
+</a></h3>
+<div class="block">
+</div>
+<ul>
+  
+<li>
+    Multibrowser/Multiplatform support;
+  </li>
+  
+<li>
+    Full control with JavaScript API;
+  </li>
+  
+<li>
+    Inactive date range;
+  </li>
+  
+<li>
+    Built-in multilingual support;
+  </li>
+  
+<li>
+    Easy connection to text input field;
+  </li>
+  
+<li>
+    Double calendar.
+  </li>
+</ul>
+<div class="block">
+</div>
+<h3><a name='calendar_53dz'>
+  2.2 Supported Browsers
+</a></h3>
+
+<ul>
+  
+<li>
+    IE 5.5 and above;
+  </li>
+  
+<li>
+    Mac OS X Safari;
+  </li>
+  
+<li>
+    Mozilla 1.4 and above;
+  </li>
+  
+<li>
+    FireFox 0.9 and above;</li>
+<li>Google Chrome;<br>
+</li>
+<li>
+      Opera 8.5+.
+  </li>
+</ul>
+<br>
+<h2><a name='calendar_m9:04'>
+  3. Initialization of dhtmlxCalendar
+</a></h2>
+The following ways of initialization are available for users of <b id="bmqe">dhtmlxCalendar:<br>
+<br>
+</b>
+<ul>
+  
+<li>
+    <b><a href="#Minimal_initialization" id="x4wh" title="Minimal Initialization">Minimal Initialization</a></b>;
+  </li>
+  
+<li>
+    <b><a href="#Extended_Initialization" id="kb7l" title="Extended Initialization">Extended Initialization;</a></b>
+  </li>
+  
+<li>
+    <b><a href="#Calendar_Linked_to_Input" id="cw9t" title="Calendar Linked to Input">Calendar Linked to Input</a></b>;
+  </li>
+  
+<li>
+    <b><a href="#Double_Calendar" id="fyra" title="Double Calendar">Double Calendar</a></b>.<br>
+  </li>
+</ul>
+<br>
+First things that need to be done for any type of <b id="bmqe">dhtmlxCalendar</b>'s initialization are the following:<br id="pbf6">
+<br id="gnrw">
+<ul id="tour">
+  
+<li id="p5-m">
+    Download the dhtmlxCalendar package from the server and place it in a folder;
+  </li>
+  
+<li id="m9:08">
+    Create an html file;<br id="tjec">
+  </li>
+  
+<li id="m9:09">
+    Place the full paths to <b id="zdv_">dhtmlxCalendar</b>'s CSS and JS files into the header of the created html file;<br>
+  </li>
+</ul>
+<blockquote id="cq-z">
+  
+<p class="MsoNormal" id="mww1">
+    <span id="hhnh" style="font-family: Verdana;"><font id="ssfs" size="2">&lt;head&gt;&nbsp; &nbsp;</font></span><br id="f2uy">
+  </p>
+  &nbsp;&nbsp; &nbsp;<span id="rzoh" style="font-family: Verdana;"><font id="zowx" size="2">&lt;link rel="stylesheet" type="text/css" href="</font></span><span id="x_e0" style="font-family: Verdana;"><font id="ekf7" size="2">[full path to this file]</font></span><span id="m9:019" style="font-family: Verdana;"><font id="m9:020" size="2">/dhtmlxcalendar.css"&gt;</font></span>
+  
+<p class="MsoNormal" id="jiuw">
+  </p>
+  
+<p class="MsoNormal" id="h9lh">
+    <span id="hhnh" style="font-family: Verdana;"><font id="ssfs" size="2">&nbsp;&nbsp; &nbsp;&lt;script src="</font></span><span id="x_e0" style="font-family: Verdana;"><font id="ekf7" size="2">[full path to this file]</font></span><span id="hhnh" style="font-family: Verdana;"><font id="ssfs" size="2">/dhtmlxcommon.js"&gt;&lt;/script&gt;</font></span>
+  </p>
+  
+<p class="MsoNormal" id="omhz">
+    <span id="bztm" style="font-family: Verdana;"><font id="stat" size="2">&nbsp;&nbsp; &nbsp;&lt;script src="</font></span><span id="m9:021" style="font-family: Verdana;"><font id="m9:022" size="2">[full path to this file]</font></span><span id="pv3c" style="font-family: Verdana;"><font id="x9:2" size="2">/dhtmlxcalendar.js"&gt;&lt;/script&gt;</font> <br>
+</span></p>
+<p class="MsoNormal" id="omhz"><span id="pv3c" style="font-family: Verdana;">&nbsp;&nbsp; &nbsp;</span>&lt;scr<span style="background-color: rgb(255, 255, 255);">ipt&gt;window.dhx_globalImgPath="</span><span id="x_e0" style="font-family: Verdana;"><font id="ekf7" size="2"><span style="background-color: rgb(255, 255, 255);">[full path to</span> this directory]</font></span>/codebase/imgs/";&lt;/script&gt;<span id="pv3c" style="font-family: Verdana;"> //&nbsp; </span>a global JS variable<span id="xh:e" style="font-family: Verdana;"><font id="x:nm" size="2"> used to </font></span><span id="jx3b" style="font-family: Verdana;"><font id="om81" size="2">set the full path to the directory, where &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;Calendar image files are located</font></span><span id="pv3c" style="font-family: Verdana;">&nbsp; </span>&nbsp;
+  </p>
+  
+<p class="MsoNormal" id="dqc9">
+    <span id="m9:038" style="font-family: Verdana;"><font id="m9:039" size="2">&lt;/head&gt;</font></span><br>
+  </p>
+</blockquote>
+<h3><a name='calendar_wwru'>
+  3.1 Minimal Initialization
+</a></h3>
+Now the user needs to create an <a id="abk9" name="object"></a>object where <b id="zdv_">dhtmlxCalendar </b><span id="m9:051" style="background-color: rgb(255, 255, 255);">will</span><span id="nv3o" style="background-color: rgb(255, 255, 255);"> be placed later. In this example the object is a &lt;div&gt; element on page which is placed in the &lt;body&gt; tag:<br>
+</span>
+<blockquote>
+  <span id="nv3o0" style="background-color: rgb(255, 255, 255);">&lt;div id="</span><span class="hl-string">objId</span><span id="nv3o0" style="background-color: rgb(255, 255, 255);">"&gt;&lt;/div&gt;</span><br>
+</blockquote>
+The next step is to create a new <span id="d3gs" style="font-family: Verdana;"><font id="an7g" size="2"><b id="nd2m0">dhtmlxCalendarObject</b> and place it after the &lt;div&gt; element (object) that we've just created:<br>
+</font></span>
+<blockquote>
+  <span id="d3gs" style="font-family: Verdana;"><font id="an7g" size="2">&lt;script&gt;</font></span><br>
+  <span class="hl-identifier">&nbsp;&nbsp; &nbsp;mCal</span><span class="hl-code"> = </span><span class="hl-reserved">new</span> <span class="hl-identifier">dhtmlxCalendarObject</span><span class="hl-brackets">(</span><span class="hl-quotes">"</span><span class="hl-string">objId</span><span class="hl-quotes">",<span style="background-color: rgb(255, 255, 255);">true</span></span><span class="hl-brackets" style="background-color: rgb(255, 255, 255);">)</span><span class="hl-code" style="background-color: rgb(255, 255, 255);">;</span><br>
+  <span class="hl-code">&lt;/script&gt;</span><br>
+</blockquote>
+The parameters the user should indicate are:<br>
+<ul>
+  
+<li>
+    <b>objId</b> - id of the object inside which the Calendar will be created;
+  </li>
+  
+<li>
+    <b style="background-color: rgb(255, 255, 255);">true|false </b>- forces|or not immediate rendering of the calendar.<br>
+  </li>
+</ul>
+<br>
+And the last command that should be called in order to initialize the Calendar is as follows:<br>
+<blockquote>
+  &lt;script&gt;<br>
+  <span class="hl-identifier">&nbsp;&nbsp; &nbsp;<span style="background-color: rgb(255, 255, 255);">mCal</span></span><span class="hl-code" style="background-color: rgb(255, 255, 255);">.</span><span class="hl-identifier" style="background-color: rgb(255, 255, 255);">draw</span><span class="hl-brackets" style="background-color: rgb(255, 255, 255);">()</span><span class="hl-code" style="background-color: rgb(255, 255, 255);">;</span><br>
+  <span class="hl-code">&lt;/script&gt;</span><br>
+</blockquote>
+When the page is loaded, the calendar will be displayed on page with the current date highlighted in it.<br>
+<br>
+<b style="background-color: rgb(255, 255, 255);"><span style="background-color: rgb(255, 255, 255);">Note</span>:</b> When initializing the Calendar, the user should decide whether to render it through the second parameter of the constructor (set to <b>true</b>), or with the help of <b>draw()</b> method.
+<h3><a name='calendar_wwru'>
+  3.2 Extended Initialization
+</a></h3>
+<font id="ockt0" size="2">Creating a Calendar with extended initialization, the user should call the same commands described in </font><b id="k.sf"><font id="c4ck" color="#0000ff" size="2"><u id="wg6n"><a href="#Minimal_initialization" id="v:v8" title="Minimal initialization">Minimal initialization</a> </u></font></b><font id="ockt1" size="2">. </font>
+<p class="western" id="j7g5" style="margin-bottom: 0.04in; font-family: Verdana;">
+</p>
+<p class="western" id="i1_q" style="margin-bottom: 0.04in; font-family: Verdana;">
+  <font id="ockt2" size="2">The code for extended initialization looks like this:<br>
+  </font>
+</p>
+<blockquote>
+  
+<p class="western" id="i1_q" style="margin-bottom: 0.04in; font-family: Verdana;">
+    <font id="ockt2" size="2">&lt;script&gt;</font>
+  </p>
+  
+  
+<p class="western" id="i1_q" style="margin-bottom: 0.04in; font-family: Verdana;">
+    &nbsp;&nbsp; &nbsp;mCal = new dhtmlxCalendarObject("<span class="hl-string">objId</span>", false, <b>{name_of_the_option: parameter}</b>);&nbsp;&nbsp;&nbsp; <br>
+    &nbsp;&nbsp; &nbsp;mCal.draw();
+  </p>
+  
+<p class="western" id="i1_q" style="margin-bottom: 0.04in; font-family: Verdana;">
+    &lt;/script&gt;
+  </p>
+</blockquote>
+<p class="western" id="i1_q" style="margin-bottom: 0.04in; font-family: Verdana;">
+  The third parameter of the constructor allows the user to activate different options of the Calendar:
+</p>
+<ul>
+  
+<li>
+    <b>isYearEditable:true|false</b> - allows the user to input the year directly from the keyboard;
+  </li>
+  
+<li>
+    <b>y<span style="background-color: rgb(255, 255, 255);">earsRange:([from,to])</span></b> - allows the set the range of years (array [from,to]);
+  </li>
+  
+<li>
+    <b>isMonthEditable:(true|false)</b> - allows the user to input the month directly from the keyboard;
+  </li>
+  
+<li>
+    <b style="background-color: rgb(255, 255, 255);">isWinHeader</b>:<b>(frue|false)</b>- renders the header with buttons (close, maximize/minimize, set current date) and "Calendar header" label;
+  </li>
+  
+<li>
+    <b style="background-color: rgb(255, 255, 255);">headerButtons</b>: <b>"XMT"</b> - allows header buttons with buttons close (X), maximize/minimize (M), set current date (T);
+  </li>
+  
+<li>
+    <b style="background-color: rgb(255, 255, 255);">isWinDrag:</b><b>(frue|false)</b> - allows drag of the calendar if set to <b>true</b> (and if <b>isWinHeader</b> is also set to <b>true</b>).
+  </li>
+</ul>
+<p class="western" id="i1_q" style="margin-bottom: 0.04in; font-family: Verdana;">
+  <br>
+</p>
+<p class="western" id="i1_q" style="margin-bottom: 0.04in; font-family: Verdana;">
+  <font id="ockt2" size="2">If the user intends to set several of the above mentioned options at once, he should write them all (as the third parameter of the constructor) and separate them by <b>commas (,)</b>.</font><br>
+</p>
+<h3><a name='calendar_1647fb4'>
+  3.3 Calendar Linked to Input
+</a></h3>
+<p class="western" id="i1_q" style="margin-bottom: 0.04in; font-family: Verdana;">
+</p>
+There is also the possibility to create a Calendar linked to an input on page. First, the user should create the input itself, for example:<br>
+<blockquote>
+  &lt;input type="text" id="calInput1" class="css1" readonly="true"&gt;<br>
+</blockquote>
+And then, one line of code creates the Calendar and links in to the newly created input:<br>
+<blockquote>
+  &lt;script&gt;<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;mCal = new dhtmlxCalendarObject("calInput1");&nbsp;&nbsp;&nbsp; <br>
+  &nbsp;&nbsp; &nbsp;mCal.draw();<br>
+  &lt;/script&gt;<br>
+</blockquote>
+The Calendar appears by input select. When the user selects some date in the Calendar, the selected date will be set as value of the input, then the Calendar will be closed.<br>
+<h3><a name='calendar_b9yh0jyw'>
+  3.4 Double Calendar
+</a></h3>
+<b>dhtmlxCalendar</b> can be initialized like a double calendar in order to be used for selecting a date range. Like with initialization of a simple Calendar, the user needs to create an <a href="#object" id="e-.o" title="object">object</a> on page where the component will be placed.<br>
+<br>
+Then a new <b>dhtmlxDblCalendarObject </b>should be created:<br>
+<blockquote>
+  <span id="nv3o0" style="background-color: rgb(255, 255, 255);">&lt;div id="</span><span class="hl-string">objId</span><span id="nv3o0" style="background-color: rgb(255, 255, 255);">"&gt;&lt;/div&gt;</span><br>
+&lt;script&gt;<br>
+  &nbsp;&nbsp; &nbsp;mDCal = new dhtmlxDblCalendarObject("<span class="hl-string">objId</span>", true);<br>
+  &nbsp;&nbsp;&nbsp; mDCal.draw();<br>
+  &lt;/script&gt;<br>
+</blockquote>
+The date range can be easily set with the help of <b>setDate()</b> method that takes the following parameters:<br>
+<ul>
+  
+<li>
+    <b>dateFrom</b> - here the starting range date should be indicated;
+  </li>
+  
+<li>
+    <b>dateTo</b> - the ending date of the range.
+  </li>
+</ul>
+<blockquote>
+  &lt;script&gt;<br>
+  &nbsp;&nbsp; &nbsp;mDCal.setDate(dateFrom,dateTo);<br>
+  &lt;/script&gt;<br>
+</blockquote>
+The left calendar highlights the starting range date while the right calendar indicates the ending range date.<br>
+<br>
+One more possibility of setting a date range in the <b>dthmlxCalendar </b>component is described in <b><a href="#Setting_Date_Range" id="hrop" title="Setting Date Range">Setting Date Range</a></b> section.<br>
+<h2><a name='calendar_m9:0210'>
+  4. dhtmlxCalendar Configuration
+</a></h2>
+<h3><a name='calendar_c81l4'>
+  4.1 Setting Skin
+</a></h3>
+<p id="cbs0">
+  The user can set one of the predefined skins for <b>dhtmlxCalendar </b>in the following way:
+</p>
+<blockquote>
+  
+<p id="cbs0">
+    <span class="hl-identifier">&lt;script&gt;<br>
+    </span>
+  </p>
+  
+<p id="cbs0">
+    <span class="hl-identifier">&nbsp;&nbsp; &nbsp;mCal</span><span class="hl-code">.</span><span class="hl-identifier">setSkin</span><span class="hl-brackets">(</span><span class="hl-quotes"></span><span class="hl-string">skin</span><span class="hl-quotes"></span><span class="hl-brackets">);</span>
+  </p>
+  
+<p id="cbs0">
+    <span class="hl-brackets">&lt;/script&gt;<br>
+    </span>
+  </p>
+</blockquote>
+<p id="cbs0">
+  <b>Note</b>: to set the <b>default skin</b>, the user should write an <b>empty string</b> as the parameter for <b>setSkin()</b> method.
+</p>
+<p id="cbs0">
+  <br>
+</p>
+<p id="cbs0">
+  <b>4.1.1 Available Skins</b>
+</p>
+<p id="cbs0">
+  <br>
+</p>
+<p id="cbs0">
+  The following skins are available for this component:
+</p>
+<p id="cbs0">
+  <br>
+</p>
+<ul>
+  
+<li>
+    SilverLight (the default one)
+  </li>
+</ul>
+<div id="mord" style="padding: 1em 0pt; text-align: left;">
+  <img src="common/dgr5rjkf_19726297262_b.png" style="width: 181px; height: 178px;"><br>
+</div>
+<ul>
+  
+<li>
+    yahoolike
+  </li>
+</ul>
+<div id="r::0" style="padding: 1em 0pt; text-align: left;">
+  
+<div id="lsag" style="padding: 1em 0pt; text-align: left;">
+    <img src="common/dgr5rjkf_196gn2cbggw_b.png" style="width: 190px; height: 184px;"><br>
+  </div>
+</div>
+<ul>
+  
+<li>
+    simplegrey
+  </li>
+</ul>
+<div id="c-2_" style="padding: 1em 0pt; text-align: left;">
+  
+<div id="yoc1" style="padding: 1em 0pt; text-align: left;">
+    <img src="common/dgr5rjkf_195gb23v3wp_b.png" style="width: 187px; height: 193px;">
+  </div>
+  
+<ul>
+    
+<li>
+      simpleblue
+    </li>
+  </ul>
+</div>
+<div id="qd7j" style="padding: 1em 0pt; text-align: left;">
+  <img src="common/dgr5rjkf_194f3xtbrc8_b.png" style="width: 187px; height: 193px;">
+</div>
+<ul>
+  
+<li>
+    vista
+  </li>
+</ul>
+<div id="is6p" style="padding: 1em 0pt; text-align: left;">
+  <img src="common/dgr5rjkf_198ghg7bdc9_b.png" style="width: 191px; height: 196px;">
+</div>
+<ul>
+  
+<li>
+    simplecolordark
+  </li>
+</ul>
+<div id="tgmw" style="padding: 1em 0pt; text-align: left;">
+  <img src="common/dgr5rjkf_199ghcpfbcm_b.png" style="width: 180px; height: 184px;">
+</div>
+<ul>
+  
+<li>
+    simplecolorsand
+  </li>
+</ul>
+<div id="ig:x" style="padding: 1em 0pt; text-align: left;">
+  <img src="common/dgr5rjkf_200g4vsnqdh_b.png" style="width: 180px; height: 184px;">
+</div>
+<ul>
+  
+<li>
+    classic
+  </li>
+</ul>
+<div id="ns_7" style="padding: 1em 0pt; text-align: left;">
+  <img src="common/dgr5rjkf_201g84h36dx_b.png" style="width: 167px; height: 159px;">
+</div>
+<ul style="background-color: rgb(255, 255, 255);">
+  
+<li>
+    dhx_blue
+  </li>
+</ul>
+<div id="ank2" style="padding: 1em 0pt; text-align: left;">
+  <img src="common/dgr5rjkf_2032jk97zgv_b.png" style="width: 181px; height: 173px;"><br>
+</div>
+<ul style="background-color: rgb(255, 255, 255);">
+  
+<li>
+    dhx_black
+  </li>
+</ul>
+<div id="kqfv" style="padding: 1em 0pt; text-align: left;">
+  <img src="common/dgr5rjkf_203hh43gshp_b.png" style="width: 179px; height: 174px;"><br>
+</div>
+<h3><a name='calendar_n2x:'>
+  4.2 Date Formatting
+</a></h3>
+The calendar supports date formatting in the following ways:<br>
+<br>
+<ul>
+  
+<li>
+    <b><a href="#Default_Date_Format" id="vgvp" title="Default date format">Default date format</a></b>;<br>
+  </li>
+  
+<li>
+    <b><a href="#Specified_Date_Format" id="xznv" title="Specified date format">Specified date format</a></b>;<br>
+  </li>
+  
+<li>
+    <b><a href="#Specified_Date_Format_for_a_Certain_Date" id="cufv" title="Specified date format for a certain date">Specified date format for a certain date</a></b>.
+  </li>
+</ul>
+<br>
+<b>4.2.1 <a id="ep_s" name="Default_Date_Format"></a>Default Date Format<br>
+<br>
+</b>The default date format in <b>dhtmlxCalendar </b>is the following:<b> %Y-%m-%d</b>.<br>
+<b><br>
+4.2.2 <a id="ci6j" name="Specified_Date_Format"></a>Specified Date <span style="background-color: rgb(255, 255, 255);">Format</span><br>
+<br>
+</b>A special date format for the whole Calendar can be easily set with the help of <b>setDateFormat()</b> method:<br>
+<blockquote>
+  &lt;script&gt;<br>
+  &nbsp;&nbsp; &nbsp;mCal.setDateFormat(format_str);<br>
+  &lt;/script&gt;<br>
+</blockquote>
+This method takes only one parameter - <b>format_str</b> - that can include any of the following options:<br>
+<br>
+<ul>
+  
+<li>
+    %e [g-] - Day of the month without leading zeros (1..31);
+  </li>
+  
+<li>
+    %d [gs] - Day of the month containing 2 digits with leading zeros (01..31);
+  </li>
+  
+<li>
+    &nbsp;%j [g-] - Day of the year containing 3 digits with leading zeros (001..366);
+  </li>
+  
+<li>
+    &nbsp;<span style="background-color: rgb(255, 255, 255);">%a [</span>g-] - A textual representation of the day of the week containing <span style="background-color: rgb(255, 255, 255);">two </span>letters <span style="background-color: rgb(255, 255, 255);">(Mo...Su)</span>;
+  </li>
+  
+<li>
+    &nbsp;%W [g-] - A full textual representation of the day of the week;
+  </li>
+  
+<li>
+    &nbsp;%c [g-] - Numeric representation of the month without leading zeros (1..12);
+  </li>
+  
+<li>
+    &nbsp;%m [gs] - Numeric representation of the month with leading zeros (01..12);
+  </li>
+  
+<li>
+    &nbsp;%b [gs] - A short textual representation of the month containing three letters (Jan..Dec);
+  </li>
+  
+<li>
+    &nbsp;%M [gs] - A full textual representation of a month, such as January or March (January..December);
+  </li>
+  
+<li>
+    &nbsp;%y [g-] - A two-digit representation of a year (93..03);
+  </li>
+  
+<li>
+    &nbsp;%Y [gs] - A full numeric representation of a year containing 4 digits (1993..2003);
+  </li>
+  
+<li>
+    &nbsp;%% [gs] - <span style="background-color: rgb(255, 255, 255);">The char "%"</span> included in the date format.
+  </li>
+</ul>
+<span style="background-color: rgb(255, 255, 0);"></span><br>
+<br>
+So, if the user chooses a date format (different from the <a href="#Default_Date_Format" id="g3.f" title="default">default</a> one) that will show days of the month with leading zeros, months with leading zeros, and a full numeric representation of a year, all separated by full stops <b>(.)</b>, he should write the following code line:<br>
+<blockquote>
+  &lt;script&gt;<br>
+  &nbsp;&nbsp; &nbsp;mCal.setDateFormat<span style="background-color: rgb(255, 255, 255);">(<b>"%d.%m.%Y"</b>)</span>;<br>
+  &lt;/script&gt;<br>
+</blockquote>
+<b>4.2.3 <a id="akbn" name="Specified_Date_Format_for_a_Certain_Date"></a>Specified Date <span style="background-color: rgb(255, 255, 255);">Format for a Certain Date</span></b><br>
+<br>
+When the user wants to set a specified format (different from the <a href="#Default_Date_Format" id="n9y1" title="defult date format">defult date format</a> and from the one set in <b>setDateFormat()</b> method) for a certain date in the Calendar, method <b>setFormatedDate()</b> should be used with the following parameters:<br>
+<ul>
+  
+<li>
+    <b>format_str</b> - the format set for the specified date;
+  </li>
+  
+<li>
+    <b>date </b>- the specified date.<br>
+  </li>
+</ul>
+<blockquote>
+  &lt;script&gt;<br>
+  &nbsp;&nbsp; &nbsp;var mCal = new dhtmlxCalendarObject("<span class="hl-string">objId</span>",true);<br>
+  &nbsp;&nbsp; &nbsp;...<br>
+  &nbsp;&nbsp; &nbsp;mCal.setFormatedDate(format_str,date);&nbsp;&nbsp;&nbsp;<br>
+  &lt;/script&gt;<br>
+</blockquote>
+The date in the specified format can be easily got with the help of <b>getFormatedDate()</b> method:<br>
+<blockquote>
+  &lt;script&gt;<br>
+  &nbsp;&nbsp; &nbsp;mCal.getFormatedDate(format_str, date);<br>
+  &lt;/script&gt;<br>
+</blockquote>
+There are the following parameters in the above mentioned method:<br>
+<ul>
+  
+<li>
+    <b>format_str</b> - sets the format for the date the user wants to get;
+  </li>
+  
+<li>
+    <b>date </b>- the specified date. If this parameter is omitted, the method returns the currently selected date of the Calendar.<br>
+  </li>
+</ul>
+<div>
+  
+<h3><a name='calendar_1dug01'>
+    4.3 Setting/Getting Date
+  </a></h3>
+  
+<p>
+    To set a date that will be highlighted as the current one in a simple calendar, the user should use <b>setDate()</b> method and indicate the date as its parameter. The date should be indicated either in the <b><a href="RawDocContents?docID=dgr5rjkf_188qnrz2bft&amp;justBody=false&amp;revision=_latest&amp;timestamp=1222154420558&amp;editMode=true&amp;strip=true#Default_Date_Format" id="i418" title="default date format">default date format</a></b>, or in the format that was indicated in <b><a href="#Setting_Specified_Sate_Format" id="fm8i" title="setDateFormat()">setDateFormat()</a> </b> method:<br>
+  </p>
+  
+<blockquote>
+    
+<p>
+      &lt;script&gt;<br>
+    </p>
+    
+<p>
+      &nbsp;&nbsp; &nbsp;mCal.setDate(date);&nbsp;&nbsp;&nbsp;<br>
+    </p>
+    
+<p>
+      &lt;/script&gt;
+    </p>
+  </blockquote>
+  There is a simple way of getting currently selected date in the Calendar:
+  
+<blockquote>
+    
+<p>
+      &lt;script&gt;<br>
+    </p>
+    
+<p>
+      &nbsp;var date = mCal.getDate() // returns currently selected date in the Calendar<br>
+    </p>
+    &lt;/script&gt;<br>
+  </blockquote>
+  
+<h3><a name='calendar_ders96'>
+    4.4 Setting Date Range
+  </a></h3>
+  
+<p>
+    There are two ways of setting a date range in <b>dhtmlxCalendar</b>:
+  </p>
+  
+<p>
+    <br>
+  </p>
+  
+<ul>
+    
+<li>
+      <b><a href="#Setting_a_Date_Range_by_Means_of" id="w0j0" title="Setting a date range by means of a Double Calendar"> In a double Calendar</a></b>;
+    </li>
+    
+<li>
+      <b><a href="#Setting_Date_Range_in_a_Simple_C" id="yvg9" title="Setting date range in a simple Calendar">In a simple Calendar</a></b>.
+    </li>
+  </ul>
+  <br>
+  <b>4.4.1 In a Double Calendar<br>
+  <br>
+  </b>Please, refer to the <b><a href="#Double_Calendar" id="ir81" title="Double Calendar">Double Calendar</a></b> section for information about <b>setDate()</b> method.<b><br>
+  <br>
+  4.4.2 In a Simple Calendar</b><br>
+  <br>
+  A different (from a Double Calendar) date range can be set for a simple Calendar using <b>setSensitive()</b> method in the following way:<br>
+  
+<blockquote>
+    &lt;script&gt;<br>
+    &nbsp;&nbsp; &nbsp;mCal.setSensitive(dateFrom, dateTo);<br>
+    &lt;/script&gt;<br>
+  </blockquote>
+  This method allocates a period in which the user can select dates. Its parameters are:
+  
+<ul>
+    
+<li>
+      <b>dateFrom</b> - minimal allowed date;
+    </li>
+    
+<li>
+      <b>dateTo</b> - maximal allowed date.
+    </li>
+  </ul>
+  <br>
+  When the calendar is created, the only active date range is the one specified in <b>setSensitive()</b> method. Other dates, outside the specified range, are rendered inactive.<br>
+  <br>
+  There is also the possibility to write several dates as the first parameter and omit the second parameter of <b>setSensitive()</b> method. In this case, end-users will be able to select only the specified dates:</div>
+<div>
+<blockquote style="border: 1px dashed rgb(221, 221, 221); padding: 10px;">&lt;script&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="hl-identifier">mCal</span><span class="hl-code">.</span>&nbsp;setSensitive([array of dates] or comma separated string list);&nbsp;<br>
+&lt;/script&gt;<br>
+</blockquote>
+<div>For example:</div>
+</div>
+<div>
+<blockquote>&lt;script&gt;<br>
+    &nbsp;&nbsp; &nbsp;mCal.setSensitive('2008.20.09,09.30,2008.09.21,2008.09.22');<br>
+    &lt;/script&gt;<br>
+  </blockquote>
+  
+<h3><a name='calendar_ht6tgal'>
+    4.5 Setting Year Range
+  </a></h3>
+  <span class="hl-identifier">There is also the possibility to set a year range with </span><b><span class="hl-identifier">setYearsRange()</span></b> <span class="hl-identifier">method</span><span class="hl-identifier">:<br>
+  </span>
+  
+<blockquote>
+    <span class="hl-identifier">&lt;script&gt;</span><br>
+    <span class="hl-identifier">&nbsp;&nbsp; &nbsp;mDCal</span><span class="hl-code">.</span><span class="hl-identifier">setYearsRange</span><span class="hl-brackets">(</span><span class="hl-number">1980</span><span class="hl-code">, </span><span class="hl-number">2020</span><span class="hl-brackets">)</span><span class="hl-code">;</span><br>
+    <span class="hl-code">&lt;/script&gt;</span><br>
+  </blockquote>
+  <span class="hl-code">The parameters include:<br>
+  </span>
+  
+<ul>
+    
+<li>
+      <span class="hl-code"><b>minYear</b>- the first year in the range;</span>
+    </li>
+    
+<li>
+      <span class="hl-code"><b>maxYear </b>- the last year in the range.</span><br>
+    </li>
+  </ul>
+  <br>
+  
+<h3><a name='calendar_e3ygt'>
+    4.6 Making Calendar Multilingual
+  </a></h3>
+  <b>dhtmlxCalendar </b>allows its users to add and use different languages with the ability to switch between them dynamically. First, the user needs to define necessary language settings with script (if no language pack is provided with the calendar package). This can be done in the following way:<br>
+  
+<blockquote>
+    &lt;script&gt;<br>
+    <span class="hl-identifier">&nbsp;&nbsp;&nbsp; </span>dhtmlxCalendarLangModules = new Array();//create array if it doesn't exist &nbsp;<br>
+    &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;//define settings for the new language (Russian)<br>
+    &nbsp;&nbsp; &nbsp;dhtmlxCalendarLangModules['ru'] = {<br>
+    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;langname: '<span style="background-color: rgb(255, 255, 255);">ru</span>', // id of the new language<br>
+    &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;dateformat: '%d.%m.%Y', // date format<br>
+    &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;monthesFNames: ["?i'a^a`?u"", "O^a*a^?a`e"u"", "I`a`?o`", "A`i"?a*e"u"", "I`a`e'", "E`?i'u"", "E`?e"u"", "A`a^a~o'n~o`", "N~a*i'o`y"a'?u"", "I^e^o`y"a'?u"", "I'i^y"a'?u"", "A"a*e^a`a'?u""], // full names of months<br>
+    &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;monthesSNames: ["?i'a^", "O^a*a^", "I`a`?", "A`i"?", "I`a`e'", "E`?i'", "E`?e"", "A`a^a~", "N~a*i'", "I^e^o`", "I'i^y"", "A"a*e^"], // short names of months<br>
+    &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;daysFNames: ["A^i^n~e^?a*n~a*i'u"a*", "I"i^i'a*a"a*e"u"i'e`e^", "A^o`i^?i'e`e^", "N~?a*a"a`", "?a*o`a^a*?a~", "I"y"o`i'e`o"a`", "N~o'a'a'i^o`a`"], // full names of days<br>
+    &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;daysSNames: ["A^n~", "I"i'", "A^o`", "N~?", "?o`", "I"o`", "N~a'"], // short names of days<br>
+    &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;weekend: [0, 6], // weekend days<br>
+    &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;weekstart: 1, // week start day<br>
+    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;msgClose: "C,a`e^?u^o`u"", // close button tooltip<br>
+    &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;msgMinimize: "N~a^a*?i'o'o`u"", // minimize button tooltip<br>
+    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;msgToday: "<span style="background-color: rgb(255, 255, 255);">N~a*a~i^a"i'y"</span>" // today button tooltip<br>
+    &nbsp;&nbsp; &nbsp;}<br>
+    &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;//define settings for the new language (German)<br>
+    &nbsp;&nbsp; &nbsp;dhtmlxCalendarLangModules['de'] = {<br>
+    &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;langname: 'de',<br>
+    &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;dateformat: '%d.%m.%Y',<br>
+    &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;monthesFNames: ["Januar", "Februar", "Ma"rz", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"],<br>
+    &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;monthesSNames: ["Jan", "Feb", "Ma"r", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dez"],<br>
+    &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;daysFNames: ["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"],<br>
+    &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;daysSNames: ["So", "Mn", "Dn", "Mt", "Dn", "Fr", "Sa"],<br>
+    &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;weekend: [0, 6],<br>
+    &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;weekstart: 1,<br>
+    &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;msgClose: "Schlie?en",<br>
+    &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;msgMinimize: "Drehen",<br>
+    &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;msgToday: "Heute"<br>
+    &nbsp;&nbsp; &nbsp;}<br>
+    &lt;/script&gt;<br>
+  </blockquote>
+  When you have necessary language settings, you can switch between them using <b>loadUserLanguage()</b> method indicating the id of the language you used for its definition:<br>
+  
+<blockquote>
+    &lt;script&gt;<br>
+    &nbsp;&nbsp; &nbsp;mCal.loadUserLanguage("ru");<br>
+    &lt;/script&gt;<br>
+  </blockquote>
+  
+<h3><a name='calendar_f:64qn'>
+    4.7 Changing Week Start Day
+  </a></h3>
+  The user can control the start day of the week easily using <b>weekstart</b> property like this:<br>
+  
+<blockquote>
+    &lt;script&gt;<br>
+    <span class="hl-identifier">&nbsp;&nbsp; &nbsp;mCal</span><span class="hl-code">.</span><span class="hl-identifier">options</span><span class="hl-code">.</span><span class="hl-identifier">weekstart</span><span class="hl-code">=</span><span class="hl-number">1</span><span class="hl-code">;</span><span class="hl-comment">//</span><span class="hl-comment">week starts from Monday</span><br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; //or<br>
+    <span class="hl-comment">&nbsp;&nbsp;&nbsp; </span><span class="hl-comment">mCal.options.weekstart=0; //week starts from Sunday</span><br>
+    &lt;/script&gt;<br>
+  </blockquote>
+  <span class="hl-code">
+  
+<pre><span style="font-family: Verdana;">The s<span style="background-color: rgb(255, 255, 255);">tarting day of the week </span>can also be defined in <a href="#Making_Calendar_Multilingual" id="g4ci" title="overal language settings">overal language settings</a>:</span><br></pre>
+  </span>
+  
+<blockquote>
+    <span class="hl-comment">&nbsp;&nbsp; &nbsp;//</span><span class="hl-comment">sets Sunday and Saturday as weekend. the week starts with Monday</span><br>
+    <span class="hl-brackets">{</span><br>
+    <span class="hl-code"> &nbsp;&nbsp; &nbsp;...</span><br>
+    <span class="hl-identifier">&nbsp;&nbsp; </span>weekend: [0, 6], // weekend days<br>
+    &nbsp;&nbsp; weekstart: 1, // week start day<br>
+    <span class="hl-brackets">}</span>&nbsp;
+  </blockquote>
+  
+<h3><a name='calendar_rs1m2:u5g'>
+    4.8 Hiding/Showing the Calendar
+  </a></h3>
+  The Calendar can be easily shown/hidden in the following way:<br>
+  
+<blockquote>
+    &lt;script&gt;<br>
+    <span class="hl-identifier">&nbsp;&nbsp; &nbsp;mCal</span><span class="hl-code">.</span><span class="hl-identifier">show</span><span class="hl-brackets">(</span><span class="hl-brackets">)</span><span class="hl-code">;</span><span class="hl-identifier">&nbsp;&nbsp;<br>
+    &nbsp;&nbsp; &nbsp;mCal</span><span class="hl-code">.</span><span class="hl-identifier">hide</span><span class="hl-brackets">(</span><span class="hl-brackets">)</span><span class="hl-code">;<br>
+    &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; // or<br>
+    &nbsp;&nbsp; &nbsp;</span><span class="hl-identifier">mCal</span><span class="hl-code">.</span><span class="hl-identifier">close</span><span class="hl-brackets">(</span><span class="hl-brackets">)</span><span class="hl-code">;</span><br>
+    <span class="hl-code">&lt;/script&gt;</span><br>
+  </blockquote>
+  There is a simple way to check whether the Calendar is visible. If <span style="background-color: rgb(255, 255, 255);">the method returns </span><b id="gup62" style="background-color: rgb(255, 255, 255);">true</b><span id="l06a0" style="background-color: rgb(255, 255, 255);">, </span><span style="background-color: rgb(255, 255, 255);">the Calendar is visible, and vice versa:</span>
+  
+<blockquote>
+    &lt;script&gt;<br>
+    <span class="hl-identifier">&nbsp;&nbsp; &nbsp;</span>var isVisible = <span class="hl-identifier">mCal</span><span class="hl-code">.<span style="background-color: rgb(255, 255, 255);">isVisible</span>(); // returns <span style="background-color: rgb(255, 255, 255);">true</span></span>|false<br>
+    <span class="hl-code">&lt;/script&gt;</span><br>
+  </blockquote>
+  
+<h3><a name='calendar_je:uty9n'>
+    4.9 Setting Holidays
+  </a></h3>
+  There is an option in <b>dhtmlxCalendar </b>that allows the user to set holidays in the Calendar. The dates should be set in one of the following formats:<br>
+  <br>
+  
+<ul>
+    
+<li>
+      <b>%m.%d</b> or <b>%m-%d</b> - in this case the holiday will be set for the indicated date every year in the Calendar;
+    </li>
+    
+<li>
+      <b>%Y-%m-%d</b> or <b>%Y.%m.%d</b> - this date format means that the holiday will be set only for the specified date without repetition every year.
+    </li>
+  </ul>
+  <br>
+  The way holidays are rendered in the Calendar is determined by the CSS file. <b>setHolidays()</b> method is responsible for setting holidays in <b>dhtmlxCalendar</b>:<br>
+  
+<blockquote>
+    &lt;script&gt;<br>
+    &nbsp;&nbsp;&nbsp; <span class="hl-identifier">mCal</span><span class="hl-code">.</span>setHolidays([array of dates] or comma separated string list); // several dates can be set separated by&nbsp;commas <b>(,)</b><br>
+    &lt;/script&gt;<br>
+  </blockquote>
+  So, if the user wants to set the following dates as holidays: September 24, 2008 and May 8 of every year, he should write the following line of code:<br>
+  
+<blockquote>
+    &lt;script&gt;<br>
+    &nbsp;&nbsp; &nbsp;<span class="hl-identifier">mCal</span><span class="hl-code">.</span>setHolidays(['2008-09-25', '05.08']);<br>
+    &lt;/script&gt;<br>
+  </blockquote>
+  
+<h3><a name='calendar_85:9'>
+    4.10 Setting Inactive Dates
+  </a></h3>
+  <b>setInsesitiveDates()</b> method sets dates that are going to be insensitive/inactive in the Calendar. The dates should be set in one of the following formats:<br>
+  <br>
+  
+<ul>
+    
+<li>
+      <b>%m.%d</b> or <b>%m-%d</b> - in this case the inactive date will be set for the indicated date every year in the Calendar;
+    </li>
+    
+<li>
+      <b>%Y-%m-%d</b> or <b>%Y.%m.%d</b> - this date format means that the inactive date will be set only for the specified date without repetition every year.
+    </li>
+  </ul>
+  
+<blockquote>
+    &lt;script&gt;<br>
+    &nbsp;&nbsp;&nbsp; <span class="hl-identifier">mCal</span><span class="hl-code">.</span>setInsensitiveDates([array of dates] or comma separated string list); <br>
+    &lt;/script&gt;<br>
+</blockquote>
+There is also the possibility to set <b>inactive week days</b>, indicating the number of the week day in question. The number of week days start with 0: Sunday - 0, Saturday - 6, etc.<br>
+For example:<br>
+<blockquote>&lt;script&gt;<br>
+&nbsp;&nbsp; &nbsp;mCal.setInsensitiveDates("<b>6</b>,<b>0</b>,10-24,2008-12-01"); <br>
+&lt;/script&gt;<br>
+</blockquote>
+ After this code line each <b>Saturday</b>, <b>Sunday</b>, 24th October, and 1st December 2008 will be inactive in the calendar.<br>
+  
+  
+<h3><a name='calendar_w0oom6j'>
+    4.11 Setting New Calendar's Container
+  </a></h3>
+  Methd <b>setParent()</b> allows the user to indicate a new parent object/container for the Calendar:<br>
+  
+<blockquote>
+    &lt;script&gt;<br>
+    &nbsp;&nbsp; &nbsp;<span class="hl-identifier">mCal</span><span class="hl-code">.</span>setParent(parentObj);<br>
+    &lt;/script&gt;<br>
+  </blockquote>
+  
+<h3><a name='calendar_217_g'>
+    4.12 Setting Calendar's Position
+  </a></h3>
+  There is the possibility to set Calendar's new position with the help of <b>setPosition()</b> method. If the first parameter is not an <b>object</b>, the user should use the following code string:<br>
+  
+<blockquote>
+    &lt;script&gt;<br>
+    <span class="hl-identifier">&nbsp;&nbsp;&nbsp; mCal</span><span class="hl-code">.</span>setPosition(argA,argB);<br>
+    &lt;/script&gt;<br>
+  </blockquote>
+  As for this method's parameters, they are as follows:<br>
+  
+<ul>
+    
+<li>
+      <b>argA </b>- indicates position of the Calendar by y axis;
+    </li>
+    
+<li>
+      <b>argB </b>- indicates position of the Calendar by x axis.<br>
+    </li>
+  </ul>
+  <br>
+  For example:<br>
+  
+<blockquote>
+    &lt;script&gt;<br>
+    <span class="hl-identifier">&nbsp;&nbsp;&nbsp; </span><span class="hl-identifier">mCal</span><span class="hl-code">.</span>setPosition(100, 50);<br>
+    &lt;/script&gt;<br>
+  </blockquote>
+  If the first parameters is an object, Calendar's new coordinates will be the following:<br>
+  
+<ul>
+    
+<li>
+      <b>y </b>- position of the htmlObj by y axis + 100;
+    </li>
+    
+<li>
+      <b>x </b>- position of the htmlObj by x axis + htmlObj's width +50.
+    </li>
+  </ul>
+  <br>
+  And the code in this case will be as follows:<br>
+  
+<blockquote>
+    &lt;script&gt;<br>
+    &nbsp;&nbsp; &nbsp;mCal.setPosition(argA,argB,argC);<br>
+    &lt;/script&gt;<br>
+  </blockquote>
+  The parameters here are as follows:<br>
+  
+<ul>
+    
+<li>
+      <b>argA</b> <b>- </b>is the object;
+    </li>
+    
+<li>
+      <b>argB</b> - is increment by y;
+    </li>
+    
+<li>
+      <b>argC</b> -&nbsp;is increment by x.&nbsp;
+    </li>
+  </ul>
+  <br>
+  For example:<br>
+  
+<blockquote>
+    &lt;script&gt;<br>
+    &nbsp;&nbsp;&nbsp; mCal.setPosition(htmlObj,100, 50);<br>
+    &lt;/script&gt;<span style="background-color: rgb(255, 255, 0);"></span><br>
+  
+</blockquote>
+<h2><a name='calendar_cbs0'>
+    5. Event Handling
+  </a></h2>
+  The following events are available in <b>dhtmlxCalendar</b>:<br>
+  <br>
+  
+<ul>
+    
+<li>
+      <font id="hajh21" size="2"><b id="sief">onClick</b> - </font>occurs when the user clicks the left mouse button on a date in the Calendar;
+    </li>
+    
+<li>
+      <b>onChangeMonth </b>- occurs when the user changes the month in the Calendar by clicking the buttons "prev" and "next".<br>
+    </li>
+  </ul>
+  <br>
+  
+<h3><a name='calendar_riz1'>
+    5.1 Attaching Event Handler
+  </a></h3>
+  
+<p id="a4r2">
+    <a id="w39j" name="_Toc193605166"></a><a id="yv3v" name="_Toc193605132"></a><a id="h.uh" name="_Toc193605132"></a>The user can add any user-defined handler to any of the available events.
+  </p>
+  
+<p class="MsoNormal" id="s15b">
+    To do this, the user can use <b id="th5p">attachEvent()</b> method <a id="cpww" name="_Toc193605132">that sets the function called when specified event occurs. </a>It has the following parameters:
+  </p>
+  
+<p class="MsoNormal" id="m9:0403">
+    <br id="kp_j">
+  </p>
+  
+<ul id="p13y">
+    
+<li id="h1m9">
+      <b id="nwz-">evName </b>- name of the event;
+    </li>
+    
+<li id="q05i">
+      <b id="jg3k">evHandler </b>- user-defined event handler.<br id="b2zd">
+    </li>
+  </ul>
+  
+<blockquote id="c92g">
+    
+<p class="MsoNormal" id="hvtm">
+      <span id="m9:0405" style="font-family: Verdana;"><font id="m9:0406" size="2">&lt;script&gt;<br id="qow2">
+      </font></span>
+    </p>
+    
+<p class="MsoNormal" id="m9:0407">
+      <span id="m9:0408" style="font-family: Verdana;"><font id="m9:0409" size="2">&nbsp;&nbsp;&nbsp; </font></span>mCal<span id="m9:0408" style="font-family: Verdana;"><font id="m9:0409" size="2">.</font></span>attachEvent(evName, evHandler);
+    </p>
+    
+<p class="MsoNormal" id="m9:0410">
+      &lt;/script&gt;<br id="li1u">
+    </p>
+  </blockquote>
+  <a id="cpww" name="_Toc193605132"><span id="sij3" style="font-family: Verdana;"><font id="g0lq" size="2"><b id="q.lw">Note: </b>the names of the events are <b id="bmi:">case-sensitive</b>. </font></span></a><br>
+  
+<h3 id="hmao">
+    5.2 onClick Event
+  </h3>
+  
+<p id="s85m">
+    <a id="hmao2" name="_Toc193605132"></a>This event calls user-defined handlers (if there are any) and passes the following parameter:
+  </p>
+  
+<ul>
+    
+<li>
+      <b id="ku1v">date </b>- the date of the clicked day in the calendar.
+    </li>
+  </ul>
+  
+<blockquote>
+    
+<p id="s85m">
+      &lt;script&gt;<br>
+    </p>
+    
+<p id="s85m">
+      &nbsp;&nbsp; &nbsp;mCal.attachEvent("onClick",function(date){
+    </p>
+    
+<p id="s85m">
+      &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;alert("Date is set to "+date)
+    </p>
+    
+<p id="s85m">
+      &nbsp;&nbsp; &nbsp;})
+    </p>
+    
+<p id="s85m">
+      &lt;/script&gt;<br>
+    </p>
+  </blockquote>
+  
+<div>
+    
+<h3 id="hmao">
+      5.2 onChangeMonth Event
+    </h3>
+    This event calls user-defined handlers (if there are any) and passes the following parameters:
+    
+<ul>
+      
+<li>
+        <b>curMonth </b>- the current month (after the change);
+      </li>
+      
+<li>
+        <b>prevMonth </b>- the previous month (before the change).<br>
+      </li>
+    </ul>
+    
+<blockquote>
+      &lt;script&gt;<br>
+      mCal.attachEvent("onChangeMonth",function(curMonth,prevMonth){
+      
+<p id="s85m">
+        &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; alert("Current month : " + curMonth + " Prev Month&nbsp; : " + prevMonth);
+      </p>
+      
+<p id="s85m">
+        &nbsp;&nbsp; &nbsp;})
+      </p>
+      
+<p id="s85m">
+        &lt;/script&gt;<br>
+</p>
+    </blockquote>
+<br>
+</div>
+</div>
+<br>
+</body>
+</html>

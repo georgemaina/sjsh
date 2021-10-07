@@ -1,0 +1,1197 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Main",
+        "models": [
+            "ProcedureClass",
+            "StaffList",
+            "ClassCodes",
+            "ProcedureNames",
+            "TheatreRooms",
+            "TheatreList",
+            "ProceduresList",
+            "DiagnosisCodes",
+            "PatientDetails",
+            "ProcedureClassList",
+            "ProcedureStatus",
+            "SurgicalChecklist",
+            "AnesthesiaCharts",
+            "AnesPatientSafety",
+            "SpongeCount"
+        ],
+        "stores": [
+            "ProceduresStore",
+            "ProcedureClassStore",
+            "ClassCodes",
+            "StaffStore",
+            "TheatreRoomsStore",
+            "TheatreListStore",
+            "DiagnosisStore",
+            "PatientDetailsStore",
+            "ProcedureClassListStore",
+            "SurgicalChecklistStore",
+            "ProcedureNamesStore",
+            "ProcedureStatusStore",
+            "AnesthesiaChartMonitors",
+            "AnesthesiaChartFluids",
+            "AnesthesiaChartAgents",
+            "PatientSafetyStore",
+            "SpongeCountStore"
+        ],
+        "views": [
+            "ProceduresMain",
+            "ProcMenus",
+            "BookingWindow",
+            "ProceduresList",
+            "BookingForm",
+            "TheatreListGrid",
+            "CheckList",
+            "AnaesthesiaRecord",
+            "CheckListGrid",
+            "AnaesthesiaRecordGrid",
+            "ProcedureClassGrid",
+            "SpongeCountGrid",
+            "PatientDetails"
+        ]
+    },
+    "configAlternates": {
+        "designer|userClassName": "string",
+        "models": "typedarray",
+        "stores": "typedarray",
+        "views": "typedarray"
+    },
+    "designerId": "a648ebf4-cdfe-47d8-a60f-5ad4a5b6ecec",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "application"
+                ],
+                "fn": "init",
+                "implHandler": [
+                    "this.control({\r",
+                    "    'bookingform button[id=cmdClose]': {\r",
+                    "        click: this.closeForm\r",
+                    "    },\r",
+                    "    'debtorDetails': {\r",
+                    "        itemclick: this.loadDebtorInfo\r",
+                    "    },\r",
+                    "    \"procmenus menuitem[id=mnuNewBooking]\": {\r",
+                    "        click: this.openNewBooking\r",
+                    "    },\r",
+                    "    \"procmenus menuitem[id=mnuTheatreList]\": {\r",
+                    "        click: this.openTheatreList\r",
+                    "    },\r",
+                    "    \"procmenus menuitem[id=mnuProceduresList]\": {\r",
+                    "        click: this.openProceduresList\r",
+                    "    },\r",
+                    "    \"procmenus menuitem[id=mnuCheckList]\": {\r",
+                    "        click: this.openCheckList\r",
+                    "    },\r",
+                    "    \"procmenus menuitem[id=mnuAnaesthesia]\": {\r",
+                    "        click: this.openAnaesthesia\r",
+                    "    },\r",
+                    "    'bookingform button[id=cmdSave]': {\r",
+                    "        click: this.saveBooking\r",
+                    "    },\r",
+                    "    'theatrelistgrid':{\r",
+                    "        itemdblclick:this.loadBookingForm\r",
+                    "    },\r",
+                    "    'bookingform textfield[id=pid]':{\r",
+                    "        blur:this.getPatientDetails\r",
+                    "    },\r",
+                    "    'theatrelistgrid actioncolumn[id=checklist]':{\r",
+                    "        click:this.openCheckListForm\r",
+                    "    },\r",
+                    "    'theatrelistgrid actioncolumn[id=anaesthesia]':{\r",
+                    "        click:this.openAnaesthesiaForm\r",
+                    "    },\r",
+                    "    'theatrelistgrid actioncolumn[id=spongeCountsRec]':{\r",
+                    "        click:this.openSpongeCounts\r",
+                    "    },\r",
+                    "    'checklist button[id=cmdCreateChecklist]': {\r",
+                    "        click: this.createCheckList1\r",
+                    "    },\r",
+                    "    'checklist button[id=cmdCreateChecklist2]': {\r",
+                    "        click: this.createCheckList1\r",
+                    "    },\r",
+                    "    'checklist button[id=cmdCreateChecklist3]': {\r",
+                    "        click: this.createCheckList1\r",
+                    "    },\r",
+                    "    'checklistgrid actioncolumn[id=editList]':{\r",
+                    "        click:this.openCheckListForm2\r",
+                    "    },\r",
+                    "    'procmenus menuitem[id=procClassList]':{\r",
+                    "        click:this.openProcedureClassList\r",
+                    "    },\r",
+                    "    'procedureclassgrid button[id=newClass]':{\r",
+                    "        click:this.createNewClass\r",
+                    "    },\r",
+                    "    'procedureclassgrid button[id=cmdSaveClass]':{\r",
+                    "        click:this.SaveNewClass\r",
+                    "    },\r",
+                    "    '#cmdSaveAnesthesia':{\r",
+                    "        click:this.CreateAnesthesiaForm\r",
+                    "    },\r",
+                    "    '#cmdRefresh':{\r",
+                    "        click:this.ReloadChartData\r",
+                    "    },\r",
+                    "    '#cmdSaveSponge':{\r",
+                    "        click:this.saveSpongeCount\r",
+                    "    }\r",
+                    "});"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "init",
+            "designerId": "158f9c27-29f3-4edd-b84e-3738496df901"
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onLaunch",
+                "implHandler": [
+                    "procmenus=Ext.create(\"Procedures.view.ProcMenus\",{});\r",
+                    "centerContainer=this.getViewport().down(\"container[region=west]\");\r",
+                    "\r",
+                    "centerContainer.add(procmenus);\r",
+                    "//westContainer.hidden=true;\r",
+                    "\r",
+                    "_myAppGlobal = this;"
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "onLaunch",
+            "designerId": "16e9965a-96b2-42fa-8954-fc7247a4ef58"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "viewport",
+                "selector": "proceduresmain",
+                "xtype": "proceduresmain"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "viewport",
+            "designerId": "f886fc63-c90b-48bf-ba0a-530a0fa456a8"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "bookingform",
+                "selector": "bookingform",
+                "xtype": "bookingform"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "bookingform",
+            "designerId": "c5d9bcee-80e3-40e1-b7ed-d13660d956ae"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "procmenus",
+                "selector": "procmenus",
+                "xtype": "procmenus"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "procmenus",
+            "designerId": "5c70b562-499b-49c2-8126-4b3038e65327"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "openNewBooking",
+                "implHandler": [
+                    "var bookingform=Ext.create('Procedures.view.BookingForm', {});\r",
+                    "var bookingWindow=Ext.create('Procedures.view.BookingWindow', {});\r",
+                    "\r",
+                    "\r",
+                    "bookingWindow.add(bookingform);\r",
+                    "bookingWindow.show();\r",
+                    "\r",
+                    "bookingform.query('textfield[name=\"formStatus\"]')[0].setValue('insert');"
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "openNewBooking",
+            "designerId": "748bab44-b442-466a-93ab-8fbc890471f6"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "bookingwindow",
+                "selector": "bookingwindow",
+                "xtype": "bookingwindow"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "bookingwindow",
+            "designerId": "7eaeae89-5cff-4786-a2b3-943b39d67e61"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "theatrelist",
+                "selector": "theatrelist",
+                "xtype": "theatrelist"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "theatrelist",
+            "designerId": "7b03f58f-fabe-4a99-9d8e-8756fb9ae0ce"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "openTheatreList",
+                "implHandler": [
+                    "theatrelist = Ext.create('Procedures.view.TheatreListGrid', {});\r",
+                    "center_container = this.getViewport().down('container[region=center]'); \r",
+                    "center_container.removeAll();\r",
+                    "\r",
+                    "center_container.add(theatrelist);\r",
+                    "\r",
+                    "var theatreliststore=Ext.data.StoreManager.lookup('TheatreListStore'); \r",
+                    "theatreliststore.load({});\r",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "openTheatreList",
+            "designerId": "1be5a46d-c5bf-41d7-a204-d2ae6ee4feab"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "openProceduresList",
+                "implHandler": [
+                    "procedureslist = Ext.create('Procedures.view.ProceduresList', {});\r",
+                    "center_container = this.getViewport().down('container[region=center]'); \r",
+                    "center_container.removeAll();\r",
+                    "\r",
+                    "center_container.add(procedureslist);"
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "openProceduresList",
+            "designerId": "8efcb68b-e853-4c56-8477-16a6eabfeae0"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "procedureslist",
+                "selector": "procedureslist",
+                "xtype": "procedureslist"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "procedureslist",
+            "designerId": "a8b51198-389c-40b1-95a8-5b008e6e5852"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "saveBooking",
+                "implHandler": [
+                    "//alert('test');\r",
+                    "var form = button.up('form').getForm(); // get the basic form\r",
+                    "if (form.isValid()) { // make sure the form contains valid data before submitting\r",
+                    "    form.submit({\r",
+                    "        success: function(form, action) {\r",
+                    "            Ext.Msg.alert('Success', 'Saved new Item successfully.');\r",
+                    "\r",
+                    "            // var win = button.up('window');\r",
+                    "            // win.removeAll();\r",
+                    "            // win.close();\r",
+                    "\r",
+                    "        },\r",
+                    "        failure: function(form, action) {\r",
+                    "            if(action.result.errNo==1){\r",
+                    "                Ext.Msg.alert('Failed', 'Booking with Pid '+action.result.errNo+' already exists');\r",
+                    "            }else{\r",
+                    "                Ext.Msg.alert('Failed', 'Could not save Booking. Error='+action.result.errN);\r",
+                    "            }\r",
+                    "\r",
+                    "        }\r",
+                    "    });\r",
+                    "} else { // display error alert if the data is invalid\r",
+                    "    Ext.Msg.alert('Invalid Data', 'Please correct form errors and continue');\r",
+                    "}\r",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "saveBooking",
+            "designerId": "cee2f14c-ac31-47cc-bece-1ddfab93551b"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "closeForm",
+                "implHandler": [
+                    "var win = button.up('bookingwindow');\r",
+                    "win.destroy();"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "closeForm",
+            "designerId": "09052460-798f-4117-a969-31190fc10781"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "gridpanel, record, item, index, e, eOpts"
+                ],
+                "fn": "loadBookingForm",
+                "implHandler": [
+                    "//alert(\"Test Register\");\r",
+                    "var bookingwindow=Ext.create('Procedures.view.BookingWindow', {});\r",
+                    "var bookingform=Ext.create('Procedures.view.BookingForm', {});\r",
+                    "\r",
+                    "//this.getForm().loadRecord(record);\r",
+                    "\r",
+                    "\r",
+                    "//Ext.getCmp('formStatus').setValue('update');\r",
+                    "bookingform.query('textfield[name=\"formStatus\"]')[0].setValue('update');\r",
+                    "\r",
+                    "//dbRegisterForm.show();\r",
+                    "bookingwindow.add(bookingform);\r",
+                    "bookingwindow.show();\r",
+                    "bookingform.getForm().loadRecord(record);"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "loadBookingForm",
+            "designerId": "788ef9cb-ae01-4bbe-9d76-098b8a8b93a7"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "record"
+                ],
+                "fn": "getPatientDetails",
+                "implHandler": [
+                    "\r",
+                    "var patientsInfoStore=Ext.data.StoreManager.lookup('PatientDetailsStore'); \r",
+                    "var pid=Ext.getCmp('pid').getValue();\r",
+                    "//alert(pid);\r",
+                    "\r",
+                    "patientsInfoStore.load({\r",
+                    "    params: {\r",
+                    "        pid: pid\r",
+                    "    },\r",
+                    "    callback: function(records, operation, success) {\r",
+                    "        //alert(records[0].data.pnames);\r",
+                    "        Ext.getCmp('selian_pid').setValue(records[0].data.selian_pid);\r",
+                    "        Ext.getCmp('pnames').setValue(records[0].data.pnames);\r",
+                    "        Ext.getCmp('date_birth').setValue(records[0].data.date_birth);\r",
+                    "        Ext.getCmp('sex').setValue(records[0].data.sex);\r",
+                    "        //Ext.getCmp('encounter_nr').setValue(records[0].data.encounter_nr);\r",
+                    "\r",
+                    "        this.getBookingform().down(\"textfield[name=encounter_nr]\").setValue(records[0].data.encounter_nr);\r",
+                    "        // this.getBookingform().down(\"textfield[name=BoookingNo]\").setValue(records[0].data.BookingNo);\r",
+                    "    },\r",
+                    "    scope: this\r",
+                    "\r",
+                    "});"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "getPatientDetails",
+            "designerId": "67df52ca-8311-4b83-b752-7a067eb17cc9"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "openCheckList",
+                "implHandler": [
+                    "checklist = Ext.create('Procedures.view.CheckListGrid', {});\r",
+                    "center_container = this.getViewport().down('container[region=center]'); \r",
+                    "center_container.removeAll();\r",
+                    "\r",
+                    "center_container.add(checklist);\r",
+                    "\r",
+                    "\r",
+                    "var checkliststore=Ext.data.StoreManager.lookup('SurgicalChecklistStore'); \r",
+                    "checkliststore.load({});\r",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "openCheckList",
+            "designerId": "3c0e2ea5-f1f3-4937-ac9f-08ac01e90679"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "openAnaesthesia",
+                "implHandler": [
+                    "anaesthesia = Ext.create('Procedures.view.AnaesthesiaRecordGrid', {});\r",
+                    "center_container = this.getViewport().down('container[region=center]'); \r",
+                    "center_container.removeAll();\r",
+                    "\r",
+                    "center_container.add(anaesthesia);"
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "openAnaesthesia",
+            "designerId": "94c97d92-1b54-4188-935e-b589e69cc845"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "checklist",
+                "selector": "checklist",
+                "xtype": "checklist"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "checklist",
+            "designerId": "d52195eb-6f70-451a-82a1-1dc7e215a98a"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "checklistgrid",
+                "selector": "checklistgrid",
+                "xtype": "checklistgrid"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "checklistgrid",
+            "designerId": "85a8cf72-b080-4dd1-b052-c7175171f84b"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "view, rowIndex, colIndex, item, e, record, row"
+                ],
+                "fn": "openCheckListForm",
+                "implHandler": [
+                    "checklistform = Ext.create('Procedures.view.CheckList', {});\r",
+                    "center_container = this.getViewport().down('container[region=center]'); \r",
+                    "center_container.removeAll();\r",
+                    "\r",
+                    "console.log(record.get('pnames'));\r",
+                    "\r",
+                    "checklistform.getForm().findField(\"pnamesDisp\").setValue(record.get('pnames'));\r",
+                    "checklistform.getForm().findField(\"pid\").setValue(record.get('pid'));\r",
+                    "checklistform.getForm().findField(\"procedure_type\").setValue(record.get('procedure_type'));\r",
+                    "checklistform.getForm().findField(\"procedure_date\").setValue(record.get('procedure_date'));\r",
+                    "\r",
+                    "checklistform.getForm().findField(\"pname\").setValue(record.get('pnames'));\r",
+                    "checklistform.getForm().findField(\"pid2\").setValue(record.get('pid'));\r",
+                    "checklistform.getForm().findField(\"procedure_name\").setValue(record.get('procedure_type'));\r",
+                    "checklistform.getForm().findField(\"procedure_date2\").setValue(record.get('procedure_date'));\r",
+                    "checklistform.getForm().findField(\"encounter_nr\").setValue(record.get('encounter_nr'));\r",
+                    "\r",
+                    "checklistform.getForm().findField(\"pname3\").setValue(record.get('pnames'));\r",
+                    "checklistform.getForm().findField(\"pid3\").setValue(record.get('pid'));\r",
+                    "checklistform.getForm().findField(\"procedure_name3\").setValue(record.get('procedure_type'));\r",
+                    "checklistform.getForm().findField(\"procedure_date3\").setValue(record.get('procedure_date'));\r",
+                    "checklistform.getForm().findField(\"encounter_nr2\").setValue(record.get('encounter_nr'));\r",
+                    "\r",
+                    "checklistform.getForm().findField(\"pname4\").setValue(record.get('pnames'));\r",
+                    "checklistform.getForm().findField(\"pid4\").setValue(record.get('pid'));\r",
+                    "checklistform.getForm().findField(\"procedure_name4\").setValue(record.get('procedure_type'));\r",
+                    "checklistform.getForm().findField(\"procedure_date4\").setValue(record.get('procedure_date'));\r",
+                    "checklistform.getForm().findField(\"encounter_nr4\").setValue(record.get('encounter_nr'));\r",
+                    "\r",
+                    "\r",
+                    "center_container.add(checklistform);\r",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "openCheckListForm",
+            "designerId": "abd3a01b-e986-48a8-a275-0c018665c8c3"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "view, rowIndex, colIndex, item, e, record, row"
+                ],
+                "fn": "openAnaesthesiaForm",
+                "implHandler": [
+                    "anesthesiaform = Ext.create('Procedures.view.AnaesthesiaRecord', {});\r",
+                    "center_container = this.getViewport().down('container[region=center]'); \r",
+                    "center_container.removeAll();\r",
+                    "\r",
+                    "center_container.add(anesthesiaform);\r",
+                    "\r",
+                    "//anesthesiaform.getForm().loadRecord(record);\r",
+                    "\r",
+                    "anesthesiaform.getForm().findField(\"pnames\").setValue(record.get('pnames'));\r",
+                    "anesthesiaform.getForm().findField(\"pid\").setValue(record.get('pid'));\r",
+                    "anesthesiaform.getForm().findField(\"procedure_type\").setValue(record.get('procedure_type'));\r",
+                    "anesthesiaform.getForm().findField(\"procedure_date\").setValue(record.get('procedure_date'));\r",
+                    "anesthesiaform.getForm().findField(\"encounter_nr\").setValue(record.get('encounter_nr'));\r",
+                    "anesthesiaform.getForm().findField(\"allergies\").setValue(record.get('allergies'));\r",
+                    "anesthesiaform.getForm().findField(\"scrub_nurse\").setValue(record.get('scrub_nurse'));\r",
+                    "anesthesiaform.getForm().findField(\"surgeon\").setValue(record.get('surgeon'));\r",
+                    "\r",
+                    "\r",
+                    "var anesthesiaChartAgentsStore=Ext.data.StoreManager.lookup('AnesthesiaChartAgents'); \r",
+                    "anesthesiaChartAgentsStore.load({\r",
+                    "    params:{\r",
+                    "        encNr:record.get('encounter_nr')\r",
+                    "    },\r",
+                    "    scope: this\r",
+                    "});\r",
+                    "\r",
+                    "var anesthesiaChartFluidsStore=Ext.data.StoreManager.lookup('AnesthesiaChartFluids'); \r",
+                    "anesthesiaChartFluidsStore.load({\r",
+                    "    params:{\r",
+                    "        encNr:record.get('encounter_nr')\r",
+                    "    },\r",
+                    "    scope: this\r",
+                    "});\r",
+                    "\r",
+                    "var anesthesiaChartMonitorsStore=Ext.data.StoreManager.lookup('AnesthesiaChartMonitors'); \r",
+                    "anesthesiaChartMonitorsStore.load({\r",
+                    "    params:{\r",
+                    "        encNr:record.get('encounter_nr')\r",
+                    "    },\r",
+                    "    scope: this\r",
+                    "});\r",
+                    "\r",
+                    "var anesthesiaChartVitalsStore=Ext.data.StoreManager.lookup('AnesthesiaVitals'); \r",
+                    "anesthesiaChartVitalsStore.load({\r",
+                    "    params:{\r",
+                    "        encNr:record.get('encounter_nr')\r",
+                    "    },\r",
+                    "    scope: this\r",
+                    "});\r",
+                    "\r",
+                    "var patientSafetyStore=Ext.data.StoreManager.lookup('PatientSafetyStore'); \r",
+                    "patientSafetyStore.load({\r",
+                    "    params:{\r",
+                    "        encNr:record.get('encounter_nr')\r",
+                    "    },\r",
+                    "    scope: this\r",
+                    "});\r",
+                    "\r",
+                    "anesthesiaform.getForm().loadRecord(patientSafetyStore.data.first());"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "openAnaesthesiaForm",
+            "designerId": "cf02aecf-3f1a-48b7-aaca-9908a2897f61"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "createCheckList1",
+                "implHandler": [
+                    "//alert('test');\r",
+                    "var form = button.up('form').getForm(); // get the basic form\r",
+                    "\r",
+                    "if (form.isValid()) { // make sure the form contains valid data before submitting\r",
+                    "    form.submit({\r",
+                    "        //params : {pid : pid},\r",
+                    "        success: function(form, action) {\r",
+                    "            Ext.Msg.alert('Success', 'Saved new Item successfully.');\r",
+                    "\r",
+                    "            var win = button.up('window');\r",
+                    "            win.removeAll();\r",
+                    "            win.close();\r",
+                    "\r",
+                    "        },\r",
+                    "        failure: function(form, action) {\r",
+                    "            if(action.result.errNo==1){\r",
+                    "                Ext.Msg.alert('Failed', 'Checklist for patient '+action.result.errNo+' already exists');\r",
+                    "            }else{\r",
+                    "                Ext.Msg.alert('Failed', 'Could not save Checklist. Error='+action.result.errNo);\r",
+                    "            }\r",
+                    "\r",
+                    "        }\r",
+                    "    });\r",
+                    "} else { // display error alert if the data is invalid\r",
+                    "    Ext.Msg.alert('Invalid Data', 'Please correct form errors and continue');\r",
+                    "}\r",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "createCheckList1",
+            "designerId": "5b16ee11-bcde-432d-9725-ef542eeeb3e1"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "view, rowIndex, colIndex, item, e, record, row"
+                ],
+                "fn": "openCheckListForm2",
+                "implHandler": [
+                    "checklistform = Ext.create('Procedures.view.CheckList', {});\r",
+                    "center_container = this.getViewport().down('container[region=center]'); \r",
+                    "center_container.removeAll();\r",
+                    "\r",
+                    "center_container.add(checklistform);\r",
+                    "\r",
+                    "checklistform.getForm().loadRecord(record);\r",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "openCheckListForm2",
+            "designerId": "ecb9ff5c-5bab-4d85-b5bb-220a36dc1049"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "openProcedureClassList",
+                "implHandler": [
+                    "procedureclassgrid = Ext.create('Procedures.view.ProcedureClassGrid', {});\r",
+                    "center_container = this.getViewport().down('container[region=center]'); \r",
+                    "center_container.removeAll();\r",
+                    "\r",
+                    "center_container.add(procedureclassgrid);\r",
+                    "\r",
+                    "procedureclassstore=Ext.data.StoreManager.lookup('ProcedureClassListStore');\r",
+                    "procedureclassstore.load({});"
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "openProcedureClassList",
+            "designerId": "ea654b3d-3af8-4719-bea7-b96faa798ef0"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "autoCreate": true,
+                "ref": "procedureclassgrid",
+                "selector": "procedureclassgrid",
+                "xtype": "procedureclassgrid"
+            },
+            "configAlternates": {
+                "autoCreate": "boolean",
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "procedureclassgrid",
+            "designerId": "277fb3c6-03ab-463b-b1b5-d27df6f07e56"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "createNewClass",
+                "implHandler": [
+                    "var newItem;\r",
+                    "var procedureclassstore=Ext.data.StoreManager.lookup('ProcedureClassListStore');  \r",
+                    "\r",
+                    "procedureclassstore.add({\r",
+                    "    ID: procedureclassstore.getTotalCount( )+1,\r",
+                    "    proc_class:'',\r",
+                    "    class_value:'',\r",
+                    "    cost:0\r",
+                    "});\r",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "createNewClass",
+            "designerId": "b30f0fd8-2e45-41e4-a8ce-2bd72e3a52f6"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "SaveNewClass",
+                "implHandler": [
+                    "var procedureclassstore=Ext.data.StoreManager.lookup('ProcedureClassListStore');  \r",
+                    "procedureclassstore.sync({\r",
+                    "    success: function(batch) {\r",
+                    "        Ext.Msg.alert('Success!', 'Changes saved successfully '+batch.operations[0].request.scope.reader.jsonData.errNo);\r",
+                    "    },\r",
+                    "    failure: function(batch) {\r",
+                    "        Ext.Msg.alert(\"Failed\",'failed to save');\r",
+                    "    }\r",
+                    "});"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "SaveNewClass",
+            "designerId": "e503a749-b617-48d6-b997-98ed62c3e84f"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "CreateAnesthesiaForm",
+                "implHandler": [
+                    "//alert('test');\r",
+                    "var form = button.up('form').getForm(); // get the basic form\r",
+                    "\r",
+                    "if (form.isValid()) { // make sure the form contains valid data before submitting\r",
+                    "    form.submit({\r",
+                    "        //params : {pid : pid},\r",
+                    "        success: function(form, action) {\r",
+                    "            Ext.Msg.alert('Success', 'Saved new Item successfully.');\r",
+                    "\r",
+                    "        },\r",
+                    "        failure: function(form, action) {\r",
+                    "            if(action.result.errNo==1){\r",
+                    "                Ext.Msg.alert('Failed', 'Checklist for patient '+action.result.errNo+' already exists');\r",
+                    "            }else{\r",
+                    "                Ext.Msg.alert('Failed', 'Could not save Anesthesia. Error='+action.result.errNo);\r",
+                    "            }\r",
+                    "\r",
+                    "        }\r",
+                    "    });\r",
+                    "} else { // display error alert if the data is invalid\r",
+                    "    Ext.Msg.alert('Invalid Data', 'Please correct form errors and continue');\r",
+                    "}\r",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "CreateAnesthesiaForm",
+            "designerId": "81ad697b-b15f-4307-9087-5621096bd11f"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "ReloadChartData",
+                "implHandler": [
+                    "//var form = button.up('form').getForm(); // get the basic form\r",
+                    "var encNr = button.up('form').getForm().findField(\"encounter_nr\").getValue();\r",
+                    "//var encNr=Ext.getCmp('encounter_nr').getValue();\r",
+                    "\r",
+                    "var anesthesiaChartAgentsStore=Ext.data.StoreManager.lookup('AnesthesiaChartAgents'); \r",
+                    "anesthesiaChartAgentsStore.load({\r",
+                    "    params:{\r",
+                    "        encNr:encNr\r",
+                    "    },\r",
+                    "    scope: this\r",
+                    "});\r",
+                    "\r",
+                    "var anesthesiaChartFluidsStore=Ext.data.StoreManager.lookup('AnesthesiaChartFluids'); \r",
+                    "anesthesiaChartFluidsStore.load({\r",
+                    "    params:{\r",
+                    "        encNr:encNr\r",
+                    "    },\r",
+                    "    scope: this\r",
+                    "});\r",
+                    "\r",
+                    "var anesthesiaChartMonitorsStore=Ext.data.StoreManager.lookup('AnesthesiaChartMonitors'); \r",
+                    "anesthesiaChartMonitorsStore.load({\r",
+                    "    params:{\r",
+                    "        encNr:encNr\r",
+                    "    },\r",
+                    "    scope: this\r",
+                    "});\r",
+                    "\r",
+                    "var anesthesiaChartVitalsStore=Ext.data.StoreManager.lookup('AnesthesiaVitals'); \r",
+                    "anesthesiaChartVitalsStore.load({\r",
+                    "    params:{\r",
+                    "        encNr:encNr\r",
+                    "    },\r",
+                    "    scope: this\r",
+                    "});"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "ReloadChartData",
+            "designerId": "f77305c2-3580-4bb8-8e9d-f90ee70bbf4d"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "view, rowIndex, colIndex, item, e, record, row"
+                ],
+                "fn": "openSpongeCounts",
+                "implHandler": [
+                    "//center_container = this.getViewport().down('container[region=center]'); \r",
+                    "//center_container.removeAll();\r",
+                    "\r",
+                    "patiendetails = Ext.create('Procedures.view.PatientDetails', {});\r",
+                    "spongeCountGrid = Ext.create('Procedures.view.SpongeCountGrid', {});\r",
+                    "\r",
+                    "var spongeCountStore=Ext.data.StoreManager.lookup('SpongeCountStore'); \r",
+                    "spongeCountStore.load({\r",
+                    "    params:{\r",
+                    "        pid:record.get('Pid'),\r",
+                    "        pnames:record.get('Pnames'),\r",
+                    "        encNr:record.get('encounter_nr'),\r",
+                    "        procedureNo:record.get('BookingNo'),\r",
+                    "        procedureType:record.get('procedure_type')\r",
+                    "    },\r",
+                    "    scope: this\r",
+                    "});\r",
+                    "\r",
+                    "patiendetails.getForm().loadRecord(record);\r",
+                    "\r",
+                    "var win=Ext.create('Ext.window.Window',{\r",
+                    "\ttitle: 'Payment Types'\r",
+                    "});\r",
+                    "\r",
+                    "win.add(patiendetails,spongeCountGrid);\r",
+                    "\r",
+                    "win.show();"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "openSpongeCounts",
+            "designerId": "a0fbe7e8-6d46-4063-8377-bd131447c4e1"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "patientdetails",
+                "selector": "patientdetails",
+                "xtype": "patientdetails"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "patientdetails",
+            "designerId": "66a2bc1a-3317-402b-9263-dcf2306abc6f"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "spongecountgrid",
+                "selector": "spongecountgrid",
+                "xtype": "spongecountgrid"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "spongecountgrid",
+            "designerId": "af44b110-9e0f-45b1-958b-829bcf998efc"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "saveSpongeCount",
+                "implHandler": [
+                    "var spongeCountStore=Ext.data.StoreManager.lookup('SpongeCountStore');  \r",
+                    "spongeCountStore.sync({\r",
+                    "    success: function(batch) {\r",
+                    "        Ext.Msg.alert('Success!', 'Changes saved successfully '+batch.operations[0].request.scope.reader.jsonData.errNo);\r",
+                    "    },\r",
+                    "    failure: function(batch) {\r",
+                    "        Ext.Msg.alert(\"Failed\",'failed to save');\r",
+                    "    }\r",
+                    "});"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "saveSpongeCount",
+            "designerId": "790b255c-913d-4612-ab16-d4b1840fee36"
+        }
+    ]
+}

@@ -1,0 +1,204 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "bodyPadding": 10,
+        "bodyStyle": "background:#629670;",
+        "designer|snapToGrid": 5,
+        "designer|userAlias": "approveresults",
+        "designer|userClassName": "ApproveResults",
+        "height": 171,
+        "layout": "absolute",
+        "url": "../../data/getDataFunctions.php?task=approveResults",
+        "width": 421
+    },
+    "configAlternates": {
+        "bodyPadding": "auto",
+        "designer|snapToGrid": "number",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "layout": "string",
+        "width": "auto",
+        "url": "string",
+        "bodyStyle": "string"
+    },
+    "name": "SpecimenCollection1",
+    "designerId": "1d963e20-d6c9-4488-aeb2-2430d3e0e437",
+    "viewControllerInstanceId": "211929e1-1375-43b8-b1a5-9eddac70f0b5",
+    "viewModelInstanceId": "a9ca9d1d-83d6-43a9-b439-111851e59d13",
+    "cn": [
+        {
+            "type": "Ext.form.field.ComboBox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "displayField": "staff_name",
+                "fieldLabel": "Approved By",
+                "labelAlign": "right",
+                "labelStyle": "color:white;font-weight:bold;",
+                "layout|x": 25,
+                "layout|y": 75,
+                "minChars": 1,
+                "name": "approvedBy",
+                "queryMode": "local",
+                "store": "StaffList",
+                "typeAhead": true,
+                "valueField": "staff_name",
+                "width": 320
+            },
+            "configAlternates": {
+                "displayField": "datafield",
+                "fieldLabel": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "minChars": "number",
+                "name": "string",
+                "queryMode": "string",
+                "store": "store",
+                "typeAhead": "boolean",
+                "valueField": "datafield",
+                "labelAlign": "string",
+                "width": "auto",
+                "labelStyle": "string"
+            },
+            "name": "MyComboBox11",
+            "designerId": "a7d1b086-f950-4cad-945e-8fc1c244c29b"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowBlank": false,
+                "fieldLabel": "Encounter No",
+                "itemId": "encNr",
+                "labelAlign": "right",
+                "labelStyle": "color:white;font-weight:bold;",
+                "layout|x": 25,
+                "layout|y": 5,
+                "name": "encNr"
+            },
+            "configAlternates": {
+                "displayField": "datafield",
+                "fieldLabel": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "minChars": "number",
+                "name": "string",
+                "queryMode": "string",
+                "store": "store",
+                "typeAhead": "boolean",
+                "valueField": "datafield",
+                "allowBlank": "boolean",
+                "itemId": "string",
+                "labelAlign": "string",
+                "labelStyle": "string"
+            },
+            "name": "MyTextField1",
+            "designerId": "fd066333-6e52-496b-ba28-3aae109a17d1"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowBlank": false,
+                "fieldLabel": "Lab No",
+                "itemId": "labNo",
+                "labelAlign": "right",
+                "labelStyle": "color:white;font-weight:bold;",
+                "layout|x": 25,
+                "layout|y": 40,
+                "name": "labNo"
+            },
+            "configAlternates": {
+                "displayField": "datafield",
+                "fieldLabel": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "minChars": "number",
+                "name": "string",
+                "queryMode": "string",
+                "store": "store",
+                "typeAhead": "boolean",
+                "valueField": "datafield",
+                "allowBlank": "boolean",
+                "itemId": "string",
+                "labelAlign": "string",
+                "labelStyle": "string"
+            },
+            "name": "MyTextField2",
+            "designerId": "a8352401-fcda-420d-a8e2-56721fc7a291"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 45,
+                "iconCls": "x-fa fa-save",
+                "itemId": "cmdApproveResults",
+                "layout|x": 40,
+                "layout|y": 120,
+                "text": "Save",
+                "width": 115
+            },
+            "configAlternates": {
+                "height": "auto",
+                "iconCls": "string",
+                "itemId": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "text": "string",
+                "width": "auto"
+            },
+            "name": "MyButton",
+            "designerId": "d3d0446d-7ec3-47db-a503-af2b18bcb961"
+        },
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 45,
+                "iconCls": "x-fa fa-close",
+                "itemId": "cmdClose",
+                "layout|x": 270,
+                "layout|y": 120,
+                "text": "Close",
+                "width": 115
+            },
+            "configAlternates": {
+                "height": "auto",
+                "layout|x": "number",
+                "layout|y": "number",
+                "text": "string",
+                "width": "auto",
+                "iconCls": "string",
+                "itemId": "string"
+            },
+            "name": "MyButton1",
+            "designerId": "d935abd1-57c7-4e98-b399-8d38ca5cd80b"
+        }
+    ]
+}

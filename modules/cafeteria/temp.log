@@ -1,0 +1,44 @@
+
+
+====================================
+Log started, 13/02/2012 10:02:50
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => catID
+		1 => catID
+	1 => 
+		0 => item_Cat
+		1 => item_Cat
+	2 => 
+		0 => partcode
+		1 => partcode
+	3 => 
+		0 => item_description
+		1 => item_description
+	4 => 
+		0 => unit_price
+		1 => unit_price
+id => 
+	0 => item_number
+	1 => item_number
+table => 
+	0 =>  care_tz_drugsandservices d 
+LEFT JOIN care_tz_itemscat i ON d.category=i.catID
+    
+	1 => catID
+    
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices d 
+LEFT JOIN care_tz_itemscat i ON d.category=i.catID
+     WHERE  d.purchasing_class IN('SERVICE','WARD CHARGE','XRAY','LAB') 
+
+Exec SQL: SELECT  i.catID,i.item_Cat,d.partcode,d.item_description, d.unit_price  FROM  care_tz_drugsandservices d 
+LEFT JOIN care_tz_itemscat i ON d.category=i.catID
+     WHERE  d.purchasing_class IN('SERVICE','WARD CHARGE','XRAY','LAB')  LIMIT 0,100
+
+Done in 24.18866109848ms
+

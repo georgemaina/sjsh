@@ -1,0 +1,67 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "designer|userAlias": "allocations",
+        "designer|userClassName": "Allocations",
+        "model": "allocations",
+        "pageSize": 40,
+        "storeId": "Allocations"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "pageSize": "number",
+        "storeId": "string",
+        "autoLoad": "boolean"
+    },
+    "designerId": "e60c298a-fadf-42c7-9b32-8de3c9800aeb",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "extraParams": [
+                    " actionName: 'TranslationPaging',\r",
+                    "lanID: getSelectedLanguageID()"
+                ],
+                "url": "./data/getDataFunctions.php?task=getAllocations"
+            },
+            "configAlternates": {
+                "extraParams": "object",
+                "url": "string"
+            },
+            "name": "MyAjaxProxy9",
+            "designerId": "e39ca6c4-7e8b-4f86-9f26-f5e1d98d6a2b",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "allocationsLists"
+                    },
+                    "configAlternates": {
+                        "root": "string",
+                        "rootProperty": "string"
+                    },
+                    "name": "MyJsonReader9",
+                    "designerId": "6f3d55b2-326d-40f9-87cc-0b1f2132f02e"
+                }
+            ]
+        }
+    ]
+}

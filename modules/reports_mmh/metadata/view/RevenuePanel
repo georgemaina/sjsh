@@ -1,0 +1,398 @@
+{
+    "type": "Ext.tab.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "activeTab": 0,
+        "animCollapse": true,
+        "bodyBorder": false,
+        "closable": true,
+        "collapsible": true,
+        "designer|userAlias": "revenuepanel",
+        "designer|userClassName": "RevenuePanel",
+        "draggable": true,
+        "height": 615,
+        "minHeight": null,
+        "resizable": [
+            "true\r",
+            ""
+        ],
+        "scrollable": [
+            "{\"x\":true,\"y\":true}"
+        ],
+        "title": "Revenue Reports",
+        "titleAlign": "left",
+        "width": null
+    },
+    "configAlternates": {
+        "activeTab": "auto",
+        "animCollapse": "boolean",
+        "bodyBorder": "boolean",
+        "closable": "boolean",
+        "collapsible": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "draggable": "boolean",
+        "height": "auto",
+        "minHeight": "number",
+        "overflowX": "string",
+        "overflowY": "string",
+        "resizable": "object",
+        "title": "string",
+        "titleAlign": "string",
+        "width": "auto",
+        "scrollable": "object"
+    },
+    "designerId": "75637f2e-497f-4987-94e0-2c681f6dd848",
+    "viewControllerInstanceId": "22f8abc6-27f9-4a50-b38c-559e62df510a",
+    "viewModelInstanceId": "5cf55656-620f-49b2-bc3b-83933165fcaa",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "frame": true,
+                "height": null,
+                "id": "iprevenue",
+                "minHeight": null,
+                "padding": null,
+                "title": "Inpatient Revenue"
+            },
+            "configAlternates": {
+                "frame": "boolean",
+                "height": "auto",
+                "id": "string",
+                "minHeight": "number",
+                "overflowX": "string",
+                "overflowY": "string",
+                "padding": "auto",
+                "title": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyPanel",
+            "designerId": "17509b28-eed5-47c9-95ff-15dd86ca663d",
+            "cn": [
+                {
+                    "type": "Ext.tab.Tab",
+                    "reference": {
+                        "name": "tabConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "ipRevenue",
+                        "itemId": "ipRevenue"
+                    },
+                    "configAlternates": {
+                        "id": "string",
+                        "itemId": "string",
+                        "scrollable": "boolean"
+                    },
+                    "name": "TabConfig",
+                    "designerId": "9bfba88c-61d0-4005-b678-82be3fcf2a50"
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "frame": true,
+                "id": "oprevenue",
+                "title": "Outpatient Cash Revenue",
+                "width": 990
+            },
+            "configAlternates": {
+                "frame": "boolean",
+                "id": "string",
+                "title": "string",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyPanel1",
+            "designerId": "19506e6c-08ac-4f68-b5dd-3a7f5e97665d",
+            "cn": [
+                {
+                    "type": "Ext.tab.Tab",
+                    "reference": {
+                        "name": "tabConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "opRevenue",
+                        "itemId": "opRevenue"
+                    },
+                    "configAlternates": {
+                        "id": "string",
+                        "itemId": "string",
+                        "scrollable": "boolean"
+                    },
+                    "name": "TabConfig1",
+                    "designerId": "2b7efdf8-a6c0-4ed1-9969-14da3df33b95"
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "frame": true,
+                "id": "opdebtorsrevenue",
+                "itemId": null,
+                "title": "Outpatient Debtors Revenue",
+                "width": 990
+            },
+            "configAlternates": {
+                "frame": "boolean",
+                "id": "string",
+                "itemId": "string",
+                "title": "string",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyPanel5",
+            "designerId": "46c00e5a-ddab-4d8f-ab36-599c26926631",
+            "cn": [
+                {
+                    "type": "Ext.tab.Tab",
+                    "reference": {
+                        "name": "tabConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "opDebtorsRevenue",
+                        "itemId": "opDebtorsRevenue"
+                    },
+                    "configAlternates": {
+                        "id": "string",
+                        "itemId": "string",
+                        "scrollable": "boolean"
+                    },
+                    "name": "TabConfig1",
+                    "designerId": "9598408c-8ea0-4a3c-982a-e4e2b896d9b2"
+                }
+            ]
+        },
+        {
+            "type": "Ext.toolbar.Toolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dock": "top"
+            },
+            "configAlternates": {
+                "dock": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyToolbar",
+            "designerId": "1f41abcb-0c2f-497c-8043-c482baad1ddc",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Date",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Start Date",
+                        "itemId": "startDate",
+                        "labelWidth": 70,
+                        "layout|flex": null
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "itemId": "string",
+                        "labelWidth": "number",
+                        "layout|flex": "number",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyDateField",
+                    "designerId": "086127e2-73a5-4b0c-a848-45885a8e63c5"
+                },
+                {
+                    "type": "Ext.form.field.Date",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "End Date",
+                        "itemId": "endDate",
+                        "labelWidth": 70,
+                        "layout|flex": null
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "itemId": "string",
+                        "labelWidth": "number",
+                        "layout|flex": "number",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyDateField1",
+                    "designerId": "4cdeecab-73b1-4a16-ae4e-25ba4ab67a17"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "cmdPreviewRevenue",
+                        "layout|flex": null,
+                        "text": "<b>Preview</b>",
+                        "width": 114
+                    },
+                    "configAlternates": {
+                        "itemId": "string",
+                        "layout|flex": "number",
+                        "text": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyButton",
+                    "designerId": "107f87c6-c86b-44ed-bbcb-9c9cc79e9d37"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "cmdPreviewRevenue1",
+                        "layout|flex": null,
+                        "text": "<b>Export to Excel</b>",
+                        "width": 114
+                    },
+                    "configAlternates": {
+                        "itemId": "string",
+                        "layout|flex": "number",
+                        "text": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyButton17",
+                    "designerId": "37e405dd-9bc8-4c17-a0d6-014882150866"
+                },
+                {
+                    "type": "Ext.tab.Tab",
+                    "reference": {
+                        "name": "tabConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null
+                    },
+                    "configAlternates": {
+                        "layout|flex": "number",
+                        "scrollable": "boolean"
+                    },
+                    "name": "TabConfig3",
+                    "designerId": "db7fd79f-1602-4eca-9a46-6216711ad8ed"
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "wardrevenue",
+                "title": "Ward Procedures Revenue"
+            },
+            "configAlternates": {
+                "id": "string",
+                "title": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyPanel2",
+            "designerId": "bd3bee85-5785-4803-b987-69bedc6af545",
+            "cn": [
+                {
+                    "type": "Ext.tab.Tab",
+                    "reference": {
+                        "name": "tabConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "wardRevenue"
+                    },
+                    "configAlternates": {
+                        "id": "string",
+                        "scrollable": "boolean"
+                    },
+                    "name": "TabConfig2",
+                    "designerId": "910732f5-3ebc-41ec-a3c7-1e46e772afa4"
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Tool",
+            "reference": {
+                "name": "tools",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "maximize",
+                "type": "maximize"
+            },
+            "configAlternates": {
+                "designer|displayName": "string",
+                "type": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyTool",
+            "designerId": "87e91cad-c230-4fdb-a153-53da53198fc0"
+        },
+        {
+            "type": "Ext.panel.Tool",
+            "reference": {
+                "name": "tools",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "minimize",
+                "type": "minimize"
+            },
+            "configAlternates": {
+                "designer|displayName": "string",
+                "type": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyTool1",
+            "designerId": "8fb412a5-a270-48df-9735-cb379fd44b72"
+        }
+    ]
+}

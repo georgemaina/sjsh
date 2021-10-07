@@ -1,0 +1,52 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "storelocations",
+        "designer|userClassName": "StoreLocations"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "name": "MyModel1",
+    "designerId": "0b7e96b0-d5db-4367-81e1-bacc8da1d159",
+    "cn": [
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "LocCode"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField141",
+            "designerId": "62503218-f33d-4fc5-9956-17d4f060d10d"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Description"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField142",
+            "designerId": "4a525eb5-a94d-4e1c-82ee-60e709aa1967"
+        }
+    ]
+}

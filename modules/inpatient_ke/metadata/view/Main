@@ -1,0 +1,318 @@
+{
+    "type": "Ext.tab.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "activeTab": 0,
+        "collapsible": false,
+        "designer|userAlias": "main",
+        "designer|userClassName": "Main",
+        "header": [
+            "{",
+            "    layout : {",
+            "        align : 'stretchmax'",
+            "    },",
+            "    iconCls : 'x-fa fa-home',",
+            "        style:'background:#1b5f87',",
+            "    title : {",
+            "        text      : 'Inpatients',",
+            "        textAlign : 'left',",
+            "        flex      : 0,",
+            "        minWidth  : 160,",
+            "        height  :33",
+            "    }",
+            "}"
+        ],
+        "headerPosition": "left",
+        "height": 800,
+        "maxHeight": null,
+        "tabBarHeaderPosition": 1,
+        "tabRotation": 0,
+        "titleCollapse": false,
+        "titleRotation": 0
+    },
+    "configAlternates": {
+        "activeTab": "number",
+        "titleRotation": "number",
+        "tabRotation": "number",
+        "defaults": "object",
+        "designer|initialView": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "headerPosition": "string",
+        "tabBarHeaderPosition": "number",
+        "width": "auto",
+        "maxHeight": "number",
+        "collapsible": "boolean",
+        "titleCollapse": "boolean",
+        "minHeight": "number",
+        "header": "object",
+        "height": "auto"
+    },
+    "name": "MyTabPanel",
+    "designerId": "8250074b-9975-470d-8144-e9f09de7ed2c",
+    "viewControllerInstanceId": "966cddf8-e414-427b-915b-0811a94308e1",
+    "viewModelInstanceId": "b27c9073-8f24-4a7d-a6f3-bf520a071b3d",
+    "cn": [
+        {
+            "type": "Ext.tab.Bar",
+            "reference": {
+                "name": "tabBar",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dock": null,
+                "flex": 1,
+                "frame": false
+            },
+            "configAlternates": {
+                "flex": "number",
+                "minHeight": "number",
+                "frame": "boolean",
+                "dock": "string"
+            },
+            "name": "MyTabBar",
+            "designerId": "ab3dd3fd-142a-47cd-91df-b721291633f9"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "name": "dashboard",
+            "designerId": "43d9b80e-4306-4148-a518-f3f7ea80136b",
+            "masterInstanceId": "b72eb6ad-5f74-49ae-a492-827d77aea3e9",
+            "cn": [
+                {
+                    "type": "Ext.tab.Tab",
+                    "reference": {
+                        "name": "tabConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "TabConfig9",
+                    "designerId": "4ec09331-7a91-4300-94d3-acc7e1bada2a"
+                }
+            ]
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "name": "wardoccupancy",
+            "designerId": "85d7c591-6fbe-47cb-82bd-cf4067e20af7",
+            "masterInstanceId": "f5755597-db55-46d2-84d5-83fc198a4067",
+            "cn": [
+                {
+                    "type": "Ext.tab.Tab",
+                    "reference": {
+                        "name": "tabConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "TabConfig8",
+                    "designerId": "e23de809-dd46-48c4-a715-f99a23a5f57a"
+                }
+            ]
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "name": "bills1",
+            "designerId": "dbbcbed9-dc16-4aaa-9067-5408d0867a45",
+            "masterInstanceId": "f5b41257-a613-4fa0-be58-498bc728db79",
+            "cn": [
+                {
+                    "type": "Ext.tab.Tab",
+                    "reference": {
+                        "name": "tabConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "TabConfig",
+                    "designerId": "93ec08e4-2403-4af8-a5f3-1c0c7509c08a"
+                }
+            ]
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "name": "receipts1",
+            "designerId": "0ac47e50-121e-4d57-905e-d722671032c4",
+            "masterInstanceId": "c6fb5bc0-3351-4fec-915c-bdcd34545d0a",
+            "cn": [
+                {
+                    "type": "Ext.tab.Tab",
+                    "reference": {
+                        "name": "tabConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "TabConfig2",
+                    "designerId": "b24aca51-e0a4-4560-a582-6edfcf07e962"
+                }
+            ]
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "name": "debit1",
+            "designerId": "fa1d0ad1-9f33-4394-b751-4a55e51b417f",
+            "masterInstanceId": "8953310f-144b-44cc-9158-82d5ddaacdc9",
+            "cn": [
+                {
+                    "type": "Ext.tab.Tab",
+                    "reference": {
+                        "name": "tabConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "TabConfig3",
+                    "designerId": "7a3026de-39a2-486e-86a0-60ba1758933b"
+                }
+            ]
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "name": "credit1",
+            "designerId": "e6204e22-9729-4d82-8edf-f11fe63dbcec",
+            "masterInstanceId": "194859ff-9d6b-4252-95c1-a83618215d7c",
+            "cn": [
+                {
+                    "type": "Ext.tab.Tab",
+                    "reference": {
+                        "name": "tabConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "TabConfig4",
+                    "designerId": "fa424abc-9f9e-4b92-b9fc-739b84f4f4cf"
+                }
+            ]
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "name": "nhifcredit1",
+            "designerId": "d7410097-6bac-4813-b7a8-1a84c64f76d9",
+            "masterInstanceId": "c7c72907-4561-47f3-8584-9b1a5acd2ece",
+            "cn": [
+                {
+                    "type": "Ext.tab.Tab",
+                    "reference": {
+                        "name": "tabConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "TabConfig5",
+                    "designerId": "3125c215-bab1-45fa-993d-a9200a117351"
+                }
+            ]
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "name": "insurancecredit1",
+            "designerId": "7a308635-e0d7-492e-9b56-837bae1150a0",
+            "masterInstanceId": "08b5eae6-5edb-4052-b53e-b92bcafdea70",
+            "cn": [
+                {
+                    "type": "Ext.tab.Tab",
+                    "reference": {
+                        "name": "tabConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "TabConfig6",
+                    "designerId": "ee5f41c6-afd9-437b-b694-91cfe5f82326"
+                }
+            ]
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "name": "finaliseinvoice1",
+            "designerId": "8336871d-1712-4cd4-840d-1fe0a2021f27",
+            "masterInstanceId": "7444a8e9-e07b-4b17-a061-6f5a2a6f87a3",
+            "cn": [
+                {
+                    "type": "Ext.tab.Tab",
+                    "reference": {
+                        "name": "tabConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "TabConfig7",
+                    "designerId": "913c9e87-4c5d-4152-8d91-d02ffc010377"
+                }
+            ]
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Invoices"
+            },
+            "configAlternates": {
+                "title": "string"
+            },
+            "name": "invoicepanel",
+            "designerId": "cff3cce3-1bb0-414e-9c1f-3aa662e71b7e",
+            "masterInstanceId": "dbd43eb6-abb0-4b2a-9918-69d6db5fb70a",
+            "cn": [
+                {
+                    "type": "Ext.tab.Tab",
+                    "reference": {
+                        "name": "tabConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "TabConfig10",
+                    "designerId": "b27ff7e1-be56-43f2-b216-f10c34189e97"
+                }
+            ]
+        }
+    ]
+}

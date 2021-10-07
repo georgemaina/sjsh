@@ -1,0 +1,937 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "main",
+        "designer|userClassName": "Main",
+        "models": [
+            "OrdersTemplate",
+            "RequisitionModel",
+            "ItemsListModel",
+            "RequisitionsModel",
+            "OrdersModel",
+            "Suppliers"
+        ],
+        "stores": [
+            "OrdersTemplateStore",
+            "ItemsListStore",
+            "RequisitionStore",
+            "RequisitionsStore",
+            "OrdersStore",
+            "SupplierStore"
+        ],
+        "views": [
+            "OrdersTemplate",
+            "MainView",
+            "ItemsList",
+            "PendingRequisitions",
+            "RequisitionForm",
+            "OrdersList",
+            "ProcessOrder"
+        ]
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "models": "typedarray",
+        "stores": "typedarray",
+        "views": "typedarray"
+    },
+    "name": "MyController",
+    "designerId": "1822cd52-8d2a-4e70-bf98-b7ed52297176",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "orderstemplate",
+                "selector": "orderstemplate",
+                "xtype": "orderstemplate"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "orderstemplate",
+            "designerId": "37bcfb3e-5b31-4de0-bcb6-4886bc523b25"
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "application"
+                ],
+                "fn": "init",
+                "implHandler": [
+                    "this.control({",
+                    "    '#cmdSearchItems':{",
+                    "        click:this.searchItems",
+                    "    },",
+                    "    '#cmdUpdateUsage':{",
+                    "        click:this.updateUsage",
+                    "    },",
+                    "    '#cmdUpdateLevels':{",
+                    "        click:this.updateLevels",
+                    "    },",
+                    "    '#cmdCompleteOrder':{",
+                    "        click:this.completeOrders",
+                    "    },",
+                    "    '#cmdGetproductslist':{",
+                    "        click:this.openItemsList",
+                    "    },",
+                    "    '#itemList':{",
+                    "        itemdblclick:this.sendSelectedItem",
+                    "    },",
+                    "    '#cmdSaveOrder':{",
+                    "        click:this.saveOrder",
+                    "    },",
+                    "    '#printOrder':{",
+                    "        click:this.printOrder",
+                    "    },",
+                    "    '#cmdApprove':{",
+                    "        click:this.approveOrder",
+                    "    },",
+                    "    '#completeOrder':{",
+                    "        click:this.completeOrder",
+                    "    },",
+                    "    '#cmdUpdateOrder':{",
+                    "        click:this.updateQtyOrder",
+                    "    },",
+                    "    '#cmdExport':{",
+                    "        click:this.exportOrderTemp",
+                    "    },",
+                    "    '#cmdCompleteOrders':{",
+                    "        click:this.openCompleteOrderForm",
+                    "    },",
+                    "    '#cmdClose':{",
+                    "        click:this.closeWindow",
+                    "    },",
+                    "    '#cmdGenerateLPO':{",
+                    "        click:this.generateLPO",
+                    "    },",
+                    "    '#requisitionform':{",
+                    "        click:this.loadRequisition",
+                    "    }//,",
+                    "    //'#totals':{",
+                    "    //    blur:this.getTotals",
+                    "    //}",
+                    "});"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "init",
+            "designerId": "c4d0be96-c228-4550-8969-513009b75426"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "searchItems",
+                "implHandler": [
+                    "var stparams=this.getOrderstemplate().down('#txtSearchParams').getValue();",
+                    "",
+                    "var stOrders=Ext.data.StoreManager.lookup('OrdersTemplateStore');",
+                    "",
+                    "stOrders.load({",
+                    "    params:{",
+                    "        stparams:stparams",
+                    "    }",
+                    "});"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "searchItems",
+            "designerId": "85d77fbb-4db8-42b1-ba97-76e70e3f9a76"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "updateUsage",
+                "implHandler": [
+                    "Ext.Ajax.request({",
+                    "    url: 'data/getDataFunctions.php?task=updateUsage',",
+                    "    success: function(response){",
+                    "         var stOrders=Ext.data.StoreManager.lookup('OrdersTemplateStore');",
+                    "         stOrders.load({});",
+                    "",
+                    "    }",
+                    "});",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "updateUsage",
+            "designerId": "253d8075-7aff-432a-91f8-1605234932c3"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "updateLevels",
+                "implHandler": [
+                    "        Ext.Ajax.request({",
+                    "             url: 'data/getDataFunctions.php?task=updateLevels',",
+                    "            success: function(response){",
+                    "                  var stOrders=Ext.data.StoreManager.lookup('OrdersTemplateStore');",
+                    "                  stOrders.load({});",
+                    "            },",
+                    "            failure: function(response, opts) {",
+                    "                console.log('server-side failure with status code ' + response.status);",
+                    "                Ext.Msg.alert(\"Error:\",\"Uable to update Levels\");",
+                    "            }",
+                    "        });",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "updateLevels",
+            "designerId": "ec16be86-6ce5-4c14-b4f8-8aee50e61ff0"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "completeOrders",
+                "implHandler": [
+                    "Ext.Ajax.request({",
+                    "    url: 'data/getDataFunctions.php?task=completeOrders',",
+                    "    success: function(response){",
+                    "        var stOrders=Ext.data.StoreManager.lookup('OrdersTemplateStore');",
+                    "        stOrders.load({});",
+                    "    },",
+                    "    failure: function(response, opts) {",
+                    "        console.log('server-side failure with status code ' + response.status);",
+                    "        Ext.Msg.alert(\"Error:\",\"Uable to make Order Completion\");",
+                    "    }",
+                    "});",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "completeOrders",
+            "designerId": "0643f099-0fa5-437d-b3ec-beeb921db3ec"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "openItemsList",
+                "implHandler": [
+                    "var itemsList= Ext.create('Requisition.view.ItemsList', {});",
+                    "var itemsWin=Ext.create('Ext.window.Window', {",
+                    "    title: 'Items List',",
+                    "    resizable:true,",
+                    "    animCollapse: true,",
+                    "    collapsible: true,",
+                    "    tools: [",
+                    "    {",
+                    "        xtype: 'tool',",
+                    "        type: 'minimize'",
+                    "    },",
+                    "    {",
+                    "        xtype: 'tool',",
+                    "        type: 'maximize'",
+                    "    }",
+                    "    ]",
+                    "});",
+                    "",
+                    "itemsWin.add(itemsList);",
+                    "itemsWin.show();"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "openItemsList",
+            "designerId": "4638f783-981b-4956-ad2a-d08b36d3e9ac"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "gridpanel",
+                    "record",
+                    "item",
+                    "index",
+                    "e",
+                    "eOpts"
+                ],
+                "fn": "sendSelectedItem",
+                "implHandler": [
+                    "//Ext.Msg.alert('Test',record.get('StockID'));",
+                    "",
+                    "var store =Ext.data.StoreManager.lookup('ItemsListStore');",
+                    "var store1 =Ext.data.StoreManager.lookup('RequisitionStore');",
+                    "store.remove(record);",
+                    "store1.add(record);"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "sendSelectedItem",
+            "designerId": "23d0b08b-2f62-45d3-bb89-8f116f4a6cda"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "itemslist",
+                "selector": "itemslist",
+                "xtype": "itemslist"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "itemslist",
+            "designerId": "cb66c6f6-dca0-42a6-a612-6d183a2f8ac0"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "requisitionform",
+                "selector": "requisitionform",
+                "xtype": "requisitionform"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "requisitionform",
+            "designerId": "0b885389-8441-4f92-b46d-205cc17eb556"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "saveOrder",
+                "implHandler": [
+                    "var reqStore =Ext.data.StoreManager.lookup('RequisitionStore');",
+                    "var orderRecord = reqStore.getRange();",
+                    "",
+                    "var reqNo=this.getRequisitionform().down('#requisitionNo').getValue();",
+                    "var reqDate=this.getRequisitionform().down('#requisitionDate').getValue();",
+                    "",
+                    "var gridData = Array();",
+                    "",
+                    "Ext.each(orderRecord, function (record) {",
+                    "    gridData.push(record.data);",
+                    "});",
+                    "",
+                    "Ext.Ajax.request({",
+                    "    url: 'data/getDataFunctions.php?task=saveOrders',",
+                    "    params: {",
+                    "        reqDate:reqDate,",
+                    "        reqNo:reqNo,",
+                    "        gridData: Ext.util.JSON.encode(gridData)",
+                    "    },",
+                    "    success: function(response, opts) {",
+                    "         var obj = Ext.decode(response.responseText);",
+                    "         console.dir(obj);",
+                    "         Ext.Msg.alert(\"Success:\",\"Successfully saved requisition\");",
+                    "         reqStore.removeAll();",
+                    "        button.up('form').getForm().reset();",
+                    "     },",
+                    "",
+                    "     failure: function(response, opts) {",
+                    "         console.log('server-side failure with status code ' + response.status);",
+                    "         Ext.Msg.alert(\"Error:\",\"Uable to save the Requisition\");",
+                    "     }",
+                    "    ",
+                    "});"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "saveOrder",
+            "designerId": "2a651d7f-d6c8-4223-89b5-ed3da11b81a8"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "pendingrequisitions",
+                "selector": "pendingrequisitions",
+                "xtype": "pendingrequisitions"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "pendingrequisitions",
+            "designerId": "9a629f4f-b033-4aea-a68f-703869d53bf8"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "orderslist",
+                "selector": "orderslist",
+                "xtype": "orderslist"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "orderslist",
+            "designerId": "799057c5-64f9-4d1f-b739-08cd089130e7"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "printOrder",
+                "implHandler": [
+                    "var grid = button.up('grid');",
+                    "if (grid.getSelectionModel().hasSelection()) {",
+                    "    var row = grid.getSelectionModel().getSelection()[0];",
+                    "",
+                    "    //         Ext.Msg.alert(\"Button clicked\", \"Hey! \" + row.get('RequisitionNo'));",
+                    "",
+                    "    reqNo=row.get('RequisitionNo');",
+                    "",
+                    "    window.open('reports/Requisition.php?reqNo='+reqNo,\"Requisition Order\",",
+                    "                \"menubar=yes,toolbar=yes,width=500,height=550,location=yes,resizable=no,scrollbars=yes,status=yes\");",
+                    "}",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "printOrder",
+            "designerId": "5f8b5fd0-0ec7-4239-81b2-dd35e517db48"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "approveOrder",
+                "implHandler": [
+                    "Ext.Ajax.request({",
+                    "    url: 'data/getDataFunctions.php?task=approveOrder',",
+                    "    params: {",
+                    "    reqNo:reqNo",
+                    "    },",
+                    "    success: function(response, opts) {",
+                    "       Ext.Msg.alert(\"Success:\",\"Approved Requisition Successfully\");",
+                    "    },",
+                    "",
+                    "    failure: function(response, opts) {",
+                    "        console.log('server-side failure with status code ' + response.status);",
+                    "        Ext.Msg.alert(\"Error:\",\"Uable to Approve the Requisition\");",
+                    "    }",
+                    "});"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "approveOrder",
+            "designerId": "91d75f9d-120c-4eac-8464-fd45b36a9294"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "completeOrder",
+                "implHandler": [
+                    "var grid = button.up('grid');",
+                    "if (grid.getSelectionModel().hasSelection()) {",
+                    "    var row = grid.getSelectionModel().getSelection()[0];",
+                    "    reqNo=row.get('RequisitionNo');",
+                    "",
+                    "    var processOrder=Ext.create('Requisition.view.ProcessOrder', {});",
+                    "    var processWin=Ext.create('Ext.window.Window', {",
+                    "        title: 'Precess Requisition and Create LPO',",
+                    "        resizable:false",
+                    "    });",
+                    "",
+                    "    processWin.add(processOrder);",
+                    "    processWin.show();",
+                    "}"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "completeOrder",
+            "designerId": "5f52b8fc-dade-4a9f-a561-93e1ced66f7a"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "processorder",
+                "selector": "processorder",
+                "xtype": "processorder"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "processorder",
+            "designerId": "c55171a7-ec48-451b-88fa-6a28a0f8e4bd"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "updateOrder",
+                "implHandler": [
+                    "var ordersTempStore =Ext.data.StoreManager.lookup('OrdersTemplateStore');",
+                    "var orderRecord = ordersTempStore.getRange();",
+                    "",
+                    "",
+                    "var gridData = Array();",
+                    "",
+                    "Ext.each(orderRecord, function (record) {",
+                    "    gridData.push(record.data);",
+                    "});",
+                    "",
+                    "Ext.Ajax.request({",
+                    "    url: 'data/getDataFunctions.php?task=updateOrdersTemp',",
+                    "    params: {",
+                    "        gridData: Ext.util.JSON.encode(gridData)",
+                    "    },",
+                    "    success: function(response, opts) {",
+                    "         var obj = Ext.decode(response.responseText);",
+                    "         console.dir(obj);",
+                    "         reqStore.removeAll();",
+                    "         button.up('form').getForm().reset();",
+                    "     },",
+                    "",
+                    "     failure: function(response, opts) {",
+                    "         console.log('server-side failure with status code ' + response.status);",
+                    "         Ext.Msg.alert(\"Error:\",\"Uable to save the Requisition\");",
+                    "     }",
+                    "});"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "updateOrder",
+            "designerId": "dd0b8e3b-15a6-4e6c-afaa-c7b7385dfe4c"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "updateQtyOrder",
+                "implHandler": [
+                    "Ext.Ajax.request({",
+                    "    url: 'data/getDataFunctions.php?task=updateQtyToOrder',",
+                    "        success: function(response, opts) {",
+                    "        Ext.Msg.alert(\"Success\",\"Successfully updated Quantities\");",
+                    "    },",
+                    "",
+                    "    failure: function(response, opts) {",
+                    "        console.log('server-side failure with status code ' + response.status);",
+                    "        Ext.Msg.alert(\"Error:\",\"Uable to save the Requisition\");",
+                    "    }",
+                    "});"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "updateQtyOrder",
+            "designerId": "15f54c06-ca40-4209-afb7-5dc7e866bc19"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "exportOrderTemp",
+                "implHandler": [
+                    "",
+                    "        window.open('reports/OrdersTemplate.php',\"Orders Template\",\"menubar=yes,toolbar=yes,width=500,height=550,location=yes,resizable=no,\\n\\",
+                    "        scrollbars=yes,status=yes\");"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "exportOrderTemp",
+            "designerId": "1b81e395-ebcd-4277-b14e-7a2e7cc48010"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "openCompleteOrderForm",
+                "implHandler": [
+                    "var completeOrder=Ext.create('Requisition.view.CompleteRequisition', {});",
+                    "var processWin=Ext.create('Ext.window.Window', {",
+                    "    title: 'Complete Order and Generate LPO',",
+                    "    resizable:false",
+                    "});",
+                    "",
+                    "processWin.add(completeOrder);",
+                    "processWin.show();"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "openCompleteOrderForm",
+            "designerId": "21e2a427-b668-460c-abd1-6222047df4a1"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "closeWindow",
+                "implHandler": [
+                    "      var win=button.up('window');",
+                    "      win.destroy();"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "closeWindow",
+            "designerId": "3cff3f35-fb91-40ef-95ab-a85448d5cd34"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "generateLPO",
+                "implHandler": [
+                    "Ext.Ajax.request({",
+                    "    url: 'data/getDataFunctions.php?task=generateLPO',",
+                    "    success: function(response, opts) {",
+                    "        Ext.Msg.alert(\"Success\",\"Successfully generated the LPO, Go to accounting and Print the LPO\");",
+                    "    },",
+                    "",
+                    "    failure: function(response, opts) {",
+                    "        console.log('server-side failure with status code ' + response.status);",
+                    "        Ext.Msg.alert(\"Error:\",\"Uable to generate LPO\");",
+                    "    }",
+                    "});"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "generateLPO",
+            "designerId": "db589748-f44d-4d8a-82d4-74cfdc0cf7a3"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "id,cb"
+                ],
+                "fn": "loadRequisition",
+                "implHandler": [
+                    "var transNo,transDate;",
+                    "",
+                    "Ext.Ajax.request({",
+                    "    url: 'data/getDataFunctions.php?task=GetTransNos',",
+                    "    params:{",
+                    "        transType:\"7\"",
+                    "    },",
+                    "    success: function(response, opts) {",
+                    "        var obj = Ext.decode(response.responseText);",
+                    "        transNo=obj.transNo;",
+                    "        transDate='24-04-2017';",
+                    "        Ext.getCmp('requisitionNo').setValue(transNo);",
+                    "        Ext.getCmp('requisitionDate').setValue(new Date());",
+                    "    },",
+                    "    failure: function(response, opts) {",
+                    "        console.log('server-side failure with status code ' + response.status);",
+                    "        Ext.Msg.alert(\"Error:\",\"Uable to generate LPO\");",
+                    "    },",
+                    "    scope : this",
+                    "",
+                    "});",
+                    "//this.getRequisitionform().down('#requisitionNo').setValue(\"transNo \"+transNo);"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "loadRequisition",
+            "designerId": "5c83092c-31fb-4de1-a53b-e25aa21789f3"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "field, e , eOpts"
+                ],
+                "fn": "getTotals",
+                "implHandler": [
+                    "var grid=this.getRequisitionform().down('#itemslist');",
+                    "//var totals=this.getColumnTotal(grid,6);",
+                    "",
+                    "var total=0;",
+                    "// grid.getStore().each(function(record) {",
+                    "//    total+=record.get('Price');",
+                    "// });",
+                    "",
+                    "for (var i = 0; i < grid.getStore().data.length; i++) { ",
+                    "    var record = grid.getStore().getAt(i); ",
+                    "        total+=record.data.Total;",
+                    "}",
+                    "",
+                    "",
+                    "this.getRequisitionform().down('#totals').setValue(total);"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "getTotals",
+            "designerId": "42ddfbbf-7058-4808-8ce0-3cb9152b6376"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "grid",
+                    "columnIndex"
+                ],
+                "fn": "getColumnTotal",
+                "implHandler": [
+                    "        var total = 0,",
+                    "            col,",
+                    "            colArray = grid.view.getColumnData();",
+                    "",
+                    "        for (var rowIndex = 0, rowCount = grid.store.getCount(); rowIndex < rowCount; rowIndex++) {",
+                    "            var row = grid.store.getAt(rowIndex);",
+                    "            col = colArray[columnIndex];",
+                    "            total += row.get(col.name);",
+                    "        }",
+                    "        return total;"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "getColumnTotal",
+            "designerId": "9e0d62ba-2df2-4d92-85d0-04913f16bb78"
+        }
+    ]
+}

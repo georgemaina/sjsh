@@ -1,0 +1,312 @@
+{
+    "type": "Ext.grid.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "columnLines": true,
+        "designer|userAlias": "itemslist",
+        "designer|userClassName": "ItemsList",
+        "height": 489,
+        "itemId": "itemList",
+        "minWidth": 500,
+        "store": "ItemsListStore",
+        "title": null,
+        "width": 659
+    },
+    "configAlternates": {
+        "columnLines": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "itemId": "string",
+        "store": "store",
+        "title": "string",
+        "width": "auto",
+        "minWidth": "number"
+    },
+    "name": "MyGridPanel",
+    "designerId": "f512db2d-721b-45ac-a191-fba21cfc3dac",
+    "viewControllerInstanceId": "d0a8dee8-1930-4e60-8bd4-4bf968f226c5",
+    "viewModelInstanceId": "c6df85ee-5386-4643-a482-b47032f4f14a",
+    "cn": [
+        {
+            "type": "Ext.view.Table",
+            "reference": {
+                "name": "viewConfig",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyTable1",
+            "designerId": "cc748b1b-421f-4f21-8afa-3c324858bf6b"
+        },
+        {
+            "type": "Ext.toolbar.Paging",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "displayInfo": true,
+                "dock": "bottom",
+                "store": "ItemsListStore",
+                "width": 360
+            },
+            "configAlternates": {
+                "displayInfo": "boolean",
+                "dock": "string",
+                "store": "store",
+                "width": "auto"
+            },
+            "name": "MyPagingToolbar1",
+            "designerId": "18ed4f20-22af-4dd5-b40a-00e0b12cc439"
+        },
+        {
+            "type": "Ext.form.FieldContainer",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|snapToGrid": 5,
+                "dock": "top",
+                "fieldLabel": null,
+                "height": 48,
+                "layout": "absolute",
+                "width": 100
+            },
+            "configAlternates": {
+                "designer|snapToGrid": "number",
+                "dock": "string",
+                "fieldLabel": "string",
+                "height": "auto",
+                "layout": "string",
+                "width": "auto"
+            },
+            "name": "MyFieldContainer1",
+            "designerId": "3c44fe5d-1e65-46fe-90c4-8404078cb9ca",
+            "cn": [
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "cmdSearchList",
+                        "layout|x": 225,
+                        "layout|y": 10,
+                        "text": "Search",
+                        "width": 95
+                    },
+                    "configAlternates": {
+                        "itemId": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "text": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyButton4",
+                    "designerId": "8421f19c-15f0-4204-9fcf-ec7705eb52a3"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": null,
+                        "layout|x": 0,
+                        "layout|y": 10,
+                        "width": 225
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "width": "auto"
+                    },
+                    "name": "MyTextField9",
+                    "designerId": "07731b47-e644-4ca4-a382-ba454ecff498"
+                }
+            ]
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "StockID",
+                "text": "Stock Id"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string"
+            },
+            "name": "MyColumn1",
+            "designerId": "523683fb-4a0f-4057-9dea-9d54bdca61d1"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "Description",
+                "text": "Description",
+                "width": 187
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "width": "auto"
+            },
+            "name": "MyColumn41",
+            "designerId": "3ec4d1d5-3fb1-4808-aa32-4ee9dc9d0835",
+            "cn": [
+                {
+                    "type": "Ext.grid.filters.filter.String",
+                    "reference": {
+                        "name": "filter",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "emptyText": "Search for........"
+                    },
+                    "configAlternates": {
+                        "emptyText": "string"
+                    },
+                    "name": "MyStringFilter",
+                    "designerId": "e6ef8de8-3a56-45e9-a1cd-8e7c70448da6"
+                }
+            ]
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "Category",
+                "text": "Category",
+                "width": 148
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "width": "auto"
+            },
+            "name": "MyColumn42",
+            "designerId": "a93aa190-90cf-4e70-8e63-bdee0bc83422",
+            "cn": [
+                {
+                    "type": "Ext.grid.filters.filter.List",
+                    "reference": {
+                        "name": "filter",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyListFilter",
+                    "designerId": "ca89b2f7-c00f-414f-967a-64bf41f09bdc"
+                }
+            ]
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "UnitQty",
+                "text": "Unit Qty"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string"
+            },
+            "name": "MyColumn43",
+            "designerId": "15230e7f-ad08-4119-90be-db75ae289bcb"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "Price",
+                "text": "Price"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string"
+            },
+            "name": "MyColumn44",
+            "designerId": "e731df34-8f9d-4c9b-81ab-0b77958d4eaa"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "Quantity",
+                "text": "Quantity"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string"
+            },
+            "name": "MyColumn36",
+            "designerId": "da489c59-f4cd-4dcd-ba70-5e2c323286cc"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "Total",
+                "text": "Total"
+            },
+            "configAlternates": {
+                "text": "string",
+                "dataIndex": "datafield"
+            },
+            "name": "MyColumn37",
+            "designerId": "5f8b7f33-82a4-48b8-8d4e-8d72190992c9"
+        },
+        {
+            "type": "Ext.grid.filters.Filters",
+            "reference": {
+                "name": "plugins",
+                "type": "array"
+            },
+            "codeClass": null,
+            "name": "MyGridFiltersPlugin",
+            "designerId": "48535af3-6a41-4254-968a-1aa7190f2252"
+        }
+    ]
+}

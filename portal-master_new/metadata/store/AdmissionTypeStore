@@ -1,0 +1,37 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "data": [
+            "[",
+            "{",
+            "\"ID\": \"1\",",
+            "\"Name\": \"Inpatient\"",
+            "},",
+            "{",
+            "\"ID\": \"2\",",
+            "\"Name\": \"Outpatient\"",
+            "},",
+            "",
+            "]"
+        ],
+        "designer|userAlias": "admissiontypestore",
+        "designer|userClassName": "AdmissionTypeStore",
+        "model": "AdmissionTypes",
+        "storeId": "AdmissionTypeStore"
+    },
+    "configAlternates": {
+        "autoLoad": "boolean",
+        "data": "array",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string"
+    },
+    "designerId": "f55c0180-dd3f-4084-ba8f-72f1aa92728f"
+}

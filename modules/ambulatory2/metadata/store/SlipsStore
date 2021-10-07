@@ -1,0 +1,54 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "clearOnPageLoad": false,
+        "clearRemovedOnLoad": false,
+        "designer|userAlias": "slipsstore",
+        "designer|userClassName": "SlipsStore",
+        "leadingBufferZone": null,
+        "model": "SlipsModel",
+        "pageSize": 200,
+        "purgePageCount": null,
+        "remoteFilter": null,
+        "storeId": "SlipsStore",
+        "trailingBufferZone": null
+    },
+    "name": "MyJsonStore",
+    "designerId": "3694e1d4-8519-49e4-8b0b-ff63eb2e27f5",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "data/getOpData.php?task=getSlips"
+            },
+            "name": "MyAjaxProxy",
+            "designerId": "8e5f00dc-c71f-42fd-9450-a9156c82ea06",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "slips"
+                    },
+                    "name": "MyJsonReader",
+                    "designerId": "1fdc5cae-b38c-4f8b-b9c0-21250eb069e9"
+                }
+            ]
+        }
+    ]
+}

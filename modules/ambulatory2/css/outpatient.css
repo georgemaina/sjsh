@@ -1,0 +1,186 @@
+/*************** CSS For HIV Care Enrollment Form *******************************/
+body{ 
+    background-color: #FFFFFF;
+    border-top:0;
+    font-family:Arial, Helvetica, sans-serif; font-size:13px;
+}
+.main{
+    width: 100%;
+
+}
+select{ 
+    font-size:10px;
+}
+
+input{ font-size:10px;
+       background-color:#FFFFCC;
+}
+
+.font_small {
+    font-size: 9px;
+}
+
+.font_bold { font-weight:bold; 
+             font-size:12px;
+}
+
+.section{
+    border:1px solid #000000;
+    padding:2px 1px 1px 3px;
+    min-height:200px;
+}
+
+.headerBox{
+    position: fixed;
+    left: 0px;
+    top: 1px;
+    width: 100%;
+    min-height: 30px;
+    background-color: #99ccff;
+    margin-top: 1px;
+}
+.spacer{
+    min-height:3px;
+}
+.headerText{
+    float:left;
+    width: 20%;
+    text-align: left;
+    font-family: Arial,Helvetica,sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    margin-left: 10px;
+    color: #000066;
+}
+
+.headerButtons{
+    float:right;
+}
+
+.mainContainer{
+    position: fixed;
+    min-height:120px;
+    width: 100%;
+    top:35px;
+    background-color: #edeaea;
+    margin-top: 2px;
+    border: solid #8BA0BD 1px;
+}
+
+.selectBox{
+    min-width: 50%;
+    background-color:#CFCFCF;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    font-style: normal;
+    color: #660000;
+    padding: 5px;
+    min-height: 20px;
+    border-bottom: solid #3d3d3d 1px;
+    
+}
+
+/********************* Section One *******************************/
+.departments{
+    float:left;
+    min-height:115px;
+}
+
+.departments_left{
+    width:50%;
+    float:left;
+    min-height:40px;
+}
+
+
+.Section1{
+    width: 100%;
+    border-bottom: solid #8BA0BD 1px;
+    min-height: 24px;
+    padding: 1px;
+}
+
+.box1{
+    float: left;
+    border-right: solid #8BA0BD 1px;
+    width: 30px;
+    min-height: 25px;
+    text-align: center;
+}
+
+.box2{
+    float: left;
+    border-right: solid #8BA0BD 1px;
+    width:300px;
+    min-height: 25px;
+    text-align: left;
+    font-style: normal; 
+    font-family: Arial,Helvetica,sans-serif;
+    font-weight: bold;
+    color: #05051b;
+}
+
+a.link{
+    color: #002070;
+}
+
+.ptResults{
+
+    height:500px;
+    min-width: 80%;
+    overflow: scroll;
+   
+}
+.trColor{
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 11px;
+    color: #000033;
+}
+
+.navBar{
+    background-color: #CFCFCF;
+    border: solid #8BA0BD 1px;
+    min-width: 80%;
+    height: 25px;
+    text-align: center;
+
+}
+
+table.data {
+background-color:#fff;
+color:#213243;
+}
+.data th {background-color:gray;
+         color:#ffffff}
+.pagingDiv {
+    width:270px;
+    height:20px
+}  
+.pNo {
+     float:left;
+     width:30px;
+     margin-left:3px;
+     margin-right:3px;
+     border:0px solid gray;
+}
+.pNo a {
+    text-decoration:none;
+}
+.gridHeading{
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    color: #000033;
+    font-weight: bold;
+}
+
+.option1{
+   float:left;
+}
+
+.option2{
+   float:left;
+   text-align: left;
+   padding-left: 4px;
+}

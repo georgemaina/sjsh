@@ -1,0 +1,157 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "bodyPadding": 10,
+        "designer|snapToGrid": 5,
+        "designer|userAlias": "patientdetails",
+        "designer|userClassName": "PatientDetails",
+        "frame": true,
+        "height": 132,
+        "layout": "absolute",
+        "title": "",
+        "width": 750
+    },
+    "configAlternates": {
+        "bodyPadding": "auto",
+        "designer|snapToGrid": "number",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "frame": "boolean",
+        "height": "auto",
+        "layout": "string",
+        "title": "string",
+        "width": "auto"
+    },
+    "designerId": "93e967e2-1701-4983-b64a-c75afb72cb68",
+    "cn": [
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "PID",
+                "labelAlign": "right",
+                "layout|x": 20,
+                "layout|y": 10,
+                "name": "pid"
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "labelAlign": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "name": "string"
+            },
+            "name": "MyTextField140",
+            "designerId": "573c83e9-cba0-495e-adc4-d027ce84e9cd"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Procedure Type",
+                "labelAlign": "right",
+                "layout|x": 315,
+                "layout|y": 40,
+                "name": "procedure_type",
+                "width": 365
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "labelAlign": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "name": "string",
+                "width": "auto"
+            },
+            "name": "MyTextField141",
+            "designerId": "34eaef1e-47e0-47ae-b72d-4b72fac356b8"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Booking No",
+                "labelAlign": "right",
+                "layout|x": 310,
+                "layout|y": 10,
+                "name": "BookingNo"
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "labelAlign": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "name": "string"
+            },
+            "name": "MyTextField142",
+            "designerId": "d5025607-a2d0-4e5a-8df4-904962ca6284"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Encounter No",
+                "labelAlign": "right",
+                "layout|x": 20,
+                "layout|y": 40,
+                "name": "encounter_nr"
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "labelAlign": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "name": "string"
+            },
+            "name": "MyTextField143",
+            "designerId": "ef00f1c1-2a4c-4b31-9ab2-ae826a8dc340"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Patient Names",
+                "labelAlign": "right",
+                "layout|x": 20,
+                "layout|y": 70,
+                "name": "pnames",
+                "width": 355
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "labelAlign": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "name": "string",
+                "width": "auto"
+            },
+            "name": "MyTextField144",
+            "designerId": "7996fb62-d102-4dab-a682-f20074683382"
+        }
+    ]
+}

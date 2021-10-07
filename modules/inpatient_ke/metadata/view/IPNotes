@@ -1,0 +1,613 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|align": "stretch",
+        "container|padding": "5 5 0 5",
+        "designer|uiInterfaceName": "default-framed",
+        "designer|userAlias": "ipnotes",
+        "designer|userClassName": "IPNotes",
+        "frame": true,
+        "height": 575,
+        "layout": "hbox",
+        "url": "../../data/getDataFunctions.php?task=saveNotes",
+        "width": 1017
+    },
+    "configAlternates": {
+        "bodyPadding": "auto",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "title": "string",
+        "width": "auto",
+        "container|align": "string",
+        "designer|uiInterfaceName": "string",
+        "frame": "boolean",
+        "layout": "string",
+        "container|padding": "auto",
+        "url": "string"
+    },
+    "name": "MyForm3",
+    "designerId": "ab6c15e3-c76b-4127-9cf1-3b86ea03fd20",
+    "viewControllerInstanceId": "1f8eb99b-e7a2-4fee-8aa1-959587202dca",
+    "viewModelInstanceId": "9321c7cc-cdf0-47da-b0e3-76b2f6c12476",
+    "cn": [
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|snapToGrid": 5,
+                "dock": "top",
+                "height": 94,
+                "layout": "absolute",
+                "layout|flex": 1,
+                "padding": 0
+            },
+            "configAlternates": {
+                "designer|snapToGrid": "number",
+                "dock": "string",
+                "height": "auto",
+                "layout": "string",
+                "layout|flex": "number",
+                "padding": "auto"
+            },
+            "name": "MyFieldSet13",
+            "designerId": "db519ce8-53c9-45bf-826a-d380f06380c9",
+            "cn": [
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "name": "patientdetails1",
+                    "designerId": "4627d927-86a7-4506-9f18-a3176d21256a",
+                    "masterInstanceId": "59198028-f230-40f4-9404-6ef9ffcd6d5e"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "frame": true,
+                "height": 300
+            },
+            "configAlternates": {
+                "height": "auto",
+                "frame": "boolean"
+            },
+            "name": "MyFieldSet12",
+            "designerId": "38b3f9dd-6e52-4f7f-bb13-da5c4cb3310a",
+            "cn": [
+                {
+                    "type": "Ext.form.RadioGroup",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "stretch",
+                        "layout": "vbox",
+                        "width": 217
+                    },
+                    "configAlternates": {
+                        "container|align": "string",
+                        "layout": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyRadioGroup2",
+                    "designerId": "4719b821-ca33-402d-aa5d-a0c0c98b4bac",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Radio",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "Admission Notes",
+                                "fieldLabel": null,
+                                "inputValue": "24",
+                                "itemId": "AdmissionNotes",
+                                "labelStyle": "color:green; font-weight:bold;",
+                                "layout|flex": 1,
+                                "name": "notesType"
+                            },
+                            "configAlternates": {
+                                "boxLabel": "string",
+                                "fieldLabel": "string",
+                                "layout|flex": "number",
+                                "inputValue": "string",
+                                "name": "string",
+                                "itemId": "string",
+                                "labelStyle": "string"
+                            },
+                            "name": "MyRadio13",
+                            "designerId": "bfb734c4-302a-4488-9781-1f575b7b7f7c"
+                        },
+                        {
+                            "type": "Ext.form.field.Radio",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "Nurses daily Notes",
+                                "fieldLabel": null,
+                                "inputValue": "25",
+                                "itemId": "NursesNotes",
+                                "name": "notesType"
+                            },
+                            "configAlternates": {
+                                "boxLabel": "string",
+                                "fieldLabel": "string",
+                                "inputValue": "string",
+                                "name": "string",
+                                "itemId": "string"
+                            },
+                            "name": "MyRadio7",
+                            "designerId": "75677c90-bec6-49dd-b2cf-e633e2c1de28"
+                        },
+                        {
+                            "type": "Ext.form.field.Radio",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "Doctors Daily Notes",
+                                "fieldLabel": null,
+                                "inputValue": "26",
+                                "name": "notesType"
+                            },
+                            "configAlternates": {
+                                "boxLabel": "string",
+                                "fieldLabel": "string",
+                                "inputValue": "string",
+                                "name": "string"
+                            },
+                            "name": "MyRadio8",
+                            "designerId": "43a8508b-f43e-4927-98d4-7ae1f1d26b05"
+                        },
+                        {
+                            "type": "Ext.form.field.Radio",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "Discharge Summary",
+                                "fieldLabel": null,
+                                "inputValue": "3",
+                                "name": "notesType"
+                            },
+                            "configAlternates": {
+                                "boxLabel": "string",
+                                "fieldLabel": "string",
+                                "inputValue": "string",
+                                "name": "string"
+                            },
+                            "name": "MyRadio9",
+                            "designerId": "925d51b7-c057-402a-a01e-3f3bd315b232"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "frame": true,
+                "height": 217,
+                "padding": 0,
+                "width": 637
+            },
+            "configAlternates": {
+                "frame": "boolean",
+                "height": "auto",
+                "padding": "auto",
+                "width": "auto"
+            },
+            "name": "MyContainer4",
+            "designerId": "6dbc3658-7556-43c3-8f68-668e5275ab8f",
+            "cn": [
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "stretch",
+                        "height": 207,
+                        "layout": "vbox",
+                        "width": 761
+                    },
+                    "configAlternates": {
+                        "container|align": "string",
+                        "height": "auto",
+                        "layout": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyFieldSet16",
+                    "designerId": "4b7cbc4c-081a-4987-bc00-547d337642e5",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.HtmlEditor",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "name": "notes",
+                                "padding": 0,
+                                "scrollable": "both",
+                                "width": 647
+                            },
+                            "configAlternates": {
+                                "height": "auto",
+                                "layout|anchor": "string",
+                                "scrollable": "auto",
+                                "name": "string",
+                                "width": "auto",
+                                "padding": "auto"
+                            },
+                            "name": "MyHtmlEditor",
+                            "designerId": "f0b9102d-e56f-4220-b8db-4ef080c8fee8"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "columnLines": true,
+                        "designer|uiInterfaceName": "default-framed",
+                        "frame": true,
+                        "height": 195,
+                        "store": "NotesStore",
+                        "width": 754
+                    },
+                    "configAlternates": {
+                        "columnLines": "boolean",
+                        "designer|uiInterfaceName": "string",
+                        "frame": "boolean",
+                        "height": "auto",
+                        "store": "store",
+                        "width": "auto"
+                    },
+                    "name": "MyGridPanel3",
+                    "designerId": "658de5e5-6f39-4861-b537-4f8c7a8ee30b",
+                    "cn": [
+                        {
+                            "type": "Ext.view.Table",
+                            "reference": {
+                                "name": "viewConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "MyTable6",
+                            "designerId": "fb541e10-3613-4cf0-b647-0bed25a3df87"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "CreateTime",
+                                "text": "Create Time",
+                                "width": 167
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyColumn78",
+                            "designerId": "cac0bbff-8584-4420-9798-c4ac7799d47e"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "NotesType",
+                                "text": "Notes Type",
+                                "width": 127
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyColumn79",
+                            "designerId": "2195b9a5-acc2-4047-8cb6-fb9f01bda247"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "Notes",
+                                "text": "Notes",
+                                "width": 302
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyColumn80",
+                            "designerId": "3b6b3170-2598-421a-be40-e33b28637be5"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "TreatedBy",
+                                "text": "Treated By"
+                            },
+                            "configAlternates": {
+                                "dataIndex": "datafield",
+                                "text": "string"
+                            },
+                            "name": "MyColumn81",
+                            "designerId": "c503a4d9-e2c7-48a7-94b9-b66eb5b33070"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|snapToGrid": 5,
+                "dock": "bottom",
+                "frame": true,
+                "height": 56,
+                "layout": "absolute",
+                "layout|flex": 1,
+                "margin": "0 0 0 0",
+                "padding": 0
+            },
+            "configAlternates": {
+                "dock": "string",
+                "height": "auto",
+                "layout|flex": "number",
+                "designer|snapToGrid": "number",
+                "frame": "boolean",
+                "layout": "string",
+                "margin": "auto",
+                "padding": "auto"
+            },
+            "name": "MyFieldSet11",
+            "designerId": "450eac0f-1b93-4320-a5d5-c703e3528b0e",
+            "cn": [
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 35,
+                        "iconCls": "x-fa fa-share-square-o",
+                        "itemId": "cmdNursesNotes",
+                        "layout|x": 405,
+                        "layout|y": 5,
+                        "text": "Nurses Notes",
+                        "width": 135
+                    },
+                    "configAlternates": {
+                        "height": "auto",
+                        "iconCls": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "text": "string",
+                        "width": "auto",
+                        "itemId": "string"
+                    },
+                    "name": "MyButton26",
+                    "designerId": "8f39cbc0-7bb8-4001-b9d5-57c9bb17e9b4"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 35,
+                        "iconCls": "x-fa fa-share-square-o",
+                        "itemId": "cmdDoctorsNotes",
+                        "layout|x": 250,
+                        "layout|y": 5,
+                        "text": "Doctors Notes",
+                        "width": 135
+                    },
+                    "configAlternates": {
+                        "height": "auto",
+                        "iconCls": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "text": "string",
+                        "width": "auto",
+                        "itemId": "string"
+                    },
+                    "name": "MyButton32",
+                    "designerId": "5d85d9a1-48ec-4292-a743-8fa78253fe9d"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 35,
+                        "iconCls": "x-fa fa-save",
+                        "itemId": "cmdSaveNotes",
+                        "layout|x": 575,
+                        "layout|y": 5,
+                        "text": "Save",
+                        "width": 135
+                    },
+                    "configAlternates": {
+                        "height": "auto",
+                        "iconCls": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "text": "string",
+                        "width": "auto",
+                        "itemId": "string"
+                    },
+                    "name": "MyButton31",
+                    "designerId": "8978efe4-233a-4097-8511-a4f8379ebacb"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 35,
+                        "iconCls": "x-fa fa-close",
+                        "itemId": "cmdClose",
+                        "layout|x": 740,
+                        "layout|y": 5,
+                        "text": "Close",
+                        "width": 135
+                    },
+                    "configAlternates": {
+                        "height": "auto",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "text": "string",
+                        "width": "auto",
+                        "iconCls": "string",
+                        "itemId": "string"
+                    },
+                    "name": "MyButton30",
+                    "designerId": "ff96e965-987d-4f9e-8d0e-ad29ce6f7159"
+                },
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Notes Entered By",
+                        "itemId": "inputBy",
+                        "labelStyle": "color:maroon; font-weight:bold;",
+                        "labelWidth": 120,
+                        "layout|x": 15,
+                        "layout|y": -5,
+                        "name": "inputBy",
+                        "value": "",
+                        "width": 255
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "itemId": "string",
+                        "labelWidth": "number",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "name": "string",
+                        "value": "string",
+                        "width": "auto",
+                        "labelStyle": "string"
+                    },
+                    "name": "MyDisplayField15",
+                    "designerId": "15ebf263-e67e-41a7-bf46-2ac17dd33b9a"
+                },
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Time Entered",
+                        "itemId": "inputBy1",
+                        "labelStyle": "color:maroon; font-weight:bold;",
+                        "labelWidth": 120,
+                        "layout|x": 15,
+                        "layout|y": 20,
+                        "name": "inputBy",
+                        "value": "",
+                        "width": 255
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "itemId": "string",
+                        "labelWidth": "number",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "name": "string",
+                        "value": "string",
+                        "width": "auto",
+                        "labelStyle": "string"
+                    },
+                    "name": "MyDisplayField20",
+                    "designerId": "e2d8eac1-c685-4440-8909-1c1c24294a5f"
+                }
+            ]
+        }
+    ]
+}

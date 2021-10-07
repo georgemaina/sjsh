@@ -1,0 +1,97 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "procedureclasslist",
+        "designer|userClassName": "ProcedureClassList"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "designerId": "2f9a1a54-d5df-4b6d-aa6e-865f6dfbd7a2",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "mapping": "ID",
+                "name": "ID"
+            },
+            "configAlternates": {
+                "mapping": "auto",
+                "name": "string"
+            },
+            "name": "MyField161",
+            "designerId": "0667c035-dc49-4a68-8c49-c6069173a604"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "mapping": "proc_class",
+                "name": "proc_class",
+                "type": "string"
+            },
+            "configAlternates": {
+                "mapping": "auto",
+                "name": "string",
+                "type": "string"
+            },
+            "name": "MyField162",
+            "designerId": "17fb9a86-8709-4673-882e-07137d473481"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "mapping": "class_value",
+                "name": "class_value",
+                "type": null
+            },
+            "configAlternates": {
+                "mapping": "auto",
+                "name": "string",
+                "type": "string"
+            },
+            "name": "MyField163",
+            "designerId": "cb9d7675-e359-4624-b0b5-5d337bafdd81"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "mapping": "cost",
+                "name": "cost",
+                "type": "float"
+            },
+            "configAlternates": {
+                "mapping": "auto",
+                "name": "string",
+                "type": "string"
+            },
+            "name": "MyField164",
+            "designerId": "4460225c-d332-4f73-9c99-a2b82efb9732"
+        }
+    ]
+}

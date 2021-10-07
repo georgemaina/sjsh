@@ -1,0 +1,53 @@
+{
+    "type": "Ext.app.ViewModel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "debit",
+        "designer|userClassName": "DebitViewModel"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "designerId": "2dfb667f-cdbd-4832-8277-e16195d076b1",
+    "cn": [
+        {
+            "type": "Ext.data.Store",
+            "reference": {
+                "name": "stores",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "data": [
+                    "[{\"PartCode\":\"dolorem\",\"Description\":\"error\",\"Category\":\"soluta\",\"Price\":\"inventore\",\"Qty\":\"molestiae\",\"Total\":\"incidunt\"},{\"PartCode\":\"incidunt\",\"Description\":\"deserunt\",\"Category\":\"ipsam\",\"Price\":\"quisquam\",\"Qty\":\"id\",\"Total\":\"cum\"},{\"PartCode\":\"optio\",\"Description\":\"eum\",\"Category\":\"harum\",\"Price\":\"deleniti\",\"Qty\":\"quia\",\"Total\":\"similique\"},{\"PartCode\":\"quasi\",\"Description\":\"architecto\",\"Category\":\"ipsum\",\"Price\":\"cumque\",\"Qty\":\"voluptates\",\"Total\":\"ut\"},{\"PartCode\":\"sit\",\"Description\":\"quo\",\"Category\":\"necessitatibus\",\"Price\":\"voluptas\",\"Qty\":\"eum\",\"Total\":\"et\"},{\"PartCode\":\"culpa\",\"Description\":\"labore\",\"Category\":\"et\",\"Price\":\"nemo\",\"Qty\":\"eum\",\"Total\":\"nisi\"},{\"PartCode\":\"qui\",\"Description\":\"non\",\"Category\":\"quam\",\"Price\":\"commodi\",\"Qty\":\"soluta\",\"Total\":\"eius\"},{\"PartCode\":\"nesciunt\",\"Description\":\"et\",\"Category\":\"eos\",\"Price\":\"quod\",\"Qty\":\"fuga\",\"Total\":\"laborum\"},{\"PartCode\":\"voluptatem\",\"Description\":\"ratione\",\"Category\":\"blanditiis\",\"Price\":\"quia\",\"Qty\":\"id\",\"Total\":\"facilis\"},{\"PartCode\":\"nihil\",\"Description\":\"numquam\",\"Category\":\"quo\",\"Price\":\"ab\",\"Qty\":\"voluptatem\",\"Total\":\"ut\"},{\"PartCode\":\"id\",\"Description\":\"ut\",\"Category\":\"voluptatem\",\"Price\":\"labore\",\"Qty\":\"consequuntur\",\"Total\":\"repellat\"},{\"PartCode\":\"cupiditate\",\"Description\":\"rerum\",\"Category\":\"quam\",\"Price\":\"sed\",\"Qty\":\"praesentium\",\"Total\":\"eos\"},{\"PartCode\":\"temporibus\",\"Description\":\"voluptatem\",\"Category\":\"reiciendis\",\"Price\":\"porro\",\"Qty\":\"hic\",\"Total\":\"magnam\"},{\"PartCode\":\"numquam\",\"Description\":\"fugiat\",\"Category\":\"occaecati\",\"Price\":\"nisi\",\"Qty\":\"sed\",\"Total\":\"illo\"},{\"PartCode\":\"id\",\"Description\":\"quo\",\"Category\":\"placeat\",\"Price\":\"quo\",\"Qty\":\"nam\",\"Total\":\"molestiae\"},{\"PartCode\":\"eaque\",\"Description\":\"pariatur\",\"Category\":\"ea\",\"Price\":\"quo\",\"Qty\":\"tempore\",\"Total\":\"ducimus\"},{\"PartCode\":\"quaerat\",\"Description\":\"perspiciatis\",\"Category\":\"voluptatem\",\"Price\":\"expedita\",\"Qty\":\"consequatur\",\"Total\":\"aliquid\"},{\"PartCode\":\"ut\",\"Description\":\"ut\",\"Category\":\"explicabo\",\"Price\":\"exercitationem\",\"Qty\":\"aut\",\"Total\":\"et\"},{\"PartCode\":\"tenetur\",\"Description\":\"quod\",\"Category\":\"est\",\"Price\":\"dolores\",\"Qty\":\"reprehenderit\",\"Total\":\"mollitia\"},{\"PartCode\":\"est\",\"Description\":\"et\",\"Category\":\"nulla\",\"Price\":\"in\",\"Qty\":\"modi\",\"Total\":\"possimus\"},{\"PartCode\":\"quasi\",\"Description\":\"natus\",\"Category\":\"totam\",\"Price\":\"nostrum\",\"Qty\":\"sit\",\"Total\":\"corporis\"},{\"PartCode\":\"vel\",\"Description\":\"magnam\",\"Category\":\"sapiente\",\"Price\":\"et\",\"Qty\":\"sed\",\"Total\":\"excepturi\"},{\"PartCode\":\"optio\",\"Description\":\"iusto\",\"Category\":\"accusantium\",\"Price\":\"aspernatur\",\"Qty\":\"est\",\"Total\":\"enim\"},{\"PartCode\":\"quisquam\",\"Description\":\"impedit\",\"Category\":\"voluptate\",\"Price\":\"veniam\",\"Qty\":\"molestias\",\"Total\":\"similique\"},{\"PartCode\":\"laboriosam\",\"Description\":\"nostrum\",\"Category\":\"accusamus\",\"Price\":\"inventore\",\"Qty\":\"porro\",\"Total\":\"minus\"},{\"PartCode\":\"voluptatum\",\"Description\":\"laboriosam\",\"Category\":\"aperiam\",\"Price\":\"qui\",\"Qty\":\"eum\",\"Total\":\"voluptas\"},{\"PartCode\":\"quisquam\",\"Description\":\"qui\",\"Category\":\"occaecati\",\"Price\":\"neque\",\"Qty\":\"eum\",\"Total\":\"asperiores\"},{\"PartCode\":\"ipsam\",\"Description\":\"voluptas\",\"Category\":\"nobis\",\"Price\":\"vel\",\"Qty\":\"cumque\",\"Total\":\"necessitatibus\"},{\"PartCode\":\"velit\",\"Description\":\"eum\",\"Category\":\"illo\",\"Price\":\"nihil\",\"Qty\":\"vero\",\"Total\":\"sit\"},{\"PartCode\":\"dolores\",\"Description\":\"eaque\",\"Category\":\"blanditiis\",\"Price\":\"dolores\",\"Qty\":\"sint\",\"Total\":\"temporibus\"}]"
+                ],
+                "model": "DebitDetails",
+                "name": "debitDetails"
+            },
+            "configAlternates": {
+                "data": "array",
+                "model": "model",
+                "name": "string"
+            },
+            "name": "debitDetails",
+            "designerId": "b2f1f205-bdb6-4ed7-a500-7b089dc5e6d4",
+            "cn": [
+                {
+                    "type": "Ext.data.proxy.Memory",
+                    "reference": {
+                        "name": "proxy",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyMemoryProxy2",
+                    "designerId": "ba154f64-9032-4896-bd7d-9b54844ccd74"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,64 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "designer|userAlias": "debtorlocationstore",
+        "designer|userClassName": "DebtorLocationStore",
+        "model": "DebtorLocations",
+        "pageSize": 200,
+        "storeId": "DebtorLocationStore"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "pageSize": "number",
+        "storeId": "string",
+        "autoLoad": "boolean"
+    },
+    "name": "ReceiptsList1",
+    "designerId": "6b453c04-7e5f-43c7-9a5c-3ea171111423",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "./data/getDataFunctions.php?task=getDebtorLocations"
+            },
+            "configAlternates": {
+                "extraParams": "object",
+                "url": "string"
+            },
+            "name": "MyAjaxProxy10",
+            "designerId": "50615079-7d4a-4933-9da1-3bfddf1c7511",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "locations"
+                    },
+                    "configAlternates": {
+                        "root": "string",
+                        "rootProperty": "string"
+                    },
+                    "name": "MyJsonReader10",
+                    "designerId": "3dad9674-f6ec-476e-998c-d52adefe5216"
+                }
+            ]
+        }
+    ]
+}

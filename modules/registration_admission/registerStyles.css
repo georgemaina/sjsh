@@ -1,0 +1,63 @@
+
+.titlebg {
+    font-family: 'Times New Roman',Times,serif;
+    font-weight: bold;
+    color: #000033;
+    font-size: 18px;
+    background-color: #99ccff;
+    margin-top: 0em;
+ width: 100%
+}
+
+.careButton {
+    background-color: #f44336; /* Red */
+    border: none;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.testRow{
+    background-color: #579ba0;
+}
+
+.testTitle{
+    color: #ffffff;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.testStatus{
+    color: #f41b19;
+    font-size: large;
+    font-weight: bold;
+    background-color: #FFFFFF;
+}
+
+.labStatus{
+    font-weight: bold;
+    font-size: large;
+    color: red;
+}
+
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #9decf3;
+}

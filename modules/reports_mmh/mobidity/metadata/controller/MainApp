@@ -1,0 +1,124 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MainApp",
+        "models": [
+            "OpMobidity",
+            "MonthList"
+        ],
+        "stores": [
+            "OpMobidityStore",
+            "MonthListStore"
+        ],
+        "views": [
+            "OpMobidity"
+        ]
+    },
+    "designerId": "d9b8c7e5-859b-4ed8-93f6-bff0c8eba285",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "application"
+                ],
+                "fn": "init",
+                "implHandler": [
+                    "this.control({",
+                    "    \"#cmdPreview\":{",
+                    "        click:this.getMobidity",
+                    "    },",
+                    "    \"#cmdExport\":{",
+                    "        click:this.exportToExcel",
+                    "    }",
+                    "});"
+                ]
+            },
+            "name": "init",
+            "designerId": "47fd0c29-b003-45dd-a4e2-02a6fb96c360"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "getMobidity",
+                "implHandler": [
+                    "var reportMonth=this.getOpmobidity().down(\"#reportMonth\").getValue();",
+                    "var reportType=this.getOpmobidity().down('#reportType').getValue();",
+                    "",
+                    "//alert(reportMonth);",
+                    "",
+                    "var opmobiditystore=Ext.data.StoreManager.lookup(\"OpMobidityStore\");",
+                    "",
+                    "opmobiditystore.load({",
+                    "    params:{",
+                    "        reportMonth:reportMonth,",
+                    "        reportType:reportType",
+                    "    },",
+                    "    callback: function(records, operation, success) {",
+                    "",
+                    "    },",
+                    "    scope: this",
+                    "});"
+                ]
+            },
+            "name": "getMobidity",
+            "designerId": "2f5c804a-4ed7-429a-b52d-81759887a83a"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "opmobidity",
+                "selector": "opmobidity",
+                "xtype": "opmobidity"
+            },
+            "name": "opmobidity",
+            "designerId": "455c91d3-8bcd-418b-9e20-d929822412b0"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "exportToExcel",
+                "implHandler": [
+                    "var reportMonth=this.getOpmobidity().down(\"#reportMonth\").getValue();",
+                    "var reportType=this.getOpmobidity().down('#reportType').getValue();",
+                    " window.open('../exportOpMobidity.php?reportMonth='+reportMonth+'&reportType='+reportType,",
+                    "                    \"OpMobidity Reports\",\"menubar=yes,toolbar=yes,width=500,height=550,location=yes,resizable=no,scrollbars=yes,status=yes\");",
+                    ""
+                ]
+            },
+            "name": "exportToExcel",
+            "designerId": "a27a2785-3f30-4d05-a37f-096bb6a1d749"
+        }
+    ]
+}

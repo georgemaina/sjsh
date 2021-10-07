@@ -1,0 +1,57 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": false,
+        "designer|userAlias": "debitstore",
+        "designer|userClassName": "DebitStore",
+        "model": "DebitDetails",
+        "pageSize": 500,
+        "storeId": "DebitStore"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "pageSize": "number",
+        "storeId": "string",
+        "autoLoad": "boolean",
+        "data": "array"
+    },
+    "name": "BillStore1",
+    "designerId": "b0a7417a-8606-43d8-bcfd-7ae9795d32c7",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "../data/getPatientFunctions.php?caller=saveDebit"
+            },
+            "configAlternates": {
+                "url": "string"
+            },
+            "name": "MyAjaxProxy",
+            "designerId": "bab223b2-2f39-4064-b8d4-95691ee5af51",
+            "cn": [
+                {
+                    "type": "Ext.data.writer.Json",
+                    "reference": {
+                        "name": "writer",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyJsonWriter",
+                    "designerId": "e2d470b7-67cf-49d4-9899-27fe1d414cb6"
+                }
+            ]
+        }
+    ]
+}

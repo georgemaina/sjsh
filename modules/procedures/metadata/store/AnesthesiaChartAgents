@@ -1,0 +1,81 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": false,
+        "autoSync": true,
+        "designer|userAlias": "anesthesiachartagents",
+        "designer|userClassName": "AnesthesiaChartAgents",
+        "model": "AnesthesiaCharts",
+        "storeId": "AnesthesiaChartAgents"
+    },
+    "configAlternates": {
+        "autoLoad": "boolean",
+        "autoSync": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string"
+    },
+    "designerId": "f2bcddc6-7167-4f6e-a3b7-31a3a53fa3be",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "extraParams": null,
+                "url": "../data/getDataFunctions.php?task=getAnesthesiaCharts&groupField=agents"
+            },
+            "configAlternates": {
+                "extraParams": "object",
+                "url": "string"
+            },
+            "name": "MyAjaxProxy9",
+            "designerId": "9e395543-ff66-4bec-b640-51e2a6cd22e2",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "chartsItems"
+                    },
+                    "configAlternates": {
+                        "root": "string"
+                    },
+                    "name": "MyJsonReader9",
+                    "designerId": "34038812-8380-408f-8f8d-8688f736b809"
+                },
+                {
+                    "type": "Ext.data.writer.Json",
+                    "reference": {
+                        "name": "writer",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "encode": true,
+                        "root": "editedData"
+                    },
+                    "configAlternates": {
+                        "encode": "boolean",
+                        "root": "string"
+                    },
+                    "name": "MyJsonWriter",
+                    "designerId": "edeba95a-5918-48ad-bf34-2e3d05673f34"
+                }
+            ]
+        }
+    ]
+}

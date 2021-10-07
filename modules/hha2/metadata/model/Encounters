@@ -1,0 +1,788 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "encounters",
+        "designer|userClassName": "Encounters"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "name": "MyModel",
+    "designerId": "b58a6995-c935-486a-a2a8-5dd1e225de2c",
+    "cn": [
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "PID"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField12",
+            "designerId": "7b6b2265-8fa7-41ab-90c2-3a776cf910a1"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "PatientName"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField13",
+            "designerId": "1d3e551a-43d2-47f6-8138-50d51ea7179c"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "EncounterNo"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField14",
+            "designerId": "ee6214f3-676a-4b84-b5b5-5af13fba1386"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "EncounterTime"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField15",
+            "designerId": "4943b447-9791-4a5b-8b83-fe93e2bca934"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Sex"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField16",
+            "designerId": "193181d8-55eb-4aaf-85b7-c4d7136fe993"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "DOB"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField17",
+            "designerId": "97c8049b-8e3d-40c7-be6c-2849875957b3"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ScreeningDate"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField18",
+            "designerId": "2a66e4de-11e3-410e-a220-d5f7e718ece9"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "MobileNumber"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField19",
+            "designerId": "d036ae53-19df-4d2c-a5d2-4cd8c8e83058"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "NationalID"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField20",
+            "designerId": "31f5a0b7-475c-4c5d-8134-6d9cef283b02"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "UniqueID"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField21",
+            "designerId": "cff239f3-58d8-47c5-878b-d6110d5e3520"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "County"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField22",
+            "designerId": "624e9cdf-93dd-441e-892f-fa1ec73678d0"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Location"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField58",
+            "designerId": "5a0e7fce-bf62-4f65-8978-5cd02877bb64"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ClinicianName"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField23",
+            "designerId": "92301024-f620-4c62-a7ba-bf5a044098e7"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "FacilityID"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField26",
+            "designerId": "03aeb082-86c3-4fcd-89c6-023bd191e2c3"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "FacilityName"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField29",
+            "designerId": "b6c58dbd-e10e-4a66-b1c2-2cc992125beb"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ScreeningCode"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField31",
+            "designerId": "c45970dc-b196-458a-916b-4694444194ac"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ScreeningSite"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField59",
+            "designerId": "746f7b86-e98e-4e85-9f19-3aef813a65c7"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "BPInitial1"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField60",
+            "designerId": "0e8e6a2c-5ef3-42e4-8ef7-efa0fa3b8577"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "BPInitial2"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField61",
+            "designerId": "64a6296c-ce89-42c7-8a27-85c40078efd9"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Weight"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField62",
+            "designerId": "c2ad6e34-8434-4a4d-b9bb-31ab968827fd"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Height"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField63",
+            "designerId": "fdee480c-0152-4f54-a003-1b5a147d7200"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "BMI"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField64",
+            "designerId": "fd23b1c2-6012-4923-989e-1f6d4dfc78d6"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "BPFirstReading1"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField65",
+            "designerId": "77ef0733-724d-4038-ba0f-9a091b64bcaa"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "BPFirstReading2"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField66",
+            "designerId": "4e9ee511-d38b-4669-9a2d-f3e131fa7b6c"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "BPSecondReading1"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField67",
+            "designerId": "a29a7c33-504c-4cb0-b647-7d67ebef55ac"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "BPSecondReading2"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField68",
+            "designerId": "a074a490-beab-4714-a655-c9012a737a59"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Normal"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField69",
+            "designerId": "44693881-7062-4396-a06f-a980591564de"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Pre_hypertensive"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField70",
+            "designerId": "e3ad0179-f76c-4081-9db4-90fc060c511b"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Hypertensive"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField71",
+            "designerId": "e5ed9c83-04b9-4b74-a7fa-432fd304f45e"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ReturnPatient"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField72",
+            "designerId": "b404bb19-8288-4d66-9ed5-5f2244bf9d12"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Observations"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField73",
+            "designerId": "00fbef36-22ad-4ff8-b79f-8a944b240a9d"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "LMP"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField74",
+            "designerId": "6d49700f-e10d-4146-a1da-d9606b3d179c"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "DrugAllergies"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField75",
+            "designerId": "4eb48012-bb23-4993-b575-ca7fed69dbbd"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "AllergiesDetails"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField76",
+            "designerId": "cde444c2-df8f-48f6-878c-770b3516bdc0"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "AdheringMedications"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField77",
+            "designerId": "501d78f1-3c28-4798-bfe9-403f257a5195"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "AdheringMedicationsDetails"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField78",
+            "designerId": "3691eb71-39d7-4e94-b670-16cd4a21d04d"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "MildHypertensionLife"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField79",
+            "designerId": "aceec044-d692-4edc-b5c1-98ad329711a2"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "MildHypertensionDiuretic"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField80",
+            "designerId": "7b1787da-a521-437a-bf5f-fb4a50600372"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "MildHypertensionCcbs"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField81",
+            "designerId": "f3b82a74-76b0-4196-b485-95bf525de08b"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "MildHypertensionOthers"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField82",
+            "designerId": "819b8f68-4469-4624-a4ad-5aabdf642dba"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ModerateHypetensionLife"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField83",
+            "designerId": "5592962a-5ec3-4bd7-a7cb-834ae7117feb"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ModerateHypetensionDiuretic"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField84",
+            "designerId": "f087b87b-f8c7-49fc-99d8-cde6cb80eff7"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ModerateHypetensionCcbs"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField86",
+            "designerId": "0511f662-8892-449e-9087-5c7efe998f80"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ModerateHypetensionOthers"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField87",
+            "designerId": "e59d9906-5dba-400f-86a0-648b1a60345c"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ModerateHypetensionAce"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField88",
+            "designerId": "22138193-2fca-4458-9592-716b40d92438"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "FollowupPlan"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField89",
+            "designerId": "f7584312-61d9-488d-b843-de79b5a9b7f4"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Clinician"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField91",
+            "designerId": "e053cc6e-b290-4fb4-993d-a601a3cc1871"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Designation"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField92",
+            "designerId": "9b3d3297-8410-49e2-803d-2aec53166dad"
+        }
+    ]
+}

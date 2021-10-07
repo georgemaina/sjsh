@@ -1,0 +1,142 @@
+{
+    "type": "Ext.grid.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "columnLines": true,
+        "designer|userAlias": "wardslist",
+        "designer|userClassName": "WardsList",
+        "height": 569,
+        "store": "WardsListStore",
+        "width": 623
+    },
+    "configAlternates": {
+        "columnLines": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "store": "store",
+        "width": "auto"
+    },
+    "name": "MyGridPanel2",
+    "designerId": "4f27dea6-00ba-446b-9b04-db1eae23d5b7",
+    "viewControllerInstanceId": "6ae814e0-4c5a-4de9-81f7-98a62f63e8a3",
+    "viewModelInstanceId": "2383c9e1-f8a0-4249-881a-388b1468e579",
+    "cn": [
+        {
+            "type": "Ext.view.Table",
+            "reference": {
+                "name": "viewConfig",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 311,
+                "width": 763
+            },
+            "configAlternates": {
+                "height": "auto",
+                "width": "auto"
+            },
+            "name": "MyTable3",
+            "designerId": "3db510e7-d699-4c7f-8f6f-21046ace26ad"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "Nr",
+                "text": "Nr"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string"
+            },
+            "name": "MyColumn27",
+            "designerId": "2e6d5839-3db2-40f0-900d-89ae3e7ce466"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "WardID",
+                "text": "Ward Id"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string"
+            },
+            "name": "MyColumn28",
+            "designerId": "30a1cf2a-bf66-45fa-9933-da1fe0d0c290"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "Name",
+                "text": "Name",
+                "width": 232
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "width": "auto"
+            },
+            "name": "MyColumn29",
+            "designerId": "c034eafa-c261-4428-912d-b1c102aa5409"
+        },
+        {
+            "type": "Ext.grid.column.Widget",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "width": 171
+            },
+            "configAlternates": {
+                "width": "auto"
+            },
+            "name": "MyWidget",
+            "designerId": "f1b344d9-2125-4653-9c42-3ef4d5115faf",
+            "cn": [
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "widget",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "x-fa fa-arrow-left",
+                        "text": "Transfer Here ",
+                        "width": 130
+                    },
+                    "configAlternates": {
+                        "iconCls": "string",
+                        "text": "string",
+                        "width": "auto"
+                    },
+                    "name": "MyButton33",
+                    "designerId": "8d8546a3-5ec9-4887-a6c4-c3e4ab94a86e"
+                }
+            ]
+        }
+    ]
+}

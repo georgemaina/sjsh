@@ -1,0 +1,939 @@
+{
+    "type": "Ext.grid.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "animCollapse": true,
+        "closable": true,
+        "collapsible": true,
+        "columnLines": true,
+        "designer|userAlias": "debtorbalances",
+        "designer|userClassName": "DebtorBalances",
+        "focusOnToFront": false,
+        "forceFit": false,
+        "height": 670,
+        "itemId": null,
+        "maxHeight": null,
+        "minHeight": null,
+        "minWidth": 800,
+        "scrollable": true,
+        "store": "DebtorBalancesStore",
+        "title": "Debtor Balances",
+        "width": null
+    },
+    "configAlternates": {
+        "animCollapse": "boolean",
+        "autoScroll": "boolean",
+        "closable": "boolean",
+        "collapsible": "boolean",
+        "columnLines": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "focusOnToFront": "boolean",
+        "forceFit": "boolean",
+        "height": "auto",
+        "itemId": "string",
+        "maxHeight": "number",
+        "minHeight": "number",
+        "minWidth": "number",
+        "store": "store",
+        "title": "string",
+        "width": "auto",
+        "scrollable": "boolean"
+    },
+    "designerId": "25953430-0e0b-475e-b88a-d81f91860ab4",
+    "viewControllerInstanceId": "23919535-37f3-4806-898f-e2ea550cae75",
+    "viewModelInstanceId": "4d1a24dc-07c4-486d-aa04-abd682e31e6d",
+    "cn": [
+        {
+            "type": "Ext.view.Table",
+            "reference": {
+                "name": "viewConfig",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": null
+            },
+            "configAlternates": {
+                "itemId": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyGridView4",
+            "designerId": "f9673496-adad-42b9-98d2-88e76e8cb09e"
+        },
+        {
+            "type": "Ext.selection.RowModel",
+            "reference": {
+                "name": "selModel",
+                "type": "object"
+            },
+            "codeClass": "Ext.selection.RowModel",
+            "userConfig": {
+                "allowDeselect": true,
+                "mode": "SINGLE"
+            },
+            "configAlternates": {
+                "allowDeselect": "boolean",
+                "mode": "string"
+            },
+            "name": "MyRowSelectionModel1",
+            "designerId": "4f5aef7f-6563-47fd-a056-0dfec31d9256"
+        },
+        {
+            "type": "Ext.toolbar.Paging",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "displayInfo": true,
+                "dock": "bottom",
+                "store": "DebtorBalancesStore",
+                "width": 360
+            },
+            "configAlternates": {
+                "displayInfo": "boolean",
+                "dock": "string",
+                "store": "store",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyPagingToolbar3",
+            "designerId": "c5aba8d9-cb00-4422-8faf-5a5356773b76"
+        },
+        {
+            "type": "Ext.toolbar.Toolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dock": "top",
+                "frame": true,
+                "height": 29,
+                "ui": null
+            },
+            "configAlternates": {
+                "dock": "string",
+                "frame": "boolean",
+                "height": "auto",
+                "ui": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyToolbar6",
+            "designerId": "ff22d298-d65f-46e6-a548-0fceee34abcf",
+            "cn": [
+                {
+                    "type": "Ext.toolbar.Spacer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 10,
+                        "layout|flex": null,
+                        "width": 70
+                    },
+                    "configAlternates": {
+                        "height": "auto",
+                        "layout|flex": "number",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MySpacer10",
+                    "designerId": "d2bf5331-6702-4eeb-a40d-b4ef3258a979"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 23,
+                        "layout|flex": null,
+                        "text": "Export List",
+                        "width": 106
+                    },
+                    "configAlternates": {
+                        "height": "auto",
+                        "layout|flex": "number",
+                        "text": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyButton18",
+                    "designerId": "f39f7df5-38a7-4530-b207-16332df84c92"
+                },
+                {
+                    "type": "Ext.toolbar.Spacer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 10,
+                        "layout|flex": null,
+                        "width": 36
+                    },
+                    "configAlternates": {
+                        "height": "auto",
+                        "layout|flex": "number",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MySpacer11",
+                    "designerId": "cb97382f-c6d8-4e08-a083-54b0a79063b5"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": null,
+                        "itemId": "cmdNewCustomer2",
+                        "layout|flex": null,
+                        "text": "New Customer"
+                    },
+                    "configAlternates": {
+                        "id": "string",
+                        "itemId": "string",
+                        "layout|flex": "number",
+                        "text": "string",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyButton19",
+                    "designerId": "d4c556c1-96cb-4bd7-85fa-37b3e8736368"
+                },
+                {
+                    "type": "Ext.toolbar.Spacer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 10,
+                        "layout|flex": null,
+                        "width": 37
+                    },
+                    "configAlternates": {
+                        "height": "auto",
+                        "layout|flex": "number",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MySpacer12",
+                    "designerId": "28508252-3b2b-4d70-828e-c19f2c3a530a"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": null,
+                        "itemId": "editCustomer2",
+                        "layout|flex": null,
+                        "text": "Edit Customer"
+                    },
+                    "configAlternates": {
+                        "id": "string",
+                        "itemId": "string",
+                        "layout|flex": "number",
+                        "text": "string",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyButton20",
+                    "designerId": "45d38f37-be74-46a8-8702-990489a1351b"
+                },
+                {
+                    "type": "Ext.toolbar.Spacer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 10,
+                        "layout|flex": null,
+                        "width": 67
+                    },
+                    "configAlternates": {
+                        "height": "auto",
+                        "layout|flex": "number",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MySpacer13",
+                    "designerId": "2a804c37-9061-4f64-9c8c-d6e7d94b72ce"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": null,
+                        "itemId": "cmdAddMembers2",
+                        "layout|flex": null,
+                        "text": "Add Members"
+                    },
+                    "configAlternates": {
+                        "id": "string",
+                        "itemId": "string",
+                        "layout|flex": "number",
+                        "text": "string",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyButton21",
+                    "designerId": "a98c80cc-9c73-4dc4-8185-6949e1bd296b"
+                }
+            ]
+        },
+        {
+            "type": "Ext.toolbar.Toolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dock": "top",
+                "height": 63,
+                "width": 278
+            },
+            "configAlternates": {
+                "dock": "string",
+                "height": "auto",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyToolbar7",
+            "designerId": "de967ce6-ab59-4aae-8b59-86f844d1f6b8",
+            "cn": [
+                {
+                    "type": "Ext.form.field.TextArea",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Search Debtor",
+                        "height": 18,
+                        "itemId": "txtDebtorsParams",
+                        "labelWidth": 75,
+                        "layout|flex": null,
+                        "width": 257
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "height": "auto",
+                        "itemId": "string",
+                        "labelWidth": "number",
+                        "layout|flex": "number",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyTextArea1",
+                    "designerId": "f3f9f85b-d8a3-4f42-9a33-0e5907858342"
+                },
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "displayField": "custNames",
+                        "fieldLabel": "Filter by Category",
+                        "itemId": "debtorBalanceCategory",
+                        "layout|flex": null,
+                        "store": "CustomerType",
+                        "valueField": "ID"
+                    },
+                    "configAlternates": {
+                        "displayField": "datafield",
+                        "fieldLabel": "string",
+                        "itemId": "string",
+                        "layout|flex": "number",
+                        "store": "store",
+                        "valueField": "datafield",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyComboBox4",
+                    "designerId": "72832c9d-7bb4-4971-8691-316efc950853"
+                },
+                {
+                    "type": "Ext.form.field.Date",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Start Date",
+                        "itemId": "startDate",
+                        "labelWidth": 55,
+                        "layout|flex": null
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "itemId": "string",
+                        "labelWidth": "number",
+                        "layout|flex": "number",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyDateField4",
+                    "designerId": "d7d2031f-27ac-4300-8b70-0593435debb3"
+                },
+                {
+                    "type": "Ext.form.field.Date",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "End Date",
+                        "itemId": "endDate",
+                        "labelWidth": 50,
+                        "layout|flex": null
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "itemId": "string",
+                        "labelWidth": "number",
+                        "layout|flex": "number",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyDateField5",
+                    "designerId": "0e59718a-5331-4ffe-8c91-542c2067818f"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": null,
+                        "itemId": "cmdSearchDebtorBalances",
+                        "layout|flex": null,
+                        "text": "<b>Search</b>",
+                        "width": 93
+                    },
+                    "configAlternates": {
+                        "id": "string",
+                        "itemId": "string",
+                        "layout|flex": "number",
+                        "text": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyButton22",
+                    "designerId": "2d28ef59-87b4-43e9-b422-e699371453fe"
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Tool",
+            "reference": {
+                "name": "tools",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "type": "maximize"
+            },
+            "configAlternates": {
+                "type": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyTool3",
+            "designerId": "61212ead-e04e-4273-b997-56ee86b4fb87"
+        },
+        {
+            "type": "Ext.panel.Tool",
+            "reference": {
+                "name": "tools",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "type": "minimize"
+            },
+            "configAlternates": {
+                "type": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyTool4",
+            "designerId": "1f0212fd-a499-404c-aa07-b57b83c13fda"
+        },
+        {
+            "type": "Ext.panel.Tool",
+            "reference": {
+                "name": "tools",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "type": "restore"
+            },
+            "configAlternates": {
+                "type": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyTool5",
+            "designerId": "c1e5b65d-6ff6-4381-a9d6-f6c685dafac5"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "accno",
+                "text": "Accno",
+                "width": 67
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn68",
+            "designerId": "29f4788a-6455-4fa0-a9eb-be8d1f396f09"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "debtorName",
+                "text": "Debtor Name",
+                "width": 148
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn69",
+            "designerId": "3e68f6ed-d3cb-4cfd-b8d4-b9c08c35f722"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "transno",
+                "text": "Transno",
+                "width": 55
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn70",
+            "designerId": "796df733-868c-4c79-9df2-a0a4b23fc114"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "pid",
+                "text": "Pid"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn71",
+            "designerId": "3d28fc1e-0b09-43bc-aa06-f61f57a17bd0"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "encounter_nr",
+                "text": "Encounter_nr"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn72",
+            "designerId": "72cd352b-5bce-4f26-80f2-93de1914d4aa"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "pnames",
+                "text": "Pnames",
+                "width": 154
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn73",
+            "designerId": "99a22e07-baa9-43e7-a209-4d7b293103b2"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "lastTransDate",
+                "text": "LastTransDate",
+                "width": 87
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn74",
+            "designerId": "a7c2ad36-136a-4e16-be69-8c2f015adf5f"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "billNumber",
+                "text": "BillNumber",
+                "width": 67
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn75",
+            "designerId": "e762543c-2123-41fc-a632-085a5a6b2c2f"
+        },
+        {
+            "type": "Ext.grid.column.Number",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "amount",
+                "text": "Amount"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyNumberColumn3",
+            "designerId": "ad00af48-7a17-49f5-b21f-5781d1f6cdd2"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "admDate",
+                "hidden": true,
+                "text": "AdmDate"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "hidden": "boolean",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn76",
+            "designerId": "0589fa4e-a988-4380-b4ee-862c7598590c"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "disDate",
+                "hidden": true,
+                "text": "DisDate"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "hidden": "boolean",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn77",
+            "designerId": "de6fe5f2-b865-4a5d-a2b3-b917291780b6"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "encClass",
+                "hidden": true,
+                "text": "EncClass"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "hidden": "boolean",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn78",
+            "designerId": "af024a4e-fe52-43d5-b150-d32608fbaa1d"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "addr_zip",
+                "hidden": true,
+                "text": "Addr_zip"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "hidden": "boolean",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn79",
+            "designerId": "fc8dc628-36c3-413b-bcfa-25a8c0203858"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "addr_zip2",
+                "hidden": true,
+                "text": "Addr_zip2"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "hidden": "boolean",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn80",
+            "designerId": "690fed58-050a-4d60-94a2-b415dae52254"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "phone_1_nr",
+                "hidden": true,
+                "text": "Phone_1_nr"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "hidden": "boolean",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn81",
+            "designerId": "12328d13-2417-4563-ae5d-cc7eab5c580f"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "email",
+                "hidden": true,
+                "text": "Email"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "hidden": "boolean",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn82",
+            "designerId": "82dc68c3-139b-4c4e-8597-ae69f2720724"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "cellphone_1_nr",
+                "hidden": true,
+                "text": "Cellphone_1_nr"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "hidden": "boolean",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn83",
+            "designerId": "3cf23e74-7e9b-4341-b948-a73b505f8207"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "transType",
+                "text": "TransType",
+                "width": 62
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn84",
+            "designerId": "269fd7c8-36f3-4c77-965a-a1abdf42d4f7"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "allocated",
+                "text": "Allocated"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn85",
+            "designerId": "c2c27d9a-9a64-456c-a8e7-f46d28321611"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "allocatedAmount",
+                "text": "AllocatedAmount"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn86",
+            "designerId": "39d07679-f1a6-4de7-b801-ccb22ea074f5"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "invoiceBalance",
+                "text": "InvoiceBalance"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn87",
+            "designerId": "3f4c914d-ddb2-4e93-ae9f-ccf41c890005"
+        }
+    ]
+}

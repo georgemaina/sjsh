@@ -1,0 +1,134 @@
+{
+    "type": "Ext.grid.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "closable": true,
+        "collapsible": true,
+        "columnLines": true,
+        "designer|userAlias": "topdiseases",
+        "designer|userClassName": "TopDiseases",
+        "height": 615,
+        "resizable": true,
+        "store": "TopDiseasesStore",
+        "title": "Top Diseases",
+        "width": 993
+    },
+    "configAlternates": {
+        "resizable": "boolean",
+        "closable": "boolean",
+        "collapsible": "boolean",
+        "columnLines": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "store": "store",
+        "title": "string",
+        "width": "auto",
+        "scrollable": "boolean"
+    },
+    "name": "MyGridPanel",
+    "designerId": "52702351-b754-4527-a0cb-99edfd5055e2",
+    "viewControllerInstanceId": "5cc09977-8ed8-4ccf-9eba-a79bdd51a258",
+    "viewModelInstanceId": "c8cf9d6e-83c5-4e8f-9852-b6e1b4dff5c5",
+    "cn": [
+        {
+            "type": "Ext.view.Table",
+            "reference": {
+                "name": "viewConfig",
+                "type": "object"
+            },
+            "codeClass": null,
+            "configAlternates": {
+                "scrollable": "boolean"
+            },
+            "name": "MyGridView6",
+            "designerId": "d55a7f34-7d27-4ce1-a7a0-532d837bed6a"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "IcdCode",
+                "text": "Icd Code"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn73",
+            "designerId": "78abea0e-aef5-42d6-8dde-6b513f2d5286"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "Description",
+                "text": "Description",
+                "width": 331
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn92",
+            "designerId": "19b0a7f6-8aab-4b9b-a9a1-eaf3d5bc88a7"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "DiseaseCount",
+                "text": "Disease Count"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn93",
+            "designerId": "8ab35b4b-88e2-44ea-a957-48717813d928"
+        },
+        {
+            "type": "Ext.toolbar.Paging",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "displayInfo": true,
+                "dock": "bottom",
+                "store": "TopDiseasesStore",
+                "width": 360
+            },
+            "configAlternates": {
+                "displayInfo": "boolean",
+                "dock": "string",
+                "store": "store",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyPagingToolbar4",
+            "designerId": "e65b0a34-c864-485c-8c55-0b50a19eec4f"
+        }
+    ]
+}

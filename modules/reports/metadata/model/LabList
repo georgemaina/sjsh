@@ -1,0 +1,54 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "lablist",
+        "designer|userAliasPrefix": "model",
+        "designer|userClassName": "LabList"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userAliasPrefix": "string",
+        "designer|userClassName": "string"
+    },
+    "name": "MyModel1",
+    "designerId": "0a407198-8338-4aab-b7e0-f4967a1dc496",
+    "cn": [
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ItemID"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField134",
+            "designerId": "0850d1b9-376f-4a35-a137-e7b4c072ce00"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Description"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField135",
+            "designerId": "7677a36c-c24a-409c-a90f-57c521e60900"
+        }
+    ]
+}

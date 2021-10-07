@@ -1,0 +1,4217 @@
+
+
+====================================
+Log started, 18/10/2016 01:10:38
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => quantity
+		1 => quantity
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+count => 50
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN') and item_status NOT IN (4) and d.`quantity`>0 
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid,d.`quantity`,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN') and item_status NOT IN (4) and d.`quantity`>0  LIMIT 0,50
+
+Done in 0.016295909881592ms
+
+
+
+====================================
+Log started, 18/10/2016 01:10:59
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => quantity
+		1 => quantity
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+rules => 
+	0 => 
+		0 => item_description
+		1 => TO
+count => 200
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN') and item_status NOT IN (4) and d.`quantity`>0  AND item_description LIKE '%TO%'
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid,d.`quantity`,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN') and item_status NOT IN (4) and d.`quantity`>0  AND item_description LIKE '%TO%' LIMIT 0,200
+
+Done in 0.019901990890503ms
+
+
+
+====================================
+Log started, 18/10/2016 01:10:13
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => req_date
+		1 => req_date
+	1 => 
+		0 => req_time
+		1 => req_time
+	2 => 
+		0 => req_no
+		1 => req_no
+	3 => 
+		0 => store_loc
+		1 => store_loc
+	4 => 
+		0 => Store_desc
+		1 => Store_desc
+	5 => 
+		0 => sup_storeId
+		1 => sup_storeId
+	6 => 
+		0 => sup_storeDesc
+		1 => sup_storeDesc
+	7 => 
+		0 => status
+		1 => status
+	8 => 
+		0 => input_user
+		1 => input_user
+id => 
+	0 => id
+	1 => id
+table => 
+	0 =>  care_ke_internalreq 
+	1 =>  care_ke_internalreq 
+count => 1000
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_ke_internalreq  WHERE `status`='pending' and sup_storeid like 'GEN%' group by req_no
+
+Exec SQL: SELECT  *  FROM  care_ke_internalreq  WHERE `status`='pending' and sup_storeid like 'GEN%' group by req_no LIMIT 0,1000
+
+Done in 0.0036029815673828ms
+
+
+
+====================================
+Log started, 18/10/2016 01:10:16
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => item_id
+		1 => item_id
+	1 => 
+		0 => Item_desc
+		1 => Item_desc
+	2 => 
+		0 => qty
+		1 => qty
+	3 => 
+		0 => price
+		1 => price
+	4 => 
+		0 => qty_issued
+		1 => qty_issued
+	5 => 
+		0 => balance
+		1 => balance
+	6 => 
+		0 => Qty_In_Store
+		1 => Qty_In_Store
+	7 => 
+		0 => select item_id
+		1 => select item_id
+	8 => 
+		0 => Item_desc
+		1 => Item_desc
+	9 => 
+		0 => qty
+		1 => qty
+	10 => 
+		0 => price
+		1 => price
+	11 => 
+		0 => qty_issued
+		1 => qty_issued
+	12 => 
+		0 => balance
+		1 => balance
+	13 => 
+		0 => s.quantity AS Qty_In_Store
+     from care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid` WHERE s.loccode='GEN' AND req_no='17' and status='pending'
+		1 => loccode='GEN' AND req_no='17' and status='pending'
+id => 
+	0 => id
+	1 => id
+table => 
+	0 =>  care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid` 
+	1 => `stockid` 
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid`  WHERE  s.loccode='GEN' AND req_no='17' and status='pending'
+
+Exec SQL: SELECT  item_id,Item_desc,qty,price,qty_issued,balance,s.quantity AS Qty_In_Store
+      FROM  care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid`  WHERE  s.loccode='GEN' AND req_no='17' and status='pending' LIMIT 0,100
+
+Done in 0.0030009746551514ms
+
+
+
+====================================
+Log started, 18/10/2016 01:10:20
+====================================
+
+Edit operation started [GRID]
+1_gr_id => 1
+1_c0 => CLETO01
+1_c1 => Toilet Papers (toilex )
+1_c2 => 2
+1_c3 => 750
+1_c4 => 2
+1_c5 => 0
+1_c6 => 20
+1_!nativeeditor_status => updated
+ids => 1
+
+Row data [1]
+gr_id => 1
+0 => CLETO01
+1 => Toilet Papers (toilex )
+2 => 2
+3 => 750
+4 => 2
+5 => 0
+6 => 20
+!nativeeditor_status => updated
+
+Exec SQL: UPDATE  care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid`  SET item_id='CLETO01',Item_desc='',qty='',price='',qty_issued='',balance='',Qty_In_Store='20',select item_id='',Item_desc='',qty='',price='',qty_issued='',balance='',s.quantity AS Qty_In_Store
+     from care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid` WHERE s.loccode='GEN' AND req_no='17' and status='pending'='' WHERE id='1'
+
+MySQL error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'select item_id='',Item_desc='',qty='',price='',qty_issued='',balance='',s.quanti' at line 1
+
+Edit operation finished
+0 => action:error; sid:1; tid:1;
+
+Done in 0.0026428699493408ms
+
+
+
+====================================
+Log started, 07/02/2017 10:02:55
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => req_date
+		1 => req_date
+	1 => 
+		0 => req_time
+		1 => req_time
+	2 => 
+		0 => req_no
+		1 => req_no
+	3 => 
+		0 => store_loc
+		1 => store_loc
+	4 => 
+		0 => Store_desc
+		1 => Store_desc
+	5 => 
+		0 => sup_storeId
+		1 => sup_storeId
+	6 => 
+		0 => sup_storeDesc
+		1 => sup_storeDesc
+	7 => 
+		0 => status
+		1 => status
+	8 => 
+		0 => input_user
+		1 => input_user
+id => 
+	0 => id
+	1 => id
+table => 
+	0 =>  care_ke_internalreq 
+	1 =>  care_ke_internalreq 
+count => 1000
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_ke_internalreq  WHERE `status`='pending' and sup_storeid like 'GEN%' group by req_no
+
+Exec SQL: SELECT  *  FROM  care_ke_internalreq  WHERE `status`='pending' and sup_storeid like 'GEN%' group by req_no LIMIT 0,1000
+
+Done in 0.091651916503906ms
+
+
+
+====================================
+Log started, 07/02/2017 10:02:58
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => item_id
+		1 => item_id
+	1 => 
+		0 => Item_desc
+		1 => Item_desc
+	2 => 
+		0 => qty
+		1 => qty
+	3 => 
+		0 => price
+		1 => price
+	4 => 
+		0 => qty_issued
+		1 => qty_issued
+	5 => 
+		0 => balance
+		1 => balance
+	6 => 
+		0 => Qty_In_Store
+		1 => Qty_In_Store
+	7 => 
+		0 => select item_id
+		1 => select item_id
+	8 => 
+		0 => Item_desc
+		1 => Item_desc
+	9 => 
+		0 => qty
+		1 => qty
+	10 => 
+		0 => price
+		1 => price
+	11 => 
+		0 => qty_issued
+		1 => qty_issued
+	12 => 
+		0 => balance
+		1 => balance
+	13 => 
+		0 => s.quantity AS Qty_In_Store
+     from care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid` WHERE s.loccode='GEN' AND req_no='26' and status='pending'
+		1 => loccode='GEN' AND req_no='26' and status='pending'
+id => 
+	0 => id
+	1 => id
+table => 
+	0 =>  care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid` 
+	1 => `stockid` 
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid`  WHERE  s.loccode='GEN' AND req_no='26' and status='pending'
+
+Exec SQL: SELECT  item_id,Item_desc,qty,price,qty_issued,balance,s.quantity AS Qty_In_Store
+      FROM  care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid`  WHERE  s.loccode='GEN' AND req_no='26' and status='pending' LIMIT 0,100
+
+Done in 0.09160590171814ms
+
+
+
+====================================
+Log started, 07/02/2017 10:02:59
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => item_id
+		1 => item_id
+	1 => 
+		0 => Item_desc
+		1 => Item_desc
+	2 => 
+		0 => qty
+		1 => qty
+	3 => 
+		0 => price
+		1 => price
+	4 => 
+		0 => qty_issued
+		1 => qty_issued
+	5 => 
+		0 => balance
+		1 => balance
+	6 => 
+		0 => Qty_In_Store
+		1 => Qty_In_Store
+	7 => 
+		0 => select item_id
+		1 => select item_id
+	8 => 
+		0 => Item_desc
+		1 => Item_desc
+	9 => 
+		0 => qty
+		1 => qty
+	10 => 
+		0 => price
+		1 => price
+	11 => 
+		0 => qty_issued
+		1 => qty_issued
+	12 => 
+		0 => balance
+		1 => balance
+	13 => 
+		0 => s.quantity AS Qty_In_Store
+     from care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid` WHERE s.loccode='GEN' AND req_no='19' and status='pending'
+		1 => loccode='GEN' AND req_no='19' and status='pending'
+id => 
+	0 => id
+	1 => id
+table => 
+	0 =>  care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid` 
+	1 => `stockid` 
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid`  WHERE  s.loccode='GEN' AND req_no='19' and status='pending'
+
+Exec SQL: SELECT  item_id,Item_desc,qty,price,qty_issued,balance,s.quantity AS Qty_In_Store
+      FROM  care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid`  WHERE  s.loccode='GEN' AND req_no='19' and status='pending' LIMIT 0,100
+
+Done in 0.0062601566314697ms
+
+
+
+====================================
+Log started, 07/02/2017 10:02:00
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => item_id
+		1 => item_id
+	1 => 
+		0 => Item_desc
+		1 => Item_desc
+	2 => 
+		0 => qty
+		1 => qty
+	3 => 
+		0 => price
+		1 => price
+	4 => 
+		0 => qty_issued
+		1 => qty_issued
+	5 => 
+		0 => balance
+		1 => balance
+	6 => 
+		0 => Qty_In_Store
+		1 => Qty_In_Store
+	7 => 
+		0 => select item_id
+		1 => select item_id
+	8 => 
+		0 => Item_desc
+		1 => Item_desc
+	9 => 
+		0 => qty
+		1 => qty
+	10 => 
+		0 => price
+		1 => price
+	11 => 
+		0 => qty_issued
+		1 => qty_issued
+	12 => 
+		0 => balance
+		1 => balance
+	13 => 
+		0 => s.quantity AS Qty_In_Store
+     from care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid` WHERE s.loccode='GEN' AND req_no='26' and status='pending'
+		1 => loccode='GEN' AND req_no='26' and status='pending'
+id => 
+	0 => id
+	1 => id
+table => 
+	0 =>  care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid` 
+	1 => `stockid` 
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid`  WHERE  s.loccode='GEN' AND req_no='26' and status='pending'
+
+Exec SQL: SELECT  item_id,Item_desc,qty,price,qty_issued,balance,s.quantity AS Qty_In_Store
+      FROM  care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid`  WHERE  s.loccode='GEN' AND req_no='26' and status='pending' LIMIT 0,100
+
+Done in 0.0055780410766602ms
+
+
+
+====================================
+Log started, 07/02/2017 10:02:01
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => item_id
+		1 => item_id
+	1 => 
+		0 => Item_desc
+		1 => Item_desc
+	2 => 
+		0 => qty
+		1 => qty
+	3 => 
+		0 => price
+		1 => price
+	4 => 
+		0 => qty_issued
+		1 => qty_issued
+	5 => 
+		0 => balance
+		1 => balance
+	6 => 
+		0 => Qty_In_Store
+		1 => Qty_In_Store
+	7 => 
+		0 => select item_id
+		1 => select item_id
+	8 => 
+		0 => Item_desc
+		1 => Item_desc
+	9 => 
+		0 => qty
+		1 => qty
+	10 => 
+		0 => price
+		1 => price
+	11 => 
+		0 => qty_issued
+		1 => qty_issued
+	12 => 
+		0 => balance
+		1 => balance
+	13 => 
+		0 => s.quantity AS Qty_In_Store
+     from care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid` WHERE s.loccode='GEN' AND req_no='30' and status='pending'
+		1 => loccode='GEN' AND req_no='30' and status='pending'
+id => 
+	0 => id
+	1 => id
+table => 
+	0 =>  care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid` 
+	1 => `stockid` 
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid`  WHERE  s.loccode='GEN' AND req_no='30' and status='pending'
+
+Exec SQL: SELECT  item_id,Item_desc,qty,price,qty_issued,balance,s.quantity AS Qty_In_Store
+      FROM  care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid`  WHERE  s.loccode='GEN' AND req_no='30' and status='pending' LIMIT 0,100
+
+Done in 0.009321928024292ms
+
+
+
+====================================
+Log started, 07/02/2017 10:02:03
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => item_id
+		1 => item_id
+	1 => 
+		0 => Item_desc
+		1 => Item_desc
+	2 => 
+		0 => qty
+		1 => qty
+	3 => 
+		0 => price
+		1 => price
+	4 => 
+		0 => qty_issued
+		1 => qty_issued
+	5 => 
+		0 => balance
+		1 => balance
+	6 => 
+		0 => Qty_In_Store
+		1 => Qty_In_Store
+	7 => 
+		0 => select item_id
+		1 => select item_id
+	8 => 
+		0 => Item_desc
+		1 => Item_desc
+	9 => 
+		0 => qty
+		1 => qty
+	10 => 
+		0 => price
+		1 => price
+	11 => 
+		0 => qty_issued
+		1 => qty_issued
+	12 => 
+		0 => balance
+		1 => balance
+	13 => 
+		0 => s.quantity AS Qty_In_Store
+     from care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid` WHERE s.loccode='GEN' AND req_no='5' and status='pending'
+		1 => loccode='GEN' AND req_no='5' and status='pending'
+id => 
+	0 => id
+	1 => id
+table => 
+	0 =>  care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid` 
+	1 => `stockid` 
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid`  WHERE  s.loccode='GEN' AND req_no='5' and status='pending'
+
+Exec SQL: SELECT  item_id,Item_desc,qty,price,qty_issued,balance,s.quantity AS Qty_In_Store
+      FROM  care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid`  WHERE  s.loccode='GEN' AND req_no='5' and status='pending' LIMIT 0,100
+
+Done in 0.027809143066406ms
+
+
+
+====================================
+Log started, 07/02/2017 10:02:04
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => item_id
+		1 => item_id
+	1 => 
+		0 => Item_desc
+		1 => Item_desc
+	2 => 
+		0 => qty
+		1 => qty
+	3 => 
+		0 => price
+		1 => price
+	4 => 
+		0 => qty_issued
+		1 => qty_issued
+	5 => 
+		0 => balance
+		1 => balance
+	6 => 
+		0 => Qty_In_Store
+		1 => Qty_In_Store
+	7 => 
+		0 => select item_id
+		1 => select item_id
+	8 => 
+		0 => Item_desc
+		1 => Item_desc
+	9 => 
+		0 => qty
+		1 => qty
+	10 => 
+		0 => price
+		1 => price
+	11 => 
+		0 => qty_issued
+		1 => qty_issued
+	12 => 
+		0 => balance
+		1 => balance
+	13 => 
+		0 => s.quantity AS Qty_In_Store
+     from care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid` WHERE s.loccode='GEN' AND req_no='7' and status='pending'
+		1 => loccode='GEN' AND req_no='7' and status='pending'
+id => 
+	0 => id
+	1 => id
+table => 
+	0 =>  care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid` 
+	1 => `stockid` 
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid`  WHERE  s.loccode='GEN' AND req_no='7' and status='pending'
+
+Exec SQL: SELECT  item_id,Item_desc,qty,price,qty_issued,balance,s.quantity AS Qty_In_Store
+      FROM  care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid`  WHERE  s.loccode='GEN' AND req_no='7' and status='pending' LIMIT 0,100
+
+Done in 0.0063750743865967ms
+
+
+
+====================================
+Log started, 07/02/2017 10:02:06
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => item_id
+		1 => item_id
+	1 => 
+		0 => Item_desc
+		1 => Item_desc
+	2 => 
+		0 => qty
+		1 => qty
+	3 => 
+		0 => price
+		1 => price
+	4 => 
+		0 => qty_issued
+		1 => qty_issued
+	5 => 
+		0 => balance
+		1 => balance
+	6 => 
+		0 => Qty_In_Store
+		1 => Qty_In_Store
+	7 => 
+		0 => select item_id
+		1 => select item_id
+	8 => 
+		0 => Item_desc
+		1 => Item_desc
+	9 => 
+		0 => qty
+		1 => qty
+	10 => 
+		0 => price
+		1 => price
+	11 => 
+		0 => qty_issued
+		1 => qty_issued
+	12 => 
+		0 => balance
+		1 => balance
+	13 => 
+		0 => s.quantity AS Qty_In_Store
+     from care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid` WHERE s.loccode='GEN' AND req_no='11' and status='pending'
+		1 => loccode='GEN' AND req_no='11' and status='pending'
+id => 
+	0 => id
+	1 => id
+table => 
+	0 =>  care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid` 
+	1 => `stockid` 
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid`  WHERE  s.loccode='GEN' AND req_no='11' and status='pending'
+
+Exec SQL: SELECT  item_id,Item_desc,qty,price,qty_issued,balance,s.quantity AS Qty_In_Store
+      FROM  care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid`  WHERE  s.loccode='GEN' AND req_no='11' and status='pending' LIMIT 0,100
+
+Done in 0.0061421394348145ms
+
+
+
+====================================
+Log started, 09/02/2017 10:02:16
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => quantity
+		1 => quantity
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+count => 200
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN') and item_status NOT IN (4) and d.`quantity`>0 
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid,d.`quantity`,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN') and item_status NOT IN (4) and d.`quantity`>0  LIMIT 0,200
+
+Done in 0.11478495597839ms
+
+
+
+====================================
+Log started, 10/02/2017 08:02:18
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => quantity
+		1 => quantity
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+count => 200
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4) and d.`quantity`>0 
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid,d.`quantity`,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4) and d.`quantity`>0  LIMIT 0,200
+
+Done in 0.14299511909485ms
+
+
+
+====================================
+Log started, 10/02/2017 08:02:21
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => quantity
+		1 => quantity
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+rules => 
+	0 => 
+		0 => item_description
+		1 => SUG
+count => 200
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4) and d.`quantity`>0  AND item_description LIKE '%SUG%'
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid,d.`quantity`,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4) and d.`quantity`>0  AND item_description LIKE '%SUG%' LIMIT 0,200
+
+Done in 0.10865783691406ms
+
+
+
+====================================
+Log started, 10/02/2017 08:02:23
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => quantity
+		1 => quantity
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+rules => 
+	0 => 
+		0 => item_description
+		1 => S
+count => 200
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4) and d.`quantity`>0  AND item_description LIKE '%S%'
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid,d.`quantity`,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4) and d.`quantity`>0  AND item_description LIKE '%S%' LIMIT 0,200
+
+Done in 0.064791202545166ms
+
+
+
+====================================
+Log started, 10/02/2017 08:02:35
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => quantity
+		1 => quantity
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+count => 200
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4) and d.`quantity`>0 
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid,d.`quantity`,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4) and d.`quantity`>0  LIMIT 0,200
+
+Done in 0.027451992034912ms
+
+
+
+====================================
+Log started, 10/02/2017 08:02:40
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => quantity
+		1 => quantity
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+rules => 
+	0 => 
+		0 => item_description
+		1 => SU
+count => 200
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4) and d.`quantity`>0  AND item_description LIKE '%SU%'
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid,d.`quantity`,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4) and d.`quantity`>0  AND item_description LIKE '%SU%' LIMIT 0,200
+
+Done in 0.072489976882935ms
+
+
+
+====================================
+Log started, 10/02/2017 08:02:43
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => quantity
+		1 => quantity
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+count => 200
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4)
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid,d.`quantity`,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4) LIMIT 0,200
+
+Done in 0.041239976882935ms
+
+
+
+====================================
+Log started, 10/02/2017 08:02:46
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => quantity
+		1 => quantity
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+rules => 
+	0 => 
+		0 => item_description
+		1 => SUGA
+count => 200
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4) AND item_description LIKE '%SUGA%'
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid,d.`quantity`,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4) AND item_description LIKE '%SUGA%' LIMIT 0,200
+
+Done in 0.031038045883179ms
+
+
+
+====================================
+Log started, 13/02/2017 11:02:24
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => quantity
+		1 => quantity
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+count => 200
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4)
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid,d.`quantity`,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4) LIMIT 0,200
+
+Done in 1.0564489364624ms
+
+
+
+====================================
+Log started, 13/02/2017 11:02:45
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => quantity
+		1 => quantity
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+count => 200
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4)
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid,d.`quantity`,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4) LIMIT 0,200
+
+Done in 0.26790809631348ms
+
+
+
+====================================
+Log started, 13/02/2017 11:02:57
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => quantity
+		1 => quantity
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+count => 200
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4)
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid,d.`quantity`,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4) LIMIT 0,200
+
+Done in 0.02978515625ms
+
+
+
+====================================
+Log started, 13/02/2017 11:02:11
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => quantity
+		1 => quantity
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+rules => 
+	0 => 
+		0 => item_description
+		1 => jo
+count => 200
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4) AND item_description LIKE '%jo%'
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid,d.`quantity`,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4) AND item_description LIKE '%jo%' LIMIT 0,200
+
+Done in 0.015527963638306ms
+
+
+
+====================================
+Log started, 13/02/2017 11:02:11
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => quantity
+		1 => quantity
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+rules => 
+	0 => 
+		0 => item_description
+		1 => joo
+count => 200
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4) AND item_description LIKE '%joo%'
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid,d.`quantity`,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4) AND item_description LIKE '%joo%' LIMIT 0,200
+
+Done in 0.013988018035889ms
+
+
+
+====================================
+Log started, 13/02/2017 11:02:12
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => quantity
+		1 => quantity
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+rules => 
+	0 => 
+		0 => item_description
+		1 => jo
+count => 200
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4) AND item_description LIKE '%jo%'
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid,d.`quantity`,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4) AND item_description LIKE '%jo%' LIMIT 0,200
+
+Done in 0.015087842941284ms
+
+
+
+====================================
+Log started, 13/02/2017 11:02:13
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => quantity
+		1 => quantity
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+rules => 
+	0 => 
+		0 => item_description
+		1 => jog
+count => 200
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4) AND item_description LIKE '%jog%'
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid,d.`quantity`,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4) AND item_description LIKE '%jog%' LIMIT 0,200
+
+Done in 0.017506837844849ms
+
+
+
+====================================
+Log started, 13/02/2017 11:02:28
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => quantity
+		1 => quantity
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+count => 200
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4)
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid,d.`quantity`,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4) LIMIT 0,200
+
+Done in 0.020693063735962ms
+
+
+
+====================================
+Log started, 13/02/2017 11:02:41
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => quantity
+		1 => quantity
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+count => 200
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4)
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid,d.`quantity`,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4) LIMIT 0,200
+
+Done in 0.019910097122192ms
+
+
+
+====================================
+Log started, 13/02/2017 11:02:45
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => quantity
+		1 => quantity
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+rules => 
+	0 => 
+		0 => item_description
+		1 => jogo
+count => 200
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4) AND item_description LIKE '%jogo%'
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid,d.`quantity`,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4) AND item_description LIKE '%jogo%' LIMIT 0,200
+
+Done in 0.014164924621582ms
+
+
+
+====================================
+Log started, 13/02/2017 11:02:39
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => quantity
+		1 => quantity
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+count => 200
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4)
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid,d.`quantity`,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4) LIMIT 0,200
+
+Done in 0.02224588394165ms
+
+
+
+====================================
+Log started, 13/02/2017 11:02:42
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => quantity
+		1 => quantity
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+rules => 
+	0 => 
+		0 => item_description
+		1 => jogo
+count => 200
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4) AND item_description LIKE '%jogo%'
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid,d.`quantity`,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4) AND item_description LIKE '%jogo%' LIMIT 0,200
+
+Done in 0.01370096206665ms
+
+
+
+====================================
+Log started, 13/02/2017 11:02:17
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => quantity
+		1 => quantity
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+count => 200
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4)
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid,d.`quantity`,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4) LIMIT 0,200
+
+Done in 0.022626161575317ms
+
+
+
+====================================
+Log started, 13/02/2017 11:02:20
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => quantity
+		1 => quantity
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+rules => 
+	0 => 
+		0 => item_description
+		1 => MAI
+count => 200
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4) AND item_description LIKE '%MAI%'
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid,d.`quantity`,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4) AND item_description LIKE '%MAI%' LIMIT 0,200
+
+Done in 0.016515016555786ms
+
+
+
+====================================
+Log started, 13/02/2017 11:02:34
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => quantity
+		1 => quantity
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+count => 200
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4)
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid,d.`quantity`,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4) LIMIT 0,200
+
+Done in 0.058222055435181ms
+
+
+
+====================================
+Log started, 13/02/2017 11:02:37
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => quantity
+		1 => quantity
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+rules => 
+	0 => 
+		0 => item_description
+		1 => MAI
+count => 200
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4) AND item_description LIKE '%MAI%'
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid,d.`quantity`,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4) AND item_description LIKE '%MAI%' LIMIT 0,200
+
+Done in 0.0095760822296143ms
+
+
+
+====================================
+Log started, 13/02/2017 11:02:57
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => quantity
+		1 => quantity
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+count => 200
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4)
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid,d.`quantity`,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4) LIMIT 0,200
+
+Done in 0.030776977539062ms
+
+
+
+====================================
+Log started, 13/02/2017 11:02:00
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => quantity
+		1 => quantity
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+rules => 
+	0 => 
+		0 => item_description
+		1 => jogoo
+count => 200
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4) AND item_description LIKE '%jogoo%'
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid,d.`quantity`,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4) AND item_description LIKE '%jogoo%' LIMIT 0,200
+
+Done in 0.011817932128906ms
+
+
+
+====================================
+Log started, 13/02/2017 12:02:50
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => quantity
+		1 => quantity
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+count => 200
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4)
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid,d.`quantity`,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4) LIMIT 0,200
+
+Done in 0.030758857727051ms
+
+
+
+====================================
+Log started, 13/02/2017 12:02:52
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => quantity
+		1 => quantity
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+rules => 
+	0 => 
+		0 => item_description
+		1 => jogo
+count => 200
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4) AND item_description LIKE '%jogo%'
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid,d.`quantity`,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4) AND item_description LIKE '%jogo%' LIMIT 0,200
+
+Done in 0.042490005493164ms
+
+
+
+====================================
+Log started, 13/02/2017 12:02:34
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => quantity
+		1 => quantity
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+rules => 
+	0 => 
+		0 => item_description
+		1 => j
+count => 200
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4) AND item_description LIKE '%j%'
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid,d.`quantity`,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4) AND item_description LIKE '%j%' LIMIT 0,200
+
+Done in 0.010011911392212ms
+
+
+
+====================================
+Log started, 13/02/2017 12:02:36
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => quantity
+		1 => quantity
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+rules => 
+	0 => 
+		0 => item_description
+		1 => jjog
+count => 200
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4) AND item_description LIKE '%jjog%'
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid,d.`quantity`,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4) AND item_description LIKE '%jjog%' LIMIT 0,200
+
+Done in 0.01244592666626ms
+
+
+
+====================================
+Log started, 13/02/2017 12:02:40
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => quantity
+		1 => quantity
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+count => 200
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4)
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid,d.`quantity`,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4) LIMIT 0,200
+
+Done in 0.029908895492554ms
+
+
+
+====================================
+Log started, 13/02/2017 12:02:44
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => quantity
+		1 => quantity
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+rules => 
+	0 => 
+		0 => item_description
+		1 => jogoo
+count => 200
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4) AND item_description LIKE '%jogoo%'
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid,d.`quantity`,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4) AND item_description LIKE '%jogoo%' LIMIT 0,200
+
+Done in 0.012264966964722ms
+
+
+
+====================================
+Log started, 13/02/2017 12:02:25
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => quantity
+		1 => quantity
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+count => 200
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4)
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid,d.`quantity`,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4) LIMIT 0,200
+
+Done in 0.048399209976196ms
+
+
+
+====================================
+Log started, 13/02/2017 12:02:29
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => quantity
+		1 => quantity
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+rules => 
+	0 => 
+		0 => item_description
+		1 => jogo
+count => 200
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4) AND item_description LIKE '%jogo%'
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid,d.`quantity`,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4) AND item_description LIKE '%jogo%' LIMIT 0,200
+
+Done in 0.01823902130127ms
+
+
+
+====================================
+Log started, 13/02/2017 12:02:05
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => quantity
+		1 => quantity
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+count => 200
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4)
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid,d.`quantity`,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4) LIMIT 0,200
+
+Done in 0.023300170898438ms
+
+
+
+====================================
+Log started, 13/02/2017 12:02:06
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => quantity
+		1 => quantity
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+rules => 
+	0 => 
+		0 => item_description
+		1 => mea
+count => 200
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4) AND item_description LIKE '%mea%'
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid,d.`quantity`,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4) AND item_description LIKE '%mea%' LIMIT 0,200
+
+Done in 0.010600805282593ms
+
+
+
+====================================
+Log started, 13/02/2017 12:02:02
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => quantity
+		1 => quantity
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+count => 200
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4)
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid,d.`quantity`,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4) LIMIT 0,200
+
+Done in 0.035060882568359ms
+
+
+
+====================================
+Log started, 13/02/2017 12:02:05
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => quantity
+		1 => quantity
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+rules => 
+	0 => 
+		0 => item_description
+		1 => mea
+count => 200
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4) AND item_description LIKE '%mea%'
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid,d.`quantity`,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') and item_status NOT IN (4) AND item_description LIKE '%mea%' LIMIT 0,200
+
+Done in 0.01825213432312ms
+
+
+
+====================================
+Log started, 13/02/2017 12:02:41
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => reorderlevel
+		1 => reorderlevel
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+count => 200
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') AND item_status NOT IN (4) AND d.`quantity`>0 
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid, d.quantity,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') AND item_status NOT IN (4) AND d.`quantity`>0  LIMIT 0,200
+
+Done in 0.035245895385742ms
+
+
+
+====================================
+Log started, 13/02/2017 12:02:44
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => reorderlevel
+		1 => reorderlevel
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+rules => 
+	0 => 
+		0 => item_description
+		1 => mea
+count => 200
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') AND item_status NOT IN (4) AND d.`quantity`>0  AND item_description LIKE '%mea%'
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid, d.quantity,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') AND item_status NOT IN (4) AND d.`quantity`>0  AND item_description LIKE '%mea%' LIMIT 0,200
+
+Done in 0.011860847473145ms
+
+
+
+====================================
+Log started, 23/03/2017 04:03:26
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => req_date
+		1 => req_date
+	1 => 
+		0 => req_time
+		1 => req_time
+	2 => 
+		0 => req_no
+		1 => req_no
+	3 => 
+		0 => store_loc
+		1 => store_loc
+	4 => 
+		0 => Store_desc
+		1 => Store_desc
+	5 => 
+		0 => sup_storeId
+		1 => sup_storeId
+	6 => 
+		0 => sup_storeDesc
+		1 => sup_storeDesc
+	7 => 
+		0 => status
+		1 => status
+	8 => 
+		0 => input_user
+		1 => input_user
+id => 
+	0 => id
+	1 => id
+table => 
+	0 =>  care_ke_internalreq 
+	1 =>  care_ke_internalreq 
+count => 1000
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_ke_internalreq  WHERE `status`='pending' and sup_storeid like 'DISPENS%' group by req_no
+
+Exec SQL: SELECT  *  FROM  care_ke_internalreq  WHERE `status`='pending' and sup_storeid like 'DISPENS%' group by req_no LIMIT 0,1000
+
+Done in 0.030783891677856ms
+
+
+
+====================================
+Log started, 23/03/2017 04:03:27
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => item_id
+		1 => item_id
+	1 => 
+		0 => Item_desc
+		1 => Item_desc
+	2 => 
+		0 => qty
+		1 => qty
+	3 => 
+		0 => price
+		1 => price
+	4 => 
+		0 => qty_issued
+		1 => qty_issued
+	5 => 
+		0 => balance
+		1 => balance
+	6 => 
+		0 => Qty_In_Store
+		1 => Qty_In_Store
+	7 => 
+		0 => select item_id
+		1 => select item_id
+	8 => 
+		0 => Item_desc
+		1 => Item_desc
+	9 => 
+		0 => qty
+		1 => qty
+	10 => 
+		0 => price
+		1 => price
+	11 => 
+		0 => qty_issued
+		1 => qty_issued
+	12 => 
+		0 => balance
+		1 => balance
+	13 => 
+		0 => s.quantity AS Qty_In_Store
+     from care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid` WHERE s.loccode='GEN' AND req_no='713' and status='pending'
+		1 => loccode='GEN' AND req_no='713' and status='pending'
+id => 
+	0 => id
+	1 => id
+table => 
+	0 =>  care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid` 
+	1 => `stockid` 
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid`  WHERE  s.loccode='GEN' AND req_no='713' and status='pending'
+
+Exec SQL: SELECT  item_id,Item_desc,qty,price,qty_issued,balance,s.quantity AS Qty_In_Store
+      FROM  care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid`  WHERE  s.loccode='GEN' AND req_no='713' and status='pending' LIMIT 0,100
+
+Done in 0.0080881118774414ms
+
+
+
+====================================
+Log started, 23/03/2017 04:03:29
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => item_id
+		1 => item_id
+	1 => 
+		0 => Item_desc
+		1 => Item_desc
+	2 => 
+		0 => qty
+		1 => qty
+	3 => 
+		0 => price
+		1 => price
+	4 => 
+		0 => qty_issued
+		1 => qty_issued
+	5 => 
+		0 => balance
+		1 => balance
+	6 => 
+		0 => Qty_In_Store
+		1 => Qty_In_Store
+	7 => 
+		0 => select item_id
+		1 => select item_id
+	8 => 
+		0 => Item_desc
+		1 => Item_desc
+	9 => 
+		0 => qty
+		1 => qty
+	10 => 
+		0 => price
+		1 => price
+	11 => 
+		0 => qty_issued
+		1 => qty_issued
+	12 => 
+		0 => balance
+		1 => balance
+	13 => 
+		0 => s.quantity AS Qty_In_Store
+     from care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid` WHERE s.loccode='GEN' AND req_no='745' and status='pending'
+		1 => loccode='GEN' AND req_no='745' and status='pending'
+id => 
+	0 => id
+	1 => id
+table => 
+	0 =>  care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid` 
+	1 => `stockid` 
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid`  WHERE  s.loccode='GEN' AND req_no='745' and status='pending'
+
+Exec SQL: SELECT  item_id,Item_desc,qty,price,qty_issued,balance,s.quantity AS Qty_In_Store
+      FROM  care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid`  WHERE  s.loccode='GEN' AND req_no='745' and status='pending' LIMIT 0,100
+
+Done in 0.0094919204711914ms
+
+
+
+====================================
+Log started, 23/03/2017 04:03:32
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => item_id
+		1 => item_id
+	1 => 
+		0 => Item_desc
+		1 => Item_desc
+	2 => 
+		0 => qty
+		1 => qty
+	3 => 
+		0 => price
+		1 => price
+	4 => 
+		0 => qty_issued
+		1 => qty_issued
+	5 => 
+		0 => balance
+		1 => balance
+	6 => 
+		0 => Qty_In_Store
+		1 => Qty_In_Store
+	7 => 
+		0 => select item_id
+		1 => select item_id
+	8 => 
+		0 => Item_desc
+		1 => Item_desc
+	9 => 
+		0 => qty
+		1 => qty
+	10 => 
+		0 => price
+		1 => price
+	11 => 
+		0 => qty_issued
+		1 => qty_issued
+	12 => 
+		0 => balance
+		1 => balance
+	13 => 
+		0 => s.quantity AS Qty_In_Store
+     from care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid` WHERE s.loccode='GEN' AND req_no='1000547' and status='pending'
+		1 => loccode='GEN' AND req_no='1000547' and status='pending'
+id => 
+	0 => id
+	1 => id
+table => 
+	0 =>  care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid` 
+	1 => `stockid` 
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid`  WHERE  s.loccode='GEN' AND req_no='1000547' and status='pending'
+
+Exec SQL: SELECT  item_id,Item_desc,qty,price,qty_issued,balance,s.quantity AS Qty_In_Store
+      FROM  care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid`  WHERE  s.loccode='GEN' AND req_no='1000547' and status='pending' LIMIT 0,100
+
+Done in 0.011357069015503ms
+
+
+
+====================================
+Log started, 23/03/2017 04:03:50
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => reorderlevel
+		1 => reorderlevel
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+count => 200
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','44') AND item_status NOT IN (4) AND d.`quantity`>0 
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid, d.quantity,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','44') AND item_status NOT IN (4) AND d.`quantity`>0  LIMIT 0,200
+
+Done in 0.032369136810303ms
+
+
+
+====================================
+Log started, 23/03/2017 04:03:12
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => reorderlevel
+		1 => reorderlevel
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+rules => 
+	0 => 
+		0 => item_description
+		1 => PA
+count => 200
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','44') AND item_status NOT IN (4) AND d.`quantity`>0  AND item_description LIKE '%PA%'
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid, d.quantity,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','44') AND item_status NOT IN (4) AND d.`quantity`>0  AND item_description LIKE '%PA%' LIMIT 0,200
+
+Done in 0.01628303527832ms
+
+
+
+====================================
+Log started, 23/03/2017 04:03:12
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => reorderlevel
+		1 => reorderlevel
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+rules => 
+	0 => 
+		0 => item_description
+		1 => P
+count => 200
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','44') AND item_status NOT IN (4) AND d.`quantity`>0  AND item_description LIKE '%P%'
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid, d.quantity,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','44') AND item_status NOT IN (4) AND d.`quantity`>0  AND item_description LIKE '%P%' LIMIT 0,200
+
+Done in 0.012188911437988ms
+
+
+
+====================================
+Log started, 23/03/2017 04:03:13
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => reorderlevel
+		1 => reorderlevel
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+rules => 
+	0 => 
+		0 => item_description
+		1 => PPLA
+count => 200
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','44') AND item_status NOT IN (4) AND d.`quantity`>0  AND item_description LIKE '%PPLA%'
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid, d.quantity,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','44') AND item_status NOT IN (4) AND d.`quantity`>0  AND item_description LIKE '%PPLA%' LIMIT 0,200
+
+Done in 0.0069959163665771ms
+
+
+
+====================================
+Log started, 23/03/2017 04:03:29
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => reorderlevel
+		1 => reorderlevel
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+count => 200
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','44') AND item_status NOT IN (4) AND d.`quantity`>0 
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid, d.quantity,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','44') AND item_status NOT IN (4) AND d.`quantity`>0  LIMIT 0,200
+
+Done in 0.01703405380249ms
+
+
+
+====================================
+Log started, 23/03/2017 04:03:50
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => reorderlevel
+		1 => reorderlevel
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+count => 200
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','44')
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid, d.quantity,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','44') LIMIT 0,200
+
+Done in 0.064543962478638ms
+
+
+
+====================================
+Log started, 23/03/2017 04:03:26
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => reorderlevel
+		1 => reorderlevel
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+count => 200
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','44')
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid, d.quantity,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','44') LIMIT 0,200
+
+Done in 0.024070978164673ms
+
+
+
+====================================
+Log started, 23/03/2017 04:03:31
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => reorderlevel
+		1 => reorderlevel
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+rules => 
+	0 => 
+		0 => item_description
+		1 => TOIL
+count => 200
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','44') AND item_description LIKE '%TOIL%'
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid, d.quantity,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','44') AND item_description LIKE '%TOIL%' LIMIT 0,200
+
+Done in 0.0062379837036133ms
+
+
+
+====================================
+Log started, 23/03/2017 04:03:45
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => req_date
+		1 => req_date
+	1 => 
+		0 => req_time
+		1 => req_time
+	2 => 
+		0 => req_no
+		1 => req_no
+	3 => 
+		0 => store_loc
+		1 => store_loc
+	4 => 
+		0 => Store_desc
+		1 => Store_desc
+	5 => 
+		0 => sup_storeId
+		1 => sup_storeId
+	6 => 
+		0 => sup_storeDesc
+		1 => sup_storeDesc
+	7 => 
+		0 => status
+		1 => status
+	8 => 
+		0 => input_user
+		1 => input_user
+id => 
+	0 => id
+	1 => id
+table => 
+	0 =>  care_ke_internalreq 
+	1 =>  care_ke_internalreq 
+count => 1000
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_ke_internalreq  WHERE `status`='pending' and sup_storeid like 'GEN%' group by req_no
+
+Exec SQL: SELECT  *  FROM  care_ke_internalreq  WHERE `status`='pending' and sup_storeid like 'GEN%' group by req_no LIMIT 0,1000
+
+Done in 0.01294207572937ms
+
+
+
+====================================
+Log started, 23/03/2017 04:03:48
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => item_id
+		1 => item_id
+	1 => 
+		0 => Item_desc
+		1 => Item_desc
+	2 => 
+		0 => qty
+		1 => qty
+	3 => 
+		0 => price
+		1 => price
+	4 => 
+		0 => qty_issued
+		1 => qty_issued
+	5 => 
+		0 => balance
+		1 => balance
+	6 => 
+		0 => Qty_In_Store
+		1 => Qty_In_Store
+	7 => 
+		0 => select item_id
+		1 => select item_id
+	8 => 
+		0 => Item_desc
+		1 => Item_desc
+	9 => 
+		0 => qty
+		1 => qty
+	10 => 
+		0 => price
+		1 => price
+	11 => 
+		0 => qty_issued
+		1 => qty_issued
+	12 => 
+		0 => balance
+		1 => balance
+	13 => 
+		0 => s.quantity AS Qty_In_Store
+     from care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid` WHERE s.loccode='GEN' AND req_no='1000567' and status='pending'
+		1 => loccode='GEN' AND req_no='1000567' and status='pending'
+id => 
+	0 => id
+	1 => id
+table => 
+	0 =>  care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid` 
+	1 => `stockid` 
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid`  WHERE  s.loccode='GEN' AND req_no='1000567' and status='pending'
+
+Exec SQL: SELECT  item_id,Item_desc,qty,price,qty_issued,balance,s.quantity AS Qty_In_Store
+      FROM  care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid`  WHERE  s.loccode='GEN' AND req_no='1000567' and status='pending' LIMIT 0,100
+
+Done in 0.011920928955078ms
+
+
+
+====================================
+Log started, 23/03/2017 04:03:52
+====================================
+
+Edit operation started [GRID]
+1_gr_id => 1
+1_c0 => GCLT01
+1_c1 => Toilet Papers (toilex)
+1_c2 => 1
+1_c3 => 750.00
+1_c4 => 1
+1_c5 => 0
+1_c6 => 0
+1_!nativeeditor_status => updated
+ids => 1
+
+Row data [1]
+gr_id => 1
+0 => GCLT01
+1 => Toilet Papers (toilex)
+2 => 1
+3 => 750.00
+4 => 1
+5 => 0
+6 => 0
+!nativeeditor_status => updated
+
+Exec SQL: UPDATE  care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid`  SET item_id='GCLT01',Item_desc='',qty='',price='',qty_issued='',balance='',Qty_In_Store='0',select item_id='',Item_desc='',qty='',price='',qty_issued='',balance='',s.quantity AS Qty_In_Store
+     from care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid` WHERE s.loccode='GEN' AND req_no='1000567' and status='pending'='' WHERE id='1'
+
+MySQL error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'select item_id='',Item_desc='',qty='',price='',qty_issued='',balance='',s.quanti' at line 1
+
+Edit operation finished
+0 => action:error; sid:1; tid:1;
+
+Done in 0.0049312114715576ms
+
+
+
+====================================
+Log started, 27/03/2017 10:03:44
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => reorderlevel
+		1 => reorderlevel
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+count => 200
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','44')
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid, d.quantity,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','44') LIMIT 0,200
+
+Done in 0.15618586540222ms
+
+
+
+====================================
+Log started, 27/03/2017 10:03:32
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => reorderlevel
+		1 => reorderlevel
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+rules => 
+	0 => 
+		0 => item_description
+		1 => RI
+count => 200
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') AND item_description LIKE '%RI%'
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid, d.quantity,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') AND item_description LIKE '%RI%' LIMIT 0,200
+
+Done in 0.049344062805176ms
+
+
+
+====================================
+Log started, 27/03/2017 10:03:33
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => reorderlevel
+		1 => reorderlevel
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+rules => 
+	0 => 
+		0 => item_description
+		1 => RIC
+count => 200
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') AND item_description LIKE '%RIC%'
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid, d.quantity,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') AND item_description LIKE '%RIC%' LIMIT 0,200
+
+Done in 0.020653009414673ms
+
+
+
+====================================
+Log started, 29/03/2017 12:03:08
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => reorderlevel
+		1 => reorderlevel
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+count => 200
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT')
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid, d.quantity,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') LIMIT 0,200
+
+Done in 0.21043491363525ms
+
+
+
+====================================
+Log started, 29/03/2017 12:03:13
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => reorderlevel
+		1 => reorderlevel
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+rules => 
+	0 => 
+		0 => item_description
+		1 => rice
+count => 200
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') AND item_description LIKE '%rice%'
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid, d.quantity,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') AND item_description LIKE '%rice%' LIMIT 0,200
+
+Done in 0.011368036270142ms
+
+
+
+====================================
+Log started, 29/03/2017 01:03:35
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => req_date
+		1 => req_date
+	1 => 
+		0 => req_time
+		1 => req_time
+	2 => 
+		0 => req_no
+		1 => req_no
+	3 => 
+		0 => store_loc
+		1 => store_loc
+	4 => 
+		0 => Store_desc
+		1 => Store_desc
+	5 => 
+		0 => sup_storeId
+		1 => sup_storeId
+	6 => 
+		0 => sup_storeDesc
+		1 => sup_storeDesc
+	7 => 
+		0 => status
+		1 => status
+	8 => 
+		0 => input_user
+		1 => input_user
+id => 
+	0 => id
+	1 => id
+table => 
+	0 =>  care_ke_internalreq 
+	1 =>  care_ke_internalreq 
+count => 1000
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_ke_internalreq  WHERE `status`='pending' and sup_storeid like 'KIT%' group by req_no
+
+mysql_result(): Unable to jump to row 0 on MySQL result index 27 at C:\xampp\htdocs\litein\include\dhtmlxConnector\codebase\db_mysql.php line 17
+
+Exec SQL: SELECT  *  FROM  care_ke_internalreq  WHERE `status`='pending' and sup_storeid like 'KIT%' group by req_no LIMIT 0,1000
+
+Done in 0.12873291969299ms
+
+
+
+====================================
+Log started, 29/03/2017 02:03:26
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => reorderlevel
+		1 => reorderlevel
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+count => 200
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT')
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid, d.quantity,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') LIMIT 0,200
+
+Done in 0.10883116722107ms
+
+
+
+====================================
+Log started, 29/03/2017 02:03:47
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => reorderlevel
+		1 => reorderlevel
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+count => 200
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT')
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid, d.quantity,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') LIMIT 0,200
+
+Done in 0.034135103225708ms
+
+
+
+====================================
+Log started, 29/03/2017 02:03:36
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => reorderlevel
+		1 => reorderlevel
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+rules => 
+	0 => 
+		0 => item_description
+		1 => RICE
+count => 200
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') AND item_description LIKE '%RICE%'
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid, d.quantity,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') AND item_description LIKE '%RICE%' LIMIT 0,200
+
+Done in 0.025229930877686ms
+
+
+
+====================================
+Log started, 29/03/2017 02:03:15
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => reorderlevel
+		1 => reorderlevel
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+count => 200
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT')
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid, d.quantity,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') LIMIT 0,200
+
+Done in 0.1552951335907ms
+
+
+
+====================================
+Log started, 29/03/2017 02:03:19
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => reorderlevel
+		1 => reorderlevel
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+rules => 
+	0 => 
+		0 => item_description
+		1 => RICE
+count => 200
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') AND item_description LIKE '%RICE%'
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid, d.quantity,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') AND item_description LIKE '%RICE%' LIMIT 0,200
+
+Done in 0.024209022521973ms
+
+
+
+====================================
+Log started, 29/03/2017 02:03:44
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => req_date
+		1 => req_date
+	1 => 
+		0 => req_time
+		1 => req_time
+	2 => 
+		0 => req_no
+		1 => req_no
+	3 => 
+		0 => store_loc
+		1 => store_loc
+	4 => 
+		0 => Store_desc
+		1 => Store_desc
+	5 => 
+		0 => sup_storeId
+		1 => sup_storeId
+	6 => 
+		0 => sup_storeDesc
+		1 => sup_storeDesc
+	7 => 
+		0 => status
+		1 => status
+	8 => 
+		0 => input_user
+		1 => input_user
+id => 
+	0 => id
+	1 => id
+table => 
+	0 =>  care_ke_internalreq 
+	1 =>  care_ke_internalreq 
+count => 1000
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_ke_internalreq  WHERE `status`='pending' and sup_storeid like 'KIT%' group by req_no
+
+Exec SQL: SELECT  *  FROM  care_ke_internalreq  WHERE `status`='pending' and sup_storeid like 'KIT%' group by req_no LIMIT 0,1000
+
+Done in 0.023209810256958ms
+
+
+
+====================================
+Log started, 29/03/2017 02:03:45
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => item_id
+		1 => item_id
+	1 => 
+		0 => Item_desc
+		1 => Item_desc
+	2 => 
+		0 => qty
+		1 => qty
+	3 => 
+		0 => price
+		1 => price
+	4 => 
+		0 => qty_issued
+		1 => qty_issued
+	5 => 
+		0 => balance
+		1 => balance
+	6 => 
+		0 => Qty_In_Store
+		1 => Qty_In_Store
+	7 => 
+		0 => select item_id
+		1 => select item_id
+	8 => 
+		0 => Item_desc
+		1 => Item_desc
+	9 => 
+		0 => qty
+		1 => qty
+	10 => 
+		0 => price
+		1 => price
+	11 => 
+		0 => qty_issued
+		1 => qty_issued
+	12 => 
+		0 => balance
+		1 => balance
+	13 => 
+		0 => s.quantity AS Qty_In_Store
+     from care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid` WHERE s.loccode='GEN' AND req_no='1000601' and status='pending'
+		1 => loccode='GEN' AND req_no='1000601' and status='pending'
+id => 
+	0 => id
+	1 => id
+table => 
+	0 =>  care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid` 
+	1 => `stockid` 
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid`  WHERE  s.loccode='GEN' AND req_no='1000601' and status='pending'
+
+Exec SQL: SELECT  item_id,Item_desc,qty,price,qty_issued,balance,s.quantity AS Qty_In_Store
+      FROM  care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid`  WHERE  s.loccode='GEN' AND req_no='1000601' and status='pending' LIMIT 0,100
+
+Done in 0.041049957275391ms
+
+
+
+====================================
+Log started, 29/03/2017 02:03:12
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => item_id
+		1 => item_id
+	1 => 
+		0 => Item_desc
+		1 => Item_desc
+	2 => 
+		0 => qty
+		1 => qty
+	3 => 
+		0 => price
+		1 => price
+	4 => 
+		0 => qty_issued
+		1 => qty_issued
+	5 => 
+		0 => balance
+		1 => balance
+	6 => 
+		0 => Qty_In_Store
+		1 => Qty_In_Store
+	7 => 
+		0 => select item_id
+		1 => select item_id
+	8 => 
+		0 => Item_desc
+		1 => Item_desc
+	9 => 
+		0 => qty
+		1 => qty
+	10 => 
+		0 => price
+		1 => price
+	11 => 
+		0 => qty_issued
+		1 => qty_issued
+	12 => 
+		0 => balance
+		1 => balance
+	13 => 
+		0 => s.quantity AS Qty_In_Store
+     from care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid` WHERE s.loccode='GEN' AND req_no='1000601' and status='pending'
+		1 => loccode='GEN' AND req_no='1000601' and status='pending'
+id => 
+	0 => id
+	1 => id
+table => 
+	0 =>  care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid` 
+	1 => `stockid` 
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid`  WHERE  s.loccode='GEN' AND req_no='1000601' and status='pending'
+
+Exec SQL: SELECT  item_id,Item_desc,qty,price,qty_issued,balance,s.quantity AS Qty_In_Store
+      FROM  care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid`  WHERE  s.loccode='GEN' AND req_no='1000601' and status='pending' LIMIT 0,100
+
+Done in 0.030086994171143ms
+
+
+
+====================================
+Log started, 29/03/2017 02:03:47
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => item_id
+		1 => item_id
+	1 => 
+		0 => Item_desc
+		1 => Item_desc
+	2 => 
+		0 => qty
+		1 => qty
+	3 => 
+		0 => price
+		1 => price
+	4 => 
+		0 => qty_issued
+		1 => qty_issued
+	5 => 
+		0 => balance
+		1 => balance
+	6 => 
+		0 => Qty_In_Store
+		1 => Qty_In_Store
+	7 => 
+		0 => select item_id
+		1 => select item_id
+	8 => 
+		0 => Item_desc
+		1 => Item_desc
+	9 => 
+		0 => qty
+		1 => qty
+	10 => 
+		0 => price
+		1 => price
+	11 => 
+		0 => qty_issued
+		1 => qty_issued
+	12 => 
+		0 => balance
+		1 => balance
+	13 => 
+		0 => s.quantity AS Qty_In_Store
+     from care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid` WHERE s.loccode in 
+		1 => 'GEN'
+	14 => 
+		0 => 'KIT'
+		1 =>  AND req_no='1000601' and status='pending'
+id => 
+	0 => id
+	1 => id
+table => 
+	0 =>  care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid` 
+	1 => `stockid` 
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid`  WHERE  s.loccode in ('GEN','KIT') AND req_no='1000601' and status='pending'
+
+Exec SQL: SELECT  item_id,Item_desc,qty,price,qty_issued,balance,s.quantity AS Qty_In_Store
+      FROM  care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid`  WHERE  s.loccode in ('GEN','KIT') AND req_no='1000601' and status='pending' LIMIT 0,100
+
+Done in 0.041944026947021ms
+
+
+
+====================================
+Log started, 26/05/2017 05:05:04
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => reorderlevel
+		1 => reorderlevel
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+count => 200
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT')
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid, d.quantity,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') LIMIT 0,200
+
+Done in 0.41067290306091ms
+
+
+
+====================================
+Log started, 26/05/2017 05:05:07
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => reorderlevel
+		1 => reorderlevel
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+rules => 
+	0 => 
+		0 => item_description
+		1 => suag
+count => 200
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') AND item_description LIKE '%suag%'
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid, d.quantity,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') AND item_description LIKE '%suag%' LIMIT 0,200
+
+Done in 0.079322099685669ms
+
+
+
+====================================
+Log started, 26/05/2017 05:05:09
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => reorderlevel
+		1 => reorderlevel
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+rules => 
+	0 => 
+		0 => item_description
+		1 => suga
+count => 200
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') AND item_description LIKE '%suga%'
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid, d.quantity,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') AND item_description LIKE '%suga%' LIMIT 0,200
+
+Done in 0.33279418945312ms
+
+
+
+====================================
+Log started, 26/05/2017 05:05:03
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => req_date
+		1 => req_date
+	1 => 
+		0 => req_time
+		1 => req_time
+	2 => 
+		0 => req_no
+		1 => req_no
+	3 => 
+		0 => store_loc
+		1 => store_loc
+	4 => 
+		0 => Store_desc
+		1 => Store_desc
+	5 => 
+		0 => sup_storeId
+		1 => sup_storeId
+	6 => 
+		0 => sup_storeDesc
+		1 => sup_storeDesc
+	7 => 
+		0 => status
+		1 => status
+	8 => 
+		0 => input_user
+		1 => input_user
+id => 
+	0 => id
+	1 => id
+table => 
+	0 =>  care_ke_internalreq 
+	1 =>  care_ke_internalreq 
+count => 1000
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_ke_internalreq  WHERE `status`='pending' and sup_storeid like 'KIT%' group by req_no
+
+Exec SQL: SELECT  *  FROM  care_ke_internalreq  WHERE `status`='pending' and sup_storeid like 'KIT%' group by req_no LIMIT 0,1000
+
+Done in 0.020050048828125ms
+
+
+
+====================================
+Log started, 26/05/2017 05:05:07
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => item_id
+		1 => item_id
+	1 => 
+		0 => Item_desc
+		1 => Item_desc
+	2 => 
+		0 => qty
+		1 => qty
+	3 => 
+		0 => price
+		1 => price
+	4 => 
+		0 => qty_issued
+		1 => qty_issued
+	5 => 
+		0 => balance
+		1 => balance
+	6 => 
+		0 => Qty_In_Store
+		1 => Qty_In_Store
+	7 => 
+		0 => select item_id
+		1 => select item_id
+	8 => 
+		0 => Item_desc
+		1 => Item_desc
+	9 => 
+		0 => qty
+		1 => qty
+	10 => 
+		0 => price
+		1 => price
+	11 => 
+		0 => qty_issued
+		1 => qty_issued
+	12 => 
+		0 => balance
+		1 => balance
+	13 => 
+		0 => s.quantity AS Qty_In_Store
+     from care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid` WHERE s.loccode in 
+		1 => 'GEN'
+	14 => 
+		0 => 'KIT'
+		1 =>  AND req_no='1001905' and status='pending'
+id => 
+	0 => id
+	1 => id
+table => 
+	0 =>  care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid` 
+	1 => `stockid` 
+count => 100
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid`  WHERE  s.loccode in ('GEN','KIT') AND req_no='1001905' and status='pending'
+
+Exec SQL: SELECT  item_id,Item_desc,qty,price,qty_issued,balance,s.quantity AS Qty_In_Store
+      FROM  care_ke_internalreq r LEFT JOIN maua.`locstock` s ON r.`item_id`=s.`stockid`  WHERE  s.loccode in ('GEN','KIT') AND req_no='1001905' and status='pending' LIMIT 0,100
+
+Done in 0.036487102508545ms
+
+
+
+====================================
+Log started, 28/02/2018 11:02:29
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => reorderlevel
+		1 => reorderlevel
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+count => 200
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') AND d.`quantity`>0
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid, d.quantity,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') AND d.`quantity`>0 LIMIT 0,200
+
+Done in 1.5295040607452ms
+
+
+
+====================================
+Log started, 01/03/2018 04:03:03
+====================================
+
+Ready for SQL generation
+field => 
+	0 => 
+		0 => partcode
+		1 => partcode
+	1 => 
+		0 => item_description
+		1 => item_description
+	2 => 
+		0 => quantity
+		1 => quantity
+	3 => 
+		0 => unit_price
+		1 => unit_price
+	4 => 
+		0 => reorderlevel
+		1 => reorderlevel
+id => 
+	0 => partcode
+	1 => partcode
+table => 
+	0 =>  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode 
+	1 => partcode 
+count => 200
+
+Exec SQL: SELECT  COUNT(*)  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') AND d.`quantity`>0
+
+Exec SQL: SELECT  DISTINCT c.partcode,c.item_description,d.stockid, d.quantity,c.unit_price,d.reorderlevel  FROM  care_tz_drugsandservices c
+      INNER JOIN maua.locstock d ON  d.stockid=c.partcode  WHERE  loccode IN ('GEN','KIT') AND d.`quantity`>0 LIMIT 0,200
+
+Done in 0.27822089195251ms
+

@@ -1,0 +1,104 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|align": "stretch",
+        "designer|userAlias": "pendingresults",
+        "designer|userClassName": "PendingResults",
+        "height": "100%",
+        "itemId": "pendingResults",
+        "layout": "hbox"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "title": "string",
+        "width": "auto",
+        "container|align": "string",
+        "itemId": "string",
+        "layout": "string"
+    },
+    "name": "MyPanel",
+    "designerId": "10b2d4b2-9485-4e12-9d45-a12316195abf",
+    "viewControllerInstanceId": "fbd4ceba-1ffb-4b89-80eb-2d3c65e25c76",
+    "viewModelInstanceId": "8d8bb3af-cc44-4128-bec1-5af8a26d5c73",
+    "cn": [
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "frame": true,
+                "margin": "5 5 0 5"
+            },
+            "configAlternates": {
+                "frame": "boolean",
+                "margin": "auto"
+            },
+            "name": "patientlists",
+            "designerId": "24fd8247-0bb2-4991-ba85-60b71be75a2a",
+            "masterInstanceId": "396edbc5-4270-4317-96aa-1b2008cef8aa"
+        },
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 452,
+                "margin": "5 5 0 0",
+                "padding": 3,
+                "width": 806
+            },
+            "configAlternates": {
+                "height": "auto",
+                "margin": "auto",
+                "padding": "auto",
+                "width": "auto"
+            },
+            "name": "MyFieldSet",
+            "designerId": "71f9fcd6-de27-42c0-91ab-f926afb3f6ee",
+            "cn": [
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "name": "patientdetails1",
+                    "designerId": "d3b8d2ab-d71b-44a1-ad2a-565e1a18fd60",
+                    "masterInstanceId": "0a51c86b-4955-40a4-b382-4f884e6a98b4"
+                },
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 278,
+                        "itemId": "testStatus"
+                    },
+                    "configAlternates": {
+                        "height": "auto",
+                        "itemId": "string"
+                    },
+                    "name": "MyFieldSet2",
+                    "designerId": "eda5269b-f13e-4682-8600-cfc191a91cb2"
+                }
+            ]
+        }
+    ]
+}

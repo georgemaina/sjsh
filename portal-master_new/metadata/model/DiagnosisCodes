@@ -1,0 +1,68 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "diagnosiscodes",
+        "designer|userClassName": "DiagnosisCodes"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "name": "MyModel",
+    "designerId": "e1868105-0a6c-4e11-99f7-e3de82bb3f6a",
+    "cn": [
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "CategoryTitle"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField81",
+            "designerId": "8ec9229f-0906-4eef-9a2c-76afcdfc96d8"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "FullCode"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField78",
+            "designerId": "f316ef2a-3310-44e2-8229-77e46c6a1de1"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "FullDescription"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField80",
+            "designerId": "0db06354-44de-4c11-9f6b-70e681e6cfe7"
+        }
+    ]
+}

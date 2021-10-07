@@ -1,0 +1,62 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "closeAction": "hide",
+        "container|align": "stretchmax",
+        "designer|userAlias": "customerbill",
+        "designer|userClassName": "CustomerBill",
+        "height": 587,
+        "layout": "vbox",
+        "maximizable": true,
+        "minimizable": true,
+        "title": "Customer Bill",
+        "width": 807
+    },
+    "configAlternates": {
+        "closeAction": "string",
+        "container|align": "string",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "layout": "string",
+        "maximizable": "boolean",
+        "minimizable": "boolean",
+        "title": "string",
+        "width": "auto",
+        "scrollable": "boolean"
+    },
+    "designerId": "eae13805-6034-4e52-ba0a-8e7eed5d9ebc",
+    "viewControllerInstanceId": "01013e80-d286-4435-818f-e1e7ae753245",
+    "viewModelInstanceId": "ca74f933-daec-48a2-a9fb-fdcc918618d4",
+    "cn": [
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onWindowBeforeHide",
+                "implHandler": [
+                    "this.removeAll();"
+                ],
+                "name": "beforehide",
+                "scope": "me"
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code",
+                "name": "string",
+                "scope": "string"
+            },
+            "name": "onWindowBeforeHide",
+            "designerId": "b311663d-6307-4d1f-b907-166bcb7bf6de"
+        }
+    ]
+}

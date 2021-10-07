@@ -1,0 +1,36 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "designer|userAlias": "prescriptions",
+        "designer|userClassName": "Prescriptions",
+        "model": "Prescriptions",
+        "storeId": "Prescriptions"
+    },
+    "configAlternates": {
+        "data": "array",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string",
+        "autoLoad": "boolean"
+    },
+    "designerId": "f4153150-5711-4278-965b-7bd403a387d3",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Memory",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyMemoryProxy",
+            "designerId": "5804dd6c-3ab5-4d55-a4eb-d526ae466cbb"
+        }
+    ]
+}

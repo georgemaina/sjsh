@@ -1,0 +1,79 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": false,
+        "autoSync": true,
+        "designer|userAlias": "anesthesiachartmonitors",
+        "designer|userClassName": "AnesthesiaChartMonitors",
+        "model": "Anesthesia_Monitors",
+        "storeId": "AnesthesiaChartMonitors"
+    },
+    "configAlternates": {
+        "autoLoad": "boolean",
+        "autoSync": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string"
+    },
+    "designerId": "5552a8c7-5862-42a1-9d16-f9e04f4c4135",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "../data/getDataFunctions.php?task=getAnesthesiaCharts&groupField=monitors"
+            },
+            "configAlternates": {
+                "url": "string"
+            },
+            "name": "MyAjaxProxy11",
+            "designerId": "948fad75-dc8d-483b-a8f7-4e62615690d1",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "chartsItems"
+                    },
+                    "configAlternates": {
+                        "root": "string"
+                    },
+                    "name": "MyJsonReader11",
+                    "designerId": "693de531-5344-4a69-9994-665959cd248c"
+                },
+                {
+                    "type": "Ext.data.writer.Json",
+                    "reference": {
+                        "name": "writer",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "encode": true,
+                        "root": "editedData"
+                    },
+                    "configAlternates": {
+                        "encode": "boolean",
+                        "root": "string"
+                    },
+                    "name": "MyJsonWriter2",
+                    "designerId": "1e256321-c385-41bd-a889-29979babb562"
+                }
+            ]
+        }
+    ]
+}

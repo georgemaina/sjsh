@@ -1,0 +1,53 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "drugcategory",
+        "designer|userClassName": "DrugCategory"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userAliasPrefix": "string",
+        "designer|userClassName": "string"
+    },
+    "name": "LabList1",
+    "designerId": "e28cc764-72df-44b6-997b-eafbf1c0dda4",
+    "cn": [
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "CatID"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField134",
+            "designerId": "e9f5f968-88a1-439a-966c-908ab82a0f51"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Category"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField135",
+            "designerId": "a0dbee16-33b1-4232-b920-cc983fd4f279"
+        }
+    ]
+}

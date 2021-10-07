@@ -1,0 +1,64 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "designer|userAlias": "consultations",
+        "designer|userClassName": "Consultations",
+        "model": "ItemsList",
+        "storeId": "Consultations"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string",
+        "autoLoad": "boolean"
+    },
+    "name": "MyJsonStore1",
+    "designerId": "fa37c624-e90d-4b84-a5d7-5f51f18a9513",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "extraParams": [
+                    "{searchParam:\"Yes\"}"
+                ],
+                "url": "../data/getProductsFunctions.php?task=getItemsList"
+            },
+            "configAlternates": {
+                "url": "string",
+                "extraParams": "object"
+            },
+            "name": "MyAjaxProxy8",
+            "designerId": "dabecf62-8f16-45d3-9446-3e45f2faa917",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "itemsList"
+                    },
+                    "configAlternates": {
+                        "rootProperty": "string"
+                    },
+                    "name": "MyJsonReader8",
+                    "designerId": "4b855dab-dd5a-4b3a-80eb-c8a9b32d9b19"
+                }
+            ]
+        }
+    ]
+}

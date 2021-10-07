@@ -1,0 +1,65 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "receiptslist",
+        "designer|userClassName": "ReceiptsList",
+        "model": "receipts",
+        "pageSize": 200,
+        "storeId": "ReceiptsList"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "pageSize": "number",
+        "storeId": "string"
+    },
+    "designerId": "ebff4f35-09b7-48b4-86e3-95011774e6af",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "extraParams": [
+                    " actionName: 'TranslationPaging',\r",
+                    "lanID: getSelectedLanguageID()"
+                ],
+                "url": "./data/getDataFunctions.php?task=getInvoicesReceipts&rptType=receipts"
+            },
+            "configAlternates": {
+                "extraParams": "object",
+                "url": "string"
+            },
+            "name": "MyAjaxProxy10",
+            "designerId": "04d6737b-9718-48de-85ba-7be581e922ba",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "invoiceLists"
+                    },
+                    "configAlternates": {
+                        "root": "string",
+                        "rootProperty": "string"
+                    },
+                    "name": "MyJsonReader10",
+                    "designerId": "79420bbc-8218-4333-ac82-f1832cb8a62a"
+                }
+            ]
+        }
+    ]
+}

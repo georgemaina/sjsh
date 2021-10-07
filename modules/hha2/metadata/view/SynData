@@ -1,0 +1,64 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "bodyPadding": 10,
+        "closable": true,
+        "collapsible": true,
+        "designer|snapToGrid": 5,
+        "designer|userAlias": "syncdata",
+        "designer|userClassName": "SynData",
+        "frame": true,
+        "height": 440,
+        "layout": "absolute",
+        "title": "Syncronise Data with Server",
+        "width": 496
+    },
+    "configAlternates": {
+        "bodyPadding": "auto",
+        "closable": "boolean",
+        "collapsible": "boolean",
+        "designer|snapToGrid": "number",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "frame": "boolean",
+        "height": "auto",
+        "layout": "string",
+        "title": "string",
+        "width": "auto",
+        "scrollable": "boolean"
+    },
+    "name": "MyForm",
+    "designerId": "0bd3adc0-d768-447e-9831-92c14279fa06",
+    "viewControllerInstanceId": "7b587491-b429-457a-89a6-2961386dcc60",
+    "viewModelInstanceId": "186ed888-2bfd-42a3-91d9-f104d3f4f17b",
+    "cn": [
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Server IP",
+                "layout|x": 30,
+                "layout|y": 30,
+                "width": 600
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyTextField34",
+            "designerId": "9796ac67-48f2-4e79-9a35-e682404a462c"
+        }
+    ]
+}

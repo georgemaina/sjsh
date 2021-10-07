@@ -1,0 +1,60 @@
+{
+    "type": "arraystore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "designer|userAlias": "departmentsstore",
+        "designer|userClassName": "DepartmentsStore",
+        "model": "Departments",
+        "storeId": "DepartmentsStore"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "autoLoad": "boolean",
+        "storeId": "string"
+    },
+    "name": "MyArrayStore",
+    "designerId": "24198d82-055d-4312-b7b7-d0eeca12a04e",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "../data/getPatientFunctions.php?caller=getDepartments"
+            },
+            "configAlternates": {
+                "url": "string"
+            },
+            "name": "MyAjaxProxy9",
+            "designerId": "705dde32-5f42-4f11-b25b-bef3c5f355bd",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "departments"
+                    },
+                    "configAlternates": {
+                        "rootProperty": "string"
+                    },
+                    "name": "MyJsonReader9",
+                    "designerId": "88f7b1e3-85ee-4a5c-83f3-31cb6553447d"
+                }
+            ]
+        }
+    ]
+}

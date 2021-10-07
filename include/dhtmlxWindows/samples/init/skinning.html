@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--conf
+<sample in_favorites="true">
+              <product version="1.0" edition="std"/>
+                     <modifications>
+                            <modified date="080307"/>
+                     </modifications>
+               <sampledescription><![CDATA[See how skins can be set dynamically. Just in one click.]]></sampledescription></sample>
+ --> 
+
+<html>
+<head>
+	<title>Skinning</title>
+	
+	<link rel="stylesheet" type="text/css" href="../../codebase/dhtmlxwindows.css">
+	<link rel="stylesheet" type="text/css" href="../../codebase/skins/dhtmlxwindows_dhx_black.css">
+	<link rel="stylesheet" type="text/css" href="../../codebase/skins/dhtmlxwindows_dhx_blue.css">
+	<script  src="../../codebase/dhtmlxcommon.js"></script>
+	<script  src="../../codebase/dhtmlxwindows.js"></script>
+</head>
+<body>
+<link rel='STYLESHEET' type='text/css' href='../common/style.css'>
+<table cellspacing="0" cellpadding="0" class="sample_header" border="0">
+	<tr valign="middle">
+		<!-- COMPONENT ICON -->
+		<td width="40" align="center"><img src="../common/dhtmlxwindows_icon.gif" border="0"></td>
+		<!-- COMPONENT NAME -->
+		<td width="150" align="left" nowrap="true">Sample: dhtmlxWindows</td>
+		<!-- SAMPLE TITLE -->
+		<td width="0" align="left" nowrap><b>Skinning</b></td>
+		<!-- LINK TO COMPONENT PAGE -->
+		<td width="0" align="right"><a href="http://www.dhtmlx.com/docs/products/dhtmlxWindows/index.shtml">dhtmlxWindows main page</a></td>
+		<!-- CLOSE BUTTON -->
+		<td width="50"><div class="sample_close"><a href="javascript:void(0);" onclick="self.close();"><img src="../common/sample_close.gif" width="14" height="14" border="0" alt="X"></a></div></td>
+	</tr>
+</table>
+
+<div style="margin: 20px; height: 400px;">
+	Select Skin: <select id="skinChooser" onchange="changeSkin(this);">
+		<optgroup label="DHX">
+			<option value="dhx_blue">DHX Blue</option>
+			<option value="dhx_black">DHX Black</option>
+		</optgroup>
+	</select>
+	
+	<br>
+	<br>
+	
+	<p1>required CSS file: </p1>
+	<div id="p1">dhtmlxwindows_dhx_blue.css</div>
+	
+</div>
+
+<div class='sample_code'><div class="hl-main"><pre><span class="hl-brackets">&lt;</span><span class="hl-reserved">head</span><span class="hl-brackets">&gt;</span><span class="hl-code">
+    </span><span class="hl-comment">&lt;!--</span><span class="hl-comment"> skin css file </span><span class="hl-comment">--&gt;</span><span class="hl-code">
+    </span><span class="hl-brackets">&lt;</span><span class="hl-reserved">link</span><span class="hl-code"> </span><span class="hl-var">rel</span><span class="hl-code">=</span><span class="hl-quotes">&quot;</span><span class="hl-string">stylesheet</span><span class="hl-quotes">&quot;</span><span class="hl-code"> </span><span class="hl-var">type</span><span class="hl-code">=</span><span class="hl-quotes">&quot;</span><span class="hl-string">text/css</span><span class="hl-quotes">&quot;</span><span class="hl-code"> </span><span class="hl-var">href</span><span class="hl-code">=</span><span class="hl-quotes">&quot;</span><span class="hl-string">../../codebase/skins/dhtmlxwindows_dhx_blue.css</span><span class="hl-quotes">&quot;</span><span class="hl-brackets">&gt;</span><span class="hl-code">
+</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">head</span><span class="hl-brackets">&gt;</span><span class="hl-code">
+ 
+</span><span class="hl-brackets">&lt;</span><span class="hl-reserved">script</span><span class="hl-brackets">&gt;</span><span class="hl-code"><div class="hl-main"><pre><span class="hl-code"> 
+        </span><span class="hl-reserved">var</span><span class="hl-code"> </span><span class="hl-identifier">dhxWins</span><span class="hl-code"> = </span><span class="hl-reserved">new</span><span class="hl-code"> </span><span class="hl-identifier">dhtmlXWindows</span><span class="hl-brackets">(</span><span class="hl-brackets">)</span><span class="hl-code">;
+    ...
+    </span><span class="hl-identifier">dhxWins</span><span class="hl-code">.</span><span class="hl-identifier">setSkin</span><span class="hl-brackets">(</span><span class="hl-quotes">&quot;</span><span class="hl-string">dhx_black</span><span class="hl-quotes">&quot;</span><span class="hl-brackets">)</span><span class="hl-code">;</span></pre></div></span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">script</span><span class="hl-brackets">&gt;</span></pre></div></div>
+
+<br>
+
+<table border="0" cellspacing="1" cellpadding="1" style="border: #909090 1px solid;">
+	<th align="left">Skin Name</th>
+	<th align="left">Corresponding CSS File</th>
+	<tr><td colspan="2" style="height:1px;font-size:1px;border-top: #CECECE 1px solid;">&nbsp;</td></tr>
+	<tr>
+		<td align="left" valign="top">DHX Blue</td>
+		<td align="left" valign="top">dhtmlxwindows_dhx_blue.css</td>
+	</tr>
+	<tr>
+		<td align="left" valign="top">DHX Black</td>
+		<td align="left" valign="top">dhtmlxwindows_dhx_black.css</td>
+	</tr>
+</table>
+
+<script>
+	
+	var dhxWins = new dhtmlXWindows();
+	dhxWins.enableAutoViewport(false);
+	dhxWins.setViewport(350, 50, 400, 400);
+	dhxWins.vp.style.border = "#909090 1px solid";
+	dhxWins.setImagePath("../../codebase/imgs/");
+	var wins = new Array();
+	for (var q=0; q<3; q++) {
+		wins[q] = dhxWins.createWindow("w"+q, 10+q*20, 10+q*15, 300, 250);
+		wins[q].setText("DHX Blue");
+		wins[q].denyPark();
+		wins[q].button("help").show();
+		wins[q].button("stick").show();
+		wins[q].button("close").disable();
+		wins[q].attachEvent("onClose",function(){});
+	}
+	
+	function changeSkin(obj) {
+		dhxWins.setSkin(obj.options[obj.selectedIndex].value);
+		for (var q=0; q<wins.length; q++) { wins[q].setText(obj.options[obj.selectedIndex].text); }
+		document.getElementById("p1").innerHTML = "dhtmlxwindows_"+obj.options[obj.selectedIndex].value+".css";
+	}
+	
+	document.getElementById("skinChooser").selectedIndex = 0;
+	
+</script>
+<!-- FOOTER -->
+<table callspacing="0" cellpadding="0" border="0" class="sample_footer"><tr><td style="padding-left: 8px;">&copy; <a href="http://www.dhtmlx.com">DHTMLX LTD</a>. All rights reserved</td></tr></table>
+<!-- FOOTER -->
+
+</body>

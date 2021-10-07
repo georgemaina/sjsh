@@ -1,0 +1,45 @@
+<html>
+<head>
+	<title>PARENT</title>
+	<script>
+		function closeWindow() {
+			// link to main document
+			/*
+			var mainDoc = this.frameElement.ownerDocument;
+			if (mainDoc.defaultView) {
+				// not ie case
+				mainDoc.defaultView.win.close();
+			} else {
+				// ie case
+				mainDoc.parentWindow.win.close();
+			}
+			*/
+			parent.dhxWins.window("w1").close();
+		}
+	</script>
+</head>
+<body>
+<link rel='STYLESHEET' type='text/css' href='../common/style.css'>
+<table cellspacing="0" cellpadding="0" class="sample_header" border="0">
+	<tr valign="middle">
+		<!-- COMPONENT ICON -->
+		<td width="40" align="center"><img src="../common/dhtmlxwindows_icon.gif" border="0"></td>
+		<!-- COMPONENT NAME -->
+		<td width="150" align="left" nowrap="true">Sample: dhtmlxWindows</td>
+		<!-- SAMPLE TITLE -->
+		<td width="0" align="left" nowrap><b>PARENT</b></td>
+		<!-- LINK TO COMPONENT PAGE -->
+		<td width="0" align="right"><a href="http://www.dhtmlx.com/docs/products/dhtmlxWindows/index.shtml">dhtmlxWindows main page</a></td>
+		<!-- CLOSE BUTTON -->
+		<td width="50"><div class="sample_close"><a href="javascript:void(0);" onclick="self.close();"><img src="../common/sample_close.gif" width="14" height="14" border="0" alt="X"></a></div></td>
+	</tr>
+</table>
+	<div style="margin: 10px;">
+		<input type="button" value="close window" onclick="closeWindow();">
+	</div>
+<!-- FOOTER -->
+<table callspacing="0" cellpadding="0" border="0" class="sample_footer"><tr><td style="padding-left: 8px;">&copy; <a href="http://www.dhtmlx.com">DHTMLX LTD</a>. All rights reserved</td></tr></table>
+<!-- FOOTER -->
+
+</body>
+</html>

@@ -1,0 +1,159 @@
+<html>
+
+<head>
+
+
+<link rel="STYLESHEET" type="text/css" href="../common/styles.css">
+</head>
+<body>
+	<table border="0" cellpadding="0" cellspacing="0" class="sample_header" zid="71">
+		<tbody zid="3">
+			<tr valign="center" zid="4">
+				<td align="center" width="10" zid="5">&nbsp;</td>
+				<td align="left" zid="6">
+					<p zid="224">
+						<a href="http://www.dhtmlx.com/" zid="7">DHTMLX</a> Documentation
+					</p>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<!--- CONTENT. Starts --->
+	<H1 id=urpm0>Custom loading types</H1>
+<BR id=o1if1>
+dhtmlxGrid 1.6+ allows to customize the incoming data format in many ways. But still you may need to define some custom format. This can be done with relatively little effort.<BR id=fywc0>
+For each new data format you need to defined 3 methods:<BR id=ltb20>
+<BR id=fywc1>
+<UL id=ldvs0>
+<LI id=ldvs1>grid._process_[type] - must process the incoming stream of data and separate it in rows;
+<LI id=ldvs2>grid._process_[type]_row - takes the data related to rows and processes it; 
+<LI id=ldvs3>grid._get_[type]_data - must provide the way to locate the value of a column inside the data row . </LI>
+</UL>
+<BR id=zutu1>
+For example, we have an XML in the following format:<BR id=ex4j0>
+<BR id=ex4j1>
+<BLOCKQUOTE id=nx7c0>&lt;data&gt;<BR id=ex4j2>
+&nbsp;&nbsp;&nbsp; &lt;item name="my item A"&gt;<BR id=egwm0>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;size&gt;15&lt;/size&gt;<BR id=egwm1>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;mode step="2" online="off"&gt;active&lt;/mode&gt;<BR id=yt7l0>
+&nbsp;&nbsp;&nbsp; &lt;/item&gt;<BR id=l.a40>
+&nbsp;&nbsp;&nbsp; &lt;item name="my item B"&gt;<BR id=egwm0>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;size&gt;15&lt;/size&gt;<BR id=egwm1>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;mode step="2" online="on"&gt;active&lt;/mode&gt;<BR id=yt7l0>
+&nbsp;&nbsp;&nbsp; &lt;/item&gt;<BR id=etf20>
+&lt;/data&gt;<BR id=etf21>
+</BLOCKQUOTE>
+<BR id=etf22>
+The format of the used data doesn't fit for any of grid's XML format. One of possible solutions is to add XSLT transformation, which will convert the data to the format acceptable by the grid. <BR id=ifs60>
+But if you have a lot of data in such custom format, making custom loading type appears to be more sensible.<BR id=etf23>
+<BR id=etf24>
+<H3 id=y6330>The First step - selecting the data type name</H3>
+The names <SPAN id=v_5_0><I id=vp8e0>xml, xmlA, xmlB, json, jsarray, csv</I></SPAN> are already taken, so any other name is valid.<BR id=msuz1>
+Let's select "custom_xml" as the name of our type.<BR id=y6331>
+<BR id=y6332>
+<H3 id=v_s_0>The Second step - defining the row level parser</H3>
+The row parser function must separate the incoming data in rows and assign IDs to them. <BR id=v_s_1>
+In our case the data is the XML, so it is pretty simple to take necessary data by using XPath:<BR id=v_s_2>
+<BR id=y6334>
+<BLOCKQUOTE id=hjfv0>grid._process_<SPAN id=leyu0><B id=m43w0>custom_xml</B></SPAN>=function(xml){<BR id=nqtp0>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; this._parsing=true;<BR id=nqtp1>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; var rows = xml.doXPath("//item"); // get all row elements from the XML<BR id=nqtp2>
+&nbsp;&nbsp; <BR id=nqtp3>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; for (var i = 0; i &lt; rows.length; i++){<BR id=nqtp7>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; var id = this.getUID(); // the XML doesn't have native IDs, so we will generate custom ones<BR id=nqtp10>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; this.rowsBuffer[i]={&nbsp;&nbsp;&nbsp; // store references to each row element<BR id=nqtp11>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; idd: id,<BR id=nqtp12>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; data: rows[i],<BR id=nqtp13>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; _parser: this._process_custom_xml_row,&nbsp;&nbsp;&nbsp; // the cell parser method<BR id=nqtp14>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; _locator: this._get_custom_xml_data&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // the data locator method<BR id=nqtp15>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; };<BR id=nqtp16>
+&nbsp;&nbsp;&nbsp; <BR id=nqtp17>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; this.rowsAr[id]=rows[i];&nbsp;&nbsp;&nbsp; // store ID reference<BR id=nqtp18>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }<BR id=d1ou0>
+<BR id=nqtp20>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; this.render_dataset();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //&nbsp; force the grid view update, after data loading <BR id=nqtp21>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; this._parsing=false;<BR id=nqtp22>
+}<BR id=n6ld0>
+</BLOCKQUOTE>
+<BR id=v_s_3>
+<H3 id=ftlm0>The Third step - define the cell level parser </H3>
+<BR id=q3_31>
+The cell parser must take the data for each column of the grid from the row related XML.<BR id=q3_32>
+Before we implement its code, we need to make some draft - what data will be mapped for what column.<BR id=b_6x0>
+<BR id=wr4r0>
+<DIV id=o3-40>
+<TABLE id=v0-d cellSpacing=0 cellPadding=3 width=300 border=0><TBODY id=o3-41>
+<TR id=o3-42>
+<TD id=o3-43 style="TEXT-ALIGN: center" width="50%">Column<BR id=o3-44>
+</TD>
+<TD id=o3-45 style="TEXT-ALIGN: center" width="50%">data from xml<BR id=o3-46>
+</TD>
+</TR>
+<TR id=o3-47>
+<TD id=o3-48 style="TEXT-ALIGN: center" width="50%">0<BR id=o3-49>
+</TD>
+<TD id=o3-410 style="TEXT-ALIGN: center" width="50%">item@name<BR id=o3-411>
+</TD>
+</TR>
+<TR id=o3-412>
+<TD id=o3-413 style="TEXT-ALIGN: center" width="50%">1<BR id=o3-414>
+</TD>
+<TD id=o3-415 style="TEXT-ALIGN: center" width="50%">size<BR id=o3-416>
+</TD>
+</TR>
+<TR id=o3-417>
+<TD id=o3-418 style="TEXT-ALIGN: center" width="50%">2<BR id=o3-419>
+</TD>
+<TD id=o3-420 style="TEXT-ALIGN: center" width="50%">mode<BR id=o3-421>
+</TD>
+</TR>
+<TR id=o3-422>
+<TD id=o3-423 style="TEXT-ALIGN: center" width="50%">3<BR id=o3-424>
+</TD>
+<TD id=o3-425 style="TEXT-ALIGN: center" width="50%">mode@online<BR id=o3-426>
+</TD>
+</TR>
+</TBODY></TABLE>
+</DIV>
+<BR id=wr4r1>
+<BLOCKQUOTE id=xvpn0>&nbsp;&nbsp;&nbsp;&nbsp;grid._process_<SPAN id=ftlm1><B id=m43w1>custom_xml</B></SPAN>_row=function(r, xml){<BR id=woh20>
+<BR id=ftlm2>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; var size = this.xmlLoader.doXPath("./size", xml)[0];&nbsp;&nbsp;&nbsp; // get size sub tag<BR id=n9xg0>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; var mode = this.xmlLoader.doXPath("./mode", xml)[0];&nbsp;&nbsp;&nbsp; // get mode sub tag<BR id=woh22>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; var strAr = [&nbsp;&nbsp;&nbsp; <BR id=fvnj0>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xml.getAttribute("name"),<BR id=fvnj1>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; size.firstChild.data,<BR id=fvnj2>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mode.firstChild.data,<BR id=fvnj3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mode.getAttribute("online")<BR id=zwfv0>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;];<BR id=woh23>
+&nbsp;&nbsp;&nbsp; <BR id=woh24>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// we don't need any custom attributes, so set just a plain array<BR id=w6x30>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; r._attrs={};<BR id=woh25>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; for (j=0; j &lt; r.childNodes.length; j++) r.childNodes[j]._attrs={};<BR id=woh242>
+<BR id=w6x31>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //finish data loading &nbsp; <BR id=woh243>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; this._fillRow(r, strAr);<BR id=woh249>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; return r;<BR id=woh250>
+&nbsp;&nbsp;&nbsp; }<BR id=n6ld1>
+</BLOCKQUOTE>
+<BR id=p5080>
+<H3 id=p5081>The Final step<BR id=wjg70>
+</H3>
+<BR id=hjfv1>
+Basically this is all that needs to be done. Now you can use the following method to load the data in the custom format:<BR id=p5082>
+<BLOCKQUOTE id=wjg71>&nbsp;&nbsp;&nbsp; grid.load(url,"custom_xml")<BR id=p5083>
+</BLOCKQUOTE>
+<BR id=c.nm0>
+<BR id=c.nm1>
+<DIV id=w4o8 style="PADDING-RIGHT: 0pt; PADDING-LEFT: 0pt; PADDING-BOTTOM: 1em; PADDING-TOP: 1em; TEXT-ALIGN: left"><IMG id=zb8n0 style="WIDTH: 915px; HEIGHT: 180px" src="images/dhhqnnw2_39fwhrtfd6_b.png"></DIV>
+<BR id=c.nm2>
+<BR id=p5084>
+<BR id=p5085>
+The last method which can be defined is <SPAN id=l:3w0><B id=vp8e1>Locator</B></SPAN>. It makes sense only if you plan to use smart rendering mode. This method is not necessary for operations in the standard mode (it is used to locate the data inside unparsed chunks).<BR id=c.nm3>
+<BR id=llhd0>
+The <A id=d27_ title=http://monoxrom.net/temp/sample.zip href="./Custom_loading_types_sample.zip">attached sample</A> contains all used source code
+
+	<!--- CONTENT. Ends --->
+	<div class="copyright" zid="223">&copy; DHTMLX, 2008</div>
+</body>
+</html>

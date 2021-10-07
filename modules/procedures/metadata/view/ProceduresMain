@@ -1,0 +1,89 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userAlias": "proceduresmain",
+        "designer|userClassName": "ProceduresMain",
+        "layout": "border"
+    },
+    "configAlternates": {
+        "designer|initialView": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "layout": "string"
+    },
+    "designerId": "16ef17cd-0f11-4978-a03b-4100416c506b",
+    "cn": [
+        {
+            "type": "Ext.container.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "autoScroll": true,
+                "designer|createAlias": null,
+                "designer|displayName": "contents",
+                "frame": true,
+                "layout|collapseMode": null,
+                "layout|region": "center",
+                "padding": null
+            },
+            "configAlternates": {
+                "autoScroll": "boolean",
+                "designer|createAlias": "string",
+                "designer|displayName": "string",
+                "frame": "boolean",
+                "layout|collapseMode": "string",
+                "layout|region": "string",
+                "padding": "auto"
+            },
+            "name": "MyContainer",
+            "designerId": "b1cb3ed6-c75b-4a8d-9746-71b79ae07e22"
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "animCollapse": true,
+                "collapseDirection": "left",
+                "collapsible": true,
+                "designer|createAlias": null,
+                "designer|displayName": "menus",
+                "frame": true,
+                "layout|collapseMode": null,
+                "layout|region": "west",
+                "padding": "10 5 5 5",
+                "title": "Theatre menus",
+                "titleCollapse": false,
+                "width": 226
+            },
+            "configAlternates": {
+                "animCollapse": "boolean",
+                "collapseDirection": "string",
+                "collapsible": "boolean",
+                "designer|createAlias": "string",
+                "designer|displayName": "string",
+                "frame": "boolean",
+                "layout|collapseMode": "string",
+                "layout|region": "string",
+                "padding": "auto",
+                "title": "string",
+                "titleCollapse": "boolean",
+                "width": "auto"
+            },
+            "name": "MyPanel",
+            "designerId": "bf40269d-2cb5-41ae-bc6e-bd3afc11707b"
+        }
+    ]
+}

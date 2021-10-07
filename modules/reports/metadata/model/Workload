@@ -1,0 +1,126 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "workload",
+        "designer|userClassName": "Workload"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "name": "HTC1",
+    "designerId": "0b50bb3b-4221-4a65-a85e-3a290f82bfc2",
+    "cn": [
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Clinician"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField114",
+            "designerId": "274a465a-0fe8-4067-868b-1c04b38a0535"
+        },
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Notes",
+                "sortType": "asInt"
+            },
+            "configAlternates": {
+                "name": "string",
+                "sortType": "string"
+            },
+            "name": "MyInteger14",
+            "designerId": "615df20c-5185-4678-a38c-38c028380194"
+        },
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Diagnosis",
+                "sortType": "asInt"
+            },
+            "configAlternates": {
+                "name": "string",
+                "sortType": "string"
+            },
+            "name": "MyInteger15",
+            "designerId": "57c9f1a9-b000-4a4b-816a-6d5689dd2708"
+        },
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Labs",
+                "sortType": "asInt"
+            },
+            "configAlternates": {
+                "name": "string",
+                "sortType": "string"
+            },
+            "name": "MyInteger16",
+            "designerId": "ddbb1d92-906b-420d-ad11-42041f2b75bd"
+        },
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Prescription",
+                "sortType": "asInt"
+            },
+            "configAlternates": {
+                "name": "string",
+                "sortType": "string"
+            },
+            "name": "MyInteger17",
+            "designerId": "db5878ba-e462-4fda-ab3b-656f435a9f2c"
+        },
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Xray",
+                "sortType": "asInt"
+            },
+            "configAlternates": {
+                "name": "string",
+                "sortType": "string"
+            },
+            "name": "MyInteger18",
+            "designerId": "40243056-616f-4a18-9413-9d6f6a5f72b2"
+        }
+    ]
+}

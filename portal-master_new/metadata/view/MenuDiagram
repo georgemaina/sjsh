@@ -1,0 +1,289 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|snapToGrid": 5,
+        "designer|userAlias": "menudiagram",
+        "designer|userClassName": "MenuDiagram",
+        "layout": "absolute",
+        "margin": "5 0 0 0"
+    },
+    "configAlternates": {
+        "designer|snapToGrid": "number",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "layout": "string",
+        "margin": "auto"
+    },
+    "name": "MyPanel3",
+    "designerId": "882719c8-0702-4a24-a89c-c7720d2b4bca",
+    "viewControllerInstanceId": "320e9dcc-d858-4041-a16b-d9ec550ea9f3",
+    "viewModelInstanceId": "c0870e1c-f3f1-400a-bf51-4091f52a64ee",
+    "cn": [
+        {
+            "type": "Ext.form.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|x": 130,
+                "layout|y": 0,
+                "style": "color:green; font-size:14px;font-weight:bold;",
+                "text": "Chart Folder"
+            },
+            "configAlternates": {
+                "style": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "text": "string"
+            },
+            "name": "MyLabel2",
+            "designerId": "b6cae2d6-b3fc-4649-b422-ada2eda44592"
+        },
+        {
+            "type": "Ext.Img",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "frame": false,
+                "height": 120,
+                "itemId": "btnVitals",
+                "layout|x": 60,
+                "layout|y": 10,
+                "src": "resources/vitals.fw.png",
+                "title": "Vitals",
+                "width": 115
+            },
+            "configAlternates": {
+                "height": "auto",
+                "layout|x": "number",
+                "layout|y": "number",
+                "src": "uri",
+                "width": "auto",
+                "frame": "boolean",
+                "itemId": "string",
+                "title": "string"
+            },
+            "name": "MyImg5",
+            "designerId": "a55adb82-7b62-48d9-815d-e474cdd10b8b"
+        },
+        {
+            "type": "Ext.Img",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 120,
+                "itemId": "btnDiagnosis",
+                "layout|x": 125,
+                "layout|y": 100,
+                "src": "resources/diagnosis.fw.png",
+                "width": 115
+            },
+            "configAlternates": {
+                "height": "auto",
+                "layout|x": "number",
+                "layout|y": "number",
+                "src": "uri",
+                "width": "auto",
+                "itemId": "string"
+            },
+            "name": "MyImg8",
+            "designerId": "35207b36-9915-4456-9749-dfa968ddaa4c"
+        },
+        {
+            "type": "Ext.Img",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 120,
+                "itemId": "btnRadiology",
+                "layout|x": 245,
+                "layout|y": 95,
+                "src": "resources/radiology.fw.png",
+                "width": 115
+            },
+            "configAlternates": {
+                "height": "auto",
+                "layout|x": "number",
+                "layout|y": "number",
+                "src": "uri",
+                "width": "auto",
+                "itemId": "string"
+            },
+            "name": "MyImg9",
+            "designerId": "2ea94f5f-737f-4a1b-9391-bb94d9d51d85"
+        },
+        {
+            "type": "Ext.Img",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 120,
+                "itemId": "btnLabtest",
+                "layout|x": 185,
+                "layout|y": 5,
+                "src": "resources/labtest.fw.png",
+                "width": 115
+            },
+            "configAlternates": {
+                "height": "auto",
+                "layout|x": "number",
+                "layout|y": "number",
+                "src": "uri",
+                "width": "auto",
+                "itemId": "string"
+            },
+            "name": "MyImg6",
+            "designerId": "87ac0861-771c-4f9a-aec8-c2de3875a4f7"
+        },
+        {
+            "type": "Ext.Img",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 120,
+                "itemId": "btnNotes",
+                "layout|x": 0,
+                "layout|y": 100,
+                "src": "resources/notes.fw.png",
+                "width": 115
+            },
+            "configAlternates": {
+                "height": "auto",
+                "layout|x": "number",
+                "layout|y": "number",
+                "src": "uri",
+                "width": "auto",
+                "itemId": "string"
+            },
+            "name": "MyImg10",
+            "designerId": "1ae19686-4b66-4dee-bf54-5602736edc0e"
+        },
+        {
+            "type": "Ext.Img",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 120,
+                "itemId": "btnPrescriptions",
+                "layout|x": 65,
+                "layout|y": 195,
+                "src": "resources/prescriptions.fw.png",
+                "width": 115
+            },
+            "configAlternates": {
+                "height": "auto",
+                "layout|x": "number",
+                "layout|y": "number",
+                "src": "uri",
+                "width": "auto",
+                "itemId": "string"
+            },
+            "name": "MyImg11",
+            "designerId": "f64b4836-ceee-4c06-a740-228c056d15de"
+        },
+        {
+            "type": "Ext.Img",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 120,
+                "itemId": "btnServices",
+                "layout|x": 190,
+                "layout|y": 190,
+                "src": "resources/services.fw.png",
+                "width": 115
+            },
+            "configAlternates": {
+                "height": "auto",
+                "layout|x": "number",
+                "layout|y": "number",
+                "src": "uri",
+                "width": "auto",
+                "itemId": "string"
+            },
+            "name": "MyImg12",
+            "designerId": "fe6aa483-3d3e-4377-b46e-fb8aa4e70ca2"
+        },
+        {
+            "type": "Ext.Img",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 120,
+                "itemId": "btnMch",
+                "layout|x": 250,
+                "layout|y": 275,
+                "src": "resources/mch.fw.png",
+                "width": 115
+            },
+            "configAlternates": {
+                "height": "auto",
+                "layout|x": "number",
+                "layout|y": "number",
+                "src": "uri",
+                "width": "auto",
+                "itemId": "string"
+            },
+            "name": "MyImg13",
+            "designerId": "cc5767ea-f61f-44d8-88c8-d2d0c730c814"
+        },
+        {
+            "type": "Ext.Img",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 120,
+                "itemId": "btnMch1",
+                "layout|x": 130,
+                "layout|y": 285,
+                "src": "resources/mch.fw.png",
+                "width": 115
+            },
+            "configAlternates": {
+                "height": "auto",
+                "layout|x": "number",
+                "layout|y": "number",
+                "src": "uri",
+                "width": "auto",
+                "itemId": "string"
+            },
+            "name": "MyImg1",
+            "designerId": "77e3486d-f741-427b-8468-622ff8fc8d8d"
+        }
+    ]
+}

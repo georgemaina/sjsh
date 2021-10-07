@@ -1,0 +1,33 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "labtests",
+        "designer|userClassName": "LabTests",
+        "model": "LabTests",
+        "storeId": "LabTests"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "model": "model",
+        "storeId": "string"
+    },
+    "designerId": "9da20b70-6489-484b-a1fb-b9bed2437e6d",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Memory",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyMemoryProxy",
+            "designerId": "4eb8ace7-6524-4074-95a3-f8ebbc942f15"
+        }
+    ]
+}

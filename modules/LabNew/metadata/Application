@@ -1,0 +1,42 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "controllers": [
+            "Main"
+        ],
+        "models": [
+            "ParameterGroup",
+            "FullhamogramParams"
+        ],
+        "name": "Lab",
+        "stores": [
+            "LabParamGroups",
+            "FullHaemogramStore"
+        ],
+        "views": [
+            "PatientDetails",
+            "SpecimenCollection",
+            "SpecimenReceived",
+            "ApproveResults",
+            "RenalProfile",
+            "LFTS",
+            "LipidProfile",
+            "CSF",
+            "RenalProfile1"
+        ]
+    },
+    "configAlternates": {
+        "name": "string",
+        "views": "typedarray",
+        "models": "typedarray",
+        "stores": "typedarray",
+        "controllers": "typedarray"
+    },
+    "name": "Application",
+    "designerId": "application"
+}

@@ -1,0 +1,411 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "bodyStyle": "background:#386d87",
+        "designer|userAlias": "invoicepanel",
+        "designer|userClassName": "InvoicePanel",
+        "itemId": "InvoicePanel",
+        "scrollable": "vertical",
+        "title": "Reports"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "title": "string",
+        "bodyStyle": "string",
+        "scrollable": "auto",
+        "itemId": "string"
+    },
+    "name": "MyPanel1",
+    "designerId": "dbd43eb6-abb0-4b2a-9918-69d6db5fb70a",
+    "viewControllerInstanceId": "aa83f026-4e59-4f33-899d-d69f3f3dae00",
+    "viewModelInstanceId": "dacbb80f-2506-4368-9fdd-95791b65c36b",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyStyle": "background:#386d87",
+                "designer|snapToGrid": 5,
+                "height": 113,
+                "layout": "absolute",
+                "padding": 0
+            },
+            "configAlternates": {
+                "designer|snapToGrid": "number",
+                "height": "auto",
+                "layout": "string",
+                "width": "auto",
+                "style": "string",
+                "padding": "auto",
+                "bodyStyle": "string"
+            },
+            "name": "MyForm",
+            "designerId": "212d2005-f5bd-4180-9524-c9d16f170ee1",
+            "cn": [
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "emptyText": "Select Invoice Type",
+                        "fieldLabel": "Invoice Type",
+                        "itemId": "invoiceType",
+                        "labelAlign": "right",
+                        "labelStyle": "font-weight:bold; color:#f4f6fc;",
+                        "layout|x": -14,
+                        "layout|y": 5,
+                        "store": [
+                            "['Interim Detail Invoice','Interim Summary Invoice','Final Detail Invoice','Final Summary Invoice']"
+                        ],
+                        "width": 485
+                    },
+                    "configAlternates": {
+                        "store": "array",
+                        "emptyText": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "width": "auto",
+                        "fieldLabel": "string",
+                        "labelAlign": "string",
+                        "labelStyle": "string",
+                        "itemId": "string"
+                    },
+                    "name": "MyComboBox10",
+                    "designerId": "18e90129-493e-47cd-b4c7-f309eb61a23e"
+                },
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "allowBlank": false,
+                        "displayField": "BillNumbers",
+                        "emptyText": "Select Invoice Number",
+                        "fieldLabel": "Bill Number",
+                        "itemId": "txtBillNumber",
+                        "labelAlign": "right",
+                        "labelStyle": "font-weight:bold; color:#f4f6fc;",
+                        "layout|x": -14,
+                        "layout|y": 75,
+                        "store": "BillNumbersStore",
+                        "valueField": "BillNumbers",
+                        "width": 315
+                    },
+                    "configAlternates": {
+                        "emptyText": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "width": "auto",
+                        "displayField": "datafield",
+                        "itemId": "string",
+                        "store": "store",
+                        "valueField": "datafield",
+                        "fieldLabel": "string",
+                        "labelAlign": "string",
+                        "labelStyle": "string",
+                        "value": "object",
+                        "allowBlank": "boolean"
+                    },
+                    "name": "MyComboBox13",
+                    "designerId": "227aedbf-895f-48ef-bea5-b7bb003a0f6b"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "allowBlank": false,
+                        "emptyText": "Enter Pid",
+                        "fieldLabel": "Pid",
+                        "itemId": "txtInvoicePid",
+                        "labelAlign": "right",
+                        "labelStyle": "font-weight:bold; color:#f4f6fc;",
+                        "layout|x": -14,
+                        "layout|y": 40,
+                        "width": 195
+                    },
+                    "configAlternates": {
+                        "emptyText": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "width": "auto",
+                        "itemId": "string",
+                        "fieldLabel": "string",
+                        "labelAlign": "string",
+                        "labelStyle": "string",
+                        "value": "object",
+                        "allowBlank": "boolean"
+                    },
+                    "name": "MyTextField47",
+                    "designerId": "952889c3-6a9a-401b-956f-8f5c68b92a7b"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "allowBlank": false,
+                        "emptyText": "Patient Name",
+                        "itemId": "txtPatientName",
+                        "layout|x": 180,
+                        "layout|y": 40,
+                        "width": 290
+                    },
+                    "configAlternates": {
+                        "emptyText": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "width": "auto",
+                        "itemId": "string",
+                        "allowBlank": "boolean"
+                    },
+                    "name": "MyTextField48",
+                    "designerId": "992b693a-3f81-4832-b5c5-6a3245258e08"
+                },
+                {
+                    "type": "Ext.form.CheckboxGroup",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "labelAlign": "right",
+                        "labelStyle": "color:Green; font-weight:bold;",
+                        "layout": "anchor",
+                        "layout|x": 480,
+                        "layout|y": 5,
+                        "style": "color:Green; font-weight:bold;",
+                        "width": 190
+                    },
+                    "configAlternates": {
+                        "layout": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "width": "auto",
+                        "style": "string",
+                        "labelStyle": "string",
+                        "labelAlign": "string"
+                    },
+                    "name": "MyCheckboxGroup1",
+                    "designerId": "b638d047-1d35-4fd9-86e0-ae663c33c4e2",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Checkbox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "",
+                                "fieldLabel": "include Receipt Payments",
+                                "fieldStyle": "color:Green; font-weight:bold;",
+                                "itemId": "includeReceipt",
+                                "labelAlign": "right",
+                                "labelStyle": "font-weight:bold; color:#f4f6fc;",
+                                "labelWidth": 180,
+                                "style": "color:Green; font-weight:bold;"
+                            },
+                            "configAlternates": {
+                                "boxLabel": "string",
+                                "fieldLabel": "string",
+                                "labelWidth": "number",
+                                "style": "string",
+                                "fieldStyle": "string",
+                                "labelStyle": "string",
+                                "itemId": "string",
+                                "labelAlign": "string"
+                            },
+                            "name": "MyCheckbox3",
+                            "designerId": "dedb81ab-9ef9-4292-811d-c3863cc17c30"
+                        },
+                        {
+                            "type": "Ext.form.field.Checkbox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "",
+                                "fieldLabel": "Include NHIF Credits",
+                                "fieldStyle": "font-weight:bold; color:#f4f6fc;",
+                                "itemId": "includeNhif",
+                                "labelAlign": "right",
+                                "labelStyle": "font-weight:bold; color:#f4f6fc;",
+                                "labelWidth": 180
+                            },
+                            "configAlternates": {
+                                "boxLabel": "string",
+                                "fieldLabel": "string",
+                                "fieldStyle": "string",
+                                "itemId": "string",
+                                "labelAlign": "string",
+                                "labelStyle": "string",
+                                "labelWidth": "number"
+                            },
+                            "name": "MyCheckbox4",
+                            "designerId": "ff02e8d2-e11d-4e60-a616-a464b74ceb69"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "formBind": true,
+                        "icon": "f570",
+                        "iconCls": "x-fa fa-inbox",
+                        "itemId": "cmdPreviewInvoice",
+                        "layout|x": 720,
+                        "layout|y": 10,
+                        "text": "Preview",
+                        "width": 100
+                    },
+                    "configAlternates": {
+                        "icon": "string",
+                        "iconCls": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "text": "string",
+                        "width": "auto",
+                        "itemId": "string",
+                        "formBind": "boolean"
+                    },
+                    "name": "MyButton27",
+                    "designerId": "76e62ce6-7777-40be-aa22-395a7ac0d6db"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "formBind": true,
+                        "iconCls": "x-fa fa-print",
+                        "itemId": "cmdPrintInvoice",
+                        "layout|x": 830,
+                        "layout|y": 10,
+                        "text": "Print A4 Invoice Size",
+                        "width": 165
+                    },
+                    "configAlternates": {
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "text": "string",
+                        "width": "auto",
+                        "iconCls": "string",
+                        "formBind": "boolean",
+                        "itemId": "string"
+                    },
+                    "name": "MyButton28",
+                    "designerId": "821c740d-87d6-4dd7-8407-7ee5522e356c"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "formBind": true,
+                        "iconCls": "x-fa fa-print",
+                        "layout|x": 1005,
+                        "layout|y": 10,
+                        "text": "Print Mini Invoice",
+                        "width": 160
+                    },
+                    "configAlternates": {
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "text": "string",
+                        "width": "auto",
+                        "iconCls": "string",
+                        "formBind": "boolean"
+                    },
+                    "name": "MyButton29",
+                    "designerId": "c8b437a1-ee94-45b1-8597-dbf152c16974"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Encounter No",
+                        "itemId": "encNr",
+                        "labelStyle": "font-weight:bold; color:#f4f6fc;",
+                        "layout|x": 570,
+                        "layout|y": 75
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "itemId": "string",
+                        "labelStyle": "string",
+                        "layout|x": "number",
+                        "layout|y": "number"
+                    },
+                    "name": "MyTextField43",
+                    "designerId": "b13173ca-a14b-4109-8fce-ccb89f9c856e"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "html": "<div id=invoiceDetails>Invoice will be displayed here....</div>",
+                "itemId": "invoiceDetails",
+                "scrollable": "vertical",
+                "style": "border:1;"
+            },
+            "configAlternates": {
+                "height": "auto",
+                "style": "string",
+                "frame": "boolean",
+                "itemId": "string",
+                "scrollable": "auto",
+                "html": "string"
+            },
+            "name": "MyFieldSet14",
+            "designerId": "917d2621-39c2-4a95-981e-0802bc968fdc"
+        }
+    ]
+}

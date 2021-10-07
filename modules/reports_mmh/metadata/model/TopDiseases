@@ -1,0 +1,70 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "topdiseases",
+        "designer|userClassName": "TopDiseases"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "name": "DiagnosisReports1",
+    "designerId": "aec7563a-3b42-4949-a765-9d66160c7b7b",
+    "cn": [
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "IcdCode"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField79",
+            "designerId": "9376b190-901a-4587-be0c-9c32c54091d5"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Description"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField80",
+            "designerId": "4ab3d85b-a835-4e74-918d-ab8925c7df74"
+        },
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "DiseaseCount",
+                "sortType": "asInt"
+            },
+            "configAlternates": {
+                "name": "string",
+                "sortType": "string"
+            },
+            "name": "MyInteger13",
+            "designerId": "3ad9bc0a-c344-4ed6-8e55-93f15b4bf054"
+        }
+    ]
+}

@@ -1,0 +1,253 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|snapToGrid": 5,
+        "designer|userAlias": "roomallocation",
+        "designer|userClassName": "RoomAllocation",
+        "frame": true,
+        "height": 385,
+        "layout": "absolute",
+        "title": "Room Allocations",
+        "width": null
+    },
+    "configAlternates": {
+        "designer|snapToGrid": "number",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "frame": "boolean",
+        "height": "auto",
+        "layout": "string",
+        "title": "string",
+        "width": "auto",
+        "scrollable": "boolean"
+    },
+    "name": "MyPanel2",
+    "designerId": "49f8c362-673b-4fa1-85b3-039d6f906d94",
+    "viewControllerInstanceId": "42477d05-e15b-4dc8-827f-01ef22bf263c",
+    "viewModelInstanceId": "1fdd9706-98c9-421b-83c7-81168917c7c3",
+    "cn": [
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|snapToGrid": 5,
+                "height": 340,
+                "layout": "absolute",
+                "layout|x": null,
+                "layout|y": null,
+                "title": "Patient Datails",
+                "width": 325
+            },
+            "configAlternates": {
+                "designer|snapToGrid": "number",
+                "height": "auto",
+                "layout": "string",
+                "layout|x": "number",
+                "layout|y": "number",
+                "title": "string",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyFieldSet",
+            "designerId": "20a219a6-eac0-4979-ba62-09f0bd9c8111",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Names",
+                        "itemId": "Names",
+                        "layout|x": 10,
+                        "layout|y": 0,
+                        "value": null
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "itemId": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "value": "string",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyDisplayField",
+                    "designerId": "1de5d6da-e0fa-4a18-963a-32b4094aa11a"
+                },
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Gender",
+                        "itemId": "Gender",
+                        "layout|x": 10,
+                        "layout|y": 45,
+                        "value": null
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "itemId": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "value": "string",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyDisplayField1",
+                    "designerId": "be4d5a01-6a02-4353-bc1a-24d0e30e9d92"
+                },
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Clinic",
+                        "itemId": "Clinic",
+                        "layout|x": 10,
+                        "layout|y": 70,
+                        "value": null
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "itemId": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "value": "string",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyDisplayField3",
+                    "designerId": "c1177335-430c-46e5-804a-9a81863a859b"
+                },
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Current Room",
+                        "itemId": "room",
+                        "layout|x": 10,
+                        "layout|y": 100,
+                        "value": null
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "itemId": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "value": "string",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyDisplayField5",
+                    "designerId": "57d31308-387b-4c05-8bba-be2571f615c8"
+                },
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "DOB",
+                        "itemId": "Dob",
+                        "layout|x": 10,
+                        "layout|y": 25,
+                        "value": null
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "itemId": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "value": "string",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyDisplayField2",
+                    "designerId": "02e233c3-a3ac-43c3-a342-b49257b8fcc9"
+                },
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "displayField": "Description",
+                        "fieldLabel": "Clinical Room",
+                        "itemId": "ClinicalRoom",
+                        "labelWidth": 80,
+                        "layout|x": 10,
+                        "layout|y": 135,
+                        "minChars": 2,
+                        "queryMode": "local",
+                        "store": "ClinicalRoomsStore",
+                        "typeAhead": true,
+                        "valueField": "ID"
+                    },
+                    "configAlternates": {
+                        "displayField": "datafield",
+                        "fieldLabel": "string",
+                        "itemId": "string",
+                        "labelWidth": "number",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "minChars": "number",
+                        "queryMode": "string",
+                        "store": "store",
+                        "typeAhead": "boolean",
+                        "valueField": "datafield",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyComboBox",
+                    "designerId": "e7cae290-efc4-47a8-9cbf-def6324c034b"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "cmdUpdateRoom",
+                        "layout|x": 115,
+                        "layout|y": 165,
+                        "text": "Update Room",
+                        "width": 120
+                    },
+                    "configAlternates": {
+                        "itemId": "string",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "text": "string",
+                        "width": "auto",
+                        "scrollable": "boolean"
+                    },
+                    "name": "MyButton",
+                    "designerId": "654f921a-0c47-4075-9d41-4c259f736f50"
+                }
+            ]
+        }
+    ]
+}

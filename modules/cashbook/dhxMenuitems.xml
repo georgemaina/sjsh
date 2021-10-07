@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<menu>
+	<!-- Navigate -->
+    <item id="m1" text="Navigate">
+        <item id="m11" text="Cash Points" img="new.gif" imgdis="new_dis.gif">
+            <hotkey>Ctrl+N</hotkey>
+        </item>
+        <item id="m12" text="Revenue Codes">
+            <hotkey>Ctrl+O</hotkey>
+        </item>
+        <item id="m13" text="Laboratory Codes" img="save.gif" imgdis="save_dis.gif">
+            <hotkey>Ctrl+S</hotkey>
+        </item>
+        <item id="m14" text="Xray Code" enabled="false"/>
+        <item id="m15" text="Pharmacy Codes" img="print.gif" imgdis="print_dis.gif">
+            <hotkey>Ctrl+P</hotkey>
+        </item>
+        <item id="m16" text="Payment Modes" img="page_setup.gif" imgdis="page_setup_dis.gif" enabled="false"/>
+        <item id="m17" text="Procedure Codes"></item>       
+        <item id="ms4" type="separator"/>
+        <item id="m19" text="Close" enabled="false">
+            <hotkey>Ctrl+Q</hotkey>
+        </item>
+    </item>
+	<!-- Shifts -->
+    <item id="m2" text="Shifts">
+        <item id="m21" text="Start Shift" img="undo.gif" imgdis="undo_dis.gif">
+            <hotkey>Ctrl+Z</hotkey>
+        </item>
+        <item id="m22" text="End Shift" img="redo.gif" imgdis="redo_dis.gif">
+            <hotkey>Ctrl+Y</hotkey>
+        </item>
+        
+    </item>
+	<!-- Transactions -->
+    <item id="m3" text="Transactions">
+        <item id="m31" text="Cash Sale">
+            <hotkey>Ctrl+I</hotkey>
+        </item>
+        <item id="m32" text="Payments">
+            <hotkey>F1</hotkey>
+        </item>
+        <item id="m33" text="Receipts">
+            <hotkey>F1</hotkey>
+        </item>
+        <item id="m34" text="Cash Sale Adj" enabled="false">
+            <hotkey>Ctrl+I</hotkey>
+        </item>
+        <item id="m35" text="Payments Adj" enabled="false">
+            <hotkey>F1</hotkey>
+        </item>
+        <item id="m36" text="Receipts" enabled="false">
+            <hotkey>F1</hotkey>
+        </item>
+    </item>
+<!-- Reports -->
+    <item id="m4" text="Reports">
+        <item id="m41" text="Cash Point status">
+            <hotkey>Ctrl+I</hotkey>
+        </item>
+        <item id="m42" text="Shift report">
+            <hotkey>F1</hotkey>
+        </item>
+        <item id="m43" text="Shift Summary">
+            <hotkey>F1</hotkey>
+        </item>
+        <item id="m44" text="Collection Summary">
+            <hotkey>Ctrl+I</hotkey>
+        </item>
+        
+    </item>
+</menu>

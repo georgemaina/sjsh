@@ -1,0 +1,64 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "designer|userAlias": "encounterstore",
+        "designer|userClassName": "EncountersStore",
+        "model": "Encounters",
+        "pageSize": 200,
+        "storeId": "EncountersStore"
+    },
+    "configAlternates": {
+        "autoLoad": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "leadingBufferZone": "number",
+        "model": "model",
+        "pageSize": "number",
+        "storeId": "string"
+    },
+    "name": "PatientsListStore1",
+    "designerId": "c8405e70-a122-4841-9793-b6eaf0b1856a",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "data/getDatafunctions.php?task=getEncountersList"
+            },
+            "configAlternates": {
+                "url": "string"
+            },
+            "name": "MyAjaxProxy",
+            "designerId": "166c4aee-2874-4e71-bd5e-3b76e44d1d84",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "encounters"
+                    },
+                    "configAlternates": {
+                        "root": "string",
+                        "rootProperty": "string"
+                    },
+                    "name": "MyJsonReader",
+                    "designerId": "bcee4a1d-9ca7-48ff-89ce-3f7ba7b31ae4"
+                }
+            ]
+        }
+    ]
+}

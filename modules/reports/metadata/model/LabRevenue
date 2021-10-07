@@ -1,0 +1,104 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "labrevenue",
+        "designer|userClassName": "LabRevenue"
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "name": "XrayRevenue1",
+    "designerId": "aa2a859a-4484-49ab-87de-36663a371e40",
+    "cn": [
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "LabCode"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField36",
+            "designerId": "611825ed-cab8-476f-923d-cf26544df6ed"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Description"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField37",
+            "designerId": "9947cbe1-2a32-433b-8d33-5073e8683e57"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "TotalTests"
+            },
+            "configAlternates": {
+                "name": "string"
+            },
+            "name": "MyField95",
+            "designerId": "b644b82a-63fb-4e80-b4c8-c874a83e2215"
+        },
+        {
+            "type": "Ext.data.field.Number",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Price"
+            },
+            "configAlternates": {
+                "name": "string",
+                "type": "string"
+            },
+            "name": "MyNumber4",
+            "designerId": "f4f74cca-771a-4fa2-a172-9f6e03887527"
+        },
+        {
+            "type": "Ext.data.field.Number",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "TotalCost",
+                "sortType": "asFloat"
+            },
+            "configAlternates": {
+                "name": "string",
+                "sortType": "string",
+                "type": "string"
+            },
+            "name": "MyNumber5",
+            "designerId": "537418b0-cc54-4203-a01f-f64109bcb0ba"
+        }
+    ]
+}

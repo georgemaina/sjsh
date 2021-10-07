@@ -1,0 +1,114 @@
+<!--conf
+<sample>
+              <product version="2.0" edition="pro"/>
+                     <modifications>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+	<title>Markers</title>
+	<link rel="STYLESHEET" type="text/css" href="../../codebase/dhtmlxgrid.css">
+	<script  src="../../codebase/dhtmlxcommon.js"></script>
+	<script  src="../../codebase/dhtmlxgrid.js"></script>	
+	<script  src="../../codebase/dhtmlxgridcell.js"></script>	
+	<script  src="../../codebase/ext/dhtmlxgrid_markers.js"></script>	
+</head>
+
+<body>
+<link rel='STYLESHEET' type='text/css' href='../common/style.css'>
+<table cellspacing="0" cellpadding="0" class="sample_header" border="0">
+	<tr valign="middle">
+		<!-- COMPONENT ICON -->
+		<td width="40" align="center"><img src="../common/dhtmlxgrid_icon.gif" border="0"></td>
+		<!-- COMPONENT NAME -->
+		<td width="150" align="left" nowrap="true">Sample: dhtmlxGrid</td>
+		<!-- SAMPLE TITLE -->
+		<td width="0" align="left" nowrap><b>Markers</b></td>
+		<!-- LINK TO COMPONENT PAGE -->
+		<td width="0" align="right"><a href="http://www.dhtmlx.com/docs/products/dhtmlxGrid/index.shtml">dhtmlxGrid main page</a></td>
+		<!-- CLOSE BUTTON -->
+		<td width="50"><div class="sample_close"><a href="javascript:void(0);" onclick="self.close();"><img src="../common/sample_close.gif" width="14" height="14" border="0" alt="X"></a></div></td>
+	</tr>
+</table>
+	
+	
+	<p>Markers functionality allows to select individual cells. You can also select several cells by shift-click and ctrl-click.</p>
+	<table>
+		<tr><td>
+			<div id="gridbox" width="400px" height="250px" style="background-color:white;overflow:hidden;"></div>
+		</td>
+		<td style="padding-left:25" valign="top">
+			<div id="logarea" style="background-color:lightgrey;height:250px;width:250px;overflow:auto; padding:3px;"></div>
+		</td></tr>
+		<tr><td>
+			<a href="javascript:void(0)" onclick="mygrid.unmarkAll()">unmark all</a>
+		
+		</td>
+		<td style="padding-left:25" valign="top">
+			<a href="javascript:void(0)" onclick="mark()">get marked cells</a>
+		</td></tr>
+	</table>
+	
+	<br>
+	
+	
+		
+<div class='sample_code'><div class="hl-main"><pre><span class="hl-code"> 
+    </span><span class="hl-identifier">grid</span><span class="hl-code"> = </span><span class="hl-reserved">new</span><span class="hl-code"> </span><span class="hl-identifier">dhtmlXGridObject</span><span class="hl-brackets">(</span><span class="hl-quotes">'</span><span class="hl-string">gridbox</span><span class="hl-quotes">'</span><span class="hl-brackets">)</span><span class="hl-code">;
+    
+    </span><span class="hl-identifier">grid</span><span class="hl-code">.</span><span class="hl-identifier">enableMarkedCells</span><span class="hl-brackets">(</span><span class="hl-brackets">)</span><span class="hl-code">;
+    ...
+    </span><span class="hl-identifier">grid</span><span class="hl-code">.</span><span class="hl-identifier">unmarkAll</span><span class="hl-brackets">(</span><span class="hl-brackets">)</span><span class="hl-code">; </span><span class="hl-comment">//</span><span class="hl-comment"> set a whole grid as unmarked</span><span class="hl-comment"></span><span class="hl-code">
+    
+    </span><span class="hl-reserved">var</span><span class="hl-code"> </span><span class="hl-identifier">markedArray</span><span class="hl-code"> = </span><span class="hl-identifier">grid</span><span class="hl-code">.</span><span class="hl-identifier">getMarked</span><span class="hl-brackets">(</span><span class="hl-brackets">)</span><span class="hl-code">; </span><span class="hl-comment">/*</span><span class="hl-comment"> the array of marked cells
+                        (pairs of row id and column index)</span><span class="hl-comment">*/</span><span class="hl-code">
+    ...
+    </span><span class="hl-comment">/*</span><span class="hl-comment"> onCellMarked event occurs when cell is marked</span><span class="hl-comment">*/</span><span class="hl-code">
+    
+    </span><span class="hl-identifier">grid</span><span class="hl-code">.</span><span class="hl-identifier">attachEvent</span><span class="hl-brackets">(</span><span class="hl-quotes">&quot;</span><span class="hl-string">onCellMarked</span><span class="hl-quotes">&quot;</span><span class="hl-code">,</span><span class="hl-reserved">function</span><span class="hl-brackets">(</span><span class="hl-identifier">row_id</span><span class="hl-code">,</span><span class="hl-identifier">column_index</span><span class="hl-brackets">)</span><span class="hl-brackets">{</span><span class="hl-code">
+        ...
+    </span><span class="hl-brackets">}</span><span class="hl-brackets">)</span><span class="hl-code">
+    
+    </span><span class="hl-comment">/*</span><span class="hl-comment"> onCellUnMarked event occurs when cell becomes unmarked</span><span class="hl-comment">*/</span><span class="hl-code">
+    
+    </span><span class="hl-identifier">grid</span><span class="hl-code">.</span><span class="hl-identifier">attachEvent</span><span class="hl-brackets">(</span><span class="hl-quotes">&quot;</span><span class="hl-string">onCellUnMarked</span><span class="hl-quotes">&quot;</span><span class="hl-code">,</span><span class="hl-reserved">function</span><span class="hl-brackets">(</span><span class="hl-identifier">row_id</span><span class="hl-code">,</span><span class="hl-identifier">column_index</span><span class="hl-brackets">)</span><span class="hl-brackets">{</span><span class="hl-code">
+        ...
+    </span><span class="hl-brackets">}</span><span class="hl-brackets">)</span></pre></div></div>
+
+<script>
+
+	mygrid = new dhtmlXGridObject('gridbox');
+	mygrid.setImagePath("../../codebase/imgs/");
+	mygrid.setHeader("Sales,Book Title,Author");
+	mygrid.setInitWidths("100,250,100")
+	mygrid.setColAlign("right,left,left")
+	mygrid.setColTypes("ro,ed,ed");
+	mygrid.setColSorting("int,str,str")
+	mygrid.enableMarkedCells();
+	mygrid.init();
+	mygrid.setSkin("modern");
+	mygrid.loadXML("grid.xml");
+	
+	function mark(){
+		var markedArray = mygrid.getMarked();
+		document.getElementById("logarea").innerHTML += "All marked cells:<br/>["
+		for(var i = 0; i < markedArray.length; i++){
+			document.getElementById("logarea").innerHTML += "{ "+markedArray[i].toString()+" }"; 
+		}
+		document.getElementById("logarea").innerHTML += "]<br/>"
+	}
+	function doLog(str){
+		
+		var log = document.getElementById("logarea");
+		log.innerHTML = log.innerHTML+str+"</br>"
+		log.scrollTop = log.scrollHeight;
+	}
+	
+</script>
+
+<!-- FOOTER -->
+<table callspacing="0" cellpadding="0" border="0" class="sample_footer"><tr><td style="padding-left: 8px;">&copy; <a href="http://www.dhtmlx.com">DHTMLX LTD</a>. All rights reserved</td></tr></table>
+<!-- FOOTER -->
+
+</body>
+</html>

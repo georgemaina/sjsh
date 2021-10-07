@@ -1,0 +1,324 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "border": false,
+        "container|align": "stretch",
+        "designer|userAlias": "admitoutpatient",
+        "designer|userClassName": "AdmitOutpatient",
+        "height": 235,
+        "layout": "vbox",
+        "padding": "10 0 0 0",
+        "url": "../data/updateDataFunctions.php?task=admitPatient"
+    },
+    "configAlternates": {
+        "fieldLabel": "string",
+        "height": "auto",
+        "width": "auto",
+        "border": "auto",
+        "layout": "string",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "padding": "auto",
+        "container|align": "string",
+        "url": "string"
+    },
+    "name": "MyForm",
+    "designerId": "896c132a-61ba-4092-8a81-9c97772705e6",
+    "viewControllerInstanceId": "9120ac2b-a428-4023-a9c3-ef0e81bb6f8c",
+    "viewModelInstanceId": "718e2fea-2141-4bbf-be99-1dc981d2b470",
+    "cn": [
+        {
+            "type": "Ext.form.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 18,
+                "style": "color:green; font-size:20px;font-weight:bold;",
+                "text": "Admission Outpatient",
+                "width": 52
+            },
+            "configAlternates": {
+                "style": "string",
+                "height": "auto",
+                "text": "string",
+                "width": "auto"
+            },
+            "name": "MyLabel5",
+            "designerId": "d4b99339-8090-4e99-88a3-3c4381cbec9f"
+        },
+        {
+            "type": "Ext.form.field.ComboBox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "displayField": "Description",
+                "fieldLabel": "Clinic or Department",
+                "labelAlign": "right",
+                "labelWidth": 200,
+                "minChars": 2,
+                "name": "current_dept_nr",
+                "queryMode": "local",
+                "store": "DepartmentsStore",
+                "typeAhead": true,
+                "valueField": "Nr",
+                "width": 418
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "labelAlign": "string",
+                "labelWidth": "number",
+                "width": "auto",
+                "displayField": "datafield",
+                "store": "store",
+                "valueField": "datafield",
+                "minChars": "number",
+                "name": "string",
+                "queryMode": "string",
+                "typeAhead": "boolean"
+            },
+            "name": "MyComboBox4",
+            "designerId": "d5c923b8-4cba-4a2a-abb4-c377762b102d"
+        },
+        {
+            "type": "Ext.form.field.ComboBox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "displayField": "Item_Description",
+                "fieldLabel": "Registration or Consultation Fee",
+                "labelAlign": "right",
+                "labelWidth": 200,
+                "minChars": 2,
+                "name": "consultation_fee",
+                "queryMode": "local",
+                "store": "Consultations",
+                "typeAhead": true,
+                "valueField": "PartCode",
+                "width": 416
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "labelAlign": "string",
+                "labelWidth": "number",
+                "width": "auto",
+                "displayField": "datafield",
+                "store": "store",
+                "valueField": "datafield",
+                "minChars": "number",
+                "name": "string",
+                "queryMode": "string",
+                "typeAhead": "boolean"
+            },
+            "name": "MyComboBox5",
+            "designerId": "1b6cb7aa-5bf5-4ea0-980c-3b50909a02b7"
+        },
+        {
+            "type": "Ext.form.field.ComboBox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "displayField": "PriceType",
+                "fieldLabel": "Payment Plan",
+                "labelAlign": "right",
+                "labelWidth": 200,
+                "name": "financial_class",
+                "store": "PriceTypeStore",
+                "valueField": "ID",
+                "width": 416
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "width": "auto",
+                "labelAlign": "string",
+                "labelWidth": "number",
+                "displayField": "datafield",
+                "store": "store",
+                "valueField": "datafield",
+                "name": "string"
+            },
+            "name": "MyComboBox6",
+            "designerId": "b7656a52-2cea-46be-843f-b509871222cc"
+        },
+        {
+            "type": "Ext.form.field.ComboBox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Referal Method",
+                "labelAlign": "right",
+                "labelWidth": 200,
+                "name": "referalMethod",
+                "width": 416
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "width": "auto",
+                "labelAlign": "string",
+                "labelWidth": "number",
+                "name": "string"
+            },
+            "name": "MyComboBox7",
+            "designerId": "941cfc1e-ed3c-4018-96d9-cb004e5c03a3"
+        },
+        {
+            "type": "Ext.form.field.ComboBox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Class nr",
+                "hidden": true,
+                "labelAlign": "right",
+                "labelWidth": 200,
+                "name": "encounter_class_nr",
+                "value": "2",
+                "width": 416
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "width": "auto",
+                "labelAlign": "string",
+                "labelWidth": "number",
+                "name": "string",
+                "value": "string",
+                "hidden": "boolean"
+            },
+            "name": "MyComboBox11",
+            "designerId": "f4172f12-648a-4f66-9e6a-edf9512a89c8"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "pid",
+                "hidden": true,
+                "itemId": "pid2",
+                "labelAlign": "right",
+                "labelWidth": 200,
+                "name": "pid",
+                "width": 416
+            },
+            "configAlternates": {
+                "fieldLabel": "string",
+                "width": "auto",
+                "labelAlign": "string",
+                "labelWidth": "number",
+                "name": "string",
+                "hidden": "boolean",
+                "itemId": "string"
+            },
+            "name": "MyTextField2",
+            "designerId": "0dd0e5e8-fea7-467b-9568-1bc4096f208b"
+        },
+        {
+            "type": "Ext.form.FieldContainer",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": "stretch",
+                "height": 31,
+                "layout": "hbox"
+            },
+            "configAlternates": {
+                "container|align": "string",
+                "height": "auto",
+                "layout": "string"
+            },
+            "name": "MyFieldContainer3",
+            "designerId": "af666577-9f32-4e81-a15b-aed006dece99",
+            "cn": [
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "x-fa fa-plus",
+                        "itemId": "saveOpAdmission",
+                        "margin": "0 0 0 5",
+                        "text": "Save Admission",
+                        "width": 146
+                    },
+                    "configAlternates": {
+                        "text": "string",
+                        "width": "auto",
+                        "iconCls": "string",
+                        "margin": "auto",
+                        "itemId": "string"
+                    },
+                    "name": "MyButton16",
+                    "designerId": "76389a3a-74cf-4604-8e8b-98bf0df45601"
+                },
+                {
+                    "type": "Ext.toolbar.Spacer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "width": 163
+                    },
+                    "configAlternates": {
+                        "width": "auto"
+                    },
+                    "name": "MySpacer3",
+                    "designerId": "8d9dd4d5-db87-4db5-9157-e670ae3536c6"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "x-fa fa-trash",
+                        "itemId": "cancelAdmit",
+                        "text": "Cancel",
+                        "width": 126
+                    },
+                    "configAlternates": {
+                        "text": "string",
+                        "width": "auto",
+                        "iconCls": "string",
+                        "itemId": "string"
+                    },
+                    "name": "MyButton13",
+                    "designerId": "8e83e3e4-0532-4109-996d-0cf774412a6b"
+                }
+            ]
+        }
+    ]
+}

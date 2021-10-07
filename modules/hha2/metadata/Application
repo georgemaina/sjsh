@@ -1,0 +1,29 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "controllers": [
+            "Main"
+        ],
+        "models": [
+            "DrugsList"
+        ],
+        "name": "hha",
+        "stores": [
+            "PatientsListStore",
+            "DrugsLIstStore"
+        ]
+    },
+    "configAlternates": {
+        "controllers": "typedarray",
+        "models": "typedarray",
+        "name": "string",
+        "stores": "typedarray"
+    },
+    "name": "Application",
+    "designerId": "application"
+}

@@ -1,0 +1,2165 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "main",
+        "designer|userClassName": "Main",
+        "models": [
+            "OrderStocksModel",
+            "IssueDrugsModel",
+            "ServiceOrdersModel",
+            "ReturnOrdersModel",
+            "StockLevelsModel",
+            "StockCountsModel",
+            "ItemsList",
+            "TransactionNos",
+            "Locations",
+            "PendingPrescription",
+            "PrescriptionItems",
+            "PatientDetails",
+            "InternalOrders",
+            "StockAdjustments",
+            "ValuationModel",
+            "StockCategories",
+            "OrderDetails"
+        ],
+        "stores": [
+            "OrderStocksStore",
+            "ServiceOrderStore",
+            "ReturnOrdersStore",
+            "StockLevelsStore",
+            "StockCountsStore",
+            "DepartmentStore",
+            "LocationsStore",
+            "TransNoStore",
+            "ItemslistStore",
+            "PendingPrescriptions",
+            "PrescriptionItemStore",
+            "PatientDetailStore",
+            "IssuedPrescriptions",
+            "OrderDetailStore",
+            "ValuationStore",
+            "StockAdjustmentsStore"
+        ],
+        "views": [
+            "IssueDrugs",
+            "StockCount",
+            "MainView",
+            "OrdersForm",
+            "StockLevels",
+            "ItemsList",
+            "Prescriptions",
+            "PendingPrescriptions",
+            "PrescripionForm",
+            "Dosage",
+            "ReturnOrders",
+            "DrugIssuesReports",
+            "InternalOrdersReport",
+            "ValuationsReport",
+            "StockMovementsReport",
+            "StockAdjustmentsReport"
+        ]
+    },
+    "configAlternates": {
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "models": "typedarray",
+        "stores": "typedarray",
+        "views": "typedarray"
+    },
+    "name": "MyController",
+    "designerId": "73a84458-7915-4be0-aab9-b7445c55ba59",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "application"
+                ],
+                "fn": "init",
+                "implHandler": [
+                    "this.control({",
+                    "    '#openItemsList':{",
+                    "        click:this.opeItemsList",
+                    "    },",
+                    "    '#mnuOrders':{",
+                    "        click:this.openOrdersForm",
+                    "    },",
+                    "    '#mnuServiceOrders':{",
+                    "        click:this.openServiceOrders",
+                    "    },",
+                    "    '#mnuStockLevels':{",
+                    "        click:this.openStockLevels",
+                    "    },",
+                    "    '#cmdGetItems':{",
+                    "        click:this.openItemsList",
+                    "    },",
+                    "    '#txtSearchItems':{",
+                    "        change:this.filterItems",
+                    "    },",
+                    "    '#orderType':{",
+                    "        change:this.setOrderNo",
+                    "    },",
+                    "    '#itemsList':{",
+                    "        itemdblclick:this.addSelectedItems",
+                    "    },",
+                    "    '#cmdSaveOrder':{",
+                    "        click:this.saveOrder",
+                    "    },",
+                    "    '#department':{",
+                    "        select:this.setDeptName",
+                    "    },",
+                    "    '#suppStore':{",
+                    "        select:this.setSuppName",
+                    "    },",
+                    "    '#serviceStore':{",
+                    "        select:this.selectPendingOrders",
+                    "    },",
+                    "    '#pendingOrders':{",
+                    "        itemclick:this.loadDetailedOrder",
+                    "    },",
+                    "    '#serviceOrders':{",
+                    "        click:this.serviceOrders",
+                    "    },",
+                    "    '#levelsGrid':{",
+                    "        itemclick:this.loadLevelsForm",
+                    "    },",
+                    "    '#saveStockAdjustments':{",
+                    "        click:this.saveStockAdjustments",
+                    "    },",
+                    "    '#mnuPrescriptions':{",
+                    "        click:this.openPrescriptions",
+                    "    },",
+                    "    '#pendingPrescGrid':{",
+                    "        itemclick:this.showPrescriptions",
+                    "    },",
+                    "    '#cmdDispensDrugs':{",
+                    "        click:this.openDispensWindow",
+                    "    },",
+                    "    '#mnuIssue':{",
+                    "        click:this.displayIssueForm",
+                    "    },",
+                    "    '#drugsList':{",
+                    "        click:this.loadSelectedDrugs",
+                    "    },",
+                    "    '#cmdNewPrescription':{",
+                    "        click:this.createPrescription",
+                    "    },",
+                    "    '#cmdRemoveDose':{",
+                    "        click:this.removeDose",
+                    "    },",
+                    "    '#cmdPrescribe':{",
+                    "        click:this.prescribe",
+                    "    },",
+                    "    '#days':{",
+                    "        change:this.getTotalDosage",
+                    "    },",
+                    "    '#Pid':{",
+                    "        blur:this.loadPatientDetails",
+                    "    },",
+                    "    '#store':{",
+                    "        select:this.loadPrescriptionOrder",
+                    "    },",
+                    "    '#issueDrugs':{",
+                    "        click:this.issueDrugs",
+                    "    },",
+                    "    '#mnuPatientReturns':{",
+                    "        click:this.openReturnOrders",
+                    "    },",
+                    "    '#cmdReturnDrugs':{",
+                    "        click:this.returnDrugs",
+                    "    },",
+                    "    '#prescGrid':{",
+                    "        itemclick:this.loadDrugsToIssue",
+                    "    },",
+                    "    '#cmdPreviewPrescriptions':{",
+                    "        click:this.previewDrugsToReturn",
+                    "    },",
+                    "    '#mnuIssuedDrugs':{",
+                    "        click:this.previewIssuedDrugs",
+                    "    },",
+                    "    '#mnuInternalOrders':{",
+                    "        click:this.previewInteralOrders",
+                    "    },",
+                    "    '#mnuStockAdjustments':{",
+                    "        click:this.previewStockAdjustments",
+                    "    },",
+                    "    '#mnuStockMovements':{",
+                    "        click:this.previewMovements",
+                    "    },",
+                    "    '#mnuStockValuation':{",
+                    "        click:this.previewValuations",
+                    "    },",
+                    "    '#cmdPreviewValuation':{",
+                    "        click:this.loadValuation",
+                    "    },",
+                    "    '#cancelOrder':{",
+                    "        click:this.cancelOrder",
+                    "    },",
+                    "    '#issueType':{",
+                    "        change:this.setIssueNo",
+                    "    },",
+                    "    '#prescParams':{",
+                    "      //  specialkey:this.getPressedKey,",
+                    "        change:this.filterPrescriptions",
+                    "    }",
+                    "",
+                    "});"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "init",
+            "designerId": "57ed1670-34f4-48cf-ab99-06ba3f286723"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "openOrdersForm",
+                "implHandler": [
+                    "var formsContainer=Ext.create(\"Pharmacy.view.FormsContainer\",{});",
+                    "var ordersform = Ext.create('Pharmacy.view.OrdersForm', {});",
+                    "var centerContainer=this.getMainview().down(\"container[region=center]\");",
+                    "centerContainer.removeAll();",
+                    "centerContainer.add(ordersform);",
+                    "//Ext.Msg.alert('Test',centerContainer.getItemId());",
+                    "",
+                    "",
+                    "// var ordersWindow=Ext.create('Ext.window.Window', {",
+                    "//     title: 'Internal Orders',",
+                    "//     resizable:false",
+                    "// });",
+                    "",
+                    "// ordersWindow.add(ordersform);",
+                    "// ordersWindow.show();",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "openOrdersForm",
+            "designerId": "ef30a408-21a8-4a77-9ac7-3a926a494631"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "mainview",
+                "selector": "mainview",
+                "xtype": "mainview"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "mainview",
+            "designerId": "b9f9fda3-66c7-497b-8757-51cd0805ab80"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "orderstocks",
+                "selector": "orderstocks",
+                "xtype": "orderstocks"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "orderstocks",
+            "designerId": "3d6f1e4d-4a2f-4678-8985-0f025a5b1223"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "ordersform",
+                "selector": "ordersform"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string"
+            },
+            "name": "ordersform",
+            "designerId": "3916d13a-dc7f-4493-af34-b2545edff3c4"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "openServiceOrders",
+                "implHandler": [
+                    "var formsContainer=Ext.create(\"Pharmacy.view.ServiceOrders\",{});",
+                    "var centerContainer=this.getMainview().down(\"container[region=center]\");",
+                    "centerContainer.removeAll();",
+                    "centerContainer.add(formsContainer);",
+                    "        //Ext.Msg.alert('Test',centerContainer.getItemId());"
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "openServiceOrders",
+            "designerId": "82ff6eb7-99cb-4f9e-9a95-c67cc17888c0"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "serviceorders",
+                "selector": "serviceorders",
+                "xtype": "serviceorders"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "serviceorders",
+            "designerId": "742d0b78-3004-4814-8597-4a9585d3c784"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "stocklevels",
+                "selector": "stocklevels",
+                "xtype": "stocklevels"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "stocklevels",
+            "designerId": "3ca5db02-962b-4756-ac4f-1ceff0f66aec"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "openStockLevels",
+                "implHandler": [
+                    "var stockLevels=Ext.create(\"Pharmacy.view.StockLevels\",{});",
+                    "centerContainer=this.getMainview().down(\"container[region=center]\");",
+                    "centerContainer.removeAll();",
+                    "centerContainer.add(stockLevels);",
+                    "//Ext.Msg.alert('Test',centerContainer.getItemId());"
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "openStockLevels",
+            "designerId": "2624aefc-afce-47e5-9227-b8884520bab6"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "openItemsList",
+                "implHandler": [
+                    "var storeLoc=button.up(\"panel\").down('#suppStore').getValue();",
+                    "var itemsList=Ext.create(\"Pharmacy.view.ItemsList\",{});",
+                    "var ordersWindow=Ext.create('Ext.window.Window', {",
+                    "    title: 'Items List',",
+                    "    resizable:false",
+                    "});",
+                    "",
+                    "var itesmStore=Ext.data.StoreManager.lookup(\"ItemslistStore\");",
+                    "itesmStore.load({",
+                    "    params: {",
+                    "        storeLoc:storeLoc",
+                    "    },",
+                    "    callback: function(records, operation, success) {",
+                    "",
+                    "    },",
+                    "    scope: this",
+                    "});",
+                    "",
+                    "",
+                    "ordersWindow.add(itemsList);",
+                    "ordersWindow.show();",
+                    "itemsList.down('#sourceID').setValue('Orders');",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "openItemsList",
+            "designerId": "23e52b46-3d2b-4f0f-8654-4be2b8af4d21"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "itemslist",
+                "selector": "itemslist",
+                "xtype": "itemslist"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "itemslist",
+            "designerId": "f19e8cfb-d318-404b-8932-b5c6f7c972e8"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "field",
+                    "newValue",
+                    "oldValue",
+                    "eOpts"
+                ],
+                "fn": "filterItems",
+                "implHandler": [
+                    "var grid = field.up('grid');",
+                    "grid.store.clearFilter();",
+                    "if (newValue) {",
+                    "    var matcher = new RegExp(Ext.String.escapeRegex(newValue), \"i\");",
+                    "    grid.store.filter({",
+                    "        filterFn: function(item) {",
+                    "            return matcher.test(item.get('item_description')) ||",
+                    "                matcher.test(item.get('partcode'));",
+                    "        }",
+                    "    });",
+                    "}"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "filterItems",
+            "designerId": "576063dc-e900-45c1-9955-4fda318b6658"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "field",
+                    "newValue",
+                    "oldValue",
+                    "eOpts"
+                ],
+                "fn": "setOrderNo",
+                "implHandler": [
+                    "var orderNo=this.getOrderNo('4');",
+                    "",
+                    "this.getOrdersform().down('#orderDate').setValue(new Date());"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "setOrderNo",
+            "designerId": "67c74653-d58e-4e3a-a2c2-e368570a7289"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "typeID"
+                ],
+                "fn": "getOrderNo",
+                "implHandler": [
+                    "var transNo=0;",
+                    "Ext.Ajax.request({",
+                    "    url: '../../data/getDataFunctions.php?task=getTransNos',",
+                    "    params: {",
+                    "        typeID:typeID",
+                    "    },",
+                    "    success: function(response){",
+                    "        var resp = Ext.JSON.decode(response.responseText);",
+                    "",
+                    "        //Ext.Msg.alert('Test',resp[0].transNo);",
+                    "        transNo= resp[0].transNo;",
+                    "        this.getOrdersform().down('#orderNo').setValue(transNo);",
+                    "",
+                    "    },",
+                    "    failure:function(response){",
+                    "        var resp = JSON.parse(response);",
+                    "        Ext.Msg.alert('Error',resp.Error);",
+                    "     },",
+                    "    scope: this",
+                    "});",
+                    "",
+                    "return transNo;"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "getOrderNo",
+            "designerId": "ab7dc0cf-29d1-42de-b231-18125c909408"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "gridpanel",
+                    "record",
+                    "item",
+                    "index",
+                    "e",
+                    "options"
+                ],
+                "fn": "addSelectedItems",
+                "implHandler": [
+                    "var sourceID=this.getItemslist().down('#sourceID').getValue();",
+                    "if(sourceID=='Orders'){",
+                    "    var store =Ext.data.StoreManager.lookup('ItemslistStore');",
+                    "    var store1 =Ext.data.StoreManager.lookup('OrderStocksStore');",
+                    "    store.remove(record);",
+                    "    store1.add(record);",
+                    "}else{",
+                    "    var counter=this.getPrescripionform().down(\"#counter\").getValue();",
+                    "    var dosage=Ext.create(\"Pharmacy.view.Dosage\",{});",
+                    "    dosage.itemId=record.get('partcode');",
+                    "",
+                    "",
+                    "    dosage.down('#partCode').setValue(record.get('partcode'));",
+                    "    dosage.down('#description').setValue(record.get('item_description'));",
+                    "    dosage.down('#qty').setValue(record.get('qty'));",
+                    "    dosage.down('#unitCost').setValue(record.get('unit_price'));",
+                    "    dosage.down('#dose').setValue(1);",
+                    "    dosage.down('#itemNumber').setValue(counter);",
+                    "",
+                    "    var i=counter;",
+                    "    dosage.down('#partCode').name='partCode'+ i;",
+                    "    dosage.down('#description').name='description'+ i;",
+                    "    dosage.down('#dose').name='dose'+ i ;",
+                    "    dosage.down('#timesperday').name='timesperday'+ i;",
+                    "    dosage.down('#days').name='days'+ i ;",
+                    "    dosage.down('#total').name='total'+ i ;",
+                    "    dosage.down('#comment').name='comment'+ i;",
+                    "",
+                    "",
+                    "    newVar=parseInt(counter)+1;",
+                    "",
+                    "    this.getPrescripionform().down('#dosageList').add(dosage);",
+                    "    this.getPrescripionform().down(\"#counter\").setValue(newVar);",
+                    "}",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "addSelectedItems",
+            "designerId": "65c51e74-55cb-432f-bdce-5b94f847fdf7"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "saveOrder",
+                "implHandler": [
+                    "var form = button.up('form').getForm(); // get the basic form",
+                    "var orderStore =Ext.data.StoreManager.lookup('OrderStocksStore');",
+                    "var ordersRecord = orderStore.getRange();",
+                    "",
+                    "var gridData = Array();",
+                    "",
+                    "Ext.each(ordersRecord, function (record) {",
+                    "    gridData.push(record.data);",
+                    "});",
+                    "",
+                    "if (form.isValid()) { // make sure the form contains valid data before submitting",
+                    "    form.submit({",
+                    "        params:{",
+                    "            gridData: Ext.util.JSON.encode(gridData)",
+                    "        },",
+                    "        success: function(form, action) {",
+                    "            Ext.Msg.alert(\"Orders\",\"Internal Order Saved Successfully\");",
+                    "            form.reset();",
+                    "            //orderStore.load({});",
+                    "            orderStore.removeAll();",
+                    "            orderStore.sync();",
+                    "",
+                    "        },",
+                    "        failure: function(form, action) {",
+                    "            Ext.Msg.alert('Failed', 'Could not save Order. Error='+action.result.errors.clientNo);",
+                    "        }",
+                    "    });",
+                    "} else { // display error alert if the data is invalid",
+                    "    Ext.Msg.alert('Invalid Data', 'Please correct form errors.');",
+                    "}"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "saveOrder",
+            "designerId": "40bb4ad5-41fa-43a4-8774-5bb98afa6316"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "field",
+                    "record"
+                ],
+                "fn": "setDeptName",
+                "implHandler": [
+                    "// Ext.Msg.alert('test',record.get('Description'));",
+                    "field.up('form').down('#deptName').setValue(record.get('Description'));"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "setDeptName",
+            "designerId": "60bcec4e-df38-4422-878a-dd2f45c1253d"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "field",
+                    "record"
+                ],
+                "fn": "setSuppName",
+                "implHandler": [
+                    "field.up('form').down('#suppName').setValue(record.get('Description'));"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "setSuppName",
+            "designerId": "8bf8d393-08f9-46d5-869e-8d6a4c8defe3"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "field",
+                    "record"
+                ],
+                "fn": "selectPendingOrders",
+                "implHandler": [
+                    "var pendingOrders =Ext.data.StoreManager.lookup('ServiceOrderStore');",
+                    "pendingOrders.load({",
+                    "    params:{",
+                    "        store:record.get('ID')",
+                    "    },",
+                    "    callback: function(records, operation, success) {",
+                    "",
+                    "    },",
+                    "    scope: this",
+                    "});"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "selectPendingOrders",
+            "designerId": "d32adfd8-3899-4b06-b51c-4e50c7936ef9"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "gridpanel",
+                    "record",
+                    "item",
+                    "index",
+                    "e",
+                    "eOpts"
+                ],
+                "fn": "loadDetailedOrder",
+                "implHandler": [
+                    "var pendingOrders =Ext.data.StoreManager.lookup('OrderDetailStore');",
+                    "pendingOrders.load({",
+                    "    params:{",
+                    "        store:record.get('store'),",
+                    "        req_no:record.get('req_no')",
+                    "    },",
+                    "    callback: function(records, operation, success) {",
+                    "        gridpanel.up('form').loadRecord(record);",
+                    "    },",
+                    "    scope: this",
+                    "});",
+                    "",
+                    "",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "loadDetailedOrder",
+            "designerId": "72fc4360-d6e1-43a6-8635-0ce8f229dd28"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "serviceOrders",
+                "implHandler": [
+                    "var form = button.up('form').getForm(); // get the basic form",
+                    "var orderStore =Ext.data.StoreManager.lookup('OrderDetailStore');",
+                    "var ordersRecord = orderStore.getRange();",
+                    "",
+                    "var gridData = Array();",
+                    "",
+                    "Ext.each(ordersRecord, function (record) {",
+                    "    gridData.push(record.data);",
+                    "});",
+                    "",
+                    "if (form.isValid()) { // make sure the form contains valid data before submitting",
+                    "    form.submit({",
+                    "        params:{",
+                    "            gridData: Ext.util.JSON.encode(gridData)",
+                    "        },",
+                    "        success: function(form, action) {",
+                    "            Ext.Msg.alert(\"Orders\",\"Order Serviced Successfully\");",
+                    "            form.reset();",
+                    "            orderStore.load({});",
+                    "",
+                    "        },",
+                    "        failure: function(form, action) {",
+                    "            Ext.Msg.alert('Failed', 'Could not Service Order. Error='+action.result.errors.clientNo);",
+                    "        }",
+                    "    });",
+                    "} else { // display error alert if the data is invalid",
+                    "    Ext.Msg.alert('Invalid Data', 'Please correct form errors.');",
+                    "}"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "serviceOrders",
+            "designerId": "68fbbba3-b93a-4465-8cf3-13af43c09bb8"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "gridpanel",
+                    "record",
+                    "item",
+                    "index",
+                    "e",
+                    "eOpts"
+                ],
+                "fn": "loadLevelsForm",
+                "implHandler": [
+                    "gridpanel.up('form').loadRecord(record);"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "loadLevelsForm",
+            "designerId": "57fb10ae-7d51-41d6-8297-7985713f23b0"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "saveStockAdjustments",
+                "implHandler": [
+                    "var form = button.up('form').getForm(); // get the basic form",
+                    "var levelsStore =Ext.data.StoreManager.lookup('StockLevelsStore');",
+                    "",
+                    "if (form.isValid()) { // make sure the form contains valid data before submitting",
+                    "    form.submit({",
+                    "        success: function(form, action) {",
+                    "            Ext.Msg.alert(\"Orders\",\"Stock level Updated Successfully\");",
+                    "            form.reset();",
+                    "            levelsStore.load({});",
+                    "",
+                    "        },",
+                    "        failure: function(form, action) {",
+                    "            Ext.Msg.alert('Failed', 'Could not Stock levels. Error='+action.result.errors.clientNo);",
+                    "        }",
+                    "    });",
+                    "} else { // display error alert if the data is invalid",
+                    "    Ext.Msg.alert('Invalid Data', 'Please correct form errors.');",
+                    "}"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "saveStockAdjustments",
+            "designerId": "b078339d-db62-49b5-b921-9781b4a1798e"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "openPrescriptions",
+                "implHandler": [
+                    "//Ext.Msg.alert('Test','Test');",
+                    "var presc=Ext.create(\"Pharmacy.view.Prescriptions\",{});",
+                    "var centerContainer=this.getMainview().down(\"container[region=center]\");",
+                    "centerContainer.removeAll();",
+                    "centerContainer.add(presc);",
+                    "",
+                    "var pendingPresc =Ext.data.StoreManager.lookup('PendingPrescriptions');",
+                    "pendingPresc.load({});"
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "openPrescriptions",
+            "designerId": "a1d0106c-5804-400c-af00-6f6e5733f991"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "gridpanel",
+                    "record",
+                    "item",
+                    "index",
+                    "e",
+                    "eOpts"
+                ],
+                "fn": "showPrescriptions",
+                "implHandler": [
+                    "// Ext.Msg.alert('Selections','You selected '+ record.get('Names'));",
+                    "gridpanel.up('panel').up('panel').down('#Pid').setValue(record.get('Pid'));",
+                    "gridpanel.up('panel').up('panel').down('#Names').setValue(record.get('Names'));",
+                    "gridpanel.up('panel').up('panel').down('#EncounterNo').setValue(record.get('EncounterNo'));",
+                    "gridpanel.up('panel').up('panel').down('#PrescribeDate').setValue(record.get('PrescribeDate'));",
+                    "var prescDetails=gridpanel.up('panel').up('panel').down('#prescDetails');",
+                    "",
+                    "//**************************************************************************",
+                    "//Populate the prescription items",
+                    "//**************************************************************************",
+                    "",
+                    " var precStore=Ext.data.StoreManager.lookup(\"PrescriptionItemStore\");",
+                    "",
+                    "        var billSum=0;",
+                    "        var data = [];",
+                    "        precStore.load({",
+                    "            params: {",
+                    "                pid:record.get('Pid'),",
+                    "                encNr:record.get('EncounterNo'),",
+                    "                prescSource:\"Prescription\"",
+                    "            },",
+                    "            callback: function(records, operation, success) {",
+                    "                var tpl=new Ext.XTemplate(",
+                    "                    '<Table id=pharmDetails>',",
+                    "                    '<tr><td id=titles colspan=6>Prescriptions</td></tr>',",
+                    "                    '<tr><th>Prescription No</th><th>Date</th><th>Description</th>',",
+                    "                    ' <th>Dosage</th><th>Times Per Day</th><th>Days</th></tr>',",
+                    "                    '<tpl for=\".\">',",
+                    "                    '<tr><td>{Nr}</td><td>{PrescribeDate}</td><td>{Description}</td>',",
+                    "                    '<td>{Dosage}</td><td>{TimesPerDay}</td><td>{Days}</td></tr>',",
+                    "                    '<tr><td id=notes>Notes</td><td colspan=3 id=notes>{Notes}</td><td>Prescribed By:{Prescriber}</td><td><button id=edit>Edit</button><button id=delete>Delete</button></td></tr>',",
+                    "                    '</tpl>',",
+                    "                    '</table>'",
+                    "                  );",
+                    "",
+                    "                    precStore.each(function(record) {",
+                    "                        data.push(record.getData());",
+                    "                        //billSum += record.get('Total');",
+                    "                    });",
+                    "",
+                    "                    tpl.overwrite(prescDetails.body,data);",
+                    "            },",
+                    "            scope: this",
+                    "        });",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "showPrescriptions",
+            "designerId": "1ea1fda2-fcb6-441d-800d-8cdbb5366369"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "prescriptions",
+                "selector": "prescriptions",
+                "xtype": "prescriptions"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "prescriptions",
+            "designerId": "392b023f-c8ba-4cfd-aa9e-f3d45ee09d75"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "openDispensWindow",
+                "implHandler": [
+                    "var issueform = Ext.create('Pharmacy.view.IssueDrugs', {}); ",
+                    "var prescWindow=Ext.create('Ext.window.Window', {",
+                    "     title: 'Prescribe Drugs'",
+                    " });",
+                    "",
+                    "prescWindow.add(issueform);",
+                    "prescWindow.show();",
+                    "",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "openDispensWindow",
+            "designerId": "fd1d1c0c-95a3-46ad-9a81-123e904d524d"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "displayIssueForm",
+                "implHandler": [
+                    "var issueform = Ext.create('Pharmacy.view.IssueDrugs', {});",
+                    "var centerContainer=this.getMainview().down(\"container[region=center]\");",
+                    "centerContainer.removeAll();",
+                    "centerContainer.add(issueform);"
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "displayIssueForm",
+            "designerId": "134df022-fdb1-4666-b8cf-d2adedf31335"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "gridpanel",
+                    "record",
+                    "item",
+                    "index",
+                    "e",
+                    "eOpts"
+                ],
+                "fn": "loadSelectedDrugs",
+                "implHandler": [
+                    "Ext.Msg.alert('Test',record.get('Pid'));"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "loadSelectedDrugs",
+            "designerId": "0e03404a-057d-4f48-87ee-ba432386c79c"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "createPrescription",
+                "implHandler": [
+                    "",
+                    "//Ext.Msg.alert('Test',button.up('panel').getItemId());",
+                    "",
+                    "var prescForm=Ext.create(\"Pharmacy.view.PrescripionForm\",{});",
+                    "var prescWindow=Ext.create('Ext.window.Window', {",
+                    "    title: 'Prescribe Drugs',",
+                    "    resizable:false",
+                    "});",
+                    "",
+                    "prescWindow.add(prescForm);",
+                    "prescWindow.show();",
+                    "prescForm.down('#sourceID').setValue('Prescription');",
+                    "prescForm.down('#Pid').setValue(button.up('fieldset').down('#Pid').getValue());",
+                    "prescForm.down('#Names').setValue(button.up('fieldset').down('#Names').getValue());",
+                    "prescForm.down('#EncounterNo').setValue(button.up('fieldset').down('#EncounterNo').getValue());",
+                    "prescForm.down('#PrescribeDate').setValue(button.up('fieldset').down('#PrescribeDate').getValue());"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "createPrescription",
+            "designerId": "316d9f3e-21e5-4726-b9cc-d254e5444e13"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "prescripionform",
+                "selector": "prescripionform",
+                "xtype": "prescripionform"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "prescripionform",
+            "designerId": "47258ce6-5549-413b-bbcc-1768c264595f"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "dosage",
+                "selector": "dosage",
+                "xtype": "dosage"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "dosage",
+            "designerId": "9e213eee-2c7e-4f6f-9e0f-91b47196f85d"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "removeDose",
+                "implHandler": [
+                    "button.up('fieldset').destroy();"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "removeDose",
+            "designerId": "9b7e8db0-0899-47c6-bd38-e15dd29a3226"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "prescribe",
+                "implHandler": [
+                    "var form = button.up('panel').getForm(); // get the basic form",
+                    "var encNr= this.getPrescriptions().down('#EncounterNo').getValue();",
+                    "",
+                    "if (form.isValid()) { // make sure the form contains valid data before submitting",
+                    "    form.submit({",
+                    "        params:{",
+                    "            encNr:encNr",
+                    "        },",
+                    "        success: function (form, action) {",
+                    "            Ext.Msg.alert('Thank you!', 'Saved Prescription Successfully.');",
+                    "            button.up('form').getForm().reset();",
+                    "            button.up('window').close();",
+                    "",
+                    "           ",
+                    "",
+                    "        },",
+                    "        failure: function (form, action) {",
+                    "            var jsonResp = Ext.decode(action.response.responseText);",
+                    "",
+                    "            Ext.Msg.alert('Failed', 'There was a problem with the Prescription. \\n Error=' + jsonResp.error);",
+                    "        }",
+                    "    });",
+                    "} else { // display error alert if the data is invalid",
+                    "    Ext.Msg.alert('Invalid Data', 'Please correct form errors.');",
+                    "}"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "prescribe",
+            "designerId": "b725d470-17d2-4074-9e7a-494b3f39ca4f"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "field",
+                    "newValue",
+                    "oldValue",
+                    "eOpts"
+                ],
+                "fn": "getTotalDosage",
+                "implHandler": [
+                    "var dose=field.up('fieldset').down('#dose').getValue();",
+                    "var timesperday=field.up('fieldset').down('#timesperday').getValue();",
+                    "var days=field.up('fieldset').down('#days').getValue();",
+                    "var total=parseInt(dose)*parseInt(timesperday)*parseInt(days);",
+                    "",
+                    "field.up('fieldset').down('#total').setValue(total);",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "getTotalDosage",
+            "designerId": "571e4525-0239-4d00-a7b6-b546e2019639"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "field",
+                    "e",
+                    "eOpts"
+                ],
+                "fn": "loadPatientDetails",
+                "implHandler": [
+                    "var patientStore=Ext.data.StoreManager.lookup(\"PatientDetailStore\");",
+                    "",
+                    "patientStore.load({",
+                    "    params: {",
+                    "        pid:field.getValue()",
+                    "    },",
+                    "    callback: function(records, operation, success) {",
+                    "       // var resp = Ext.JSON.decode(response.responseText);",
+                    "        names= records[0].data.Names;",
+                    "        prescriber=records[0].data.Prescriber;",
+                    "        prescdate=records[0].data.PrescribeDate;",
+                    "        age=records[0].data.Age;",
+                    "        payMode=records[0].data.Payment;",
+                    "        encNr=records[0].data.EncounterNo;",
+                    "        ",
+                    "        this.getIssuedrugs().down('#Names').setValue(names);",
+                    "        this.getIssuedrugs().down('#doctor').setValue(prescriber);",
+                    "        this.getIssuedrugs().down('#prescribeDate').setValue(prescdate);",
+                    "        this.getIssuedrugs().down('#age').setValue(age);",
+                    "        this.getIssuedrugs().down('#payMode').setValue(payMode);",
+                    "        this.getIssuedrugs().down('#encNr').setValue(encNr);",
+                    "",
+                    "    },",
+                    "    scope: this",
+                    "});",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "loadPatientDetails",
+            "designerId": "c78b7e79-cd7f-4c14-b79f-14f07a180951"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "issuedrugs",
+                "selector": "issuedrugs",
+                "xtype": "issuedrugs"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "issuedrugs",
+            "designerId": "fb723b38-b190-4977-83cb-efed5ca4fb7c"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "combo",
+                    "record",
+                    "eOpts"
+                ],
+                "fn": "loadPrescriptionOrder",
+                "implHandler": [
+                    "//Ext.Msg.alert('Test',record.get('ID'));",
+                    "var prescStore=Ext.data.StoreManager.lookup(\"PrescriptionItemStore\");",
+                    "var encNr=this.getIssuedrugs().down('#encNr').getValue();",
+                    "",
+                    "prescStore.load({",
+                    "    params: {",
+                    "        encNr:encNr,",
+                    "        store:record.get('ID'),",
+                    "        prescSource:'Prescription'",
+                    "    },",
+                    "    callback: function(records, operation, success) {",
+                    "",
+                    "    },",
+                    "    scope: this",
+                    "});"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "loadPrescriptionOrder",
+            "designerId": "459fdb61-a49e-4d10-b479-3ec2d189dddd"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "issueDrugs",
+                "implHandler": [
+                    "var form = button.up('form').getForm(); // get the basic form",
+                    "var orderStore =Ext.data.StoreManager.lookup('PrescriptionItemStore');",
+                    "var ordersRecord = orderStore.getRange();",
+                    "",
+                    "var gridData = Array();",
+                    "",
+                    "Ext.each(ordersRecord, function (record) {",
+                    "    gridData.push(record.data);",
+                    "});",
+                    "",
+                    "if (form.isValid()) { // make sure the form contains valid data before submitting",
+                    "    form.submit({",
+                    "        params:{",
+                    "            gridData: Ext.util.JSON.encode(gridData)",
+                    "        },",
+                    "        success: function(form, action) {",
+                    "            Ext.Msg.alert(\"Prescription Order\",\"Drugs Issued Successfully\");",
+                    "            form.reset();",
+                    "            orderStore.removeAll();",
+                    "            orderStore.sync();",
+                    "            ",
+                    "            var peddingPrescStore=Ext.data.StoreManager.lookup(\"PendingPrescriptions\");",
+                    "            peddingPrescStore.load({});",
+                    "",
+                    "",
+                    "        },",
+                    "        failure: function(form, action) {",
+                    "            Ext.Msg.alert('Failed', 'Could not save Order. Error='+action.result.errors.clientNo);",
+                    "        }",
+                    "    });",
+                    "} else { // display error alert if the data is invalid",
+                    "    Ext.Msg.alert('Invalid Data', 'Please correct form errors.');",
+                    "}"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "issueDrugs",
+            "designerId": "0f629fd2-a015-4ab4-ba1c-d72735cb8b3c"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "openReturnOrders",
+                "implHandler": [
+                    "var returnform = Ext.create('Pharmacy.view.ReturnOrders', {});",
+                    "var centerContainer=this.getMainview().down(\"container[region=center]\");",
+                    "centerContainer.removeAll();",
+                    "centerContainer.add(returnform);"
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "openReturnOrders",
+            "designerId": "ba97b6e3-c79d-4501-a2af-aab7e987d8fa"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "returnDrugs",
+                "implHandler": [
+                    "//Ext.Msg.alert('test','test');",
+                    "var returnsStore=Ext.data.StoreManager.lookup('ReturnOrdersStore');",
+                    "//var ordersRecord = returnsStore.getRange();",
+                    "var requestparam=this.getReturnorders().down('#returnsparam').getValue();",
+                    "var sourcePresc=this.getReturnorders().down('#prescSource').getValue();",
+                    "var gridData = Array();",
+                    "",
+                    "var updatedRecords = this.getReturnorders().getStore().getUpdatedRecords();",
+                    "params=[];",
+                    "Ext.each(updatedRecords,function(record){",
+                    " params.push(record.data);",
+                    "});",
+                    "",
+                    "",
+                    "returnsStore.proxy.extraParams = {",
+                    "    selectedCount:params.length,",
+                    "    pid:this.getReturnorders().down('#returnsparam').getValue()",
+                    "",
+                    "};",
+                    "",
+                    "returnsStore.sync({",
+                    "    success: function(response){",
+                    "        var resp = Ext.JSON.decode(response.responseText);",
+                    "        Ext.Msg.alert('Update','Successfully returned drugs');",
+                    "       // var returnsStore=Ext.data.StoreManager.lookup('BillStore');",
+                    "        returnsStore.load({});",
+                    "",
+                    "    },",
+                    "    failure:function(response){",
+                    "        var resp = JSON.parse(response.responseText);",
+                    "        Ext.Msg.alert('Error','Error Updating Bill');",
+                    "",
+                    "    }",
+                    "});",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "returnDrugs",
+            "designerId": "1add8277-d128-4522-8e05-d17e2de024cf"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "gridpanel",
+                    "record",
+                    "item",
+                    "index",
+                    "e",
+                    "options"
+                ],
+                "fn": "loadDrugsToIssue",
+                "implHandler": [
+                    "this.getIssuedrugs().down('#Pid').setValue(record.get('Pid'));",
+                    "var patientStore=Ext.data.StoreManager.lookup(\"PatientDetailStore\");",
+                    "",
+                    "patientStore.load({",
+                    "    params: {",
+                    "        pid:record.get('Pid'),",
+                    "        encNr:record.get('EncounterNo')",
+                    "    },",
+                    "    callback: function(records, operation, success) {",
+                    "       // var resp = Ext.JSON.decode(response.responseText);",
+                    "        names= records[0].data.Names;",
+                    "        prescriber=records[0].data.Prescriber;",
+                    "        prescdate=records[0].data.PrescribeDate;",
+                    "        age=records[0].data.Age;",
+                    "        payMode=records[0].data.Payment;",
+                    "        encNr=record.get('EncounterNo');",
+                    "",
+                    "        this.getIssuedrugs().down('#Names').setValue(names);",
+                    "        this.getIssuedrugs().down('#doctor').setValue(prescriber);",
+                    "        this.getIssuedrugs().down('#prescribeDate').setValue(prescdate);",
+                    "        this.getIssuedrugs().down('#age').setValue(age);",
+                    "        this.getIssuedrugs().down('#payMode').setValue(payMode);",
+                    "        this.getIssuedrugs().down('#encNr').setValue(encNr);",
+                    "",
+                    "    },",
+                    "    scope: this",
+                    "});",
+                    "",
+                    "var prescStore=Ext.data.StoreManager.lookup(\"PrescriptionItemStore\");",
+                    "prescStore.load({",
+                    "    params: {",
+                    "        encNr:record.get('EncounterNo'),",
+                    "        store:'Dispens',",
+                    "        prescSource:'Prescription'",
+                    "    },",
+                    "    callback: function(records, operation, success) {",
+                    "",
+                    "    },",
+                    "    scope: this",
+                    "});"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "loadDrugsToIssue",
+            "designerId": "8dc7940f-ae8e-475d-82de-56c5dc1f1ac9"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "previewDrugsToReturn",
+                "implHandler": [
+                    "var returnsStore =Ext.data.StoreManager.lookup('ReturnOrdersStore');",
+                    "var requestparam=this.getReturnorders().down('#returnsparam').getValue();",
+                    "var sourcePresc=this.getReturnorders().down('#prescSource').getValue();",
+                    "var storeLoc=this.getReturnorders().down('#storeLoc').getValue();",
+                    "returnsStore.load({",
+                    "    params: {",
+                    "        requestparam:requestparam,",
+                    "        sourcePresc:sourcePresc,",
+                    "        storeLoc:storeLoc",
+                    "    },",
+                    "    callback: function(records, operation, success) {",
+                    "",
+                    "    },",
+                    "    scope: this",
+                    "});"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "previewDrugsToReturn",
+            "designerId": "22ab86ec-db1d-4901-8dc1-ed4426b89670"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "returnorders",
+                "selector": "returnorders",
+                "xtype": "returnorders"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "returnorders",
+            "designerId": "2ab36c24-91ea-44d3-92d6-66df89ca6fa9"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "drugissuesreports",
+                "selector": "drugsissuereports",
+                "xtype": "drugissuesreports"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "drugissuesreports",
+            "designerId": "775a0ada-34ea-4bc6-874b-4e2cbd53737c"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "previewIssuedDrugs",
+                "implHandler": [
+                    "var formsContainer=Ext.create(\"Pharmacy.view.DrugIssuesReports\",{});",
+                    "var centerContainer=this.getMainview().down(\"container[region=center]\");",
+                    "centerContainer.removeAll();",
+                    "centerContainer.add(formsContainer);"
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "previewIssuedDrugs",
+            "designerId": "9c73b224-21b5-458d-be5b-29aeccde9d58"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "internalordersreport",
+                "selector": "internalordersreport",
+                "xtype": "internalordersreport"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "internalordersreport",
+            "designerId": "10e19e8e-a72c-4f09-a709-4aa4747bd7ce"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "previewInteralOrders",
+                "implHandler": [
+                    "        var formsContainer=Ext.create(\"Pharmacy.view.InternalOrdersReport\",{});",
+                    "        var centerContainer=this.getMainview().down(\"container[region=center]\");",
+                    "        centerContainer.removeAll();",
+                    "        centerContainer.add(formsContainer);"
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "previewInteralOrders",
+            "designerId": "67dfc97c-c877-4b7e-91f7-4085e4660059"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "stockadjustmentsreport",
+                "selector": "stockadjustmentsreport",
+                "xtype": "stockadjustmentsreport"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "stockadjustmentsreport",
+            "designerId": "86be523e-4a91-44cd-92ec-7aca29287947"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "previewStockAdjustments",
+                "implHandler": [
+                    "var formsContainer=Ext.create(\"Pharmacy.view.StockAdjustmentsReport\",{});",
+                    "var centerContainer=this.getMainview().down(\"container[region=center]\");",
+                    "centerContainer.removeAll();",
+                    "centerContainer.add(formsContainer);"
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "previewStockAdjustments",
+            "designerId": "230dd58d-1083-4dbd-bcb4-d986e3f30767"
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "application"
+                ],
+                "fn": "onLaunch",
+                "implHandler": null
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "onLaunch",
+            "designerId": "6831e338-7f12-4c59-b2bc-9a77e9895f21"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "valuationsreport",
+                "selector": "valuationsreport",
+                "xtype": "valuationsreport"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "valuationsreport",
+            "designerId": "912aed61-e25a-4198-8fa8-804294653434"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "stockmovementsreport",
+                "selector": "stockmovementsreport",
+                "xtype": "stockmovementsreport"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "stockmovementsreport",
+            "designerId": "b6080b43-d73b-4c41-8522-810969e4522c"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "previewMovements",
+                "implHandler": [
+                    "var formsContainer=Ext.create(\"Pharmacy.view.StockMovementsReport\",{});",
+                    "var centerContainer=this.getMainview().down(\"container[region=center]\");",
+                    "centerContainer.removeAll();",
+                    "centerContainer.add(formsContainer);"
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "previewMovements",
+            "designerId": "099fbd37-cfc4-4845-a229-d1a45a5bfe3c"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "previewValuations",
+                "implHandler": [
+                    "var formsContainer=Ext.create(\"Pharmacy.view.ValuationsReport\",{});",
+                    "var centerContainer=this.getMainview().down(\"container[region=center]\");",
+                    "centerContainer.removeAll();",
+                    "centerContainer.add(formsContainer);"
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "previewValuations",
+            "designerId": "493b5395-938a-42a5-bb94-46bb09f0c6e4"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "loadValuation",
+                "implHandler": [
+                    "Ext.Msg.alert('Test','test');",
+                    "var valuationStore =Ext.data.StoreManager.lookup('ValuationStore');",
+                    "var category=this.getDrugissuesreports().down('#itemCategory').getValue();",
+                    "",
+                    "valuationStore.load({",
+                    "    params: {",
+                    "        category:category",
+                    "    },",
+                    "    callback: function(records, operation, success) {",
+                    "",
+                    "    },",
+                    "    scope: this",
+                    "});"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "loadValuation",
+            "designerId": "2c252e95-e1d3-4591-9e39-4e51852e04ab"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "cancelOrder",
+                "implHandler": [
+                    "       var reqno=button.up('panel').down('#requisionnumber').getValue();",
+                    "        Ext.Ajax.request({",
+                    "            url: '../../data/getDataFunctions.php?task=cancelOrder',",
+                    "            params: {",
+                    "                reqno:reqno",
+                    "            },",
+                    "            success: function(response){",
+                    "                var resp = Ext.JSON.decode(response.responseText);",
+                    "                Ext.Msg.alert('Order','Order No '+reqno+' Cancelled successfully');",
+                    "            },",
+                    "            failure:function(response){",
+                    "                var resp = JSON.parse(response);",
+                    "                Ext.Msg.alert('Error',resp.Error);",
+                    "             },",
+                    "            scope: this",
+                    "        });",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "cancelOrder",
+            "designerId": "9a5eb945-646d-475b-8036-58e53eaa667e"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "field",
+                    "newValue",
+                    "oldValue",
+                    "eOpts"
+                ],
+                "fn": "setIssueNo",
+                "implHandler": [
+                    " var orderNo=this.getOrderNo('7');",
+                    "",
+                    " this.getIssuedrugs().down('#issuenumber').setValue(orderNo);"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "setIssueNo",
+            "designerId": "b6871e5b-8979-405b-b5db-fe04c9bd3ccf"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "field",
+                    "e",
+                    "options"
+                ],
+                "fn": "getPressedKey",
+                "implHandler": [
+                    "    if (e.getKey() == e.ENTER && field.getItemId()==='prescParams') {",
+                    "     //   Ext.Msg.alert('Test',field.getItemId());",
+                    "       this.searchPrescription();",
+                    "    }else  if (e.getKey() == e.ENTER && field.getItemId()==='searchParam') {",
+                    "     //   Ext.Msg.alert('Test',field.getItemId());",
+                    "        this.searchItems();",
+                    "    }else  if (e.getKey() == e.ENTER && field.getItemId()==='txtSearchReceipt') {",
+                    "     //   Ext.Msg.alert('Test',field.getItemId());",
+                    "        this.searchReceipt();",
+                    "    }"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "getPressedKey",
+            "designerId": "23b42158-effd-4396-82ce-3bec95995acd"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "searchPrescription",
+                "implHandler": [
+                    "var searchParam=this.getBills().down('#prescParams').getValue();",
+                    "var admSource=this.getBills().down('#admSource').getValue();",
+                    "var prescStore =Ext.data.StoreManager.lookup('PendingPrescriptions');",
+                    "",
+                    "if(admSource=='1'){",
+                    "    encounterClass=1;",
+                    "}else{",
+                    "    encounterClass=2;",
+                    "}",
+                    "",
+                    "",
+                    "prescStore.load({",
+                    "    params: {",
+                    "        prescParams: prescParams,",
+                    "        encounterClass:encounterClass",
+                    "    },",
+                    "    callback: function(records, operation, success) {",
+                    "",
+                    "    },",
+                    "    scope: this",
+                    "",
+                    "});",
+                    ""
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "searchPrescription",
+            "designerId": "e7145e5c-be4f-4aac-ac59-3830bc261219"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "field, newValue, oldValue, eOpts"
+                ],
+                "fn": "filterPrescriptions",
+                "implHandler": [
+                    "var grid = field.up('grid');",
+                    "grid.store.clearFilter();",
+                    "if (newValue) {",
+                    "    var matcher = new RegExp(Ext.String.escapeRegex(newValue), \"i\");",
+                    "    grid.store.filter({",
+                    "        filterFn: function(item) {",
+                    "            return matcher.test(item.get('Names')) ||",
+                    "                matcher.test(item.get('Pid'));",
+                    "        }",
+                    "    });",
+                    "}"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "filterPrescriptions",
+            "designerId": "ff25fb6c-e2bf-4277-bfe4-89a654a68a52"
+        }
+    ]
+}

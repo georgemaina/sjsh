@@ -1,0 +1,70 @@
+{"name": "Grid",
+         "type": "Dojo Dijit",
+         "jmakiVersion" : "1.8.1",
+         "version" : "1.8.1",
+         "image" : "images/dojo-dijit-grid.jpg",
+         "description": "This widget is storing table which you filter data for and add items.",
+         "docs": {
+         	    "modelURL" : "http://wiki.java.net/bin/view/Projects/jMakiTableModel"
+         },
+         "args": [
+           {"autoWidth": {"type":"BOOLEAN",
+             "description" : "Autosize the width of the table.",
+                     "defaultValue": false
+              }
+           }         
+         ],
+         "value": {
+             "required": true, "type": "OBJECT",
+             "defaultValue":{
+                "columns":[
+                              { "label" : "Title", "id" : "title"},
+                              { "label":"Author", "id" : "author"},
+                              { "label": "ISBN #", "id" : "isbn"},
+                              { "label": "Description", "id" : "description"}
+                              ],
+                "rows":[
+                        { "title" : "Book Title 1", "author" : "Author 1", "isbn": "4412", "description" : "A Some long description"},
+                        { "id" : "foo", "title" : "Book Title 2", "author" : "Author 2", "isbn": "4412", "description" : "A Some long description"}
+                       ]
+             },
+         "description":"An object containing a object of colums and array of row arrays to be added to the table."},
+         "config" : {
+          "type" :
+           { "id" : "dijit",
+               "styles" : [
+                   "../resources/libs/dojo/v1.2.0/dojo/resources/dojo.css",
+                   "../resources/libs/dojo/v1.2.0/dojox/grid/resources/Grid.css", 
+                   "../resources/libs/dojo/v1.2.0/dojox/grid/resources/tundraGrid.css"
+               ],
+             "libs" : [
+                   "../resources/libs/dojo/v1.2.0/dojo/dojo.js"
+               ],
+
+               "preload" : "djConfig={parseOnLoad: false, debugAtAllCosts: false, isDebug : false, extraLocale: [\"en-us\"]}",
+               "resources" : [
+                   "../resources/libs/dojo/v1.2.0/dojo",
+                   "../resources/libs/dojo/v1.2.0/dojox",
+                   "../resources/libs/dojo/v1.2.0/dijit"
+               ]
+          }  
+        },
+       "topicInfo": {
+       "defaultPublish" : "/dojo/dijit/grid",       "defaultSubscribe" : ["/dojo/dijit/grid", "/table"],
+      "commands" : [
+          {"name" : "addRows",
+          "description" : "Adds multiple rows to the table."},
+          {"name" : "addRow",
+          "description" : "Adds one row to the table. "},
+          {"name" : "removeRow",
+          "description" : "Removes the row matching the provided id from the table. "},
+          {"name" : "updateRow",
+          "description" : "Updates the row matching the provided id in the table. "},
+          {"name" : "select",
+          "description" : "The Label of the item provided will be set as the value of the text field."
+          },
+          {"name" : "clear",
+          "description" : "Clears the table."
+          }
+      ],       "events" : [           {"name" :  "onSelect",           "description" : "publish the value of the selected row."}         ]    }
+ }

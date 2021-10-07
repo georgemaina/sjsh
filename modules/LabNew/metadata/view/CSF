@@ -1,0 +1,104 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "bodyPadding": 10,
+        "container|align": "stretch",
+        "designer|userAlias": "csf",
+        "designer|userClassName": "CSF",
+        "itemId": "CSF",
+        "layout": "hbox",
+        "title": "CSF Chemistry",
+        "width": 643
+    },
+    "configAlternates": {
+        "bodyPadding": "auto",
+        "container|align": "string",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "layout": "string",
+        "title": "string",
+        "width": "auto",
+        "itemId": "string"
+    },
+    "name": "LipidProfile1",
+    "designerId": "bf1c1468-6f8f-4643-bb57-c300e498ac5e",
+    "viewControllerInstanceId": "c38b5284-947e-4128-ab33-f586e9eb53b5",
+    "viewModelInstanceId": "03db3d22-867e-4718-9cdc-e089f291c5ca",
+    "cn": [
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout": "vbox",
+                "margin": "0 10 0 0",
+                "title": ""
+            },
+            "configAlternates": {
+                "layout": "string",
+                "margin": "auto",
+                "title": "string"
+            },
+            "name": "MyFieldSet8",
+            "designerId": "4eea237a-8d5d-4d16-813c-569784b6f31c",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Glucose",
+                        "labelAlign": "right",
+                        "layout|flex": 1,
+                        "margin": "0 0 3 0",
+                        "name": "group-ltest103-93"
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "labelAlign": "string",
+                        "layout|flex": "number",
+                        "margin": "auto",
+                        "name": "string"
+                    },
+                    "name": "MyTextField86",
+                    "designerId": "6e472f67-42f2-4cce-9d78-4557d3ae50a3"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Protein",
+                        "labelAlign": "right",
+                        "layout|flex": 1,
+                        "margin": "0 0 3 0",
+                        "name": "group-ltest103-94"
+                    },
+                    "configAlternates": {
+                        "fieldLabel": "string",
+                        "labelAlign": "string",
+                        "layout|flex": "number",
+                        "margin": "auto",
+                        "name": "string"
+                    },
+                    "name": "MyTextField87",
+                    "designerId": "77602586-dcc8-4e10-a3fa-23df292f2b3e"
+                }
+            ]
+        }
+    ]
+}
