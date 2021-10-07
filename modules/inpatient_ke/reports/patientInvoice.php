@@ -11,7 +11,7 @@ require($root_path . 'include/inc_environment_global.php');
 <div class="book">
     <?php 
     $pid = $_REQUEST['pid'];
-    $encNo = $_REQUEST['enc'];
+    $encNo = $_REQUEST['encNr'];
     $billNumber = $_REQUEST['billNumber'];
     $debug=false;
     
@@ -27,8 +27,8 @@ require($root_path . 'include/inc_environment_global.php');
                             echo $sql;
             $results = $db->Execute($sql);
             while ($row = $results->FetchRow()) {
-                createInvoiceTitle($row[pid],$row[encounter_nr],$row[pnames],$row[ward],$row[dept],$row[date_birth]
-                                ,$row[sex],$row[encounter_date],$row[discharge_date],$row[encounter_class_nr]);
+                createInvoiceTitle($row['pid'],$row['encounter_nr'],$row['pnames'],$row['ward'],$row['dept'],$row['date_birth']
+                                ,$row['sex'],$row['encounter_date'],$row['discharge_date'],$row['encounter_class_nr']);
                 $pageNos=-$pageNos+1;
             }
             
@@ -72,7 +72,7 @@ require($root_path . 'include/inc_environment_global.php');
                      $measeuredBy='';
                      while($row=$result->FetchRow()){
                          echo "$row[vital] =  $row[value]; &nbsp; &nbsp;";
-                         $measeuredBy=$row[measured_by];
+                         $measeuredBy=$row['measured_by'];
                      }
                      echo "</td><td class=invDetails>$measeuredBy</td></tr>";
 
@@ -86,7 +86,7 @@ require($root_path . 'include/inc_environment_global.php');
                      $diagnosedBy='';
                      while($row=$result->FetchRow()){
                          echo "$row[ICD_10_description]; &nbsp; &nbsp;";
-                         $diagnosedBy=$row[doctor_name];
+                         $diagnosedBy=$row['doctor_name'];
                      }
                      echo "</td><td class='invDetails'>$diagnosedBy</td></tr>";
 

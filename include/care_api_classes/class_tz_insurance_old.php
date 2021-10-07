@@ -1758,40 +1758,7 @@ class Insurance_tz extends Core {
 		  		return FALSE;
 			 }
 		}
-	 //------------------------------------------------------------------------------
 
-	function allocatePrescriptionsToinsurance($bill_number, $prescriptions_nr, $insurance_payment,$insurance_id) {
-	  	global $db;
-	    $debug=FALSE;
-	    ($debug) ? $db->debug=TRUE : $db->debug=FALSE;
-	    $this->sql = "SELECT ID,amount, price FROM care_tz_billing_elem where nr=$bill_number AND prescriptions_nr=$prescriptions_nr and is_medicine=1";
-	    if ($this->result=$db->Execute($this->sql)) {
-	    	while ($this->row=$this->result->FetchRow()) {
-				$covered_price=$this->row['amount'] * $this->row['price'];
-				$exact_id_of_bill_element=$this->row['ID'];
-				$this->sql ="update care_tz_billing_elem SET balanced_insurance='$covered_price', insurance_id=$insurance_id WHERE ID=$exact_id_of_bill_element";
-				$db->Execute($this->sql);
-	    	}
-	    }
-		return true;
-	}
-	 //------------------------------------------------------------------------------
-	function allocateLaboratoryItemsToinsurance($bill_number,$insurance_id) {
-
-	  	global $db;
-	    $debug=FALSE;
-	    ($debug) ? $db->debug=TRUE : $db->debug=FALSE;
-	    $this->sql = "SELECT ID,price FROM care_tz_billing_elem where nr=$bill_number and is_labtest=1";
-	    if ($this->result=$db->Execute($this->sql)) {
-	    	while ($this->row=$this->result->FetchRow()) {
-				$covered_price=$this->row['price'];
-				$exact_id_of_bill_element=$this->row['ID'];
-				$this->sql ="update care_tz_billing_elem SET balanced_insurance='$covered_price', insurance_id=$insurance_id WHERE ID=$exact_id_of_bill_element";
-				$db->Execute($this->sql);
-	    	}
-	    }
-		return true;
-	}
 	//------------------------------------------------------------------------------
 	//------------------------------------------------------------------------------
 	//------------------------------------------------------------------------------

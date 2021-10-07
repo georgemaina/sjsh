@@ -2793,7 +2793,7 @@ class Encounter extends Notes {
      * @return boolean
      */
     function DischargeFromWard($enr, $d_type_nr, $date = '', $time = '') {
-        if ($this->_discharge($enr, "'2','4','5','6'", $d_type_nr, $date, $time)) {
+        if ($this->_discharge($enr, "'2','4','5','6'", $d_type_nr, $date, $time,true)) {
             return true;
         } else {
             return FALSE;

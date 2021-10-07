@@ -112,7 +112,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "bodyStyle": "background:#5fa2dd; color:#ffff;!important;",
+                        "bodyStyle": "background:#e8eaed; color:white;!important;",
                         "designer|displayName": "Activities",
                         "designer|uiInterfaceName": "default-menubar",
                         "floating": false,
@@ -142,13 +142,15 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "iconCls": "x-fa fa-home",
                                 "itemId": "DashBoard",
                                 "text": "Dashboard"
                             },
                             "configAlternates": {
                                 "text": "string",
                                 "itemId": "string",
-                                "style": "object"
+                                "style": "object",
+                                "iconCls": "string"
                             },
                             "name": "MyMenuItem",
                             "designerId": "fa35b1e7-3e41-4af0-bc86-f5a104b7b585"
@@ -161,12 +163,14 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "iconCls": "x-fa fa-home",
                                 "itemId": "WardOccupancy",
                                 "text": "Ward Occupancy"
                             },
                             "configAlternates": {
                                 "text": "string",
-                                "itemId": "string"
+                                "itemId": "string",
+                                "iconCls": "string"
                             },
                             "name": "MyMenuItem1",
                             "designerId": "4261b68e-1140-4cba-b67e-f717ecbede7e"
@@ -179,12 +183,14 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "iconCls": "x-fa fa-info",
                                 "itemId": "Bills",
                                 "text": "Bills Management"
                             },
                             "configAlternates": {
                                 "text": "string",
-                                "itemId": "string"
+                                "itemId": "string",
+                                "iconCls": "string"
                             },
                             "name": "MyMenuItem2",
                             "designerId": "4a313c48-539f-4c20-b156-15ee2defccf8"
@@ -197,12 +203,14 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "iconCls": "x-fa fa-forward",
                                 "itemId": "Debit",
                                 "text": "Debit Patient"
                             },
                             "configAlternates": {
                                 "text": "string",
-                                "itemId": "string"
+                                "itemId": "string",
+                                "iconCls": "string"
                             },
                             "name": "MyMenuItem3",
                             "designerId": "7923be7b-7dd7-4a10-a085-71168de2f7c6"
@@ -215,12 +223,14 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "iconCls": "x-fa fa-check",
                                 "itemId": "Credit",
-                                "text": "Cedit Patient"
+                                "text": "Credit Patient"
                             },
                             "configAlternates": {
                                 "text": "string",
-                                "itemId": "string"
+                                "itemId": "string",
+                                "iconCls": "string"
                             },
                             "name": "MyMenuItem4",
                             "designerId": "7171ae66-0ed3-4cb9-89aa-da922f0140d1"
@@ -233,12 +243,36 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "iconCls": "x-fa fa-anchor",
+                                "itemId": "WardCharges",
+                                "style": "color:white;",
+                                "text": "Daily Ward Charges"
+                            },
+                            "configAlternates": {
+                                "text": "string",
+                                "itemId": "string",
+                                "iconCls": "string",
+                                "style": "string"
+                            },
+                            "name": "MyMenuItem8",
+                            "designerId": "4c773639-654d-436f-9288-17bff46903c5"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "x-fa fa-list",
                                 "itemId": "NhifCredit",
                                 "text": "NHIF Credit"
                             },
                             "configAlternates": {
                                 "text": "string",
-                                "itemId": "string"
+                                "itemId": "string",
+                                "iconCls": "string"
                             },
                             "name": "MyMenuItem5",
                             "designerId": "8f924607-0cf7-44f4-b5d9-3705ddc12fff"
@@ -251,12 +285,14 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "iconCls": "x-fa fa-anchor",
                                 "itemId": "InsuranceCredit",
                                 "text": "Insurance Credit"
                             },
                             "configAlternates": {
                                 "text": "string",
-                                "itemId": "string"
+                                "itemId": "string",
+                                "iconCls": "string"
                             },
                             "name": "MyMenuItem6",
                             "designerId": "888b04cc-b4f6-4b01-a552-987e7c63c076"
@@ -269,12 +305,14 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "iconCls": "x-fa fa-retweet",
                                 "itemId": "FinaliseInvoice",
                                 "text": "Finalize Invoice"
                             },
                             "configAlternates": {
                                 "text": "string",
-                                "itemId": "string"
+                                "itemId": "string",
+                                "iconCls": "string"
                             },
                             "name": "MyMenuItem7",
                             "designerId": "cb02e312-8337-4f03-8008-4af4a0c48dee"
@@ -289,7 +327,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "bodyStyle": "background:#5fa2dd;;color:white;",
+                        "bodyStyle": "background:#e8eaed;color:white;",
                         "designer|displayName": "Reports",
                         "floating": false,
                         "header": [
@@ -315,12 +353,16 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "iconCls": "x-fa fa-file",
                                 "itemId": "InvoicePanel",
+                                "plain": false,
                                 "text": "View Invoices"
                             },
                             "configAlternates": {
                                 "text": "string",
-                                "itemId": "string"
+                                "itemId": "string",
+                                "iconCls": "string",
+                                "plain": "boolean"
                             },
                             "name": "MyMenuItem",
                             "designerId": "1caade32-58ab-4db6-a322-d9f3444ae73f"
@@ -333,12 +375,14 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "iconCls": "x-fa fa-list",
                                 "itemId": "InvoicesList",
                                 "text": "Pending Invoices"
                             },
                             "configAlternates": {
                                 "text": "string",
-                                "itemId": "string"
+                                "itemId": "string",
+                                "iconCls": "string"
                             },
                             "name": "MyMenuItem1",
                             "designerId": "1f47b9f1-0faa-463a-8fa4-ef00f7db187d"
@@ -351,12 +395,14 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "iconCls": "x-fa fa-table",
                                 "itemId": "NhifCredits",
                                 "text": "NHIF Credits"
                             },
                             "configAlternates": {
                                 "text": "string",
-                                "itemId": "string"
+                                "itemId": "string",
+                                "iconCls": "string"
                             },
                             "name": "MyMenuItem2",
                             "designerId": "46a99911-8b01-4673-80c3-1e6be40b0fe7"
@@ -369,12 +415,14 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "iconCls": "x-fa fa-tags",
                                 "itemId": "OccupancyList",
                                 "text": "Bed Occupancy"
                             },
                             "configAlternates": {
                                 "text": "string",
-                                "itemId": "string"
+                                "itemId": "string",
+                                "iconCls": "string"
                             },
                             "name": "MyMenuItem3",
                             "designerId": "f58c319c-a2c7-44b0-a5f0-87db9d5757a0"
@@ -387,12 +435,14 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "iconCls": "x-fa fa-retweet",
                                 "itemId": "AdmDis",
                                 "text": "Admissions & Discharges"
                             },
                             "configAlternates": {
                                 "text": "string",
-                                "itemId": "string"
+                                "itemId": "string",
+                                "iconCls": "string"
                             },
                             "name": "MyMenuItem6",
                             "designerId": "8bf03995-ecff-4813-a0c4-baf151eed617"
@@ -407,7 +457,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "bodyStyle": "background:#5fa2dd;;color:white;",
+                        "bodyStyle": "background:#e8eaed;color:white;",
                         "designer|displayName": "Settings",
                         "floating": false,
                         "header": [

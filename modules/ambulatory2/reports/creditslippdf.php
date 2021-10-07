@@ -1,6 +1,7 @@
 <?php
 require ('roots.php');
 require ($root_path . 'include/inc_environment_global.php');
+require($root_path . 'include/myFunctions.php');
 
 require_once 'Zend/Pdf.php';
 $pdf = new Zend_Pdf ();
@@ -135,6 +136,7 @@ function getWrappedText($string, Zend_Pdf_Style $style, $max_width) {
  * found here, not sure of the author :
  * http://devzone.zend.com/article/2525-Zend_Pdf-tutorial#comments-2535
  */
+
 function widthForStringUsingFontSize($string, $font, $fontSize) {
     $drawingString = iconv('UTF-8', 'UTF-16BE//IGNORE', $string);
     $characters = array();
@@ -172,7 +174,8 @@ $page->drawImage($image, $leftPos+50, $topPos-80, $leftPos+125, $topPos);
 
 $topPos=$topPos-80;
 
-$sql2="SELECT DISTINCT b.pid,CONCAT(b.name_first,' ',name_last,' ',name_2) AS PatientNames,c.`name` as company,s.`Slip_no`,s.slip_date,s.served_by,m.memberID FROM care_person b LEFT JOIN care_tz_company c ON b.`insurance_ID`=c.`id` LEFT JOIN care_ke_slips s ON b.`pid`=s.`pid` LEFT JOIN care_ke_debtormembers m on b.pid=m.PID
+$sql2="SELECT DISTINCT b.pid,CONCAT(b.name_first,' ',name_last,' ',name_2) AS PatientNames,c.`name` as company,s.`Slip_no`,s.slip_date,s.served_by,m.memberID, b.date_birth
+        FROM care_person b LEFT JOIN care_tz_company c ON b.`insurance_ID`=c.`id` LEFT JOIN care_ke_slips s ON b.`pid`=s.`pid` LEFT JOIN care_ke_debtormembers m on b.pid=m.PID
     WHERE b.pid='$pid'";
 //echo $sql;
 
@@ -219,6 +222,7 @@ $page->drawText('Credit  Slip No:', $leftPos + 10, $topPos - 80);
 $page->drawText('Date', $leftPos + 10, $topPos - 90);
 $page->drawText('Patient No:', $leftPos + 10, $topPos - 100);
 $page->drawText('Patient Name:', $leftPos + 10, $topPos - 110);
+$page->drawText('Date of Birth:', $leftPos + 10, $topPos - 120);
 
 $page->setStyle($normalStyle4);
 $page->drawText($row['Slip_no'], $leftPos + 90, $topPos - 80);
@@ -230,6 +234,8 @@ foreach ($msg as $line2) {
     $page->drawText($line2, $leftPos + 90, $topPos - 110);
     $topPos-=15;
 }
+//$age=getAge($row['date_birth']);
+$page->drawText($row['date_birth'], $leftPos + 90, $topPos - 90);
 
 
 

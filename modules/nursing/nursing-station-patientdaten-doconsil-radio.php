@@ -176,7 +176,7 @@ switch($mode)
 			)";
                 if($debug) echo $sql;
 $presc_obj = new Prescription;
-$presc_obj->insert_prescription($pn, $_POST['test_request']);
+$presc_obj->insert_prescription($pn, $_POST['test_request'],'xray');
  
                           if($ergebnis=$db->Execute($sql))
       {
@@ -217,7 +217,7 @@ $presc_obj->insert_prescription($pn, $_POST['test_request']);
 										  if_patmobile='".$if_patmobile."', if_allergy='".$if_allergy."',
 										  if_hyperten='".$if_hyperten."', if_pregnant='".$if_pregnant."',
 										  clinical_info='".htmlspecialchars($clinical_info)."', test_request='".htmlspecialchars($test_request)."',
-										  send_date='".formatDate2Std($send_date,$date_format)."',
+										  send_date='".formatDate2Std($send_date,$date_format,false,false,'-')."',
 										  send_doctor='".htmlspecialchars($send_doctor)."', status='".$status."',
 										  history='".$core->ConcatHistory('Update: '.date('Y-m-d H:i:s').' = '.$_SESSION['sess_user_name'].'\n')."',
 											bill_number='".$bill_nr."';
@@ -386,7 +386,7 @@ div.fa2_ml3 {
 </style>
 
 <script language="javascript">
-<!--
+
 function chkForm(d){
 
     if((d.test_request.value=='')||(d.test_request.value==' '))
@@ -542,12 +542,12 @@ elseif(!$read_form && !$no_proc_assist)
  echo '<tr><td colspan=2><div class=fva2_ml10>'.$LDReqTest .':<br>';
 echo '<select name="test_request">';
 echo '<option value="">===Select a test===</option>';
-$drug_list = $pres_obj->getDrugList('xray', '0');
+$drug_list = $pres_obj->getDrugList('xray', '0',$_SESSION['sess_pid']);
 for ($i=0;$i<sizeOf($drug_list);$i++) {
 	if ($drug_list[$i][2]==$stored_request['test_request']) {
-		echo '<option selected value='.$drug_list[$i][drug_id].'>'.$drug_list[$i][description].'</option>';
+		echo '<option selected value='.$drug_list[$i]['drug_id'].'>'.$drug_list[$i]['description'].'</option>';
 	} else {
-		echo '<option value='.$drug_list[$i][drug_id].'>'.$drug_list[$i][description].'</option>';
+		echo '<option value='.$drug_list[$i]['drug_id'].'>'.$drug_list[$i]['description'].'</option>';
 	}
 }
 //echo '</select></td></tr>';

@@ -7,8 +7,14 @@ $receipt = $_REQUEST['receipt'];
 $billNumber = $_GET["billNumber"];
 $nhif = $_REQUEST['nhif'];
 
+require_once 'Zend/Pdf.php';
 
-createInvoiceTitle($db, $pid, $receipt, $billNumber, $nhif,$root_path);
+$pdf = new Zend_Pdf ();
+require ($root_path . 'include/care_api_classes/Library_Pdf_base.php');
+
+$pdfBase = new Library_Pdf_Base();
+
+createInvoiceTitle($db, $pid, $receipt, $billNumber, $nhif,$pdf,$pdfBase);
 
 function getWrappedText($string, Zend_Pdf_Style $style, $max_width) {
     $wrappedText = '';
@@ -55,21 +61,15 @@ function widthForStringUsingFontSize($string, $font, $fontSize) {
     return $stringWidth;
 }
 
-function createInvoiceTitle($db, $pid, $receipt, $billNumber, $nhif,$root_path) {
+function createInvoiceTitle($db, $pid, $receipt, $billNumber, $nhif,$pdf,$pdfBase) {
     require ('roots.php');
-    require_once 'Zend/Pdf.php';
-    $pdf = new Zend_Pdf ();
+
     $page = new Zend_Pdf_Page(Zend_Pdf_Page::SIZE_A4);
-
-
-    require ($root_path . 'include/care_api_classes/Library_Pdf_Base.php');
-    $pdfBase=new Library_Pdf_Base();
-
-    require '../../../include/care_api_classes/class_encounter.php';
+    require '../../../include/care_api_classes/class_ward.php';
     //require('../../../include/class_ward.php');
-    //require('../../../include/care_api_classes/class_encounter.php');
-    //$encobj= new Ward ();
-    $obj_enr=new Encounter();
+    $wrd = new Ward ();
+//     $obj_enr=new Encounter();
+
     $nhifdebited=false;
     $pageHeight = $page->getHeight();
     $width = $page->getWidth();
@@ -93,12 +93,13 @@ function createInvoiceTitle($db, $pid, $receipt, $billNumber, $nhif,$root_path) 
     }
 
 
+
     $imagePath="../../../icons/logo.jpg";
     $image = Zend_Pdf_Image::imageWithPath($imagePath);
     $page->drawImage($image, $leftPos+20, $topPos-70, $leftPos+500, $topPos+10);
 
 
-    $title = 'OUTPATIENT INTERIM INVOICES';
+    $title = 'INTERIM INVOICES';
 
     $headlineStyle = new Zend_Pdf_Style ();
     $headlineStyle->setFillColor(new Zend_Pdf_Color_RGB(0, 0, 0));
@@ -111,7 +112,7 @@ function createInvoiceTitle($db, $pid, $receipt, $billNumber, $nhif,$root_path) 
     $headlineStyle2 = new Zend_Pdf_Style ();
     $headlineStyle2->setFont($font, 13);
     $page->setStyle($headlineStyle2);
-    $page->drawText($title, $leftPos + 160, $topPos - 80);
+    $page->drawText($title, $leftPos + 200, $topPos - 90);
     $page->setFont(Zend_Pdf_Font::fontWithName(Zend_Pdf_Font::FONT_HELVETICA_BOLD), 9);
 
 
@@ -125,16 +126,15 @@ function createInvoiceTitle($db, $pid, $receipt, $billNumber, $nhif,$root_path) 
     $font = Zend_Pdf_Font::fontWithName(Zend_Pdf_Font::FONT_HELVETICA_BOLD);
     $headlineStyle4->setFont($font, 10);
     $page->setStyle($headlineStyle4);
-    $page->drawText('Inpatient No:', $leftPos + 20, $topPos - 100);
+    $page->drawText('Outpatient No:', $leftPos + 20, $topPos - 100);
     $page->drawText('Patient No:', $leftPos + 20, $topPos - 115);
     $page->drawText('Name:      ', $leftPos + 20, $topPos - 130);
     $page->drawText('Address:   ', $leftPos + 20, $topPos - 145);
     $page->drawText('Town:      ', $leftPos + 20, $topPos - 160);
     $page->drawText('Phone:     ', $leftPos + 20, $topPos - 175);
 
-    $page->drawText('Admission Date: ', $leftPos + 330, $topPos - 100);
-    $page->drawText('Discharge Date: ', $leftPos + 330, $topPos - 115);
-    $page->drawText('Clinic:       ', $leftPos + 330, $topPos - 130);
+//    $page->drawText('Admission Date: ', $leftPos + 330, $topPos - 100);
+//    $page->drawText('Discharge Date: ', $leftPos + 330, $topPos - 115);
 
 
     $sql = "SELECT id,accno,`name` FROM care_tz_company WHERE id=(SELECT insurance_id FROM care_person WHERE pid=$pid)";
@@ -156,10 +156,23 @@ function createInvoiceTitle($db, $pid, $receipt, $billNumber, $nhif,$root_path) 
 
 
     $sql2 = "SELECT
-			    p.pid ,e.encounter_nr, p.name_first, p.name_2, p.name_last, p.date_birth, p.addr_zip
-			    , p.cellphone_1_nr, p.citizenship, e.encounter_class_nr,e.bill_number,p.selian_pid
-			FROM  care_person  p LEFT JOIN care_encounter e ON (p.pid = e.pid)
-			WHERE (e.encounter_class_nr='2' and p.pid='$pid' and e.bill_number='$billNumber')";
+    care_ke_billing.pid
+    ,care_ke_billing.encounter_nr
+    , care_person.name_first
+    , care_person.name_2
+    , care_person.name_last
+    , care_person.date_birth
+    , care_person.addr_zip
+    , care_person.cellphone_1_nr
+    , care_person.citizenship
+    , care_ke_billing.`IP-OP`
+    ,care_ke_billing.bill_number
+    ,care_person.selian_pid
+FROM
+    care_ke_billing
+    INNER JOIN care_person
+        ON (care_ke_billing.pid = care_person.pid)
+WHERE (care_ke_billing.`IP-OP`='2' and care_ke_billing.pid='" . $pid . "' and bill_number='$billNumber')";
 //echo $sql2;
     $info_result = $db->Execute($sql2);
 
@@ -178,21 +191,16 @@ function createInvoiceTitle($db, $pid, $receipt, $billNumber, $nhif,$root_path) 
         $page->drawText(ucfirst(strtolower($patient_data ['citizenship'])) . '    Postal code ' . $postal, $leftPos + 92, $topPos - 160);
         $page->drawText($patient_data ['cellphone_1_nr'], $leftPos + 92, $topPos - 175);
 
-        $row2 = $obj_enr->getOPEncounterDetails($patient_data ['encounter_nr']);
-        // $bed_nr = $row2 [6];
-        // $room_nr = $row2 [5];
-        // $ward_nr = $row2 [0];
-        $dept = $row2['current_dept'];
-        $deptName = $row2['name_formal'];
-        $admDate = $row2['encounter_date'];
-        $Disc_date = $row2['date_to'];
 
-        $page->drawText($admDate, $leftPos + 430, $topPos - 100);
-        $page->drawText($Disc_date, $leftPos + 430, $topPos - 115);
-        $page->drawText($deptName, $leftPos + 370, $topPos - 130);
-        // $page->drawText($room_nr, $leftPos + 430, $topPos - 145);
-        // $page->drawText($bed_nr, $leftPos + 430, $topPos - 160);
-        $page->drawText($patient_data['bill_number'], $leftPos + 430   , $topPos - 70);
+//        $row2 = $wrd->EncounterLocationsInfo2($patient_data ['encounter_nr']);
+        $row2=$wrd->getEncounterDetails($patient_data ['encounter_nr']);
+//        $admDate = $row2['encounter_date'];
+//        $Disc_date = $row2['discharge_date'];
+//
+//        $page->drawText($admDate, $leftPos + 430, $topPos - 100);
+//        $page->drawText($Disc_date, $leftPos + 430, $topPos - 115);
+
+        $page->drawText($patient_data ['bill_number'], $leftPos + 430   , $topPos - 70);
     } else {
         $page->drawText('Cannot connect database', $leftPos + 400, $topPos - 160);
     }
@@ -212,12 +220,21 @@ function createInvoiceTitle($db, $pid, $receipt, $billNumber, $nhif,$root_path) 
     $page->drawText('ref No', $leftPos + 270, $topPos - 205);
     $page->drawText('Price', $leftPos + 330, $topPos - 205);
     $page->drawText('Quantity', $leftPos + 380, $topPos - 205);
-    $page->drawText('Total', $leftPos + 450, $topPos - 205);
+    $page->drawText('Total', $leftPos + 460, $topPos - 205);
+
+
 
     $currpoint = 220;
-    $sql3 = "SELECT bill_date, description, bill_number, price, qty , total
-FROM  care_ke_billing
-WHERE (pid ='$pid' AND service_type NOT IN 
+    $sql3 = "SELECT
+    prescribe_date
+    , description
+    , bill_number
+    , price
+    , qty
+    , total
+FROM
+    care_ke_billing
+WHERE (pid ='" . $pid . "' AND service_type NOT IN 
             ('payment','payment adjustment','NHIF') and bill_number=$billNumber and `ip-op`=2)";
 
     $results = $db->Execute($sql3);
@@ -226,7 +243,7 @@ WHERE (pid ='$pid' AND service_type NOT IN
     $resultsStyle->setFont($font, 9);
     $page->setStyle($resultsStyle);
 
-
+    $totalBill=0;
     while ($row = $results->FetchRow()) {
         if ($topPos < 230) {
             array_push($pdf->pages, $page);
@@ -244,18 +261,17 @@ WHERE (pid ='$pid' AND service_type NOT IN
             $rectStyle->setLineDashingPattern(array(2), 1.6);
             $rectStyle->setLineColor(new Zend_Pdf_Color_GrayScale(0.8));
             $font = Zend_Pdf_Font::fontWithName(Zend_Pdf_Font::FONT_HELVETICA);
-            $rectStyle->setFont($font, 9);
+            $rectStyle->setFont($font, 10);
             $page->setStyle($rectStyle);
-            $page->drawRectangle($leftPos + 18, $topPos - $currpoint, $leftPos + 500, $topPos - $currpoint, Zend_Pdf_Page::SHAPE_DRAW_STROKE);
+            $page->drawRectangle($leftPos + 32, $topPos - $currpoint, $leftPos + 500, $topPos - $currpoint, Zend_Pdf_Page::SHAPE_DRAW_STROKE);
         }
-        
-        $page->drawText($row['bill_date'], $leftPos + 20, $topPos - $currpoint);
+        $page->drawText($row['prescribe_date'], $leftPos + 20, $topPos - $currpoint);
 
         $y = $topPos - $currpoint;
-        $lines = explode("\n", getWrappedText(ucfirst(strtolower($row['description'])), $headlineStyle, 400));
+        $lines = explode("\n", getWrappedText($row['description'], $headlineStyle, 200));
         foreach ($lines as $line) {
-            $page->drawText($line, $leftPos + 70, $y);
-            $y-=10;
+            $page->drawText($line, $leftPos + 80, $y);
+            $y-=30;
 //            $leftPos = $leftPos - 40;
         }
         //$page->drawText($row['description'], $leftPos + 100, $topPos - $currpoint);
@@ -268,19 +284,19 @@ WHERE (pid ='$pid' AND service_type NOT IN
         } else {
             $price = 0;
         }
-        if (!empty($row['total']) and $row['total']<>'') {
+        if (!empty($row['total'])) {
             $total = $row['total'];
-        } else if (!is_numeric($row['total'])) {
-            $total = 0;
         } else {
             $total = 0;
         }
 
-        $pdfBase->drawText($page, number_format($price, 2), $leftPos + 355, $topPos - $currpoint, $leftPos + 355, right);
-        $pdfBase->drawText($page, $row['qty'], $leftPos + 410, $topPos - $currpoint, $leftPos + 410, right);
-        $pdfBase->drawText($page, number_format($total, 2), $leftPos + 475, $topPos - $currpoint, $leftPos + 475, right);
+        $totalBill= $totalBill+$total;
 
-        $topPos = $topPos - 12;
+        $pdfBase->drawText($page, number_format($price, 2), $leftPos + 360, $topPos - $currpoint, $leftPos + 360, right);
+//        $page->drawText($row['qty'], $leftPos + 380, $topPos - $currpoint);
+        $pdfBase->drawText($page, $row['qty'], $leftPos + 410, $topPos - $currpoint, $leftPos + 410, right);
+        $pdfBase->drawText($page, number_format($total, 2), $leftPos + 480, $topPos - $currpoint, $leftPos + 480, right);
+        $topPos = $topPos - 20;
     }
     $topPos = $topPos - $currpoint;
     $page->drawRectangle($leftPos + 32, $topPos - $currpoint, $leftPos + 500, $topPos - $currpoint, Zend_Pdf_Page::SHAPE_DRAW_STROKE);
@@ -308,7 +324,7 @@ WHERE (pid ='$pid' AND service_type NOT IN
         $rectStyle->setLineDashingPattern(array(2), 1.6);
         $rectStyle->setLineColor(new Zend_Pdf_Color_GrayScale(0.8));
         $font = Zend_Pdf_Font::fontWithName(Zend_Pdf_Font::FONT_HELVETICA);
-        $rectStyle->setFont($font, 9);
+        $rectStyle->setFont($font, 10);
         $page->setStyle($rectStyle);
         $page->drawRectangle($leftPos + 32, $topPos - $currpoint, $leftPos + 500, $topPos - $currpoint, Zend_Pdf_Page::SHAPE_DRAW_STROKE);
     }
@@ -319,8 +335,9 @@ WHERE (pid ='$pid' AND service_type NOT IN
     $resultsStyle->setFont($font, 9);
     $page->setStyle($resultsStyle);
     $page->drawText('Total', $leftPos + 380, $topPos - $currpoint);
-    $totalBill=$row['total'];
-    $page->drawText('Ksh.' . number_format($row['total'], 2), $leftPos + 430, $topPos - $currpoint);
+//    $page->drawText('Ksh.' . number_format($row['total'], 2), $leftPos + 430, $topPos - $currpoint);
+    $pdfBase->drawText($page, number_format($row['total'], 2), $leftPos + 480, $topPos - $currpoint, $leftPos + 480, right);
+
     $currpoint = $currpoint + 10;
     $page->drawRectangle($leftPos + 32, $topPos - $currpoint, $leftPos + 500, $topPos - $currpoint, Zend_Pdf_Page::SHAPE_DRAW_STROKE);
 
@@ -334,73 +351,113 @@ WHERE (pid ='$pid' AND service_type NOT IN
     $page->setStyle($resultsStyle);
 
     $currpoint = $currpoint + 20;
-    $totalPaid=0;
 
-    $ntotals=0;
-    while ($rowi = $resultsi->FetchRow()) {
-        if ($topPos < 200) {
-            array_push($pdf->pages, $page);
-            $page = new Zend_Pdf_Page(Zend_Pdf_Page::SIZE_A4);
-            $resultsStyle = new Zend_Pdf_Style ();
-            $resultsStyle->setLineDashingPattern(array(2), 1.6);
-            $font = Zend_Pdf_Font::fontWithName(Zend_Pdf_Font::FONT_HELVETICA);
-            $resultsStyle->setFillColor(new Zend_Pdf_Color_RGB(0, 0, 0));
-            $resultsStyle->setFont($font, 9);
-            $page->setStyle($resultsStyle);
-            $pageHeight = $page->getHeight();
-            $topPos = $pageHeight - 20;
-            $currpoint = 30;
-            $rectStyle = new Zend_Pdf_Style ();
-            $rectStyle->setLineDashingPattern(array(2), 1.6);
-            $rectStyle->setLineColor(new Zend_Pdf_Color_GrayScale(0.8));
-            $font = Zend_Pdf_Font::fontWithName(Zend_Pdf_Font::FONT_HELVETICA);
-            $rectStyle->setFont($font, 10);
-            $page->setStyle($rectStyle);
-            $page->drawRectangle($leftPos + 32, $topPos - $currpoint, $leftPos + 500, $topPos - $currpoint, Zend_Pdf_Page::SHAPE_DRAW_STROKE);
-        }
-
-
-        if ($receipt=='ON' AND $nhif=='ON') {
-            $page->drawText($rowi['bill_date'], $leftPos + 36, $topPos - $currpoint);
-            $page->drawText($rowi['service_type'], $leftPos + 120, $topPos - $currpoint);
-            if($rowi['service_type']=="Payment"){
-                $page->drawText('Receipt No ('.$rowi['batch_no'] . ')', $leftPos + 180, $topPos - $currpoint);
-            }else if($rowi['service_type']=="NHIF"){
-                $page->drawText('Claim No ('.$rowi['batch_no'] . ')', $leftPos + 180, $topPos - $currpoint);
+    if ($receipt <> '') {
+        $ntotals=0;
+        while ($rowi = $resultsi->FetchRow()) {
+            if ($topPos < 200) {
+                array_push($pdf->pages, $page);
+                $page = new Zend_Pdf_Page(Zend_Pdf_Page::SIZE_A4);
+                $resultsStyle = new Zend_Pdf_Style ();
+                $resultsStyle->setLineDashingPattern(array(2), 1.6);
+                $font = Zend_Pdf_Font::fontWithName(Zend_Pdf_Font::FONT_HELVETICA);
+                $resultsStyle->setFillColor(new Zend_Pdf_Color_RGB(0, 0, 0));
+                $resultsStyle->setFont($font, 9);
+                $page->setStyle($resultsStyle);
+                $pageHeight = $page->getHeight();
+                $topPos = $pageHeight - 20;
+                $currpoint = 30;
+                $rectStyle = new Zend_Pdf_Style ();
+                $rectStyle->setLineDashingPattern(array(2), 1.6);
+                $rectStyle->setLineColor(new Zend_Pdf_Color_GrayScale(0.8));
+                $font = Zend_Pdf_Font::fontWithName(Zend_Pdf_Font::FONT_HELVETICA);
+                $rectStyle->setFont($font, 10);
+                $page->setStyle($rectStyle);
+                $page->drawRectangle($leftPos + 32, $topPos - $currpoint, $leftPos + 500, $topPos - $currpoint, Zend_Pdf_Page::SHAPE_DRAW_STROKE);
             }
-            $page->drawText('Ksh'.number_format($rowi['total']), $leftPos + 420, $topPos - $currpoint);
-            $ntotals=$ntotals+$rowi['total'];
+            $page->drawText($rowi['prescribe_date'], $leftPos + 36, $topPos - $currpoint);
+            $page->drawText('Bill', $leftPos + 100, $topPos - $currpoint);
+            $page->drawText($rowi['service_type'], $leftPos + 150, $topPos - $currpoint);
+            $page->drawText('receipt No ( ', $leftPos + 270, $topPos - $currpoint);
+            $page->drawText($rowi['batch_no'] . ' )', $leftPos + 320, $topPos - $currpoint);
+            $page->drawText('Ksh', $leftPos + 380, $topPos - $currpoint);
+//            $page->drawText($rowi['total'], $leftPos + 450, $topPos - $currpoint);
+            $pdfBase->drawText($page, number_format($rowi['total'], 2), $leftPos + 480, $topPos - $currpoint, $leftPos + 480, right);
+            $topPos = $topPos - 15;
+            
+            // if($rowi['rev_code']<>'nhif2')  {
+                  $ntotals=$ntotals+$rowi['total'];
+            //  }
         }
-
-        if ($receipt=='ON' AND $nhif=='' AND $rowi['service_type']=='Payment') {
-            $page->drawText($rowi['bill_date'], $leftPos + 36, $topPos - $currpoint);
-            $page->drawText($rowi['service_type'], $leftPos + 120, $topPos - $currpoint);
-            $page->drawText('Receipt No ('.$rowi['batch_no'] . ')', $leftPos + 180, $topPos - $currpoint);
-            $page->drawText('Ksh'.number_format($rowi['total']), $leftPos + 420, $topPos - $currpoint);
-            $ntotals=$ntotals+$rowi['total'];
-        }
-
-        if ($receipt =='' AND $nhif=='ON' and $rowi['service_type']=='NHIF') {
-            $page->drawText($rowi['bill_date'], $leftPos + 36, $topPos - $currpoint);
-            $page->drawText($rowi['service_type'], $leftPos + 120, $topPos - $currpoint);
-            $page->drawText('Claim No ('.$rowi['batch_no'] . ')', $leftPos + 180, $topPos - $currpoint);
-            $page->drawText('Ksh'.number_format($rowi['total']), $leftPos + 420, $topPos - $currpoint);
-
-            $ntotals=$ntotals+$rowi['total'];
-
-        }
-
-        $topPos = $topPos - $currpoint;
-        $currpoint = 10;
-
-        $topPos = $topPos - 15;
+         $totalPaid=$ntotals;
     }
-    $totalPaid=$ntotals;
 
 
 
+    $resultsi = $db->Execute($sqli);
+    $resultsStyle = new Zend_Pdf_Style ();
+    $font = Zend_Pdf_Font::fontWithName(Zend_Pdf_Font::FONT_HELVETICA);
+    $resultsStyle->setFont($font, 9);
+    $page->setStyle($resultsStyle);
 
+    $currpoint = $currpoint + 20;
+    if ($nhif <> '' and $receipt == '') {
+    $nhifdebited=true;
+        $sqlj = "SELECT * FROM care_ke_billing WHERE (pid ='" . $pid . "' AND rev_code in('NHIF','NHIF2') and `ip-op`=2 and bill_number=$billNumber)";
+        $resultsj = $db->Execute($sqlj);
+        $ntotal=0;
+        while ($rowi = $resultsj->FetchRow()) {
+            if ($topPos < 200) {
+                array_push($pdf->pages, $page);
+                $page = new Zend_Pdf_Page(Zend_Pdf_Page::SIZE_A4);
+                $resultsStyle = new Zend_Pdf_Style ();
+                $resultsStyle->setLineDashingPattern(array(2), 1.6);
+                $font = Zend_Pdf_Font::fontWithName(Zend_Pdf_Font::FONT_HELVETICA);
+                $resultsStyle->setFillColor(new Zend_Pdf_Color_RGB(0, 0, 0));
+                $resultsStyle->setFont($font, 9);
+                $page->setStyle($resultsStyle);
+                $pageHeight = $page->getHeight();
+                $topPos = $pageHeight - 20;
+                $currpoint = 30;
+                $rectStyle = new Zend_Pdf_Style ();
+                $rectStyle->setLineDashingPattern(array(2), 1.6);
+                $rectStyle->setLineColor(new Zend_Pdf_Color_GrayScale(0.8));
+                $font = Zend_Pdf_Font::fontWithName(Zend_Pdf_Font::FONT_HELVETICA);
+                $rectStyle->setFont($font, 10);
+                $page->setStyle($rectStyle);
+                $page->drawRectangle($leftPos + 32, $topPos - $currpoint, $leftPos + 500, $topPos - $currpoint, Zend_Pdf_Page::SHAPE_DRAW_STROKE);
+            }
+            $page->drawText($rowi['prescribe_date'], $leftPos + 36, $topPos - $currpoint);
+            $page->drawText('Bill', $leftPos + 100, $topPos - $currpoint);
+            $page->drawText($rowi['service_type'], $leftPos + 150, $topPos - $currpoint);
+            $page->drawText('receipt No ( ', $leftPos + 270, $topPos - $currpoint);
+            $page->drawText($rowi['batch_no'] . ' )', $leftPos + 320, $topPos - $currpoint);
+            $page->drawText('Ksh', $leftPos + 380, $topPos - $currpoint);
+//            $page->drawText($rowi['total'], $leftPos + 450, $topPos - $currpoint);
+            $pdfBase->drawText($page, number_format($rowi['total'], 2), $leftPos + 480, $topPos - $currpoint, $leftPos + 480, right);
+            $topPos = $topPos - 15;
+             //if($rowi['rev_code']<>'nhif2')  {
+                  $ntotal=$ntotal+$rowi['total'];
+             // }
+           
+        }
+        $totalPaid=$ntotal;
+    }
 
+    $topPos = $topPos - $currpoint;
+    $currpoint = 10;
+    $page->drawLine($leftPos + 32, $topPos - $currpoint, $leftPos + 500, $topPos - $currpoint, Zend_Pdf_Page::SHAPE_DRAW_STROKE);
+
+    $sql4 = "SELECT sum(total) as total FROM care_ke_billing WHERE pid = '$pid' AND 
+        service_type IN ('payment','payment adjustment','NHIF') and `ip-op`=2 and bill_number=$billNumber";
+
+    $results = $db->Execute($sql4);
+    $row = $results->FetchRow();
+//    if (!empty($row['total'])) {
+//        $totalPaid = $row['total'];
+//    } else {
+//        $totalPaid = 0;
+//    }
     $resultsStyle = new Zend_Pdf_Style ();
     $font = Zend_Pdf_Font::fontWithName(Zend_Pdf_Font::FONT_HELVETICA_BOLD);
     $resultsStyle->setFont($font, 9);
@@ -409,23 +466,27 @@ WHERE (pid ='$pid' AND service_type NOT IN
     if ($receipt <> '') {
         $page->drawRectangle($leftPos + 32, $topPos - $currpoint, $leftPos + 500, $topPos - $currpoint, Zend_Pdf_Page::SHAPE_DRAW_STROKE);
         $page->drawText('Total Paid:', $leftPos + 380, $topPos - $currpoint);
-        $page->drawText(' Ksh. ' . number_format($totalPaid, 2), $leftPos + 430, $topPos - $currpoint);
+//        $page->drawText(' Ksh. ' . number_format($totalPaid, 2), $leftPos + 430, $topPos - $currpoint);
+        $pdfBase->drawText($page, number_format($totalPaid, 2), $leftPos + 480, $topPos - $currpoint, $leftPos + 480, right);
     }
     $currpoint = $currpoint + 20;
-    if($receipt =='' AND $nhif=='ON'){
-        $bal=$totalPaid;
-    }else{
-        $bal=$totalBill-$totalPaid;
-    }
+    //if($nhifdebited){
+          //  $bal=$totalPaid;
+  //  }else{
+            $bal=$totalBill-$totalPaid;
+    //}
     $page->drawText('Bill balance:', $leftPos + 380, $topPos - $currpoint);
-    $page->drawText(' Ksh. ' . number_format(intval($bal ), 2), $leftPos + 430, $topPos - $currpoint);
+//    $page->drawText(' Ksh. ' . number_format(intval($bal ), 2), $leftPos + 430, $topPos - $currpoint);
+    $pdfBase->drawText($page, number_format($bal, 2), $leftPos + 480, $topPos - $currpoint, $leftPos + 480, right);
+
+
 
 
     $currpoint = $currpoint + 5;
     $page->drawRectangle($leftPos + 32, $topPos - $currpoint, $leftPos + 500, $topPos - $currpoint, Zend_Pdf_Page::SHAPE_DRAW_STROKE);
 
-     $currpoint = $currpoint + 60;
-    $page->drawText('Sign: _________________________', $leftPos + 30, $topPos - $currpoint);
+    $currpoint = $currpoint + 60;
+    $page->drawText('Sign: _______________________________', $leftPos + 40, $topPos - $currpoint);
     $page->drawText('ID Number: _______________________________', $leftPos + 270, $topPos - $currpoint);
 
     $topPos = $topPos - 10;
@@ -435,6 +496,3 @@ WHERE (pid ='$pid' AND service_type NOT IN
 }
 
 ?>
-
-
-//1160   5 apri 8apr

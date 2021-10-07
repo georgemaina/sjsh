@@ -90,8 +90,8 @@ if(($mode=='')||($mode=='fresh')){
 		$nr_beds=$ward_obj->countBeds($ward_nr);
 
 		# Get ward patients
-		if($is_today) $patients_obj=&$ward_obj->getDayWardOccupants($ward_nr);
-			else $patients_obj=&$ward_obj->getDayWardOccupants($ward_nr,$s_date);
+		if($is_today) $patients_obj=$ward_obj->getDayWardOccupants($ward_nr);
+			else $patients_obj=$ward_obj->getDayWardOccupants($ward_nr,$s_date);
 
 		//echo $ward_obj->getLastQuery();
 		//echo $ward_obj->LastRecordCount();

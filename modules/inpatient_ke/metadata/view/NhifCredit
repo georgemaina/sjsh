@@ -53,8 +53,8 @@
                 "frameHeader": false,
                 "height": 410,
                 "layout": "absolute",
-                "layout|x": 300,
-                "layout|y": 140,
+                "layout|x": 175,
+                "layout|y": 85,
                 "title": "NHIF Credits",
                 "titleAlign": "center",
                 "titleCollapse": false,
@@ -851,7 +851,35 @@
                                 "labelWidth": "number"
                             },
                             "name": "MyTextField33",
-                            "designerId": "4ef2d07a-f752-4867-909e-f954236ec6db"
+                            "designerId": "4ef2d07a-f752-4867-909e-f954236ec6db",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onInvoiceAmountChange",
+                                        "implHandler": [
+                                            "var totalCredit=field.up('form').down('#creditAmount').getValue();",
+                                            "field.up('form').down('#balance').setValue(newValue-totalCredit);",
+                                            ""
+                                        ],
+                                        "name": "change",
+                                        "scope": "me"
+                                    },
+                                    "configAlternates": {
+                                        "fn": "string",
+                                        "implHandler": "code",
+                                        "name": "string",
+                                        "scope": "string"
+                                    },
+                                    "name": "onInvoiceAmountChange",
+                                    "designerId": "a41bc6eb-4c87-4405-8b0f-49bb38a4949e"
+                                }
+                            ]
                         },
                         {
                             "type": "Ext.form.field.Text",

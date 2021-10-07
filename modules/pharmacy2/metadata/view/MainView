@@ -49,13 +49,29 @@
             "designerId": "a357f561-bff2-403a-b549-a1e4fb91a59d"
         },
         {
-            "type": "Ext.container.Container",
+            "type": "Ext.panel.Panel",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
+                "designer|displayName": "Menus",
+                "header": [
+                    "{",
+                    "    layout : {",
+                    "        align : 'stretchmax'",
+                    "    },",
+                    "    iconCls : 'x-fa fa-home',",
+                    "    style: 'background:#1b5f87',",
+                    "    title : {",
+                    "        text      : 'Pharmacy',",
+                    "        textAlign : 'center',",
+                    "        flex      : 0,",
+                    "        minWidth  : 160",
+                    "    }",
+                    "}"
+                ],
                 "layout": "accordion",
                 "layout|region": "west",
                 "style": "background-color: #d9f2e6;",
@@ -65,9 +81,11 @@
                 "layout": "string",
                 "layout|region": "string",
                 "width": "auto",
-                "style": "string"
+                "style": "string",
+                "designer|displayName": "string",
+                "header": "object"
             },
-            "name": "MyContainer1",
+            "name": "MyPanel1",
             "designerId": "16df169f-a768-48c2-9107-25e94cea7d4c",
             "cn": [
                 {
@@ -78,8 +96,12 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "bodyStyle": "background:#e8eaed; color:white;!important;",
                         "floating": false,
-                        "title": "Pharmcy",
+                        "header": [
+                            "{style:'background:#1b5f87;color:white;font-weight:bold;'}"
+                        ],
+                        "title": "Pharmacy Activities",
                         "width": 120
                     },
                     "configAlternates": {
@@ -87,7 +109,8 @@
                         "title": "string",
                         "width": "auto",
                         "bodyStyle": "string",
-                        "style": "string"
+                        "style": "string",
+                        "header": "object"
                     },
                     "name": "MyMenu",
                     "designerId": "5ff29226-c500-4b90-b2c6-39734d0ea42f",
@@ -100,9 +123,9 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "iconCls": "",
-                                "itemId": "mnuPrescriptions",
-                                "text": "Prescriptions"
+                                "iconCls": "x-fa fa-home",
+                                "itemId": "mnuPrescriptions1",
+                                "text": "Dashboard"
                             },
                             "configAlternates": {
                                 "itemId": "string",
@@ -121,12 +144,35 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "iconCls": "x-fa fa-gift",
+                                "itemId": "mnuPrescriptions",
+                                "text": "Prescriptions"
+                            },
+                            "configAlternates": {
+                                "itemId": "string",
+                                "text": "string",
+                                "style": "string",
+                                "iconCls": "string"
+                            },
+                            "name": "MyMenuItem13",
+                            "designerId": "698928e6-680e-4f6a-9859-fbe52cc6112c"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "x-fa fa-share-square",
                                 "itemId": "mnuIssue",
                                 "text": "Issue to Patients"
                             },
                             "configAlternates": {
                                 "itemId": "string",
-                                "text": "string"
+                                "text": "string",
+                                "iconCls": "string"
                             },
                             "name": "MyMenuItem3",
                             "designerId": "059b8785-a6e1-4262-b4ed-0836e16906a3"
@@ -139,12 +185,14 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "iconCls": "x-fa fa-share",
                                 "itemId": "mnuOrders",
                                 "text": "Internal Orders"
                             },
                             "configAlternates": {
                                 "itemId": "string",
-                                "text": "string"
+                                "text": "string",
+                                "iconCls": "string"
                             },
                             "name": "MyMenuItem1",
                             "designerId": "853879f1-1474-4f63-af88-58bbadb89591"
@@ -157,12 +205,14 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "iconCls": "x-fa fa-share-alt",
                                 "itemId": "mnuServiceOrders",
                                 "text": "Service Orders"
                             },
                             "configAlternates": {
                                 "itemId": "string",
-                                "text": "string"
+                                "text": "string",
+                                "iconCls": "string"
                             },
                             "name": "MyMenuItem2",
                             "designerId": "0edbf2b2-21fa-4373-b17c-03cf03a1142b"
@@ -175,12 +225,14 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "iconCls": "x-fa fa-arrow-left",
                                 "itemId": "mnuPatientReturns",
                                 "text": "Returns from Patients"
                             },
                             "configAlternates": {
                                 "text": "string",
-                                "itemId": "string"
+                                "itemId": "string",
+                                "iconCls": "string"
                             },
                             "name": "MyMenuItem7",
                             "designerId": "0c138eb1-fc1e-4517-870b-11661432f192"
@@ -193,12 +245,14 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "iconCls": "x-fa fa-arrow-down",
                                 "itemId": "mnuOrdersReturns",
                                 "text": "Returns Internal Orders"
                             },
                             "configAlternates": {
                                 "text": "string",
-                                "itemId": "string"
+                                "itemId": "string",
+                                "iconCls": "string"
                             },
                             "name": "MyMenuItem8",
                             "designerId": "6d8a7acb-b087-4fad-94e3-d158a0675740"
@@ -211,13 +265,15 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "iconCls": "x-fa fa-asterisk",
                                 "itemId": "mnuStockLevels",
                                 "text": "Stock Levels"
                             },
                             "configAlternates": {
                                 "text": "string",
                                 "itemId": "string",
-                                "style": "string"
+                                "style": "string",
+                                "iconCls": "string"
                             },
                             "name": "MyMenuItem9",
                             "designerId": "293863d4-a297-448f-91a5-81cd90ee7160"
@@ -232,14 +288,20 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "bodyStyle": "background:#e8eaed; color:white;!important;",
                         "floating": false,
+                        "header": [
+                            "{style:'background:#1b5f87;color:white;font-weight:bold;'}"
+                        ],
                         "title": "Reports",
                         "width": 120
                     },
                     "configAlternates": {
                         "floating": "boolean",
                         "title": "string",
-                        "width": "auto"
+                        "width": "auto",
+                        "header": "object",
+                        "bodyStyle": "string"
                     },
                     "name": "MyMenu3",
                     "designerId": "e710380b-700b-41c4-baff-f12b366ca313",
@@ -364,14 +426,20 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "bodyStyle": "background:#e8eaed; color:white;!important;",
                         "floating": false,
+                        "header": [
+                            "{style:'background:#1b5f87;color:white;font-weight:bold;'}"
+                        ],
                         "title": "Settings",
                         "width": 120
                     },
                     "configAlternates": {
                         "floating": "boolean",
                         "title": "string",
-                        "width": "auto"
+                        "width": "auto",
+                        "header": "object",
+                        "bodyStyle": "string"
                     },
                     "name": "MyMenu2",
                     "designerId": "221f7130-2201-459c-a974-952c2d7d5b3d",

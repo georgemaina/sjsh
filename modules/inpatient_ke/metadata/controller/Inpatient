@@ -20,7 +20,9 @@
             "NhifRates",
             "Wards",
             "OccupancyList",
-            "NotesModel"
+            "NotesModel",
+            "NhifCredits",
+            "PendingBills"
         ],
         "stores": [
             "BillStore",
@@ -35,12 +37,14 @@
             "NhifRateStore",
             "OccupancyStore",
             "NotesStore",
-            "WardsListStore"
+            "WardsListStore",
+            "ServiceListStore",
+            "NhifCreditStore",
+            "PendingBills"
         ],
         "views": [
             "Bills",
             "Debit",
-            "Credit",
             "NhifCredit",
             "ChargeBeds",
             "FinaliseInvoice",
@@ -58,7 +62,11 @@
             "PrescriptionForm",
             "ItemsList",
             "Dosage",
-            "PatientTransfer"
+            "PatientTransfer",
+            "ServicesList",
+            "Credit",
+            "NhifCredits",
+            "InvoicesList"
         ]
     },
     "configAlternates": {
@@ -90,6 +98,9 @@
                     "    },",
                     "    '#itemsList':{",
                     "        itemdblclick:this.addSelectedItem",
+                    "    },",
+                    "    '#serviceList':{",
+                    "        itemdblclick:this.addSelectedService",
                     "    },",
                     "    '#cmdAddRow':{",
                     "        click:this.addRow",
@@ -168,7 +179,6 @@
                     "    },",
                     "    '#searchParam':{",
                     "       specialkey:this.getPressedKey",
-                    "",
                     "    },",
                     "    '#cmdClose':{",
                     "        click:this.closewindow",
@@ -262,6 +272,22 @@
                     "    },",
                     "    '#treansferBed':{",
                     "        change:this.activateBedList",
+                    "    },",
+                    "    '#txtSearchItems':{",
+                    "        specialkey:this.getPressedKey,",
+                    "        change:this.filterItems",
+                    "    },",
+                    "    '#cmdServiceList':{",
+                    "        click:this.getServiceList",
+                    "    },",
+                    "    '#cmdPreviewNhif':{",
+                    "        click:this.previewNhifList",
+                    "    },",
+                    "    '#cmdExport':{",
+                    "        click:this.exportToExcel",
+                    "    },",
+                    "    'cmdPrint':{",
+                    "        click:this.printPdf",
                     "    }",
                     "});"
                 ]
@@ -617,10 +643,12 @@
                 ],
                 "fn": "getEncounter",
                 "implHandler": [
-                    "var pid=this.getDebit().down('#txtPid').getValue();",
+                    "// Ext.Msg.alert('Test',textfield.up('panel').down('#txtSource').getValue());",
+                    "var strSource=textfield.up('panel').down('#txtSource').getValue();",
+                    "var pid=textfield.up('panel').down('#txtPid').getValue();",
                     "",
                     "Ext.Ajax.request({",
-                    "     url: '../../data/getDataFunctions.php?task=getEncounter',",
+                    "    url: '../../data/getDataFunctions.php?task=getEncounter',",
                     "    params: {",
                     "        pid: pid",
                     "    },",
@@ -628,14 +656,20 @@
                     "",
                     "        var encDetails= Ext.util.JSON.decode(response.responseText);",
                     "",
-                    "         pnames=encDetails.encounterNr[0].FirstName+\" \"+encDetails.encounterNr[0].LastName+\" \"+encDetails.encounterNr[0].SurName;",
-                    "       //  Ext.ComponentQuery.query(\"#pname\")[0].setValue(pnames);",
-                    "        this.getDebit().down('#pname').setValue(pnames);",
-                    "        this.getDebit().down('#billNumber').setValue(encDetails.encounterNr[0].BillNumber);",
-                    "        this.getDebit().down('#encounterNo').setValue(encDetails.encounterNr[0].EncounterNr);",
-                    "        this.getDebit().down('#debitDate').setValue(encDetails.encounterNr[0].CurrDate);",
+                    "        pnames=encDetails.encounterNr[0].FirstName+\" \"+encDetails.encounterNr[0].LastName+\" \"+encDetails.encounterNr[0].SurName;",
+                    "        //  Ext.ComponentQuery.query(\"#pname\")[0].setValue(pnames);",
+                    "        textfield.up('panel').down('#pname').setValue(pnames);",
+                    "        textfield.up('panel').down('#billNumber').setValue(encDetails.encounterNr[0].BillNumber);",
+                    "        textfield.up('panel').down('#encounterNo').setValue(encDetails.encounterNr[0].EncounterNr);",
                     "",
-                    "        this.getDebitNo();",
+                    "        if(strSource==='debit'){",
+                    "             textfield.up('panel').down('#debitDate').setValue(encDetails.encounterNr[0].CurrDate);",
+                    "             this.getDebitNo();",
+                    "        }else if(strSource==='credit'){",
+                    "            textfield.up('panel').down('#creditDate').setValue(encDetails.encounterNr[0].CurrDate);",
+                    "            this.getCreditNo();",
+                    "        }",
+                    "",
                     "    },",
                     "    scope:this",
                     "});"
@@ -775,13 +809,17 @@
                     "    if (e.getKey() == e.ENTER && field.getItemId()==='txtSearch') {",
                     "     //   Ext.Msg.alert('Test',field.getItemId());",
                     "       this.searchBills();",
-                    "    }else  if (e.getKey() == e.ENTER && field.getItemId()==='searchParam') {",
+                    "    }else if (e.getKey() == e.ENTER && field.getItemId()==='searchParam') {",
                     "     //   Ext.Msg.alert('Test',field.getItemId());",
                     "        this.searchItems();",
-                    "    }else  if (e.getKey() == e.ENTER && field.getItemId()==='txtSearchReceipt') {",
+                    "    }else if (e.getKey() == e.ENTER && field.getItemId()==='txtSearchReceipt') {",
                     "     //   Ext.Msg.alert('Test',field.getItemId());",
                     "        this.searchReceipt();",
-                    "    }"
+                    "    }else if (e.getKey() == e.ENTER && field.getItemId()==='txtSearchItems') {",
+                    "     //   Ext.Msg.alert('Test',field.getItemId());",
+                    "        this.findItems();",
+                    "    }",
+                    ""
                 ]
             },
             "configAlternates": {
@@ -1450,8 +1488,8 @@
                 ],
                 "fn": "getBillAmount",
                 "implHandler": [
-                    "var pid=this.getInsurancecredit().down('#txtPid2').getValue();",
-                    "var billNumber=this.getInsurancecredit().down('#billNumber').getValue();",
+                    "//var pid=this.getInsurancecredit().down('#txtPid2').getValue();",
+                    "//var billNumber=this.getInsurancecredit().down('#billNumber').getValue();",
                     "",
                     "Ext.Ajax.request({",
                     "     url: '../../data/getDataFunctions.php?task=getTotalBill',",
@@ -1687,8 +1725,8 @@
                 ],
                 "fn": "getBillAmount2",
                 "implHandler": [
-                    "var pid=this.getNhifcredit().down('#txtPid3').getValue();",
-                    "var billNumber=this.getNhifcredit().down('#billNumber').getValue();",
+                    "//var pid=this.getNhifcredit().down('#txtPid3').getValue();",
+                    "//var billNumber=this.getNhifcredit().down('#billNumber').getValue();",
                     "",
                     "Ext.Ajax.request({",
                     "    url: 'data/getDataFunctions.php?caller=getTotalBill',",
@@ -1730,11 +1768,16 @@
                 ],
                 "fn": "getNhifRates",
                 "implHandler": [
+                    "var pid=comboField.up('form').down('#txtNhifPid').getValue();",
+                    "var billNumber=comboField.up('form').down('#billNumber').getValue();",
+                    "",
+                    "",
                     "Ext.Ajax.request({",
                     "    url: '../../data/getDataFunctions.php?task=getNhifRates',",
                     "    params:{",
                     "        rate:newValue",
                     "    },",
+                    "    waitMsg: 'Waiting for Invoice Amount...',",
                     "    success: function(response){",
                     "        var respText= Ext.util.JSON.decode(response.responseText);",
                     "",
@@ -1751,13 +1794,20 @@
                     "            var rates=respText.nhifRates[0].RateValue;",
                     "            rateValue=parseInt(rates * days);",
                     "        }",
-                    "         this.getNhifcredit().down('#creditAmount').setValue(rateValue);",
                     "",
-                    "        var invoiceAmount= this.getNhifcredit().down('#invoiceAmount').getValue();",
+                    "        var invoiceValue=this.getInvoiceAmount(pid,billNumber);",
                     "",
-                    "        var balance=parseInt(invoiceAmount-rateValue);",
-                    "        this.getNhifcredit().down('#balance').setValue(balance);",
+                    "        this.getNhifcredit().down('#creditAmount').setValue(rateValue);",
                     "",
+                    "        this.getNhifcredit().down('#invoiceAmount').setValue(invoiceValue);",
+                    "",
+                    "",
+                    "        //var invoiceAmount= this.getNhifcredit().down('#invoiceAmount').getValue();",
+                    "",
+                    "       // var balance=parseInt(invoiceValue-rateValue);",
+                    "//        Ext.Msg.alert('Test',balance);",
+                    "",
+                    "       // this.getNhifcredit().down('#balance').setValue('1000');",
                     "",
                     "    },",
                     "    scope: this",
@@ -1849,13 +1899,16 @@
                 "fn": "getDebitNo",
                 "implHandler": [
                     "Ext.Ajax.request({",
-                    "    url: '../../data/getDataFunctions.php?task=getDebitNo',",
+                    "    url: '../../data/getDataFunctions.php?task=geNextTransNo&transType=8',",
                     "",
                     "    success: function(response){",
                     "        var respText= Ext.util.JSON.decode(response.responseText);",
-                    "        var debitNo=respText.debits[0].debitNo;",
+                    "        var debitNo=respText.transNo;",
                     "",
                     "        this.getDebit().down('#debitNo').setValue(debitNo);",
+                    "",
+                    "         var d=new Date();",
+                    "         this.getDebit().down('#debitDate').setValue(d);",
                     "",
                     "",
                     "    },",
@@ -2250,12 +2303,12 @@
                 "fn": "assignBed",
                 "implHandler": [
                     "if(record.get('Pid')===''){",
-                    "    let pid=view.up('grid').down('#pid').getValue();",
-                    "    let encNo=view.up('grid').down('#encounterNo').getValue();",
-                    "    let str=record.get('RoomNo');",
-                    "    let room=str.split(\" \");",
-                    "    let ward_nr=view.up('grid').down('#wardno').getValue();",
-                    "    let bed=record.get('BedNo');",
+                    "    var pid=view.up('grid').down('#pid').getValue();",
+                    "    var encNo=view.up('grid').down('#encounterNo').getValue();",
+                    "    var str=record.get('RoomNo');",
+                    "    var room=str.split(\" \");",
+                    "    var ward_nr=view.up('grid').down('#wardno').getValue();",
+                    "    var bed=record.get('BedNo');",
                     "    Ext.Msg.alert('Test',room[1]+\",\"+record.get('BedNo')+\",\"+pid+\",\"+ward_nr);",
                     "",
                     "    Ext.Ajax.request({",
@@ -2338,17 +2391,18 @@
                     "",
                     "        textField.up('panel').down('#txtPatientName').setValue(pnames);",
                     "        textField.up('panel').down('#encNr').setValue(encDetails.encounterNr[0].EncounterNr);",
+                    "        textField.up('panel').down('#txtBillNumber').setValue(encDetails.encounterNr[0].BillNumber);",
                     "",
                     "    },",
                     "    scope: this",
                     "});",
                     "",
-                    "var billnumberStore=Ext.data.StoreManager.lookup('BillNumbersStore');",
-                    "billnumberStore.load({",
-                    "    params:{",
-                    "        pid:pid",
-                    "    }",
-                    "});"
+                    "// var billnumberStore=Ext.data.StoreManager.lookup('BillNumbersStore');",
+                    "// billnumberStore.load({",
+                    "//     params:{",
+                    "//         pid:pid",
+                    "//     }",
+                    "// });"
                 ]
             },
             "configAlternates": {
@@ -2392,7 +2446,7 @@
                     "    this.getPatientdetails().down('#dob').setValue(record.get('BirthDate'));",
                     "    this.getPatientdetails().down('#sex').setValue(record.get('Sex'));",
                     "    this.getPatientdetails().down('#paymode').setValue(record.get('PaymentMode'));",
-                    "    this.getPatientdetails().down('#wardno').setValue(record.get('Ward'));",
+                    "    this.getPatientdetails().down('#wardno').setValue(record.get('WardID'));",
                     "    this.getPatientdetails().down('#roomno').setValue(record.get('RoomNo'));",
                     "    this.getPatientdetails().down('#bedno').setValue(record.get('BedNo'));",
                     "    this.getPatientdetails().down('#admissiondate').setValue(record.get('AdmissionDate'));",
@@ -2452,10 +2506,12 @@
                     "",
                     "var form = button.up('panel').getForm(); // get the basic form",
                     "var encounterNo=button.up('panel').down('#encounterNo').getValue();",
+                    "var locationNr=button.up('panel').down('#wardno').getValue();",
                     "if (form.isValid()) { // make sure the form contains valid data before submitting",
                     "    form.submit({",
                     "        params:{",
-                    "          encounterNo:encounterNo",
+                    "          encounterNo:encounterNo,",
+                    "          locationNr:locationNr",
                     "        },",
                     "        success: function (form, action) {",
                     "            Ext.Msg.alert('Thank you!', 'The Notes has been saved Successfully.');",
@@ -2674,7 +2730,7 @@
                     "",
                     "",
                     "",
-                    "var urlholder=\"reports/patientInvoice.php?pid=\"+pid+\"&billNumber=\"+bill_number+\"&receipt=1\";",
+                    "var urlholder=\"reports/detail_invoice_pdf.php?pid=\"+pid+\"&billNumber=\"+bill_number+\"&encNr=\"+encNr+\"&receipt=1\";",
                     "invwin=window.open(urlholder,\"transwin<?php echo $sid ?>\",\"width=650,height=600,menubar=no,resizable=yes,scrollbars=yes\");"
                 ]
             },
@@ -2970,6 +3026,349 @@
             },
             "name": "activateBedList",
             "designerId": "c3272251-80be-458f-8fbf-0564a1687737"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "findItems",
+                "implHandler": [
+                    "var searchParam=this.getServiceslist().down('#txtSearchItems').getValue();",
+                    "",
+                    "var serviceListStore =Ext.data.StoreManager.lookup('ServiceListStore');",
+                    "serviceListStore.load({",
+                    "    params: {",
+                    "        searchParam: searchParam",
+                    "    },",
+                    "    callback: function(records, operation, success) {",
+                    "",
+                    "    },",
+                    "    scope: this",
+                    "",
+                    "});"
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "findItems",
+            "designerId": "23a049df-0de4-487e-abf6-8e09006f2288"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "getServiceList",
+                "implHandler": [
+                    "var serviceList=Ext.create('Inpatient.view.ServicesList', {});",
+                    "var serviceListWindow=Ext.create('Ext.window.Window', {",
+                    "    title: 'Services List',",
+                    "    resizable:true,",
+                    "    minWidth:300,",
+                    "    minHeight:300",
+                    "});",
+                    "",
+                    "serviceListWindow.add(serviceList);",
+                    "serviceListWindow.show();",
+                    "serviceList.down('#sourceID').setValue('Orders');"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "getServiceList",
+            "designerId": "917e338e-cfd5-4806-81f2-d9baf942b525"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "serviceslist",
+                "selector": "serviceslist",
+                "xtype": "serviceslist"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "serviceslist",
+            "designerId": "41b4ec30-181a-4b28-aa9d-5b5245156394"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "field",
+                    "newValue",
+                    "oldValue",
+                    "eOpts"
+                ],
+                "fn": "filterItems",
+                "implHandler": [
+                    "//Ext.Msg.alert('Test',newValue);",
+                    "var grid = field.up('grid');",
+                    "grid.store.clearFilter();",
+                    "if (newValue) {",
+                    "    var matcher = new RegExp(Ext.String.escapeRegex(newValue), \"i\");",
+                    "    grid.store.filter({",
+                    "        filterFn: function(item) {",
+                    "            return matcher.test(item.get('item_description')) ||",
+                    "                matcher.test(item.get('partcode'));",
+                    "        }",
+                    "    });",
+                    "}"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "filterItems",
+            "designerId": "368794c3-2e31-4aa2-951a-9892aaf78b71"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "gridpanel",
+                    "record",
+                    "item",
+                    "index",
+                    "e",
+                    "options"
+                ],
+                "fn": "addSelectedService",
+                "implHandler": [
+                    "var store =Ext.data.StoreManager.lookup('ServiceListStore');",
+                    "var store1 =Ext.data.StoreManager.lookup('DebitStore');",
+                    "store.remove(record);",
+                    "store1.add(record);"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "addSelectedService",
+            "designerId": "21d71c66-25b0-40b5-a74b-1ce5231270f5"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "getCreditNo",
+                "implHandler": [
+                    "Ext.Ajax.request({",
+                    "    url: '../../data/getDataFunctions.php?task=geNextTransNo&transType=9',",
+                    "",
+                    "    success: function(response){",
+                    "        var respText= Ext.util.JSON.decode(response.responseText);",
+                    "        var transNo=respText.transNo;",
+                    "",
+                    "        this.getCredit().down('#creditNo').setValue(transNo);",
+                    "",
+                    "         var d=new Date();",
+                    "         this.getCredit().down('#creditDate').setValue(d);",
+                    "",
+                    "",
+                    "    },",
+                    "    scope: this",
+                    "});"
+                ]
+            },
+            "configAlternates": {
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "getCreditNo",
+            "designerId": "33d86496-4d6f-426a-b54d-024981795228"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "pid",
+                    "billNumber"
+                ],
+                "fn": "getInvoiceAmount",
+                "implHandler": [
+                    "Ext.Ajax.request({",
+                    "     url: '../../data/getDataFunctions.php?task=getTotalBill',",
+                    "     params:{",
+                    "         pid:pid,",
+                    "         bill_number:billNumber",
+                    "     },",
+                    "     success: function(response){",
+                    "         var respText= Ext.util.JSON.decode(response.responseText);",
+                    "",
+                    "         this.getNhifcredit().down('#invoiceAmount').setValue(respText.invoiceAmount[0].amount);",
+                    "",
+                    "     },",
+                    "     scope: this",
+                    " });"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "getInvoiceAmount",
+            "designerId": "02a3bcc4-d816-4e79-a3cb-1a2cc0c9ccd7"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "nhifcredits",
+                "selector": "nhifcredits",
+                "xtype": "nhifcredits"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "nhifcredits",
+            "designerId": "10d6290d-9683-4192-9699-b12ca6a3db51"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "previewNhifList",
+                "implHandler": [
+                    "var searchParam=this.getNhifcredits().down('#searchParam').getValue();",
+                    "var startDate=Ext.Date.format(new Date(this.getNhifcredits().down('#startDate').getValue()), 'Y-m-d');",
+                    "var endDate=Ext.Date.format(new Date(this.getNhifcredits().down('#endDate').getValue()), 'Y-m-d');",
+                    "",
+                    "var nhifListStore =Ext.data.StoreManager.lookup('NhifCreditStore');",
+                    "nhifListStore.load({",
+                    "    params: {",
+                    "        searchParam: searchParam,",
+                    "        startDate:startDate,",
+                    "        endDate:endDate",
+                    "    },",
+                    "    callback: function(records, operation, success) {",
+                    "",
+                    "    },",
+                    "    scope: this",
+                    "",
+                    "});"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "previewNhifList",
+            "designerId": "3b11aee2-ca04-4338-b4ab-7964f6ec93d4"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "exportToExcel",
+                "implHandler": [
+                    "var mypanel=button.up('panel').getItemId();",
+                    "//Ext.Msg.alert('Panel',mypanel.getItemId());",
+                    "var searchParam=this.getNhifcredits().down('#searchParam').getValue();",
+                    "var startDate=Ext.Date.format(new Date(this.getNhifcredits().down('#startDate').getValue()), 'Y-m-d');",
+                    "var endDate=Ext.Date.format(new Date(this.getNhifcredits().down('#endDate').getValue()), 'Y-m-d');",
+                    "",
+                    "if(mypanel==='NhifCredits'){",
+                    "    var urlholder=\"reports/exportNhif.php?searchParam=\"+searchParam+\"&startDate=\"+startDate+\"&endDate=\"+endDate;",
+                    "        invwin=window.open(urlholder,\"width=650,height=600,menubar=no,resizable=yes,scrollbars=yes\");",
+                    "",
+                    "}"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "exportToExcel",
+            "designerId": "4f7bf868-1dc8-4893-8b21-20a7eb44c29c"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "invoiceslist",
+                "selector": "invoiceslist",
+                "xtype": "invoiceslist"
+            },
+            "configAlternates": {
+                "ref": "string",
+                "selector": "string",
+                "xtype": "string"
+            },
+            "name": "invoiceslist",
+            "designerId": "b3cc17e5-df79-4276-801f-cb15eb1e80bc"
         }
     ]
 }

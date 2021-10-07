@@ -27,7 +27,7 @@ $bill_obj = new Bill;
 
 $diagnos_obj = new Diagnostics;
 $enc_obj = new Encounter;
-$externalcall=$_REQUEST[externalcall];
+$externalcall=$_REQUEST['externalcall'];
 
 // If this side is called by an external cross link, this will be stored into a session variable:
 //echo $externalcall."....".$target;exit();
@@ -205,9 +205,6 @@ while ($row_hist = $resultTemp->FetchRow())
 	$tmp = str_replace ("\n","",$tmp);
 	$showHist .= $tmp;
 	$showHist .= '\n';
-
-
-
 
 }
 

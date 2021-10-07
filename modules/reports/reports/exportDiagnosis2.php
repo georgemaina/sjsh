@@ -43,6 +43,7 @@ $objPHPExcel->setActiveSheetIndex(0)->setCellValue('F2', 'Status' );
 $objPHPExcel->setActiveSheetIndex(0)->setCellValue('G2', 'IP-OP' );
 $objPHPExcel->setActiveSheetIndex(0)->setCellValue('H2', 'diagnosis code' );
 $objPHPExcel->setActiveSheetIndex(0)->setCellValue('I2', 'Description' );
+$objPHPExcel->setActiveSheetIndex(0)->setCellValue('J2', 'Visit' );
 
 
 // Merge cells
@@ -60,78 +61,71 @@ $objPHPExcel->getActiveSheet()->getStyle('A1:G1')->getFill()->setFillType(PHPExc
 $objPHPExcel->getActiveSheet()->getStyle('A1:G1')->getFill()->getStartColor()->setARGB('FF808080');
 
 
-$date1 = new DateTime($_REQUEST[startDate]);
+$date1 = new DateTime($_REQUEST['startDate']);
 $startDate = $date1->format("Y-m-d");
 
-$date2 = new DateTime($_REQUEST[endDate]);
+$date2 = new DateTime($_REQUEST['endDate']);
 $endDate = $date2->format("Y-m-d");
 
-$age1 = $_REQUEST[age1];
-    $age2 = $_REQUEST[age2];
-    $date1 = $_REQUEST[startDate];
-    $date2 = $_REQUEST[endDate];
-    $gender = $_REQUEST[gender];
-    $icd1 = $_REQUEST[icd1];
-    $icd2 = $_REQUEST[icd2];
-    $task = $_REQUEST[task];
-    $visits = $_REQUEST[visits];
-    $pid= $_REQUEST[pid];
+$age1 = $_REQUEST['age1'];
+    $age2 = $_REQUEST['age2'];
+    $date1 = $_REQUEST['startDate'];
+    $date2 = $_REQUEST['endDate'];
+    $gender = $_REQUEST['gender'];
+    $icd1 = $_REQUEST['icd1'];
+    $icd2 = $_REQUEST['icd2'];
+    $task = $_REQUEST['task'];
+    $visits = $_REQUEST['visits'];
+    $pid= $_REQUEST['pid'];
 
-    $revType=$_REQUEST[revType];
+    $revType=$_REQUEST['revType'];
     
-   $sql = "SELECT distinct d.pid,p.selian_pid,p.name_first,p.name_last,p.name_2,p.date_birth,p.sex,(YEAR(NOW())-YEAR(p.date_birth)) AS age,
-        d.encounter_nr,d.ICD_10_code,d.ICD_10_description,d.type,d.timestamp,d.pataintstatus,e.encounter_class_nr FROM care_tz_diagnosis d left JOIN care_person p
-ON d.PID=p.pid LEFT join care_encounter e on d.pid=e.pid";
+    $sql = "SELECT distinct d.pid,p.selian_pid,p.name_first,p.name_last,p.name_2,p.date_birth,
+                p.sex,(YEAR(NOW())-YEAR(p.date_birth)) AS age,
+                d.encounter_nr,d.ICD_10_code,d.ICD_10_description,d.type,d.timestamp,d.pataintstatus FROM care_tz_diagnosis d left JOIN care_person p
+            ON d.PID=p.pid LEFT join care_encounter e on d.pid=e.pid";
 
-    
-    
-     if ($date1){
-        $date = new DateTime($date1);
-        $dt1 = $date->format("Y-m-d");
-    }else{
-        $dt1="";
-    }
-     if ($date2){
-        $date = new DateTime($date2);
-        $dt2 = $date->format("Y-m-d");
-     }else{
-          $dt2="";
-     }
-     
-  if ($dt1 <> "" && $dt2<>"" ) {
-        $sql = $sql . " where d.timestamp between '$dt1' and '$dt2' ";
-    }else if($dt1<>''&& $dt2==''){
-        $sql = $sql . " where d.timestamp = '$dt1'";
-    }
-    else {
-        $sql = $sql . " where d.timestamp<=now()";
+    if ($startDate <> "" && $endDate <> "") {
+        $sql = $sql . " where DATE_FORMAT(d.timestamp,'%Y-%m-%d') between '$startDate' and '$endDate' ";
     }
 
-    if (isset($gender) && $gender <> "") {
-        if ($gender == 1) {
-            $sex = 'M';
-        } else {
-            $sex = 'F';
-        }
-        $sql = $sql . " and sex='$sex'";
+    // if (isset($gender) && $gender <> "") {
+    //     if ($gender == 'Male') {
+    //         $sex = 'M';
+    //     } else if($gender == 'Female') {
+    //         $sex = 'F';
+    //     }
+    //     $sql = $sql . " and sex='$sex'";
+    // }
+
+    if ($icd1 <> "") {
+        $sql = $sql . " and ICD_10_code ='$icd1";
     }
-    if ($icd1<>"" && $icd2 <> "") {
-        $sql = $sql . " and ICD_10_code between '$icd1' and '$icd2'";
-    }else if($icd1<>"" && $cd2==""){
-        $sql = $sql . " and ICD_10_code = '$icd1'";
-    }
-    
-      if (isset($age1) && $age2 <> "") {
+
+    if (isset($age1) && $age2 <> "") {
         $sql = $sql . " having (YEAR(NOW())-YEAR(p.date_birth)) between '$age1' and '$age2'";
-      }else if($age1<>"" && $age2==""){
-            $sql = $sql . " having (YEAR(NOW())-YEAR(p.date_birth))='$age1'";
-      }
+    } else if ($age1 <> "" && $age2 == "") {
+        $sql = $sql . " having (YEAR(NOW())-YEAR(p.date_birth))='$age1'";
+    }
 
-      if ($pid<>"") {
+    if ($pid <> "") {
         $sql = $sql . " and d.pid='$pid'";
-      }
+    }
+
+    if($status<>""){
+        if($status=="Dead"){
+            $dStat='D';
+        }else{
+            $dStat='A';
+        }
+        $sql=$sql." and pataintstatus='$dStat'";
+    }
+
+    // if($visits){
+    //     $sql=$sql." and `type`='$status";
+    // }
     
-  if($debug) 
+  //if($debug) 
 	   echo $sql;
     //p.pid,p.name_first,p.name_last,p.name_2,b.bill_date,b.bill_number,b.total
 
@@ -139,7 +133,7 @@ ON d.PID=p.pid LEFT join care_encounter e on d.pid=e.pid";
 $i=3;
 while($row=$request->FetchRow()){
 
-    $bal= $row[bill]-$row[payment];
+    $bal= $row['bill']-$row['payment'];
 
     $admDate= new DateTime($row['encounter_date']);
     $admDate2 = $admDate->format("d-m-Y");
@@ -150,7 +144,7 @@ while($row=$request->FetchRow()){
     $objPHPExcel->setActiveSheetIndex(0)->setCellValue("A$i",$row['pid']);
     $objPHPExcel->getActiveSheet()->getColumnDimension('A')->setWidth(10);
 	
-    $objPHPExcel->setActiveSheetIndex(0)->setCellValue("B$i",(trim ($row[name_first]) . ' ' . trim($row[name_last]) . ' ' . trim($row[name_2])));
+    $objPHPExcel->setActiveSheetIndex(0)->setCellValue("B$i",(trim ($row['name_first']) . ' ' . trim($row['name_last']) . ' ' . trim($row['name_2'])));
     $objPHPExcel->getActiveSheet()->getColumnDimension('B')->setWidth(30);
 	
     $objPHPExcel->setActiveSheetIndex(0)->setCellValue("C$i",$row['timestamp']);
@@ -168,6 +162,8 @@ while($row=$request->FetchRow()){
     $objPHPExcel->getActiveSheet()->getColumnDimension('H')->setWidth(30);
     $objPHPExcel->setActiveSheetIndex(0)->setCellValue("I$i",$row['ICD_10_description']);
     $objPHPExcel->getActiveSheet()->getColumnDimension('I')->setWidth(10);
+    $objPHPExcel->setActiveSheetIndex(0)->setCellValue("J$i",$row['type']);
+    $objPHPExcel->getActiveSheet()->getColumnDimension('J')->setWidth(10);
     
 
     $i=$i+1;

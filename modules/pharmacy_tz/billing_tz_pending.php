@@ -51,9 +51,7 @@ if ($mode=="done" && isset($pn) && isset($prescription_date)) {
 						
 						$sql_bill="DELETE FROM care_tz_billing";
 						$requests=$db->Execute($sql_bill);
-						$sql_bill="DELETE FROM care_tz_billing_elem";
-						$requests=$db->Execute($sql_bill);
-						echo $sql_bill; 
+
 		$sql="SELECT care_test_request_chemlabor.encounter_nr, care_test_request_chemlabor.parameters 
 					FROM care_test_request_chemlabor
 					INNER JOIN care_tz_billing 
@@ -107,16 +105,7 @@ if ($mode=="done" && isset($pn) && isset($prescription_date)) {
 						$requests=$db->Execute($sql_bill);
 						$insertnr=$db->Insert_ID();
 						
-						//Second all the billing elems
-						$timestamp = time();
-						while(list($x_elem,$v_elem)= each($v_bill['tasks']))
-						{
-							$sql_bill_elem="INSERT INTO care_tz_billing_elem (nr, date_change, is_labtest, amount, description)
-												 			VALUES (".$insertnr.",".$timestamp.",1,".$v_elem.",".$x_elem.")";	
-							$requests=$db->Execute($sql_bill_elem);
-							echo $sql_bill_elem."<br>";
-							
-						}
+						
 
 						
 					}
@@ -130,13 +119,11 @@ if ($mode=="done" && isset($pn) && isset($prescription_date)) {
 		              req.encounter_nr,
 		              req.create_time,
 		              care_person.pid as batch_nr
-		      FROM care_test_request_chemlabor req, care_encounter, care_person, care_tz_billing bi, care_tz_billing_elem biel 
+		      FROM care_test_request_chemlabor req, care_encounter, care_person, care_tz_billing bi
 		      WHERE   (req.status='pending' OR req.status='') 
 		            AND  req.encounter_nr = care_encounter.encounter_nr 
 		            AND  care_encounter.pid = care_person.pid 
 		            AND bi.encounter_nr = req.encounter_nr
-		            AND biel.nr = bi.nr
-		            AND biel.is_paid = 0
 		      group by req.create_time, req.encounter_nr
 		      ORDER BY req.create_time DESC";						         
 						       

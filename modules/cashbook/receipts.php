@@ -12,7 +12,7 @@ jsIncludes();
 
 $debug = false;
 $cashier = $_SESSION['sess_login_username'];
-$sql = "SELECT pcode,name,next_receipt_no,current_shift,prefix from care_ke_cashpoints
+$sql = "SELECT pcode,`name`,next_receipt_no,current_shift,prefix from care_ke_cashpoints
 WHERE cashier='$cashier' and active=1";
 if ($debug)
     echo $sql;
@@ -23,7 +23,7 @@ if ($rows = $result->FetchRow()) {
     $cashpoint = $rows[pcode];
     $shiftNo = $rows[current_shift];
     $cname = $rows[name];
-    $receipt_no = $rows[next_receipt_no];
+    $receipt_no = $rows[prefix].$rows[next_receipt_no];
     $prefix = $rows[prefix];
 }
 ?>
@@ -40,7 +40,7 @@ echo '<td valign="top" align=center>';
 if ($cashpoint) {
     if (isset($_POST["submit"])) {
 ////    $cash_point=$_REQUEST["cash_point"];
-        $refno = $_REQUEST["receiptNo"];
+        $receipt_no = $_REQUEST["receiptNo"];
         $paymode = $_REQUEST["paymode"];
         $payer = $_POST["payee"];
         $chequeNo = $_REQUEST["cheq_no"];
@@ -68,7 +68,7 @@ if ($cashpoint) {
         }
 
 
-        displayRcptForm($db, $cashpoint, $cashier);
+        displayRcptForm($db, $cashpoint, $cashier,$receipt_no, $cname);
 
         $heading = "AIC LITEIN HOSPITAL";
         $box = "P.O. BOX 45 -00902 LITEIN";
@@ -83,10 +83,11 @@ if ($cashpoint) {
         $PatientName = $patientname;
         $PaymentMode = $paymode;
         $cash_point = $_REQUEST["cashPoint"];
+       // $receipt_no=1001;
 
-        displayGLReceipts($rdate, $refno, $cashier, $patientid, $PatientName, $PaymentMode, $cash_point, $payer, $reprint, $shiftNo,$towards,$inputTime);
+        displayGLReceipts($rdate, $receipt_no, $cashier, $patientid, $PatientName, $PaymentMode, $cash_point, $payer, $reprint, $shiftNo,$towards,$inputTime);
     } else {
-        displayRcptForm($db, $cashpoint, $cashier);
+        displayRcptForm($db, $cashpoint, $cashier, $receipt_no,$cname);
     }
 } else {
     ?>

@@ -45,7 +45,7 @@ if(isset($_GET['pageNo'])) {
  }
 
  $offset = ($pageNum - 1) * $recordsPerPage;
-$sql = "SELECT e.encounter_nr,e.encounter_class_nr, e.encounter_date, e.pid,e.insurance_class_nr,p.selian_pid,p.name_last,
+$sql = "SELECT e.encounter_nr,e.encounter_class_nr, e.encounter_date,e.encounter_time, e.pid,e.insurance_class_nr,p.selian_pid,p.name_last,
         p.name_first,p.name_2,p.date_birth,p.sex, p.photo_filename, a.date, a.time,a.urgency,c.`name` AS insurance_name,p.`insurance_ID`
         FROM care_encounter AS e LEFT JOIN care_person AS p ON e.pid=p.pid LEFT JOIN care_appointment AS a ON e.encounter_nr=a.encounter_nr
         LEFT JOIN care_tz_company c ON c.`id`=p.`insurance_ID`
@@ -93,6 +93,7 @@ $strResult='';
 $strResult=$strResult. '<table border="0" width=100% id="tblResults">';
 $strResult=$strResult. '<tr class="gridHeading"><td>Chart</td>
         <td>Encounter Date</td>
+        <td>Encounter Time</td>
         <td>Sex</td>
         <td>Names</td>
         <td>Date of Birth</td>
@@ -121,6 +122,7 @@ while ($row = $result->FetchRow()) {
                         src="../../main/imgcreator/imgcreate_colorbar_small.php?sid=d25ba74a4b0c68667a2c5067d83ca30c&amp;ntid=false&amp;lang=en&amp;pn='.$row['encounter_nr'].'">
 			</a></td>
                 <td>' . $row['encounter_date'] . '</td>
+                <td>' . $row['encounter_time'] . '</td>
                 <td>' . $sexImage. '</td>
                 <td><a href="../../modules/registration_admission/aufnahme_pass.php'.URL_APPEND.'&target=search&amp;fwd_nr='.$row[encounter_nr].'" title="Click to show data">' . $row['surname'] . ' ' . $row['name_first'] . ' ' . $row['name_last'] . '</a></td>
                 <td>' . $row['date_birth'] . '</td>
@@ -154,6 +156,7 @@ while ($row = $result->FetchRow()) {
                         src="../../main/imgcreator/imgcreate_colorbar_small.php?sid=d25ba74a4b0c68667a2c5067d83ca30c&amp;ntid=false&amp;lang=en&amp;pn='.$row['encounter_nr'].'">
 			</a> </td>
                 <td>' . $row['encounter_date'] . '</td>
+                <td>' . $row['encounter_time'] . '</td>
                 <td>' .$sexImage. '</td>
                 <td><a href="../../modules/registration_admission/aufnahme_pass.php'.URL_APPEND.'&target=search&amp;fwd_nr='.$row[encounter_nr].'" title="Click to show data">' . $row['name_first'] . ' ' . $row['name_2'] . ' ' . $row['name_last'] . '</a></td>
                 <td>' . $row['date_birth'] . '</td>
@@ -188,7 +191,7 @@ while ($row = $result->FetchRow()) {
     $count=$count+1;
 }
 // Update this query with same where clause you are using above.
- $strResult=$strResult."<tr><td colspan=8> Total Patients are $count</td></tr>";
+ $strResult=$strResult."<tr><td colspan=9> Total Patients are $count</td></tr>";
 $strResult=$strResult. '</table>';
 
 echo $strResult;

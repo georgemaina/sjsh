@@ -141,6 +141,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "allowBlank": false,
                 "designer|displayName": "patientnumber",
                 "emptyText": "Pid",
                 "fieldLabel": "Pid",
@@ -162,7 +163,8 @@
                 "emptyText": "string",
                 "labelAlign": "string",
                 "labelStyle": "string",
-                "width": "auto"
+                "width": "auto",
+                "allowBlank": "boolean"
             },
             "name": "MyTextField19",
             "designerId": "1d0e5c52-a5ed-4edd-b86e-77aae782a439"
@@ -229,6 +231,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "allowBlank": false,
                 "designer|displayName": "store",
                 "displayField": "Description",
                 "emptyText": "Dispensing Store",
@@ -262,7 +265,8 @@
                 "store": "store",
                 "typeAhead": "boolean",
                 "valueField": "datafield",
-                "width": "auto"
+                "width": "auto",
+                "allowBlank": "boolean"
             },
             "name": "MyComboBox4",
             "designerId": "a19d0e16-02d9-4ba7-af34-cd52f5d3a6c4",
@@ -299,7 +303,7 @@
             "userConfig": {
                 "designer|displayName": "cashreceipt",
                 "fieldLabel": "Cash Receipt",
-                "itemId": "cashreceipt",
+                "itemId": "receiptNo",
                 "labelAlign": "right",
                 "labelStyle": "color:green; font-weight:bold;",
                 "layout|x": 935,
@@ -401,7 +405,7 @@
             "userConfig": {
                 "designer|displayName": "receiptamount",
                 "fieldLabel": "Receipt Amount",
-                "itemId": "receiptamount",
+                "itemId": "receiptAmount",
                 "labelAlign": "right",
                 "labelStyle": "color:green; font-weight:bold;",
                 "labelWidth": 110,

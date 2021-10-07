@@ -1,0 +1,913 @@
+{
+    "type": "Ext.grid.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "columnLines": true,
+        "designer|uiInterfaceName": "default",
+        "designer|userAlias": "debtors",
+        "designer|userClassName": "Debtors",
+        "height": 590,
+        "itemId": "mdebtorslist",
+        "store": "DebtorsList",
+        "title": "Debtors List",
+        "width": 360
+    },
+    "configAlternates": {
+        "height": "auto",
+        "itemId": "string",
+        "layout|x": "number",
+        "layout|y": "number",
+        "store": "store",
+        "title": "string",
+        "width": "auto",
+        "scrollable": "boolean",
+        "columnLines": "boolean",
+        "designer|uiInterfaceName": "string",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string"
+    },
+    "name": "MyGridPanel4",
+    "designerId": "3299fa4a-1a10-4bb4-be6a-6646cbf13925",
+    "viewControllerInstanceId": "3a5a6afd-d1b6-4302-bc71-b6c9ad82a9b1",
+    "viewModelInstanceId": "33cea850-c4bd-4345-a0d1-9020f608d329",
+    "cn": [
+        {
+            "type": "Ext.view.Table",
+            "reference": {
+                "name": "viewConfig",
+                "type": "object"
+            },
+            "codeClass": null,
+            "configAlternates": {
+                "scrollable": "boolean"
+            },
+            "name": "MyGridView11",
+            "designerId": "404f72cd-8325-4075-9453-534caa297ca1"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "accno",
+                "text": "Account No",
+                "width": 72
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn126",
+            "designerId": "0646a7bf-71d1-4cd5-be0b-73a9b6853cbe"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "name",
+                "text": "Name",
+                "width": 162
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn127",
+            "designerId": "0e5d4264-00e9-4447-b74a-11bbe46d0b48"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "category",
+                "text": "Category"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn128",
+            "designerId": "b26bed8d-e0b1-46bb-be3d-6ebab3da8c3a"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "address1",
+                "hidden": true,
+                "text": "Address1"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "hidden": "boolean",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn129",
+            "designerId": "fb6cf0a4-a965-472a-b4e7-0744ba6c8d2d"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "address2",
+                "hidden": true,
+                "text": "Address2"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "hidden": "boolean",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn130",
+            "designerId": "830643f9-2cba-4f25-ad69-8edb30c56cc7"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "phone",
+                "hidden": true,
+                "text": "Phone"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "hidden": "boolean",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn131",
+            "designerId": "7176e273-0ef9-45f5-a3eb-6f558201d845"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "aldtphone",
+                "hidden": true,
+                "text": "Aldtphone"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "hidden": "boolean",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn132",
+            "designerId": "0b0e9983-54b3-440d-aeac-f219fd701a32"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "contact",
+                "hidden": true,
+                "text": "Contact"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "hidden": "boolean",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn133",
+            "designerId": "23091f2b-c19f-4ea9-a195-9583a2de902f"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "email",
+                "hidden": true,
+                "text": "Email"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "hidden": "boolean",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn134",
+            "designerId": "486cbc28-ad76-43e4-bd02-ee6d59244f94"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "fax",
+                "hidden": true,
+                "text": "Fax"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "hidden": "boolean",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn135",
+            "designerId": "98ba29ec-4f7b-4235-85f4-f8d310dac65a"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "joined",
+                "hidden": true,
+                "text": "Joined"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "hidden": "boolean",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn136",
+            "designerId": "eaf0c4c6-16ed-4f6c-8c95-b33c28657ea9"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "cr_limit",
+                "hidden": true,
+                "text": "Cr_limit"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "hidden": "boolean",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn137",
+            "designerId": "bbc6ceb2-5ff4-4f24-8874-55efc9ba79c0"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "OP_Cover",
+                "hidden": true,
+                "text": "OP_Cover"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "hidden": "boolean",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn138",
+            "designerId": "412b63cf-c92b-4277-ab8e-31750ea59670"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "IP_Cover",
+                "hidden": true,
+                "text": "IP_Cover"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "hidden": "boolean",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn139",
+            "designerId": "c33b3b53-05f1-41fd-b2e1-ce68c7a2babc"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "OP_Usage",
+                "hidden": true,
+                "text": "OP_Usage"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "hidden": "boolean",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn140",
+            "designerId": "741eb15e-a508-4703-9199-724c117098bd"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "IP_Usage",
+                "hidden": true,
+                "text": "IP_Usage"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "hidden": "boolean",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn141",
+            "designerId": "3e0c4f13-6351-4a59-95e1-92f183d78760"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "OP_Exceed",
+                "hidden": true,
+                "text": "OP_Exceed"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "hidden": "boolean",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn142",
+            "designerId": "9ec4ff4a-67d5-47fe-be33-b24288ecff24"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "IP_Exceed",
+                "hidden": true,
+                "text": "IP_Exceed"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "hidden": "boolean",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn143",
+            "designerId": "d7c8f079-04b7-4372-a748-b0e73d5918df"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "assChief",
+                "hidden": true,
+                "text": "AssChief"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "hidden": "boolean",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn144",
+            "designerId": "8203da02-6c7a-4eb6-949f-9809e6b4c651"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "chief",
+                "hidden": true,
+                "text": "Chief"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "hidden": "boolean",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn145",
+            "designerId": "e402e6f3-e857-446b-a6f5-372eb69bfb6c"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "creditLimit",
+                "hidden": true,
+                "text": "CreditLimit"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "hidden": "boolean",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn146",
+            "designerId": "40d583a9-2283-4a21-9c4b-3f39abe4eb85"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "village",
+                "hidden": true,
+                "text": "Village"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "hidden": "boolean",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn147",
+            "designerId": "cc2aad06-266f-4433-aa52-ad35c48f8a5c"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "villageElder",
+                "hidden": true,
+                "text": "VillageElder"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "hidden": "boolean",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn148",
+            "designerId": "317d48e5-b94b-4b0a-a731-ccce61989007"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "dbStatus",
+                "hidden": true,
+                "text": "DbStatus"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "hidden": "boolean",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn149",
+            "designerId": "514bbd3b-ffb6-4826-87fe-d86609268086"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "location",
+                "hidden": true,
+                "text": "Location"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "hidden": "boolean",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn150",
+            "designerId": "6ec451a7-2b31-4d74-b872-cacfe387f991"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "nearSchool",
+                "hidden": true,
+                "text": "NearSchool"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "hidden": "boolean",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn151",
+            "designerId": "0895a60c-453b-4b20-b1d4-3079bf380623"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "subLocation",
+                "hidden": true,
+                "text": "SubLocation"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "hidden": "boolean",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn152",
+            "designerId": "dd0a8d57-bfe0-4bc1-8b74-c3a36fa6177b"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "guarantorsName",
+                "hidden": true,
+                "text": "GuarantorsName"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "hidden": "boolean",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn153",
+            "designerId": "cbd03526-82a0-4189-8ba8-49b28a83f011"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "guarantorsID",
+                "hidden": true,
+                "text": "GuarantorsID"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "hidden": "boolean",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn154",
+            "designerId": "ca594aac-06de-46ed-bf12-baa2e98491aa"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "guarantorsLocation",
+                "hidden": true,
+                "text": "GuarantorsLocation"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "hidden": "boolean",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn155",
+            "designerId": "2b5d5d5c-55e2-4382-bc80-546decbae679"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "guarantorsSubLoc",
+                "hidden": true,
+                "text": "GuarantorsSubLoc"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "hidden": "boolean",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn156",
+            "designerId": "2eaeb9c3-ddda-4875-8dc9-3029837773c9"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "guarantorsVillage",
+                "hidden": true,
+                "text": "GuarantorsVillage"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "hidden": "boolean",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn157",
+            "designerId": "7e337262-00b2-4a6c-a2f8-e2983ef08923"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "guarantorsAddress",
+                "hidden": true,
+                "text": "GuarantorsAddress"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "hidden": "boolean",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn158",
+            "designerId": "5eb17ef9-5be8-4f06-bb69-d90e150a4ff1"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "guarantorsPhone",
+                "hidden": true,
+                "text": "GuarantorsPhone"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "hidden": "boolean",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn159",
+            "designerId": "ef800271-3f1c-4faf-a04f-23cc9970ad45"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "guarantorsRelation",
+                "hidden": true,
+                "text": "GuarantorsRelation"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "hidden": "boolean",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn160",
+            "designerId": "bcbabc05-cb96-4d9f-8f46-187b21558c59"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "guaranteeDate",
+                "hidden": true,
+                "text": "GuaranteeDate"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "hidden": "boolean",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn161",
+            "designerId": "229a8164-2280-45af-bccd-0507edb87875"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "guarantorsAmount",
+                "hidden": true,
+                "text": "GuarantorsAmount"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "hidden": "boolean",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn162",
+            "designerId": "ee2e1dc4-b14d-4ae9-8879-8565f232165a"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "nextPaymentDate",
+                "hidden": true,
+                "text": "NextPaymentDate"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "hidden": "boolean",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn163",
+            "designerId": "340b0297-4260-4ef5-9eb9-7b3bb3d5e7ae"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "openingBL",
+                "hidden": true,
+                "text": "OpeningBL"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "hidden": "boolean",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn164",
+            "designerId": "9e6f8345-0915-4e6c-b715-f2c9e1072130"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "otherInfo",
+                "hidden": true,
+                "text": "OtherInfo"
+            },
+            "configAlternates": {
+                "dataIndex": "datafield",
+                "hidden": "boolean",
+                "text": "string",
+                "scrollable": "boolean"
+            },
+            "name": "MyColumn165",
+            "designerId": "3acf4dff-5df0-4e78-8413-2a1e039609d2"
+        },
+        {
+            "type": "Ext.toolbar.Paging",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "displayInfo": true,
+                "dock": "bottom",
+                "store": "DebtorsList",
+                "width": 360
+            },
+            "configAlternates": {
+                "displayInfo": "boolean",
+                "dock": "string",
+                "store": "store",
+                "width": "auto",
+                "scrollable": "boolean"
+            },
+            "name": "MyPagingToolbar10",
+            "designerId": "009a12fd-4278-4137-8226-903b61882fea"
+        }
+    ]
+}

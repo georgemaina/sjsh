@@ -78,12 +78,14 @@
             "codeClass": null,
             "userConfig": {
                 "dataIndex": "opCode",
+                "groupable": true,
                 "text": "Op Code"
             },
             "configAlternates": {
                 "dataIndex": "datafield",
                 "text": "string",
-                "scrollable": "boolean"
+                "scrollable": "boolean",
+                "groupable": "boolean"
             },
             "name": "MyColumn36",
             "designerId": "bfb9165e-af22-448c-8ddc-a364f9339918"
@@ -97,6 +99,7 @@
             "codeClass": null,
             "userConfig": {
                 "dataIndex": "Description",
+                "groupable": true,
                 "tdCls": "opdesc",
                 "text": "Description",
                 "width": 270
@@ -106,7 +109,8 @@
                 "tdCls": "string",
                 "text": "string",
                 "width": "auto",
-                "scrollable": "boolean"
+                "scrollable": "boolean",
+                "groupable": "boolean"
             },
             "name": "MyColumn37",
             "designerId": "c9bdcd07-0eed-4f99-a95f-c5f7d5cbe906",
@@ -126,7 +130,7 @@
                         ],
                         "fn": "summaryRenderer",
                         "implHandler": [
-                            "return ((val === 0 || val > 1) ? '(' + val + ' Results)' : '(1 Results)');"
+                            "return ((val === 0 || val > 1) ? '(' + val + ' Results)' : '(Total Patients)');"
                         ]
                     },
                     "configAlternates": {
@@ -247,21 +251,28 @@
             ]
         },
         {
-            "type": "Ext.toolbar.Toolbar",
+            "type": "Ext.container.Container",
             "reference": {
                 "name": "dockedItems",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "dock": "top"
+                "designer|snapToGrid": 5,
+                "dock": "top",
+                "height": 43,
+                "layout": "absolute",
+                "width": 100
             },
             "configAlternates": {
+                "designer|snapToGrid": "number",
                 "dock": "string",
-                "scrollable": "boolean"
+                "height": "auto",
+                "layout": "string",
+                "width": "auto"
             },
-            "name": "MyToolbar2",
-            "designerId": "892fe875-51d6-44aa-87a3-f1769b0d4b74",
+            "name": "MyContainer1",
+            "designerId": "edbfdb2d-48ec-4f7e-b8b1-726ff1e70691",
             "cn": [
                 {
                     "type": "Ext.form.field.Date",
@@ -274,8 +285,11 @@
                         "fieldLabel": "Start Date",
                         "format": "Y-m-d",
                         "itemId": "startDate",
+                        "labelAlign": "right",
+                        "labelStyle": "font-weight:bold;color:green;",
                         "labelWidth": 80,
-                        "layout|flex": null
+                        "layout|x": 0,
+                        "layout|y": 5
                     },
                     "configAlternates": {
                         "fieldLabel": "string",
@@ -283,7 +297,11 @@
                         "labelWidth": "number",
                         "layout|flex": "number",
                         "scrollable": "boolean",
-                        "format": "string"
+                        "format": "string",
+                        "labelAlign": "string",
+                        "labelStyle": "string",
+                        "layout|x": "number",
+                        "layout|y": "number"
                     },
                     "name": "MyDateField5",
                     "designerId": "9f7f8b0e-6c51-4ab4-96e9-21db516c331f"
@@ -299,8 +317,11 @@
                         "fieldLabel": "End Date",
                         "format": "Y-m-d",
                         "itemId": "endDate",
+                        "labelAlign": "right",
+                        "labelStyle": "font-weight:bold;color:green;",
                         "labelWidth": 80,
-                        "layout|flex": null
+                        "layout|x": 265,
+                        "layout|y": 5
                     },
                     "configAlternates": {
                         "fieldLabel": "string",
@@ -308,7 +329,11 @@
                         "labelWidth": "number",
                         "layout|flex": "number",
                         "scrollable": "boolean",
-                        "format": "string"
+                        "format": "string",
+                        "labelAlign": "string",
+                        "labelStyle": "string",
+                        "layout|x": "number",
+                        "layout|y": "number"
                     },
                     "name": "MyDateField4",
                     "designerId": "dc80ca41-c889-4adb-85d8-b95f8da47e16"
@@ -321,8 +346,10 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "iconCls": "x-fa fa-search",
                         "itemId": "cmdPreviewVisits",
-                        "layout|flex": null,
+                        "layout|x": 530,
+                        "layout|y": 5,
                         "text": "<b>Preview</b>",
                         "width": 110
                     },
@@ -331,7 +358,10 @@
                         "layout|flex": "number",
                         "text": "string",
                         "width": "auto",
-                        "scrollable": "boolean"
+                        "scrollable": "boolean",
+                        "iconCls": "string",
+                        "layout|x": "number",
+                        "layout|y": "number"
                     },
                     "name": "MyButton4",
                     "designerId": "9ad18da7-6ecb-4836-b83f-12c820c7d7d2"
@@ -344,8 +374,10 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "iconCls": "x-fa fa-share-square-o",
                         "itemId": "cmdExportVisits",
-                        "layout|flex": null,
+                        "layout|x": 650,
+                        "layout|y": 5,
                         "text": "<b>Export</b>",
                         "width": 110
                     },
@@ -354,7 +386,10 @@
                         "layout|flex": "number",
                         "text": "string",
                         "width": "auto",
-                        "scrollable": "boolean"
+                        "scrollable": "boolean",
+                        "iconCls": "string",
+                        "layout|x": "number",
+                        "layout|y": "number"
                     },
                     "name": "MyButton6",
                     "designerId": "9c947630-9ef3-46c7-a7f8-b29b980352ff"
@@ -367,20 +402,53 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "iconCls": "x-fa fa-print",
                         "itemId": "cmdPrintVisits",
-                        "layout|flex": null,
+                        "layout|x": 770,
+                        "layout|y": 5,
                         "text": "<b>Print</b>",
-                        "width": 100
+                        "width": 115
                     },
                     "configAlternates": {
                         "itemId": "string",
                         "layout|flex": "number",
                         "text": "string",
                         "width": "auto",
-                        "scrollable": "boolean"
+                        "scrollable": "boolean",
+                        "iconCls": "string",
+                        "layout|x": "number",
+                        "layout|y": "number"
                     },
                     "name": "MyButton5",
                     "designerId": "c0649529-551b-4b5b-84c8-0ab7e2cea00a"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "x-fa fa-plus",
+                        "itemId": "cmdUpdateReport",
+                        "layout|x": 895,
+                        "layout|y": 5,
+                        "text": "<b>Update Report</b>",
+                        "width": 145
+                    },
+                    "configAlternates": {
+                        "itemId": "string",
+                        "layout|flex": "number",
+                        "text": "string",
+                        "width": "auto",
+                        "scrollable": "boolean",
+                        "layout|x": "number",
+                        "layout|y": "number",
+                        "iconCls": "string"
+                    },
+                    "name": "MyButton3",
+                    "designerId": "d440326b-19f4-4356-8214-088cb3e19a1f"
                 }
             ]
         }

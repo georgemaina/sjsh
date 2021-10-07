@@ -3,37 +3,37 @@ require_once('roots.php');
 require($root_path.'include/inc_environment_global.php');
 require_once($root_path.'include/care_api_classes/class_tz_billing.php');
 $bill_obj = new Bill;
-$desc=$_REQUEST[desc];
-$desc2=$_REQUEST[desc2];
-$desc3=$_REQUEST[desc3];
-$desc4=$_REQUEST[desc4];
-$desc5=$_REQUEST[desc5];
-$desc6=$_REQUEST[desc6];
-$desc7=$_REQUEST[desc7];
-$desc8=$_REQUEST[desc8];
-$desc10=$_REQUEST[desc10];
-$pointCode=$_REQUEST[pointCode];
-$cashpoint=$_REQUEST[cashpoint];
-$payMode=$_REQUEST[payMode];
-$PayDesc=$_REQUEST[PayDesc];
-$Prefix=$_REQUEST[Prefix];
-$cashier=$_REQUEST[cashier];
-$suppID=$_REQUEST[suplierid];
-$gl=$_REQUEST[GL];
-$glDesc=$_REQUEST[glDesc];
-$glCode=$_REQUEST[glCode];
+$desc=$_REQUEST['desc'];
+$desc2=$_REQUEST['desc2'];
+$desc3=$_REQUEST['desc3'];
+$desc4=$_REQUEST['desc4'];
+$desc5=$_REQUEST['desc5'];
+$desc6=$_REQUEST['desc6'];
+$desc7=$_REQUEST['desc7'];
+$desc8=$_REQUEST['desc8'];
+$desc10=$_REQUEST['desc10'];
+$pointCode=$_REQUEST['pointCode'];
+$cashpoint=$_REQUEST['cashpoint'];
+$payMode=$_REQUEST['payMode'];
+$PayDesc=$_REQUEST['PayDesc'];
+$Prefix=$_REQUEST['Prefix'];
+$cashier=$_REQUEST['cashier'];
+$suppID=$_REQUEST['suplierid'];
+$gl=$_REQUEST['GL'];
+$glDesc=$_REQUEST['glDesc'];
+$glCode=$_REQUEST['glCode'];
 
-$pid=$_REQUEST[PID];
-$accno=$_REQUEST[accNo];
-$caller=$_REQUEST[callerID];
-$encNr=$_REQUEST[encNo];
+$pid=$_REQUEST['PID'];
+$accno=$_REQUEST['accNo'];
+$caller=$_REQUEST['callerID'];
+$encNr=$_REQUEST['encNo'];
 
-$ids=$_REQUEST[ids];
+$ids=$_REQUEST['ids'];
 
-if(!isset($_REQUEST[cashpoint])){
-    $strp=$_REQUEST[point];
+if(!isset($_REQUEST['cashpoint'])){
+    $strp=$_REQUEST['point'];
 }else{
-    $strp=$_REQUEST[cashpoint];
+    $strp=$_REQUEST['cashpoint'];
 }
 
 $accDB=$_SESSION['sess_accountingdb'];
@@ -58,7 +58,7 @@ if($caller=='closePayments'){
 
         $result=$db->Execute($sql);
         if (!$result) {
-            echo 'Could not run query: ' . mysql_error();
+            echo 'Could not run query: ' . " "();
             exit;
         }else{
             echo '1';
@@ -69,7 +69,7 @@ if($caller=='closePayments'){
         $sql="SELECT accountcode,accountname FROM $accDB.chartmaster WHERE accountcode='$glCode'";
         $result=$db->Execute($sql);
         if (!$result) {
-            echo 'Could not run query: ' . mysql_error();
+            echo 'Could not run query: ' . " "();
             exit;
         }
 
@@ -85,7 +85,7 @@ if($caller=='closePayments'){
                $sql="SELECT name,next_receipt_no FROM care_ke_cashpoints WHERE pcode='$desc'";
                $result=$db->Execute($sql);
                 if (!$result) {
-                    echo 'Could not run query: ' . mysql_error();
+                    echo 'Could not run query: ' . " "();
                     exit;
                 }
 
@@ -101,7 +101,7 @@ if($caller=='closePayments'){
                $sql='SELECT pcode FROM care_ke_cashpoints WHERE cashier="'.$cashier.'" AND active=1 AND pcode="'.$desc7.'"';
                $result=$db->Execute($sql);
                 if (!$result) {
-                    echo 'Could not run query: ' . mysql_error();
+                    echo 'Could not run query: ' . " "();
                     exit;
                 }
 
@@ -120,7 +120,7 @@ if($caller=='closePayments'){
                // $result = mysql_query("SELECT name,next_receipt_no FROM care_ke_cashpoints WHERE pcode='$desc2'");
                $result=$db->Execute($sql);
                 if (!$result) {
-                    echo 'Could not run query: ' . mysqli_error();
+                    echo 'Could not run query: ';
                     exit;
                 }
 
@@ -134,21 +134,22 @@ if($caller=='closePayments'){
 //            }
 }else if($caller=='patient'){
             if($desc3) {
-                $sql="SELECT  b.name_first,b.name_2,b.name_last,MAX(a.encounter_nr) AS encounter_nr,a.pid,a.`bill_number`,a.`encounter_class_nr`
-                    FROM care_encounter a
-                    LEFT JOIN care_person b ON a.pid=b.pid                               
-                WHERE b.pid='$desc3'";
+                $sql="SELECT  b.name_first,b.name_2,b.name_last,MAX(a.encounter_nr) AS encounter_nr,a.pid,MAX(a.`bill_number`) AS bill_number,a.`encounter_class_nr`
+                        FROM care_encounter a
+                        LEFT JOIN care_person b ON a.pid=b.pid                               
+                    WHERE b.pid='$desc3'
+                    GROUP BY a.`pid`";
                // $result = mysql_query("SELECT name,next_receipt_no FROM care_ke_cashpoints WHERE pcode='$desc2'");
                $result=$db->Execute($sql);
 //               echo $sql;
                 if (!$result) {
-                    echo 'Could not run query: ' . mysqli_error();
+                    echo 'Could not run query: ';
                     exit;
                 }
 
                 $row=$result->FetchRow();
 
-                echo $row[name_first].",".$row[name_2].",".$row[name_last].",".$row[encounter_nr].",".$row[pid].",".$row[bill_number].",".$row[encounter_class_nr]; // 42
+                echo $row['name_first'].",".$row['name_2'].",".$row['name_last'].",".$row['encounter_nr'].",".$row['pid'].",".$row['bill_number'].",".$row['encounter_class_nr']; // 42
             }
 
 }else if($caller=='bill'){
@@ -173,7 +174,7 @@ if($caller=='closePayments'){
                // $result = mysql_query("SELECT name,next_receipt_no FROM care_ke_cashpoints WHERE pcode='$desc2'");
                $result=$db->Execute($sql);
                 if (!$result) {
-                    echo 'Could not run query: ' . mysql_error();
+                    echo 'Could not run query: ' . " "();
                     exit;
                 }
 
@@ -191,7 +192,7 @@ if($caller=='closePayments'){
                // $result = mysql_query("SELECT name,next_receipt_no FROM care_ke_cashpoints WHERE pcode='$desc2'");
                $result=$db->Execute($sql);
                 if (!$result) {
-                    echo 'Could not run query: ' . mysql_error();
+                    echo 'Could not run query: ' . " "();
                     exit;
                 }
                
@@ -217,7 +218,7 @@ if($caller=='closePayments'){
                $sql="SELECT name,next_voucher_no FROM care_ke_cashpoints WHERE pcode='$pointCode'";
                $result=$db->Execute($sql);
                 if (!$result) {
-                    echo 'Could not run query: ' . mysql_error();
+                    echo 'Could not run query: ' . " "();
                     exit;
                 }
 
@@ -236,7 +237,7 @@ if($caller=='closePayments'){
 
                $result=$db->Execute($sql);
                 if (!$result) {                                                                                                          
-                    echo 'Could not run query: ' . mysql_error();
+                    echo 'Could not run query: ' . " "();
                     exit;
                 }
 
@@ -252,7 +253,7 @@ if($caller=='closePayments'){
                $sql="SELECT suppname FROM suppliers where supplierid='$suppID'";
                $result=$db->Execute($sql);
                 if (!$result) {
-                    echo 'Could not run query: ' . mysql_error();
+                    echo 'Could not run query: ' . " "();
                     exit;
                 }
 
@@ -268,7 +269,7 @@ if($caller=='closePayments'){
                $sql="SELECT accountcode,accountname FROM $accDB.chartmaster WHERE accountcode='$gl'";
                $result=$db->Execute($sql);
                 if (!$result) {
-                    echo 'Could not run query: ' . mysql_error();
+                    echo 'Could not run query: ' . " "();
                     exit;
                 }
 
@@ -285,7 +286,7 @@ if($caller=='closePayments'){
                 WHERE P.pid='$pid'";
                $result=$db->Execute($sql);
                 if (!$result) {
-                    echo 'Could not run query: ' . mysql_error();
+                    echo 'Could not run query: ' . " "();
                     exit;
                 }
 //                echo $sql;
@@ -302,7 +303,7 @@ if($caller=='closePayments'){
                $sql="SELECT accno,name,category,os_bal,last_trans FROM care_ke_debtors where accno='$accno'";
                $result=$db->Execute($sql);
                 if (!$result) {
-                    echo 'Could not run query: ' . mysql_error();
+                    echo 'Could not run query: ' . " "();
                     exit;
                 }
 
@@ -318,7 +319,7 @@ if($caller=='closePayments'){
                $sql="SELECT accno,name,category,os_bal,last_trans FROM care_ke_debtors where accno='$accno'";
                $result=$db->Execute($sql);
                 if (!$result) {
-                    echo 'Could not run query: ' . mysql_error();
+                    echo 'Could not run query: ' . " "();
                     exit;
                 }
 

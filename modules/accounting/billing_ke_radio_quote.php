@@ -3,7 +3,7 @@
 require_once 'roots.php';
 //require($root_path.'include/inc_environment_global.php');
 
-$debug=true;
+$debug=false;
 
 require_once($root_path.'include/inc_init_xmlrpc.php');
 require_once($root_path.'include/care_api_classes/class_encounter.php');

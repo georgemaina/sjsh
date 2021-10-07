@@ -4,7 +4,6 @@ error_reporting(E_ALL);
 require('./roots.php');
 require($root_path . 'include/inc_environment_global.php');
 
-
 /*
   CARE2X Integrated Information System beta 2.0.1 - 2004-07-04 for Hospitals and Health Care Organizations and Services
   Copyright (C) 2002,2003,2004,2005  Elpidio Latorilla & Intellin.org
@@ -521,16 +520,22 @@ $smarty->display('common/mainframe.tpl');
 
 ?>
 <input type='text' id='encNo' value='<?php echo $_REQUEST['encounter_nr']; ?>'>
+<input type='text' id='pid2' value='<?php echo $pid; ?>'>
+<input type='text' id='names2' value='<?php echo $name_first.' '.$name_last.' '.$name_2; ?>'>
+<input type='text' id='dob' value='<?php echo $date_birth; ?>'>
 <!--<link rel="stylesheet" type="text/css" href="../../include/Extjs/resources/css/ext-all.css" />-->
 <!--<script type="text/javascript" src="../../include/Extjs/adapter/ext/ext-base.js"></script>-->
 <!--<script type="text/javascript" src="../../include/Extjs/ext-all.js"></script>-->
 
-<script src="../../../ext-6/build/ext-all-debug.js"></script>
-<link rel="stylesheet" href="../../../ext-6/build/classic/theme-triton/resources/theme-triton-all.css">
+<script src="../../../ext-6.5/build/ext-all-debug.js"></script>
+<link rel="stylesheet" href="../../../ext-6.5/build/classic/theme-triton/resources/theme-triton-all.css">
 <link rel="stylesheet" href="reportsCss.css">
+<script language="javascript" src="<?php echo $root_path; ?>js/dtpick_care2x.js"></script>
 
 <!--<link rel="stylesheet" type="text/css" href="../../include/Extjs/shared/examples.css" />-->
 <!--<script type="text/javascript" src="../../include/Extjs/shared/examples.js"></script>-->
+<!-- <script language="javascript" src="vitals.js"></script>
+<script language="javascript" src="prescriptions.js"></script> -->
 
 
 <script>

@@ -253,7 +253,7 @@ class Ward extends Encounter {
         global $db;
         $debug=FALSE;
         $this->sql="SELECT w.*,d.name_formal AS dept_name FROM $this->tb_ward AS w LEFT JOIN $this->tb_dept AS d ON w.dept_nr=d.nr
-					WHERE w.nr=$ward_nr AND w.status NOT IN ('closed',$this->dead_stat)";
+					WHERE w.nr=$ward_nr AND w.status NOT IN ('closed',$this->dead_stat) order by d.nr asc";
         if ($debug) echo $this->sql;
         if($this->res['gwi']=$db->Execute($this->sql)) {
             if($this->rec_count=$this->res['gwi']->RecordCount()) {
@@ -345,7 +345,7 @@ class Ward extends Encounter {
                         LEFT JOIN care_encounter e ON p.`pid`=e.`pid`
                         LEFT JOIN `care_encounter_location` l ON e.`encounter_nr`=l.`encounter_nr`
                         LEFT JOIN care_tz_company c on p.insurance_ID=c.id
-                        WHERE e.`encounter_class_nr`=1 AND e.`is_discharged`=0 AND l.`type_nr`=5
+                        WHERE e.`encounter_class_nr`=1 AND e.`is_discharged` in('0','9') AND l.`type_nr`=5
                         AND e.current_ward_nr='$ward_nr'";
         if($this->result=$db->Execute($this->sql)) {
             if($this->rec_count=$this->result->RecordCount()) {
@@ -1036,18 +1036,18 @@ class Ward extends Encounter {
         if($ward_nr) $cond="AND current_ward_nr='$ward_nr'";
         else $cond='';
         //if(empty($key)) return false;
-        $this->sql="SELECT e.encounter_nr, e.encounter_date,e.encounter_class_nr, e.current_ward_nr, p.pid, p.name_last,
+        $sql="SELECT e.encounter_nr, e.encounter_date,e.encounter_class_nr, e.current_ward_nr, p.pid, p.name_last,
                             p.name_first, p.date_birth, p.sex,w.ward_id,w.name as wardname
 				FROM $this->tb_enc AS e
 					LEFT JOIN $this->tb_person AS p ON e.pid=p.pid
 					LEFT JOIN $this->tb_ward AS w ON e.current_ward_nr=w.nr
 				WHERE e.encounter_class_nr='1' AND  e.is_discharged IN ('',0) $cond AND  in_ward IN ('',0)";
         
-        if($debug) echo $this->sql;
+        if($debug) echo $sql;
 
-        if ($this->res['_cwil']=$db->Execute($this->sql)) {
-            if ($this->rec_count=$this->res['_cwil']->RecordCount()) {
-                return $this->res['_cwil'];
+        if ($response=$db->Execute($sql)) {
+            if ($this->rec_count=$response->RecordCount()) {
+                return $response;
             }else {
                 return false;
             }

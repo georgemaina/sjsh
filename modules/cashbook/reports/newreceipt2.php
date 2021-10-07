@@ -81,7 +81,7 @@ require($root_path . 'include/inc_environment_global.php');
 	$refno=$_REQUEST['refno'];
 	$pno=$_REQUEST['pno'];
 
-	$r_sql = "select rev_desc, proc_qty, `Prec_desc`, total, amount, rev_code, proc_code,towards
+	$r_sql = "select rev_desc, proc_qty, `Prec_desc`, total, amount, rev_code, proc_code,towards,mpesaRef
 	from care_ke_receipts where ref_no='$refno' and cash_point='$_REQUEST[cashpoint]' AND patient='$pno' and shift_no='$shiftNo'";
 
     $result = $db->Execute($r_sql);
@@ -106,7 +106,30 @@ require($root_path . 'include/inc_environment_global.php');
     echo"<tr><td class='itemTitles'>".substr($row['Prec_desc'])."</td>
           <td class='itemTitles' align=center>TOTAL</td>
           <td class='itemTitles'>".number_format($row['total'],2)."</td>";
+          $bal=($row['cash']+$row['mpesa']+$row['visa'])-$total;
+         
+    echo "<tr><td colspan='3'><hr></td></tr>";
 
+    $sql = "SELECT cash,mpesa,visa,mpesaRef FROM care_ke_receipts
+    WHERE ref_no='$refno' AND cash_point='$cashpoint' AND patient='$pno' and shift_no='$shiftNo'";
+   $result = $db->Execute($sql);
+   //echo $sql;
+   $row = $result->FetchRow();
+   echo"<tr><td class='itemTitles'>".substr($row['Prec_desc'])."</td>
+         <td class='itemTitles'>TOTAL</td>
+         <td class='itemTitles'>".number_format($total,2)."</td>";
+
+   $bal=($row['cash']+$row['mpesa']+$row['visa'])-$total;
+   $mpesaRef=$row['mpesaRef'];
+
+    echo"<tr><td class='itemTitles'>Cash Amount Paid:</td><td class=invDetails colspan='2'>".$row['cash']."</td></tr>
+          <tr><td class='itemTitles'>Mpesa Amount Paid:</td><td class=invDetails colspan='2'>".$row['mpesa']."</td></tr>
+          <tr><td class='itemTitles'>Visa Amount paid:</td><td class=invDetails colspan='2'>".$row['visa']."</td></tr>
+          <tr><td class='itemTitles'>Change given:</td><td class=invDetails colspan='2'>".number_format($bal,2)."</td></tr>";
+
+    if($row['mpesa']>0){
+        echo"<tr><td class='itemTitles'>MPESA REF NO:</td><td class=invDetails>".$mpesaRef."</td></tr>";
+    }
         echo "<tr><td colspan='3'><hr></td></tr>";
 
     echo"<tr><td class='itemTitles'>Paid By.....:</td><td class=invDetails colspan='2'>".$_REQUEST['PatientName']."</td></tr>
@@ -115,11 +138,9 @@ require($root_path . 'include/inc_environment_global.php');
          <tr><td class='itemTitles' colspan='3' align=center>Thank You:</td></tr>";
 
     echo "<tr><td colspan='3'><hr></td></tr>";
-
 ?>
 </div>
                  <div class='pageNos'></div>
             </div>
    
-</div>        
-
+</div>

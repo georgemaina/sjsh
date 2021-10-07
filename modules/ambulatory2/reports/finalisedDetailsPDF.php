@@ -420,6 +420,10 @@ WHERE (pid ='" . $pid . "' AND service_type NOT IN ('payment','payment adjustmen
 
 }
 
+        $currpoint = $currpoint + 60;
+    $page->drawText('Sign: _________________________', $leftPos + 30, $topPos - $currpoint);
+    $page->drawText('ID Number: _______________________________', $leftPos + 270, $topPos - $currpoint); 
+
 $topPos = $topPos - 10;
 array_push($pdf->pages, $page);
 header('Content-type: application/pdf');

@@ -281,12 +281,11 @@ if (isset($externalcall)) {
                                 <?
                             } //else {
     ?>
-                           <!-- <input type="button" name="show" value="<?php //echo $LDPrescribe; ?>" onClick="javascript:submit_form('<?php echo $thisfile.URL_APPEND;?>&mode=new&prescrServ=<?php// echo $_GET['prescrServ']?>&show=insert&disablebuttons=<?php //echo $disablebuttons; ?>&backpath=<?php //echo urlencode($backpath); ?>')">-->
-                                <?
+                                                           <?
                             //}
 ?></td>
                     </tr>
                 </table>
         </tr>
-    </form> <!-- end of form "prescription" -->
+    </form> 
 </table>

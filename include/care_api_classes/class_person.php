@@ -315,7 +315,7 @@ class Person extends Core {
 	*/
     function insertDataFromArray($array) {
     	global $db;
-        $db->debug=true;
+        $db->debug=false;
          
 		$x='';
 		$v='';

@@ -20,6 +20,8 @@ require($root_path.'include/care_api_classes/class_tz_billing.php');
     </script>
     <script src="../../../ext-6/build/ext-all.js"></script>
     <script src="../../../ext-6/build/classic/theme-classic/theme-classic.js"></script>
+    <script src="htsAdult.js"></script>
+    <script src="htsChild.js"></script>
     <link rel="stylesheet" href="../../../ext-6/build/classic/theme-classic/resources/theme-classic-all.css">
     <?php
 $bill_obj = new Bill;

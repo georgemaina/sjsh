@@ -72,7 +72,7 @@
         <td><input type="text" name="cashPoint" id="cashPoint" onblur="getCashPoint(this.value)" value="<?php echo $cashpoint ?>"/></td>
         <td><input type="text" name="cashPoint_Desc" id="cashPoint_Desc" size="35" value="<?php echo $cname ?>"/></td>
         <td>Receipt No:</td>
-        <td><input type="text" name="receiptNo" id="receiptNo" value="<?php echo $prefix . '' . $receipt_no ?>"/></td>
+        <td><input type="text" name="receiptNo" id="receiptNo" value="<?php echo $prefix . '' .  $refno ?>"/></td>
 
     </tr>
     <tr>

@@ -239,7 +239,7 @@ class GuiSearchPerson {
 				$sql='SELECT pid, name_last, name_first,`name_2`, date_birth,selian_pid, sex, death_date, status,addr_zip,citizenship,phone_1_nr FROM '.$fromwhere.$sql3;
 				$ergebnis=$db->SelectLimit($sql,$pagen->MaxCount(),$pagen->BlockStartIndex());
 				$linecount=$ergebnis->RecordCount();
-                                if($db->debug) echo $sql;
+                                // if($db->debug) echo $sql;
 			}else{
 				$ergebnis=$person->SearchSelect($searchkey,$pagen->MaxCount(),$pagen->BlockStartIndex(),$oitem,$odir,$firstname_too);
 				#Retrieve the sql fromwhere portion

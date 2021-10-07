@@ -3,26 +3,26 @@ $debug=false;
 
 ($debug) ? $db->debug=FALSE : $db->debug=FALSE;
 $bill_obj = new Bill;
-$cash_point=$_POST[cash_point];
+$cash_point=$_POST['cash_point'];
 //$ref_no=$_POST[salesReceiptNo];
-$paymode=$_POST[paymode];
-$paymode_desc=$_POST[paymode_desc];
-$mdate=$_POST[calInput];
-$payer=ucwords($_POST[payer]);
-$patientno=$_POST[patientId];
-$encounter_nr=$_POST[encounter_nr];
-$encounter_class_nr=$_POST[encounter_class_nr];
-$pname= ucwords($_POST[patient_name]);
+$paymode=$_POST['paymode'];
+$paymode_desc=$_POST['paymode_desc'];
+$mdate=$_POST['calInput'];
+$payer=ucwords($_POST['payer']);
+$patientno=$_POST['patientId'];
+$encounter_nr=$_POST['encounter_nr'];
+$encounter_class_nr=$_POST['encounter_class_nr'];
+$pname= ucwords($_POST['patient_name']);
 $inputDt=date("Y-m-d");
 $inputTime=date("H:i:s");
 $period=date('m');
 $name = $_SESSION['sess_login_username'];
 $username=$name;
-$total=$_POST[total];
-$mpesa=$_POST[mpesa];
-$visa=$_POST[visa];
-$cash=$_POST[cash];
-$department=$_POST[department];
+$total=$_POST['total'];
+$mpesa=$_POST['mpesa'];
+$visa=$_POST['visa'];
+$cash=$_POST['cash'];
+$department=$_POST['department'];
 
 //$gl_acc=$_POST[gl_acc];
 //echo var_dump($_POST);
@@ -46,7 +46,7 @@ $new_bill_number=$bill_obj->checkBillEncounter($encounter_nr);
 if($paymode=='CAS') {
     $cheque_no='0';
 }else {
-    $cheque_no=$_POST[cheq_no];
+    $cheque_no=$_POST['cheq_no'];
 }
 
  
@@ -67,7 +67,7 @@ function insertData($db,$rowid,$cash_point,$ref_no,$paymode,$mydate,$payer,$pati
     $mpesaRef=$_POST['mpesaref'];
     $visa=$_POST['visa'];
     $cash=round($_POST['cash']);
-    $bal=$_POST[bal];
+    $bal=$_POST['bal'];
 
     $desc= addslashes($Prec_Desc);
     $csql="INSERT INTO `care_ke_receipts`
@@ -106,10 +106,10 @@ function insertData($db,$rowid,$cash_point,$ref_no,$paymode,$mydate,$payer,$pati
         $db->Execute($sql7);
     }
 
-    if($patientno==20828) {
-        $sql = "update care_ke_locstock set quantity=quantity-'$proc_qty' where stockid='$Proc_code' and loccode='Dispens'";
-        $db->Execute($sql);
-    }
+    // if($patientno==20828) {
+    //     $sql = "update care_ke_locstock set quantity=quantity-'$proc_qty' where stockid='$Proc_code' and loccode='Dispens'";
+    //     $db->Execute($sql);
+    // }
 
 //    if($bill_obj->checkIncomeTrans('receipt')){
 //        $glCode=$bill_obj->getItemGL($rev_code);
@@ -124,7 +124,7 @@ if($debug) echo $sql;
 $result=$db->Execute($sql);
 $rows=$result->RecordCount();
 
-if(!isset($_POST[gridbox_rowsadded])) {
+if(!isset($_POST['gridbox_rowsadded'])) {
 //   echo '0';
     while($row3=$result->FetchRow()) {
 //        echo 'gridbox fields are'.$rows.'<br>';
@@ -142,8 +142,8 @@ if(!isset($_POST[gridbox_rowsadded])) {
 
 //    echo 'rows update are '.$rows;
 }else {
-    if(strstr($_POST[gridbox_rowsadded],",")) {
-        $added_rows=$_POST[gridbox_rowsadded];
+    if(strstr($_POST['gridbox_rowsadded'],",")) {
+        $added_rows=$_POST['gridbox_rowsadded'];
         $arr_rows= explode(",", $added_rows);
         for($i=0;$i<count($arr_rows);$i++) {
 //            echo "$arr_rows[$i]<br>";
@@ -160,7 +160,7 @@ if(!isset($_POST[gridbox_rowsadded])) {
 
         }
     }else {
-            insertData($db,$_POST[gridbox_rowsadded],$cash_point,$ref_no,$paymode,$mydate,$payer,$patientno,
+            insertData($db,$_POST['gridbox_rowsadded'],$cash_point,$ref_no,$paymode,$mydate,$payer,$patientno,
             $pname,$gl_acc,$cheque_no,$inputDt,$inputTime,$period,$shiftNo,$username,$row3[2],$salesArea,$bill_obj);
 //    $bill_obj->updateCashErp($db,$patientno);
            
@@ -168,15 +168,15 @@ if(!isset($_POST[gridbox_rowsadded])) {
 //            updateBill($db,$_POST[gridbox_rowsadded],$patientno);
             nxtsalesReceiptNo($db,$ref_no,$cash_point);
             updateBalances($db,$encounter_nr,$cash_point,$ref_no,$paymode,$mydate,$payer,$patientno,
-   $inputDt,$username,$new_bill_number,$encounter_class_nr,$_POST[gridbox_rowsadded],$ref_no);
+   $inputDt,$username,$new_bill_number,$encounter_class_nr,$_POST['gridbox_rowsadded'],$ref_no);
             
     }
 }
 
 //$bill_obj->updateIncomePayments($inputDt,$mpesa,$visa,$cash);
-
-updateInvoiceErp($db, $patientno,$ref_no);
-updateCashErp($db,$patientno,$ref_no);
+//
+//updateInvoiceErp($db, $patientno,$ref_no);
+//updateCashErp($db,$patientno,$ref_no);
 
 function nxtsalesReceiptNo($db,$currRcptNo,$cashpoint) {
    $debug=false;
@@ -189,7 +189,7 @@ function nxtsalesReceiptNo($db,$currRcptNo,$cashpoint) {
     if($result)
         echo " ";
     else
-        echo "Error in nxtsalesReceiptNo err desc=".mysql_error();
+        echo "Error in nxtsalesReceiptNo err desc=";
 }
 
 function updateLabPmt($db,$pid,$encounter_nr) {
@@ -285,7 +285,7 @@ function updateBill($db,$rowid,$patientno) {
            echo $patientno."bill not deleted";
         }
     } else {
-        echo "Error in updateBill, err desc=".mysql_error();
+        echo "Error in updateBill, err desc=";
     }
 }
 
@@ -316,7 +316,7 @@ function updateBalances($db,$encounter_nr,$cash_point,$ref_no,$paymode,$mydate,$
         ,item_number,weberpsync)
                 VALUES('$patientno','$encounter_nr','$encounter_class_nr','$inputDt','$new_bill_number','Payment',
     '$Prec_Desc','$amount','$proc_qty','$total','$username','Receipt Payment','Paid','$batch_no',
-    '".date('H:i:s')."','$revcode','$Proc_code','$Proc_code',0)";
+    '".date('H:i:s')."','$rev_code','$Proc_code','$Proc_code',0)";
     
     if($debug) echo $sql2;
 

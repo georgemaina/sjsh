@@ -71,7 +71,7 @@ require($root_path . 'include/inc_environment_global.php');
 					 echo "<tr><td>Date</td><td>Time</td><td colspan=4>Notes</td>";
                      echo "<tr><td></td><td></td><td class=invDetails>";
                      while($row=$result->FetchRow()){
-                         echo "<tr><td>$row['date']</td><td>$row['time']</td><td colspan=3>$row['notes']</td><td>$row['create_id']</td></tr>";                 
+                         echo "<tr><td>$row[date]</td><td>$row[time]</td><td colspan=3>$row[notes]</td><td>$row[create_id]</td></tr>";                 
                      }
                        echo "<tr><td colspan='6'><hr></td></tr>";
        

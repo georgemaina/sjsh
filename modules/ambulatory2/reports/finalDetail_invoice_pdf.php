@@ -378,7 +378,7 @@ $paid=0;
                 $page->drawRectangle($leftPos + 32, $topPos - $currpoint, $leftPos + 500, $topPos - $currpoint, Zend_Pdf_Page::SHAPE_DRAW_STROKE);
             }
 
-            if($rowi['service_type']=='NHIF' && $nhif <> ''){
+            if($rowi['service_type']=='NHIF'){
                 $page->drawText($rowi['prescribe_date'], $leftPos + 36, $topPos - $currpoint);
                 $page->drawText('NHIF CARD ', $leftPos + 100, $topPos - $currpoint);
                 $page->drawText($rowi['memberID'], $leftPos + 150, $topPos - $currpoint);
@@ -386,12 +386,8 @@ $paid=0;
                 $page->drawText($rowi['batch_no'] . ' )', $leftPos + 320, $topPos - $currpoint);
                 $page->drawText('Ksh', $leftPos + 380, $topPos - $currpoint);
                 $page->drawText( number_format($rowi['total'],2), $leftPos + 450, $topPos - $currpoint);
-                $paid=$paid+$rowi['total'];
-                $bal=$bill-$paid;
+
             }else{
-                $bal=$bill;
-            }
-            if($receipt<>''){
                 $page->drawText($rowi['prescribe_date'], $leftPos + 36, $topPos - $currpoint);
                 $page->drawText('Bill', $leftPos + 100, $topPos - $currpoint);
                 $page->drawText($rowi['service_type'], $leftPos + 150, $topPos - $currpoint);
@@ -400,15 +396,12 @@ $paid=0;
                 $page->drawText('Ksh', $leftPos + 380, $topPos - $currpoint);
                 $page->drawText( number_format($rowi['total'],2), $leftPos + 450, $topPos - $currpoint);
                 $topPos = $topPos - 15;
-                $paid=$paid+$rowi['total'];
-                $bal=$bill-$paid;
-            }else{
-                $bal=$bill;
             }
-                
-            }
+            $paid=$paid+$rowi['total'];
 
-    
+        }
+
+    $bal=$bill-$paid;
 
     $currpoint=$currpoint+10;
     $page->drawLine($leftPos + 32, $topPos - $currpoint, $leftPos + 500, $topPos - $currpoint, Zend_Pdf_Page::SHAPE_DRAW_STROKE);
@@ -421,9 +414,9 @@ $paid=0;
 $currpoint=$currpoint+5;
     $page->drawRectangle($leftPos + 32, $topPos - $currpoint, $leftPos + 500, $topPos - $currpoint, Zend_Pdf_Page::SHAPE_DRAW_STROKE);
 
-/*     $currpoint = $currpoint + 60;
+     $currpoint = $currpoint + 60;
     $page->drawText('Sign: _________________________', $leftPos + 30, $topPos - $currpoint);
-    $page->drawText('ID Number: _______________________________', $leftPos + 270, $topPos - $currpoint); */
+    $page->drawText('ID Number: _______________________________', $leftPos + 270, $topPos - $currpoint); 
 
 
     $topPos = $topPos - 10;

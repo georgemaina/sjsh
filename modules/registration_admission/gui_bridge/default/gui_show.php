@@ -340,20 +340,21 @@ if ($mode == 'show' /* && !isset($externalcall) */) {
        // echo "diagonosis=".$diagnosis." Encounter class=".$encounterClass;
 
        // echo 'Dept No '.$deptNr;
-        if($notes==0 && $encounterClass==2 && $deptNr<>'66' ){
+        /* if($notes==0 && $encounterClass==2 && $deptNr<>'66' ){
             $smarty->assign('bShowNoRecord', TRUE);
             $smarty->assign('norecordyet', '<br><br>'.$notesError."<a href=".$root_path."modules/registration_admission/show_notes.php".URL_REDIRECT_APPEND
                     ."&station=$station&pn=$encNo&user_origin=$user_origin&edit=$edit'> <img " . createComIcon($root_path, 'createnew_tz.gif', '0') . " ></a>");   
-        }elseif($diagnosis==0 && $encounterClass==2 && $thisfile == 'show_prescription.php' && $deptNr<>'66'){
+  /*       }else */
+	/* if($diagnosis==0 && $encounterClass==2 && $thisfile == 'show_prescription.php' && $deptNr<>'66'){
             $smarty->assign('bShowNoRecord', TRUE);
             $smarty->assign('norecordyet', '<br><br>'.$diagnosisErr."<a href=\"../diagnostics_tz/icd10_quicklist.php".URL_REDIRECT_APPEND."&sid=".$sid
                 ."&encounter=".$pn."&lang=en&ntid=false&externalcall=true&target=search&1=1&ispopup=false&backpath_diag="
-                .urlencode($_SERVER["PHP_SELF"].URL_APPEND.'&encounter_nr='.$pn)."\"> <img " . createComIcon($root_path, 'createnew_tz.gif', '0') . " ></a>");
+                .urlen code($_SERVER["PHP_SELF"].URL_APPEND.'&encounter_nr='.$pn)."\"> <img " . createComIcon($root_path, 'createnew_tz.gif', '0') . " ></a>");
 //        }elseif($vitals==0){
 //            $smarty->assign('bShowNoRecord', TRUE);
 //            $smarty->assign('norecordyet', '<br><br>'.$vitalsError."<a href=".$root_path."modules/registration_admission/show_weight_height.php". URL_APPEND
 //                        ."&pid=$pid&target=search&encounter_nr=$encNo'> <img " . createComIcon($root_path, 'createnew_tz.gif', '0')."></a>");
-	}else{
+	}else{ */
             $smarty->assign('bShowNoRecord', TRUE);
             $smarty->assign('sMascotImg', '<img ' . createMascot($root_path, 'mascot1_r.gif', '0', 'absmiddle') . '>');
             $smarty->assign('norecordyet', $norecordyet);
@@ -371,7 +372,7 @@ if ($mode == 'show' /* && !isset($externalcall) */) {
                 if (file_exists('./gui_bridge/default/gui_person_createnew_' . $thisfile))
                     include('./gui_bridge/default/gui_person_createnew_' . $thisfile);
 //            }
-        }
+       // }
         
         
         

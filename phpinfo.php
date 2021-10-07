@@ -1,5 +1,7 @@
 <?php
 
 //
-phpinfo();
+//phpinfo();
+
+echo md5('Larry254');
 ?>

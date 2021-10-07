@@ -175,6 +175,9 @@ switch ($caller) {
     case "saveVitals":
         saveVitals();
         break;
+    case "saveHts":
+        saveHts();
+        break;
     default:
         echo "{failure:true}";
         break;
@@ -269,6 +272,37 @@ function saveVitals(){
         echo "{failure:true,Error:$sql}";
     }
 }
+
+function saveHts(){
+    global $db;
+    $pid=$_REQUEST['pid'];
+    $enounterNo=$_REQUEST['encounterNr'];
+    $HtsType='Above1';
+    $Qst1=$_POST['Qst1'];
+    $Qst2=$_POST['Qst2'];
+    $Qst3=$_POST['Qst3'];
+    $Qst4=$_POST['Qst4'];
+    $Qst5=$_POST['Qst5'];
+    $Qst6=$_POST['Qst6'];
+    $Qst7=$_POST['Qst7'];
+    $Qst8=$_POST['Qst8'];
+    $Qst9=$_POST['Qst9'];
+    $Qst10=$_POST['Qst10'];
+
+    $sql="insert into `care_ke_htsvalues` (
+         `Pid`,`EncounterNr`,`HtsType`, `Qst1`,`Qst2`,`Qst3`, `Qst4`,`Qst5`,
+        `Qst6`,`Qst7`,`Qst8`,`qst9`, `qst10`)
+      values('$pid','$enounterNo', '$HtsType','$Qst1','$Qst2','$Qst3','$Qst4','$Qst5',
+      '$Qst6','$Qst7','$Qst8','$qst9','$qst10')";
+      
+
+    if($db->Execute($sql)){
+        echo "{success:true}";
+    }else{
+        echo "{failure:true,Error:$sql}";
+    }
+}
+
 
 function getVitals($encNo)
 {

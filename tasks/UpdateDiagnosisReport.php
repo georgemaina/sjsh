@@ -5,8 +5,8 @@ require('../include/inc_environment_global.php');
 $debug=true;
  $day=date('d');
  
-$startDate="2020-05-16";//date('Y-m-d');
-//$startDate=date('Y-m-d');
+//$startDate="2020-08-05";//date('Y-m-d');
+$startDate=date('Y-m-d');
   
  $sMonth=new DateTime($startDate);
  $eMonth=$sMonth->format('F');

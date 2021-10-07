@@ -136,6 +136,12 @@ if($data_entry){
     $TP_PRESCRIPTIONS="<font color='#333333'>$LDPrescriptions</font>";
 }
 
+// if($data_entry){
+//     $TP_PRESCRIPTIONS="<a href='#' id='prescriptions'>Prescriptions</a>";
+// }else{
+//     $TP_PRESCRIPTIONS="<font color='#333333'>$LDPrescriptions</font>";
+// }
+
 if($data_entry){
     $TP_LABTESTS="<a href=".$root_path.'modules/nursing/nursing-station-patientdaten-doconsil-chemlabor.php'.URL_REDIRECT_APPEND.'&station='.$station.'&pn='.$_SESSION['sess_en'].'&user_origin='.$user_origin.'&target=chemlabor&noresize=1&edit='.$edit.'">'.$LDLabtests."</a>";
 }else{
@@ -180,11 +186,19 @@ if($data_entry){
     $TP_IMMUNIZATION="<font color='#333333'>$LDImmunization</font>";
 }
 
-if($data_entry){
-    $TP_MSRMNTS="<a href=\"show_weight_height.php".URL_APPEND."&pid=$pid&target=$target&backpath_diag=".urlencode($_SERVER["PHP_SELF"].URL_APPEND.'&encounter_nr='.$encounter_nr)."\">$LDMeasurements</a>";
-}else{
-    $TP_MSRMNTS="<font color='#333333'>$LDMeasurements</font>";
-}
+ if($data_entry){
+     $TP_MSRMNTS="<a href=\"show_weight_height.php".URL_APPEND."&pid=$pid&target=$target&backpath_diag=".urlencode($_SERVER["PHP_SELF"].URL_APPEND.'&encounter_nr='.$encounter_nr)."\">$LDMeasurements</a>";
+ }else{
+     $TP_MSRMNTS="<font color='#333333'>$LDMeasurements</font>";
+ }
+
+
+//if($data_entry){
+ //   $TP_MSRMNTS="<a href='#' id=vitals \">$LDMeasurements</a>";
+//}else{
+//    $TP_MSRMNTS="<font color='#333333'>$LDMeasurements</font>";
+//}
+
 
 # If the sex is female, show the pregnancies option link
 if($data_entry&&$sex=='f') {

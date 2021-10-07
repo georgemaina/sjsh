@@ -61,7 +61,7 @@ $sql = "SELECT b.`item_id`,b.`Item_desc`,p.price,sum(b.`qty`) as qty,sum(b.`orig
             }
 
       $sql = $sql . "GROUP BY item_id ORDER BY Total DESC";
-if($debug) 
+//if($debug) 
     echo $sql;
 
 $result=$db->Execute($sql);

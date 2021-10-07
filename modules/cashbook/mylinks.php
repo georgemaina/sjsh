@@ -219,7 +219,7 @@ function displayPayAdjForm() {
 }
 
 
-function displayRcptForm($db, $cashpoint, $cashier) {
+function displayRcptForm($db, $cashpoint, $cashier, $refno, $cname) {
 //    global $db;
    $debug=false;
 
@@ -231,7 +231,14 @@ function displayRcptForm($db, $cashpoint, $cashier) {
    //echo "<div class='container' style='width:600px'>";
     //echo "<table width='100%' class='style4'>";
     echo "<tr><td colspan=5 align=center><br><div id='gridbox' height='200px' style='background-color:white;'></div></td></tr>";
-    echo "<tr><td colspan=5 align=right><b>Total:<input type='text' name='total' id='total'><b/></td><td></td></tr>";
+    echo "<tr><td colspan='4' align=right><b>Total:<b/></td><td><input type='text' name='total' id='total'></td><td></td></tr>";
+    echo "<tr><td colspan='4' align='right'><b>Received Cash: <b/></td><td><input type='text' name='cash' id='cash' value='0' onchange='getBalance(this.value)'></td></tr>";
+    echo "<tr><td colspan='4' align='right'><b>Received Mpesa:<b/></td><td>  <input type='text' name='mpesa' id='mpesa' value='0' onchange='getBalance(this.value)'>
+                    Mpesa Ref: <input type='text' name='mpesaref' id='mpesaref' size='10' value='' minlength='10' maxlength='10'><b/></td></tr>";
+    echo "<tr><td colspan='4' align='right'><b>Visa: <b/></td><td><input type='text' name='visa' id='visa' value='0' onchange='getBalance(this.value)'></td></tr>";
+    echo "<tr>
+             <td colspan='4' align='right'><b>Balance:<b/></td>
+             <td> <input type='text' name='bal' id='bal' value='0'></td></tr>";
 //    echo "<tr><td colspan=5 align=right><b>Paid: <input type='text' name='paid' id='paid' onkeyup='getBalance(this.value)'><b/></td><td></td></tr>";
 //    echo "<tr><td colspan=5 align=right><b>Balance: <input type='text' name='bal' id='bal'><b/></td><td></td></tr>";
     echo "<tr><td colspan=5 align=right><input type='submit' id='submit' name='submit' value='Save'></td><td></td></tr></table></form>";
@@ -300,14 +307,19 @@ function printcashbook($page) {
 ?>
 <script>
 function getBalance(str){
+ 
     var paid=str;
     var total= document.csale.total.value;
     var cash=document.csale.cash.value;
     var mpesa=document.csale.mpesa.value;
     var visa=document.csale.visa.value;
+   
     var bal=(parseFloat(cash)+parseFloat(mpesa)+parseFloat(visa))-parseFloat(total);
+    //alert('Test='+cash+' Balance='+bal);
     document.csale.bal.value=roundNumber(bal,2);
 }
+
+
 </script>
     <?php
     function displayReceipts($rdate,$refno,$cashier,$pno,$PatientName,$PaymentMode,$cashpoint,$payer,

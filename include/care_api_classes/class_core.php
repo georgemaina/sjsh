@@ -391,7 +391,6 @@ class Core {
      * @return boolean
      */
     function insertDataFromArray($array) {
-
         global $dbtype;
         $debug = false;
         $x = '';

@@ -11,13 +11,11 @@
             "Inpatient"
         ],
         "models": [
-            "VitalsModel",
-            "NhifCredits"
+            "VitalsModel"
         ],
         "name": "Inpatient",
         "stores": [
             "VitalsStore",
-            "NhifCreditStore",
             "WaitingListStore",
             "ItemsListStore"
         ],
@@ -26,9 +24,6 @@
             "Prescriptions",
             "VitalsTrend",
             "OPNotes",
-            "Main",
-            "InvoicesList",
-            "NhifCredits",
             "AdmDis",
             "OccupancyList",
             "WardsList"

@@ -359,6 +359,9 @@
                     "    },",
                     "    '#mnuLabresultsummaries':{",
                     "        click:this.openLabResults",
+                    "    },",
+                    "    '#cmdUpdateReport':{",
+                    "        click:this.updateOpWorkload",
                     "    }",
                     "",
                     "});"
@@ -2969,13 +2972,13 @@
                     "var startDate=Ext.Date.format(new Date(this.getDiagnosisreports().down('#startDate').getValue()), 'Y-m-d');",
                     "var endDate=Ext.Date.format(new Date(this.getDiagnosisreports().down('#endDate').getValue()), 'Y-m-d');",
                     "",
-                    "if(!this.getDiagnosisreports().down('#age1').getValue()){",
+                    "if(this.getDiagnosisreports().down('#age1').getValue()===''){",
                     "    var age1=\"\";",
                     "}else{",
                     "    var age1=this.getDiagnosisreports().down('#age1').getValue();",
                     "}",
                     "",
-                    "if(!this.getDiagnosisreports().down('#age2').getValue()){",
+                    "if(this.getDiagnosisreports().down('#age2').getValue()===''){",
                     "    var age2=\"\";",
                     "}else{",
                     "    var age2=this.getDiagnosisreports().down('#age2').getValue();",
@@ -3691,6 +3694,46 @@
             },
             "name": "openLabResults",
             "designerId": "31e6dbb3-7a43-45e6-9b1f-f0b54f7cbbc2"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "button"
+                ],
+                "fn": "updateOpWorkload",
+                "implHandler": [
+                    "var startDate=button.up('grid').down('#startDate').getValue();",
+                    "var endDate=button.up('grid').down('#endDate').getValue();",
+                    "Ext.Ajax.request({",
+                    "     url: 'data/getReportsData.php?task=updateOpWorkload',",
+                    "     params:{",
+                    "         startDate:startDate,",
+                    "         endDate:endDate",
+                    "     },",
+                    "     success: function(response, opts) {",
+                    "         var obj = Ext.decode(response.responseText);",
+                    "         console.dir(obj);",
+                    "     },",
+                    "",
+                    "     failure: function(response, opts) {",
+                    "         console.log('server-side failure with status code ' + response.status);",
+                    "     }",
+                    " });"
+                ]
+            },
+            "configAlternates": {
+                "designer|params": "typedarray",
+                "fn": "string",
+                "implHandler": "code"
+            },
+            "name": "updateOpWorkload",
+            "designerId": "fff282ae-7356-4968-9d1d-d3b44c1d8bd6"
         }
     ]
 }

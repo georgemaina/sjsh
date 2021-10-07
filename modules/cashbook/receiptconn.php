@@ -53,6 +53,11 @@ function insertData($db, $rowid, $pid, $pname, $Cash_Point, $receiptNo, $Pay_mod
     $ledger_desc = $_POST["gridbox_" . $rowid . "_2"];
     $amount = $_POST["gridbox_" . $rowid . "_3"];
     $bill_number=$receiptNo;
+    $mpesa=$_POST['mpesa'];
+    $mpesaRef=$_POST['mpesaref'];
+    $visa=$_POST['visa'];
+    $cash=round($_POST['cash']);
+    $bal=$_POST['bal'];
 
     $encounter_nr = $_POST[encounter_nr];
     if ($ledger == "IP") {
@@ -67,11 +72,11 @@ function insertData($db, $rowid, $pid, $pname, $Cash_Point, $receiptNo, $Pay_mod
             (`cash_point`, `ref_no`, `pay_mode`,`type`,`currdate`,`payer`, `patient`,`name`, `gl_acc`,
              `cheque_no`,`rev_code`,`rev_desc`, `proc_qty`,
              `amount`, `total`,`input_date`,`input_time`,`period`,`Shift_No`,`username`,weberp_syncd,
-             drawer_bank,towards,ledger,`proc_code`, `Prec_desc`) VALUES
+             drawer_bank,towards,ledger,`proc_code`, `Prec_desc`,mpesa,visa,cash,balance,mpesaref) VALUES
             ('" . $Cash_Point . "', '$receiptNo','$Pay_mode','RC','$pdate','$ledger_desc','$pid',
              '$pname','$gl_acc','$cheque_no','$ledger','$levDesc',
              '$proc_qty', '$amount', '$total','$pdate','$ptime','$period','$shiftNo','$input_User','0',
-             '$drawerBank','$toward','$ledger','$ledger','$toward')";
+             '$drawerBank','$toward','$ledger','$ledger','$toward','$mpesa','$visa','$cash','$bal','$mpesaRef')";
 
     if ($debug)
         echo $csql;
@@ -165,7 +170,7 @@ function updateBalances($db, $pid, $encounter_nr, $cash_point, $ref_no, $paymode
 }
 
 function nextReceiptNo($db, $nextReceipt, $Cash_Point) {
-    $debug = FALSE;
+    $debug = TRUE;
     $nextRctpNo = intval(substr($nextReceipt, 1) + 1);
 
     $sql = "update care_ke_cashpoints set next_receipt_no='$nextRctpNo' where pcode='$Cash_Point'";

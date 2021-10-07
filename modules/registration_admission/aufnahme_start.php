@@ -222,7 +222,7 @@ if ($pid != '' || $encounter_nr != '') {
 
                 if (!$error) {
 
-                    if ($is_transmit_to_weberp_enable == 1) {
+                    /* if ($is_transmit_to_weberp_enable == 1) {
                         $persondata = $person_obj->getAllInfoArray();
                         $weberp_obj = new_weberp();
                         if (!$weberp_obj->transfer_patient_to_webERP_asCustomer($pid, $persondata)) {
@@ -231,7 +231,7 @@ if ($pid != '' || $encounter_nr != '') {
                             $person_obj->setPatientIsTransmit2ERP($pid, 1);
                         }
                         destroy_weberp($weberp_obj);
-                    }
+                    } */
                     if (!$GLOBAL_CONFIG['patient_service_care_hide']) {
                         if (!empty($sc_care_start))
                             $sc_care_start = formatDate2Std($sc_care_start, $date_format, '/');
@@ -321,7 +321,7 @@ if ($pid != '' || $encounter_nr != '') {
 //                            if ($bill_obj->checkKits($consultation_fee)) {
 //                                $bill_obj->billItemKits($consultation_fee, $pid, $encounter_nr, 2);
 //                            }
-                        $bill_obj->updateCashErp($db, $pid);
+                        //$bill_obj->updateCashErp($db, $pid);
                             //$bill_obj->updateDebtorsTrans($pid,"2",$encounter_nr);
                             header("location: aufnahme_daten_zeigen.php" . URL_REDIRECT_APPEND . "&encounter_nr=$encounter_nr&origin=admit&target=entry&newdata=$newdata");
                             exit;

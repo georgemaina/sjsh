@@ -45,7 +45,7 @@ Ext.define('CarePortal.view.Announcements', {
             x: 30,
             y: 10,
             width: 275,
-            value: 'LITEIN HOSPITAL HOSPITAL ANNOUNCEMENTS',
+            value: 'ST JOSEPH SHELTER OF HOPE ANNOUNCEMENTS',
             fieldStyle: 'font-size: smaller;font-weight: bold;color: green;font-style:normal;color: #2E5494;'
         }
     ]

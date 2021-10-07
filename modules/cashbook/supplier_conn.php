@@ -13,6 +13,6 @@ $accDB=$_SESSION['sess_accountingdb'];
 $pharmLoc=$_SESSION['sess_pharmloc'];
 $gridConn->enable_log("temp.log",true);
 $gridConn->dynamic_loading(100);
-$gridConn->render_sql("SELECT supplierid,suppname FROM $accDB.suppliers ","supplierid", "supplierid,suppname");
+$gridConn->render_sql("SELECT supplierid,suppname FROM suppliers ","supplierid", "supplierid,suppname");
 
 ?>

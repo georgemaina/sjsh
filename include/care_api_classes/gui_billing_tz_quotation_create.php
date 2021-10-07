@@ -118,7 +118,7 @@ function calc_article(id)
 
 						$bill_obj->ShowNewQuotationEncounter_Prescriptions($encounter_nr,$id_array, $IS_PATIENT_INSURED);
 							//additional: show Laboratory-Items
-						$bill_obj->ShowNewQuotationEncounter_Laboratory($encounter_nr, &$id_array, $IS_PATIENT_INSURED);
+						$bill_obj->ShowNewQuotationEncounter_Laboratory($encounter_nr, $id_array, $IS_PATIENT_INSURED);
 
 					?>
               				<tr>
@@ -143,11 +143,12 @@ function calc_article(id)
 					  		var totalsum=0;
 					  		var insurancebalance=0;
 					  		<?php
-					  		$arraycount=0;
-					  		while(list($x,$v) = each($id_array))
-					  		{
+							  $arraycount=0;
+							  foreach($id_array as $x => $v){
+					  			//while(list($x,$v) = each($id_array)){
 					  			$objectarray[$arraycount++] = substr(strstr($x,'_'),1);
-					  			echo 'if(document.forms[0].elements[\''.$x.'\'])					  							if(!isNaN(document.forms[0].elements[\''.$x.'\'].value))					  							{					  								if(document.forms[0].elements[\'modepres_'.substr(strstr($x,'_'),1).'\'])					  								{					  									if(document.forms[0].elements[\'modepres_'.substr(strstr($x,'_'),1).'\'][0].checked)					  									{						  									totalsum = totalsum + parseInt(document.forms[0].elements[\''.$x.'\'].value);						  									if(document.forms[0].elements[\'insurance_'.substr(strstr($x,'_'),1).'\'])						  									{																if(parseInt(document.forms[0].elements[\'insurance_'.substr(strstr($x,'_'),1).'\'].value) <= (parseInt(document.forms[0].elements[\'showprice_'.substr(strstr($x,'_'),1).'\'].value) * parseInt(document.forms[0].elements[\'dosage_'.substr(strstr($x,'_'),1).'\'].value)))							  									{							  								    	insurancebalance=insurancebalance + parseInt(document.forms[0].elements[\'insurance_'.substr(strstr($x,'_'),1).'\'].value);							  								    }else							  								    {
+								  echo 'if(document.forms[0].elements[\''.$x.'\'])
+								  if(!isNaN(document.forms[0].elements[\''.$x.'\'].value))					  							{					  								if(document.forms[0].elements[\'modepres_'.substr(strstr($x,'_'),1).'\'])					  								{					  									if(document.forms[0].elements[\'modepres_'.substr(strstr($x,'_'),1).'\'][0].checked)					  									{						  									totalsum = totalsum + parseInt(document.forms[0].elements[\''.$x.'\'].value);						  									if(document.forms[0].elements[\'insurance_'.substr(strstr($x,'_'),1).'\'])						  									{																if(parseInt(document.forms[0].elements[\'insurance_'.substr(strstr($x,'_'),1).'\'].value) <= (parseInt(document.forms[0].elements[\'showprice_'.substr(strstr($x,'_'),1).'\'].value) * parseInt(document.forms[0].elements[\'dosage_'.substr(strstr($x,'_'),1).'\'].value)))							  									{							  								    	insurancebalance=insurancebalance + parseInt(document.forms[0].elements[\'insurance_'.substr(strstr($x,'_'),1).'\'].value);							  								    }else							  								    {
 							  								    insurancebalance=insurancebalance + (parseInt(document.forms[0].elements[\'showprice_'.substr(strstr($x,'_'),1).'\'].value) * parseInt(document.forms[0].elements[\'dosage_'.substr(strstr($x,'_'),1).'\'].value));							  								    }							  								}						  								}					  								}					  								else					  								{														if(document.forms[0].elements[\'modelab_'.substr(strstr($x,'_'),1).'\'])														{						  									if(document.forms[0].elements[\'modelab_'.substr(strstr($x,'_'),1).'\'][0].checked)						  									{							  									totalsum = totalsum + parseInt(document.forms[0].elements[\''.$x.'\'].value);							  									if(document.forms[0].elements[\'insurance_'.substr(strstr($x,'_'),1).'\'])							  									{																	if(parseInt(document.forms[0].elements[\'insurance_'.substr(strstr($x,'_'),1).'\'].value) <=parseInt(document.forms[0].elements[\'showprice_'.substr(strstr($x,'_'),1).'\'].value))								  								    	insurancebalance=insurancebalance + parseInt(document.forms[0].elements[\'insurance_'.substr(strstr($x,'_'),1).'\'].value);								  								    else								  								    insurancebalance=insurancebalance + (parseInt(document.forms[0].elements[\'showprice_'.substr(strstr($x,'_'),1).'\'].value) * parseInt(document.forms[0].elements[\'dosage_'.substr(strstr($x,'_'),1).'\'].value));							  								    }							  								}						  								}													}						  						}					  			';
 								$y = $x;
 					  		}

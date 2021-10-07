@@ -50,8 +50,8 @@
                 "frame": true,
                 "height": 565,
                 "itemId": "debitsForm",
-                "layout|x": 300,
-                "layout|y": 140,
+                "layout|x": 175,
+                "layout|y": 75,
                 "padding": "0 0 0 0",
                 "title": "Debits",
                 "url": "../../data/getDataFunctions.php?task=saveDebit",
@@ -118,7 +118,8 @@
                                 "layout|x": 10,
                                 "layout|y": 5,
                                 "name": "pid",
-                                "width": 225
+                                "tabIndex": 1,
+                                "width": 250
                             },
                             "configAlternates": {
                                 "fieldLabel": "string",
@@ -129,7 +130,8 @@
                                 "width": "auto",
                                 "labelAlign": "string",
                                 "allowBlank": "boolean",
-                                "labelStyle": "string"
+                                "labelStyle": "string",
+                                "tabIndex": "number"
                             },
                             "name": "MyTextField10",
                             "designerId": "5d8af721-f030-4511-9c13-db0fbbadc608"
@@ -150,7 +152,8 @@
                                 "layout|x": 10,
                                 "layout|y": 40,
                                 "name": "debitdate",
-                                "width": 225
+                                "tabIndex": 2,
+                                "width": 250
                             },
                             "configAlternates": {
                                 "fieldLabel": "string",
@@ -161,7 +164,8 @@
                                 "name": "string",
                                 "labelAlign": "string",
                                 "allowBlank": "boolean",
-                                "labelStyle": "string"
+                                "labelStyle": "string",
+                                "tabIndex": "number"
                             },
                             "name": "MyTextField12",
                             "designerId": "46fa5a00-a41c-4c6f-ae06-dc29ba21f0ac"
@@ -182,7 +186,8 @@
                                 "layout|x": 10,
                                 "layout|y": 75,
                                 "name": "debitdate",
-                                "width": 225
+                                "tabIndex": 3,
+                                "width": 250
                             },
                             "configAlternates": {
                                 "fieldLabel": "string",
@@ -193,7 +198,8 @@
                                 "name": "string",
                                 "labelAlign": "string",
                                 "allowBlank": "boolean",
-                                "labelStyle": "string"
+                                "labelStyle": "string",
+                                "tabIndex": "number"
                             },
                             "name": "MyDateField1",
                             "designerId": "ea07a7b3-507e-4fa9-954a-639a20650747"
@@ -210,10 +216,10 @@
                                 "fieldLabel": null,
                                 "id": "pname",
                                 "itemId": "pname",
-                                "layout|x": 235,
+                                "layout|x": 260,
                                 "layout|y": 5,
                                 "name": "pname",
-                                "width": 295
+                                "width": 270
                             },
                             "configAlternates": {
                                 "fieldLabel": "string",
@@ -293,6 +299,32 @@
                             },
                             "name": "MyTextField45",
                             "designerId": "e345dd61-0280-48bb-bcdb-9fe663b6a22c"
+                        },
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "txtSource",
+                                "layout|x": 600,
+                                "layout|y": 15,
+                                "value": [
+                                    "debit"
+                                ],
+                                "width": 130
+                            },
+                            "configAlternates": {
+                                "itemId": "string",
+                                "layout|x": "number",
+                                "layout|y": "number",
+                                "value": "object",
+                                "width": "auto"
+                            },
+                            "name": "MyTextField26",
+                            "designerId": "bccabf8e-c5b2-45bd-ac73-62367fe6396d"
                         }
                     ]
                 },
@@ -310,6 +342,7 @@
                         "height": 308,
                         "itemId": "itemsGrid",
                         "margin": "0 0 0 0",
+                        "reference": "debitList",
                         "store": "DebitStore",
                         "title": null
                     },
@@ -321,7 +354,8 @@
                         "title": "string",
                         "itemId": "string",
                         "margin": "auto",
-                        "store": "store"
+                        "store": "store",
+                        "reference": "string"
                     },
                     "name": "MyGridPanel",
                     "designerId": "26a31b62-8729-4783-9048-cb18ed76cfb0",
@@ -334,10 +368,12 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "height": 142
+                                "height": 142,
+                                "tabIndex": 4
                             },
                             "configAlternates": {
-                                "height": "auto"
+                                "height": "auto",
+                                "tabIndex": "number"
                             },
                             "name": "MyTable1",
                             "designerId": "07fcffa5-d308-4756-9e86-046d105dd098"
@@ -466,12 +502,16 @@
                                     },
                                     "codeClass": null,
                                     "userConfig": {
+                                        "maxValue": 20,
+                                        "minValue": 1,
                                         "value": [
                                             "1"
                                         ]
                                     },
                                     "configAlternates": {
-                                        "value": "object"
+                                        "value": "object",
+                                        "maxValue": "number",
+                                        "minValue": "number"
                                     },
                                     "name": "MyNumberField",
                                     "designerId": "7129648e-b344-4a13-9882-51228d96f206"
@@ -515,10 +555,15 @@
                                         ],
                                         "fn": "renderer",
                                         "implHandler": [
-                                            "grandTotal=view.up('grid').up('panel').down('#txtTotal').getValue();",
-                                            "                                totalPrice=record.get('Price')*record.get('Qty');",
-                                            "                                grandTotal=parseInt(grandTotal) + totalPrice;",
-                                            "                                view.up('grid').up('panel').down('#txtTotal').setValue(grandTotal);",
+                                            "var strSum=0;",
+                                            "store.getRange().forEach(function(rec) {",
+                                            "    // console.log(rec.get('unit_price'));",
+                                            "    strSum += (rec.get('unit_price')*rec.get('qty'));",
+                                            "    console.log(rec.get('strSum'));",
+                                            "} );",
+                                            "view.up('grid').up('panel').down('#txtTotal').setValue(strSum);",
+                                            "",
+                                            "var totalPrice=record.get('unit_price')*record.get('qty');",
                                             "",
                                             "return totalPrice;"
                                         ]
@@ -540,6 +585,12 @@
                                 "type": "array"
                             },
                             "codeClass": null,
+                            "userConfig": {
+                                "clicksToEdit": 1
+                            },
+                            "configAlternates": {
+                                "clicksToEdit": "number"
+                            },
                             "name": "MyCellEditingPlugin",
                             "designerId": "a0137e1d-ec8b-4fcd-98e8-8f3730ee0e7c"
                         },
@@ -552,6 +603,22 @@
                             "codeClass": null,
                             "name": "MyGridFiltersPlugin",
                             "designerId": "6fe78d7f-44f7-4627-93e2-8888faaf2ee2"
+                        },
+                        {
+                            "type": "Ext.selection.RowModel",
+                            "reference": {
+                                "name": "selModel",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "mode": "MULTI"
+                            },
+                            "configAlternates": {
+                                "mode": "string"
+                            },
+                            "name": "MyRowSelectionModel",
+                            "designerId": "3f9a163e-b23e-4d97-aafc-b25d7f62c0ae"
                         }
                     ]
                 },
@@ -691,33 +758,7 @@
                                 "value": "object"
                             },
                             "name": "MyTextField14",
-                            "designerId": "59888ba9-0b9a-4254-917a-fd268bb8f8a7",
-                            "cn": [
-                                {
-                                    "type": "basiceventbinding",
-                                    "reference": {
-                                        "name": "listeners",
-                                        "type": "array"
-                                    },
-                                    "codeClass": null,
-                                    "userConfig": {
-                                        "fn": "onTxtTotalAfterRender",
-                                        "implHandler": [
-                                            "component.setValue(0);"
-                                        ],
-                                        "name": "afterrender",
-                                        "scope": "me"
-                                    },
-                                    "configAlternates": {
-                                        "fn": "string",
-                                        "implHandler": "code",
-                                        "name": "string",
-                                        "scope": "string"
-                                    },
-                                    "name": "onTxtTotalAfterRender",
-                                    "designerId": "1f06bb41-57e7-4afc-9301-aed217c0ea79"
-                                }
-                            ]
+                            "designerId": "59888ba9-0b9a-4254-917a-fd268bb8f8a7"
                         },
                         {
                             "type": "Ext.button.Button",
@@ -729,8 +770,8 @@
                             "userConfig": {
                                 "height": 30,
                                 "iconCls": "x-fa fa-plus",
-                                "itemId": "cmdItemsList",
-                                "layout|x": 10,
+                                "itemId": "cmdServiceList",
+                                "layout|x": 0,
                                 "layout|y": 10,
                                 "text": "Get Items List",
                                 "width": 130

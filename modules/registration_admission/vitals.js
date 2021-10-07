@@ -15,285 +15,258 @@ Ext.onReady(function () {
     var win;
 
     var vitalsForm = new Ext.form.Panel({
-        url: '../data/getDatafunctions.php?task=saveVitals',
-		bodyPadding: 3,
-        height: 470,
-		width: 745,
-        layout: 'absolute',
-		defaultListenerScope: true,
-      items: [
-        {
-            xtype: 'fieldset',
-            x: -1,
-            y: 35,
-            height: 265,
-            width: 744,
-            layout: 'absolute',
-            items: [
-                {
-                    xtype: 'textfield',
-                    x: 35,
-                    y: 10,
-                    fieldLabel: 'Weight',
-                    labelAlign: 'right',
-                    labelWidth: 80,
-                    name: 'weight',
-                    emptyText: 'Weight'
-                },
-                {
-                    xtype: 'textfield',
-                    x: -6,
-                    y: 40,
-                    fieldLabel: 'Height',
-                    labelAlign: 'right',
-                    labelWidth: 120,
-                    name: 'height',
-                    emptyText: 'Height'
-                },
-                {
-                    xtype: 'textfield',
-                    x: -6,
-                    y: 70,
-                    fieldLabel: 'Head Circumference',
-                    labelAlign: 'right',
-                    labelWidth: 120,
-                    name: 'head_c',
-                    emptyText: 'Head Circumference'
-                },
-                {
-                    xtype: 'textfield',
-                    x: 15,
-                    y: 100,
-                    width: 180,
-                    fieldLabel: 'Blood Pressure',
-                    labelAlign: 'right',
-                    name: 'bp1',
-                    emptyText: 'Systoric'
-                },
-                {
-                    xtype: 'textfield',
-                    x: 195,
-                    y: 100,
-                    width: 75,
-					name:'bp2',
-                    labelAlign: 'right',
-                    emptyText: 'Diastoric'
-                },
-                {
-                    xtype: 'textfield',
-                    x: 35,
-                    y: 130,
-                    fieldLabel: 'Pulse rate',
-                    labelAlign: 'right',
-                    labelWidth: 80,
-                    name: 'pulse',
-                    emptyText: 'Pulse Rate'
-                },
-                {
-                    xtype: 'textfield',
-                    x: 310,
-                    y: 10,
-                    fieldLabel: 'Respiratory rate',
-                    labelAlign: 'right',
-                    name: 'resprate',
-                    emptyText: 'Respiratory Rate'
-                },
-                {
-                    xtype: 'textfield',
-                    x: 330,
-                    y: 40,
-                    fieldLabel: 'Temperature',
-                    labelAlign: 'right',
-                    labelWidth: 80,
-                    name: 'temperature',
-                    emptyText: 'Temperature'
-                },
-                {
-                    xtype: 'combobox',
-                    x: 330,
-                    y: 70,
-                    fieldLabel: 'HTC',
-                    labelAlign: 'right',
-                    labelWidth: 80,
-                    name: 'htc',
-                    emptyText: 'HTC'
-                },
-                {
-                    xtype: 'textfield',
-                    x: 330,
-                    y: 130,
-                    fieldLabel: 'SPO2',
-                    labelAlign: 'right',
-                    labelWidth: 80,
-                    name: 'spo2',
-                    emptyText: 'SPO2'
-                },
-                {
-                    xtype: 'textareafield',
-                    x: 35,
-                    y: 160,
-                    height: 58,
-                    width: 530,
-                    fieldLabel: 'Comment',
-                    labelAlign: 'right',
-                    labelWidth: 80,
-                    name: 'notes',
-                    emptyText: 'Comments'
-                },
-                {
-                    xtype: 'textfield',
-                    x: 330,
-                    y: 100,
-                    fieldLabel: 'BMI',
-                    labelAlign: 'right',
-                    labelWidth: 80,
-                    name: 'bmi',
-                    emptyText: 'BMI'
-                },
-                {
-                    xtype: 'button',
-                    x: 165,
-                    y: 225,
-                    height: 40,
-                    itemId: 'Save',
-                    width: 140,
-                    text: 'Save',
-                    listeners: {
-                        click: 'onCmdSaveClick'
-                    }
-                },
-                {
-                    xtype: 'button',
-                    x: 440,
-                    y: 225,
-                    height: 40,
-                    itemId: 'Close',
-                    width: 140,
-                    text: 'Close',
-                    listeners: {
-                        click: 'onCmdCloseClick'
-                    }
-                }
-            ]
+        url: '../../data/getDataFunctions.php?task=saveVitals',
+        height: 390,
+        width: 744,
+        bodyPadding: 10,
+        layout: {
+            type: 'vbox',
+            align: 'stretch'
         },
-        {
-            xtype: 'gridpanel',
-            x: 0,
-            y: 300,
-            height: 190,
-            width: 740,
-            title: 'Vitals List',
-            columns: [
-                {
-                    xtype: 'gridcolumn',
-                    dataIndex: 'ID',
-                    text: 'ID'
-                },
-                {
-                    xtype: 'gridcolumn',
-                    dataIndex: 'Weight',
-                    text: 'Weight'
-                },
-                {
-                    xtype: 'gridcolumn',
-                    dataIndex: 'Height',
-                    text: 'Height'
-                },
-                {
-                    xtype: 'gridcolumn',
-                    dataIndex: 'HeadCircumference',
-                    text: 'Head Circumference'
-                },
-                {
-                    xtype: 'gridcolumn',
-                    dataIndex: 'BP',
-                    text: 'Bp'
-                },
-                {
-                    xtype: 'gridcolumn',
-                    dataIndex: 'PulseRate',
-                    text: 'Pulse Rate'
-                },
-                {
-                    xtype: 'gridcolumn',
-                    dataIndex: 'Respiratory',
-                    text: 'Respiratory'
-                },
-                {
-                    xtype: 'gridcolumn',
-                    dataIndex: 'Temperature',
-                    text: 'Temperature'
-                },
-                {
-                    xtype: 'gridcolumn',
-                    dataIndex: 'HTC',
-                    text: 'Htc'
-                },
-                {
-                    xtype: 'gridcolumn',
-                    dataIndex: 'BMI',
-                    text: 'Bmi'
-                },
-                {
-                    xtype: 'gridcolumn',
-                    dataIndex: 'SPO2',
-                    text: 'Spo2'
-                }
-            ]
-        },
-        {
-            xtype: 'displayfield',
-            x: -1,
-            y: 5,
-            itemId: 'pid',
-			id: 'pid',
-            width: 170,
-            fieldLabel: 'PID',
-            labelWidth: 40
-        },
-        {
-            xtype: 'displayfield',
-            x: 190,
-            y: 5,
-            itemId: 'names',
-			id: 'names',
-            width: 170,
-            fieldLabel: 'Names',
-            labelWidth: 60
-        },
-        {
-            xtype: 'textfield',
-            x: 465,
-            y: 5,
-            itemId: 'encounterNr',
-			name: 'encounter_nr',
-			id: 'encounterNr',
-            width: 170,
-            fieldLabel: 'encounter No',
-            labelWidth: 80
-        }
-    ],
-
-        onCmdSaveClick: function (button, e, eOpts) {
-            var form = button.up('panel').getForm(); // get the basic form
-            if (form.isValid()) { // make sure the form contains valid data before submitting
-                form.submit({
-                    success: function (form, action) {
-                        Ext.Msg.alert('Thank you!', 'The Vitals has been saved Successfully.');
-                        button.up('form').getForm().reset();
-                        button.up('window').hide();
-
+		//defaultListenerScope: true,
+        items: [
+            {
+                xtype: 'fieldset',
+                height: 315,
+                padding: '5 0 0 0',
+                style: 'background:#1b5f87',
+                width: 744,
+                layout: 'absolute',
+                items: [
+                    {
+                        xtype: 'textfield',
+                        x: 60,
+                        y: 0,
+                        fieldLabel: 'Weight',
+                        itemId: 'weight',
+                        labelAlign: 'right',
+                        labelStyle: 'color:white; font-weight:bold;',
+                        labelWidth: 80,
+                        name: 'weight',
+                        value: 0
                     },
-                    failure: function (form, action) {
-                        var jsonResp = Ext.decode(action.response.responseText);
-
-                        Ext.Msg.alert('Failed', 'Could not save Vitals. \n Error=' + jsonResp.error);
+                    {
+                        xtype: 'textfield',
+                        x: 20,
+                        y: 35,
+                        fieldLabel: 'Height',
+                        id: 'height',
+                        labelAlign: 'right',
+                        labelStyle: 'color:white; font-weight:bold;',
+                        labelWidth: 120,
+                        name: 'height',
+                        value: 0
+                    },
+                    {
+                        xtype: 'textfield',
+                        x: -9,
+                        y: 70,
+                        fieldLabel: 'Head Circumference',
+                        labelAlign: 'right',
+                        labelStyle: 'color:white; font-weight:bold;',
+                        labelWidth: 150,
+                        name: 'head_c',
+                        value: 0
+                    },
+                    {
+                        xtype: 'textfield',
+                        x: 30,
+                        y: 105,
+                        width: 200,
+                        fieldLabel: 'Blood Pressure',
+                        labelAlign: 'right',
+                        labelStyle: 'color:white; font-weight:bold;',
+                        labelWidth: 110,
+                        name: 'bp',
+                        emptyText: 'Systoric',
+                        value: 0
+                    },
+                    {
+                        xtype: 'textfield',
+                        x: 235,
+                        y: 105,
+                        width: 80,
+                        labelAlign: 'right',
+                        name: 'bp2',
+                        emptyText: 'Diastoric',
+                        value: 0
+                    },
+                    {
+                        xtype: 'textfield',
+                        x: 60,
+                        y: 140,
+                        fieldLabel: 'Pulse rate',
+                        labelAlign: 'right',
+                        labelStyle: 'color:white; font-weight:bold;',
+                        labelWidth: 80,
+                        name: 'pulse',
+                        value: 0
+                    },
+                    {
+                        xtype: 'textareafield',
+                        x: 60,
+                        y: 175,
+                        height: 82,
+                        width: 550,
+                        fieldLabel: 'Notes',
+                        labelAlign: 'right',
+                        labelStyle: 'color:white; font-weight:bold;',
+                        labelWidth: 80,
+                        name: 'notes'
+                    },
+                    {
+                        xtype: 'textfield',
+                        x: 325,
+                        y: -2,
+                        fieldLabel: 'Respiratory rate',
+                        labelAlign: 'right',
+                        labelStyle: 'color:white; font-weight:bold;',
+                        labelWidth: 110,
+                        name: 'resprate',
+                        value: 0
+                    },
+                    {
+                        xtype: 'textfield',
+                        x: 335,
+                        y: 35,
+                        fieldLabel: 'Temperature',
+                        labelAlign: 'right',
+                        labelStyle: 'color:white; font-weight:bold;',
+                        name: 'temperature',
+                        value: 0
+                    },
+                    {
+                        xtype: 'textfield',
+                        x: 355,
+                        y: 105,
+                        fieldLabel: 'SPO2',
+                        labelAlign: 'right',
+                        labelStyle: 'color:white; font-weight:bold;',
+                        labelWidth: 80,
+                        name: 'spo2',
+                        value: 0
+                    },
+                    {
+                        xtype: 'textfield',
+                        x: 355,
+                        y: 70,
+                        fieldLabel: 'BMI',
+                        itemId: 'bmi',
+                        labelAlign: 'right',
+                        labelStyle: 'color:white; font-weight:bold;',
+                        labelWidth: 80,
+                        name: 'bmi'
+                    },
+                    {
+                        xtype: 'button',
+                        x: 135,
+                        y: 260,
+                        height: 40,
+                        itemId: 'SaveVitals',
+                        width: 140,
+                        text: 'Save',
+                        iconCls: 'x-fa fa-save',
+                        handler: function(){
+                            var pid=Ext.getCmp('pid').getValue();
+                            var form = this.up('panel').getForm(); // get the basic form
+                            if (form.isValid()) { // make sure the form contains valid data before submitting
+                                form.submit({
+                                    params:{
+                                        pid:pid
+                                    },
+                                    success: function (form, action) {
+                                        Ext.Msg.alert('Thank you!', 'The Vitals has been saved Successfully.');
+                                        this.up('form').getForm().reset();
+                                        this.up('window').hide();
+                
+                                    },
+                                    failure: function (form, action) {
+                                        var jsonResp = Ext.decode(action.response.responseText);
+                
+                                        Ext.Msg.alert('Failed', 'Could not save Vitals. \n Error=' + jsonResp.error);
+                                    }
+                                });
+                            } else { // display error alert if the data is invalid
+                                Ext.Msg.alert('Invalid Data', 'Please correct form errors.');
+                            }
+                        }
+                    },
+                    {
+                        xtype: 'button',
+                        x: 425,
+                        y: 260,
+                        height: 40,
+                        itemId: 'cmdClose',
+                        width: 140,
+                        text: 'Close',
+                        iconCls: 'x-fa fa-close',
+                        handler :function() {
+                            var form = this.up('form').getForm();
+                            if (form.isValid()) {
+                                this.up('window').hide();
+                            }
+                        }
                     }
-                });
-            } else { // display error alert if the data is invalid
-                Ext.Msg.alert('Invalid Data', 'Please correct form errors.');
+                ]
             }
-        }
+        ],
+        dockedItems: [
+            {
+                xtype: 'fieldset',
+                dock: 'top',
+                height: 45,
+                style: 'background:#386d87',
+                width: 744,
+                layout: {
+                    type: 'hbox',
+                    align: 'stretch'
+                },
+                items: [
+                    {
+                        xtype: 'displayfield',
+                        itemId: 'pid',
+                        id:'pid',
+                        width: 120,
+                        fieldLabel: 'PID',
+                        labelStyle: 'font-weight:bold; color:#f4f6fc;',
+                        labelWidth: 30,
+                        fieldStyle: 'color:#a7e88b;font-weight-bold;'
+                    },
+                    {
+                        xtype: 'displayfield',
+                        itemId: 'names',
+                        id: 'names',
+                        width: 271,
+                        fieldLabel: 'Names',
+                        labelPad: 0,
+                        labelStyle: 'font-weight:bold; color:#f4f6fc;',
+                        labelWidth: 60,
+                        fieldStyle: 'color:#a7e88b;font-weight-bold;'
+                    },
+                    {
+                        xtype: 'textfield',
+                        hidden: true,
+                        itemId: 'encounterNo',
+                        id: 'encounterNo',
+                        width: 211,
+                        fieldLabel: 'Encounter No',
+                        labelStyle: 'font-weight:bold; color:#f4f6fc;',
+                        name: 'encounterNo',
+                        fieldStyle: '',
+                        readOnly: true
+                    },
+                    {
+                        xtype: 'displayfield',
+                        itemId: 'Dob',
+                        id: 'Dob',
+                        width: 239,
+                        fieldLabel: 'Date of Birth',
+                        labelStyle: 'font-weight:bold; color:#f4f6fc;',
+                        fieldStyle: 'color:#a7e88b;font-weight-bold;'
+                    }
+                ]
+            }
+        ]
     });
 
 
@@ -301,7 +274,7 @@ Ext.onReady(function () {
         win = new Ext.Window({
            applyTo: 'container',
             layout: 'fit',
-            height: 500,
+            height: 437,
 			width: 745,
             closable: true,
             closeAction: 'hide',
@@ -314,17 +287,30 @@ Ext.onReady(function () {
     }
 
     var vitals = Ext.get('vitals');
-	var pid = Ext.get('pid');
-	var encounterNr=Ext.get('encounterNr');
-	var names = Ext.get('names');
+	var pid = Ext.get('pid2');
+	var encounterNr=Ext.get('encNo');
+    var names = Ext.get('names2');
+    var dob = Ext.get('dob');
+    var pHeight=Ext.getCmp('height');
+
+    pHeight.on('change', function(field, newValue, oldValue, eOpts){
+        //Ext.alert('Weight',field.up('form').down('#weight').getValue());
+        var weight=field.up('form').down('#weight').getValue();
+        var height=field.up('form').down('#height').getValue();
+        var heightInMtrs=height/100;
+        var bmi = weight/(heightInMtrs * heightInMtrs);
+        var strBmi =Math.round(bmi);
+        field.up('form').down('#bmi').setValue(strBmi);
+
+    });
 
     vitals.on('click', function(){
-        Ext.Msg.alert("Test",Ext.get('names').getValue());
+        //Ext.Msg.alert("Test",Ext.get('names').getValue());
             win.show(this);
 			Ext.getCmp('pid').setValue(pid.getValue());
 			Ext.getCmp('names').setValue(names.getValue());
-			Ext.getCmp('encounterNr').setValue(encounterNr.getValue());
-
+			Ext.getCmp('encounterNo').setValue(encounterNr.getValue());
+            Ext.getCmp('Dob').setValue(dob.getValue());
 
     });
 

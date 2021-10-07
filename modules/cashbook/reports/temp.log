@@ -334,3 +334,15 @@ SELECT COUNT(*) as DHX_COUNT  FROM care_ke_shifts WHERE ( cash_point='R04')
 
 Done in 0.026620864868164s
 
+
+
+====================================
+Log started, 03/11/2020 11:53:35
+====================================
+
+SELECT  * FROM care_ke_shifts WHERE ( cash_point='R03') ORDER BY `shift_no` DESC LIMIT 0,100
+
+SELECT COUNT(*) as DHX_COUNT  FROM care_ke_shifts WHERE ( cash_point='R03')
+
+Done in 0.11793208122253s
+

@@ -249,7 +249,7 @@ class Prescription extends Core {
     function getDrugList($class, $is_enabled,$pid) {
         global $db;
        // echo '<b>'.$class.'</b>';
-                $debug = false;
+                $debug = FALSE;
 
         if($this->checkIfNhif($pid)){
             $nhifPres=" and presNhif='Yes'";
@@ -311,7 +311,7 @@ class Prescription extends Core {
 //			} // end of if ($is_transmit_to_weberp_enable==1)
 
 
-
+        $itemlist_c2x=array();
 
         for ($i = 0; $i < sizeof($items); $i++) {
             if($items[$i]['presNhif']=='No') {
@@ -381,6 +381,7 @@ class Prescription extends Core {
         } else {
             $class = 0;
         }
+        $prescribeDate=date('Y-m-d');
         $this->sql = "INSERT INTO `care_encounter_prescription` ( " .
                 "			`encounter_nr` , " .
                 "			`prescription_type_nr` , " .
@@ -425,7 +426,7 @@ class Prescription extends Core {
                 "			'1', " .
                 "			'01', " .
                 "			'0', " .
-                "			NOW(), " .
+                "			'".$prescribeDate."', " .
                 "			'" . $enc_obj->ConsultingDr($encounter_nr) . "', " .
                 "			'1', " .
                 "			'0', " .
