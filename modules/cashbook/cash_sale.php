@@ -21,11 +21,11 @@ if ($debug)
 $result = $db->Execute($sql);
 //if($debug) echo $result;
 if ($rows = $result->FetchRow()) {
-    $cashpoint = $rows[pcode];
-    $shiftNo = $rows[current_shift];
-    $cname = $rows[name];
-    $receipt_no = $rows[next_receipt_no];
-    $prefix = $rows[prefix];
+    $cashpoint = $rows['pcode'];
+    $shiftNo = $rows['current_shift'];
+    $cname = $rows['name'];
+    $receipt_no = $rows['next_receipt_no'];
+    $prefix = $rows['prefix'];
 }
 echo '<table border="1" width="100%">';
 echo '<tr valign="top" class="pgtitle">
